@@ -170,6 +170,14 @@
     };
     date = "2026-02-26";
   };
+  cocoindex-code = {
+    pname = "cocoindex-code";
+    version = "0.2.4";
+    src = fetchurl {
+      url = "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.4.tar.gz";
+      sha256 = "sha256-3QQv+Fu7k4mLBTnso9gwpoXlQVO2SeS3Ij/Grxojs9w=";
+    };
+  };
   dagu = {
     pname = "dagu";
     version = "v2.3.0";

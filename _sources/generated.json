@@ -283,6 +283,21 @@
         },
         "version": "4fb4e70a616a809755f2feefda1aee50ff88450e"
     },
+    "cocoindex-code": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "cocoindex-code",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-3QQv+Fu7k4mLBTnso9gwpoXlQVO2SeS3Ij/Grxojs9w=",
+            "type": "url",
+            "url": "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.4.tar.gz"
+        },
+        "version": "0.2.4"
+    },
     "dagu": {
         "cargoLock": null,
         "date": null,

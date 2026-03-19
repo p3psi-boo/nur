@@ -9,7 +9,7 @@ let
     lib = final.lib;
   };
   pythonUvOverlay = (import ./python-uv.nix inputs) final prev;
-  pythonPackagesOverlay = import ./python-packages.nix final prev;
+  pythonPackagesOverlay = import ./python-packages final prev;
   aoccOverlay = import ./aocc-overlay.nix final prev;
 in
 repoOverlay
