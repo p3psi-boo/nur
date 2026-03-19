@@ -1,0 +1,1009 @@
+{
+    "ace-tool-rs": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "ace-tool-rs",
+        "passthru": null,
+        "pinned": true,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "missdeer",
+            "repo": "ace-tool-rs",
+            "rev": "v0.1.10",
+            "sha256": "sha256-XzQuNWRUZ/Zm8QwioDu80CH145m/bmynvFqfpRpee8w=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.1.10"
+    },
+    "agent-browser": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "agent-browser",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-yJvzQaeavCjOUnqViDP2ryRkHS9eVYzlTy9YPfdpYf8=",
+            "type": "url",
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.0/agent-browser-linux-x64"
+        },
+        "version": "v0.21.0"
+    },
+    "agent-browser-darwin-arm64": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "agent-browser-darwin-arm64",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-6HpflPGRUtY0Ccv3aP1P0PZPLqkX/Rg2SDVJTDDc1Qw=",
+            "type": "url",
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.0/agent-browser-darwin-arm64"
+        },
+        "version": "v0.21.0"
+    },
+    "agent-browser-darwin-x64": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "agent-browser-darwin-x64",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-0TeGyfWxSragqqI49h4Cc2p8L+Ulq2I4LU7s8sVZguM=",
+            "type": "url",
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.0/agent-browser-darwin-x64"
+        },
+        "version": "v0.21.0"
+    },
+    "agent-browser-linux-arm64": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "agent-browser-linux-arm64",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-umvguc8qyTYVArxiY/Xywje3LHxtb8cAaqqeGUDfacM=",
+            "type": "url",
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.0/agent-browser-linux-arm64"
+        },
+        "version": "v0.21.0"
+    },
+    "bcut-asr": {
+        "cargoLock": null,
+        "date": "2026-01-14",
+        "extract": null,
+        "name": "bcut-asr",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "07fc48213a415490da1ae40cd8988a087cb02ec6",
+            "sha256": "sha256-uGhqogSabFpuWQ1h88oXrCOPuJPyfuR9nx8Ug5WbUl0=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/p3psi-boo/bcut-asr-go.git"
+        },
+        "version": "07fc48213a415490da1ae40cd8988a087cb02ec6"
+    },
+    "beads_viewer": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "beads_viewer",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Dicklesworthstone",
+            "repo": "beads_viewer",
+            "rev": "v0.15.2",
+            "sha256": "sha256-sdlw9Zr+/I1/PaX0Wpim+UGPxvP7hPrlJ0MTGC20Q5w=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.15.2"
+    },
+    "binsider-bin": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "binsider-bin",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-/TScWAgk8rUv981qMCqqd0o/5L7t2TeFFb3+zsDYd6M=",
+            "type": "url",
+            "url": "https://github.com/orhun/binsider/releases/download/v0.3.2/binsider-0.3.2-x86_64-unknown-linux-musl.tar.gz"
+        },
+        "version": "0.3.2"
+    },
+    "binsider-bin-aarch64-linux": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "binsider-bin-aarch64-linux",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-pedF8eMfFmfsFPYjm6w8McxQQ5YmJLEtrkGC0xtSROI=",
+            "type": "url",
+            "url": "https://github.com/orhun/binsider/releases/download/v0.3.2/binsider-0.3.2-aarch64-unknown-linux-musl.tar.gz"
+        },
+        "version": "0.3.2"
+    },
+    "binsider-bin-darwin-arm64": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "binsider-bin-darwin-arm64",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-CNYBoXtsEpvWzXGqp2+loZT88hgVzLocm//4tklnT78=",
+            "type": "url",
+            "url": "https://github.com/orhun/binsider/releases/download/v0.3.2/binsider-0.3.2-aarch64-apple-darwin.tar.gz"
+        },
+        "version": "0.3.2"
+    },
+    "binsider-bin-darwin-x64": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "binsider-bin-darwin-x64",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-HDz+JDAf3WeezxZTeLsTNb9kAdAHfPOxu6/lkchG6Bo=",
+            "type": "url",
+            "url": "https://github.com/orhun/binsider/releases/download/v0.3.2/binsider-0.3.2-x86_64-apple-darwin.tar.gz"
+        },
+        "version": "0.3.2"
+    },
+    "bird-cli": {
+        "cargoLock": null,
+        "date": "2026-03-09",
+        "extract": null,
+        "name": "bird-cli",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "c815bfbe3cefd0104adf411cd2148995c31f2ba0",
+            "sha256": "sha256-47N0//wE3G9RGrcSa0JJTnu9mbw/MK58PNnuqYyitvw=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/p3psi-boo/bird-fork.git"
+        },
+        "version": "c815bfbe3cefd0104adf411cd2148995c31f2ba0"
+    },
+    "clihub": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "clihub",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "thellimist",
+            "repo": "clihub",
+            "rev": "v0.0.8",
+            "sha256": "sha256-Y/O2XmhMYUCV269g+h+DsQT80yVR0ot9RIS+mBJP7BA=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.0.8"
+    },
+    "cliproxyapi": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "cliproxyapi",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "router-for-me",
+            "repo": "CLIProxyAPI",
+            "rev": "v6.8.55",
+            "sha256": "sha256-B7EtK/x40uwt8fufSUPppbzSWNaPh1hQpFwMMAppgog=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v6.8.55"
+    },
+    "cloudflarespeedtest": {
+        "cargoLock": null,
+        "date": "2026-03-02",
+        "extract": null,
+        "name": "cloudflarespeedtest",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "2de42f8d30c96ac7d2e25cbe98765c9dc0b208f9",
+            "sha256": "sha256-PgF5X6DSTNcUhP5lHuapR3DkzxCDMHXuCGyfsAHJTt4=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/XIU2/CloudflareSpeedTest.git"
+        },
+        "version": "2de42f8d30c96ac7d2e25cbe98765c9dc0b208f9"
+    },
+    "cnb-cli": {
+        "cargoLock": null,
+        "date": "2026-02-26",
+        "extract": null,
+        "name": "cnb-cli",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "4fb4e70a616a809755f2feefda1aee50ff88450e",
+            "sha256": "sha256-0Yqn/akLsksS3Z6WBx3jZ9pG0n/lgLQSK8Z3iWfZkuA=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/p3psi-boo/cnb-cli.git"
+        },
+        "version": "4fb4e70a616a809755f2feefda1aee50ff88450e"
+    },
+    "dagu": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "dagu",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "dagu-org",
+            "repo": "dagu",
+            "rev": "v2.3.0",
+            "sha256": "sha256-2nN15kHsOon7NANCKWBOhNcntco2hMBMj6QC3VsYO2A=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v2.3.0"
+    },
+    "ecloud-computer-auto-boot": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "ecloud-computer-auto-boot",
+        "passthru": null,
+        "pinned": true,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Samler-Lee",
+            "repo": "ecloud_computer_auto_boot",
+            "rev": "1.0.0",
+            "sha256": "sha256-9H11Jli1Ls8FNtvfgt5X+1yEw4zcrqcmBWPdyq8TIf8=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "1.0.0"
+    },
+    "fcitx5-vinput": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "fcitx5-vinput",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "xifan2333",
+            "repo": "fcitx5-vinput",
+            "rev": "v1.0.20",
+            "sha256": "sha256-gmZqQhhfN5+FndxJHMAbrfjjb0wyLQltClEhSXBvREA=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.0.20"
+    },
+    "firm": {
+        "cargoLock": null,
+        "date": "2026-03-11",
+        "extract": null,
+        "name": "firm",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": true,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "4144d4a08bdf285c09ed2b9781e5ec448004e506",
+            "sha256": "sha256-PgFYlw9XNxcPlRXLIBwfVV+geu3NZ9y2+puN6FczIfg=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/42futures/firm.git"
+        },
+        "version": "4144d4a08bdf285c09ed2b9781e5ec448004e506"
+    },
+    "fish-ai": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "fish-ai",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Realiserad",
+            "repo": "fish-ai",
+            "rev": "v2.10.6",
+            "sha256": "sha256-fhfuy6czBU6d8LdjnkcuB9aHXQ+Gs8rD8M5Z6dqwK/w=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v2.10.6"
+    },
+    "gac": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "gac",
+        "passthru": null,
+        "pinned": true,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "cellwebb",
+            "repo": "gac",
+            "rev": "v3.11.0",
+            "sha256": "sha256-TQJtHMqC1reyrxG1SlLuzegeWwXjk7353DNxPko89Q0=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v3.11.0"
+    },
+    "ggwave-to-file": {
+        "cargoLock": null,
+        "date": "2026-02-28",
+        "extract": null,
+        "name": "ggwave-to-file",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": true,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "8f02c41d88f971f05269da64f7ce8d6973f5e8b6",
+            "sha256": "sha256-jXPRZT1clhehQLAfN1QY8SvmCqNTFmLBPQimImqsXmM=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/ggerganov/ggwave.git"
+        },
+        "version": "8f02c41d88f971f05269da64f7ce8d6973f5e8b6"
+    },
+    "grok2api-rs": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "grok2api-rs",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "XeanYu",
+            "repo": "grok2api-rs",
+            "rev": "0.2.0",
+            "sha256": "sha256-RNm+8OYNikxALZd+Bq88eW5PkJkef5lg00mn6JelMfE=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "0.2.0"
+    },
+    "ida-pro-mcp": {
+        "cargoLock": null,
+        "date": "2026-03-09",
+        "extract": null,
+        "name": "ida-pro-mcp",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "ef91fb467c3bfe266a68c3f898b93c8576eaf2c7",
+            "sha256": "sha256-Q0mqcrB/mMcSSGjVxl0528jQgdI82Ko4gCFOZITaTec=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/QiuChenly/ida-pro-mcp-enhancement.git"
+        },
+        "version": "ef91fb467c3bfe266a68c3f898b93c8576eaf2c7"
+    },
+    "inet-speed-cli": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "inet-speed-cli",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "tsosunchia",
+            "repo": "iNetSpeed-CLI",
+            "rev": "v1.1.2",
+            "sha256": "sha256-xAXYhvN7rdXvA2EWsNXRfXlIrumyPluAcmVbMY/pZxE=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.1.2"
+    },
+    "kylin-virtual-keyboard": {
+        "cargoLock": null,
+        "date": "2026-01-30",
+        "extract": null,
+        "name": "kylin-virtual-keyboard",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "2a1cc5eb73c9fd5920c3d388767173ccd155c596",
+            "sha256": "sha256-oJzxpUr/A6ARIzhf+UGeFTTig7Fgh4wpAvHCiW64b2Y=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://gitee.com/openkylin/kylin-virtual-keyboard.git"
+        },
+        "version": "2a1cc5eb73c9fd5920c3d388767173ccd155c596"
+    },
+    "magiskboot-bin": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "magiskboot-bin",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-4NMtISNTKGD5cSPZJ7G7hsTgjm/YpIv8a1vuCvrp69U=",
+            "type": "url",
+            "url": "https://github.com/topjohnwu/Magisk/releases/download/v30.7/Magisk-v30.7.apk"
+        },
+        "version": "v30.7"
+    },
+    "nf_deaf": {
+        "cargoLock": null,
+        "date": "2026-01-23",
+        "extract": null,
+        "name": "nf_deaf",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "cf346a3c270e5eb6d31b1d0c110efaf7a8b9193e",
+            "sha256": "sha256-vLcJWJtD7W1D37yFE5fGnZP6ZOKdfKkd+fTte0GDu0g=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/kmb21y66/nf_deaf.git"
+        },
+        "version": "cf346a3c270e5eb6d31b1d0c110efaf7a8b9193e"
+    },
+    "openixcli": {
+        "cargoLock": null,
+        "date": "2026-03-12",
+        "extract": null,
+        "name": "openixcli",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "37c406dd05d2fbda1e465ba7539a58305a461539",
+            "sha256": "sha256-siCFCLzyeWbp2nXREd7MCNWuKSZOl7XlOdEAjtPq8Ag=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/YuzukiTsuru/OpenixCLI.git"
+        },
+        "version": "37c406dd05d2fbda1e465ba7539a58305a461539"
+    },
+    "oura-cli": {
+        "cargoLock": null,
+        "date": "2026-01-31",
+        "extract": null,
+        "name": "oura-cli",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "5354384a57006ab68ef448f196b48bf1caebb2ea",
+            "sha256": "sha256-hCkd7yBHND/UxRjPNU7SaG0l8MvnLgFpSgAms1quAeM=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/p3psi-boo/oura-cli.git"
+        },
+        "version": "5354384a57006ab68ef448f196b48bf1caebb2ea"
+    },
+    "polymarket-cli": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "polymarket-cli",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-3ZyMnzlliEJ+/X9ThHSyoRQ0wh/fbKkKp1oO2yvT2KY=",
+            "type": "url",
+            "url": "https://github.com/Polymarket/polymarket-cli/releases/download/v0.1.5/polymarket-v0.1.5-x86_64-unknown-linux-gnu.tar.gz"
+        },
+        "version": "v0.1.5"
+    },
+    "polymarket-cli-aarch64-linux": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "polymarket-cli-aarch64-linux",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-GjPJLG/7IRciVEltQA5Ki/aZbNAO6Q4FGZvkdgAFfNo=",
+            "type": "url",
+            "url": "https://github.com/Polymarket/polymarket-cli/releases/download/v0.1.5/polymarket-v0.1.5-aarch64-unknown-linux-gnu.tar.gz"
+        },
+        "version": "v0.1.5"
+    },
+    "proxy-ns": {
+        "cargoLock": null,
+        "date": "2026-02-21",
+        "extract": null,
+        "name": "proxy-ns",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "afe6dc539a97827b485cd1106fd755d4f89eabdf",
+            "sha256": "sha256-qPKRnCXQBjhL2eSrvEGhOl1fHaV1ZhI4nJ851e++Shs=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/OkamiW/proxy-ns.git"
+        },
+        "version": "afe6dc539a97827b485cd1106fd755d4f89eabdf"
+    },
+    "pymicro-features": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "pymicro-features",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "rhasspy",
+            "repo": "pymicro-features",
+            "rev": "v2.0.2",
+            "sha256": "sha256-bCvrsvifUxM7jfqBePmcYviZ5pIy1ZApq48Pu/5b7AM=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v2.0.2"
+    },
+    "pymicro-wakeword": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "pymicro-wakeword",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "OHF-Voice",
+            "repo": "pymicro-wakeword",
+            "rev": "v2.2.1",
+            "sha256": "sha256-PLGwpmmiLwpDn+Dh5HhaE2w7hJLC0xK/wsuhxxR8rwU=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v2.2.1"
+    },
+    "python-mpv": {
+        "cargoLock": null,
+        "date": "2025-04-25",
+        "extract": null,
+        "name": "python-mpv",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "93c4de9bb7a0e1cfcb9d305a58a326bb24ef9d47",
+            "sha256": "sha256-fTvEcYJR7gOjmgsQkHIB+VM2rgWZLA6D/Wqa/QTyn9Q=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/jaseg/python-mpv.git"
+        },
+        "version": "93c4de9bb7a0e1cfcb9d305a58a326bb24ef9d47"
+    },
+    "qmdr": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "qmdr",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "uf-hy",
+            "repo": "qmdr",
+            "rev": "v1.0.3",
+            "sha256": "sha256-hVHdio3IlOU7kJwBXFuKNVTBKf+IpnamTokRPdyQ1Q0=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.0.3"
+    },
+    "quicssh": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "quicssh",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "moul",
+            "repo": "quicssh",
+            "rev": "v1.0.0",
+            "sha256": "sha256-/VPPgoRPUeY/AeJO5iC7ilLQReoUPPxhhUPpKgI3L6s=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.0.0"
+    },
+    "realitlscanner": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "realitlscanner",
+        "passthru": null,
+        "pinned": true,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "XTLS",
+            "repo": "RealiTLScanner",
+            "rev": "v0.2.1",
+            "sha256": "sha256-rshU3nBguzBleM9zlPHPFQy0C+C6LYE2EI1uKRl4DN4=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.2.1"
+    },
+    "rikugan": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "rikugan",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "buzzer-re",
+            "repo": "Rikugan",
+            "rev": "v1.1",
+            "sha256": "sha256-LbN2sC717jEgFtKk+tz8DYP6GnWafZrLqGYA4IqF3tw=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.1"
+    },
+    "rust-video-downloader": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "rust-video-downloader",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "SpenserCai",
+            "repo": "rust-video-downloader",
+            "rev": "v1.0.0-alpha",
+            "sha256": "sha256-ZR/feWmjP69UUDgSs21ZfZgypnYTWaObiBtTxOAmZm4=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.0.0-alpha"
+    },
+    "sigmo": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "sigmo",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "damonto",
+            "repo": "sigmo",
+            "rev": "v4.0.2",
+            "sha256": "sha256-RXQ8LY3HB7xKdupfg76JfTnzdOq7HJxzFerp1l1LzqE=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v4.0.2"
+    },
+    "srv-us": {
+        "cargoLock": null,
+        "date": "2026-02-08",
+        "extract": null,
+        "name": "srv-us",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "664ef6a4fab24c5f3f1fc2fa07cc3e0c43d90cf9",
+            "sha256": "sha256-CEaSHwR8munYwKkLkCAGGbnRsel+by72QBY28lIRQO4=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/p3psi-boo/srv.us.git"
+        },
+        "version": "664ef6a4fab24c5f3f1fc2fa07cc3e0c43d90cf9"
+    },
+    "telegram-send": {
+        "cargoLock": null,
+        "date": "2026-01-27",
+        "extract": null,
+        "name": "telegram-send",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "f5466fc2b8b8b9aaa55dd28fb80b6ae138b578d8",
+            "sha256": "sha256-kc6btKN+IclmbRx6Lko2Jw0XxVaKVo/AnhYsW6C2G4Y=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/rahiel/telegram-send.git"
+        },
+        "version": "f5466fc2b8b8b9aaa55dd28fb80b6ae138b578d8"
+    },
+    "vanissh": {
+        "cargoLock": null,
+        "date": "2025-09-21",
+        "extract": null,
+        "name": "vanissh",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "c2ee4700d8112b5c6f06fd587b6f11c9aafbdf72",
+            "sha256": "sha256-5pn2gKiGnd5nfGv3qjaFdvWzMnFjWLUwLtoZb8es7YE=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/k4yt3x/vanissh.git"
+        },
+        "version": "c2ee4700d8112b5c6f06fd587b6f11c9aafbdf72"
+    },
+    "vikunja-cli": {
+        "cargoLock": null,
+        "date": "2026-02-25",
+        "extract": null,
+        "name": "vikunja-cli",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "7d96f181c2e0e07b4e75c7f540e9a8cfdf9065dc",
+            "sha256": "sha256-ZxsFScCas6Uvt91eWzdwfTAsWZnVooRp/QaIp2IdHVw=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/p3psi-boo/vikunja-cli.git"
+        },
+        "version": "7d96f181c2e0e07b4e75c7f540e9a8cfdf9065dc"
+    },
+    "vllm": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "vllm",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "vllm-project",
+            "repo": "vllm",
+            "rev": "v0.17.1",
+            "sha256": "sha256-EZozwA+GIjN8/CBNhtdeM3HsPhVdx1/J0B9gvvn2qKU=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.17.1"
+    },
+    "wikiteam3": {
+        "cargoLock": null,
+        "date": "2025-12-24",
+        "extract": null,
+        "name": "wikiteam3",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "06346a4305f8f8c5ced633c3e0dc38b3bb960e6e",
+            "sha256": "sha256-gdUZzfIn9nM60+mYacFblmyqa+pY+EbR4lPZnuy6Amk=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/saveweb/wikiteam3.git"
+        },
+        "version": "06346a4305f8f8c5ced633c3e0dc38b3bb960e6e"
+    },
+    "worktrunk": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "worktrunk",
+        "passthru": null,
+        "pinned": true,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "max-sixty",
+            "repo": "worktrunk",
+            "rev": "v0.21.0",
+            "sha256": "sha256-quFet61FkksyBtF+tKM3Q1qh1Z02U3fovSm5ObU5HM4=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.21.0"
+    },
+    "wsl-vpnkit": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "wsl-vpnkit",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "sakai135",
+            "repo": "wsl-vpnkit",
+            "rev": "v0.4.1",
+            "sha256": "sha256-Igbr3L2W32s4uBepllSz07bkbI3qwAKMZkBrXLqGrGA=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.4.1"
+    },
+    "yt-media-storage": {
+        "cargoLock": null,
+        "date": "2026-02-23",
+        "extract": null,
+        "name": "yt-media-storage",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "af8493412334078e10b8883725b3edc9a22f4599",
+            "sha256": "sha256-9dy0LREALmzHXGT+38/+Qyj6Dk4OaiBL8F2enveDJMw=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/PulseBeat02/yt-media-storage.git"
+        },
+        "version": "af8493412334078e10b8883725b3edc9a22f4599"
+    }
+}

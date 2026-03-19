@@ -1,0 +1,242 @@
+[nf_deaf]
+src.git = "https://github.com/kmb21y66/nf_deaf.git"
+fetch.git = "https://github.com/kmb21y66/nf_deaf.git"
+git.fetch_submodules = false
+
+[cliproxyapi]
+src.github = "router-for-me/CLIProxyAPI"
+fetch.github = "router-for-me/CLIProxyAPI"
+
+[clihub]
+src.github_tag = "thellimist/clihub"
+src.include_regex = "^v[0-9].*"
+fetch.github = "thellimist/clihub"
+
+[cloudflarespeedtest]
+src.git = "https://github.com/XIU2/CloudflareSpeedTest.git"
+fetch.git = "https://github.com/XIU2/CloudflareSpeedTest.git"
+git.fetch_submodules = false
+
+[ace-tool-rs]
+src.github = "missdeer/ace-tool-rs"
+fetch.github = "missdeer/ace-tool-rs"
+pinned = true
+
+[quicssh]
+src.github = "moul/quicssh"
+fetch.github = "moul/quicssh"
+
+[dagu]
+src.github = "dagu-org/dagu"
+fetch.github = "dagu-org/dagu"
+
+[firm]
+src.git = "https://github.com/42futures/firm.git"
+fetch.git = "https://github.com/42futures/firm.git"
+git.fetchSubmodules = true
+
+[worktrunk]
+src.github = "max-sixty/worktrunk"
+fetch.github = "max-sixty/worktrunk"
+pinned = true
+
+[gac]
+src.github = "cellwebb/gac"
+fetch.github = "cellwebb/gac"
+pinned = true
+
+[realitlscanner]
+src.github = "XTLS/RealiTLScanner"
+fetch.github = "XTLS/RealiTLScanner"
+pinned = true
+
+[proxy-ns]
+src.git = "https://github.com/OkamiW/proxy-ns.git"
+fetch.git = "https://github.com/OkamiW/proxy-ns.git"
+src.branch = "master"
+
+[rust-video-downloader]
+src.github = "SpenserCai/rust-video-downloader"
+fetch.github = "SpenserCai/rust-video-downloader"
+
+[ecloud-computer-auto-boot] 
+src.github = "Samler-Lee/ecloud_computer_auto_boot"
+fetch.github = "Samler-Lee/ecloud_computer_auto_boot"
+pinned = true
+
+[bcut-asr]
+src.git = "https://github.com/p3psi-boo/bcut-asr-go.git"
+fetch.git = "https://github.com/p3psi-boo/bcut-asr-go.git"
+git.fetch_submodules = false
+
+[sigmo]
+src.github = "damonto/sigmo"
+fetch.github = "damonto/sigmo"
+
+[vanissh]
+src.git = "https://github.com/k4yt3x/vanissh.git"
+fetch.git = "https://github.com/k4yt3x/vanissh.git"
+
+[beads_viewer]
+src.github = "Dicklesworthstone/beads_viewer"
+fetch.github = "Dicklesworthstone/beads_viewer"
+
+[ggwave-to-file]
+src.git = "https://github.com/ggerganov/ggwave.git"
+fetch.git = "https://github.com/ggerganov/ggwave.git"
+src.branch = "master"
+git.fetchSubmodules = true
+
+[wsl-vpnkit]
+src.github = "sakai135/wsl-vpnkit"
+fetch.github = "sakai135/wsl-vpnkit"
+
+[oura-cli]
+src.git = "https://github.com/p3psi-boo/oura-cli.git"
+fetch.git = "https://github.com/p3psi-boo/oura-cli.git"
+git.fetch_submodules = false
+
+[bird-cli]
+src.git = "https://github.com/p3psi-boo/bird-fork.git"
+fetch.git = "https://github.com/p3psi-boo/bird-fork.git"
+git.fetch_submodules = false
+
+[pymicro-features]
+src.github = "rhasspy/pymicro-features"
+fetch.github = "rhasspy/pymicro-features"
+
+[pymicro-wakeword]
+src.github = "OHF-Voice/pymicro-wakeword"
+fetch.github = "OHF-Voice/pymicro-wakeword"
+
+[python-mpv]
+src.git = "https://github.com/jaseg/python-mpv.git"
+fetch.git = "https://github.com/jaseg/python-mpv.git"
+
+[wikiteam3]
+src.git = "https://github.com/saveweb/wikiteam3.git"
+fetch.git = "https://github.com/saveweb/wikiteam3.git"
+src.branch = "v4-main"
+
+[vllm]
+src.github = "vllm-project/vllm"
+fetch.github = "vllm-project/vllm"
+
+[cnb-cli]
+src.git = "https://github.com/p3psi-boo/cnb-cli.git"
+fetch.git = "https://github.com/p3psi-boo/cnb-cli.git"
+git.fetch_submodules = false
+
+[magiskboot-bin]
+src.github = "topjohnwu/Magisk"
+fetch.url = "https://github.com/topjohnwu/Magisk/releases/download/$ver/Magisk-$ver.apk"
+
+[srv-us]
+src.git = "https://github.com/p3psi-boo/srv.us.git"
+fetch.git = "https://github.com/p3psi-boo/srv.us.git"
+
+[yt-media-storage]
+src.git = "https://github.com/PulseBeat02/yt-media-storage.git"
+fetch.git = "https://github.com/PulseBeat02/yt-media-storage.git"
+
+[vikunja-cli]
+src.git = "https://github.com/p3psi-boo/vikunja-cli.git"
+fetch.git = "https://github.com/p3psi-boo/vikunja-cli.git"
+git.fetch_submodules = false
+
+[polymarket-cli]
+src.github = "Polymarket/polymarket-cli"
+fetch.url = "https://github.com/Polymarket/polymarket-cli/releases/download/$ver/polymarket-$ver-x86_64-unknown-linux-gnu.tar.gz"
+
+[polymarket-cli-aarch64-linux]
+src.github = "Polymarket/polymarket-cli"
+fetch.url = "https://github.com/Polymarket/polymarket-cli/releases/download/$ver/polymarket-$ver-aarch64-unknown-linux-gnu.tar.gz"
+
+[inet-speed-cli]
+src.github = "tsosunchia/iNetSpeed-CLI"
+fetch.github = "tsosunchia/iNetSpeed-CLI"
+
+[fcitx5-vinput]
+src.github_tag = "xifan2333/fcitx5-vinput"
+src.include_regex = "^v[0-9].*"
+fetch.github = "xifan2333/fcitx5-vinput"
+
+[kylin-virtual-keyboard]
+src.git = "https://gitee.com/openkylin/kylin-virtual-keyboard.git"
+fetch.git = "https://gitee.com/openkylin/kylin-virtual-keyboard.git"
+src.branch = "upstream"
+git.fetch_submodules = false
+
+[qmdr]
+src.github_tag = "uf-hy/qmdr"
+src.include_regex = "^v[0-9].*"
+fetch.github = "uf-hy/qmdr"
+
+[openixcli]
+src.git = "https://github.com/YuzukiTsuru/OpenixCLI.git"
+fetch.git = "https://github.com/YuzukiTsuru/OpenixCLI.git"
+src.branch = "master"
+git.fetch_submodules = false
+
+[agent-browser]
+src.github = "vercel-labs/agent-browser"
+fetch.url = "https://github.com/vercel-labs/agent-browser/releases/download/$ver/agent-browser-linux-x64"
+
+[agent-browser-linux-arm64]
+src.github = "vercel-labs/agent-browser"
+fetch.url = "https://github.com/vercel-labs/agent-browser/releases/download/$ver/agent-browser-linux-arm64"
+
+[agent-browser-darwin-x64]
+src.github = "vercel-labs/agent-browser"
+fetch.url = "https://github.com/vercel-labs/agent-browser/releases/download/$ver/agent-browser-darwin-x64"
+
+[agent-browser-darwin-arm64]
+src.github = "vercel-labs/agent-browser"
+fetch.url = "https://github.com/vercel-labs/agent-browser/releases/download/$ver/agent-browser-darwin-arm64"
+
+[binsider-bin]
+src.github_tag = "orhun/binsider"
+src.prefix = "v"
+fetch.url = "https://github.com/orhun/binsider/releases/download/v$ver/binsider-$ver-x86_64-unknown-linux-musl.tar.gz"
+
+[binsider-bin-aarch64-linux]
+src.github_tag = "orhun/binsider"
+src.prefix = "v"
+fetch.url = "https://github.com/orhun/binsider/releases/download/v$ver/binsider-$ver-aarch64-unknown-linux-musl.tar.gz"
+
+[binsider-bin-darwin-x64]
+src.github_tag = "orhun/binsider"
+src.prefix = "v"
+fetch.url = "https://github.com/orhun/binsider/releases/download/v$ver/binsider-$ver-x86_64-apple-darwin.tar.gz"
+
+[binsider-bin-darwin-arm64]
+src.github_tag = "orhun/binsider"
+src.prefix = "v"
+fetch.url = "https://github.com/orhun/binsider/releases/download/v$ver/binsider-$ver-aarch64-apple-darwin.tar.gz"
+
+[telegram-send]
+src.git = "https://github.com/rahiel/telegram-send.git"
+fetch.git = "https://github.com/rahiel/telegram-send.git"
+src.branch = "master"
+
+[fish-ai]
+src.github_tag = "Realiserad/fish-ai"
+src.include_regex = "^v[0-9].*"
+fetch.github = "Realiserad/fish-ai"
+
+[ida-pro-mcp]
+src.git = "https://github.com/QiuChenly/ida-pro-mcp-enhancement.git"
+fetch.git = "https://github.com/QiuChenly/ida-pro-mcp-enhancement.git"
+src.branch = "main"
+git.fetch_submodules = false
+
+[rikugan]
+src.github_tag = "buzzer-re/Rikugan"
+src.include_regex = "^(v)?[0-9].*"
+fetch.github = "buzzer-re/Rikugan"
+
+[grok2api-rs]
+src.github_tag = "XeanYu/grok2api-rs"
+src.prefix = "v"
+src.include_regex = "^v[0-9].*"
+fetch.github = "XeanYu/grok2api-rs"

@@ -1,0 +1,12 @@
+{
+  "uuid": "mouse-toggle@bubu",
+  "name": "Mouse Toggle",
+  "description": "Toggle mouse input on/off via a panel icon button.",
+  "version": 1,
+  "shell-version": [
+    "45",
+    "46",
+    "47"
+  ]
+}
+

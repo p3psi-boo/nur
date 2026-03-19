@@ -1,0 +1,268 @@
+From: Gabriel Krisman Bertazi <krisman@suse.de>
+Date: Thu, 27 Nov 2025 18:36:29 -0500
+Subject: [RFC PATCH 2/4] lib: Support lazy initialization of per-cpu counters
+
+While per-cpu counters are efficient when there is a need for frequent
+updates from different cpus, they have a non-trivial upfront
+initialization cost, mainly due to the percpu variable allocation.  This
+cost becomes relevant both for short-lived counters and for cases
+where we don't know beforehand if there will be frequent updates from
+remote cpus. On both cases, it could have been better to just use a
+simple counter.
+
+The prime example is rss_stats of single-threaded tasks, where the vast
+majority of counter updates happen from a single-cpu context at a time,
+except for slowpath cases, such as OOM, khugepage.  For those workloads,
+a simple counter would have sufficed and likely yielded better overall
+performance if the tasks were sufficiently short.  There is no end of
+examples of short-lived single-thread workloads, in particular coreutils
+tools.
+
+This patch introduces a new counter flavor that delays the percpu
+initialization until needed.  It is a dual-mode counter.  It starts with
+a two-part counter that can be updated either from a local context
+through simple arithmetic or from a remote context through an atomic
+operation.  Once remote accesses become more frequent, and the user
+considers the overhead of atomic updates surpasses the cost of
+initializing a fully-fledged per-cpu counter, the user can seamlessly
+upgrade the counter to the per-cpu counter.
+
+The first user of this are the rss_stat counters.  Benchmarks results
+are provided on that patch.
+
+Suggested-by: Jan Kara <jack@suse.cz>
+Signed-off-by: Gabriel Krisman Bertazi <krisman@suse.de>
+---
+ include/linux/lazy_percpu_counter.h | 145 ++++++++++++++++++++++++++++
+ include/linux/percpu_counter.h      |   5 +-
+ lib/percpu_counter.c                |  40 ++++++++
+ 3 files changed, 189 insertions(+), 1 deletion(-)
+ create mode 100644 include/linux/lazy_percpu_counter.h
+
+diff --git a/include/linux/lazy_percpu_counter.h b/include/linux/lazy_percpu_counter.h
+new file mode 100644
+index 000000000000..7300b8c33507
+--- /dev/null
++++ b/include/linux/lazy_percpu_counter.h
+@@ -0,0 +1,145 @@
++/* SPDX-License-Identifier: GPL-2.0 */
++#include <linux/percpu_counter.h>
++#ifndef _LAZY_PERCPU_COUNTER
++#define _LAZY_PERCPU_COUNTER
++
++/* Lazy percpu counter is a bi-modal distributed counter structure that
++ * starts off as a simple counter and can be upgraded to a full per-cpu
++ * counter when the user considers more non-local updates are likely to
++ * happen more frequently in the future.  It is useful when non-local
++ * updates are rare, but might become more frequent after other
++ * operations.
++ *
++ * - Lazy-mode:
++ *
++ * Local updates are handled with a simple variable write, while
++ * non-local updates are handled through an atomic operation.  Once
++ * non-local updates become more likely to happen in the future, the
++ * user can upgrade the counter, turning it into a normal
++ * per-cpu counter.
++ *
++ * Concurrency safety of 'local' accesses must be guaranteed by the
++ * caller API, either through task-local accesses or by external locks.
++ *
++ * In the initial lazy-mode, read is guaranteed to be exact only when
++ * reading from the local context with lazy_percpu_counter_sum_local.
++ *
++ * - Non-lazy-mode:
++ *   Behaves as a per-cpu counter.
++ */
++
++struct lazy_percpu_counter {
++	struct percpu_counter c;
++};
++
++#define LAZY_INIT_BIAS (1<<0)
++
++static inline s64 add_bias(long val)
++{
++	return (val << 1) | LAZY_INIT_BIAS;
++}
++static inline s64 remove_bias(long val)
++{
++	return val >> 1;
++}
++
++static inline bool lazy_percpu_counter_initialized(struct lazy_percpu_counter *lpc)
++{
++	return !(atomic_long_read(&lpc->c.remote) & LAZY_INIT_BIAS);
++}
++
++static inline void lazy_percpu_counter_init_many(struct lazy_percpu_counter *lpc, int amount,
++					       int nr_counters)
++{
++	for (int i = 0; i < nr_counters; i++) {
++		lpc[i].c.count = amount;
++		atomic_long_set(&lpc[i].c.remote, LAZY_INIT_BIAS);
++		raw_spin_lock_init(&lpc[i].c.lock);
++	}
++}
++
++static inline void lazy_percpu_counter_add_atomic(struct lazy_percpu_counter *lpc, s64 amount)
++{
++	long x = amount << 1;
++	long counter;
++
++	do {
++		counter = atomic_long_read(&lpc->c.remote);
++		if (!(counter & LAZY_INIT_BIAS)) {
++			percpu_counter_add(&lpc->c, amount);
++			return;
++		}
++	} while (atomic_long_cmpxchg_relaxed(&lpc->c.remote, counter, (counter+x)) != counter);
++}
++
++static inline void lazy_percpu_counter_add_fast(struct lazy_percpu_counter *lpc, s64 amount)
++{
++	if (lazy_percpu_counter_initialized(lpc))
++		percpu_counter_add(&lpc->c, amount);
++	else
++		lpc->c.count += amount;
++}
++
++/*
++ * lazy_percpu_counter_sync needs to be protected against concurrent
++ * local updates.
++ */
++static inline s64 lazy_percpu_counter_sum_local(struct lazy_percpu_counter *lpc)
++{
++	if (lazy_percpu_counter_initialized(lpc))
++		return percpu_counter_sum(&lpc->c);
++
++	lazy_percpu_counter_add_atomic(lpc, lpc->c.count);
++	lpc->c.count = 0;
++	return remove_bias(atomic_long_read(&lpc->c.remote));
++}
++
++static inline s64 lazy_percpu_counter_sum(struct lazy_percpu_counter *lpc)
++{
++	if (lazy_percpu_counter_initialized(lpc))
++		return percpu_counter_sum(&lpc->c);
++	return remove_bias(atomic_long_read(&lpc->c.remote)) + lpc->c.count;
++}
++
++static inline s64 lazy_percpu_counter_sum_positive(struct lazy_percpu_counter *lpc)
++{
++	s64 val = lazy_percpu_counter_sum(lpc);
++
++	return (val > 0) ? val : 0;
++}
++
++static inline s64 lazy_percpu_counter_read(struct lazy_percpu_counter *lpc)
++{
++	if (lazy_percpu_counter_initialized(lpc))
++		return percpu_counter_read(&lpc->c);
++	return remove_bias(atomic_long_read(&lpc->c.remote)) + lpc->c.count;
++}
++
++static inline s64 lazy_percpu_counter_read_positive(struct lazy_percpu_counter *lpc)
++{
++	s64 val = lazy_percpu_counter_read(lpc);
++
++	return (val > 0) ? val : 0;
++}
++
++int __lazy_percpu_counter_upgrade_many(struct lazy_percpu_counter *c,
++				       int nr_counters, gfp_t gfp);
++static inline int lazy_percpu_counter_upgrade_many(struct lazy_percpu_counter *c,
++						   int nr_counters, gfp_t gfp)
++{
++	/* Only check the first element, as batches are expected to be
++	 * upgraded together.
++	 */
++	if (!lazy_percpu_counter_initialized(c))
++		return __lazy_percpu_counter_upgrade_many(c, nr_counters, gfp);
++	return 0;
++}
++
++static inline void lazy_percpu_counter_destroy_many(struct lazy_percpu_counter *lpc,
++						    u32 nr_counters)
++{
++	/* Only check the first element, as they must have been initialized together. */
++	if (lazy_percpu_counter_initialized(lpc))
++		percpu_counter_destroy_many((struct percpu_counter *)lpc, nr_counters);
++}
++#endif
+diff --git a/include/linux/percpu_counter.h b/include/linux/percpu_counter.h
+index 3a44dd1e33d2..e6fada9cba44 100644
+--- a/include/linux/percpu_counter.h
++++ b/include/linux/percpu_counter.h
+@@ -25,7 +25,10 @@ struct percpu_counter {
+ #ifdef CONFIG_HOTPLUG_CPU
+ 	struct list_head list;	/* All percpu_counters are on a list */
+ #endif
+-	s32 __percpu *counters;
++	union {
++		s32 __percpu *counters;
++		atomic_long_t remote;
++	};
+ };
+
+ extern int percpu_counter_batch;
+diff --git a/lib/percpu_counter.c b/lib/percpu_counter.c
+index c2322d53f3b1..0a210496f219 100644
+--- a/lib/percpu_counter.c
++++ b/lib/percpu_counter.c
+@@ -4,6 +4,7 @@
+  */
+
+ #include <linux/percpu_counter.h>
++#include <linux/lazy_percpu_counter.h>
+ #include <linux/mutex.h>
+ #include <linux/init.h>
+ #include <linux/cpu.h>
+@@ -397,6 +398,45 @@ bool __percpu_counter_limited_add(struct percpu_counter *fbc,
+ 	return good;
+ }
+
++int __lazy_percpu_counter_upgrade_many(struct lazy_percpu_counter *counters,
++				       int nr_counters, gfp_t gfp)
++{
++	s32 __percpu *pcpu_mem;
++	size_t counter_size;
++
++	counter_size = ALIGN(sizeof(*pcpu_mem), __alignof__(*pcpu_mem));
++	pcpu_mem = __alloc_percpu_gfp(nr_counters * counter_size,
++				      __alignof__(*pcpu_mem), gfp);
++	if (!pcpu_mem)
++		return -ENOMEM;
++
++	for (int i = 0; i < nr_counters; i++) {
++		struct lazy_percpu_counter *lpc = &(counters[i]);
++		s32 __percpu *n_counter;
++		s64 remote = 0;
++
++		WARN_ON(lazy_percpu_counter_initialized(lpc));
++
++		/*
++		 * After the xchg, lazy_percpu_counter behaves as a
++		 * regular percpu counter.
++		 */
++		n_counter = (void __percpu *)pcpu_mem + i * counter_size;
++		remote = (s64) atomic_long_xchg(&lpc->c.remote, (s64)(uintptr_t) n_counter);
++
++		BUG_ON(!(remote & LAZY_INIT_BIAS));
++
++		percpu_counter_add_local(&lpc->c, remove_bias(remote));
++	}
++
++	for (int i = 0; i < nr_counters; i++)
++		debug_percpu_counter_activate(&counters[i].c);
++
++	cpu_hotplug_add_watchlist((struct percpu_counter *) counters, nr_counters);
++
++	return 0;
++}
++
+ static int __init percpu_counter_startup(void)
+ {
+ 	int ret;
+--
+2.51.0
