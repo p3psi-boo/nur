@@ -560,6 +560,20 @@
       sha256 = "sha256-EZozwA+GIjN8/CBNhtdeM3HsPhVdx1/J0B9gvvn2qKU=";
     };
   };
+  web-search = {
+    pname = "web-search";
+    version = "9f95d0860dfa3a2e17c2a6a91d7968820e3c0929";
+    src = fetchgit {
+      url = "https://github.com/p3psi-boo/web-search.git";
+      rev = "9f95d0860dfa3a2e17c2a6a91d7968820e3c0929";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-+ClQZ+zo24j9Yvb9pkEeyHiMnhmMOoTIRioSECXoQbs=";
+    };
+    date = "2026-03-19";
+  };
   wikiteam3 = {
     pname = "wikiteam3";
     version = "06346a4305f8f8c5ced633c3e0dc38b3bb960e6e";

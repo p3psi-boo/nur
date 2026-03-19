@@ -939,6 +939,26 @@
         },
         "version": "v0.17.1"
     },
+    "web-search": {
+        "cargoLock": null,
+        "date": "2026-03-19",
+        "extract": null,
+        "name": "web-search",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "9f95d0860dfa3a2e17c2a6a91d7968820e3c0929",
+            "sha256": "sha256-+ClQZ+zo24j9Yvb9pkEeyHiMnhmMOoTIRioSECXoQbs=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/p3psi-boo/web-search.git"
+        },
+        "version": "9f95d0860dfa3a2e17c2a6a91d7968820e3c0929"
+    },
     "wikiteam3": {
         "cargoLock": null,
         "date": "2025-12-24",
