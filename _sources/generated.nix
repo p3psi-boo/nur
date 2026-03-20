@@ -19,34 +19,34 @@
   };
   agent-browser = {
     pname = "agent-browser";
-    version = "v0.21.0";
+    version = "v0.21.2";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.0/agent-browser-linux-x64";
-      sha256 = "sha256-yJvzQaeavCjOUnqViDP2ryRkHS9eVYzlTy9YPfdpYf8=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.2/agent-browser-linux-x64";
+      sha256 = "sha256-ypVeoZvPHmAOpZSip61lyh3xOVUhFHDYKrtrs1fvgHg=";
     };
   };
   agent-browser-darwin-arm64 = {
     pname = "agent-browser-darwin-arm64";
-    version = "v0.21.0";
+    version = "v0.21.2";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.0/agent-browser-darwin-arm64";
-      sha256 = "sha256-6HpflPGRUtY0Ccv3aP1P0PZPLqkX/Rg2SDVJTDDc1Qw=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.2/agent-browser-darwin-arm64";
+      sha256 = "sha256-rn2gnheaM2Q5EnpJ7le22IBOvrR+Kd9Aa33L+sWuZLc=";
     };
   };
   agent-browser-darwin-x64 = {
     pname = "agent-browser-darwin-x64";
-    version = "v0.21.0";
+    version = "v0.21.2";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.0/agent-browser-darwin-x64";
-      sha256 = "sha256-0TeGyfWxSragqqI49h4Cc2p8L+Ulq2I4LU7s8sVZguM=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.2/agent-browser-darwin-x64";
+      sha256 = "sha256-I7fM2Q+amliTqQLTzcbIA8sAfFXdNWiReWT4MJBTmpk=";
     };
   };
   agent-browser-linux-arm64 = {
     pname = "agent-browser-linux-arm64";
-    version = "v0.21.0";
+    version = "v0.21.2";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.0/agent-browser-linux-arm64";
-      sha256 = "sha256-umvguc8qyTYVArxiY/Xywje3LHxtb8cAaqqeGUDfacM=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.2/agent-browser-linux-arm64";
+      sha256 = "sha256-O3wNNHEH35mCHm1+f8q65SbXD3ABt/e/bZyi/qlQt/0=";
     };
   };
   bcut-asr = {
@@ -180,13 +180,13 @@
   };
   dagu = {
     pname = "dagu";
-    version = "v2.3.0";
+    version = "v2.3.1";
     src = fetchFromGitHub {
       owner = "dagu-org";
       repo = "dagu";
-      rev = "v2.3.0";
+      rev = "v2.3.1";
       fetchSubmodules = false;
-      sha256 = "sha256-2nN15kHsOon7NANCKWBOhNcntco2hMBMj6QC3VsYO2A=";
+      sha256 = "sha256-CUExEoWPCE5odfFt/s9/SaN9eGc4ssbepXTO7hx+vkM=";
     };
   };
   ecloud-computer-auto-boot = {
@@ -202,13 +202,13 @@
   };
   fcitx5-vinput = {
     pname = "fcitx5-vinput";
-    version = "v1.0.20";
+    version = "v1.1.7";
     src = fetchFromGitHub {
       owner = "xifan2333";
       repo = "fcitx5-vinput";
-      rev = "v1.0.20";
+      rev = "v1.1.7";
       fetchSubmodules = false;
-      sha256 = "sha256-gmZqQhhfN5+FndxJHMAbrfjjb0wyLQltClEhSXBvREA=";
+      sha256 = "sha256-DJy7nL2WjD99THrdJYEaDSyYuzdhry3EmVriU+VKxas=";
     };
   };
   firm = {
@@ -473,13 +473,13 @@
   };
   rikugan = {
     pname = "rikugan";
-    version = "v1.1";
+    version = "v1.2";
     src = fetchFromGitHub {
       owner = "buzzer-re";
       repo = "Rikugan";
-      rev = "v1.1";
+      rev = "v1.2";
       fetchSubmodules = false;
-      sha256 = "sha256-LbN2sC717jEgFtKk+tz8DYP6GnWafZrLqGYA4IqF3tw=";
+      sha256 = "sha256-xebZ18NJ5w9GqjJ3s6DLBsWIf9H1+WeHfq5tZC1Xzxg=";
     };
   };
   rust-video-downloader = {
@@ -573,17 +573,17 @@
   };
   web-search = {
     pname = "web-search";
-    version = "9f95d0860dfa3a2e17c2a6a91d7968820e3c0929";
+    version = "1b629063e704f9d866c5832143263f763fcab814";
     src = fetchgit {
       url = "https://github.com/p3psi-boo/web-search.git";
-      rev = "9f95d0860dfa3a2e17c2a6a91d7968820e3c0929";
+      rev = "1b629063e704f9d866c5832143263f763fcab814";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-+ClQZ+zo24j9Yvb9pkEeyHiMnhmMOoTIRioSECXoQbs=";
+      sha256 = "sha256-6ZDv0YdTPIL9ILIcuXNq8XiH06h4qjjrtG2DPK0KEhY=";
     };
-    date = "2026-03-19";
+    date = "2026-03-20";
   };
   wikiteam3 = {
     pname = "wikiteam3";

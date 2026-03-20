@@ -29,11 +29,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-yJvzQaeavCjOUnqViDP2ryRkHS9eVYzlTy9YPfdpYf8=",
+            "sha256": "sha256-ypVeoZvPHmAOpZSip61lyh3xOVUhFHDYKrtrs1fvgHg=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.0/agent-browser-linux-x64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.2/agent-browser-linux-x64"
         },
-        "version": "v0.21.0"
+        "version": "v0.21.2"
     },
     "agent-browser-darwin-arm64": {
         "cargoLock": null,
@@ -44,11 +44,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-6HpflPGRUtY0Ccv3aP1P0PZPLqkX/Rg2SDVJTDDc1Qw=",
+            "sha256": "sha256-rn2gnheaM2Q5EnpJ7le22IBOvrR+Kd9Aa33L+sWuZLc=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.0/agent-browser-darwin-arm64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.2/agent-browser-darwin-arm64"
         },
-        "version": "v0.21.0"
+        "version": "v0.21.2"
     },
     "agent-browser-darwin-x64": {
         "cargoLock": null,
@@ -59,11 +59,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-0TeGyfWxSragqqI49h4Cc2p8L+Ulq2I4LU7s8sVZguM=",
+            "sha256": "sha256-I7fM2Q+amliTqQLTzcbIA8sAfFXdNWiReWT4MJBTmpk=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.0/agent-browser-darwin-x64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.2/agent-browser-darwin-x64"
         },
-        "version": "v0.21.0"
+        "version": "v0.21.2"
     },
     "agent-browser-linux-arm64": {
         "cargoLock": null,
@@ -74,11 +74,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-umvguc8qyTYVArxiY/Xywje3LHxtb8cAaqqeGUDfacM=",
+            "sha256": "sha256-O3wNNHEH35mCHm1+f8q65SbXD3ABt/e/bZyi/qlQt/0=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.0/agent-browser-linux-arm64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.2/agent-browser-linux-arm64"
         },
-        "version": "v0.21.0"
+        "version": "v0.21.2"
     },
     "bcut-asr": {
         "cargoLock": null,
@@ -312,12 +312,12 @@
             "name": null,
             "owner": "dagu-org",
             "repo": "dagu",
-            "rev": "v2.3.0",
-            "sha256": "sha256-2nN15kHsOon7NANCKWBOhNcntco2hMBMj6QC3VsYO2A=",
+            "rev": "v2.3.1",
+            "sha256": "sha256-CUExEoWPCE5odfFt/s9/SaN9eGc4ssbepXTO7hx+vkM=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.3.0"
+        "version": "v2.3.1"
     },
     "ecloud-computer-auto-boot": {
         "cargoLock": null,
@@ -354,12 +354,12 @@
             "name": null,
             "owner": "xifan2333",
             "repo": "fcitx5-vinput",
-            "rev": "v1.0.20",
-            "sha256": "sha256-gmZqQhhfN5+FndxJHMAbrfjjb0wyLQltClEhSXBvREA=",
+            "rev": "v1.1.7",
+            "sha256": "sha256-DJy7nL2WjD99THrdJYEaDSyYuzdhry3EmVriU+VKxas=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.0.20"
+        "version": "v1.1.7"
     },
     "firm": {
         "cargoLock": null,
@@ -810,12 +810,12 @@
             "name": null,
             "owner": "buzzer-re",
             "repo": "Rikugan",
-            "rev": "v1.1",
-            "sha256": "sha256-LbN2sC717jEgFtKk+tz8DYP6GnWafZrLqGYA4IqF3tw=",
+            "rev": "v1.2",
+            "sha256": "sha256-xebZ18NJ5w9GqjJ3s6DLBsWIf9H1+WeHfq5tZC1Xzxg=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.1"
+        "version": "v1.2"
     },
     "rust-video-downloader": {
         "cargoLock": null,
@@ -962,7 +962,7 @@
     },
     "web-search": {
         "cargoLock": null,
-        "date": "2026-03-19",
+        "date": "2026-03-20",
         "extract": null,
         "name": "web-search",
         "passthru": null,
@@ -972,13 +972,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "9f95d0860dfa3a2e17c2a6a91d7968820e3c0929",
-            "sha256": "sha256-+ClQZ+zo24j9Yvb9pkEeyHiMnhmMOoTIRioSECXoQbs=",
+            "rev": "1b629063e704f9d866c5832143263f763fcab814",
+            "sha256": "sha256-6ZDv0YdTPIL9ILIcuXNq8XiH06h4qjjrtG2DPK0KEhY=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/p3psi-boo/web-search.git"
         },
-        "version": "9f95d0860dfa3a2e17c2a6a91d7968820e3c0929"
+        "version": "1b629063e704f9d866c5832143263f763fcab814"
     },
     "wikiteam3": {
         "cargoLock": null,
