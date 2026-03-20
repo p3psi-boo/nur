@@ -330,6 +330,17 @@
       sha256 = "sha256-4NMtISNTKGD5cSPZJ7G7hsTgjm/YpIv8a1vuCvrp69U=";
     };
   };
+  mcp-cli = {
+    pname = "mcp-cli";
+    version = "v0.3.0";
+    src = fetchFromGitHub {
+      owner = "philschmid";
+      repo = "mcp-cli";
+      rev = "v0.3.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-S924rqlVKzUFD63NDyK5bbXnonra+/UoH6j78AAj3d0=";
+    };
+  };
   nf_deaf = {
     pname = "nf_deaf";
     version = "cf346a3c270e5eb6d31b1d0c110efaf7a8b9193e";

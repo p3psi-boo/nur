@@ -256,3 +256,9 @@ src.github_tag = "cocoindex-io/cocoindex-code"
 src.prefix = "v"
 src.include_regex = "^v[0-9].*"
 fetch.url = "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v$ver.tar.gz"
+
+
+[mcp-cli]
+src.github_tag = "philschmid/mcp-cli"
+src.include_regex = "^v[0-9].*"
+fetch.github = "philschmid/mcp-cli"

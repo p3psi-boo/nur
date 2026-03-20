@@ -20,6 +20,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.pyproject-nix.follows = "pyproject-nix";
     };
+
+    bun2nix = {
+      url = "github:nix-community/bun2nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs@{ self, nixpkgs, ... }:
@@ -40,7 +45,10 @@
               "openssl-1.1.1w"
             ];
           };
-          overlays = [ self.overlays.default ];
+          overlays = [
+            inputs.bun2nix.overlays.default
+            self.overlays.default
+          ];
         };
     in
     {
@@ -80,6 +88,7 @@
               yq
               nurl
               nvfetcher
+              inputs.bun2nix.packages.${system}.default
             ];
           };
         }
