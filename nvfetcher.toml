@@ -149,6 +149,11 @@ src.git = "https://github.com/p3psi-boo/vikunja-cli.git"
 fetch.git = "https://github.com/p3psi-boo/vikunja-cli.git"
 git.fetch_submodules = false
 
+[liteparse]
+src.github_tag = "run-llama/liteparse"
+src.include_regex = "^v[0-9].*"
+fetch.github = "run-llama/liteparse"
+
 [polymarket-cli]
 src.github = "Polymarket/polymarket-cli"
 fetch.url = "https://github.com/Polymarket/polymarket-cli/releases/download/$ver/polymarket-$ver-x86_64-unknown-linux-gnu.tar.gz"

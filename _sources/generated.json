@@ -525,6 +525,27 @@
         },
         "version": "2a1cc5eb73c9fd5920c3d388767173ccd155c596"
     },
+    "liteparse": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "liteparse",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "run-llama",
+            "repo": "liteparse",
+            "rev": "v1.0.0",
+            "sha256": "sha256-T6jAhaCwepLJunKXA4c60d+3Ff5P6At3vfkvl2C7agc=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.0.0"
+    },
     "magiskboot-bin": {
         "cargoLock": null,
         "date": null,

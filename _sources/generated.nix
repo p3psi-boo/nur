@@ -311,6 +311,17 @@
     };
     date = "2026-01-30";
   };
+  liteparse = {
+    pname = "liteparse";
+    version = "v1.0.0";
+    src = fetchFromGitHub {
+      owner = "run-llama";
+      repo = "liteparse";
+      rev = "v1.0.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-T6jAhaCwepLJunKXA4c60d+3Ff5P6At3vfkvl2C7agc=";
+    };
+  };
   magiskboot-bin = {
     pname = "magiskboot-bin";
     version = "v30.7";
