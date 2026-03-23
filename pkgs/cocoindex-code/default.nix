@@ -41,7 +41,7 @@ py.buildPythonApplication {
 
   postPatch = ''
     substituteInPlace pyproject.toml \
-      --replace-fail '"cocoindex[litellm]==1.0.0a35",' '"cocoindex==1.0.0a35",'
+      --replace-fail '"cocoindex[litellm]==' '"cocoindex=='
 
     python - <<'PY'
 from pathlib import Path
@@ -49,19 +49,19 @@ from pathlib import Path
 path = Path("src/cocoindex_code/client.py")
 text = path.read_text()
 
-text = text.replace("import os\n", "import os\nimport shutil\n", 1)
+if "import shutil\n" not in text:
+    text = text.replace("import os\n", "import os\nimport shutil\n", 1)
+    if "import shutil\n" not in text:
+        raise SystemExit("failed to add shutil import in src/cocoindex_code/client.py")
 
-old = """def _find_ccc_executable() -> str | None:
-    \"\"\"Find the ccc executable in PATH or the same directory as python.\"\"\"
-    python_dir = Path(sys.executable).parent
-    # On Windows the script is ccc.exe; on Unix it's just ccc
-    names = [\"ccc.exe\", \"ccc\"] if sys.platform == \"win32\" else [\"ccc\"]
-    for name in names:
-        ccc = python_dir / name
-        if ccc.exists():
-            return str(ccc)
-    return None
-"""
+start = text.find("def _find_ccc_executable() -> str | None:")
+if start == -1:
+    raise SystemExit("failed to find _find_ccc_executable() in src/cocoindex_code/client.py")
+
+end = text.find("\ndef _pid_alive(", start)
+if end == -1:
+    raise SystemExit("failed to find _pid_alive() after _find_ccc_executable()")
+
 new = """def _find_ccc_executable() -> str | None:
     \"\"\"Find the ccc launcher that carries the full runtime environment.\"\"\"
     argv0 = Path(sys.argv[0]).resolve()
@@ -83,10 +83,7 @@ new = """def _find_ccc_executable() -> str | None:
     return None
 """
 
-if old not in text:
-    raise SystemExit("failed to find _find_ccc_executable() in src/cocoindex_code/client.py")
-
-path.write_text(text.replace(old, new, 1))
+path.write_text(text[:start] + new + text[end + 1:])
 PY
   '';
 
