@@ -525,6 +525,26 @@
         },
         "version": "2a1cc5eb73c9fd5920c3d388767173ccd155c596"
     },
+    "lazyssh": {
+        "cargoLock": null,
+        "date": "2025-11-28",
+        "extract": null,
+        "name": "lazyssh",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "48995806bf1aa1c9c41bb8dff6b5ddd698539311",
+            "sha256": "sha256-/jywzjLZ51nSbiDbhw3H1eES3p0sZ9MSayGjJFQ+RKM=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/p3psi-boo/lazyssh.git"
+        },
+        "version": "48995806bf1aa1c9c41bb8dff6b5ddd698539311"
+    },
     "liteparse": {
         "cargoLock": null,
         "date": null,
@@ -581,6 +601,26 @@
             "type": "github"
         },
         "version": "v0.3.0"
+    },
+    "mimic": {
+        "cargoLock": null,
+        "date": "2025-11-20",
+        "extract": null,
+        "name": "mimic",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "493faf5dfd440bc44bc0d2a88baaca4d7ef0b709",
+            "sha256": "sha256-UQlnWDl39Fri1q38l9Z/ybrmMP6QoRHuqLV/y/Ab8Eg=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/hack3ric/mimic.git"
+        },
+        "version": "493faf5dfd440bc44bc0d2a88baaca4d7ef0b709"
     },
     "nf_deaf": {
         "cargoLock": null,
@@ -832,7 +872,7 @@
             "owner": "buzzer-re",
             "repo": "Rikugan",
             "rev": "v1.2",
-            "sha256": "sha256-xebZ18NJ5w9GqjJ3s6DLBsWIf9H1+WeHfq5tZC1Xzxg=",
+            "sha256": "sha256-8e866fRury/bCFd/6VSDMhTcLvAUI6ALbLO7J0gp8rg=",
             "sparseCheckout": [],
             "type": "github"
         },
@@ -919,6 +959,26 @@
             "url": "https://github.com/rahiel/telegram-send.git"
         },
         "version": "f5466fc2b8b8b9aaa55dd28fb80b6ae138b578d8"
+    },
+    "ut": {
+        "cargoLock": null,
+        "date": "2025-12-26",
+        "extract": null,
+        "name": "ut",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "6ea80d7d40c67d81569ddc814b9ef9e835dff388",
+            "sha256": "sha256-SURksZzJS3ouJIyfV7K4PkToPBs7hmOD2xT7IeebWco=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/ksdme/ut.git"
+        },
+        "version": "6ea80d7d40c67d81569ddc814b9ef9e835dff388"
     },
     "vanissh": {
         "cargoLock": null,

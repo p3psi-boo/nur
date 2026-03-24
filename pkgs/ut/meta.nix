@@ -5,7 +5,7 @@
   # Function that returns extra arguments for callPackage
   # Takes the final package set and returns an attribute set
   extraArgs = pkgs: {
-    inherit (pkgs) lib fetchFromGitHub;
+    inherit (pkgs) lib;
     buildRustPackage = pkgs.rustPlatform.buildRustPackage;
   };
 }

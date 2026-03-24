@@ -1,32 +1,28 @@
 {
   lib,
   buildRustPackage,
-  fetchFromGitHub,
+  generated,
 }:
 
 let
   rustOptimized = import ../_lib/rust-optimized.nix;
+  sourceInfo = generated.ut;
 in
 buildRustPackage (
   rec {
     pname = "ut";
-    version = "unstable";
+    version = "unstable-${sourceInfo.date}";
 
-    src = fetchFromGitHub {
-      owner = "ksdme";
-      repo = "ut";
-      rev = "main";
-      hash = "sha256-Bq8yow674GdChv9AGgmVZQ34+hyJdRq3G0jvIRJVNM4=";
-    };
+    src = sourceInfo.src;
 
-    cargoHash = "sha256-86XzsjDExg8SkFk5Bb8HeRiABCVd1FXQyX6xSsPsKHw=";
+    cargoHash = "sha256-NsMtTEI5T7eRIFvmOpOpgIWAvmIVD/ojowarLyKiSCM=";
 
     doCheck = false;
 
     meta = with lib; {
       description = "A Rust based utility toolbox for developers";
       homepage = "https://github.com/ksdme/ut";
-      license = licenses.mit; # Confirmed from web_fetch output
+      license = licenses.mit;
       maintainers = with maintainers; [ ];
     };
   }

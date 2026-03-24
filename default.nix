@@ -1,11 +1,6 @@
 {
   pkgs ? import <nixpkgs> {
-    config = {
-      allowUnfree = true;
-      permittedInsecurePackages = [
-        "openssl-1.1.1w"
-      ];
-    };
+    config = import ./nixpkgs-config.nix;
   },
   lib ? pkgs.lib,
 }:

@@ -11,7 +11,7 @@ python3.pkgs.buildPythonApplication {
 
   src = fetchurl {
     url = "https://github.com/rimeinn/rime-wanxiang-update-tools/releases/latest/download/rime-wanxiang-update-win-mac-ios-android.py";
-    sha256 = "1gxa0rv3263y80qifhm9c4p4nk3yzrzlikixmxib7l3w7xzhp98g";
+    sha256 = "sha256-CiTGc5bPLT0VabT2faMfMpx1uOW7x7xyvD/THjwWxfQ=";
   };
 
   propagatedBuildInputs = with python3.pkgs; [

@@ -25,8 +25,8 @@ rustPlatform.buildRustPackage rec {
   cargoLock = {
     lockFile = ./Cargo.lock;
     outputHashes = {
-      "libefex-0.1.0" = "sha256-gAEMYSHrAs0C8MrYMjiEsjdnBKybDaIJ44+jA9CnJEE=";
-      "libefex-sys-0.1.0" = "sha256-gAEMYSHrAs0C8MrYMjiEsjdnBKybDaIJ44+jA9CnJEE=";
+      "libefex-0.1.0" = "sha256-LFZinLs8pl2cR1UjZG6XyXy+1K7s5WcIIcXOgS48/Wg=";
+      "libefex-sys-0.1.0" = "sha256-LFZinLs8pl2cR1UjZG6XyXy+1K7s5WcIIcXOgS48/Wg=";
     };
   };
 

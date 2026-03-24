@@ -34,19 +34,22 @@ stdenv.mkDerivation (finalAttrs: {
 
   enableParallelBuilding = true;
 
-  # Replace -march=native with -mssse3 for reproducibility
-  # SSSE3 is required by wirehair library's SIMD code
+  # Replace the core library's -march=native flag with a reproducible x86 baseline.
   postPatch = ''
     substituteInPlace CMakeLists.txt \
-      --replace-fail 'target_compile_options(media_storage PRIVATE -march=native)' \
-                      'target_compile_options(media_storage PRIVATE -O2 -mssse3)'
+      --replace-fail 'target_compile_options(media_storage_core PRIVATE -march=native)' \
+                      'target_compile_options(media_storage_core PRIVATE -O2 -mssse3)'
+
+    cat >> CMakeLists.txt <<'EOF'
+
+install(TARGETS media_storage media_storage_gui
+        RUNTIME DESTINATION ''${CMAKE_INSTALL_BINDIR})
+EOF
   '';
 
-  # Upstream CMakeLists.txt has no install() rules
   installPhase = ''
     runHook preInstall
-    mkdir -p $out/bin
-    cp media_storage media_storage_gui $out/bin/
+    cmake --install . --prefix $out
     runHook postInstall
   '';
 

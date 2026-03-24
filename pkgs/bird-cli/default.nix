@@ -45,17 +45,32 @@ let
   setPnpmArch = ''
     echo "supportedArchitectures.os=[\"${npmOs}\"]" >> .npmrc
     echo "supportedArchitectures.cpu=[\"${npmCpu}\"]" >> .npmrc
+    echo "auto-install-peers=true" >> .npmrc
   '';
+
+  srcWithLock = stdenv.mkDerivation {
+    pname = "bird-cli-src";
+    inherit (sourceInfo) version src;
+    dontUnpack = true;
+    installPhase = ''
+      runHook preInstall
+      cp -r "$src" "$out"
+      chmod -R u+w "$out"
+      cp ${./pnpm-lock.yaml} "$out/pnpm-lock.yaml"
+      runHook postInstall
+    '';
+  };
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "bird-cli";
-  inherit (sourceInfo) version src;
+  version = sourceInfo.version;
+  src = srcWithLock;
 
   pnpmDeps = fetchPnpmDeps {
     inherit (finalAttrs) pname version src;
     pnpm = pnpm;
     fetcherVersion = 1;
-    hash = "sha256-4XEv5ya7U0ycUnXH9HS8QydcD4UzZGtqI+QTQY2iaDE=";
+    hash = "sha256-NRzbBZAy2lZTz2gt2ztl6B0r521ryKYDEgkppnqiC6M=";
     prePnpmInstall = setPnpmArch;
     # Only fetch production deps; devDeps are not needed at runtime
     # and significantly bloat the fixed-output derivation.

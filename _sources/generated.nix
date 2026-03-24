@@ -311,6 +311,20 @@
     };
     date = "2026-01-30";
   };
+  lazyssh = {
+    pname = "lazyssh";
+    version = "48995806bf1aa1c9c41bb8dff6b5ddd698539311";
+    src = fetchgit {
+      url = "https://github.com/p3psi-boo/lazyssh.git";
+      rev = "48995806bf1aa1c9c41bb8dff6b5ddd698539311";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-/jywzjLZ51nSbiDbhw3H1eES3p0sZ9MSayGjJFQ+RKM=";
+    };
+    date = "2025-11-28";
+  };
   liteparse = {
     pname = "liteparse";
     version = "v1.0.1";
@@ -340,6 +354,20 @@
       fetchSubmodules = false;
       sha256 = "sha256-S924rqlVKzUFD63NDyK5bbXnonra+/UoH6j78AAj3d0=";
     };
+  };
+  mimic = {
+    pname = "mimic";
+    version = "493faf5dfd440bc44bc0d2a88baaca4d7ef0b709";
+    src = fetchgit {
+      url = "https://github.com/hack3ric/mimic.git";
+      rev = "493faf5dfd440bc44bc0d2a88baaca4d7ef0b709";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-UQlnWDl39Fri1q38l9Z/ybrmMP6QoRHuqLV/y/Ab8Eg=";
+    };
+    date = "2025-11-20";
   };
   nf_deaf = {
     pname = "nf_deaf";
@@ -490,7 +518,7 @@
       repo = "Rikugan";
       rev = "v1.2";
       fetchSubmodules = false;
-      sha256 = "sha256-xebZ18NJ5w9GqjJ3s6DLBsWIf9H1+WeHfq5tZC1Xzxg=";
+      sha256 = "sha256-8e866fRury/bCFd/6VSDMhTcLvAUI6ALbLO7J0gp8rg=";
     };
   };
   rust-video-downloader = {
@@ -542,6 +570,20 @@
       sha256 = "sha256-kc6btKN+IclmbRx6Lko2Jw0XxVaKVo/AnhYsW6C2G4Y=";
     };
     date = "2026-01-27";
+  };
+  ut = {
+    pname = "ut";
+    version = "6ea80d7d40c67d81569ddc814b9ef9e835dff388";
+    src = fetchgit {
+      url = "https://github.com/ksdme/ut.git";
+      rev = "6ea80d7d40c67d81569ddc814b9ef9e835dff388";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-SURksZzJS3ouJIyfV7K4PkToPBs7hmOD2xT7IeebWco=";
+    };
+    date = "2025-12-26";
   };
   vanissh = {
     pname = "vanissh";

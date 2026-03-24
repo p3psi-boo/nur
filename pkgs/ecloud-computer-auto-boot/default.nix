@@ -13,36 +13,19 @@ buildGoModule (finalAttrs: {
 
   src = sourceInfo.src;
 
-  # Dependencies from gitlab.ecloud.com require network access
-  # Use vendorHash = null to skip vendor hash verification
-  vendorHash = null;
+  vendorHash = lib.fakeHash;
 
-  # Allow network access during build
-  __darwinAllowLocalNetworking = true;
-
-  # Allow Go reference in output (needed when building with CGO_ENABLED=0)
   allowGoReference = true;
 
-  env.CGO_ENABLED = "0";
-
-  # Remove vendor directory and go.sum to avoid conflicts
-  postUnpack = ''
-    rm -rf source/vendor
-    rm -f source/go.sum
-  '';
-
-  preBuild = ''
-    # Force Go to use proxy for all modules, including private ones
-    export GOPROXY="https://ecloud.10086.cn/api/query/developer/nexus/repository/go-sdk/,https://goproxy.cn,direct"
-    export GONOSUMDB="gitlab.ecloud.com"
-    export GOPRIVATE=""
-    export GONOPROXY=""
-    export GOFLAGS="-mod=mod"
-    export GOINSECURE="gitlab.ecloud.com"
-
-    # Regenerate go.sum with correct checksums from proxy
-    go mod tidy
-  '';
+  env = {
+    CGO_ENABLED = "0";
+    GOENV = "off";
+    GOPROXY = "https://ecloud.10086.cn/api/query/developer/nexus/repository/go-sdk/,https://goproxy.cn,direct";
+    GONOSUMDB = "gitlab.ecloud.com";
+    GOPRIVATE = "none";
+    GONOPROXY = "none";
+    GOINSECURE = "none";
+  };
 
   ldflags = [
     "-s"

@@ -1,8 +1,8 @@
 { stdenv
 , lib
-, fetchFromGitHub
+, generated
 , clang
-, clang_18
+, llvmPackages_18
 , bpftools
 , libbpf
 , libffi
@@ -13,20 +13,20 @@
 , enableStatic ? false
 }:
 
+let
+  sourceInfo = generated.mimic;
+  bpfTargetArch = stdenv.hostPlatform.parsed.cpu.name;
+in
 stdenv.mkDerivation {
   pname = "mimic";
-  version = "unstable-2024-12-09";
+  version = "unstable-${sourceInfo.date}";
 
-  src = fetchFromGitHub {
-    owner = "hack3ric";
-    repo = "mimic";
-    rev = "493faf5dfd440bc44bc0d2a88baaca4d7ef0b709";
-    hash = "sha256-UQlnWDl39Fri1q38l9Z/ybrmMP6QoRHuqLV/y/Ab8Eg=";
-  };
+  src = sourceInfo.src;
 
   nativeBuildInputs = [
     clang
-    clang_18
+    llvmPackages_18.clang-unwrapped
+    llvmPackages_18.llvm
     bpftools
     pkg-config
     python3
@@ -45,9 +45,9 @@ stdenv.mkDerivation {
     "BPF_USE_SYSTEM_VMLINUX=1"
     "BPFTOOL=${bpftools}/bin/bpftool"
     "CC=${stdenv.cc.targetPrefix}gcc"
-    "BPF_CC=${clang_18}/bin/clang"
-    "LLVM_STRIP=${clang_18}/bin/llvm-strip"
-    "BPF_CFLAGS=--target=bpf -mcpu=v3 -g -O2 -iquote. -Wall -Wextra -std=gnu99"
+    "BPF_CC=${llvmPackages_18.clang-unwrapped}/bin/clang"
+    "LLVM_STRIP=${llvmPackages_18.llvm}/bin/llvm-strip"
+    "BPF_CFLAGS=--target=bpf -mcpu=v3 -g -O2 -iquote. -Wall -Wextra -std=gnu99 -DMIMIC_BPF_TARGET_ARCH_${bpfTargetArch} $(pkg-config --cflags libbpf)"
   ] ++ lib.optionals enableStatic [
     "STATIC=1"
   ];
@@ -66,16 +66,20 @@ stdenv.mkDerivation {
     runHook preBuild
 
     # Build BPF objects manually with unwrapped clang
-    ${clang_18}/bin/clang --target=bpf -mcpu=v3 -g -O2 -iquote. -Wall -Wextra -std=gnu99 \
-      -DMIMIC_BPF_TARGET_ARCH_x86_64 -DMIMIC_CHECKSUM_HACK_kfunc -DMIMIC_BPF \
+    ${llvmPackages_18.clang-unwrapped}/bin/clang --target=bpf -mcpu=v3 -g -O2 -iquote. -Wall -Wextra -std=gnu99 \
+      $(pkg-config --cflags libbpf) \
+      -DMIMIC_BPF_TARGET_ARCH_${bpfTargetArch} -DMIMIC_CHECKSUM_HACK_kfunc -DMIMIC_BPF \
       -c -o bpf/egress.o bpf/egress.c
 
-    ${clang_18}/bin/clang --target=bpf -mcpu=v3 -g -O2 -iquote. -Wall -Wextra -std=gnu99 \
-      -DMIMIC_BPF_TARGET_ARCH_x86_64 -DMIMIC_CHECKSUM_HACK_kfunc -DMIMIC_BPF \
+    ${llvmPackages_18.clang-unwrapped}/bin/clang --target=bpf -mcpu=v3 -g -O2 -iquote. -Wall -Wextra -std=gnu99 \
+      $(pkg-config --cflags libbpf) \
+      -DMIMIC_BPF_TARGET_ARCH_${bpfTargetArch} -DMIMIC_CHECKSUM_HACK_kfunc -DMIMIC_BPF \
       -c -o bpf/ingress.o bpf/ingress.c
 
-    # Generate BPF skeleton header
-    ${bpftools}/bin/bpftool gen skeleton bpf/egress.o > src/bpf_skel.h
+    # Match upstream's object aggregation before generating the skeleton.
+    mkdir -p out
+    ${bpftools}/bin/bpftool gen object out/mimic.bpf.o bpf/egress.o bpf/ingress.o
+    ${bpftools}/bin/bpftool gen skeleton out/mimic.bpf.o > src/bpf_skel.h
 
     # Build CLI tools
     make build-cli build-tools

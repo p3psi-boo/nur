@@ -30,21 +30,24 @@
   outputs = inputs@{ self, nixpkgs, ... }:
     let
       lib = nixpkgs.lib;
-      systems = [
+      packageSystems = [
+        "x86_64-linux"
+        "aarch64-linux"
+        "x86_64-darwin"
+        "aarch64-darwin"
+      ];
+      checkSystems = [
         "x86_64-linux"
         "aarch64-darwin"
       ];
-      forAllSystems = lib.genAttrs systems;
+      forAllPackageSystems = lib.genAttrs packageSystems;
+      forAllCheckSystems = lib.genAttrs checkSystems;
+      nixpkgsConfig = import ./nixpkgs-config.nix;
 
       pkgsFor = system:
         import nixpkgs {
           inherit system;
-          config = {
-            allowUnfree = true;
-            permittedInsecurePackages = [
-              "openssl-1.1.1w"
-            ];
-          };
+          config = nixpkgsConfig;
           overlays = [
             inputs.bun2nix.overlays.default
             self.overlays.default
@@ -55,7 +58,7 @@
       overlays.default = import ./overlay.nix { inherit inputs; };
       overlay = self.overlays.default;
 
-      packages = forAllSystems (
+      packages = forAllPackageSystems (
         system:
         let
           pkgs = pkgsFor system;
@@ -66,19 +69,19 @@
         }
       );
 
-      checks = forAllSystems (
+      checks = forAllCheckSystems (
         system:
         import ./ci.nix {
           pkgs = pkgsFor system;
         }
       );
 
-      legacyPackages = forAllSystems pkgsFor;
+      legacyPackages = forAllPackageSystems pkgsFor;
 
-      devShells = forAllSystems (
+      devShells = forAllPackageSystems (
         system:
         let
-          pkgs = import nixpkgs { inherit system; };
+          pkgs = pkgsFor system;
         in
         {
           default = pkgs.mkShell {

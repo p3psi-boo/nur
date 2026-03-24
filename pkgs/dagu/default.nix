@@ -18,7 +18,7 @@ in
 
   env.CGO_ENABLED = "0";
 
-  vendorHash = "sha256-RdxE9dthO1MzQjSKIoPDCe4VsVtUoY5d/doaTRtIaIM=";
+  vendorHash = "sha256-VZlskGF/qsZ8UeaGuaWF9+biAHcdxo34wmQJeFua+c8=";
 
   ldflags = [
     "-s"

@@ -1,3 +1,5 @@
 result
 result-*
 .direnv/
+# CocoIndex Code (ccc)
+/.cocoindex_code/
