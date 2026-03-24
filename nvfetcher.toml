@@ -204,6 +204,30 @@ fetch.url = "https://github.com/vercel-labs/agent-browser/releases/download/$ver
 src.github = "vercel-labs/agent-browser"
 fetch.url = "https://github.com/vercel-labs/agent-browser/releases/download/$ver/agent-browser-darwin-arm64"
 
+[fff-mcp]
+src.github_tag = "dmtrKovalenko/fff.nvim"
+src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
+src.prefix = "v"
+fetch.url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v$ver/fff-mcp-x86_64-unknown-linux-musl"
+
+[fff-mcp-aarch64-linux]
+src.github_tag = "dmtrKovalenko/fff.nvim"
+src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
+src.prefix = "v"
+fetch.url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v$ver/fff-mcp-aarch64-unknown-linux-musl"
+
+[fff-mcp-darwin-x64]
+src.github_tag = "dmtrKovalenko/fff.nvim"
+src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
+src.prefix = "v"
+fetch.url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v$ver/fff-mcp-x86_64-apple-darwin"
+
+[fff-mcp-darwin-arm64]
+src.github_tag = "dmtrKovalenko/fff.nvim"
+src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
+src.prefix = "v"
+fetch.url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v$ver/fff-mcp-aarch64-apple-darwin"
+
 [binsider-bin]
 src.github_tag = "orhun/binsider"
 src.prefix = "v"

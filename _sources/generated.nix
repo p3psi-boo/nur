@@ -211,6 +211,38 @@
       sha256 = "sha256-PQ1q36w2qzymgTnuPZCj/lmYODAqtwmVG074rZhL8sg=";
     };
   };
+  fff-mcp = {
+    pname = "fff-mcp";
+    version = "0.4.2";
+    src = fetchurl {
+      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.4.2/fff-mcp-x86_64-unknown-linux-musl";
+      sha256 = "sha256-JXTN5HpJdTk6Lk65dPpYcLMoqIpj8hT6aEAg8uVc5xE=";
+    };
+  };
+  fff-mcp-aarch64-linux = {
+    pname = "fff-mcp-aarch64-linux";
+    version = "0.4.2";
+    src = fetchurl {
+      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.4.2/fff-mcp-aarch64-unknown-linux-musl";
+      sha256 = "sha256-1DiCCfnbfJMMp5jPEeuOntldQ0tlT83y26urzaOPu60=";
+    };
+  };
+  fff-mcp-darwin-arm64 = {
+    pname = "fff-mcp-darwin-arm64";
+    version = "0.4.2";
+    src = fetchurl {
+      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.4.2/fff-mcp-aarch64-apple-darwin";
+      sha256 = "sha256-LwEDO0jUBZujLedN0ZWV1VQqh0w4rfwD+1itEX7Pgq8=";
+    };
+  };
+  fff-mcp-darwin-x64 = {
+    pname = "fff-mcp-darwin-x64";
+    version = "0.4.2";
+    src = fetchurl {
+      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.4.2/fff-mcp-x86_64-apple-darwin";
+      sha256 = "sha256-u43GY6MGPBPgVqA2mq6zsAXYmvlwaQ3pCTbqoTiLbMw=";
+    };
+  };
   firm = {
     pname = "firm";
     version = "4144d4a08bdf285c09ed2b9781e5ec448004e506";

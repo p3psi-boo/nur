@@ -361,6 +361,66 @@
         },
         "version": "v1.1.10"
     },
+    "fff-mcp": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "fff-mcp",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-JXTN5HpJdTk6Lk65dPpYcLMoqIpj8hT6aEAg8uVc5xE=",
+            "type": "url",
+            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.4.2/fff-mcp-x86_64-unknown-linux-musl"
+        },
+        "version": "0.4.2"
+    },
+    "fff-mcp-aarch64-linux": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "fff-mcp-aarch64-linux",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-1DiCCfnbfJMMp5jPEeuOntldQ0tlT83y26urzaOPu60=",
+            "type": "url",
+            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.4.2/fff-mcp-aarch64-unknown-linux-musl"
+        },
+        "version": "0.4.2"
+    },
+    "fff-mcp-darwin-arm64": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "fff-mcp-darwin-arm64",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-LwEDO0jUBZujLedN0ZWV1VQqh0w4rfwD+1itEX7Pgq8=",
+            "type": "url",
+            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.4.2/fff-mcp-aarch64-apple-darwin"
+        },
+        "version": "0.4.2"
+    },
+    "fff-mcp-darwin-x64": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "fff-mcp-darwin-x64",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-u43GY6MGPBPgVqA2mq6zsAXYmvlwaQ3pCTbqoTiLbMw=",
+            "type": "url",
+            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.4.2/fff-mcp-x86_64-apple-darwin"
+        },
+        "version": "0.4.2"
+    },
     "firm": {
         "cargoLock": null,
         "date": "2026-03-11",
