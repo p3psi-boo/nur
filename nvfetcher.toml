@@ -306,3 +306,13 @@ fetch.github = "philschmid/mcp-cli"
 src.github_tag = "tensorzero/tensorzero"
 src.include_regex = "^[0-9]{4}\\.[0-9]+\\.[0-9]+$"
 fetch.github = "tensorzero/tensorzero"
+
+[bifrost-http]
+src.git = "https://github.com/maximhq/bifrost.git"
+fetch.git = "https://github.com/maximhq/bifrost.git"
+git.fetchSubmodules = false
+
+[bifrost-ui]
+src.git = "https://github.com/maximhq/bifrost.git"
+fetch.git = "https://github.com/maximhq/bifrost.git"
+git.fetchSubmodules = false

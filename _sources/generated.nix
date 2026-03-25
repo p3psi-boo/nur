@@ -74,6 +74,34 @@
       sha256 = "sha256-sdlw9Zr+/I1/PaX0Wpim+UGPxvP7hPrlJ0MTGC20Q5w=";
     };
   };
+  bifrost-http = {
+    pname = "bifrost-http";
+    version = "feda636bd0a4410a6cd0494e5f5dea9f1074188b";
+    src = fetchgit {
+      url = "https://github.com/maximhq/bifrost.git";
+      rev = "feda636bd0a4410a6cd0494e5f5dea9f1074188b";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-rGPM1Joi1lxUpVLXP5zABvAFSLuaXchUbK8W7vti2XM=";
+    };
+    date = "2026-03-25";
+  };
+  bifrost-ui = {
+    pname = "bifrost-ui";
+    version = "feda636bd0a4410a6cd0494e5f5dea9f1074188b";
+    src = fetchgit {
+      url = "https://github.com/maximhq/bifrost.git";
+      rev = "feda636bd0a4410a6cd0494e5f5dea9f1074188b";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-rGPM1Joi1lxUpVLXP5zABvAFSLuaXchUbK8W7vti2XM=";
+    };
+    date = "2026-03-25";
+  };
   binsider-bin = {
     pname = "binsider-bin";
     version = "0.3.2";
