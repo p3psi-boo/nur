@@ -316,3 +316,8 @@ git.fetchSubmodules = false
 src.git = "https://github.com/maximhq/bifrost.git"
 fetch.git = "https://github.com/maximhq/bifrost.git"
 git.fetchSubmodules = false
+
+[octopus-api]
+src.github_tag = "bestruirui/octopus"
+src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
+fetch.github = "bestruirui/octopus"

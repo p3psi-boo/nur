@@ -443,6 +443,17 @@
     };
     date = "2026-01-23";
   };
+  octopus-api = {
+    pname = "octopus-api";
+    version = "v0.9.26";
+    src = fetchFromGitHub {
+      owner = "bestruirui";
+      repo = "octopus";
+      rev = "v0.9.26";
+      fetchSubmodules = false;
+      sha256 = "sha256-4kkzOLXF3l7nD59K7TkbLHxSd3FiwH1uLAL8w1nA2bA=";
+    };
+  };
   openixcli = {
     pname = "openixcli";
     version = "6f0da7324a5aa8c89e40f88b4dea2fcf5647ca11";

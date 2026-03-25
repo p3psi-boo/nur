@@ -742,6 +742,27 @@
         },
         "version": "cf346a3c270e5eb6d31b1d0c110efaf7a8b9193e"
     },
+    "octopus-api": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "octopus-api",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "bestruirui",
+            "repo": "octopus",
+            "rev": "v0.9.26",
+            "sha256": "sha256-4kkzOLXF3l7nD59K7TkbLHxSd3FiwH1uLAL8w1nA2bA=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.9.26"
+    },
     "openixcli": {
         "cargoLock": null,
         "date": "2026-03-21",
