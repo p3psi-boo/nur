@@ -19,34 +19,34 @@
   };
   agent-browser = {
     pname = "agent-browser";
-    version = "v0.21.4";
+    version = "v0.22.2";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.4/agent-browser-linux-x64";
-      sha256 = "sha256-x0qbmJTccs3UDA7leFScV9pIux+o6tBMqXWmVscx5D4=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.22.2/agent-browser-linux-x64";
+      sha256 = "sha256-/s6eF1cqDOolKDnxGHEnO8h1ev2SuyElQdeXopONALc=";
     };
   };
   agent-browser-darwin-arm64 = {
     pname = "agent-browser-darwin-arm64";
-    version = "v0.21.4";
+    version = "v0.22.2";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.4/agent-browser-darwin-arm64";
-      sha256 = "sha256-3XqzctRkOS0kRUpBzRO2uUNVa1Keo1Et4XVjWGMliS4=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.22.2/agent-browser-darwin-arm64";
+      sha256 = "sha256-Z6UjYiM+P5QZlxEaEmJsV1bGFIdXP5CUTqCY39wIk1o=";
     };
   };
   agent-browser-darwin-x64 = {
     pname = "agent-browser-darwin-x64";
-    version = "v0.21.4";
+    version = "v0.22.2";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.4/agent-browser-darwin-x64";
-      sha256 = "sha256-vNnbyW9R0J9N4yz8pdpzwCcpaI0g5wekLIHWeTyX+sY=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.22.2/agent-browser-darwin-x64";
+      sha256 = "sha256-kJMpS3rdCrXgdrR9RcQAarNIu6GtkzTlBw02NIbVBY0=";
     };
   };
   agent-browser-linux-arm64 = {
     pname = "agent-browser-linux-arm64";
-    version = "v0.21.4";
+    version = "v0.22.2";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.4/agent-browser-linux-arm64";
-      sha256 = "sha256-x5umT3Ot8Cn0JvSwc8OIB6GRLaPPmrTqMvSuwctJpQ4=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.22.2/agent-browser-linux-arm64";
+      sha256 = "sha256-pvKeJ1wgAJAtPjmUcROe3ZEy06vGsXL/ufXB1d2MaBw=";
     };
   };
   bcut-asr = {
@@ -133,13 +133,13 @@
   };
   cliproxyapi = {
     pname = "cliproxyapi";
-    version = "v6.8.55";
+    version = "v6.9.2";
     src = fetchFromGitHub {
       owner = "router-for-me";
       repo = "CLIProxyAPI";
-      rev = "v6.8.55";
+      rev = "v6.9.2";
       fetchSubmodules = false;
-      sha256 = "sha256-B7EtK/x40uwt8fufSUPppbzSWNaPh1hQpFwMMAppgog=";
+      sha256 = "sha256-Qh+5tOc5jI6be1RiA6h5FCEbfsc7AFoAlvLav0xX3IU=";
     };
   };
   cloudflarespeedtest = {
@@ -172,21 +172,21 @@
   };
   cocoindex-code = {
     pname = "cocoindex-code";
-    version = "0.2.6";
+    version = "0.2.10";
     src = fetchurl {
-      url = "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.6.tar.gz";
-      sha256 = "sha256-bw8X1t0jFutbSHEb1ODV5f9sO+R+ovmibOwG95KqIj4=";
+      url = "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.10.tar.gz";
+      sha256 = "sha256-l539ySPRUHJCt09VQszTw5joHsXgktgJROD+NEk1mEk=";
     };
   };
   dagu = {
     pname = "dagu";
-    version = "v2.3.1";
+    version = "v2.3.6";
     src = fetchFromGitHub {
       owner = "dagu-org";
       repo = "dagu";
-      rev = "v2.3.1";
+      rev = "v2.3.6";
       fetchSubmodules = false;
-      sha256 = "sha256-CUExEoWPCE5odfFt/s9/SaN9eGc4ssbepXTO7hx+vkM=";
+      sha256 = "sha256-HcjBLvtL6e5tcVn+Y/KWnvR9MaXA8g0qJiFxpuRahd4=";
     };
   };
   ecloud-computer-auto-boot = {
@@ -202,13 +202,13 @@
   };
   fcitx5-vinput = {
     pname = "fcitx5-vinput";
-    version = "v1.1.10";
+    version = "v1.1.18";
     src = fetchFromGitHub {
       owner = "xifan2333";
       repo = "fcitx5-vinput";
-      rev = "v1.1.10";
+      rev = "v1.1.18";
       fetchSubmodules = false;
-      sha256 = "sha256-PQ1q36w2qzymgTnuPZCj/lmYODAqtwmVG074rZhL8sg=";
+      sha256 = "sha256-EM+BA8szlDMgqj6mNJFtDJ6GohuCMisiN7QBxM7KhxA=";
     };
   };
   fff-mcp = {
@@ -281,17 +281,17 @@
   };
   ggwave-to-file = {
     pname = "ggwave-to-file";
-    version = "8f02c41d88f971f05269da64f7ce8d6973f5e8b6";
+    version = "a38e38b7373f9adf45baf737a104206664b225a1";
     src = fetchgit {
       url = "https://github.com/ggerganov/ggwave.git";
-      rev = "8f02c41d88f971f05269da64f7ce8d6973f5e8b6";
+      rev = "a38e38b7373f9adf45baf737a104206664b225a1";
       fetchSubmodules = true;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-jXPRZT1clhehQLAfN1QY8SvmCqNTFmLBPQimImqsXmM=";
+      sha256 = "sha256-g5OdQLpmHAZXgqm3swdB3icUpNMhHgxrsS5mJjkb/+o=";
     };
-    date = "2026-02-28";
+    date = "2026-03-21";
   };
   grok2api-rs = {
     pname = "grok2api-rs";
@@ -359,13 +359,13 @@
   };
   liteparse = {
     pname = "liteparse";
-    version = "v1.0.1";
+    version = "v1.2.0";
     src = fetchFromGitHub {
       owner = "run-llama";
       repo = "liteparse";
-      rev = "v1.0.1";
+      rev = "v1.2.0";
       fetchSubmodules = false;
-      sha256 = "sha256-rUV92gIxgMzl8rJ94BUQoSfk/thf89B6Ndr9YUaxv+w=";
+      sha256 = "sha256-6oG/ajH1roGkzRYAtAuJDniKwpBYF92NL1erYwQ4XPc=";
     };
   };
   magiskboot-bin = {
@@ -603,6 +603,17 @@
     };
     date = "2026-01-27";
   };
+  tensorzero = {
+    pname = "tensorzero";
+    version = "2026.3.3";
+    src = fetchFromGitHub {
+      owner = "tensorzero";
+      repo = "tensorzero";
+      rev = "2026.3.3";
+      fetchSubmodules = false;
+      sha256 = "sha256-2zL5cneYxc6kI1mKdy3Q3uz1yQ1EdTIHsw/vhNGJJdI=";
+    };
+  };
   ut = {
     pname = "ut";
     version = "6ea80d7d40c67d81569ddc814b9ef9e835dff388";
@@ -708,16 +719,16 @@
   };
   yt-media-storage = {
     pname = "yt-media-storage";
-    version = "af8493412334078e10b8883725b3edc9a22f4599";
+    version = "ebec9e6b5daa6acb915270618937b2901ecec7ed";
     src = fetchgit {
       url = "https://github.com/PulseBeat02/yt-media-storage.git";
-      rev = "af8493412334078e10b8883725b3edc9a22f4599";
+      rev = "ebec9e6b5daa6acb915270618937b2901ecec7ed";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-9dy0LREALmzHXGT+38/+Qyj6Dk4OaiBL8F2enveDJMw=";
+      sha256 = "sha256-OAewbY2Pr3J8uHigOqJOVplKOx+hFD3N+/Z8PFN9ZFw=";
     };
-    date = "2026-02-23";
+    date = "2026-03-24";
   };
 }

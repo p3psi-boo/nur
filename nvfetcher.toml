@@ -301,3 +301,8 @@ git.fetch_submodules = false
 src.github_tag = "philschmid/mcp-cli"
 src.include_regex = "^v[0-9].*"
 fetch.github = "philschmid/mcp-cli"
+
+[tensorzero]
+src.github_tag = "tensorzero/tensorzero"
+src.include_regex = "^[0-9]{4}\\.[0-9]+\\.[0-9]+$"
+fetch.github = "tensorzero/tensorzero"

@@ -29,11 +29,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-x0qbmJTccs3UDA7leFScV9pIux+o6tBMqXWmVscx5D4=",
+            "sha256": "sha256-/s6eF1cqDOolKDnxGHEnO8h1ev2SuyElQdeXopONALc=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.4/agent-browser-linux-x64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.22.2/agent-browser-linux-x64"
         },
-        "version": "v0.21.4"
+        "version": "v0.22.2"
     },
     "agent-browser-darwin-arm64": {
         "cargoLock": null,
@@ -44,11 +44,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-3XqzctRkOS0kRUpBzRO2uUNVa1Keo1Et4XVjWGMliS4=",
+            "sha256": "sha256-Z6UjYiM+P5QZlxEaEmJsV1bGFIdXP5CUTqCY39wIk1o=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.4/agent-browser-darwin-arm64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.22.2/agent-browser-darwin-arm64"
         },
-        "version": "v0.21.4"
+        "version": "v0.22.2"
     },
     "agent-browser-darwin-x64": {
         "cargoLock": null,
@@ -59,11 +59,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-vNnbyW9R0J9N4yz8pdpzwCcpaI0g5wekLIHWeTyX+sY=",
+            "sha256": "sha256-kJMpS3rdCrXgdrR9RcQAarNIu6GtkzTlBw02NIbVBY0=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.4/agent-browser-darwin-x64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.22.2/agent-browser-darwin-x64"
         },
-        "version": "v0.21.4"
+        "version": "v0.22.2"
     },
     "agent-browser-linux-arm64": {
         "cargoLock": null,
@@ -74,11 +74,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-x5umT3Ot8Cn0JvSwc8OIB6GRLaPPmrTqMvSuwctJpQ4=",
+            "sha256": "sha256-pvKeJ1wgAJAtPjmUcROe3ZEy06vGsXL/ufXB1d2MaBw=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.21.4/agent-browser-linux-arm64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.22.2/agent-browser-linux-arm64"
         },
-        "version": "v0.21.4"
+        "version": "v0.22.2"
     },
     "bcut-asr": {
         "cargoLock": null,
@@ -236,12 +236,12 @@
             "name": null,
             "owner": "router-for-me",
             "repo": "CLIProxyAPI",
-            "rev": "v6.8.55",
-            "sha256": "sha256-B7EtK/x40uwt8fufSUPppbzSWNaPh1hQpFwMMAppgog=",
+            "rev": "v6.9.2",
+            "sha256": "sha256-Qh+5tOc5jI6be1RiA6h5FCEbfsc7AFoAlvLav0xX3IU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v6.8.55"
+        "version": "v6.9.2"
     },
     "cloudflarespeedtest": {
         "cargoLock": null,
@@ -292,11 +292,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-bw8X1t0jFutbSHEb1ODV5f9sO+R+ovmibOwG95KqIj4=",
+            "sha256": "sha256-l539ySPRUHJCt09VQszTw5joHsXgktgJROD+NEk1mEk=",
             "type": "url",
-            "url": "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.6.tar.gz"
+            "url": "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.10.tar.gz"
         },
-        "version": "0.2.6"
+        "version": "0.2.10"
     },
     "dagu": {
         "cargoLock": null,
@@ -312,12 +312,12 @@
             "name": null,
             "owner": "dagu-org",
             "repo": "dagu",
-            "rev": "v2.3.1",
-            "sha256": "sha256-CUExEoWPCE5odfFt/s9/SaN9eGc4ssbepXTO7hx+vkM=",
+            "rev": "v2.3.6",
+            "sha256": "sha256-HcjBLvtL6e5tcVn+Y/KWnvR9MaXA8g0qJiFxpuRahd4=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.3.1"
+        "version": "v2.3.6"
     },
     "ecloud-computer-auto-boot": {
         "cargoLock": null,
@@ -354,12 +354,12 @@
             "name": null,
             "owner": "xifan2333",
             "repo": "fcitx5-vinput",
-            "rev": "v1.1.10",
-            "sha256": "sha256-PQ1q36w2qzymgTnuPZCj/lmYODAqtwmVG074rZhL8sg=",
+            "rev": "v1.1.18",
+            "sha256": "sha256-EM+BA8szlDMgqj6mNJFtDJ6GohuCMisiN7QBxM7KhxA=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.1.10"
+        "version": "v1.1.18"
     },
     "fff-mcp": {
         "cargoLock": null,
@@ -485,7 +485,7 @@
     },
     "ggwave-to-file": {
         "cargoLock": null,
-        "date": "2026-02-28",
+        "date": "2026-03-21",
         "extract": null,
         "name": "ggwave-to-file",
         "passthru": null,
@@ -495,13 +495,13 @@
             "fetchSubmodules": true,
             "leaveDotGit": false,
             "name": null,
-            "rev": "8f02c41d88f971f05269da64f7ce8d6973f5e8b6",
-            "sha256": "sha256-jXPRZT1clhehQLAfN1QY8SvmCqNTFmLBPQimImqsXmM=",
+            "rev": "a38e38b7373f9adf45baf737a104206664b225a1",
+            "sha256": "sha256-g5OdQLpmHAZXgqm3swdB3icUpNMhHgxrsS5mJjkb/+o=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/ggerganov/ggwave.git"
         },
-        "version": "8f02c41d88f971f05269da64f7ce8d6973f5e8b6"
+        "version": "a38e38b7373f9adf45baf737a104206664b225a1"
     },
     "grok2api-rs": {
         "cargoLock": null,
@@ -619,12 +619,12 @@
             "name": null,
             "owner": "run-llama",
             "repo": "liteparse",
-            "rev": "v1.0.1",
-            "sha256": "sha256-rUV92gIxgMzl8rJ94BUQoSfk/thf89B6Ndr9YUaxv+w=",
+            "rev": "v1.2.0",
+            "sha256": "sha256-6oG/ajH1roGkzRYAtAuJDniKwpBYF92NL1erYwQ4XPc=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.0.1"
+        "version": "v1.2.0"
     },
     "magiskboot-bin": {
         "cargoLock": null,
@@ -1020,6 +1020,27 @@
         },
         "version": "f5466fc2b8b8b9aaa55dd28fb80b6ae138b578d8"
     },
+    "tensorzero": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "tensorzero",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "tensorzero",
+            "repo": "tensorzero",
+            "rev": "2026.3.3",
+            "sha256": "sha256-2zL5cneYxc6kI1mKdy3Q3uz1yQ1EdTIHsw/vhNGJJdI=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "2026.3.3"
+    },
     "ut": {
         "cargoLock": null,
         "date": "2025-12-26",
@@ -1185,7 +1206,7 @@
     },
     "yt-media-storage": {
         "cargoLock": null,
-        "date": "2026-02-23",
+        "date": "2026-03-24",
         "extract": null,
         "name": "yt-media-storage",
         "passthru": null,
@@ -1195,12 +1216,12 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "af8493412334078e10b8883725b3edc9a22f4599",
-            "sha256": "sha256-9dy0LREALmzHXGT+38/+Qyj6Dk4OaiBL8F2enveDJMw=",
+            "rev": "ebec9e6b5daa6acb915270618937b2901ecec7ed",
+            "sha256": "sha256-OAewbY2Pr3J8uHigOqJOVplKOx+hFD3N+/Z8PFN9ZFw=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/PulseBeat02/yt-media-storage.git"
         },
-        "version": "af8493412334078e10b8883725b3edc9a22f4599"
+        "version": "ebec9e6b5daa6acb915270618937b2901ecec7ed"
     }
 }
