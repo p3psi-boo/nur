@@ -19,34 +19,34 @@
   };
   agent-browser = {
     pname = "agent-browser";
-    version = "v0.22.2";
+    version = "v0.22.3";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.22.2/agent-browser-linux-x64";
-      sha256 = "sha256-/s6eF1cqDOolKDnxGHEnO8h1ev2SuyElQdeXopONALc=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.22.3/agent-browser-linux-x64";
+      sha256 = "sha256-F2UR3wfuPuGbcy1324E1Tul6MEVQLEghK4Lgx1KUPAA=";
     };
   };
   agent-browser-darwin-arm64 = {
     pname = "agent-browser-darwin-arm64";
-    version = "v0.22.2";
+    version = "v0.22.3";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.22.2/agent-browser-darwin-arm64";
-      sha256 = "sha256-Z6UjYiM+P5QZlxEaEmJsV1bGFIdXP5CUTqCY39wIk1o=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.22.3/agent-browser-darwin-arm64";
+      sha256 = "sha256-SpArxlp6CHEXZxSlp7Fav+fSWZ8oKgIrHm1viDSBbZw=";
     };
   };
   agent-browser-darwin-x64 = {
     pname = "agent-browser-darwin-x64";
-    version = "v0.22.2";
+    version = "v0.22.3";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.22.2/agent-browser-darwin-x64";
-      sha256 = "sha256-kJMpS3rdCrXgdrR9RcQAarNIu6GtkzTlBw02NIbVBY0=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.22.3/agent-browser-darwin-x64";
+      sha256 = "sha256-Ecx9/4N6UHGmwxEa0uzBD6fMQj2YX0YjLoxxCpMAGCo=";
     };
   };
   agent-browser-linux-arm64 = {
     pname = "agent-browser-linux-arm64";
-    version = "v0.22.2";
+    version = "v0.22.3";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.22.2/agent-browser-linux-arm64";
-      sha256 = "sha256-pvKeJ1wgAJAtPjmUcROe3ZEy06vGsXL/ufXB1d2MaBw=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.22.3/agent-browser-linux-arm64";
+      sha256 = "sha256-qlEVQXb6witXdG4/nT3redBVJBLVa30p2zboBsqvKUU=";
     };
   };
   bcut-asr = {
@@ -76,31 +76,31 @@
   };
   bifrost-http = {
     pname = "bifrost-http";
-    version = "feda636bd0a4410a6cd0494e5f5dea9f1074188b";
+    version = "74e85a1626b4fd30a37bd018455ce9d4328a0716";
     src = fetchgit {
       url = "https://github.com/maximhq/bifrost.git";
-      rev = "feda636bd0a4410a6cd0494e5f5dea9f1074188b";
+      rev = "74e85a1626b4fd30a37bd018455ce9d4328a0716";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-rGPM1Joi1lxUpVLXP5zABvAFSLuaXchUbK8W7vti2XM=";
+      sha256 = "sha256-YAglCYbEwLZZOpAk/b7taQHgG7Yxa+8nrKr9yWoiG+4=";
     };
-    date = "2026-03-25";
+    date = "2026-03-26";
   };
   bifrost-ui = {
     pname = "bifrost-ui";
-    version = "feda636bd0a4410a6cd0494e5f5dea9f1074188b";
+    version = "74e85a1626b4fd30a37bd018455ce9d4328a0716";
     src = fetchgit {
       url = "https://github.com/maximhq/bifrost.git";
-      rev = "feda636bd0a4410a6cd0494e5f5dea9f1074188b";
+      rev = "74e85a1626b4fd30a37bd018455ce9d4328a0716";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-rGPM1Joi1lxUpVLXP5zABvAFSLuaXchUbK8W7vti2XM=";
+      sha256 = "sha256-YAglCYbEwLZZOpAk/b7taQHgG7Yxa+8nrKr9yWoiG+4=";
     };
-    date = "2026-03-25";
+    date = "2026-03-26";
   };
   binsider-bin = {
     pname = "binsider-bin";
@@ -208,13 +208,13 @@
   };
   dagu = {
     pname = "dagu";
-    version = "v2.3.6";
+    version = "v2.3.7";
     src = fetchFromGitHub {
       owner = "dagu-org";
       repo = "dagu";
-      rev = "v2.3.6";
+      rev = "v2.3.7";
       fetchSubmodules = false;
-      sha256 = "sha256-HcjBLvtL6e5tcVn+Y/KWnvR9MaXA8g0qJiFxpuRahd4=";
+      sha256 = "sha256-7Ok0QbKrkjZGqSrL1sRvN+RcHJZHK/WfsZv1ce5LYeE=";
     };
   };
   ecloud-computer-auto-boot = {
@@ -346,6 +346,17 @@
     };
     date = "2026-03-09";
   };
+  il2cppdumper = {
+    pname = "il2cppdumper";
+    version = "v6.7.46";
+    src = fetchFromGitHub {
+      owner = "Perfare";
+      repo = "Il2CppDumper";
+      rev = "v6.7.46";
+      fetchSubmodules = false;
+      sha256 = "sha256-pMxxwBpuZ2EuP7O99XTJcnS3Dq8MdxvUGQHJ0U3bnTY=";
+    };
+  };
   inet-speed-cli = {
     pname = "inet-speed-cli";
     version = "v1.1.2";
@@ -355,6 +366,17 @@
       rev = "v1.1.2";
       fetchSubmodules = false;
       sha256 = "sha256-xAXYhvN7rdXvA2EWsNXRfXlIrumyPluAcmVbMY/pZxE=";
+    };
+  };
+  jd-gui = {
+    pname = "jd-gui";
+    version = "v1.6.6";
+    src = fetchFromGitHub {
+      owner = "java-decompiler";
+      repo = "jd-gui";
+      rev = "v1.6.6";
+      fetchSubmodules = false;
+      sha256 = "sha256-QHiZPYFwDQzbXVSuhwzQqBRXlkG9QVU+Jl6SKvBoCwQ=";
     };
   };
   kylin-virtual-keyboard = {
@@ -387,13 +409,13 @@
   };
   liteparse = {
     pname = "liteparse";
-    version = "v1.2.0";
+    version = "v1.3.0";
     src = fetchFromGitHub {
       owner = "run-llama";
       repo = "liteparse";
-      rev = "v1.2.0";
+      rev = "v1.3.0";
       fetchSubmodules = false;
-      sha256 = "sha256-6oG/ajH1roGkzRYAtAuJDniKwpBYF92NL1erYwQ4XPc=";
+      sha256 = "sha256-JHe+4n485ssdO1IboCpECY5BniIc+VdVE/hAerFN5To=";
     };
   };
   magiskboot-bin = {
@@ -614,6 +636,28 @@
       sha256 = "sha256-RXQ8LY3HB7xKdupfg76JfTnzdOq7HJxzFerp1l1LzqE=";
     };
   };
+  smali = {
+    pname = "smali";
+    version = "v2.5.2";
+    src = fetchFromGitHub {
+      owner = "JesusFreke";
+      repo = "smali";
+      rev = "v2.5.2";
+      fetchSubmodules = false;
+      sha256 = "sha256-UkABsX7KaDZyFR4MTmpjnw4dGXChbLB281Kav/k7/00=";
+    };
+  };
+  sofixer = {
+    pname = "sofixer";
+    version = "v2.1.7";
+    src = fetchFromGitHub {
+      owner = "F8LEFT";
+      repo = "SoFixer";
+      rev = "v2.1.7";
+      fetchSubmodules = false;
+      sha256 = "sha256-emvN0iNPoADAiH4eOPCIViNHpItKyacySu/9EK2BaeQ=";
+    };
+  };
   srv-us = {
     pname = "srv-us";
     version = "664ef6a4fab24c5f3f1fc2fa07cc3e0c43d90cf9";
@@ -651,6 +695,17 @@
       rev = "2026.3.3";
       fetchSubmodules = false;
       sha256 = "sha256-2zL5cneYxc6kI1mKdy3Q3uz1yQ1EdTIHsw/vhNGJJdI=";
+    };
+  };
+  uber-apk-signer = {
+    pname = "uber-apk-signer";
+    version = "v1.3.0";
+    src = fetchFromGitHub {
+      owner = "patrickfav";
+      repo = "uber-apk-signer";
+      rev = "v1.3.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-pxGzRAUuYUyqcanoaQ4rqbZQfLMWdmc4GdGBeLw7O+M=";
     };
   };
   ut = {

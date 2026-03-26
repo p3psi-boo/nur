@@ -321,3 +321,28 @@ git.fetchSubmodules = false
 src.github_tag = "bestruirui/octopus"
 src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
 fetch.github = "bestruirui/octopus"
+
+[sofixer]
+src.github_tag = "F8LEFT/SoFixer"
+src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
+fetch.github = "F8LEFT/SoFixer"
+
+[uber-apk-signer]
+src.github_tag = "patrickfav/uber-apk-signer"
+src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
+fetch.github = "patrickfav/uber-apk-signer"
+
+[smali]
+src.github_tag = "JesusFreke/smali"
+src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
+fetch.github = "JesusFreke/smali"
+
+[jd-gui]
+src.github_tag = "java-decompiler/jd-gui"
+src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
+fetch.github = "java-decompiler/jd-gui"
+
+[il2cppdumper]
+src.github_tag = "Perfare/Il2CppDumper"
+src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
+fetch.github = "Perfare/Il2CppDumper"
