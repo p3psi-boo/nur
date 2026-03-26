@@ -27,9 +27,10 @@
   - GitHub: https://github.com/dnSpy/dnSpy
   - 说明：开源，但仓库已归档
 
-- [ ] **ClassyShark**
+- [x] **ClassyShark**
   - GitHub: https://github.com/google/android-classyshark
-  - 说明：开源，但仓库已归档
+  - 状态：已添加 NUR 包 `classyshark`
+  - 说明：GUI 工具，已验证 `nix build .#classyshark` 与 `nix run .#classyshark -- --help`
 
 - [x] **JD-GUI**
   - GitHub: https://github.com/java-decompiler/jd-gui
@@ -76,5 +77,5 @@
 
 ## 备注
 
-- 这次实际新增了四个包：`sofixer`、`uber-apk-signer`、`smali`、`jd-gui`
+- 这次实际新增了五个包：`sofixer`、`uber-apk-signer`、`smali`、`jd-gui`、`classyshark`
 - `nix flake check` 仍被仓库里现有的 `mimic` 检查失败阻塞，和本次新增包无关

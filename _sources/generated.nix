@@ -76,29 +76,29 @@
   };
   bifrost-http = {
     pname = "bifrost-http";
-    version = "74e85a1626b4fd30a37bd018455ce9d4328a0716";
+    version = "172325edba24b6e4af9e2635757366ff21154d60";
     src = fetchgit {
       url = "https://github.com/maximhq/bifrost.git";
-      rev = "74e85a1626b4fd30a37bd018455ce9d4328a0716";
+      rev = "172325edba24b6e4af9e2635757366ff21154d60";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-YAglCYbEwLZZOpAk/b7taQHgG7Yxa+8nrKr9yWoiG+4=";
+      sha256 = "sha256-21l5nRQsaZtAEP7U6jlTgeoWwNyDWM4GLY5d6Fsbk3M=";
     };
     date = "2026-03-26";
   };
   bifrost-ui = {
     pname = "bifrost-ui";
-    version = "74e85a1626b4fd30a37bd018455ce9d4328a0716";
+    version = "172325edba24b6e4af9e2635757366ff21154d60";
     src = fetchgit {
       url = "https://github.com/maximhq/bifrost.git";
-      rev = "74e85a1626b4fd30a37bd018455ce9d4328a0716";
+      rev = "172325edba24b6e4af9e2635757366ff21154d60";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-YAglCYbEwLZZOpAk/b7taQHgG7Yxa+8nrKr9yWoiG+4=";
+      sha256 = "sha256-21l5nRQsaZtAEP7U6jlTgeoWwNyDWM4GLY5d6Fsbk3M=";
     };
     date = "2026-03-26";
   };
@@ -147,6 +147,17 @@
       sha256 = "sha256-47N0//wE3G9RGrcSa0JJTnu9mbw/MK58PNnuqYyitvw=";
     };
     date = "2026-03-09";
+  };
+  classyshark = {
+    pname = "classyshark";
+    version = "8.2";
+    src = fetchFromGitHub {
+      owner = "google";
+      repo = "android-classyshark";
+      rev = "8.2";
+      fetchSubmodules = false;
+      sha256 = "sha256-9gENYNWfbPK2jpxiHOf8ETJwXqjFMgplaHNkO3ohhDQ=";
+    };
   };
   clihub = {
     pname = "clihub";

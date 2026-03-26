@@ -133,13 +133,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "74e85a1626b4fd30a37bd018455ce9d4328a0716",
-            "sha256": "sha256-YAglCYbEwLZZOpAk/b7taQHgG7Yxa+8nrKr9yWoiG+4=",
+            "rev": "172325edba24b6e4af9e2635757366ff21154d60",
+            "sha256": "sha256-21l5nRQsaZtAEP7U6jlTgeoWwNyDWM4GLY5d6Fsbk3M=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/maximhq/bifrost.git"
         },
-        "version": "74e85a1626b4fd30a37bd018455ce9d4328a0716"
+        "version": "172325edba24b6e4af9e2635757366ff21154d60"
     },
     "bifrost-ui": {
         "cargoLock": null,
@@ -153,13 +153,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "74e85a1626b4fd30a37bd018455ce9d4328a0716",
-            "sha256": "sha256-YAglCYbEwLZZOpAk/b7taQHgG7Yxa+8nrKr9yWoiG+4=",
+            "rev": "172325edba24b6e4af9e2635757366ff21154d60",
+            "sha256": "sha256-21l5nRQsaZtAEP7U6jlTgeoWwNyDWM4GLY5d6Fsbk3M=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/maximhq/bifrost.git"
         },
-        "version": "74e85a1626b4fd30a37bd018455ce9d4328a0716"
+        "version": "172325edba24b6e4af9e2635757366ff21154d60"
     },
     "binsider-bin": {
         "cargoLock": null,
@@ -240,6 +240,27 @@
             "url": "https://github.com/p3psi-boo/bird-fork.git"
         },
         "version": "c815bfbe3cefd0104adf411cd2148995c31f2ba0"
+    },
+    "classyshark": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "classyshark",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "google",
+            "repo": "android-classyshark",
+            "rev": "8.2",
+            "sha256": "sha256-9gENYNWfbPK2jpxiHOf8ETJwXqjFMgplaHNkO3ohhDQ=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "8.2"
     },
     "clihub": {
         "cargoLock": null,

@@ -346,3 +346,8 @@ fetch.github = "java-decompiler/jd-gui"
 src.github_tag = "Perfare/Il2CppDumper"
 src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
 fetch.github = "Perfare/Il2CppDumper"
+
+[classyshark]
+src.github_tag = "google/android-classyshark"
+src.include_regex = "^[0-9]+\\.[0-9]+$"
+fetch.github = "google/android-classyshark"
