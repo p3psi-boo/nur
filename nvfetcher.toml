@@ -351,3 +351,14 @@ fetch.github = "Perfare/Il2CppDumper"
 src.github_tag = "google/android-classyshark"
 src.include_regex = "^[0-9]+\\.[0-9]+$"
 fetch.github = "google/android-classyshark"
+
+[dalvikus]
+src.github_tag = "loerting/dalvikus"
+src.prefix = "v"
+src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
+fetch.url = "https://github.com/loerting/dalvikus/releases/download/v$ver/dalvikus_$ver-1_amd64.deb"
+
+[coe]
+src.github_tag = "quailyquaily/coe"
+src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
+fetch.github = "quailyquaily/coe"

@@ -217,6 +217,17 @@
       sha256 = "sha256-l539ySPRUHJCt09VQszTw5joHsXgktgJROD+NEk1mEk=";
     };
   };
+  coe = {
+    pname = "coe";
+    version = "v0.0.6";
+    src = fetchFromGitHub {
+      owner = "quailyquaily";
+      repo = "coe";
+      rev = "v0.0.6";
+      fetchSubmodules = false;
+      sha256 = "sha256-XhaR7lx3l9ZVRJVjrCml2/EW9ZViXCru1+8VtufVwCQ=";
+    };
+  };
   dagu = {
     pname = "dagu";
     version = "v2.3.7";
@@ -226,6 +237,14 @@
       rev = "v2.3.7";
       fetchSubmodules = false;
       sha256 = "sha256-7Ok0QbKrkjZGqSrL1sRvN+RcHJZHK/WfsZv1ce5LYeE=";
+    };
+  };
+  dalvikus = {
+    pname = "dalvikus";
+    version = "1.0.13";
+    src = fetchurl {
+      url = "https://github.com/loerting/dalvikus/releases/download/v1.0.13/dalvikus_1.0.13-1_amd64.deb";
+      sha256 = "sha256-SFOubRzWHzyqDgekrq3AcMM/NtYmmpX1myQJ33Obeh0=";
     };
   };
   ecloud-computer-auto-boot = {

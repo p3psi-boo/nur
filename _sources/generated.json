@@ -359,6 +359,27 @@
         },
         "version": "0.2.10"
     },
+    "coe": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "coe",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "quailyquaily",
+            "repo": "coe",
+            "rev": "v0.0.6",
+            "sha256": "sha256-XhaR7lx3l9ZVRJVjrCml2/EW9ZViXCru1+8VtufVwCQ=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.0.6"
+    },
     "dagu": {
         "cargoLock": null,
         "date": null,
@@ -379,6 +400,21 @@
             "type": "github"
         },
         "version": "v2.3.7"
+    },
+    "dalvikus": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "dalvikus",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-SFOubRzWHzyqDgekrq3AcMM/NtYmmpX1myQJ33Obeh0=",
+            "type": "url",
+            "url": "https://github.com/loerting/dalvikus/releases/download/v1.0.13/dalvikus_1.0.13-1_amd64.deb"
+        },
+        "version": "1.0.13"
     },
     "ecloud-computer-auto-boot": {
         "cargoLock": null,
