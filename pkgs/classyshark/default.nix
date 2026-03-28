@@ -13,8 +13,11 @@ let
     if generated != null && generated ? classyshark then
       generated.classyshark
     else
-      rec {
+      let
         version = "8.1";
+      in
+      {
+        inherit version;
         src = fetchFromGitHub {
           owner = "google";
           repo = "android-classyshark";

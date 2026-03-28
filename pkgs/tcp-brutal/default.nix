@@ -34,5 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/apernet/tcp-brutal";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
+    mainProgram = "tcp-brutal";
   };
 })

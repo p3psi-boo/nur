@@ -25,12 +25,15 @@ buildGoModule (finalAttrs: {
     GOPRIVATE = "none";
     GONOPROXY = "none";
     GOINSECURE = "none";
+    GOAMD64 = "v3";  # 新增：x86-64-v3 指令集优化
   };
 
   ldflags = [
     "-s"
     "-w"
   ];
+
+  buildFlags = [ "-gcflags=all=-l=4" ];  # 新增：激进内联优化
 
   subPackages = [ "." ];
 

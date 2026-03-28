@@ -13,6 +13,8 @@ let
     name: entries.${name} == "directory" && builtins.pathExists (pkgsDir + "/${name}/default.nix")
   ) (builtins.attrNames entries);
 
+  nurLib = import ./lib { inherit pkgs; };
+
   generatedSources = import generatedPath {
     inherit (pkgs)
       fetchgit
@@ -31,7 +33,7 @@ let
       generatedArgs =
         if builtins.hasAttr pkgName generatedSources then { generated = generatedSources; } else { };
     in
-    packageSpecificArgs // generatedArgs;
+    packageSpecificArgs // generatedArgs // { inherit nurLib; };
 in
 builtins.listToAttrs (
   map (

@@ -51,6 +51,7 @@ in
 
   env = {
     CGO_ENABLED = "1";
+    GOAMD64 = "v3";  # 即使使用 CGO 也可以启用指令集优化
   };
 
   nativeBuildInputs = [
@@ -74,6 +75,8 @@ in
       printf '%s\n' '<!DOCTYPE html><html><head><title>Bifrost</title></head><body><h1>Bifrost</h1></body></html>' > bifrost-http/ui/index.html
     fi
   '';
+
+  buildFlags = [ "-gcflags=all=-l=4" ];
 
   ldflags = [
     "-s"

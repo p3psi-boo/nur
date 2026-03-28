@@ -70,5 +70,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.mit;
     platforms = postgresql.meta.platforms;
     maintainers = [ ];
+    mainProgram = "pg_duckdb";
   };
 })

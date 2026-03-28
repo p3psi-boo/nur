@@ -131,7 +131,7 @@ let
     print("Keygen complete!")
   '';
 in
-pkgs.stdenv.mkDerivation rec {
+pkgs.stdenv.mkDerivation (finalAttrs: {
   pname = "ida-pro";
   version = "9.3.260213";
 
@@ -145,13 +145,13 @@ pkgs.stdenv.mkDerivation rec {
     name = "ida-pro";
     exec = "ida";
     icon = ./appico.png;
-    comment = meta.description;
+    comment = finalAttrs.meta.description;
     desktopName = "IDA Pro";
     genericName = "Interactive Disassembler";
     categories = [ "Development" ];
     startupWMClass = "IDA";
   };
-  desktopItems = [ desktopItem ];
+  desktopItems = [ finalAttrs.desktopItem ];
 
   nativeBuildInputs = with pkgs; [
     makeWrapper
@@ -197,7 +197,7 @@ pkgs.stdenv.mkDerivation rec {
     curl.out
     pythonForIDA
   ];
-  buildInputs = runtimeDependencies;
+  buildInputs = finalAttrs.runtimeDependencies;
 
   dontWrapQtApps = true;
 
@@ -264,4 +264,4 @@ pkgs.stdenv.mkDerivation rec {
     platforms = [ "x86_64-linux" ];
     sourceProvenance = with sourceTypes; [ binaryNativeCode ];
   };
-}
+})

@@ -15,12 +15,15 @@ buildGoModule {
 
   vendorHash = null;
 
-  env.CGO_ENABLED = "0";
+  env = {
+    CGO_ENABLED = "0";
+    GOFLAGS = "-trimpath";
+    GOAMD64 = "v3";
+  };
 
-  ldflags = [
-    "-s"
-    "-w"
-  ];
+  ldflags = [ "-s" "-w" ];
+
+  buildFlags = [ "-gcflags=all=-l=4" ];
 
   subPackages = [ "." ];
 

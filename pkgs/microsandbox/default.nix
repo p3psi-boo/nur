@@ -5,16 +5,16 @@
 , openssl
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation (finalAttrs: {
   pname = "microsandbox";
   version = "0.2.6";
 
   src = fetchurl {
-    url = "https://github.com/zerocore-ai/microsandbox/releases/download/microsandbox-v${version}/microsandbox-${version}-linux-x86_64.tar.gz";
+    url = "https://github.com/zerocore-ai/microsandbox/releases/download/microsandbox-v${finalAttrs.version}/microsandbox-${finalAttrs.version}-linux-x86_64.tar.gz";
     hash = "sha256-OX0+xpRjqZCjP6M4zuaZP0EqcoIpl6XiSg8oC/LafKo=";
   };
 
-  sourceRoot = "microsandbox-${version}-linux-x86_64";
+  sourceRoot = "microsandbox-${finalAttrs.version}-linux-x86_64";
 
   nativeBuildInputs = [
     autoPatchelfHook
@@ -44,4 +44,4 @@ stdenv.mkDerivation rec {
     mainProgram = "msb";
     platforms = [ "x86_64-linux" ];
   };
-}
+})

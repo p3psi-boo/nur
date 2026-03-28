@@ -7,8 +7,8 @@
 let
   rustOptimized = import ../_lib/rust-optimized.nix;
 in
-buildRustPackage (
-  rec {
+buildRustPackage (finalAttrs: (
+  {
     pname = "codegraph";
     version = "1.0.0";
 
@@ -29,7 +29,8 @@ buildRustPackage (
       license = licenses.mit;
       maintainers = with maintainers; [ ];
       platforms = platforms.linux ++ platforms.darwin;
+      mainProgram = "codegraph";
     };
   }
   // rustOptimized.rustOptimizedEnv
-)
+))

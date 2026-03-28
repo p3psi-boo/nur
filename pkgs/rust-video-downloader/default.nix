@@ -6,7 +6,7 @@
   makeWrapper,
 }:
 
-rustPlatform.buildRustPackage rec {
+rustPlatform.buildRustPackage (finalAttrs: {
   pname = "rust-video-downloader";
   version = generated.rust-video-downloader.version;
   src = generated.rust-video-downloader.src;
@@ -24,11 +24,13 @@ rustPlatform.buildRustPackage rec {
 
   buildInputs = [ ffmpeg ];
 
-  # Optimize for size
+  # Optimize for runtime performance
+  CARGO_BUILD_INCREMENTAL = "false";
   CARGO_PROFILE_RELEASE_STRIP = "symbols";
-  CARGO_PROFILE_RELEASE_LTO = "fat";
-  CARGO_PROFILE_RELEASE_CODEGEN_UNITS = "1";
-  CARGO_PROFILE_RELEASE_OPT_LEVEL = "z";
+  CARGO_PROFILE_RELEASE_OPT_LEVEL = "3";
+  CARGO_PROFILE_RELEASE_LTO = "thin";
+  CARGO_PROFILE_RELEASE_CODEGEN_UNITS = "0";
+  CARGO_PROFILE_RELEASE_PANIC = "abort";
 
   postInstall = ''
     wrapProgram $out/bin/rvd \
@@ -44,4 +46,4 @@ rustPlatform.buildRustPackage rec {
     mainProgram = "rvd";
     maintainers = [ ];
   };
-}
+})

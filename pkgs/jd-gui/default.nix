@@ -13,8 +13,11 @@ let
     if generated != null && generated ? jd-gui then
       generated.jd-gui
     else
-      rec {
+      let
         version = "v1.6.6";
+      in
+      {
+        inherit version;
         src = fetchFromGitHub {
           owner = "java-decompiler";
           repo = "jd-gui";

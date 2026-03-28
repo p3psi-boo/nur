@@ -15,17 +15,18 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-VfJwNVFAxsgOA1B84ex9IAu3yX+isoQ3DFscXk3Z3Nc=";
 
-  env.CGO_ENABLED = "0";
-
-  subPackages = [
-    "cmd/web-search"
-    "cmd/web-search-server"
-  ];
+  env = {
+    CGO_ENABLED = "0";
+    GOFLAGS = "-trimpath";
+    GOAMD64 = "v3";
+  };
 
   ldflags = [
     "-s"
     "-w"
   ];
+
+  buildFlags = [ "-gcflags=all=-l=4" ];
 
   postInstall = ''
     install -Dm644 config.example.toml "$out/share/doc/${finalAttrs.pname}/config.example.toml"

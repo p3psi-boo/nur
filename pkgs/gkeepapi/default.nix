@@ -7,7 +7,7 @@
   future,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gkeepapi";
   version = "0.9.8-unstable-2024-01-15";
 
@@ -37,5 +37,6 @@ buildPythonPackage rec {
     description = "An unofficial client for the Google Keep API";
     homepage = "https://github.com/kiwiz/gkeepapi";
     license = lib.licenses.mit;
+    mainProgram = "gkeepapi";
   };
-}
+})

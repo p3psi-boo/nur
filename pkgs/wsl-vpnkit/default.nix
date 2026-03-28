@@ -11,13 +11,13 @@
   generated,
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation (finalAttrs: {
   pname = "wsl-vpnkit";
   version = generated.wsl-vpnkit.version;
 
   # Fetch the prebuilt release tarball
   src = fetchurl {
-    url = "https://github.com/sakai135/wsl-vpnkit/releases/download/${version}/wsl-vpnkit.tar.gz";
+    url = "https://github.com/sakai135/wsl-vpnkit/releases/download/${finalAttrs.version}/wsl-vpnkit.tar.gz";
     hash = "sha256-UJ73bm/A1NlFJHsI8yPeWzTGx84LVzdmgOuK1+OnTtU=";
   };
 
@@ -60,7 +60,7 @@ stdenv.mkDerivation rec {
     makeWrapper $out/libexec/wsl-vpnkit/wsl-vpnkit $out/bin/wsl-vpnkit \
       --set VMEXEC_PATH "$out/libexec/wsl-vpnkit/wsl-vm" \
       --set GVPROXY_PATH "$out/libexec/wsl-vpnkit/wsl-gvproxy.exe" \
-      --prefix PATH : ${lib.makeBinPath runtimeDeps}
+      --prefix PATH : ${lib.makeBinPath finalAttrs.runtimeDeps}
 
     # Install systemd service if present
     if [ -f app/wsl-vpnkit.service ]; then
@@ -87,4 +87,4 @@ stdenv.mkDerivation rec {
     platforms = [ "x86_64-linux" ]; # WSL 2 specific
     mainProgram = "wsl-vpnkit";
   };
-}
+})

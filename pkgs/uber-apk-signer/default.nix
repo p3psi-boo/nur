@@ -13,8 +13,11 @@ let
     if generated != null && generated ? uber-apk-signer then
       generated.uber-apk-signer
     else
-      rec {
+      let
         version = "v1.3.0";
+      in
+      {
+        inherit version;
         src = fetchFromGitHub {
           owner = "patrickfav";
           repo = "uber-apk-signer";
@@ -23,7 +26,7 @@ let
         };
       };
 in
-maven.buildMavenPackage rec {
+maven.buildMavenPackage (finalAttrs: {
   pname = "uber-apk-signer";
   version = lib.removePrefix "v" sourceInfo.version;
 
@@ -40,7 +43,7 @@ maven.buildMavenPackage rec {
   installPhase = ''
     runHook preInstall
 
-    install -Dm644 "target/uber-apk-signer-${version}.jar" "$out/share/java/uber-apk-signer/uber-apk-signer.jar"
+    install -Dm644 "target/uber-apk-signer-${finalAttrs.version}.jar" "$out/share/java/uber-apk-signer/uber-apk-signer.jar"
     zip -qd "$out/share/java/uber-apk-signer/uber-apk-signer.jar" 'META-INF/*.RSA' 'META-INF/*.SF' 'META-INF/*.DSA'
 
     makeWrapper ${lib.getExe jre} "$out/bin/uber-apk-signer" \
@@ -61,4 +64,4 @@ maven.buildMavenPackage rec {
       binaryBytecode
     ];
   };
-}
+})

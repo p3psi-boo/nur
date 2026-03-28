@@ -50,6 +50,15 @@ buildGoModule {
     "-w"
   ];
 
+  # 运行时性能优化
+  env = {
+    CGO_ENABLED = "0";
+    GOFLAGS = "-trimpath";
+    GOAMD64 = "v3";
+  };
+
+  buildFlags = [ "-gcflags=all=-l=4" ];
+
   postInstall = ''
     mv $out/bin/backend $out/bin/srvus
   '';

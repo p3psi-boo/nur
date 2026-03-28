@@ -16,10 +16,19 @@ buildGoModule {
 
   vendorHash = "sha256-54bWaa/2jl+2UjcFi+UQD6M+T2W4eO2jZ8/ZFr2kqQ4=";
 
+  # 运行时性能优化
+  env = {
+    CGO_ENABLED = "0";
+    GOFLAGS = "-trimpath";
+    GOAMD64 = "v3";
+  };
+
   ldflags = [
     "-s"
     "-w"
   ];
+
+  buildFlags = [ "-gcflags=all=-l=4" ];
 
   nativeBuildInputs = [ ffmpeg ];
 

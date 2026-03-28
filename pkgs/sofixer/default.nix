@@ -11,8 +11,11 @@ let
     if generated != null && generated ? sofixer then
       generated.sofixer
     else
-      rec {
+      let
         version = "v2.1.7";
+      in
+      {
+        inherit version;
         src = fetchFromGitHub {
           owner = "F8LEFT";
           repo = "SoFixer";

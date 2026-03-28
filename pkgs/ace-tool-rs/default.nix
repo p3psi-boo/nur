@@ -4,18 +4,19 @@
   generated,
 }:
 
-rustPlatform.buildRustPackage rec {
+rustPlatform.buildRustPackage (finalAttrs: {
   pname = "ace-tool-rs";
   version = generated.ace-tool-rs.version;
   src = generated.ace-tool-rs.src;
 
   cargoHash = "sha256-G5c0fPRZQJ64PAp6JofjhR3Bx1VPqomT17DpW2xmVxc=";
 
-  # Optimize for binary size (see docs/min-sized-rust.md)
+  # Optimize for runtime performance
+  CARGO_BUILD_INCREMENTAL = "false";
   CARGO_PROFILE_RELEASE_STRIP = "symbols";
-  CARGO_PROFILE_RELEASE_OPT_LEVEL = "z";
-  CARGO_PROFILE_RELEASE_LTO = "true";
-  CARGO_PROFILE_RELEASE_CODEGEN_UNITS = "1";
+  CARGO_PROFILE_RELEASE_OPT_LEVEL = "3";
+  CARGO_PROFILE_RELEASE_LTO = "thin";
+  CARGO_PROFILE_RELEASE_CODEGEN_UNITS = "0";
   CARGO_PROFILE_RELEASE_PANIC = "abort";
 
   # Strip all symbols (not just debug symbols)
@@ -27,4 +28,4 @@ rustPlatform.buildRustPackage rec {
     license = licenses.mit; # Assuming MIT, check actual license
     mainProgram = "ace-tool-rs";
   };
-}
+})

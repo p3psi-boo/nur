@@ -7,12 +7,12 @@
   doCheck ? false,
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation (finalAttrs: {
   pname = "libffi";
   version = "3.2.1";
 
   src = fetchurl {
-    url = "https://sourceware.org/pub/libffi/${pname}-${version}.tar.gz";
+    url = "https://sourceware.org/pub/libffi/${finalAttrs.pname}-${finalAttrs.version}.tar.gz";
     sha256 = "0dya49bnhianl0r65m65xndz6ls2jn1xngyn72gd28ls3n7bnvnh";
   };
 
@@ -42,10 +42,10 @@ stdenv.mkDerivation rec {
   # Install headers and libs in the right places.
   postFixup = ''
     mkdir -p "$dev/"
-    mv "$out/lib/${pname}-${version}/include" "$dev/include"
-    rmdir "$out/lib/${pname}-${version}"
+    mv "$out/lib/${finalAttrs.pname}-${finalAttrs.version}/include" "$dev/include"
+    rmdir "$out/lib/${finalAttrs.pname}-${finalAttrs.version}"
     substituteInPlace "$dev/lib/pkgconfig/libffi.pc" \
-      --replace 'includedir=''${libdir}/${pname}-${version}' "includedir=$dev"
+      --replace 'includedir=''${libdir}/${finalAttrs.pname}-${finalAttrs.version}' "includedir=$dev"
   '';
 
   meta = {
@@ -54,4 +54,4 @@ stdenv.mkDerivation rec {
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
   };
-}
+})

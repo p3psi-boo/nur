@@ -19,17 +19,25 @@ buildGoModule (finalAttrs: {
 
   vendorHash = null;
 
-  env.CGO_ENABLED = "0";
+  # 运行时性能优化
+  env = {
+    CGO_ENABLED = "0";
+    GOFLAGS = "-trimpath";
+    GOAMD64 = "v3";
+  };
 
   nativeBuildInputs = [
     libcap
     util-linux
   ];
 
+  # 运行时性能优化
   ldflags = [
     "-s"
     "-w"
   ];
+
+  buildFlags = [ "-gcflags=all=-l=4" ];
 
   subPackages = [ "." ];
 

@@ -82,5 +82,6 @@ stdenv.mkDerivation {
     homepage = "https://developer.amd.com/amd-aocc/";
     license = lib.licenses.unfreeRedistributable;
     platforms = [ "x86_64-linux" ];
+    mainProgram = "aocc";
   };
 }

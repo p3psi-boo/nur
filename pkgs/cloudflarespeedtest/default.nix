@@ -17,6 +17,8 @@ buildGoModule (finalAttrs: {
 
   env = {
     CGO_ENABLED = "0";
+    GOFLAGS = "-trimpath";
+    GOAMD64 = "v3";  # x86-64-v3 指令集优化（AVX2, BMI2）
   };
 
   vendorHash = "sha256-4h3Jf3K6uEm79KAy46v69wby01zf2tfdZxGeTyUXvdk=";
@@ -25,6 +27,9 @@ buildGoModule (finalAttrs: {
     "-s"
     "-w"
   ];
+
+  # 启用激进内联优化
+  buildFlags = [ "-gcflags=all=-l=4" ];
 
   doCheck = false;
 

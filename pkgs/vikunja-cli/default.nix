@@ -15,11 +15,20 @@ buildGoModule {
 
   vendorHash = "sha256-oRpnvnlTqo0pFgTTk8vFvB659GI8qCcSFuXNaXzigbs=";
 
+  # 运行时性能优化
+  env = {
+    CGO_ENABLED = "0";
+    GOFLAGS = "-trimpath";
+    GOAMD64 = "v3";
+  };
+
   ldflags = [
     "-s"
     "-w"
     "-X main.version=${sourceInfo.version}"
   ];
+
+  buildFlags = [ "-gcflags=all=-l=4" ];
 
   postInstall = ''
     if [ -f "$out/bin/vikunja-cli" ]; then

@@ -5,7 +5,7 @@
 , which
 }:
 
-stdenv.mkDerivation {
+stdenv.mkDerivation (finalAttrs: {
   dontBuild = true;
   pname = "nf_deaf";
   version = generated.nf_deaf.date;
@@ -92,5 +92,6 @@ stdenv.mkDerivation {
     license = lib.licenses.gpl2Only;
     maintainers = with lib.maintainers; [ "bubu" ];
     platforms = lib.platforms.linux;
+    mainProgram = "build-nf_deaf";
   };
-}
+})

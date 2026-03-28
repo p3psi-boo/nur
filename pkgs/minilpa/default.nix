@@ -17,12 +17,12 @@
   wayland,
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation (finalAttrs: {
   pname = "minilpa";
   version = "1.1.1";
 
   src = fetchurl {
-    url = "https://github.com/EsimMoe/MiniLPA/releases/download/v${version}/MiniLPA-Linux-x86_64.zip";
+    url = "https://github.com/EsimMoe/MiniLPA/releases/download/v${finalAttrs.version}/MiniLPA-Linux-x86_64.zip";
     hash = "sha256-y04l34ACd1k2Ps9t5xufoTVxnFkktjep2Xbao5wOTGw=";
   };
 
@@ -61,7 +61,7 @@ stdenv.mkDerivation rec {
 
     # The binary already has the correct rpath, but we need to wrap it for proper library loading
     wrapProgram $out/bin/MiniLPA \
-      --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath buildInputs}:$out/lib:$out/lib/runtime/lib"
+      --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath finalAttrs.buildInputs}:$out/lib:$out/lib/runtime/lib"
   '';
 
   meta = with lib; {
@@ -71,4 +71,4 @@ stdenv.mkDerivation rec {
     platforms = [ "x86_64-linux" ];
     mainProgram = "MiniLPA";
   };
-}
+})

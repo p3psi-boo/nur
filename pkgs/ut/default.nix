@@ -8,8 +8,8 @@ let
   rustOptimized = import ../_lib/rust-optimized.nix;
   sourceInfo = generated.ut;
 in
-buildRustPackage (
-  rec {
+buildRustPackage (finalAttrs: (
+  {
     pname = "ut";
     version = "unstable-${sourceInfo.date}";
 
@@ -24,7 +24,8 @@ buildRustPackage (
       homepage = "https://github.com/ksdme/ut";
       license = licenses.mit;
       maintainers = with maintainers; [ ];
+      mainProgram = "ut";
     };
   }
   // rustOptimized.rustOptimizedEnv
-)
+))

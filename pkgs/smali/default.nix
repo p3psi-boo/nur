@@ -16,8 +16,11 @@ let
     if generated != null && generated ? smali then
       generated.smali
     else
-      rec {
+      let
         version = "v2.5.2";
+      in
+      {
+        inherit version;
         src = fetchFromGitHub {
           owner = "JesusFreke";
           repo = "smali";

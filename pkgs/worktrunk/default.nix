@@ -7,7 +7,7 @@
   git,
 }:
 
-rustPlatform.buildRustPackage rec {
+rustPlatform.buildRustPackage (finalAttrs: {
   pname = "worktrunk";
   version = generated.worktrunk.version;
   src = generated.worktrunk.src;
@@ -22,11 +22,12 @@ rustPlatform.buildRustPackage rec {
   # Tests require some setup, and potentially PTY (though tier-2 tests are disabled by default)
   doCheck = false;
 
-  # Optimize for binary size (see docs/min-sized-rust.md)
+  # Optimize for runtime performance
+  CARGO_BUILD_INCREMENTAL = "false";
   CARGO_PROFILE_RELEASE_STRIP = "symbols";
-  CARGO_PROFILE_RELEASE_OPT_LEVEL = "z";
-  CARGO_PROFILE_RELEASE_LTO = "true";
-  CARGO_PROFILE_RELEASE_CODEGEN_UNITS = "1";
+  CARGO_PROFILE_RELEASE_OPT_LEVEL = "3";
+  CARGO_PROFILE_RELEASE_LTO = "thin";
+  CARGO_PROFILE_RELEASE_CODEGEN_UNITS = "0";
   CARGO_PROFILE_RELEASE_PANIC = "abort";
 
   # Strip all symbols (not just debug symbols)
@@ -51,4 +52,4 @@ rustPlatform.buildRustPackage rec {
     ];
     mainProgram = "wt";
   };
-}
+})

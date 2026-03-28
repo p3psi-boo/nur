@@ -16,7 +16,7 @@ let
     hash = "sha256-gAEMYSHrAs0C8MrYMjiEsjdnBKybDaIJ44+jA9CnJEE=";
   };
 in
-rustPlatform.buildRustPackage rec {
+rustPlatform.buildRustPackage (finalAttrs: {
   pname = "openixcli";
   version = sourceInfo.version;
 
@@ -47,11 +47,12 @@ rustPlatform.buildRustPackage rec {
   nativeBuildInputs = [ pkg-config ];
   buildInputs = [ libusb1 ];
 
+  # Optimize for runtime performance
   CARGO_BUILD_INCREMENTAL = "false";
   CARGO_PROFILE_RELEASE_STRIP = "symbols";
-  CARGO_PROFILE_RELEASE_OPT_LEVEL = "z";
-  CARGO_PROFILE_RELEASE_LTO = "true";
-  CARGO_PROFILE_RELEASE_CODEGEN_UNITS = "1";
+  CARGO_PROFILE_RELEASE_OPT_LEVEL = "3";
+  CARGO_PROFILE_RELEASE_LTO = "thin";
+  CARGO_PROFILE_RELEASE_CODEGEN_UNITS = "0";
   CARGO_PROFILE_RELEASE_PANIC = "abort";
 
   stripAllList = [ "bin" ];
@@ -63,4 +64,4 @@ rustPlatform.buildRustPackage rec {
     mainProgram = "openixcli";
     platforms = lib.platforms.linux;
   };
-}
+})

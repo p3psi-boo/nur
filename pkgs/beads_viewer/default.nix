@@ -22,11 +22,20 @@ buildGoModule {
   # Tests may require additional setup
   doCheck = false;
 
+  # 运行时性能优化
+  env = {
+    CGO_ENABLED = "0";
+    GOFLAGS = "-trimpath";
+    GOAMD64 = "v3";
+  };
+
   ldflags = [
     "-s"
     "-w"
     "-X=main.version=${sourceInfo.version}"
   ];
+
+  buildFlags = [ "-gcflags=all=-l=4" ];
 
   meta = {
     description = "TUI application for viewing and managing Beads task management system";

@@ -12,7 +12,7 @@
 let
   sourceInfo = generated.firm;
 in
-rustPlatform.buildRustPackage rec {
+rustPlatform.buildRustPackage (finalAttrs: {
   pname = "firm";
   version = sourceInfo.version;
 
@@ -31,14 +31,12 @@ rustPlatform.buildRustPackage rec {
     apple-sdk
   ];
 
-  # The workspace includes multiple crates, so we need to build from workspace root
+  # Optimize for runtime performance
   CARGO_BUILD_INCREMENTAL = "false";
-
-  # Optimize for binary size (see docs/min-sized-rust.md)
   CARGO_PROFILE_RELEASE_STRIP = "symbols";
-  CARGO_PROFILE_RELEASE_OPT_LEVEL = "z";
-  CARGO_PROFILE_RELEASE_LTO = "true";
-  CARGO_PROFILE_RELEASE_CODEGEN_UNITS = "1";
+  CARGO_PROFILE_RELEASE_OPT_LEVEL = "3";
+  CARGO_PROFILE_RELEASE_LTO = "thin";
+  CARGO_PROFILE_RELEASE_CODEGEN_UNITS = "0";
   CARGO_PROFILE_RELEASE_PANIC = "abort";
 
   # Build only the firm-cli binary from the workspace
@@ -67,4 +65,4 @@ rustPlatform.buildRustPackage rec {
     platforms = platforms.linux ++ platforms.darwin;
     mainProgram = "firm";
   };
-}
+})

@@ -17,7 +17,7 @@ let
     if generated != null && generated ? qmdr then
       generated.qmdr
     else
-      rec {
+      {
         version = "1.0.3";
         src = fetchFromGitHub {
           owner = "uf-hy";

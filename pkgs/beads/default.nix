@@ -23,13 +23,21 @@ buildGoModule (finalAttrs: {
   # Tests require git which we don't need for building
   doCheck = false;
 
-  env.CGO_ENABLED = "0";
+  env = {
+    CGO_ENABLED = "0";
+    GOFLAGS = "-trimpath";
+    GOAMD64 = "v3";  # 启用 x86-64-v3 指令集优化（AVX2, BMI2 等）
+  };
 
+  # 运行时性能优化：保留 -s -w 减小体积
   ldflags = [
     "-s"
     "-w"
     "-X=main.version=${finalAttrs.version}"
   ];
+
+  # 启用编译器优化：激进的函数内联，提高运行时性能
+  buildFlags = [ "-gcflags=all=-l=4" ];
 
   postInstall = ''
     mv $out/bin/bd $out/bin/beads

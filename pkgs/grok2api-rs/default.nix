@@ -11,16 +11,16 @@
 }:
 
 let
-  rustOptimized = import ../_lib/rust-optimized.nix;
+  rustPerformance = import ../_lib/rust-performance.nix;
 in
 rustPlatform.buildRustPackage (
-  rec {
+  finalAttrs: ({
     pname = "grok2api-rs";
     version = generated.grok2api-rs.version;
     src = generated.grok2api-rs.src;
 
     cargoLock = {
-      lockFile = "${src}/Cargo.lock";
+      lockFile = "${finalAttrs.src}/Cargo.lock";
     };
 
     nativeBuildInputs = [
@@ -43,7 +43,7 @@ rustPlatform.buildRustPackage (
     doCheck = false;
 
     postInstall = ''
-      install -Dm644 "${src}/config.defaults.toml" "$out/share/grok2api-rs/config.defaults.toml"
+      install -Dm644 "${finalAttrs.src}/config.defaults.toml" "$out/share/grok2api-rs/config.defaults.toml"
     '';
 
     meta = with lib; {
@@ -53,6 +53,5 @@ rustPlatform.buildRustPackage (
       mainProgram = "grok2api-rs";
       platforms = platforms.linux;
     };
-  }
-  // rustOptimized.rustOptimizedEnv
+  } // rustPerformance.rustPerformanceEnv)
 )

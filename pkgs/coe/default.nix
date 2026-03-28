@@ -14,6 +14,13 @@ buildGoModule {
 
   src = sourceInfo.src;
 
+  # 运行时性能优化环境
+  env = {
+    CGO_ENABLED = "0";
+    GOFLAGS = "-trimpath";
+    GOAMD64 = "v3";  # x86-64-v3 指令集优化
+  };
+
   # Upstream v0.0.6 misses the module checksum line required by `go mod vendor`.
   postPatch = ''
     grep -q '^golang.org/x/sys v0.40.0 h1:' go.sum || \
@@ -22,12 +29,16 @@ buildGoModule {
 
   vendorHash = "sha256-LUytq4Cow3TYOTZThdIsX1R4DnRw9sy4AuOQYi+8Ht8=";
 
+  # 运行时性能优化
   ldflags = [
     "-s"
     "-w"
     "-X main.version=${sourceInfo.version}"
     "-X main.builtBy=nix"
   ];
+
+  # 启用激进内联优化
+  buildFlags = [ "-gcflags=all=-l=4" ];
 
   meta = {
     description = "Zero-GUI Linux voice input tool";

@@ -12,7 +12,7 @@
   enableIpv6 ? true,
 }:
 
-rustPlatform.buildRustPackage rec {
+rustPlatform.buildRustPackage (finalAttrs: {
   pname = "einat";
   version = "0.1.9";
 
@@ -44,11 +44,12 @@ rustPlatform.buildRustPackage rec {
   ]
   ++ lib.optionals enableIpv6 [ "ipv6" ];
 
-  # Optimize for binary size (see docs/min-sized-rust.md)
+  # Optimize for runtime performance (not binary size)
+  CARGO_BUILD_INCREMENTAL = "false";
   CARGO_PROFILE_RELEASE_STRIP = "symbols";
-  CARGO_PROFILE_RELEASE_OPT_LEVEL = "z";
-  CARGO_PROFILE_RELEASE_LTO = "true";
-  CARGO_PROFILE_RELEASE_CODEGEN_UNITS = "1";
+  CARGO_PROFILE_RELEASE_OPT_LEVEL = "3";  # 最高运行时性能
+  CARGO_PROFILE_RELEASE_LTO = "thin";     # thin LTO 平衡编译和运行时
+  CARGO_PROFILE_RELEASE_CODEGEN_UNITS = "0";  # 自动并行
   CARGO_PROFILE_RELEASE_PANIC = "abort";
 
   # The eBPF programs need special permissions to load
@@ -60,5 +61,6 @@ rustPlatform.buildRustPackage rec {
     maintainers = with maintainers; [ ];
     # Requires kernel >= 5.15 and eBPF support
     broken = stdenv.isAarch64; # May have issues on ARM64
+    mainProgram = "einat";
   };
-}
+})

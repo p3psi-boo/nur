@@ -7,7 +7,7 @@
   generated,
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation (finalAttrs: {
   inherit (generated.magiskboot-bin) pname version src;
 
   nativeBuildInputs = [
@@ -52,4 +52,4 @@ stdenv.mkDerivation rec {
     ];
     mainProgram = "magiskboot";
   };
-}
+})

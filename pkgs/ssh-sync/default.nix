@@ -1,6 +1,6 @@
-{ pkgs ? import <nixpkgs> {} }:
+{ pkgs ? import <nixpkgs> {}, lib ? pkgs.lib }:
 
-pkgs.stdenv.mkDerivation rec {
+pkgs.stdenv.mkDerivation (finalAttrs: {
   pname = "ssh-sync";
   version = "0.1.0";
 
@@ -15,9 +15,10 @@ pkgs.stdenv.mkDerivation rec {
     wrapProgram $out/bin/ssh-sync --prefix PATH : ${pkgs.lib.makeBinPath [ pkgs.gh pkgs.jq ]}
   '';
 
-  meta = with pkgs.lib; {
+  meta = with lib; {
     description = "A script to synchronize local ssh config and lazyssh metadata with a GitHub Gist.";
     license = licenses.mit;
     platforms = platforms.all;
+    mainProgram = "ssh-sync";
   };
-}
+})

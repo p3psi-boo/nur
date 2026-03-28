@@ -6,14 +6,14 @@
   kernel ? linuxPackages.kernel,
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation (finalAttrs: {
   pname = "lotspeed-${kernel.modDirVersion}";
   version = "b1eaf1cd74152ed1c75615350db917f78b6f84e7"; # zeta-tcp
 
   src = fetchFromGitHub {
     owner = "uk0";
     repo = "lotspeed";
-    rev = version;
+    rev = finalAttrs.version;
     hash = "sha256-5cpQGc2qXKC7yePwKf+EowhU9/hSjv1KazAKSUV0Lhw=";
   };
 
@@ -31,5 +31,6 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/uk0/lotspeed";
     platforms = platforms.linux;
     maintainers = with maintainers; [ imlonghao ];
+    mainProgram = "lotspeed";
   };
-}
+})
