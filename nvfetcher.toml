@@ -356,7 +356,7 @@ fetch.github = "google/android-classyshark"
 src.github_tag = "loerting/dalvikus"
 src.prefix = "v"
 src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
-fetch.url = "https://github.com/loerting/dalvikus/releases/download/v$ver/dalvikus_$ver-1_amd64.deb"
+fetch.url = "https://github.com/loerting/dalvikus/archive/refs/tags/v$ver.tar.gz"
 
 [coe]
 src.github_tag = "quailyquaily/coe"

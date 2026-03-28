@@ -1,11 +1,11 @@
 {
   lib,
   stdenv,
-  stdenvNoCC,
   generated,
+  gradle_8,
+  jdk21_headless,
+  jre,
   makeWrapper,
-  dpkg,
-  jdk,
   alsa-lib,
   fontconfig,
   freetype,
@@ -22,6 +22,7 @@
 
 let
   sourceInfo = generated.dalvikus;
+  gradle = gradle_8.override { java = jdk21_headless; };
   runtimeLibPath = lib.makeLibraryPath [
     alsa-lib
     fontconfig
@@ -38,28 +39,48 @@ let
     stdenv.cc.cc.lib
   ];
 in
-stdenvNoCC.mkDerivation {
+stdenv.mkDerivation (finalAttrs: {
   pname = "dalvikus";
   version = sourceInfo.version;
 
   src = sourceInfo.src;
-  dontUnpack = true;
+  strictDeps = true;
 
   nativeBuildInputs = [
+    gradle
     makeWrapper
-    dpkg
   ];
+
+  mitmCache = gradle.fetchDeps {
+    pkg = finalAttrs.finalPackage;
+    pname = "dalvikus";
+    attrPath = null;
+    data = ./deps.json;
+  };
+
+  # Compose desktop build fetches native JVM dependencies during dep update.
+  __darwinAllowLocalNetworking = true;
+
+  gradleFlags = [
+    "-Dfile.encoding=UTF-8"
+    "-Dorg.gradle.java.home=${jdk21_headless}"
+  ];
+  gradleBuildTask = ":composeApp:createDistributable";
+  gradleUpdateScript = ''
+    gradle $gradleFlags :composeApp:createDistributable
+  '';
+  doCheck = false;
 
   installPhase = ''
     runHook preInstall
 
-    dpkg-deb -x "$src" unpacked
-
+    appDist="composeApp/build/compose/binaries/main/app/dalvikus"
     appRoot="$out/share/dalvikus"
     install -d "$appRoot"
-    cp -r unpacked/opt/dalvikus/lib/app "$appRoot/"
 
-    install -Dm644 unpacked/opt/dalvikus/lib/dalvikus.png \
+    cp -r "$appDist/lib/app" "$appRoot/"
+
+    install -Dm644 "$appDist/lib/dalvikus.png" \
       "$out/share/icons/hicolor/256x256/apps/dalvikus.png"
     install -d "$out/share/applications"
 
@@ -74,12 +95,12 @@ Type=Application
 Categories=Development;
 EOF
 
-    makeWrapper ${lib.getExe jdk} "$out/bin/dalvikus" \
+    makeWrapper ${lib.getExe jre} "$out/bin/dalvikus" \
       --add-flags "-Dcompose.application.configure.swing.globals=true" \
       --add-flags "-Dcompose.application.resources.dir=$appRoot/app/resources" \
       --add-flags "-Dskiko.library.path=$appRoot/app" \
       --add-flags "-Djava.library.path=$appRoot/app" \
-      --add-flags "-Dapp.version=${sourceInfo.version}" \
+      --add-flags "-Dapp.version=${finalAttrs.version}" \
       --set CLASSPATH "$appRoot/app/*" \
       --add-flags "MainKt" \
       --prefix LD_LIBRARY_PATH : "${runtimeLibPath}"
@@ -95,8 +116,9 @@ EOF
     mainProgram = "dalvikus";
     platforms = [ "x86_64-linux" ];
     sourceProvenance = with sourceTypes; [
+      fromSource
       binaryBytecode
       binaryNativeCode
     ];
   };
-}
+})

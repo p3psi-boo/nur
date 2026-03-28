@@ -243,8 +243,8 @@
     pname = "dalvikus";
     version = "1.0.13";
     src = fetchurl {
-      url = "https://github.com/loerting/dalvikus/releases/download/v1.0.13/dalvikus_1.0.13-1_amd64.deb";
-      sha256 = "sha256-SFOubRzWHzyqDgekrq3AcMM/NtYmmpX1myQJ33Obeh0=";
+      url = "https://github.com/loerting/dalvikus/archive/refs/tags/v1.0.13.tar.gz";
+      sha256 = "sha256-PMSalWlMDIqMWgPZ6Ha7L6TA2VOX6svCAOYMSpzIqHY=";
     };
   };
   ecloud-computer-auto-boot = {
