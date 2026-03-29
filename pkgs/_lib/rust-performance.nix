@@ -22,8 +22,8 @@
     # 启用链接时优化（提高运行时性能）
     CARGO_PROFILE_RELEASE_LTO = "thin";  # thin LTO 比 full LTO 编译更快
 
-    # 自动决定代码生成单元数量（更好的并行编译）
-    CARGO_PROFILE_RELEASE_CODEGEN_UNITS = "0";
+    # 代码生成单元数量（1 = 最大优化，编译较慢但运行时更快）
+    CARGO_PROFILE_RELEASE_CODEGEN_UNITS = "1";
 
     # panic 时直接 abort（减少展开代码，编译更快）
     CARGO_PROFILE_RELEASE_PANIC = "abort";

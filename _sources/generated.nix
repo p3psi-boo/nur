@@ -19,34 +19,45 @@
   };
   agent-browser = {
     pname = "agent-browser";
-    version = "v0.22.3";
+    version = "v0.23.0";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.22.3/agent-browser-linux-x64";
-      sha256 = "sha256-F2UR3wfuPuGbcy1324E1Tul6MEVQLEghK4Lgx1KUPAA=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.0/agent-browser-linux-x64";
+      sha256 = "sha256-immcc/tpfW30JgxqPn+cSl3sjgjjMkjtAbCug/2Meko=";
     };
   };
   agent-browser-darwin-arm64 = {
     pname = "agent-browser-darwin-arm64";
-    version = "v0.22.3";
+    version = "v0.23.0";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.22.3/agent-browser-darwin-arm64";
-      sha256 = "sha256-SpArxlp6CHEXZxSlp7Fav+fSWZ8oKgIrHm1viDSBbZw=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.0/agent-browser-darwin-arm64";
+      sha256 = "sha256-NUwc2va1DqAbu3sgrvSrZ7RaPh24oyJp7fj9lw5TJoM=";
     };
   };
   agent-browser-darwin-x64 = {
     pname = "agent-browser-darwin-x64";
-    version = "v0.22.3";
+    version = "v0.23.0";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.22.3/agent-browser-darwin-x64";
-      sha256 = "sha256-Ecx9/4N6UHGmwxEa0uzBD6fMQj2YX0YjLoxxCpMAGCo=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.0/agent-browser-darwin-x64";
+      sha256 = "sha256-aquw5WQufHRBb9EH33SMaiZIw1yNvHEgDRmuZGXvuL8=";
     };
   };
   agent-browser-linux-arm64 = {
     pname = "agent-browser-linux-arm64";
-    version = "v0.22.3";
+    version = "v0.23.0";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.22.3/agent-browser-linux-arm64";
-      sha256 = "sha256-qlEVQXb6witXdG4/nT3redBVJBLVa30p2zboBsqvKUU=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.0/agent-browser-linux-arm64";
+      sha256 = "sha256-u5JD6g2YnYVuffBSuTuL0cZ0ig2/6WKEq6elyqLlhhM=";
+    };
+  };
+  agsh = {
+    pname = "agsh";
+    version = "0.6.1";
+    src = fetchFromGitHub {
+      owner = "k4yt3x";
+      repo = "agsh";
+      rev = "0.6.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-ILMLri+dEt1xZwJB5OBnA76WTffHZiAOqeb7lD1lkg8=";
     };
   };
   bcut-asr = {
@@ -76,31 +87,31 @@
   };
   bifrost-http = {
     pname = "bifrost-http";
-    version = "172325edba24b6e4af9e2635757366ff21154d60";
+    version = "ed58f8750ff49abe5f2f0e4c2c1330d9298be467";
     src = fetchgit {
       url = "https://github.com/maximhq/bifrost.git";
-      rev = "172325edba24b6e4af9e2635757366ff21154d60";
+      rev = "ed58f8750ff49abe5f2f0e4c2c1330d9298be467";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-21l5nRQsaZtAEP7U6jlTgeoWwNyDWM4GLY5d6Fsbk3M=";
+      sha256 = "sha256-G3leIfPk3YSUO64+scNS5cuF28yJIAC1r1WK0VpJ8yc=";
     };
-    date = "2026-03-26";
+    date = "2026-03-29";
   };
   bifrost-ui = {
     pname = "bifrost-ui";
-    version = "172325edba24b6e4af9e2635757366ff21154d60";
+    version = "ed58f8750ff49abe5f2f0e4c2c1330d9298be467";
     src = fetchgit {
       url = "https://github.com/maximhq/bifrost.git";
-      rev = "172325edba24b6e4af9e2635757366ff21154d60";
+      rev = "ed58f8750ff49abe5f2f0e4c2c1330d9298be467";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-21l5nRQsaZtAEP7U6jlTgeoWwNyDWM4GLY5d6Fsbk3M=";
+      sha256 = "sha256-G3leIfPk3YSUO64+scNS5cuF28yJIAC1r1WK0VpJ8yc=";
     };
-    date = "2026-03-26";
+    date = "2026-03-29";
   };
   binsider-bin = {
     pname = "binsider-bin";
@@ -172,28 +183,28 @@
   };
   cliproxyapi = {
     pname = "cliproxyapi";
-    version = "v6.9.2";
+    version = "v6.9.5";
     src = fetchFromGitHub {
       owner = "router-for-me";
       repo = "CLIProxyAPI";
-      rev = "v6.9.2";
+      rev = "v6.9.5";
       fetchSubmodules = false;
-      sha256 = "sha256-Qh+5tOc5jI6be1RiA6h5FCEbfsc7AFoAlvLav0xX3IU=";
+      sha256 = "sha256-30C/NabUtbaRdZAtEKAWiOyavSbI2/xyh4CgAEDmN2A=";
     };
   };
   cloudflarespeedtest = {
     pname = "cloudflarespeedtest";
-    version = "2de42f8d30c96ac7d2e25cbe98765c9dc0b208f9";
+    version = "1e4400bc9a49c661df161fd7b1d9257a4205eb35";
     src = fetchgit {
       url = "https://github.com/XIU2/CloudflareSpeedTest.git";
-      rev = "2de42f8d30c96ac7d2e25cbe98765c9dc0b208f9";
+      rev = "1e4400bc9a49c661df161fd7b1d9257a4205eb35";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-PgF5X6DSTNcUhP5lHuapR3DkzxCDMHXuCGyfsAHJTt4=";
+      sha256 = "sha256-bv7WUKrl7WDtQUwxrmj5Mr9Z0/78ICrvSBqnZMdKGa4=";
     };
-    date = "2026-03-02";
+    date = "2026-03-27";
   };
   cnb-cli = {
     pname = "cnb-cli";
@@ -219,24 +230,24 @@
   };
   coe = {
     pname = "coe";
-    version = "v0.0.6";
+    version = "v0.0.9";
     src = fetchFromGitHub {
       owner = "quailyquaily";
       repo = "coe";
-      rev = "v0.0.6";
+      rev = "v0.0.9";
       fetchSubmodules = false;
-      sha256 = "sha256-XhaR7lx3l9ZVRJVjrCml2/EW9ZViXCru1+8VtufVwCQ=";
+      sha256 = "sha256-4kqxXYOd7UEQjO5Fzgzd5xXlY0igs0gX91mVGfpQjpg=";
     };
   };
   dagu = {
     pname = "dagu";
-    version = "v2.3.7";
+    version = "v2.3.10";
     src = fetchFromGitHub {
       owner = "dagu-org";
       repo = "dagu";
-      rev = "v2.3.7";
+      rev = "v2.3.10";
       fetchSubmodules = false;
-      sha256 = "sha256-7Ok0QbKrkjZGqSrL1sRvN+RcHJZHK/WfsZv1ce5LYeE=";
+      sha256 = "sha256-4PjNexJwpTFAK1Q/VOHOIHDdYXtADMuNfQrmdXUMxuw=";
     };
   };
   dalvikus = {
@@ -439,13 +450,13 @@
   };
   liteparse = {
     pname = "liteparse";
-    version = "v1.3.0";
+    version = "v1.4.1";
     src = fetchFromGitHub {
       owner = "run-llama";
       repo = "liteparse";
-      rev = "v1.3.0";
+      rev = "v1.4.1";
       fetchSubmodules = false;
-      sha256 = "sha256-JHe+4n485ssdO1IboCpECY5BniIc+VdVE/hAerFN5To=";
+      sha256 = "sha256-8sTvE8akRbiJ5GjXQCzmVAYdTD8j8OoSANkbkV6TJ5Y=";
     };
   };
   magiskboot-bin = {
@@ -552,17 +563,17 @@
   };
   proxy-ns = {
     pname = "proxy-ns";
-    version = "afe6dc539a97827b485cd1106fd755d4f89eabdf";
+    version = "f4adda2ce8add33c438845a65591e3cf11787c62";
     src = fetchgit {
       url = "https://github.com/OkamiW/proxy-ns.git";
-      rev = "afe6dc539a97827b485cd1106fd755d4f89eabdf";
+      rev = "f4adda2ce8add33c438845a65591e3cf11787c62";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-qPKRnCXQBjhL2eSrvEGhOl1fHaV1ZhI4nJ851e++Shs=";
+      sha256 = "sha256-da0WLeXh2iGPxXODiy5jFfGx3Mb/UKK48B/Qk/h7PgU=";
     };
-    date = "2026-02-21";
+    date = "2026-03-28";
   };
   pymicro-features = {
     pname = "pymicro-features";
@@ -635,13 +646,13 @@
   };
   rikugan = {
     pname = "rikugan";
-    version = "v1.2";
+    version = "v1.2.1";
     src = fetchFromGitHub {
       owner = "buzzer-re";
       repo = "Rikugan";
-      rev = "v1.2";
+      rev = "v1.2.1";
       fetchSubmodules = false;
-      sha256 = "sha256-8e866fRury/bCFd/6VSDMhTcLvAUI6ALbLO7J0gp8rg=";
+      sha256 = "sha256-JUiC6CZ0xqOj1t1w80RSHhXLiSXda8nX+HIJEUZvsTM=";
     };
   };
   rust-video-downloader = {
@@ -718,13 +729,13 @@
   };
   tensorzero = {
     pname = "tensorzero";
-    version = "2026.3.3";
+    version = "2026.3.4";
     src = fetchFromGitHub {
       owner = "tensorzero";
       repo = "tensorzero";
-      rev = "2026.3.3";
+      rev = "2026.3.4";
       fetchSubmodules = false;
-      sha256 = "sha256-2zL5cneYxc6kI1mKdy3Q3uz1yQ1EdTIHsw/vhNGJJdI=";
+      sha256 = "sha256-dY6rNsqm3k1Ovm5823skyV5aJPcj2W6hXFFHFGn0IjU=";
     };
   };
   uber-apk-signer = {

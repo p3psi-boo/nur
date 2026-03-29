@@ -17,6 +17,10 @@ src.git = "https://github.com/XIU2/CloudflareSpeedTest.git"
 fetch.git = "https://github.com/XIU2/CloudflareSpeedTest.git"
 git.fetch_submodules = false
 
+[agsh]
+src.github = "k4yt3x/agsh"
+fetch.github = "k4yt3x/agsh"
+
 [ace-tool-rs]
 src.github = "missdeer/ace-tool-rs"
 fetch.github = "missdeer/ace-tool-rs"

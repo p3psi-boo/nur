@@ -2,6 +2,7 @@
   lib,
   rustPlatform,
   generated,
+  ...
 }:
 
 rustPlatform.buildRustPackage (finalAttrs: {

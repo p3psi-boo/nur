@@ -29,11 +29,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-F2UR3wfuPuGbcy1324E1Tul6MEVQLEghK4Lgx1KUPAA=",
+            "sha256": "sha256-immcc/tpfW30JgxqPn+cSl3sjgjjMkjtAbCug/2Meko=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.22.3/agent-browser-linux-x64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.0/agent-browser-linux-x64"
         },
-        "version": "v0.22.3"
+        "version": "v0.23.0"
     },
     "agent-browser-darwin-arm64": {
         "cargoLock": null,
@@ -44,11 +44,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-SpArxlp6CHEXZxSlp7Fav+fSWZ8oKgIrHm1viDSBbZw=",
+            "sha256": "sha256-NUwc2va1DqAbu3sgrvSrZ7RaPh24oyJp7fj9lw5TJoM=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.22.3/agent-browser-darwin-arm64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.0/agent-browser-darwin-arm64"
         },
-        "version": "v0.22.3"
+        "version": "v0.23.0"
     },
     "agent-browser-darwin-x64": {
         "cargoLock": null,
@@ -59,11 +59,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-Ecx9/4N6UHGmwxEa0uzBD6fMQj2YX0YjLoxxCpMAGCo=",
+            "sha256": "sha256-aquw5WQufHRBb9EH33SMaiZIw1yNvHEgDRmuZGXvuL8=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.22.3/agent-browser-darwin-x64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.0/agent-browser-darwin-x64"
         },
-        "version": "v0.22.3"
+        "version": "v0.23.0"
     },
     "agent-browser-linux-arm64": {
         "cargoLock": null,
@@ -74,11 +74,32 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-qlEVQXb6witXdG4/nT3redBVJBLVa30p2zboBsqvKUU=",
+            "sha256": "sha256-u5JD6g2YnYVuffBSuTuL0cZ0ig2/6WKEq6elyqLlhhM=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.22.3/agent-browser-linux-arm64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.0/agent-browser-linux-arm64"
         },
-        "version": "v0.22.3"
+        "version": "v0.23.0"
+    },
+    "agsh": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "agsh",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "k4yt3x",
+            "repo": "agsh",
+            "rev": "0.6.1",
+            "sha256": "sha256-ILMLri+dEt1xZwJB5OBnA76WTffHZiAOqeb7lD1lkg8=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "0.6.1"
     },
     "bcut-asr": {
         "cargoLock": null,
@@ -123,7 +144,7 @@
     },
     "bifrost-http": {
         "cargoLock": null,
-        "date": "2026-03-26",
+        "date": "2026-03-29",
         "extract": null,
         "name": "bifrost-http",
         "passthru": null,
@@ -133,17 +154,17 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "172325edba24b6e4af9e2635757366ff21154d60",
-            "sha256": "sha256-21l5nRQsaZtAEP7U6jlTgeoWwNyDWM4GLY5d6Fsbk3M=",
+            "rev": "ed58f8750ff49abe5f2f0e4c2c1330d9298be467",
+            "sha256": "sha256-G3leIfPk3YSUO64+scNS5cuF28yJIAC1r1WK0VpJ8yc=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/maximhq/bifrost.git"
         },
-        "version": "172325edba24b6e4af9e2635757366ff21154d60"
+        "version": "ed58f8750ff49abe5f2f0e4c2c1330d9298be467"
     },
     "bifrost-ui": {
         "cargoLock": null,
-        "date": "2026-03-26",
+        "date": "2026-03-29",
         "extract": null,
         "name": "bifrost-ui",
         "passthru": null,
@@ -153,13 +174,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "172325edba24b6e4af9e2635757366ff21154d60",
-            "sha256": "sha256-21l5nRQsaZtAEP7U6jlTgeoWwNyDWM4GLY5d6Fsbk3M=",
+            "rev": "ed58f8750ff49abe5f2f0e4c2c1330d9298be467",
+            "sha256": "sha256-G3leIfPk3YSUO64+scNS5cuF28yJIAC1r1WK0VpJ8yc=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/maximhq/bifrost.git"
         },
-        "version": "172325edba24b6e4af9e2635757366ff21154d60"
+        "version": "ed58f8750ff49abe5f2f0e4c2c1330d9298be467"
     },
     "binsider-bin": {
         "cargoLock": null,
@@ -297,16 +318,16 @@
             "name": null,
             "owner": "router-for-me",
             "repo": "CLIProxyAPI",
-            "rev": "v6.9.2",
-            "sha256": "sha256-Qh+5tOc5jI6be1RiA6h5FCEbfsc7AFoAlvLav0xX3IU=",
+            "rev": "v6.9.5",
+            "sha256": "sha256-30C/NabUtbaRdZAtEKAWiOyavSbI2/xyh4CgAEDmN2A=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v6.9.2"
+        "version": "v6.9.5"
     },
     "cloudflarespeedtest": {
         "cargoLock": null,
-        "date": "2026-03-02",
+        "date": "2026-03-27",
         "extract": null,
         "name": "cloudflarespeedtest",
         "passthru": null,
@@ -316,13 +337,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "2de42f8d30c96ac7d2e25cbe98765c9dc0b208f9",
-            "sha256": "sha256-PgF5X6DSTNcUhP5lHuapR3DkzxCDMHXuCGyfsAHJTt4=",
+            "rev": "1e4400bc9a49c661df161fd7b1d9257a4205eb35",
+            "sha256": "sha256-bv7WUKrl7WDtQUwxrmj5Mr9Z0/78ICrvSBqnZMdKGa4=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/XIU2/CloudflareSpeedTest.git"
         },
-        "version": "2de42f8d30c96ac7d2e25cbe98765c9dc0b208f9"
+        "version": "1e4400bc9a49c661df161fd7b1d9257a4205eb35"
     },
     "cnb-cli": {
         "cargoLock": null,
@@ -373,12 +394,12 @@
             "name": null,
             "owner": "quailyquaily",
             "repo": "coe",
-            "rev": "v0.0.6",
-            "sha256": "sha256-XhaR7lx3l9ZVRJVjrCml2/EW9ZViXCru1+8VtufVwCQ=",
+            "rev": "v0.0.9",
+            "sha256": "sha256-4kqxXYOd7UEQjO5Fzgzd5xXlY0igs0gX91mVGfpQjpg=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.0.6"
+        "version": "v0.0.9"
     },
     "dagu": {
         "cargoLock": null,
@@ -394,12 +415,12 @@
             "name": null,
             "owner": "dagu-org",
             "repo": "dagu",
-            "rev": "v2.3.7",
-            "sha256": "sha256-7Ok0QbKrkjZGqSrL1sRvN+RcHJZHK/WfsZv1ce5LYeE=",
+            "rev": "v2.3.10",
+            "sha256": "sha256-4PjNexJwpTFAK1Q/VOHOIHDdYXtADMuNfQrmdXUMxuw=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.3.7"
+        "version": "v2.3.10"
     },
     "dalvikus": {
         "cargoLock": null,
@@ -758,12 +779,12 @@
             "name": null,
             "owner": "run-llama",
             "repo": "liteparse",
-            "rev": "v1.3.0",
-            "sha256": "sha256-JHe+4n485ssdO1IboCpECY5BniIc+VdVE/hAerFN5To=",
+            "rev": "v1.4.1",
+            "sha256": "sha256-8sTvE8akRbiJ5GjXQCzmVAYdTD8j8OoSANkbkV6TJ5Y=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.3.0"
+        "version": "v1.4.1"
     },
     "magiskboot-bin": {
         "cargoLock": null,
@@ -934,7 +955,7 @@
     },
     "proxy-ns": {
         "cargoLock": null,
-        "date": "2026-02-21",
+        "date": "2026-03-28",
         "extract": null,
         "name": "proxy-ns",
         "passthru": null,
@@ -944,13 +965,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "afe6dc539a97827b485cd1106fd755d4f89eabdf",
-            "sha256": "sha256-qPKRnCXQBjhL2eSrvEGhOl1fHaV1ZhI4nJ851e++Shs=",
+            "rev": "f4adda2ce8add33c438845a65591e3cf11787c62",
+            "sha256": "sha256-da0WLeXh2iGPxXODiy5jFfGx3Mb/UKK48B/Qk/h7PgU=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/OkamiW/proxy-ns.git"
         },
-        "version": "afe6dc539a97827b485cd1106fd755d4f89eabdf"
+        "version": "f4adda2ce8add33c438845a65591e3cf11787c62"
     },
     "pymicro-features": {
         "cargoLock": null,
@@ -1091,12 +1112,12 @@
             "name": null,
             "owner": "buzzer-re",
             "repo": "Rikugan",
-            "rev": "v1.2",
-            "sha256": "sha256-8e866fRury/bCFd/6VSDMhTcLvAUI6ALbLO7J0gp8rg=",
+            "rev": "v1.2.1",
+            "sha256": "sha256-JUiC6CZ0xqOj1t1w80RSHhXLiSXda8nX+HIJEUZvsTM=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.2"
+        "version": "v1.2.1"
     },
     "rust-video-downloader": {
         "cargoLock": null,
@@ -1236,12 +1257,12 @@
             "name": null,
             "owner": "tensorzero",
             "repo": "tensorzero",
-            "rev": "2026.3.3",
-            "sha256": "sha256-2zL5cneYxc6kI1mKdy3Q3uz1yQ1EdTIHsw/vhNGJJdI=",
+            "rev": "2026.3.4",
+            "sha256": "sha256-dY6rNsqm3k1Ovm5823skyV5aJPcj2W6hXFFHFGn0IjU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "2026.3.3"
+        "version": "2026.3.4"
     },
     "uber-apk-signer": {
         "cargoLock": null,
