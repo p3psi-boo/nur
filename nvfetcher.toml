@@ -21,11 +21,6 @@ git.fetch_submodules = false
 src.github = "k4yt3x/agsh"
 fetch.github = "k4yt3x/agsh"
 
-[ace-tool-rs]
-src.github = "missdeer/ace-tool-rs"
-fetch.github = "missdeer/ace-tool-rs"
-pinned = true
-
 [quicssh]
 src.github = "moul/quicssh"
 fetch.github = "moul/quicssh"
@@ -169,11 +164,6 @@ fetch.url = "https://github.com/Polymarket/polymarket-cli/releases/download/$ver
 [inet-speed-cli]
 src.github = "tsosunchia/iNetSpeed-CLI"
 fetch.github = "tsosunchia/iNetSpeed-CLI"
-
-[fcitx5-vinput]
-src.github_tag = "xifan2333/fcitx5-vinput"
-src.include_regex = "^v[0-9].*"
-fetch.github = "xifan2333/fcitx5-vinput"
 
 [kylin-virtual-keyboard]
 src.git = "https://gitee.com/openkylin/kylin-virtual-keyboard.git"

@@ -6,17 +6,6 @@
   dockerTools,
 }:
 {
-  ace-tool-rs = {
-    pname = "ace-tool-rs";
-    version = "v0.1.10";
-    src = fetchFromGitHub {
-      owner = "missdeer";
-      repo = "ace-tool-rs";
-      rev = "v0.1.10";
-      fetchSubmodules = false;
-      sha256 = "sha256-XzQuNWRUZ/Zm8QwioDu80CH145m/bmynvFqfpRpee8w=";
-    };
-  };
   agent-browser = {
     pname = "agent-browser";
     version = "v0.23.0";
@@ -87,29 +76,29 @@
   };
   bifrost-http = {
     pname = "bifrost-http";
-    version = "ed58f8750ff49abe5f2f0e4c2c1330d9298be467";
+    version = "52093ec2a9ec864ccd5f8eeab93c8c04bd2735c8";
     src = fetchgit {
       url = "https://github.com/maximhq/bifrost.git";
-      rev = "ed58f8750ff49abe5f2f0e4c2c1330d9298be467";
+      rev = "52093ec2a9ec864ccd5f8eeab93c8c04bd2735c8";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-G3leIfPk3YSUO64+scNS5cuF28yJIAC1r1WK0VpJ8yc=";
+      sha256 = "sha256-io3tTiTX29B9v5hHnTUlgDaHIFkDVm7a+bNXpznKx+Q=";
     };
     date = "2026-03-29";
   };
   bifrost-ui = {
     pname = "bifrost-ui";
-    version = "ed58f8750ff49abe5f2f0e4c2c1330d9298be467";
+    version = "52093ec2a9ec864ccd5f8eeab93c8c04bd2735c8";
     src = fetchgit {
       url = "https://github.com/maximhq/bifrost.git";
-      rev = "ed58f8750ff49abe5f2f0e4c2c1330d9298be467";
+      rev = "52093ec2a9ec864ccd5f8eeab93c8c04bd2735c8";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-G3leIfPk3YSUO64+scNS5cuF28yJIAC1r1WK0VpJ8yc=";
+      sha256 = "sha256-io3tTiTX29B9v5hHnTUlgDaHIFkDVm7a+bNXpznKx+Q=";
     };
     date = "2026-03-29";
   };
@@ -267,17 +256,6 @@
       rev = "1.0.0";
       fetchSubmodules = false;
       sha256 = "sha256-9H11Jli1Ls8FNtvfgt5X+1yEw4zcrqcmBWPdyq8TIf8=";
-    };
-  };
-  fcitx5-vinput = {
-    pname = "fcitx5-vinput";
-    version = "v1.1.18";
-    src = fetchFromGitHub {
-      owner = "xifan2333";
-      repo = "fcitx5-vinput";
-      rev = "v1.1.18";
-      fetchSubmodules = false;
-      sha256 = "sha256-EM+BA8szlDMgqj6mNJFtDJ6GohuCMisiN7QBxM7KhxA=";
     };
   };
   fff-mcp = {
