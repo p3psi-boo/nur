@@ -633,17 +633,6 @@
       sha256 = "sha256-JUiC6CZ0xqOj1t1w80RSHhXLiSXda8nX+HIJEUZvsTM=";
     };
   };
-  rust-video-downloader = {
-    pname = "rust-video-downloader";
-    version = "v1.0.0-alpha";
-    src = fetchFromGitHub {
-      owner = "SpenserCai";
-      repo = "rust-video-downloader";
-      rev = "v1.0.0-alpha";
-      fetchSubmodules = false;
-      sha256 = "sha256-ZR/feWmjP69UUDgSs21ZfZgypnYTWaObiBtTxOAmZm4=";
-    };
-  };
   sigmo = {
     pname = "sigmo";
     version = "v4.0.2";
@@ -704,17 +693,6 @@
       sha256 = "sha256-kc6btKN+IclmbRx6Lko2Jw0XxVaKVo/AnhYsW6C2G4Y=";
     };
     date = "2026-01-27";
-  };
-  tensorzero = {
-    pname = "tensorzero";
-    version = "2026.3.4";
-    src = fetchFromGitHub {
-      owner = "tensorzero";
-      repo = "tensorzero";
-      rev = "2026.3.4";
-      fetchSubmodules = false;
-      sha256 = "sha256-dY6rNsqm3k1Ovm5823skyV5aJPcj2W6hXFFHFGn0IjU=";
-    };
   };
   uber-apk-signer = {
     pname = "uber-apk-signer";

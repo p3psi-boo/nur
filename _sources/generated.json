@@ -1077,27 +1077,6 @@
     },
     "version": "v1.2.1"
   },
-  "rust-video-downloader": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "rust-video-downloader",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "SpenserCai",
-      "repo": "rust-video-downloader",
-      "rev": "v1.0.0-alpha",
-      "sha256": "sha256-ZR/feWmjP69UUDgSs21ZfZgypnYTWaObiBtTxOAmZm4=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "v1.0.0-alpha"
-  },
   "sigmo": {
     "cargoLock": null,
     "date": null,
@@ -1200,27 +1179,6 @@
       "url": "https://github.com/rahiel/telegram-send.git"
     },
     "version": "f5466fc2b8b8b9aaa55dd28fb80b6ae138b578d8"
-  },
-  "tensorzero": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "tensorzero",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "tensorzero",
-      "repo": "tensorzero",
-      "rev": "2026.3.4",
-      "sha256": "sha256-dY6rNsqm3k1Ovm5823skyV5aJPcj2W6hXFFHFGn0IjU=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "2026.3.4"
   },
   "uber-apk-signer": {
     "cargoLock": null,
