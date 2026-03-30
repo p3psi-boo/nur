@@ -11,7 +11,7 @@ in
 buildRustPackage (finalAttrs: (
   {
     pname = "ut";
-    version = "unstable-${sourceInfo.date}";
+    version = "0-unstable-${sourceInfo.date}";
 
     src = sourceInfo.src;
 

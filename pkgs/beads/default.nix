@@ -1,19 +1,19 @@
 {
   lib,
   buildGoModule,
-  fetchFromGitHub,
+  generated,
   nix-update-script,
+  fetchFromGitHub ? null,  # auto-passed by repo.nix, not used
 }:
+
+let
+  sourceInfo = generated.beads;
+in
 buildGoModule (finalAttrs: {
   pname = "beads";
-  version = "0.29.0";
+  version = lib.removePrefix "v" sourceInfo.version;
 
-  src = fetchFromGitHub {
-    owner = "steveyegge";
-    repo = "beads";
-    rev = "v${finalAttrs.version}";
-    hash = "sha256-tS30cWkvrWm6MwMlGPup8dsB4Y53w+jqF8+rX8zwK9Q=";
-  };
+  src = sourceInfo.src;
 
   vendorHash = "sha256-iTPi8+pbKr2Q352hzvIOGL2EneF9agrDmBwTLMUjDBE=";
 

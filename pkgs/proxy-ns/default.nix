@@ -13,7 +13,7 @@ let
 in
 buildGoModule (finalAttrs: {
   pname = "proxy-ns";
-  version = lib.removePrefix "v" sourceInfo.version;
+  version = "0-unstable-${sourceInfo.date}";
 
   src = sourceInfo.src;
 

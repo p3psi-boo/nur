@@ -2,7 +2,7 @@
   lib,
   stdenv,
   rustPlatform,
-  fetchFromGitHub,
+  generated,
   pkg-config,
   llvmPackages,
   bpftools,
@@ -12,16 +12,14 @@
   enableIpv6 ? true,
 }:
 
+let
+  sourceInfo = generated.einat;
+in
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "einat";
-  version = "0.1.9";
+  version = lib.removePrefix "v" sourceInfo.version;
 
-  src = fetchFromGitHub {
-    owner = "EHfive";
-    repo = "einat-ebpf";
-    rev = "v0.1.9";
-    hash = "sha256-0S4od60X5j7wWD9mV/jUuJ8EwJ+OLYM2bnUTjr0pozo=";
-  };
+  src = sourceInfo.src;
 
   cargoHash = "sha256-IX95AnLYMtVrkQY/nLEgTq44m6I1z/HiT7MXVGv2epM=";
 
@@ -49,7 +47,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   CARGO_PROFILE_RELEASE_STRIP = "symbols";
   CARGO_PROFILE_RELEASE_OPT_LEVEL = "3";  # 最高运行时性能
   CARGO_PROFILE_RELEASE_LTO = "thin";     # thin LTO 平衡编译和运行时
-  CARGO_PROFILE_RELEASE_CODEGEN_UNITS = "0";  # 自动并行
+  CARGO_PROFILE_RELEASE_CODEGEN_UNITS = "1";  # 单 codegen unit 优化
   CARGO_PROFILE_RELEASE_PANIC = "abort";
 
   # The eBPF programs need special permissions to load

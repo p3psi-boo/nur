@@ -10,7 +10,7 @@ let
 in
 py.buildPythonApplication {
   pname = "ida-pro-mcp";
-  version = "unstable-${sourceInfo.date}-${builtins.substring 0 7 sourceInfo.version}";
+  version = "0-unstable-${sourceInfo.date}";
 
   src = sourceInfo.src;
 

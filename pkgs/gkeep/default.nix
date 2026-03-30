@@ -1,21 +1,20 @@
 {
   lib,
   buildPythonApplication,
-  fetchFromGitHub,
+  generated,
   gkeepapi,
   click,
+  fetchFromGitHub ? null,  # auto-passed by repo.nix, not used
 }:
 
+let
+  sourceInfo = generated.gkeep;
+in
 buildPythonApplication {
   pname = "gkeep";
-  version = "0.1.0";
+  version = "0-unstable-${sourceInfo.date}";
 
-  src = fetchFromGitHub {
-    owner = "Nekmo";
-    repo = "gkeep";
-    rev = "d786fd6401becc2d9d55c23f290249ff03c3bc11";
-    hash = "sha256-c1wE/lI3EqL3mjbrVJySBE//9JLdlZqekylKfeWLX3M=";
-  };
+  src = sourceInfo.src;
 
   format = "setuptools";
 

@@ -6,7 +6,7 @@
 
 let
   sourceInfo = generated."bifrost-ui";
-  version = sourceInfo.date or "unstable-${builtins.substring 0 7 sourceInfo.version}";
+  version = "0-unstable-2026-03-29";
 in
 buildNpmPackage {
   pname = "bifrost-ui";

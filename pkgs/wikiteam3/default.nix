@@ -9,7 +9,8 @@
 
 python3.pkgs.buildPythonPackage {
   pname = "wikiteam3";
-  inherit (generated.wikiteam3) version src;
+  version = "0-unstable-${generated.wikiteam3.date}";
+  src = generated.wikiteam3.src;
 
   pyproject = true;
 

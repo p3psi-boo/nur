@@ -63,7 +63,7 @@ let
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "bird-cli";
-  version = sourceInfo.version;
+  version = "0-unstable-${sourceInfo.date}";
   src = srcWithLock;
 
   pnpmDeps = fetchPnpmDeps {

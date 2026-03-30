@@ -10,7 +10,7 @@ let
 in
 buildGoModule {
   pname = "bcut-asr";
-  version = sourceInfo.version;
+  version = "0-unstable-${sourceInfo.date}";
 
   src = sourceInfo.src;
 

@@ -1,7 +1,7 @@
 {
   stdenv,
   lib,
-  fetchFromGitHub,
+  generated,
   postgresql,
   curl,
   lz4,
@@ -10,16 +10,14 @@
   substituteAll,
 }:
 
+let
+  sourceInfo = generated.pg_duckdb;
+in
 stdenv.mkDerivation (finalAttrs: {
   pname = "pg_duckdb";
-  version = "1.1.1";
+  version = lib.removePrefix "v" sourceInfo.version;
 
-  src = fetchFromGitHub {
-    owner = "duckdb";
-    repo = "pg_duckdb";
-    rev = "v${finalAttrs.version}";
-    hash = "sha256-0cNfDZkd6x45xpWyPMfFoYAklE+4lAjO02SjV+V/dxU=";
-  };
+  src = sourceInfo.src;
 
   nativeBuildInputs = [
     postgresql.pg_config

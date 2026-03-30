@@ -17,7 +17,7 @@ let
 in
 stdenv.mkDerivation {
   pname = "kylin-virtual-keyboard";
-  version = sourceInfo.version;
+  version = "0-unstable-${sourceInfo.date}";
 
   src = sourceInfo.src;
 

@@ -9,7 +9,7 @@ let
 in
 buildGoModule {
   pname = sourceInfo.pname;
-  version = sourceInfo.version;
+  version = "0-unstable-${sourceInfo.date}";
 
   src = sourceInfo.src;
 

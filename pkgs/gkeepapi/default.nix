@@ -1,22 +1,21 @@
 {
   lib,
   buildPythonPackage,
-  fetchFromGitHub,
+  generated,
   flit-core,
   gpsoauth,
   future,
+  fetchFromGitHub ? null,  # auto-passed by repo.nix, not used
 }:
 
+let
+  sourceInfo = generated.gkeepapi;
+in
 buildPythonPackage (finalAttrs: {
   pname = "gkeepapi";
-  version = "0.9.8-unstable-2024-01-15";
+  version = "0-unstable-${sourceInfo.date}";
 
-  src = fetchFromGitHub {
-    owner = "kiwiz";
-    repo = "gkeepapi";
-    rev = "1a94b25c18a7abfdc23d1412091129cd63652877";
-    hash = "sha256-3NT6GFVcN4HDPbcJAmino0FXmyoohZWl/kQqFzJTnbw=";
-  };
+  src = sourceInfo.src;
 
   pyproject = true;
 

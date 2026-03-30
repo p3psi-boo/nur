@@ -11,7 +11,7 @@
 let
   sourceInfo = generated."bifrost-http";
   # Use version from source date or commit
-  version = sourceInfo.date or "unstable-${builtins.substring 0 7 sourceInfo.version}";
+  version = "0-unstable-2026-03-29";
 
   # Go module local replaces for monorepo structure
   transportsLocalReplaces = ''
@@ -41,7 +41,7 @@ in
   subPackages = [ "bifrost-http" ];
 
   # Vendor hash
-  vendorHash = "sha256-T0L7ujWOmRnzovKvabh+cUmJ+MMla+TdnwlWAJLKwag=";
+  vendorHash = "sha256-m1ldqlq6tyWuFLg/HaCtkrtYDbG4rwUFC0GXq1o3XYM=";
 
   doCheck = false;
 

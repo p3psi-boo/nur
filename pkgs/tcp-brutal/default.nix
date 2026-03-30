@@ -1,20 +1,18 @@
 {
   lib,
   stdenv,
-  fetchFromGitHub,
+  generated,
   linux,
 }:
 
+let
+  sourceInfo = generated.tcp-brutal;
+in
 stdenv.mkDerivation (finalAttrs: {
   pname = "tcp-brutal";
-  version = "1.0.3";
+  version = lib.removePrefix "v" sourceInfo.version;
 
-  src = fetchFromGitHub {
-    owner = "apernet";
-    repo = "tcp-brutal";
-    tag = "v${finalAttrs.version}";
-    hash = "sha256-rx8JgQtelssslJhFAEKq73LsiHGPoML9Gxvw0lsLacI=";
-  };
+  src = sourceInfo.src;
 
   makeFlags = [
     "KERNEL_DIR=${lib.getDev linux}/lib/modules/${linux.modDirVersion}/build"

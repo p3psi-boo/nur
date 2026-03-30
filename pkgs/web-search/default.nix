@@ -9,7 +9,7 @@ let
 in
 buildGoModule (finalAttrs: {
   pname = "web-search";
-  version = sourceInfo.version;
+  version = "0-unstable-${sourceInfo.date}";
 
   src = sourceInfo.src;
 

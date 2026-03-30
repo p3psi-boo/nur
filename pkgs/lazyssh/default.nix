@@ -9,7 +9,7 @@ let
 in
 buildGoModule (finalAttrs: {
   pname = "lazyssh";
-  version = "unstable-${sourceInfo.date}";
+  version = "0-unstable-${sourceInfo.date}";
 
   src = sourceInfo.src;
 

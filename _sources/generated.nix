@@ -76,31 +76,31 @@
   };
   bifrost-http = {
     pname = "bifrost-http";
-    version = "52093ec2a9ec864ccd5f8eeab93c8c04bd2735c8";
+    version = "dd314d074e96ec17a058a2f0dcc798144cc517bf";
     src = fetchgit {
       url = "https://github.com/maximhq/bifrost.git";
-      rev = "52093ec2a9ec864ccd5f8eeab93c8c04bd2735c8";
+      rev = "dd314d074e96ec17a058a2f0dcc798144cc517bf";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-io3tTiTX29B9v5hHnTUlgDaHIFkDVm7a+bNXpznKx+Q=";
+      sha256 = "sha256-LlXRQw13IgiZfsri7Z2PjTEq985fTtqXhPkMKePL3Mw=";
     };
-    date = "2026-03-29";
+    date = "2026-03-30";
   };
   bifrost-ui = {
     pname = "bifrost-ui";
-    version = "52093ec2a9ec864ccd5f8eeab93c8c04bd2735c8";
+    version = "dd314d074e96ec17a058a2f0dcc798144cc517bf";
     src = fetchgit {
       url = "https://github.com/maximhq/bifrost.git";
-      rev = "52093ec2a9ec864ccd5f8eeab93c8c04bd2735c8";
+      rev = "dd314d074e96ec17a058a2f0dcc798144cc517bf";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-io3tTiTX29B9v5hHnTUlgDaHIFkDVm7a+bNXpznKx+Q=";
+      sha256 = "sha256-LlXRQw13IgiZfsri7Z2PjTEq985fTtqXhPkMKePL3Mw=";
     };
-    date = "2026-03-29";
+    date = "2026-03-30";
   };
   binsider-bin = {
     pname = "binsider-bin";
@@ -172,13 +172,13 @@
   };
   cliproxyapi = {
     pname = "cliproxyapi";
-    version = "v6.9.5";
+    version = "v6.9.6";
     src = fetchFromGitHub {
       owner = "router-for-me";
       repo = "CLIProxyAPI";
-      rev = "v6.9.5";
+      rev = "v6.9.6";
       fetchSubmodules = false;
-      sha256 = "sha256-30C/NabUtbaRdZAtEKAWiOyavSbI2/xyh4CgAEDmN2A=";
+      sha256 = "sha256-xb6E7+4s8gHLdeyw2V4LlWCTqfiq3o7F5rLsJwQk6Gc=";
     };
   };
   cloudflarespeedtest = {
@@ -219,13 +219,13 @@
   };
   coe = {
     pname = "coe";
-    version = "v0.0.9";
+    version = "v0.1.1";
     src = fetchFromGitHub {
       owner = "quailyquaily";
       repo = "coe";
-      rev = "v0.0.9";
+      rev = "v0.1.1";
       fetchSubmodules = false;
-      sha256 = "sha256-4kqxXYOd7UEQjO5Fzgzd5xXlY0igs0gX91mVGfpQjpg=";
+      sha256 = "sha256-YqRdBd38HHf2a02Ry9wUmHRu/1H4ufGKhp+6u4MxidE=";
     };
   };
   dagu = {
@@ -340,6 +340,34 @@
     };
     date = "2026-03-21";
   };
+  gkeep = {
+    pname = "gkeep";
+    version = "d786fd6401becc2d9d55c23f290249ff03c3bc11";
+    src = fetchgit {
+      url = "https://github.com/Nekmo/gkeep.git";
+      rev = "d786fd6401becc2d9d55c23f290249ff03c3bc11";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-c1wE/lI3EqL3mjbrVJySBE//9JLdlZqekylKfeWLX3M=";
+    };
+    date = "2023-08-06";
+  };
+  gkeepapi = {
+    pname = "gkeepapi";
+    version = "1a94b25c18a7abfdc23d1412091129cd63652877";
+    src = fetchgit {
+      url = "https://github.com/kiwiz/gkeepapi.git";
+      rev = "1a94b25c18a7abfdc23d1412091129cd63652877";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-3NT6GFVcN4HDPbcJAmino0FXmyoohZWl/kQqFzJTnbw=";
+    };
+    date = "2026-01-05";
+  };
   grok2api-rs = {
     pname = "grok2api-rs";
     version = "0.2.0";
@@ -428,14 +456,28 @@
   };
   liteparse = {
     pname = "liteparse";
-    version = "v1.4.1";
+    version = "v1.4.2";
     src = fetchFromGitHub {
       owner = "run-llama";
       repo = "liteparse";
-      rev = "v1.4.1";
+      rev = "v1.4.2";
       fetchSubmodules = false;
-      sha256 = "sha256-8sTvE8akRbiJ5GjXQCzmVAYdTD8j8OoSANkbkV6TJ5Y=";
+      sha256 = "sha256-7SR9j6f3J7Q/m4dppZ6h4+XBLZrNlIsiQxNE1oAxz7Y=";
     };
+  };
+  lotspeed = {
+    pname = "lotspeed";
+    version = "3df7cb1e3526526496191edb00e2e4e92e7da761";
+    src = fetchgit {
+      url = "https://github.com/uk0/lotspeed.git";
+      rev = "3df7cb1e3526526496191edb00e2e4e92e7da761";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-Z6m93vi8u3BeQ1SW2sgKVrhHykyp/WTrcJMOaRzFJ38=";
+    };
+    date = "2026-01-19";
   };
   magiskboot-bin = {
     pname = "magiskboot-bin";
@@ -455,20 +497,6 @@
       fetchSubmodules = false;
       sha256 = "sha256-S924rqlVKzUFD63NDyK5bbXnonra+/UoH6j78AAj3d0=";
     };
-  };
-  mimic = {
-    pname = "mimic";
-    version = "493faf5dfd440bc44bc0d2a88baaca4d7ef0b709";
-    src = fetchgit {
-      url = "https://github.com/hack3ric/mimic.git";
-      rev = "493faf5dfd440bc44bc0d2a88baaca4d7ef0b709";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-UQlnWDl39Fri1q38l9Z/ybrmMP6QoRHuqLV/y/Ab8Eg=";
-    };
-    date = "2025-11-20";
   };
   nf_deaf = {
     pname = "nf_deaf";
@@ -635,13 +663,13 @@
   };
   sigmo = {
     pname = "sigmo";
-    version = "v4.0.2";
+    version = "v4.0.3";
     src = fetchFromGitHub {
       owner = "damonto";
       repo = "sigmo";
-      rev = "v4.0.2";
+      rev = "v4.0.3";
       fetchSubmodules = false;
-      sha256 = "sha256-RXQ8LY3HB7xKdupfg76JfTnzdOq7HJxzFerp1l1LzqE=";
+      sha256 = "sha256-5syKKb+dSdFL52j/gCwoM4ClRZe0PL9ch3AMqhhmQ0k=";
     };
   };
   smali = {
@@ -821,5 +849,60 @@
       sha256 = "sha256-OAewbY2Pr3J8uHigOqJOVplKOx+hFD3N+/Z8PFN9ZFw=";
     };
     date = "2026-03-24";
+  };
+  beads = {
+    pname = "beads";
+    version = "v0.29.0";
+    src = fetchFromGitHub {
+      owner = "steveyegge";
+      repo = "beads";
+      rev = "v0.29.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-tS30cWkvrWm6MwMlGPup8dsB4Y53w+jqF8+rX8zwK9Q=";
+    };
+  };
+  einat = {
+    pname = "einat";
+    version = "v0.1.9";
+    src = fetchFromGitHub {
+      owner = "EHfive";
+      repo = "einat-ebpf";
+      rev = "v0.1.9";
+      fetchSubmodules = false;
+      sha256 = "sha256-0S4od60X5j7wWD9mV/jUuJ8EwJ+OLYM2bnUTjr0pozo=";
+    };
+  };
+  pg_duckdb = {
+    pname = "pg_duckdb";
+    version = "v1.1.1";
+    src = fetchFromGitHub {
+      owner = "duckdb";
+      repo = "pg_duckdb";
+      rev = "v1.1.1";
+      fetchSubmodules = true;
+      sha256 = "sha256-0cNfDZkd6x45xpWyPMfFoYAklE+4lAjO02SjV+V/dxU=";
+    };
+  };
+  planify = {
+    pname = "planify";
+    version = "v4.16.1";
+    src = fetchFromGitHub {
+      owner = "alainm23";
+      repo = "planify";
+      rev = "v4.16.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-jQW82nnIfuKhTWPlJQD2Mcl+Yl+NqnTbRnMn5+sfuD4=";
+    };
+  };
+  tcp-brutal = {
+    pname = "tcp-brutal";
+    version = "v1.0.3";
+    src = fetchFromGitHub {
+      owner = "apernet";
+      repo = "tcp-brutal";
+      rev = "v1.0.3";
+      fetchSubmodules = false;
+      sha256 = "sha256-rx8JgQtelssslJhFAEKq73LsiHGPoML9Gxvw0lsLacI=";
+    };
   };
 }

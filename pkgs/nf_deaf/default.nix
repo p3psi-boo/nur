@@ -8,7 +8,7 @@
 stdenv.mkDerivation (finalAttrs: {
   dontBuild = true;
   pname = "nf_deaf";
-  version = generated.nf_deaf.date;
+  version = "0-unstable-${generated.nf_deaf.date}";
 
   src = generated.nf_deaf.src;
 

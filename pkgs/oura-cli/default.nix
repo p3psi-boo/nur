@@ -9,7 +9,7 @@ let
 in
 buildGoModule {
   pname = "oura-cli";
-  version = sourceInfo.version;
+  version = "0-unstable-${sourceInfo.date}";
 
   src = sourceInfo.src;
 

@@ -10,7 +10,7 @@ let
 in
 py.buildPythonApplication {
   pname = "telegram-send";
-  version = sourceInfo.version;
+  version = "0-unstable-${sourceInfo.date}";
 
   src = sourceInfo.src;
 

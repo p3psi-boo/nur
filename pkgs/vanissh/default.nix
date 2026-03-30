@@ -14,7 +14,7 @@ let
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "vanissh";
-  version = sourceInfo.version;
+  version = "0-unstable-${sourceInfo.date}";
 
   src = sourceInfo.src;
 

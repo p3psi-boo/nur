@@ -1,6 +1,6 @@
 { lib
 , stdenv
-, fetchFromGitHub
+, generated
 , meson
 , ninja
 , pkg-config
@@ -27,6 +27,7 @@
 }@args:
 
 let
+  sourceInfo = generated.planify;
   libportalGtk4 = args."libportal-gtk4" or null;
   withWebkit = webkitgtk_6_0 != null;
   withPortal = libportal != null && libportalGtk4 != null;
@@ -34,14 +35,9 @@ let
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "planify";
-  version = "4.16.1";
+  version = lib.removePrefix "v" sourceInfo.version;
 
-  src = fetchFromGitHub {
-    owner = "alainm23";
-    repo = "planify";
-    rev = "v${finalAttrs.version}";
-    hash = "sha256-jQW82nnIfuKhTWPlJQD2Mcl+Yl+NqnTbRnMn5+sfuD4=";
-  };
+  src = sourceInfo.src;
 
   nativeBuildInputs = [
     meson

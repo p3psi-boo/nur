@@ -1,21 +1,19 @@
 {
   lib,
   stdenv,
-  fetchFromGitHub,
+  generated,
   linuxPackages,
   kernel ? linuxPackages.kernel,
 }:
 
-stdenv.mkDerivation (finalAttrs: {
+let
+  sourceInfo = generated.lotspeed;
+in
+stdenv.mkDerivation {
   pname = "lotspeed-${kernel.modDirVersion}";
-  version = "b1eaf1cd74152ed1c75615350db917f78b6f84e7"; # zeta-tcp
+  version = "0-unstable-${sourceInfo.date}";
 
-  src = fetchFromGitHub {
-    owner = "uk0";
-    repo = "lotspeed";
-    rev = finalAttrs.version;
-    hash = "sha256-5cpQGc2qXKC7yePwKf+EowhU9/hSjv1KazAKSUV0Lhw=";
-  };
+  inherit (sourceInfo) src;
 
   makeFlags = "KERNEL_DIR=${kernel.dev}/lib/modules/${kernel.modDirVersion}/build";
 
@@ -33,4 +31,4 @@ stdenv.mkDerivation (finalAttrs: {
     maintainers = with maintainers; [ imlonghao ];
     mainProgram = "lotspeed";
   };
-})
+}
