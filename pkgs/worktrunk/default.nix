@@ -27,7 +27,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   CARGO_PROFILE_RELEASE_STRIP = "symbols";
   CARGO_PROFILE_RELEASE_OPT_LEVEL = "3";
   CARGO_PROFILE_RELEASE_LTO = "thin";
-  CARGO_PROFILE_RELEASE_CODEGEN_UNITS = "0";
+  CARGO_PROFILE_RELEASE_CODEGEN_UNITS = "1";
   CARGO_PROFILE_RELEASE_PANIC = "abort";
 
   # Strip all symbols (not just debug symbols)
