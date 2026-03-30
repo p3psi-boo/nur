@@ -32,8 +32,10 @@ let
       packageSpecificArgs = if meta ? extraArgs then meta.extraArgs pkgs else { };
       generatedArgs =
         if builtins.hasAttr pkgName generatedSources then { generated = generatedSources; } else { };
+      # Only pass nurLib if package explicitly requests it via meta.nix
+      nurLibArgs = if meta ? useNurLib then { inherit nurLib; } else { };
     in
-    packageSpecificArgs // generatedArgs // { inherit nurLib; };
+    packageSpecificArgs // generatedArgs // nurLibArgs;
 in
 builtins.listToAttrs (
   map (

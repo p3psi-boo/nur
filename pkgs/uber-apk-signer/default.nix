@@ -26,7 +26,7 @@ let
         };
       };
 in
-maven.buildMavenPackage (finalAttrs: {
+maven.buildMavenPackage {
   pname = "uber-apk-signer";
   version = lib.removePrefix "v" sourceInfo.version;
 
@@ -43,7 +43,7 @@ maven.buildMavenPackage (finalAttrs: {
   installPhase = ''
     runHook preInstall
 
-    install -Dm644 "target/uber-apk-signer-${finalAttrs.version}.jar" "$out/share/java/uber-apk-signer/uber-apk-signer.jar"
+    install -Dm644 "target/uber-apk-signer-${sourceInfo.version}.jar" "$out/share/java/uber-apk-signer/uber-apk-signer.jar"
     zip -qd "$out/share/java/uber-apk-signer/uber-apk-signer.jar" 'META-INF/*.RSA' 'META-INF/*.SF' 'META-INF/*.DSA'
 
     makeWrapper ${lib.getExe jre} "$out/bin/uber-apk-signer" \
@@ -64,4 +64,4 @@ maven.buildMavenPackage (finalAttrs: {
       binaryBytecode
     ];
   };
-})
+}

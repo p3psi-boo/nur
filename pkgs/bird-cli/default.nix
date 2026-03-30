@@ -119,7 +119,7 @@ stdenv.mkDerivation (finalAttrs: {
 
     # Drop common non-runtime payload to reduce closure size.
     rm -rf node_modules/.cache
-    find node_modules -type d \( -name test -o -name tests -o -name "__tests__" -o -name docs -o -name doc -o -name ".github" \) -prune -exec rm -rf {} +
+    find node_modules -type d \( -name test -o -name tests -o -name "__tests__" -o -name docs -o -name ".github" \) -prune -exec rm -rf {} +
     find node_modules -type f \( -name "*.map" -o -name "*.md" -o -name "*.markdown" \) -delete
 
     cp -r node_modules "$out/lib/bird-cli/node_modules"
