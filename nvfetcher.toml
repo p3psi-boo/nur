@@ -38,31 +38,6 @@ src.git = "https://github.com/apernet/tcp-brutal.git"
 fetch.git = "https://github.com/apernet/tcp-brutal.git"
 git.fetch_submodules = false
 
-[beads]
-src.github_tag = "steveyegge/beads"
-src.include_regex = "^v[0-9].*"
-fetch.github = "steveyegge/beads"
-
-[einat]
-src.github_tag = "EHfive/einat-ebpf"
-src.include_regex = "^v[0-9].*"
-fetch.github = "EHfive/einat-ebpf"
-
-[pg_duckdb]
-src.github_tag = "duckdb/pg_duckdb"
-src.include_regex = "^v[0-9].*"
-fetch.github = "duckdb/pg_duckdb"
-
-[planify]
-src.github_tag = "alainm23/planify"
-src.include_regex = "^v[0-9].*"
-fetch.github = "alainm23/planify"
-
-[tcp-brutal]
-src.github_tag = "apernet/tcp-brutal"
-src.include_regex = "^v[0-9].*"
-fetch.github = "apernet/tcp-brutal"
-
 [nf_deaf]
 src.git = "https://github.com/kmb21y66/nf_deaf.git"
 fetch.git = "https://github.com/kmb21y66/nf_deaf.git"
@@ -408,3 +383,7 @@ fetch.url = "https://github.com/loerting/dalvikus/archive/refs/tags/v$ver.tar.gz
 src.github_tag = "quailyquaily/coe"
 src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
 fetch.github = "quailyquaily/coe"
+
+[openalice]
+src.github_tag = "TraderAlice/OpenAlice"
+fetch.github = "TraderAlice/OpenAlice"

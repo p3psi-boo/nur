@@ -63,6 +63,20 @@
     };
     date = "2026-01-14";
   };
+  beads = {
+    pname = "beads";
+    version = "v0.29.0";
+    src = fetchgit {
+      url = "https://github.com/steveyegge/beads.git";
+      rev = "v0.29.0";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-tS30cWkvrWm6MwMlGPup8dsB4Y53w+jqF8+rX8zwK9Q=";
+    };
+    date = "2025-12-03";
+  };
   beads_viewer = {
     pname = "beads_viewer";
     version = "v0.15.2";
@@ -257,6 +271,20 @@
       fetchSubmodules = false;
       sha256 = "sha256-9H11Jli1Ls8FNtvfgt5X+1yEw4zcrqcmBWPdyq8TIf8=";
     };
+  };
+  einat = {
+    pname = "einat";
+    version = "v0.1.9";
+    src = fetchgit {
+      url = "https://github.com/EHfive/einat-ebpf.git";
+      rev = "v0.1.9";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-0S4od60X5j7wWD9mV/jUuJ8EwJ+OLYM2bnUTjr0pozo=";
+    };
+    date = "2025-06-10";
   };
   fff-mcp = {
     pname = "fff-mcp";
@@ -523,6 +551,17 @@
       sha256 = "sha256-4kkzOLXF3l7nD59K7TkbLHxSd3FiwH1uLAL8w1nA2bA=";
     };
   };
+  openalice = {
+    pname = "openalice";
+    version = "v0.9.0-beta.8";
+    src = fetchFromGitHub {
+      owner = "TraderAlice";
+      repo = "OpenAlice";
+      rev = "v0.9.0-beta.8";
+      fetchSubmodules = false;
+      sha256 = "sha256-yXl+UYelMG/R1Ve2K34mvyFsZoEPW+WeExUMOogrT7w=";
+    };
+  };
   openixcli = {
     pname = "openixcli";
     version = "6f0da7324a5aa8c89e40f88b4dea2fcf5647ca11";
@@ -550,6 +589,34 @@
       sha256 = "sha256-hCkd7yBHND/UxRjPNU7SaG0l8MvnLgFpSgAms1quAeM=";
     };
     date = "2026-01-31";
+  };
+  pg_duckdb = {
+    pname = "pg_duckdb";
+    version = "v1.1.1";
+    src = fetchgit {
+      url = "https://github.com/duckdb/pg_duckdb.git";
+      rev = "v1.1.1";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-0cNfDZkd6x45xpWyPMfFoYAklE+4lAjO02SjV+V/dxU=";
+    };
+    date = "2025-12-16";
+  };
+  planify = {
+    pname = "planify";
+    version = "v4.16.1";
+    src = fetchgit {
+      url = "https://github.com/alainm23/planify.git";
+      rev = "v4.16.1";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-jQW82nnIfuKhTWPlJQD2Mcl+Yl+NqnTbRnMn5+sfuD4=";
+    };
+    date = "2025-11-27";
   };
   polymarket-cli = {
     pname = "polymarket-cli";
@@ -708,6 +775,20 @@
     };
     date = "2026-02-08";
   };
+  tcp-brutal = {
+    pname = "tcp-brutal";
+    version = "v1.0.3";
+    src = fetchgit {
+      url = "https://github.com/apernet/tcp-brutal.git";
+      rev = "v1.0.3";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-rx8JgQtelssslJhFAEKq73LsiHGPoML9Gxvw0lsLacI=";
+    };
+    date = "2024-07-27";
+  };
   telegram-send = {
     pname = "telegram-send";
     version = "f5466fc2b8b8b9aaa55dd28fb80b6ae138b578d8";
@@ -849,60 +930,5 @@
       sha256 = "sha256-OAewbY2Pr3J8uHigOqJOVplKOx+hFD3N+/Z8PFN9ZFw=";
     };
     date = "2026-03-24";
-  };
-  beads = {
-    pname = "beads";
-    version = "v0.29.0";
-    src = fetchFromGitHub {
-      owner = "steveyegge";
-      repo = "beads";
-      rev = "v0.29.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-tS30cWkvrWm6MwMlGPup8dsB4Y53w+jqF8+rX8zwK9Q=";
-    };
-  };
-  einat = {
-    pname = "einat";
-    version = "v0.1.9";
-    src = fetchFromGitHub {
-      owner = "EHfive";
-      repo = "einat-ebpf";
-      rev = "v0.1.9";
-      fetchSubmodules = false;
-      sha256 = "sha256-0S4od60X5j7wWD9mV/jUuJ8EwJ+OLYM2bnUTjr0pozo=";
-    };
-  };
-  pg_duckdb = {
-    pname = "pg_duckdb";
-    version = "v1.1.1";
-    src = fetchFromGitHub {
-      owner = "duckdb";
-      repo = "pg_duckdb";
-      rev = "v1.1.1";
-      fetchSubmodules = true;
-      sha256 = "sha256-0cNfDZkd6x45xpWyPMfFoYAklE+4lAjO02SjV+V/dxU=";
-    };
-  };
-  planify = {
-    pname = "planify";
-    version = "v4.16.1";
-    src = fetchFromGitHub {
-      owner = "alainm23";
-      repo = "planify";
-      rev = "v4.16.1";
-      fetchSubmodules = false;
-      sha256 = "sha256-jQW82nnIfuKhTWPlJQD2Mcl+Yl+NqnTbRnMn5+sfuD4=";
-    };
-  };
-  tcp-brutal = {
-    pname = "tcp-brutal";
-    version = "v1.0.3";
-    src = fetchFromGitHub {
-      owner = "apernet";
-      repo = "tcp-brutal";
-      rev = "v1.0.3";
-      fetchSubmodules = false;
-      sha256 = "sha256-rx8JgQtelssslJhFAEKq73LsiHGPoML9Gxvw0lsLacI=";
-    };
   };
 }
