@@ -8,11 +8,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-immcc/tpfW30JgxqPn+cSl3sjgjjMkjtAbCug/2Meko=",
+            "sha256": "sha256-7USg62xA+SDn3d9qZ6AP337POL9mXqRqWhBn/Kki/wE=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.0/agent-browser-linux-x64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.3/agent-browser-linux-x64"
         },
-        "version": "v0.23.0"
+        "version": "v0.23.3"
     },
     "agent-browser-darwin-arm64": {
         "cargoLock": null,
@@ -23,11 +23,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-NUwc2va1DqAbu3sgrvSrZ7RaPh24oyJp7fj9lw5TJoM=",
+            "sha256": "sha256-gYLQUG2oDp3aJf/tTklD+MUeXtGYGapZ45hphbzb5VU=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.0/agent-browser-darwin-arm64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.3/agent-browser-darwin-arm64"
         },
-        "version": "v0.23.0"
+        "version": "v0.23.3"
     },
     "agent-browser-darwin-x64": {
         "cargoLock": null,
@@ -38,11 +38,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-aquw5WQufHRBb9EH33SMaiZIw1yNvHEgDRmuZGXvuL8=",
+            "sha256": "sha256-/zhKYArylLZfIozgasE96tbI7PPYPBg98G7BMHWGZ0Q=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.0/agent-browser-darwin-x64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.3/agent-browser-darwin-x64"
         },
-        "version": "v0.23.0"
+        "version": "v0.23.3"
     },
     "agent-browser-linux-arm64": {
         "cargoLock": null,
@@ -53,11 +53,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-u5JD6g2YnYVuffBSuTuL0cZ0ig2/6WKEq6elyqLlhhM=",
+            "sha256": "sha256-tYmIaFh3INu34W4XmS17oFby8wkOjZIVoMEsjkMaZE0=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.0/agent-browser-linux-arm64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.3/agent-browser-linux-arm64"
         },
-        "version": "v0.23.0"
+        "version": "v0.23.3"
     },
     "agsh": {
         "cargoLock": null,
@@ -102,7 +102,7 @@
     },
     "beads": {
         "cargoLock": null,
-        "date": "2025-12-03",
+        "date": "2026-03-30",
         "extract": null,
         "name": "beads",
         "passthru": null,
@@ -112,13 +112,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "v0.29.0",
-            "sha256": "sha256-tS30cWkvrWm6MwMlGPup8dsB4Y53w+jqF8+rX8zwK9Q=",
+            "rev": "73c66ad3a7d88c39eb8e412ff2564ff448db396f",
+            "sha256": "sha256-VNIiS1eJ+b6iID5MkWIf51GBOQQJAIUBgqKcqpfo0nw=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/steveyegge/beads.git"
         },
-        "version": "v0.29.0"
+        "version": "73c66ad3a7d88c39eb8e412ff2564ff448db396f"
     },
     "beads_viewer": {
         "cargoLock": null,
@@ -153,13 +153,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "dd314d074e96ec17a058a2f0dcc798144cc517bf",
-            "sha256": "sha256-LlXRQw13IgiZfsri7Z2PjTEq985fTtqXhPkMKePL3Mw=",
+            "rev": "d1439761c92d2b762a35f2eb97f0932a8922c34b",
+            "sha256": "sha256-sFSj4ZigTXycuLtQ8Am/hlXsZLF5W4KJWooZnSjH8cM=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/maximhq/bifrost.git"
         },
-        "version": "dd314d074e96ec17a058a2f0dcc798144cc517bf"
+        "version": "d1439761c92d2b762a35f2eb97f0932a8922c34b"
     },
     "bifrost-ui": {
         "cargoLock": null,
@@ -173,13 +173,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "dd314d074e96ec17a058a2f0dcc798144cc517bf",
-            "sha256": "sha256-LlXRQw13IgiZfsri7Z2PjTEq985fTtqXhPkMKePL3Mw=",
+            "rev": "d1439761c92d2b762a35f2eb97f0932a8922c34b",
+            "sha256": "sha256-sFSj4ZigTXycuLtQ8Am/hlXsZLF5W4KJWooZnSjH8cM=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/maximhq/bifrost.git"
         },
-        "version": "dd314d074e96ec17a058a2f0dcc798144cc517bf"
+        "version": "d1439761c92d2b762a35f2eb97f0932a8922c34b"
     },
     "binsider-bin": {
         "cargoLock": null,
@@ -317,12 +317,12 @@
             "name": null,
             "owner": "router-for-me",
             "repo": "CLIProxyAPI",
-            "rev": "v6.9.6",
-            "sha256": "sha256-xb6E7+4s8gHLdeyw2V4LlWCTqfiq3o7F5rLsJwQk6Gc=",
+            "rev": "v6.9.7",
+            "sha256": "sha256-KlVn7Pi7Gr67vpFME2f/9RIYnZJxP2A8UrzUNP5f1Ug=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v6.9.6"
+        "version": "v6.9.7"
     },
     "cloudflarespeedtest": {
         "cargoLock": null,
@@ -393,12 +393,12 @@
             "name": null,
             "owner": "quailyquaily",
             "repo": "coe",
-            "rev": "v0.1.1",
-            "sha256": "sha256-YqRdBd38HHf2a02Ry9wUmHRu/1H4ufGKhp+6u4MxidE=",
+            "rev": "v0.1.2",
+            "sha256": "sha256-wKLDhyLmkQBkK8VA9SABWCxqdqjIl23dPhsw81Q021U=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.1.1"
+        "version": "v0.1.2"
     },
     "dagu": {
         "cargoLock": null,
@@ -414,12 +414,12 @@
             "name": null,
             "owner": "dagu-org",
             "repo": "dagu",
-            "rev": "v2.3.10",
-            "sha256": "sha256-4PjNexJwpTFAK1Q/VOHOIHDdYXtADMuNfQrmdXUMxuw=",
+            "rev": "v2.3.11",
+            "sha256": "sha256-BL6/+POgcsgL3ZQhR8zJN8kB1yGaX2MnOKXWtFBAmKI=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.3.10"
+        "version": "v2.3.11"
     },
     "dalvikus": {
         "cargoLock": null,
@@ -459,7 +459,7 @@
     },
     "einat": {
         "cargoLock": null,
-        "date": "2025-06-10",
+        "date": "2025-12-11",
         "extract": null,
         "name": "einat",
         "passthru": null,
@@ -469,13 +469,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "v0.1.9",
-            "sha256": "sha256-0S4od60X5j7wWD9mV/jUuJ8EwJ+OLYM2bnUTjr0pozo=",
+            "rev": "b226ff98856e59be7f091bc7d81ceba8ac38bd19",
+            "sha256": "sha256-P0Q8DdeEns5xcALj5vIyubc1AE073nozbNoTzRso37w=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/EHfive/einat-ebpf.git"
         },
-        "version": "v0.1.9"
+        "version": "b226ff98856e59be7f091bc7d81ceba8ac38bd19"
     },
     "fff-mcp": {
         "cargoLock": null,
@@ -658,6 +658,27 @@
             "url": "https://github.com/kiwiz/gkeepapi.git"
         },
         "version": "1a94b25c18a7abfdc23d1412091129cd63652877"
+    },
+    "grok2api": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "grok2api",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "chenyme",
+            "repo": "grok2api",
+            "rev": "v1.5.3",
+            "sha256": "sha256-ubrMBiGc/2Lc6macM8bAtPK/zN95kfRfui6Y6QNlYd0=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.5.3"
     },
     "grok2api-rs": {
         "cargoLock": null,
@@ -984,7 +1005,7 @@
     },
     "pg_duckdb": {
         "cargoLock": null,
-        "date": "2025-12-16",
+        "date": "2026-03-16",
         "extract": null,
         "name": "pg_duckdb",
         "passthru": null,
@@ -994,17 +1015,17 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "v1.1.1",
-            "sha256": "sha256-0cNfDZkd6x45xpWyPMfFoYAklE+4lAjO02SjV+V/dxU=",
+            "rev": "318ee16cd8c647daa89198a675039726626f44b9",
+            "sha256": "sha256-8S2uS6PgjxVzQA1gYVrEeZjnACXt3ADneDe1MlRNb/g=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/duckdb/pg_duckdb.git"
         },
-        "version": "v1.1.1"
+        "version": "318ee16cd8c647daa89198a675039726626f44b9"
     },
     "planify": {
         "cargoLock": null,
-        "date": "2025-11-27",
+        "date": "2026-03-27",
         "extract": null,
         "name": "planify",
         "passthru": null,
@@ -1014,13 +1035,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "v4.16.1",
-            "sha256": "sha256-jQW82nnIfuKhTWPlJQD2Mcl+Yl+NqnTbRnMn5+sfuD4=",
+            "rev": "904f0ae34b962510a8e35b8d9faf432941df1837",
+            "sha256": "sha256-hu04aluqcK2I3Vf644cRn43oD2C9bwS8J737mFn0o1U=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/alainm23/planify.git"
         },
-        "version": "v4.16.1"
+        "version": "904f0ae34b962510a8e35b8d9faf432941df1837"
     },
     "polymarket-cli": {
         "cargoLock": null,
@@ -1313,13 +1334,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "v1.0.3",
+            "rev": "204aeea3437a83599c1c1fa1b97e4425cfdfc49d",
             "sha256": "sha256-rx8JgQtelssslJhFAEKq73LsiHGPoML9Gxvw0lsLacI=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/apernet/tcp-brutal.git"
         },
-        "version": "v1.0.3"
+        "version": "204aeea3437a83599c1c1fa1b97e4425cfdfc49d"
     },
     "telegram-send": {
         "cargoLock": null,
@@ -1457,12 +1478,12 @@
             "name": null,
             "owner": "vllm-project",
             "repo": "vllm",
-            "rev": "v0.18.0",
-            "sha256": "sha256-QiandUzQCU7PenbIO8brhvxu/ffIU+5x/p0XxowXxlc=",
+            "rev": "v0.18.1",
+            "sha256": "sha256-oFlvsBqyskI30ZeTQRs2UiDCqejDSbU8PnBEG0LF+vw=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.18.0"
+        "version": "v0.18.1"
     },
     "web-search": {
         "cargoLock": null,
