@@ -1,11 +1,5 @@
-# Package metadata for 'ut'
-# Declares extra arguments needed by this package's default.nix
-
+# ut 包的元数据配置
 {
-  # Function that returns extra arguments for callPackage
-  # Takes the final package set and returns an attribute set
-  extraArgs = pkgs: {
-    inherit (pkgs) lib;
-    buildRustPackage = pkgs.rustPlatform.buildRustPackage;
-  };
+  # 使用 nurLib 获取 Rust 优化构建配置
+  useNurLib = true;
 }

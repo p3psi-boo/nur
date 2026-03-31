@@ -31,8 +31,10 @@ let
       packageSpecificArgs = if meta ? extraArgs then meta.extraArgs pkgs else { };
       generatedArgs =
         if builtins.hasAttr pkgName generatedSources then { generated = generatedSources; } else { };
+      # 只在 meta.nix 中声明 useNurLib = true 时才传递 nurLib
+      nurLibArgs = if meta ? useNurLib && meta.useNurLib then { inherit nurLib; } else { };
     in
-    packageSpecificArgs // generatedArgs // { inherit nurLib; };
+    packageSpecificArgs // generatedArgs // nurLibArgs;
 in
 
 builtins.listToAttrs (
