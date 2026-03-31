@@ -1,6 +1,6 @@
 {
   lib,
-  buildRustPackage,
+  rustPlatform,
   generated,
   nurLib,
 }:
@@ -8,7 +8,7 @@
 let
   sourceInfo = generated.ut;
 in
-buildRustPackage (finalAttrs: (
+rustPlatform.buildRustPackage (finalAttrs: (
   {
     pname = "ut";
     version = "0-unstable-${sourceInfo.date}";
