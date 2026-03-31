@@ -100,47 +100,6 @@
         },
         "version": "07fc48213a415490da1ae40cd8988a087cb02ec6"
     },
-    "beads": {
-        "cargoLock": null,
-        "date": "2026-03-30",
-        "extract": null,
-        "name": "beads",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "73c66ad3a7d88c39eb8e412ff2564ff448db396f",
-            "sha256": "sha256-VNIiS1eJ+b6iID5MkWIf51GBOQQJAIUBgqKcqpfo0nw=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/steveyegge/beads.git"
-        },
-        "version": "73c66ad3a7d88c39eb8e412ff2564ff448db396f"
-    },
-    "beads_viewer": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "beads_viewer",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "Dicklesworthstone",
-            "repo": "beads_viewer",
-            "rev": "v0.15.2",
-            "sha256": "sha256-sdlw9Zr+/I1/PaX0Wpim+UGPxvP7hPrlJ0MTGC20Q5w=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "v0.15.2"
-    },
     "bifrost-http": {
         "cargoLock": null,
         "date": "2026-03-30",

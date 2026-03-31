@@ -63,31 +63,6 @@
     };
     date = "2026-01-14";
   };
-  beads = {
-    pname = "beads";
-    version = "73c66ad3a7d88c39eb8e412ff2564ff448db396f";
-    src = fetchgit {
-      url = "https://github.com/steveyegge/beads.git";
-      rev = "73c66ad3a7d88c39eb8e412ff2564ff448db396f";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-VNIiS1eJ+b6iID5MkWIf51GBOQQJAIUBgqKcqpfo0nw=";
-    };
-    date = "2026-03-30";
-  };
-  beads_viewer = {
-    pname = "beads_viewer";
-    version = "v0.15.2";
-    src = fetchFromGitHub {
-      owner = "Dicklesworthstone";
-      repo = "beads_viewer";
-      rev = "v0.15.2";
-      fetchSubmodules = false;
-      sha256 = "sha256-sdlw9Zr+/I1/PaX0Wpim+UGPxvP7hPrlJ0MTGC20Q5w=";
-    };
-  };
   bifrost-http = {
     pname = "bifrost-http";
     version = "d1439761c92d2b762a35f2eb97f0932a8922c34b";

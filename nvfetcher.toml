@@ -13,10 +13,6 @@ src.git = "https://github.com/kiwiz/gkeepapi.git"
 fetch.git = "https://github.com/kiwiz/gkeepapi.git"
 git.fetch_submodules = false
 
-[beads]
-src.git = "https://github.com/steveyegge/beads.git"
-fetch.git = "https://github.com/steveyegge/beads.git"
-git.fetch_submodules = false
 
 [einat]
 src.git = "https://github.com/EHfive/einat-ebpf.git"
@@ -112,9 +108,7 @@ fetch.github = "damonto/sigmo"
 src.git = "https://github.com/k4yt3x/vanissh.git"
 fetch.git = "https://github.com/k4yt3x/vanissh.git"
 
-[beads_viewer]
-src.github = "Dicklesworthstone/beads_viewer"
-fetch.github = "Dicklesworthstone/beads_viewer"
+
 
 [ggwave-to-file]
 src.git = "https://github.com/ggerganov/ggwave.git"
