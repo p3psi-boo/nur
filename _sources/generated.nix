@@ -842,6 +842,17 @@
     };
     date = "2025-09-21";
   };
+  vgpu_unlock-rs = {
+    pname = "vgpu_unlock-rs";
+    version = "v19.1";
+    src = fetchFromGitHub {
+      owner = "rbqvq";
+      repo = "vgpu_unlock-rs";
+      rev = "v19.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-CdLh8OU/idWLzdPEfQpF5Uost1vaNSEJkBJJlHdPb1c=";
+    };
+  };
   vikunja-cli = {
     pname = "vikunja-cli";
     version = "7d96f181c2e0e07b4e75c7f540e9a8cfdf9065dc";

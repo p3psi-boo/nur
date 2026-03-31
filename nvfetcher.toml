@@ -162,6 +162,11 @@ src.branch = "v4-main"
 src.github = "vllm-project/vllm"
 fetch.github = "vllm-project/vllm"
 
+[vgpu_unlock-rs]
+src.github_tag = "rbqvq/vgpu_unlock-rs"
+src.include_regex = "^v[0-9].*"
+fetch.github = "rbqvq/vgpu_unlock-rs"
+
 [cnb-cli]
 src.git = "https://github.com/p3psi-boo/cnb-cli.git"
 fetch.git = "https://github.com/p3psi-boo/cnb-cli.git"

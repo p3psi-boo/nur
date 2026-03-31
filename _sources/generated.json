@@ -1402,6 +1402,27 @@
         },
         "version": "c2ee4700d8112b5c6f06fd587b6f11c9aafbdf72"
     },
+    "vgpu_unlock-rs": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "vgpu_unlock-rs",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "rbqvq",
+            "repo": "vgpu_unlock-rs",
+            "rev": "v19.1",
+            "sha256": "sha256-CdLh8OU/idWLzdPEfQpF5Uost1vaNSEJkBJJlHdPb1c=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v19.1"
+    },
     "vikunja-cli": {
         "cargoLock": null,
         "date": "2026-02-25",
