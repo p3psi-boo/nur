@@ -6,6 +6,6 @@
 }:
 
 let
-  discovery = import ../../lib/discovery.nix { inherit pkgs lib; };
+  repo = import ../../repo.nix { inherit pkgs lib; };
 in
-lib.filterAttrs (_: v: lib.isDerivation v) discovery
+lib.filterAttrs (_: v: lib.isDerivation v) repo
