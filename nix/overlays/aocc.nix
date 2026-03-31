@@ -1,3 +1,6 @@
+# AOCC (AMD Optimizing C/C++ Compiler) Overlay
+# 提供 AMD 优化编译器支持
+
 final: prev:
 
 let
@@ -36,7 +39,7 @@ let
       bintools ? null,
     }:
     let
-      unwrapped = prev.callPackage ./pkgs/aoccUnwrapped {
+      unwrapped = prev.callPackage ../../pkgs/aoccUnwrapped {
         inherit version sha256;
         rocm-runtime = prev.rocmPackages.rocm-runtime;
         libffi = final.libffi_3_2;
@@ -59,8 +62,6 @@ in
 
   aoccPackages_510 = aoccPackages {
     version = "5.1.0";
-    # https://www.amd.com/en/developer/aocc.html
-    # https://www.amd.com/en/developer/aocc/eula/aocc-5-1-eula.html?filename=aocc-compiler-5.1.0.tar
     sha256 = "0s9cs8syz9q6kihd41kn1whn1i9bamrlpcpy6za10vn6k7imdjrw";
   };
 

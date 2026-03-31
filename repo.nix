@@ -1,13 +1,12 @@
 # NUR 仓库内的包定义
 # 返回标准的包属性集，便于被 default.nix / overlay.nix / flake.nix 复用。
 
-{
-  pkgs,
-  lib ? pkgs.lib,
-  pkgsDir ? ./pkgs,
-  generatedPath ? ./_sources/generated.nix,
-}:
+{ pkgs, lib ? pkgs.lib }:
+
 let
+  pkgsDir = ./pkgs;
+  generatedPath = ./_sources/generated.nix;
+
   entries = builtins.readDir pkgsDir;
   publicPackageNames = builtins.filter (
     name: entries.${name} == "directory" && builtins.pathExists (pkgsDir + "/${name}/default.nix")
@@ -32,11 +31,10 @@ let
       packageSpecificArgs = if meta ? extraArgs then meta.extraArgs pkgs else { };
       generatedArgs =
         if builtins.hasAttr pkgName generatedSources then { generated = generatedSources; } else { };
-      # Only pass nurLib if package explicitly requests it via meta.nix
-      nurLibArgs = if meta ? useNurLib then { inherit nurLib; } else { };
     in
-    packageSpecificArgs // generatedArgs // nurLibArgs;
+    packageSpecificArgs // generatedArgs // { inherit nurLib; };
 in
+
 builtins.listToAttrs (
   map (
     pkgName:

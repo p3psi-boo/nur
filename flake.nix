@@ -42,7 +42,7 @@
       ];
       forAllPackageSystems = lib.genAttrs packageSystems;
       forAllCheckSystems = lib.genAttrs checkSystems;
-      nixpkgsConfig = import ./nixpkgs-config.nix;
+      nixpkgsConfig = import ./nix/config/nixpkgs.nix;
 
       pkgsFor = system:
         import nixpkgs {
@@ -62,7 +62,7 @@
         system:
         let
           pkgs = pkgsFor system;
-          repo = import ./default.nix { inherit pkgs; };
+          repo = import ./repo.nix { inherit pkgs; };
         in
         repo // {
           default = pkgs.lazyssh;
@@ -71,7 +71,7 @@
 
       checks = forAllCheckSystems (
         system:
-        import ./ci.nix {
+        import ./nix/config/ci.nix {
           pkgs = pkgsFor system;
         }
       );

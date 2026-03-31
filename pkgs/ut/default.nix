@@ -2,10 +2,10 @@
   lib,
   buildRustPackage,
   generated,
+  nurLib,
 }:
 
 let
-  rustOptimized = import ../_lib/rust-optimized.nix;
   sourceInfo = generated.ut;
 in
 buildRustPackage (finalAttrs: (
@@ -27,5 +27,5 @@ buildRustPackage (finalAttrs: (
       mainProgram = "ut";
     };
   }
-  // rustOptimized.rustOptimizedEnv
+  // nurLib.rustOptimizedEnv
 ))
