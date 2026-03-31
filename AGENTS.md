@@ -2,7 +2,6 @@
 
 ## Nix 打包小工具
 
-- 自定义包仓库已拆分到 `nur/`；涉及打包/更新包时，优先在 `nur/` 下操作。
 - 打包前先用 `nh search <query>` 在 nixpkgs 里查一下是否已有相关包；如果已有（满足需求），不要在本仓库继续打包/新增。
 - 在写/更新 Nix 包（需要 `fetchFromGitHub`、`fetchgit`、`fetchurl` 等）时，优先用 `nurl` 快速生成/获取 `owner/repo`、`rev`、`hash` 等信息：`https://github.com/nix-community/nurl`。
 - 包相关工具请优先使用 `nix develop ./nur` 进入 NUR 的 devShell。
@@ -25,6 +24,30 @@
 
 参考：`https://github.com/berberman/nvfetcher`
 
-## Rust 打包
+## uv2nix（Python 项目打包）
 
-- Rust 打包时需要注意二进制大小优化、编译选项等问题，详见 [Rust 二进制大小优化文档](docs/min-sized-rust.md)（来源：[min-sized-rust](https://github.com/johnthagen/min-sized-rust)）
+本仓库使用 [uv2nix](https://github.com/pyproject-nix/uv2nix) 将基于 `uv.lock` 的 Python 项目打包为 Nix 包。核心封装在 `mods/python/uv-builder.nix`，通过 `python-uv.nix` overlay 暴露为 `pkgs.uv-builder`。
+
+- 使用方式：
+  - 在包的 `default.nix` 中引入 `uv-builder`，调用 `uv-builder.buildUvPackage { ... }` 构建 Python 环境
+  - 必需参数：`pname`、`version`、`lockFile`（本地路径）或 `lockUrl` + `lockHash`（远程 URL）
+  - 常用可选参数：
+    - `bins`：要暴露的可执行文件列表（默认 `[ pname ]`）
+    - `python`：Python 解释器（默认 `python313`）
+    - `extraDependencies`：额外 pip 依赖
+    - `cudaSupport`：启用 CUDA 支持（自动处理 torch/vllm 等常见包的 autoPatchelf）
+    - `pyprojectOverrides`：自定义 pyproject overlay（用于修补特定 Python 包）
+    - `excludePackages`：排除冲突包
+- 示例（参考 `pkgs/grok2api/default.nix`）：
+  ```nix
+  pythonEnv = uv-builder.buildUvPackage {
+    pname = "my-app";
+    version = "1.0.0";
+    lockFile = "${src}/uv.lock";
+    bins = [ "python" "my-app" ];
+  };
+  ```
+- 工作原理：`buildUvPackage` 会根据 `uv.lock` 生成临时 workspace，通过 `uv2nix.lib.workspace.loadWorkspace` 解析依赖，使用 `pyproject-nix` 构建 Python 包集合，最终组装为虚拟环境
+
+参考：`https://github.com/pyproject-nix/uv2nix`
+
