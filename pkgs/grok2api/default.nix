@@ -74,6 +74,7 @@ stdenv.mkDerivation {
     # Change to source directory and run
     cd @src@
     exec @python@ -m granian main:app \
+      --interface asgi \
       --host "''$SERVER_HOST" \
       --port "''$SERVER_PORT" \
       --workers "''$SERVER_WORKERS" \
