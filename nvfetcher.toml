@@ -392,3 +392,8 @@ fetch.github = "quailyquaily/coe"
 [openalice]
 src.github_tag = "TraderAlice/OpenAlice"
 fetch.github = "TraderAlice/OpenAlice"
+[grok2api]
+src.github_tag = "chenyme/grok2api"
+src.include_regex = "^v[0-9].*"
+fetch.github = "chenyme/grok2api"
+
