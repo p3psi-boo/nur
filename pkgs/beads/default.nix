@@ -4,18 +4,19 @@
   generated,
   nix-update-script,
   fetchFromGitHub ? null,  # auto-passed by repo.nix, not used
+  go_1_25,
 }:
 
 let
   sourceInfo = generated.beads;
 in
-buildGoModule (finalAttrs: {
+(buildGoModule.override { go = go_1_25; }) (finalAttrs: {
   pname = "beads";
   version = lib.removePrefix "v" sourceInfo.version;
 
   src = sourceInfo.src;
 
-  vendorHash = "sha256-iTPi8+pbKr2Q352hzvIOGL2EneF9agrDmBwTLMUjDBE=";
+  vendorHash = "sha256-wDTa6E9kW6oV/Vz/CpWH3ZZnOwaw9/qdFHRdZwUY4P8=";
 
   # Build from cmd/bd subdirectory
   subPackages = [ "cmd/bd" ];
