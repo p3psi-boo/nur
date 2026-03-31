@@ -5,6 +5,7 @@
   stdenv,
   uv-builder,
   makeWrapper,
+  python313,
   generated,
 }:
 
@@ -34,9 +35,10 @@ stdenv.mkDerivation {
   installPhase = ''
     mkdir -p $out/bin
     
+    # Get Python from pyvenv.cfg or use nixpkgs python313
+    pythonPath="${python313}/bin/python3"
+    
     # Create the grok2api wrapper script
-    # Use double quotes for heredoc to allow $src expansion
-    # Escape $ for runtime variables with \$
     cat > $out/bin/grok2api << EOF
     #!/usr/bin/env bash
     set -e
@@ -53,7 +55,7 @@ stdenv.mkDerivation {
     
     # Change to source directory and run
     cd $src
-    exec ${pythonEnv}/bin/python -m uvicorn main:app \\
+    exec $pythonPath -m uvicorn main:app \\
       --host "\$SERVER_HOST" \\
       --port "\$SERVER_PORT" \\
       --workers "\$SERVER_WORKERS" \\
@@ -63,8 +65,9 @@ stdenv.mkDerivation {
     
     chmod +x $out/bin/grok2api
     
-    # Wrap the script to set proper environment
-    wrapProgram $out/bin/grok2api
+    # Wrap the script with proper PYTHONPATH
+    wrapProgram $out/bin/grok2api \
+      --prefix PYTHONPATH : "${pythonEnv}/lib/python3.13/site-packages:${src}"
   '';
 
   meta = {
