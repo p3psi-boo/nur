@@ -8,11 +8,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-7USg62xA+SDn3d9qZ6AP337POL9mXqRqWhBn/Kki/wE=",
+            "sha256": "sha256-wAwmRsDkg+VcP1yJPFCiBlIRGTpvnt1xgLvFtQsVUm0=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.3/agent-browser-linux-x64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.4/agent-browser-linux-x64"
         },
-        "version": "v0.23.3"
+        "version": "v0.23.4"
     },
     "agent-browser-darwin-arm64": {
         "cargoLock": null,
@@ -23,11 +23,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-gYLQUG2oDp3aJf/tTklD+MUeXtGYGapZ45hphbzb5VU=",
+            "sha256": "sha256-e5nloROfSRWqpKxQXYKtt4rAjBJ9fEVDh14lnt3uzeo=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.3/agent-browser-darwin-arm64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.4/agent-browser-darwin-arm64"
         },
-        "version": "v0.23.3"
+        "version": "v0.23.4"
     },
     "agent-browser-darwin-x64": {
         "cargoLock": null,
@@ -38,11 +38,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-/zhKYArylLZfIozgasE96tbI7PPYPBg98G7BMHWGZ0Q=",
+            "sha256": "sha256-i4RGvsj+TLXZoI4eIbh3j2rs2Mx0Jsz7TE0iqmHM8RA=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.3/agent-browser-darwin-x64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.4/agent-browser-darwin-x64"
         },
-        "version": "v0.23.3"
+        "version": "v0.23.4"
     },
     "agent-browser-linux-arm64": {
         "cargoLock": null,
@@ -53,11 +53,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-tYmIaFh3INu34W4XmS17oFby8wkOjZIVoMEsjkMaZE0=",
+            "sha256": "sha256-BHhqm61Seiv7pDIwe1Aqk6q8QEPnBysqGyCs88hrdN4=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.3/agent-browser-linux-arm64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.4/agent-browser-linux-arm64"
         },
-        "version": "v0.23.3"
+        "version": "v0.23.4"
     },
     "agsh": {
         "cargoLock": null,
@@ -679,27 +679,6 @@
             "type": "github"
         },
         "version": "v1.5.3"
-    },
-    "grok2api-rs": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "grok2api-rs",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "XeanYu",
-            "repo": "grok2api-rs",
-            "rev": "0.2.0",
-            "sha256": "sha256-RNm+8OYNikxALZd+Bq88eW5PkJkef5lg00mn6JelMfE=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "0.2.0"
     },
     "ida-pro-mcp": {
         "cargoLock": null,

@@ -8,34 +8,34 @@
 {
   agent-browser = {
     pname = "agent-browser";
-    version = "v0.23.3";
+    version = "v0.23.4";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.3/agent-browser-linux-x64";
-      sha256 = "sha256-7USg62xA+SDn3d9qZ6AP337POL9mXqRqWhBn/Kki/wE=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.4/agent-browser-linux-x64";
+      sha256 = "sha256-wAwmRsDkg+VcP1yJPFCiBlIRGTpvnt1xgLvFtQsVUm0=";
     };
   };
   agent-browser-darwin-arm64 = {
     pname = "agent-browser-darwin-arm64";
-    version = "v0.23.3";
+    version = "v0.23.4";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.3/agent-browser-darwin-arm64";
-      sha256 = "sha256-gYLQUG2oDp3aJf/tTklD+MUeXtGYGapZ45hphbzb5VU=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.4/agent-browser-darwin-arm64";
+      sha256 = "sha256-e5nloROfSRWqpKxQXYKtt4rAjBJ9fEVDh14lnt3uzeo=";
     };
   };
   agent-browser-darwin-x64 = {
     pname = "agent-browser-darwin-x64";
-    version = "v0.23.3";
+    version = "v0.23.4";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.3/agent-browser-darwin-x64";
-      sha256 = "sha256-/zhKYArylLZfIozgasE96tbI7PPYPBg98G7BMHWGZ0Q=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.4/agent-browser-darwin-x64";
+      sha256 = "sha256-i4RGvsj+TLXZoI4eIbh3j2rs2Mx0Jsz7TE0iqmHM8RA=";
     };
   };
   agent-browser-linux-arm64 = {
     pname = "agent-browser-linux-arm64";
-    version = "v0.23.3";
+    version = "v0.23.4";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.3/agent-browser-linux-arm64";
-      sha256 = "sha256-tYmIaFh3INu34W4XmS17oFby8wkOjZIVoMEsjkMaZE0=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.4/agent-browser-linux-arm64";
+      sha256 = "sha256-BHhqm61Seiv7pDIwe1Aqk6q8QEPnBysqGyCs88hrdN4=";
     };
   };
   agsh = {
@@ -405,17 +405,6 @@
       rev = "v1.5.3";
       fetchSubmodules = false;
       sha256 = "sha256-ubrMBiGc/2Lc6macM8bAtPK/zN95kfRfui6Y6QNlYd0=";
-    };
-  };
-  grok2api-rs = {
-    pname = "grok2api-rs";
-    version = "0.2.0";
-    src = fetchFromGitHub {
-      owner = "XeanYu";
-      repo = "grok2api-rs";
-      rev = "0.2.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-RNm+8OYNikxALZd+Bq88eW5PkJkef5lg00mn6JelMfE=";
     };
   };
   ida-pro-mcp = {

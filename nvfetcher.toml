@@ -304,12 +304,6 @@ src.github_tag = "buzzer-re/Rikugan"
 src.include_regex = "^(v)?[0-9].*"
 fetch.github = "buzzer-re/Rikugan"
 
-[grok2api-rs]
-src.github_tag = "XeanYu/grok2api-rs"
-src.prefix = "v"
-src.include_regex = "^v[0-9].*"
-fetch.github = "XeanYu/grok2api-rs"
-
 [cocoindex-code]
 src.github_tag = "cocoindex-io/cocoindex-code"
 src.prefix = "v"
