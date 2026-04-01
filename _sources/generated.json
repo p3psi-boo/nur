@@ -102,7 +102,7 @@
     },
     "bifrost-http": {
         "cargoLock": null,
-        "date": "2026-03-30",
+        "date": "2026-04-01",
         "extract": null,
         "name": "bifrost-http",
         "passthru": null,
@@ -112,17 +112,17 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "d1439761c92d2b762a35f2eb97f0932a8922c34b",
-            "sha256": "sha256-sFSj4ZigTXycuLtQ8Am/hlXsZLF5W4KJWooZnSjH8cM=",
+            "rev": "0df3cc45969061811fb8bc667a7010dc02a61dda",
+            "sha256": "sha256-ZEEivawUHtFA/KMwLIe4koiUOJUcRp4FMC5vDsnQhwg=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/maximhq/bifrost.git"
         },
-        "version": "d1439761c92d2b762a35f2eb97f0932a8922c34b"
+        "version": "0df3cc45969061811fb8bc667a7010dc02a61dda"
     },
     "bifrost-ui": {
         "cargoLock": null,
-        "date": "2026-03-30",
+        "date": "2026-04-01",
         "extract": null,
         "name": "bifrost-ui",
         "passthru": null,
@@ -132,13 +132,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "d1439761c92d2b762a35f2eb97f0932a8922c34b",
-            "sha256": "sha256-sFSj4ZigTXycuLtQ8Am/hlXsZLF5W4KJWooZnSjH8cM=",
+            "rev": "0df3cc45969061811fb8bc667a7010dc02a61dda",
+            "sha256": "sha256-ZEEivawUHtFA/KMwLIe4koiUOJUcRp4FMC5vDsnQhwg=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/maximhq/bifrost.git"
         },
-        "version": "d1439761c92d2b762a35f2eb97f0932a8922c34b"
+        "version": "0df3cc45969061811fb8bc667a7010dc02a61dda"
     },
     "binsider-bin": {
         "cargoLock": null,
@@ -352,12 +352,12 @@
             "name": null,
             "owner": "quailyquaily",
             "repo": "coe",
-            "rev": "v0.1.2",
-            "sha256": "sha256-wKLDhyLmkQBkK8VA9SABWCxqdqjIl23dPhsw81Q021U=",
+            "rev": "v0.1.3",
+            "sha256": "sha256-uRCU7M51ja//mHQZWjZn19JX62+ZC9e6JuT7qj8Vw3o=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.1.2"
+        "version": "v0.1.3"
     },
     "dagu": {
         "cargoLock": null,
@@ -620,7 +620,7 @@
     },
     "grok2api": {
         "cargoLock": null,
-        "date": null,
+        "date": "2026-03-28",
         "extract": null,
         "name": "grok2api",
         "passthru": null,
@@ -630,14 +630,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "owner": "chenyme",
-            "repo": "grok2api",
-            "rev": "v1.5.3",
-            "sha256": "sha256-ubrMBiGc/2Lc6macM8bAtPK/zN95kfRfui6Y6QNlYd0=",
+            "rev": "5a81a63c2d92a9f5495c1098b15eb2fe133f9842",
+            "sha256": "sha256-FquCukmOoCpTC+wPa+MdfMvZARLJwB1YOem61DDuVcg=",
             "sparseCheckout": [],
-            "type": "github"
+            "type": "git",
+            "url": "https://github.com/JinchengGao-Infty/grok2api.git"
         },
-        "version": "v1.5.3"
+        "version": "5a81a63c2d92a9f5495c1098b15eb2fe133f9842"
     },
     "ida-pro-mcp": {
         "cargoLock": null,
@@ -1176,6 +1175,21 @@
             "type": "github"
         },
         "version": "v1.2.1"
+    },
+    "rime-custom-pinyin-dictionary": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "rime-custom-pinyin-dictionary",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-Y2d7DhvNknbo7u9BVTq1Mr9gYSeFWNnvo2KbDr6INuU=",
+            "type": "url",
+            "url": "https://github.com/wuhgit/CustomPinyinDictionary/releases/download/assets/CustomPinyinDictionary_Fcitx.dict"
+        },
+        "version": "20260101"
     },
     "sigmo": {
         "cargoLock": null,

@@ -65,31 +65,31 @@
   };
   bifrost-http = {
     pname = "bifrost-http";
-    version = "d1439761c92d2b762a35f2eb97f0932a8922c34b";
+    version = "0df3cc45969061811fb8bc667a7010dc02a61dda";
     src = fetchgit {
       url = "https://github.com/maximhq/bifrost.git";
-      rev = "d1439761c92d2b762a35f2eb97f0932a8922c34b";
+      rev = "0df3cc45969061811fb8bc667a7010dc02a61dda";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-sFSj4ZigTXycuLtQ8Am/hlXsZLF5W4KJWooZnSjH8cM=";
+      sha256 = "sha256-ZEEivawUHtFA/KMwLIe4koiUOJUcRp4FMC5vDsnQhwg=";
     };
-    date = "2026-03-30";
+    date = "2026-04-01";
   };
   bifrost-ui = {
     pname = "bifrost-ui";
-    version = "d1439761c92d2b762a35f2eb97f0932a8922c34b";
+    version = "0df3cc45969061811fb8bc667a7010dc02a61dda";
     src = fetchgit {
       url = "https://github.com/maximhq/bifrost.git";
-      rev = "d1439761c92d2b762a35f2eb97f0932a8922c34b";
+      rev = "0df3cc45969061811fb8bc667a7010dc02a61dda";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-sFSj4ZigTXycuLtQ8Am/hlXsZLF5W4KJWooZnSjH8cM=";
+      sha256 = "sha256-ZEEivawUHtFA/KMwLIe4koiUOJUcRp4FMC5vDsnQhwg=";
     };
-    date = "2026-03-30";
+    date = "2026-04-01";
   };
   binsider-bin = {
     pname = "binsider-bin";
@@ -208,13 +208,13 @@
   };
   coe = {
     pname = "coe";
-    version = "v0.1.2";
+    version = "v0.1.3";
     src = fetchFromGitHub {
       owner = "quailyquaily";
       repo = "coe";
-      rev = "v0.1.2";
+      rev = "v0.1.3";
       fetchSubmodules = false;
-      sha256 = "sha256-wKLDhyLmkQBkK8VA9SABWCxqdqjIl23dPhsw81Q021U=";
+      sha256 = "sha256-uRCU7M51ja//mHQZWjZn19JX62+ZC9e6JuT7qj8Vw3o=";
     };
   };
   dagu = {
@@ -373,14 +373,17 @@
   };
   grok2api = {
     pname = "grok2api";
-    version = "v1.5.3";
-    src = fetchFromGitHub {
-      owner = "chenyme";
-      repo = "grok2api";
-      rev = "v1.5.3";
+    version = "5a81a63c2d92a9f5495c1098b15eb2fe133f9842";
+    src = fetchgit {
+      url = "https://github.com/JinchengGao-Infty/grok2api.git";
+      rev = "5a81a63c2d92a9f5495c1098b15eb2fe133f9842";
       fetchSubmodules = false;
-      sha256 = "sha256-ubrMBiGc/2Lc6macM8bAtPK/zN95kfRfui6Y6QNlYd0=";
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-FquCukmOoCpTC+wPa+MdfMvZARLJwB1YOem61DDuVcg=";
     };
+    date = "2026-03-28";
   };
   ida-pro-mcp = {
     pname = "ida-pro-mcp";
@@ -701,6 +704,14 @@
       rev = "v1.2.1";
       fetchSubmodules = false;
       sha256 = "sha256-JUiC6CZ0xqOj1t1w80RSHhXLiSXda8nX+HIJEUZvsTM=";
+    };
+  };
+  rime-custom-pinyin-dictionary = {
+    pname = "rime-custom-pinyin-dictionary";
+    version = "20260101";
+    src = fetchurl {
+      url = "https://github.com/wuhgit/CustomPinyinDictionary/releases/download/assets/CustomPinyinDictionary_Fcitx.dict";
+      sha256 = "sha256-Y2d7DhvNknbo7u9BVTq1Mr9gYSeFWNnvo2KbDr6INuU=";
     };
   };
   sigmo = {
