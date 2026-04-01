@@ -385,3 +385,9 @@ src.github_tag = "chenyme/grok2api"
 src.include_regex = "^v[0-9].*"
 fetch.github = "chenyme/grok2api"
 
+
+# RIME 自建拼音输入法词库
+# 注意：此包使用静态 URL 但内容会更新，版本需手动检查 GitHub releases 页面
+[rime-custom-pinyin-dictionary]
+src.from_pattern = "https://github.com/wuhgit/CustomPinyinDictionary/releases/download/assets/CustomPinyinDictionary_Fcitx.dict"
+fetch.url = "https://github.com/wuhgit/CustomPinyinDictionary/releases/download/assets/CustomPinyinDictionary_Fcitx.dict"
