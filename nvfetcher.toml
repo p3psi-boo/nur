@@ -1,3 +1,8 @@
+[okmain]
+src.git = "https://github.com/si14/okmain.git"
+fetch.git = "https://github.com/si14/okmain.git"
+git.fetch_submodules = false
+
 [lotspeed]
 src.git = "https://github.com/uk0/lotspeed.git"
 fetch.git = "https://github.com/uk0/lotspeed.git"

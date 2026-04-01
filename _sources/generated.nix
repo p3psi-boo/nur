@@ -65,29 +65,29 @@
   };
   bifrost-http = {
     pname = "bifrost-http";
-    version = "0df3cc45969061811fb8bc667a7010dc02a61dda";
+    version = "66752e808f2a872c409d2b27f719e788fe8f62b5";
     src = fetchgit {
       url = "https://github.com/maximhq/bifrost.git";
-      rev = "0df3cc45969061811fb8bc667a7010dc02a61dda";
+      rev = "66752e808f2a872c409d2b27f719e788fe8f62b5";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-ZEEivawUHtFA/KMwLIe4koiUOJUcRp4FMC5vDsnQhwg=";
+      sha256 = "sha256-dyd3nYxEw7HwZNrnFHWZWysajhEyHoiaS32pgCo46k0=";
     };
     date = "2026-04-01";
   };
   bifrost-ui = {
     pname = "bifrost-ui";
-    version = "0df3cc45969061811fb8bc667a7010dc02a61dda";
+    version = "66752e808f2a872c409d2b27f719e788fe8f62b5";
     src = fetchgit {
       url = "https://github.com/maximhq/bifrost.git";
-      rev = "0df3cc45969061811fb8bc667a7010dc02a61dda";
+      rev = "66752e808f2a872c409d2b27f719e788fe8f62b5";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-ZEEivawUHtFA/KMwLIe4koiUOJUcRp4FMC5vDsnQhwg=";
+      sha256 = "sha256-dyd3nYxEw7HwZNrnFHWZWysajhEyHoiaS32pgCo46k0=";
     };
     date = "2026-04-01";
   };
@@ -528,6 +528,20 @@
       fetchSubmodules = false;
       sha256 = "sha256-4kkzOLXF3l7nD59K7TkbLHxSd3FiwH1uLAL8w1nA2bA=";
     };
+  };
+  okmain = {
+    pname = "okmain";
+    version = "e51da5fa7efde11dad009592bdf3b41980c3555f";
+    src = fetchgit {
+      url = "https://github.com/si14/okmain.git";
+      rev = "e51da5fa7efde11dad009592bdf3b41980c3555f";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-klCN4sgRvN/9QyXgu0+XBJMpjTOBscNG0ZqM4CV2QBo=";
+    };
+    date = "2026-03-10";
   };
   openalice = {
     pname = "openalice";
