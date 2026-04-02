@@ -378,9 +378,10 @@ src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
 fetch.url = "https://github.com/loerting/dalvikus/archive/refs/tags/v$ver.tar.gz"
 
 [coe]
-src.github_tag = "quailyquaily/coe"
-src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
-fetch.github = "quailyquaily/coe"
+src.git = "https://github.com/p3psi-boo/coe.git"
+fetch.git = "https://github.com/p3psi-boo/coe.git"
+git.fetch_submodules = false
+git.get_commit_date = true
 
 [openalice]
 src.github_tag = "TraderAlice/OpenAlice"

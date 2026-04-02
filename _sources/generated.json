@@ -112,13 +112,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "0d0d494328005ceb674c35b0255270f0f9aca18d",
-            "sha256": "sha256-0Jb5GBDzNSg5qF4YnTh9FxtVRVMUs4wlwC/Cm415P5Q=",
+            "rev": "e662fc411a47ecb71f1ac71d611c8866b2ef9a05",
+            "sha256": "sha256-hiJkLYmWUB+Ffp4bB+njiPUrx1NTYiSiwoMMbNe2eEE=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/maximhq/bifrost.git"
         },
-        "version": "0d0d494328005ceb674c35b0255270f0f9aca18d"
+        "version": "e662fc411a47ecb71f1ac71d611c8866b2ef9a05"
     },
     "bifrost-ui": {
         "cargoLock": null,
@@ -132,13 +132,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "0d0d494328005ceb674c35b0255270f0f9aca18d",
-            "sha256": "sha256-0Jb5GBDzNSg5qF4YnTh9FxtVRVMUs4wlwC/Cm415P5Q=",
+            "rev": "e662fc411a47ecb71f1ac71d611c8866b2ef9a05",
+            "sha256": "sha256-hiJkLYmWUB+Ffp4bB+njiPUrx1NTYiSiwoMMbNe2eEE=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/maximhq/bifrost.git"
         },
-        "version": "0d0d494328005ceb674c35b0255270f0f9aca18d"
+        "version": "e662fc411a47ecb71f1ac71d611c8866b2ef9a05"
     },
     "binsider-bin": {
         "cargoLock": null,
@@ -297,12 +297,12 @@
             "name": null,
             "owner": "router-for-me",
             "repo": "CLIProxyAPI",
-            "rev": "v6.9.7",
-            "sha256": "sha256-KlVn7Pi7Gr67vpFME2f/9RIYnZJxP2A8UrzUNP5f1Ug=",
+            "rev": "v6.9.9",
+            "sha256": "sha256-XArasVTzQFJIl5Hh2YAX2w3NSXhvBBKtNfLvXfT0Je0=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v6.9.7"
+        "version": "v6.9.9"
     },
     "cloudflarespeedtest": {
         "cargoLock": null,
@@ -361,7 +361,7 @@
     },
     "coe": {
         "cargoLock": null,
-        "date": null,
+        "date": "2026-04-02",
         "extract": null,
         "name": "coe",
         "passthru": null,
@@ -371,14 +371,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "owner": "quailyquaily",
-            "repo": "coe",
-            "rev": "v0.1.3",
-            "sha256": "sha256-uRCU7M51ja//mHQZWjZn19JX62+ZC9e6JuT7qj8Vw3o=",
+            "rev": "8ce49ed06b88dc610d34b04acfd03bfdc0f78787",
+            "sha256": "sha256-I1KFljvfmZ2pwOvqSMrvO6rZfvdA6xrFR2j8eEkgq94=",
             "sparseCheckout": [],
-            "type": "github"
+            "type": "git",
+            "url": "https://github.com/p3psi-boo/coe.git"
         },
-        "version": "v0.1.3"
+        "version": "8ce49ed06b88dc610d34b04acfd03bfdc0f78787"
     },
     "dagu": {
         "cargoLock": null,
@@ -1003,7 +1002,7 @@
     },
     "planify": {
         "cargoLock": null,
-        "date": "2026-03-27",
+        "date": "2026-04-02",
         "extract": null,
         "name": "planify",
         "passthru": null,
@@ -1013,13 +1012,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "904f0ae34b962510a8e35b8d9faf432941df1837",
-            "sha256": "sha256-hu04aluqcK2I3Vf644cRn43oD2C9bwS8J737mFn0o1U=",
+            "rev": "3aaf86ba8503916b16c758cdb0a6b83a80d7de64",
+            "sha256": "sha256-Uemppi8LtT0p+cGLikYhc5GdKIRrCMNvHapzyKrYs3I=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/alainm23/planify.git"
         },
-        "version": "904f0ae34b962510a8e35b8d9faf432941df1837"
+        "version": "3aaf86ba8503916b16c758cdb0a6b83a80d7de64"
     },
     "polymarket-cli": {
         "cargoLock": null,

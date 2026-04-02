@@ -65,29 +65,29 @@
   };
   bifrost-http = {
     pname = "bifrost-http";
-    version = "0d0d494328005ceb674c35b0255270f0f9aca18d";
+    version = "e662fc411a47ecb71f1ac71d611c8866b2ef9a05";
     src = fetchgit {
       url = "https://github.com/maximhq/bifrost.git";
-      rev = "0d0d494328005ceb674c35b0255270f0f9aca18d";
+      rev = "e662fc411a47ecb71f1ac71d611c8866b2ef9a05";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-0Jb5GBDzNSg5qF4YnTh9FxtVRVMUs4wlwC/Cm415P5Q=";
+      sha256 = "sha256-hiJkLYmWUB+Ffp4bB+njiPUrx1NTYiSiwoMMbNe2eEE=";
     };
     date = "2026-04-02";
   };
   bifrost-ui = {
     pname = "bifrost-ui";
-    version = "0d0d494328005ceb674c35b0255270f0f9aca18d";
+    version = "e662fc411a47ecb71f1ac71d611c8866b2ef9a05";
     src = fetchgit {
       url = "https://github.com/maximhq/bifrost.git";
-      rev = "0d0d494328005ceb674c35b0255270f0f9aca18d";
+      rev = "e662fc411a47ecb71f1ac71d611c8866b2ef9a05";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-0Jb5GBDzNSg5qF4YnTh9FxtVRVMUs4wlwC/Cm415P5Q=";
+      sha256 = "sha256-hiJkLYmWUB+Ffp4bB+njiPUrx1NTYiSiwoMMbNe2eEE=";
     };
     date = "2026-04-02";
   };
@@ -172,13 +172,13 @@
   };
   cliproxyapi = {
     pname = "cliproxyapi";
-    version = "v6.9.7";
+    version = "v6.9.9";
     src = fetchFromGitHub {
       owner = "router-for-me";
       repo = "CLIProxyAPI";
-      rev = "v6.9.7";
+      rev = "v6.9.9";
       fetchSubmodules = false;
-      sha256 = "sha256-KlVn7Pi7Gr67vpFME2f/9RIYnZJxP2A8UrzUNP5f1Ug=";
+      sha256 = "sha256-XArasVTzQFJIl5Hh2YAX2w3NSXhvBBKtNfLvXfT0Je0=";
     };
   };
   cloudflarespeedtest = {
@@ -219,14 +219,17 @@
   };
   coe = {
     pname = "coe";
-    version = "v0.1.3";
-    src = fetchFromGitHub {
-      owner = "quailyquaily";
-      repo = "coe";
-      rev = "v0.1.3";
+    version = "8ce49ed06b88dc610d34b04acfd03bfdc0f78787";
+    src = fetchgit {
+      url = "https://github.com/p3psi-boo/coe.git";
+      rev = "8ce49ed06b88dc610d34b04acfd03bfdc0f78787";
       fetchSubmodules = false;
-      sha256 = "sha256-uRCU7M51ja//mHQZWjZn19JX62+ZC9e6JuT7qj8Vw3o=";
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-I1KFljvfmZ2pwOvqSMrvO6rZfvdA6xrFR2j8eEkgq94=";
     };
+    date = "2026-04-02";
   };
   dagu = {
     pname = "dagu";
@@ -609,17 +612,17 @@
   };
   planify = {
     pname = "planify";
-    version = "904f0ae34b962510a8e35b8d9faf432941df1837";
+    version = "3aaf86ba8503916b16c758cdb0a6b83a80d7de64";
     src = fetchgit {
       url = "https://github.com/alainm23/planify.git";
-      rev = "904f0ae34b962510a8e35b8d9faf432941df1837";
+      rev = "3aaf86ba8503916b16c758cdb0a6b83a80d7de64";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-hu04aluqcK2I3Vf644cRn43oD2C9bwS8J737mFn0o1U=";
+      sha256 = "sha256-Uemppi8LtT0p+cGLikYhc5GdKIRrCMNvHapzyKrYs3I=";
     };
-    date = "2026-03-27";
+    date = "2026-04-02";
   };
   polymarket-cli = {
     pname = "polymarket-cli";

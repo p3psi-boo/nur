@@ -12,7 +12,7 @@
 
 let
   sourceInfo = generated.coe;
-  version = lib.removePrefix "v" sourceInfo.version;
+  version = "0-unstable-${sourceInfo.date}";
 
   # coe 主程序（Go 构建）
   coeMain = buildGoModule {
@@ -49,7 +49,7 @@ let
 
     meta = {
       description = "Zero-GUI Linux voice input tool";
-      homepage = "https://github.com/quailyquaily/coe";
+      homepage = "https://github.com/p3psi-boo/coe";
       mainProgram = "coe";
       license = lib.licenses.unfree;
       platforms = lib.platforms.linux;
@@ -100,7 +100,7 @@ let
 
     meta = {
       description = "Coe Fcitx5 input method module for voice input";
-      homepage = "https://github.com/quailyquaily/coe";
+      homepage = "https://github.com/p3psi-boo/coe";
       license = lib.licenses.unfree;
       platforms = lib.platforms.linux;
     };
@@ -149,7 +149,7 @@ stdenv.mkDerivation {
 
   meta = {
     description = "Zero-GUI Linux voice input tool (with Fcitx5 module)";
-    homepage = "https://github.com/quailyquaily/coe";
+    homepage = "https://github.com/p3psi-boo/coe";
     mainProgram = "coe";
     license = lib.licenses.unfree;
     platforms = lib.platforms.linux;
