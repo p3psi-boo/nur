@@ -5,6 +5,8 @@
   pkg-config,
   fcitx5,
   dbus,
+  pipewire,
+  makeWrapper,
   generated,
   lib,
   withFcitx5 ? true,  # 默认启用 fcitx5 模块
@@ -118,8 +120,8 @@ stdenv.mkDerivation {
   dontUnpack = true;
   dontBuild = true;
 
-  nativeBuildInputs = lib.optionals withFcitx5 [
-    # 确保 fcitx5 模块的依赖也被包含
+  nativeBuildInputs = [
+    makeWrapper
   ];
 
   installPhase = ''
@@ -127,8 +129,9 @@ stdenv.mkDerivation {
 
     mkdir -p $out/bin $out/lib/fcitx5 $out/share/fcitx5/addon
 
-    # 复制主程序
-    cp ${coeMain}/bin/coe $out/bin/
+    # 复制主程序并包装，添加 pw-record 到 PATH
+    makeWrapper ${coeMain}/bin/coe $out/bin/coe \
+      --prefix PATH : "${pipewire}/bin"
 
     # 复制 fcitx5 模块（如果启用）
     ${lib.optionalString withFcitx5 ''
