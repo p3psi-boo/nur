@@ -102,7 +102,7 @@
     },
     "bifrost-http": {
         "cargoLock": null,
-        "date": "2026-04-01",
+        "date": "2026-04-02",
         "extract": null,
         "name": "bifrost-http",
         "passthru": null,
@@ -112,17 +112,17 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "66752e808f2a872c409d2b27f719e788fe8f62b5",
-            "sha256": "sha256-dyd3nYxEw7HwZNrnFHWZWysajhEyHoiaS32pgCo46k0=",
+            "rev": "0d0d494328005ceb674c35b0255270f0f9aca18d",
+            "sha256": "sha256-0Jb5GBDzNSg5qF4YnTh9FxtVRVMUs4wlwC/Cm415P5Q=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/maximhq/bifrost.git"
         },
-        "version": "66752e808f2a872c409d2b27f719e788fe8f62b5"
+        "version": "0d0d494328005ceb674c35b0255270f0f9aca18d"
     },
     "bifrost-ui": {
         "cargoLock": null,
-        "date": "2026-04-01",
+        "date": "2026-04-02",
         "extract": null,
         "name": "bifrost-ui",
         "passthru": null,
@@ -132,13 +132,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "66752e808f2a872c409d2b27f719e788fe8f62b5",
-            "sha256": "sha256-dyd3nYxEw7HwZNrnFHWZWysajhEyHoiaS32pgCo46k0=",
+            "rev": "0d0d494328005ceb674c35b0255270f0f9aca18d",
+            "sha256": "sha256-0Jb5GBDzNSg5qF4YnTh9FxtVRVMUs4wlwC/Cm415P5Q=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/maximhq/bifrost.git"
         },
-        "version": "66752e808f2a872c409d2b27f719e788fe8f62b5"
+        "version": "0d0d494328005ceb674c35b0255270f0f9aca18d"
     },
     "binsider-bin": {
         "cargoLock": null,
@@ -261,6 +261,27 @@
             "type": "github"
         },
         "version": "v0.0.8"
+    },
+    "clipboard-sync": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "clipboard-sync",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "dnut",
+            "repo": "clipboard-sync",
+            "rev": "0.2.0",
+            "sha256": "sha256-gme5pwQrwQbk8MroF/mGYqlY6hcjM5cHKHL7Y3nlW9k=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "0.2.0"
     },
     "cliproxyapi": {
         "cargoLock": null,
@@ -445,11 +466,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-JXTN5HpJdTk6Lk65dPpYcLMoqIpj8hT6aEAg8uVc5xE=",
+            "sha256": "sha256-uDHndoBEu0S4DWQngKSL0wIqnBac++d6s5Eu1wtTjos=",
             "type": "url",
-            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.4.2/fff-mcp-x86_64-unknown-linux-musl"
+            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.1/fff-mcp-x86_64-unknown-linux-musl"
         },
-        "version": "0.4.2"
+        "version": "0.5.1"
     },
     "fff-mcp-aarch64-linux": {
         "cargoLock": null,
@@ -460,11 +481,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-1DiCCfnbfJMMp5jPEeuOntldQ0tlT83y26urzaOPu60=",
+            "sha256": "sha256-YNTQOFcNrhX+PVscIDZCStsRs27j8OOEoqAladT4emQ=",
             "type": "url",
-            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.4.2/fff-mcp-aarch64-unknown-linux-musl"
+            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.1/fff-mcp-aarch64-unknown-linux-musl"
         },
-        "version": "0.4.2"
+        "version": "0.5.1"
     },
     "fff-mcp-darwin-arm64": {
         "cargoLock": null,
@@ -475,11 +496,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-LwEDO0jUBZujLedN0ZWV1VQqh0w4rfwD+1itEX7Pgq8=",
+            "sha256": "sha256-dAvbYsYycRyyq6gOIQ9ymJOilU+QuKkTc3yAKU3mOEE=",
             "type": "url",
-            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.4.2/fff-mcp-aarch64-apple-darwin"
+            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.1/fff-mcp-aarch64-apple-darwin"
         },
-        "version": "0.4.2"
+        "version": "0.5.1"
     },
     "fff-mcp-darwin-x64": {
         "cargoLock": null,
@@ -490,11 +511,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-u43GY6MGPBPgVqA2mq6zsAXYmvlwaQ3pCTbqoTiLbMw=",
+            "sha256": "sha256-C1HmPnGNEBWBCq9JZFzbxXVz4FzpplyflpSkJWnLH4k=",
             "type": "url",
-            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.4.2/fff-mcp-x86_64-apple-darwin"
+            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.1/fff-mcp-x86_64-apple-darwin"
         },
-        "version": "0.4.2"
+        "version": "0.5.1"
     },
     "firm": {
         "cargoLock": null,
@@ -775,12 +796,12 @@
             "name": null,
             "owner": "run-llama",
             "repo": "liteparse",
-            "rev": "v1.4.2",
-            "sha256": "sha256-7SR9j6f3J7Q/m4dppZ6h4+XBLZrNlIsiQxNE1oAxz7Y=",
+            "rev": "v1.4.3",
+            "sha256": "sha256-/8+54ZJI3JfEhbqRBd+jwaPP5BGTqq2MooSo1tTZoZw=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.4.2"
+        "version": "v1.4.3"
     },
     "lotspeed": {
         "cargoLock": null,

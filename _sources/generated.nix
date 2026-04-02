@@ -65,31 +65,31 @@
   };
   bifrost-http = {
     pname = "bifrost-http";
-    version = "66752e808f2a872c409d2b27f719e788fe8f62b5";
+    version = "0d0d494328005ceb674c35b0255270f0f9aca18d";
     src = fetchgit {
       url = "https://github.com/maximhq/bifrost.git";
-      rev = "66752e808f2a872c409d2b27f719e788fe8f62b5";
+      rev = "0d0d494328005ceb674c35b0255270f0f9aca18d";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-dyd3nYxEw7HwZNrnFHWZWysajhEyHoiaS32pgCo46k0=";
+      sha256 = "sha256-0Jb5GBDzNSg5qF4YnTh9FxtVRVMUs4wlwC/Cm415P5Q=";
     };
-    date = "2026-04-01";
+    date = "2026-04-02";
   };
   bifrost-ui = {
     pname = "bifrost-ui";
-    version = "66752e808f2a872c409d2b27f719e788fe8f62b5";
+    version = "0d0d494328005ceb674c35b0255270f0f9aca18d";
     src = fetchgit {
       url = "https://github.com/maximhq/bifrost.git";
-      rev = "66752e808f2a872c409d2b27f719e788fe8f62b5";
+      rev = "0d0d494328005ceb674c35b0255270f0f9aca18d";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-dyd3nYxEw7HwZNrnFHWZWysajhEyHoiaS32pgCo46k0=";
+      sha256 = "sha256-0Jb5GBDzNSg5qF4YnTh9FxtVRVMUs4wlwC/Cm415P5Q=";
     };
-    date = "2026-04-01";
+    date = "2026-04-02";
   };
   binsider-bin = {
     pname = "binsider-bin";
@@ -157,6 +157,17 @@
       rev = "v0.0.8";
       fetchSubmodules = false;
       sha256 = "sha256-Y/O2XmhMYUCV269g+h+DsQT80yVR0ot9RIS+mBJP7BA=";
+    };
+  };
+  clipboard-sync = {
+    pname = "clipboard-sync";
+    version = "0.2.0";
+    src = fetchFromGitHub {
+      owner = "dnut";
+      repo = "clipboard-sync";
+      rev = "0.2.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-gme5pwQrwQbk8MroF/mGYqlY6hcjM5cHKHL7Y3nlW9k=";
     };
   };
   cliproxyapi = {
@@ -263,34 +274,34 @@
   };
   fff-mcp = {
     pname = "fff-mcp";
-    version = "0.4.2";
+    version = "0.5.1";
     src = fetchurl {
-      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.4.2/fff-mcp-x86_64-unknown-linux-musl";
-      sha256 = "sha256-JXTN5HpJdTk6Lk65dPpYcLMoqIpj8hT6aEAg8uVc5xE=";
+      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.1/fff-mcp-x86_64-unknown-linux-musl";
+      sha256 = "sha256-uDHndoBEu0S4DWQngKSL0wIqnBac++d6s5Eu1wtTjos=";
     };
   };
   fff-mcp-aarch64-linux = {
     pname = "fff-mcp-aarch64-linux";
-    version = "0.4.2";
+    version = "0.5.1";
     src = fetchurl {
-      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.4.2/fff-mcp-aarch64-unknown-linux-musl";
-      sha256 = "sha256-1DiCCfnbfJMMp5jPEeuOntldQ0tlT83y26urzaOPu60=";
+      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.1/fff-mcp-aarch64-unknown-linux-musl";
+      sha256 = "sha256-YNTQOFcNrhX+PVscIDZCStsRs27j8OOEoqAladT4emQ=";
     };
   };
   fff-mcp-darwin-arm64 = {
     pname = "fff-mcp-darwin-arm64";
-    version = "0.4.2";
+    version = "0.5.1";
     src = fetchurl {
-      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.4.2/fff-mcp-aarch64-apple-darwin";
-      sha256 = "sha256-LwEDO0jUBZujLedN0ZWV1VQqh0w4rfwD+1itEX7Pgq8=";
+      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.1/fff-mcp-aarch64-apple-darwin";
+      sha256 = "sha256-dAvbYsYycRyyq6gOIQ9ymJOilU+QuKkTc3yAKU3mOEE=";
     };
   };
   fff-mcp-darwin-x64 = {
     pname = "fff-mcp-darwin-x64";
-    version = "0.4.2";
+    version = "0.5.1";
     src = fetchurl {
-      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.4.2/fff-mcp-x86_64-apple-darwin";
-      sha256 = "sha256-u43GY6MGPBPgVqA2mq6zsAXYmvlwaQ3pCTbqoTiLbMw=";
+      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.1/fff-mcp-x86_64-apple-darwin";
+      sha256 = "sha256-C1HmPnGNEBWBCq9JZFzbxXVz4FzpplyflpSkJWnLH4k=";
     };
   };
   firm = {
@@ -462,13 +473,13 @@
   };
   liteparse = {
     pname = "liteparse";
-    version = "v1.4.2";
+    version = "v1.4.3";
     src = fetchFromGitHub {
       owner = "run-llama";
       repo = "liteparse";
-      rev = "v1.4.2";
+      rev = "v1.4.3";
       fetchSubmodules = false;
-      sha256 = "sha256-7SR9j6f3J7Q/m4dppZ6h4+XBLZrNlIsiQxNE1oAxz7Y=";
+      sha256 = "sha256-/8+54ZJI3JfEhbqRBd+jwaPP5BGTqq2MooSo1tTZoZw=";
     };
   };
   lotspeed = {

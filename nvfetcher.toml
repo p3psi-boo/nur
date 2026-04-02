@@ -396,3 +396,8 @@ git.fetch_submodules = false
 [rime-custom-pinyin-dictionary]
 src.manual = "20260101"
 fetch.url = "https://github.com/wuhgit/CustomPinyinDictionary/releases/download/assets/CustomPinyinDictionary_Fcitx.dict"
+
+[clipboard-sync]
+src.github = "dnut/clipboard-sync"
+fetch.github = "dnut/clipboard-sync"
+
