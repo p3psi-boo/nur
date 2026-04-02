@@ -6,8 +6,37 @@
   jdk17,
   libpulseaudio,
   alsa-lib,
+  fontconfig,
+  freetype,
+  libGL,
+  libxkbcommon,
+  libx11,
+  libxcursor,
+  libxext,
+  libxi,
+  libxrandr,
+  libxrender,
+  libxtst,
 }:
 
+let
+  runtimeLibPath = lib.makeLibraryPath [
+    libpulseaudio
+    alsa-lib
+    fontconfig
+    freetype
+    libGL
+    libxkbcommon
+    libx11
+    libxcursor
+    libxext
+    libxi
+    libxrandr
+    libxrender
+    libxtst
+    stdenv.cc.cc.lib
+  ];
+in
 stdenv.mkDerivation (finalAttrs: {
   pname = "micyou";
   version = "1.1.5";
@@ -37,8 +66,34 @@ stdenv.mkDerivation (finalAttrs: {
     mkdir -p $out/bin
     makeWrapper $out/lib/micyou/MicYou.sh $out/bin/micyou \
       --prefix PATH : ${lib.makeBinPath [ jdk17 ]} \
-      --prefix LD_LIBRARY_PATH : ${lib.makeLibraryPath [ libpulseaudio alsa-lib ]} \
+      --prefix LD_LIBRARY_PATH : ${runtimeLibPath} \
       --set JAVA_HOME ${jdk17.home}
+
+    # Extract upstream app icon from bundled JAR resources for desktop integration.
+    tmpDir="$(mktemp -d)"
+    (
+      cd "$tmpDir"
+      ${jdk17}/bin/jar xf "$out/lib/micyou/lib/MicYou.jar" \
+        composeResources/micyou.composeapp.generated.resources/drawable/app_icon.png
+    )
+
+    install -Dm644 \
+      "$tmpDir/composeResources/micyou.composeapp.generated.resources/drawable/app_icon.png" \
+      "$out/share/icons/hicolor/256x256/apps/micyou.png"
+
+    install -d "$out/share/applications"
+    cat > "$out/share/applications/micyou.desktop" <<EOF
+[Desktop Entry]
+Name=MicYou
+Comment=Turn your Android device into a wireless microphone
+Exec=micyou
+Icon=micyou
+Terminal=false
+Type=Application
+Categories=AudioVideo;Audio;Utility;
+EOF
+
+    rm -rf "$tmpDir"
 
     runHook postInstall
   '';
