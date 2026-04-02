@@ -64,7 +64,10 @@ let
     # 使用主源码的 packaging/fcitx5 子目录
     src = sourceInfo.src;
 
-    sourceRoot = "source/packaging/fcitx5";
+    # 动态设置 sourceRoot，因为 fetchgit 的目录名是 coe-<rev>
+    setSourceRoot = ''
+      export sourceRoot=$(echo */packaging/fcitx5)
+    '';
 
     nativeBuildInputs = [
       cmake
