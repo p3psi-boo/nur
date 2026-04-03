@@ -8,34 +8,34 @@
 {
   agent-browser = {
     pname = "agent-browser";
-    version = "v0.23.4";
+    version = "v0.24.0";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.4/agent-browser-linux-x64";
-      sha256 = "sha256-wAwmRsDkg+VcP1yJPFCiBlIRGTpvnt1xgLvFtQsVUm0=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.24.0/agent-browser-linux-x64";
+      sha256 = "sha256-on4af7W2YlIk+zxO/9OO77VkxSIwJAozYmWVnci+9PU=";
     };
   };
   agent-browser-darwin-arm64 = {
     pname = "agent-browser-darwin-arm64";
-    version = "v0.23.4";
+    version = "v0.24.0";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.4/agent-browser-darwin-arm64";
-      sha256 = "sha256-e5nloROfSRWqpKxQXYKtt4rAjBJ9fEVDh14lnt3uzeo=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.24.0/agent-browser-darwin-arm64";
+      sha256 = "sha256-wmsZt5Hy9hlkw6u5LnnSIXUaKft+NvSoldUGzFlt9jc=";
     };
   };
   agent-browser-darwin-x64 = {
     pname = "agent-browser-darwin-x64";
-    version = "v0.23.4";
+    version = "v0.24.0";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.4/agent-browser-darwin-x64";
-      sha256 = "sha256-i4RGvsj+TLXZoI4eIbh3j2rs2Mx0Jsz7TE0iqmHM8RA=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.24.0/agent-browser-darwin-x64";
+      sha256 = "sha256-CNGWt4VrpfOsWJqZFzko8MItgPjr80LGCOIPJqDSO0o=";
     };
   };
   agent-browser-linux-arm64 = {
     pname = "agent-browser-linux-arm64";
-    version = "v0.23.4";
+    version = "v0.24.0";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.4/agent-browser-linux-arm64";
-      sha256 = "sha256-BHhqm61Seiv7pDIwe1Aqk6q8QEPnBysqGyCs88hrdN4=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.24.0/agent-browser-linux-arm64";
+      sha256 = "sha256-YUEZCO5H/nlbV/G5FCg3581YYA0FUj+1qcAVxGvNTk8=";
     };
   };
   agsh = {
@@ -47,6 +47,17 @@
       rev = "0.6.1";
       fetchSubmodules = false;
       sha256 = "sha256-ILMLri+dEt1xZwJB5OBnA76WTffHZiAOqeb7lD1lkg8=";
+    };
+  };
+  bb-browser = {
+    pname = "bb-browser";
+    version = "bb-browser-v0.11.2";
+    src = fetchFromGitHub {
+      owner = "epiral";
+      repo = "bb-browser";
+      rev = "bb-browser-v0.11.2";
+      fetchSubmodules = false;
+      sha256 = "sha256-DoAd8oN4Il5xGHkcDKgmLczUYj0D0PvxhbSmnDYb+wI=";
     };
   };
   bcut-asr = {
@@ -62,34 +73,6 @@
       sha256 = "sha256-uGhqogSabFpuWQ1h88oXrCOPuJPyfuR9nx8Ug5WbUl0=";
     };
     date = "2026-01-14";
-  };
-  bifrost-http = {
-    pname = "bifrost-http";
-    version = "e662fc411a47ecb71f1ac71d611c8866b2ef9a05";
-    src = fetchgit {
-      url = "https://github.com/maximhq/bifrost.git";
-      rev = "e662fc411a47ecb71f1ac71d611c8866b2ef9a05";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-hiJkLYmWUB+Ffp4bB+njiPUrx1NTYiSiwoMMbNe2eEE=";
-    };
-    date = "2026-04-02";
-  };
-  bifrost-ui = {
-    pname = "bifrost-ui";
-    version = "e662fc411a47ecb71f1ac71d611c8866b2ef9a05";
-    src = fetchgit {
-      url = "https://github.com/maximhq/bifrost.git";
-      rev = "e662fc411a47ecb71f1ac71d611c8866b2ef9a05";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-hiJkLYmWUB+Ffp4bB+njiPUrx1NTYiSiwoMMbNe2eEE=";
-    };
-    date = "2026-04-02";
   };
   binsider-bin = {
     pname = "binsider-bin";
@@ -172,28 +155,14 @@
   };
   cliproxyapi = {
     pname = "cliproxyapi";
-    version = "v6.9.9";
+    version = "v6.9.10";
     src = fetchFromGitHub {
       owner = "router-for-me";
       repo = "CLIProxyAPI";
-      rev = "v6.9.9";
+      rev = "v6.9.10";
       fetchSubmodules = false;
-      sha256 = "sha256-XArasVTzQFJIl5Hh2YAX2w3NSXhvBBKtNfLvXfT0Je0=";
+      sha256 = "sha256-RTnrFbrtgF0/5AivxW2w9r0w/kXrZpSevdB2uL6W/+c=";
     };
-  };
-  cloudflarespeedtest = {
-    pname = "cloudflarespeedtest";
-    version = "1e4400bc9a49c661df161fd7b1d9257a4205eb35";
-    src = fetchgit {
-      url = "https://github.com/XIU2/CloudflareSpeedTest.git";
-      rev = "1e4400bc9a49c661df161fd7b1d9257a4205eb35";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-bv7WUKrl7WDtQUwxrmj5Mr9Z0/78ICrvSBqnZMdKGa4=";
-    };
-    date = "2026-03-27";
   };
   cnb-cli = {
     pname = "cnb-cli";
@@ -357,34 +326,6 @@
     };
     date = "2026-03-21";
   };
-  gkeep = {
-    pname = "gkeep";
-    version = "d786fd6401becc2d9d55c23f290249ff03c3bc11";
-    src = fetchgit {
-      url = "https://github.com/Nekmo/gkeep.git";
-      rev = "d786fd6401becc2d9d55c23f290249ff03c3bc11";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-c1wE/lI3EqL3mjbrVJySBE//9JLdlZqekylKfeWLX3M=";
-    };
-    date = "2023-08-06";
-  };
-  gkeepapi = {
-    pname = "gkeepapi";
-    version = "1a94b25c18a7abfdc23d1412091129cd63652877";
-    src = fetchgit {
-      url = "https://github.com/kiwiz/gkeepapi.git";
-      rev = "1a94b25c18a7abfdc23d1412091129cd63652877";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-3NT6GFVcN4HDPbcJAmino0FXmyoohZWl/kQqFzJTnbw=";
-    };
-    date = "2026-01-05";
-  };
   grok2api = {
     pname = "grok2api";
     version = "5a81a63c2d92a9f5495c1098b15eb2fe133f9842";
@@ -446,20 +387,6 @@
       sha256 = "sha256-QHiZPYFwDQzbXVSuhwzQqBRXlkG9QVU+Jl6SKvBoCwQ=";
     };
   };
-  kylin-virtual-keyboard = {
-    pname = "kylin-virtual-keyboard";
-    version = "2a1cc5eb73c9fd5920c3d388767173ccd155c596";
-    src = fetchgit {
-      url = "https://gitee.com/openkylin/kylin-virtual-keyboard.git";
-      rev = "2a1cc5eb73c9fd5920c3d388767173ccd155c596";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-oJzxpUr/A6ARIzhf+UGeFTTig7Fgh4wpAvHCiW64b2Y=";
-    };
-    date = "2026-01-30";
-  };
   lazyssh = {
     pname = "lazyssh";
     version = "48995806bf1aa1c9c41bb8dff6b5ddd698539311";
@@ -473,17 +400,6 @@
       sha256 = "sha256-/jywzjLZ51nSbiDbhw3H1eES3p0sZ9MSayGjJFQ+RKM=";
     };
     date = "2025-11-28";
-  };
-  liteparse = {
-    pname = "liteparse";
-    version = "v1.4.3";
-    src = fetchFromGitHub {
-      owner = "run-llama";
-      repo = "liteparse";
-      rev = "v1.4.3";
-      fetchSubmodules = false;
-      sha256 = "sha256-/8+54ZJI3JfEhbqRBd+jwaPP5BGTqq2MooSo1tTZoZw=";
-    };
   };
   lotspeed = {
     pname = "lotspeed";
@@ -559,13 +475,13 @@
   };
   openalice = {
     pname = "openalice";
-    version = "v0.9.0-beta.8";
+    version = "v0.9.0-beta.9";
     src = fetchFromGitHub {
       owner = "TraderAlice";
       repo = "OpenAlice";
-      rev = "v0.9.0-beta.8";
+      rev = "v0.9.0-beta.9";
       fetchSubmodules = false;
-      sha256 = "sha256-yXl+UYelMG/R1Ve2K34mvyFsZoEPW+WeExUMOogrT7w=";
+      sha256 = "sha256-t73VBQwEWYvdFkVM5BBLVcgpT0gDPlgsXcm9cjlCFKg=";
     };
   };
   openixcli = {
@@ -609,20 +525,6 @@
       sha256 = "sha256-8S2uS6PgjxVzQA1gYVrEeZjnACXt3ADneDe1MlRNb/g=";
     };
     date = "2026-03-16";
-  };
-  planify = {
-    pname = "planify";
-    version = "3aaf86ba8503916b16c758cdb0a6b83a80d7de64";
-    src = fetchgit {
-      url = "https://github.com/alainm23/planify.git";
-      rev = "3aaf86ba8503916b16c758cdb0a6b83a80d7de64";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-Uemppi8LtT0p+cGLikYhc5GdKIRrCMNvHapzyKrYs3I=";
-    };
-    date = "2026-04-02";
   };
   polymarket-cli = {
     pname = "polymarket-cli";
@@ -699,17 +601,6 @@
       rev = "v1.0.3";
       fetchSubmodules = false;
       sha256 = "sha256-hVHdio3IlOU7kJwBXFuKNVTBKf+IpnamTokRPdyQ1Q0=";
-    };
-  };
-  quicssh = {
-    pname = "quicssh";
-    version = "v1.0.0";
-    src = fetchFromGitHub {
-      owner = "moul";
-      repo = "quicssh";
-      rev = "v1.0.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-/VPPgoRPUeY/AeJO5iC7ilLQReoUPPxhhUPpKgI3L6s=";
     };
   };
   realitlscanner = {
@@ -883,13 +774,13 @@
   };
   vllm = {
     pname = "vllm";
-    version = "v0.18.1";
+    version = "v0.19.0";
     src = fetchFromGitHub {
       owner = "vllm-project";
       repo = "vllm";
-      rev = "v0.18.1";
+      rev = "v0.19.0";
       fetchSubmodules = false;
-      sha256 = "sha256-oFlvsBqyskI30ZeTQRs2UiDCqejDSbU8PnBEG0LF+vw=";
+      sha256 = "sha256-0gM52DDfLzkE4QXCGR3c3Jq4CQ1PrnDj4Ky0lsUJ2a8=";
     };
   };
   web-search = {
@@ -941,19 +832,5 @@
       fetchSubmodules = false;
       sha256 = "sha256-Igbr3L2W32s4uBepllSz07bkbI3qwAKMZkBrXLqGrGA=";
     };
-  };
-  yt-media-storage = {
-    pname = "yt-media-storage";
-    version = "ebec9e6b5daa6acb915270618937b2901ecec7ed";
-    src = fetchgit {
-      url = "https://github.com/PulseBeat02/yt-media-storage.git";
-      rev = "ebec9e6b5daa6acb915270618937b2901ecec7ed";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-OAewbY2Pr3J8uHigOqJOVplKOx+hFD3N+/Z8PFN9ZFw=";
-    };
-    date = "2026-03-24";
   };
 }

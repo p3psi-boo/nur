@@ -8,17 +8,6 @@ src.git = "https://github.com/uk0/lotspeed.git"
 fetch.git = "https://github.com/uk0/lotspeed.git"
 git.fetch_submodules = false
 
-[gkeep]
-src.git = "https://github.com/Nekmo/gkeep.git"
-fetch.git = "https://github.com/Nekmo/gkeep.git"
-git.fetch_submodules = false
-
-[gkeepapi]
-src.git = "https://github.com/kiwiz/gkeepapi.git"
-fetch.git = "https://github.com/kiwiz/gkeepapi.git"
-git.fetch_submodules = false
-
-
 [einat]
 src.git = "https://github.com/EHfive/einat-ebpf.git"
 fetch.git = "https://github.com/EHfive/einat-ebpf.git"
@@ -28,11 +17,6 @@ git.fetch_submodules = false
 src.git = "https://github.com/duckdb/pg_duckdb.git"
 fetch.git = "https://github.com/duckdb/pg_duckdb.git"
 git.fetch_submodules = true
-
-[planify]
-src.git = "https://github.com/alainm23/planify.git"
-fetch.git = "https://github.com/alainm23/planify.git"
-git.fetch_submodules = false
 
 [tcp-brutal]
 src.git = "https://github.com/apernet/tcp-brutal.git"
@@ -53,18 +37,9 @@ src.github_tag = "thellimist/clihub"
 src.include_regex = "^v[0-9].*"
 fetch.github = "thellimist/clihub"
 
-[cloudflarespeedtest]
-src.git = "https://github.com/XIU2/CloudflareSpeedTest.git"
-fetch.git = "https://github.com/XIU2/CloudflareSpeedTest.git"
-git.fetch_submodules = false
-
 [agsh]
 src.github = "k4yt3x/agsh"
 fetch.github = "k4yt3x/agsh"
-
-[quicssh]
-src.github = "moul/quicssh"
-fetch.github = "moul/quicssh"
 
 [dagu]
 src.github = "dagu-org/dagu"
@@ -112,8 +87,6 @@ fetch.github = "damonto/sigmo"
 [vanissh]
 src.git = "https://github.com/k4yt3x/vanissh.git"
 fetch.git = "https://github.com/k4yt3x/vanissh.git"
-
-
 
 [ggwave-to-file]
 src.git = "https://github.com/ggerganov/ggwave.git"
@@ -179,19 +152,10 @@ fetch.url = "https://github.com/topjohnwu/Magisk/releases/download/$ver/Magisk-$
 src.git = "https://github.com/p3psi-boo/srv.us.git"
 fetch.git = "https://github.com/p3psi-boo/srv.us.git"
 
-[yt-media-storage]
-src.git = "https://github.com/PulseBeat02/yt-media-storage.git"
-fetch.git = "https://github.com/PulseBeat02/yt-media-storage.git"
-
 [vikunja-cli]
 src.git = "https://github.com/p3psi-boo/vikunja-cli.git"
 fetch.git = "https://github.com/p3psi-boo/vikunja-cli.git"
 git.fetch_submodules = false
-
-[liteparse]
-src.github_tag = "run-llama/liteparse"
-src.include_regex = "^v[0-9].*"
-fetch.github = "run-llama/liteparse"
 
 [polymarket-cli]
 src.github = "Polymarket/polymarket-cli"
@@ -204,12 +168,6 @@ fetch.url = "https://github.com/Polymarket/polymarket-cli/releases/download/$ver
 [inet-speed-cli]
 src.github = "tsosunchia/iNetSpeed-CLI"
 fetch.github = "tsosunchia/iNetSpeed-CLI"
-
-[kylin-virtual-keyboard]
-src.git = "https://gitee.com/openkylin/kylin-virtual-keyboard.git"
-fetch.git = "https://gitee.com/openkylin/kylin-virtual-keyboard.git"
-src.branch = "upstream"
-git.fetch_submodules = false
 
 [qmdr]
 src.github_tag = "uf-hy/qmdr"
@@ -325,17 +283,6 @@ src.github_tag = "philschmid/mcp-cli"
 src.include_regex = "^v[0-9].*"
 fetch.github = "philschmid/mcp-cli"
 
-
-[bifrost-http]
-src.git = "https://github.com/maximhq/bifrost.git"
-fetch.git = "https://github.com/maximhq/bifrost.git"
-git.fetchSubmodules = false
-
-[bifrost-ui]
-src.git = "https://github.com/maximhq/bifrost.git"
-fetch.git = "https://github.com/maximhq/bifrost.git"
-git.fetchSubmodules = false
-
 [octopus-api]
 src.github_tag = "bestruirui/octopus"
 src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
@@ -401,4 +348,11 @@ fetch.url = "https://github.com/wuhgit/CustomPinyinDictionary/releases/download/
 [clipboard-sync]
 src.github = "dnut/clipboard-sync"
 fetch.github = "dnut/clipboard-sync"
+
+# bb-browser - BadBoy Browser CLI + MCP server
+[bb-browser]
+src.github = "epiral/bb-browser"
+fetch.github = "epiral/bb-browser"
+pinned = true
+
 
