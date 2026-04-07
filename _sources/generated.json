@@ -8,11 +8,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-wAwmRsDkg+VcP1yJPFCiBlIRGTpvnt1xgLvFtQsVUm0=",
+            "sha256": "sha256-on4af7W2YlIk+zxO/9OO77VkxSIwJAozYmWVnci+9PU=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.4/agent-browser-linux-x64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.24.0/agent-browser-linux-x64"
         },
-        "version": "v0.23.4"
+        "version": "v0.24.0"
     },
     "agent-browser-darwin-arm64": {
         "cargoLock": null,
@@ -23,11 +23,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-e5nloROfSRWqpKxQXYKtt4rAjBJ9fEVDh14lnt3uzeo=",
+            "sha256": "sha256-wmsZt5Hy9hlkw6u5LnnSIXUaKft+NvSoldUGzFlt9jc=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.4/agent-browser-darwin-arm64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.24.0/agent-browser-darwin-arm64"
         },
-        "version": "v0.23.4"
+        "version": "v0.24.0"
     },
     "agent-browser-darwin-x64": {
         "cargoLock": null,
@@ -38,11 +38,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-i4RGvsj+TLXZoI4eIbh3j2rs2Mx0Jsz7TE0iqmHM8RA=",
+            "sha256": "sha256-CNGWt4VrpfOsWJqZFzko8MItgPjr80LGCOIPJqDSO0o=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.4/agent-browser-darwin-x64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.24.0/agent-browser-darwin-x64"
         },
-        "version": "v0.23.4"
+        "version": "v0.24.0"
     },
     "agent-browser-linux-arm64": {
         "cargoLock": null,
@@ -53,11 +53,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-BHhqm61Seiv7pDIwe1Aqk6q8QEPnBysqGyCs88hrdN4=",
+            "sha256": "sha256-YUEZCO5H/nlbV/G5FCg3581YYA0FUj+1qcAVxGvNTk8=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.23.4/agent-browser-linux-arm64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.24.0/agent-browser-linux-arm64"
         },
-        "version": "v0.23.4"
+        "version": "v0.24.0"
     },
     "agsh": {
         "cargoLock": null,
@@ -80,6 +80,27 @@
         },
         "version": "0.6.1"
     },
+    "bb-browser": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "bb-browser",
+        "passthru": null,
+        "pinned": true,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "epiral",
+            "repo": "bb-browser",
+            "rev": "bb-browser-v0.11.2",
+            "sha256": "sha256-DoAd8oN4Il5xGHkcDKgmLczUYj0D0PvxhbSmnDYb+wI=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "bb-browser-v0.11.2"
+    },
     "bcut-asr": {
         "cargoLock": null,
         "date": "2026-01-14",
@@ -99,46 +120,6 @@
             "url": "https://github.com/p3psi-boo/bcut-asr-go.git"
         },
         "version": "07fc48213a415490da1ae40cd8988a087cb02ec6"
-    },
-    "bifrost-http": {
-        "cargoLock": null,
-        "date": "2026-04-02",
-        "extract": null,
-        "name": "bifrost-http",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "0d0d494328005ceb674c35b0255270f0f9aca18d",
-            "sha256": "sha256-0Jb5GBDzNSg5qF4YnTh9FxtVRVMUs4wlwC/Cm415P5Q=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/maximhq/bifrost.git"
-        },
-        "version": "0d0d494328005ceb674c35b0255270f0f9aca18d"
-    },
-    "bifrost-ui": {
-        "cargoLock": null,
-        "date": "2026-04-02",
-        "extract": null,
-        "name": "bifrost-ui",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "0d0d494328005ceb674c35b0255270f0f9aca18d",
-            "sha256": "sha256-0Jb5GBDzNSg5qF4YnTh9FxtVRVMUs4wlwC/Cm415P5Q=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/maximhq/bifrost.git"
-        },
-        "version": "0d0d494328005ceb674c35b0255270f0f9aca18d"
     },
     "binsider-bin": {
         "cargoLock": null,
@@ -297,32 +278,12 @@
             "name": null,
             "owner": "router-for-me",
             "repo": "CLIProxyAPI",
-            "rev": "v6.9.7",
-            "sha256": "sha256-KlVn7Pi7Gr67vpFME2f/9RIYnZJxP2A8UrzUNP5f1Ug=",
+            "rev": "v6.9.10",
+            "sha256": "sha256-RTnrFbrtgF0/5AivxW2w9r0w/kXrZpSevdB2uL6W/+c=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v6.9.7"
-    },
-    "cloudflarespeedtest": {
-        "cargoLock": null,
-        "date": "2026-03-27",
-        "extract": null,
-        "name": "cloudflarespeedtest",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "1e4400bc9a49c661df161fd7b1d9257a4205eb35",
-            "sha256": "sha256-bv7WUKrl7WDtQUwxrmj5Mr9Z0/78ICrvSBqnZMdKGa4=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/XIU2/CloudflareSpeedTest.git"
-        },
-        "version": "1e4400bc9a49c661df161fd7b1d9257a4205eb35"
+        "version": "v6.9.10"
     },
     "cnb-cli": {
         "cargoLock": null,
@@ -361,7 +322,7 @@
     },
     "coe": {
         "cargoLock": null,
-        "date": null,
+        "date": "2026-04-02",
         "extract": null,
         "name": "coe",
         "passthru": null,
@@ -371,14 +332,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "owner": "quailyquaily",
-            "repo": "coe",
-            "rev": "v0.1.3",
-            "sha256": "sha256-uRCU7M51ja//mHQZWjZn19JX62+ZC9e6JuT7qj8Vw3o=",
+            "rev": "8ce49ed06b88dc610d34b04acfd03bfdc0f78787",
+            "sha256": "sha256-I1KFljvfmZ2pwOvqSMrvO6rZfvdA6xrFR2j8eEkgq94=",
             "sparseCheckout": [],
-            "type": "github"
+            "type": "git",
+            "url": "https://github.com/p3psi-boo/coe.git"
         },
-        "version": "v0.1.3"
+        "version": "8ce49ed06b88dc610d34b04acfd03bfdc0f78787"
     },
     "dagu": {
         "cargoLock": null,
@@ -599,46 +559,6 @@
         },
         "version": "a38e38b7373f9adf45baf737a104206664b225a1"
     },
-    "gkeep": {
-        "cargoLock": null,
-        "date": "2023-08-06",
-        "extract": null,
-        "name": "gkeep",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "d786fd6401becc2d9d55c23f290249ff03c3bc11",
-            "sha256": "sha256-c1wE/lI3EqL3mjbrVJySBE//9JLdlZqekylKfeWLX3M=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/Nekmo/gkeep.git"
-        },
-        "version": "d786fd6401becc2d9d55c23f290249ff03c3bc11"
-    },
-    "gkeepapi": {
-        "cargoLock": null,
-        "date": "2026-01-05",
-        "extract": null,
-        "name": "gkeepapi",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "1a94b25c18a7abfdc23d1412091129cd63652877",
-            "sha256": "sha256-3NT6GFVcN4HDPbcJAmino0FXmyoohZWl/kQqFzJTnbw=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/kiwiz/gkeepapi.git"
-        },
-        "version": "1a94b25c18a7abfdc23d1412091129cd63652877"
-    },
     "grok2api": {
         "cargoLock": null,
         "date": "2026-03-28",
@@ -742,26 +662,6 @@
         },
         "version": "v1.6.6"
     },
-    "kylin-virtual-keyboard": {
-        "cargoLock": null,
-        "date": "2026-01-30",
-        "extract": null,
-        "name": "kylin-virtual-keyboard",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "2a1cc5eb73c9fd5920c3d388767173ccd155c596",
-            "sha256": "sha256-oJzxpUr/A6ARIzhf+UGeFTTig7Fgh4wpAvHCiW64b2Y=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://gitee.com/openkylin/kylin-virtual-keyboard.git"
-        },
-        "version": "2a1cc5eb73c9fd5920c3d388767173ccd155c596"
-    },
     "lazyssh": {
         "cargoLock": null,
         "date": "2025-11-28",
@@ -781,27 +681,6 @@
             "url": "https://github.com/p3psi-boo/lazyssh.git"
         },
         "version": "48995806bf1aa1c9c41bb8dff6b5ddd698539311"
-    },
-    "liteparse": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "liteparse",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "run-llama",
-            "repo": "liteparse",
-            "rev": "v1.4.3",
-            "sha256": "sha256-/8+54ZJI3JfEhbqRBd+jwaPP5BGTqq2MooSo1tTZoZw=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "v1.4.3"
     },
     "lotspeed": {
         "cargoLock": null,
@@ -934,12 +813,12 @@
             "name": null,
             "owner": "TraderAlice",
             "repo": "OpenAlice",
-            "rev": "v0.9.0-beta.8",
-            "sha256": "sha256-yXl+UYelMG/R1Ve2K34mvyFsZoEPW+WeExUMOogrT7w=",
+            "rev": "v0.9.0-beta.9",
+            "sha256": "sha256-t73VBQwEWYvdFkVM5BBLVcgpT0gDPlgsXcm9cjlCFKg=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.9.0-beta.8"
+        "version": "v0.9.0-beta.9"
     },
     "openixcli": {
         "cargoLock": null,
@@ -1000,26 +879,6 @@
             "url": "https://github.com/duckdb/pg_duckdb.git"
         },
         "version": "318ee16cd8c647daa89198a675039726626f44b9"
-    },
-    "planify": {
-        "cargoLock": null,
-        "date": "2026-03-27",
-        "extract": null,
-        "name": "planify",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "904f0ae34b962510a8e35b8d9faf432941df1837",
-            "sha256": "sha256-hu04aluqcK2I3Vf644cRn43oD2C9bwS8J737mFn0o1U=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/alainm23/planify.git"
-        },
-        "version": "904f0ae34b962510a8e35b8d9faf432941df1837"
     },
     "polymarket-cli": {
         "cargoLock": null,
@@ -1153,27 +1012,6 @@
             "type": "github"
         },
         "version": "v1.0.3"
-    },
-    "quicssh": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "quicssh",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "moul",
-            "repo": "quicssh",
-            "rev": "v1.0.0",
-            "sha256": "sha256-/VPPgoRPUeY/AeJO5iC7ilLQReoUPPxhhUPpKgI3L6s=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "v1.0.0"
     },
     "realitlscanner": {
         "cargoLock": null,
@@ -1471,12 +1309,12 @@
             "name": null,
             "owner": "vllm-project",
             "repo": "vllm",
-            "rev": "v0.18.1",
-            "sha256": "sha256-oFlvsBqyskI30ZeTQRs2UiDCqejDSbU8PnBEG0LF+vw=",
+            "rev": "v0.19.0",
+            "sha256": "sha256-0gM52DDfLzkE4QXCGR3c3Jq4CQ1PrnDj4Ky0lsUJ2a8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.18.1"
+        "version": "v0.19.0"
     },
     "web-search": {
         "cargoLock": null,
@@ -1559,25 +1397,5 @@
             "type": "github"
         },
         "version": "v0.4.1"
-    },
-    "yt-media-storage": {
-        "cargoLock": null,
-        "date": "2026-03-24",
-        "extract": null,
-        "name": "yt-media-storage",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "ebec9e6b5daa6acb915270618937b2901ecec7ed",
-            "sha256": "sha256-OAewbY2Pr3J8uHigOqJOVplKOx+hFD3N+/Z8PFN9ZFw=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/PulseBeat02/yt-media-storage.git"
-        },
-        "version": "ebec9e6b5daa6acb915270618937b2901ecec7ed"
     }
 }
