@@ -50,11 +50,6 @@ src.git = "https://github.com/42futures/firm.git"
 fetch.git = "https://github.com/42futures/firm.git"
 git.fetchSubmodules = true
 
-[worktrunk]
-src.github = "max-sixty/worktrunk"
-fetch.github = "max-sixty/worktrunk"
-pinned = true
-
 [realitlscanner]
 src.github = "XTLS/RealiTLScanner"
 fetch.github = "XTLS/RealiTLScanner"

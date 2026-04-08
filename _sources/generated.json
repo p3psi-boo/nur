@@ -1356,27 +1356,6 @@
         },
         "version": "06346a4305f8f8c5ced633c3e0dc38b3bb960e6e"
     },
-    "worktrunk": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "worktrunk",
-        "passthru": null,
-        "pinned": true,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "max-sixty",
-            "repo": "worktrunk",
-            "rev": "v0.21.0",
-            "sha256": "sha256-quFet61FkksyBtF+tKM3Q1qh1Z02U3fovSm5ObU5HM4=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "v0.21.0"
-    },
     "wsl-vpnkit": {
         "cargoLock": null,
         "date": null,

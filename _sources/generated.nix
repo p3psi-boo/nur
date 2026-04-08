@@ -811,17 +811,6 @@
     };
     date = "2025-12-24";
   };
-  worktrunk = {
-    pname = "worktrunk";
-    version = "v0.21.0";
-    src = fetchFromGitHub {
-      owner = "max-sixty";
-      repo = "worktrunk";
-      rev = "v0.21.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-quFet61FkksyBtF+tKM3Q1qh1Z02U3fovSm5ObU5HM4=";
-    };
-  };
   wsl-vpnkit = {
     pname = "wsl-vpnkit";
     version = "v0.4.1";
