@@ -518,11 +518,11 @@
         },
         "version": "v2.11.1"
     },
-    "focaltech-spi": {
+    "focaltech-fingerprint": {
         "cargoLock": null,
         "date": "2025-10-21",
         "extract": null,
-        "name": "focaltech-spi",
+        "name": "focaltech-fingerprint",
         "passthru": null,
         "pinned": false,
         "src": {

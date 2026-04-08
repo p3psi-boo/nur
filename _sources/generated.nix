@@ -301,8 +301,8 @@
       sha256 = "sha256-4jCOCx6bLrugIrTRz/Ut/SIMknMTXgyJJINxA9SljCA=";
     };
   };
-  focaltech-spi = {
-    pname = "focaltech-spi";
+  focaltech-fingerprint = {
+    pname = "focaltech-fingerprint";
     version = "d4fbbf901aff44b92d4fa212d9b99e43cda00563";
     src = fetchgit {
       url = "https://github.com/vobademi/FTEXX00-Ubuntu.git";

@@ -323,8 +323,8 @@ src.git = "https://github.com/JinchengGao-Infty/grok2api.git"
 fetch.git = "https://github.com/JinchengGao-Infty/grok2api.git"
 git.fetch_submodules = false
 
-# Focaltech fingerprint reader SPI driver
-[focaltech-spi]
+# Focaltech fingerprint reader driver bundle
+[focaltech-fingerprint]
 src.git = "https://github.com/vobademi/FTEXX00-Ubuntu.git"
 fetch.git = "https://github.com/vobademi/FTEXX00-Ubuntu.git"
 git.fetch_submodules = false
