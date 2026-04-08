@@ -8,11 +8,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-on4af7W2YlIk+zxO/9OO77VkxSIwJAozYmWVnci+9PU=",
+            "sha256": "sha256-Gz2yACXgm0sgjgOV3A/53zpSOL3gxGF5Uf88EaAYXXQ=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.24.0/agent-browser-linux-x64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.25.3/agent-browser-linux-x64"
         },
-        "version": "v0.24.0"
+        "version": "v0.25.3"
     },
     "agent-browser-darwin-arm64": {
         "cargoLock": null,
@@ -23,11 +23,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-wmsZt5Hy9hlkw6u5LnnSIXUaKft+NvSoldUGzFlt9jc=",
+            "sha256": "sha256-B+NSLy6zEF1+nP0rOf6JGpHIsCmOz4JFYqvo161VxbI=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.24.0/agent-browser-darwin-arm64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.25.3/agent-browser-darwin-arm64"
         },
-        "version": "v0.24.0"
+        "version": "v0.25.3"
     },
     "agent-browser-darwin-x64": {
         "cargoLock": null,
@@ -38,11 +38,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-CNGWt4VrpfOsWJqZFzko8MItgPjr80LGCOIPJqDSO0o=",
+            "sha256": "sha256-a6i25NInQQmcwLCQxElyS/X2J8LgP8ZCmdYTxdzCEME=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.24.0/agent-browser-darwin-x64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.25.3/agent-browser-darwin-x64"
         },
-        "version": "v0.24.0"
+        "version": "v0.25.3"
     },
     "agent-browser-linux-arm64": {
         "cargoLock": null,
@@ -53,11 +53,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-YUEZCO5H/nlbV/G5FCg3581YYA0FUj+1qcAVxGvNTk8=",
+            "sha256": "sha256-cd8GYQvLQ+zYPuDiKhhqdseF8vSMWBUG+DaL2Y4+g5o=",
             "type": "url",
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.24.0/agent-browser-linux-arm64"
+            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.25.3/agent-browser-linux-arm64"
         },
-        "version": "v0.24.0"
+        "version": "v0.25.3"
     },
     "agsh": {
         "cargoLock": null,
@@ -73,12 +73,12 @@
             "name": null,
             "owner": "k4yt3x",
             "repo": "agsh",
-            "rev": "0.6.1",
-            "sha256": "sha256-ILMLri+dEt1xZwJB5OBnA76WTffHZiAOqeb7lD1lkg8=",
+            "rev": "0.7.1",
+            "sha256": "sha256-0hKVysJ0120RKJ48ubXtdwHsgQGDOWWLajuqlvbwc74=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "0.6.1"
+        "version": "0.7.1"
     },
     "bb-browser": {
         "cargoLock": null,
@@ -278,12 +278,12 @@
             "name": null,
             "owner": "router-for-me",
             "repo": "CLIProxyAPI",
-            "rev": "v6.9.10",
-            "sha256": "sha256-RTnrFbrtgF0/5AivxW2w9r0w/kXrZpSevdB2uL6W/+c=",
+            "rev": "v6.9.16",
+            "sha256": "sha256-MM9xPn8WYQsmjPbUA0W0DFUIclkfceVGZ16EpcDNOEk=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v6.9.10"
+        "version": "v6.9.16"
     },
     "cnb-cli": {
         "cargoLock": null,
@@ -314,11 +314,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-l539ySPRUHJCt09VQszTw5joHsXgktgJROD+NEk1mEk=",
+            "sha256": "sha256-8YxjquqAX+VbolgkNSATED1vnje8Gegxsi7B/N0SIPQ=",
             "type": "url",
-            "url": "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.10.tar.gz"
+            "url": "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.11.tar.gz"
         },
-        "version": "0.2.10"
+        "version": "0.2.11"
     },
     "coe": {
         "cargoLock": null,
@@ -354,12 +354,12 @@
             "name": null,
             "owner": "dagu-org",
             "repo": "dagu",
-            "rev": "v2.3.11",
-            "sha256": "sha256-BL6/+POgcsgL3ZQhR8zJN8kB1yGaX2MnOKXWtFBAmKI=",
+            "rev": "v2.4.3",
+            "sha256": "sha256-gaS+uUqi03Q3+KvWMEiWrKR2VNMfiGaLZh6aEHhiNWs=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.3.11"
+        "version": "v2.4.3"
     },
     "dalvikus": {
         "cargoLock": null,
@@ -426,11 +426,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-uDHndoBEu0S4DWQngKSL0wIqnBac++d6s5Eu1wtTjos=",
+            "sha256": "sha256-o7AoV75bm6mR4bn7nmvbA7dCEtpEe2IbuwKEN0g8NJo=",
             "type": "url",
-            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.1/fff-mcp-x86_64-unknown-linux-musl"
+            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.2/fff-mcp-x86_64-unknown-linux-musl"
         },
-        "version": "0.5.1"
+        "version": "0.5.2"
     },
     "fff-mcp-aarch64-linux": {
         "cargoLock": null,
@@ -441,11 +441,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-YNTQOFcNrhX+PVscIDZCStsRs27j8OOEoqAladT4emQ=",
+            "sha256": "sha256-MdDeiUghB2unOdzSA7zxpB+CRCbGGm9iO0iWfwgDHeY=",
             "type": "url",
-            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.1/fff-mcp-aarch64-unknown-linux-musl"
+            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.2/fff-mcp-aarch64-unknown-linux-musl"
         },
-        "version": "0.5.1"
+        "version": "0.5.2"
     },
     "fff-mcp-darwin-arm64": {
         "cargoLock": null,
@@ -456,11 +456,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-dAvbYsYycRyyq6gOIQ9ymJOilU+QuKkTc3yAKU3mOEE=",
+            "sha256": "sha256-RrK7HWAGrZxgNoBeG1MdY2cYqBprAQ0NwVzNKEbissk=",
             "type": "url",
-            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.1/fff-mcp-aarch64-apple-darwin"
+            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.2/fff-mcp-aarch64-apple-darwin"
         },
-        "version": "0.5.1"
+        "version": "0.5.2"
     },
     "fff-mcp-darwin-x64": {
         "cargoLock": null,
@@ -471,11 +471,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-C1HmPnGNEBWBCq9JZFzbxXVz4FzpplyflpSkJWnLH4k=",
+            "sha256": "sha256-OY7YYI5JHQW0s84BCqOYX/lnuLF0Rt2qTtuzLbIcdZ0=",
             "type": "url",
-            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.1/fff-mcp-x86_64-apple-darwin"
+            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.2/fff-mcp-x86_64-apple-darwin"
         },
-        "version": "0.5.1"
+        "version": "0.5.2"
     },
     "firm": {
         "cargoLock": null,
@@ -511,12 +511,12 @@
             "name": null,
             "owner": "Realiserad",
             "repo": "fish-ai",
-            "rev": "v2.10.6",
-            "sha256": "sha256-fhfuy6czBU6d8LdjnkcuB9aHXQ+Gs8rD8M5Z6dqwK/w=",
+            "rev": "v2.11.1",
+            "sha256": "sha256-4jCOCx6bLrugIrTRz/Ut/SIMknMTXgyJJINxA9SljCA=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.10.6"
+        "version": "v2.11.1"
     },
     "gac": {
         "cargoLock": null,

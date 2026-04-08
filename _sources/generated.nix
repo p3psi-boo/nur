@@ -8,45 +8,45 @@
 {
   agent-browser = {
     pname = "agent-browser";
-    version = "v0.24.0";
+    version = "v0.25.3";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.24.0/agent-browser-linux-x64";
-      sha256 = "sha256-on4af7W2YlIk+zxO/9OO77VkxSIwJAozYmWVnci+9PU=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.25.3/agent-browser-linux-x64";
+      sha256 = "sha256-Gz2yACXgm0sgjgOV3A/53zpSOL3gxGF5Uf88EaAYXXQ=";
     };
   };
   agent-browser-darwin-arm64 = {
     pname = "agent-browser-darwin-arm64";
-    version = "v0.24.0";
+    version = "v0.25.3";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.24.0/agent-browser-darwin-arm64";
-      sha256 = "sha256-wmsZt5Hy9hlkw6u5LnnSIXUaKft+NvSoldUGzFlt9jc=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.25.3/agent-browser-darwin-arm64";
+      sha256 = "sha256-B+NSLy6zEF1+nP0rOf6JGpHIsCmOz4JFYqvo161VxbI=";
     };
   };
   agent-browser-darwin-x64 = {
     pname = "agent-browser-darwin-x64";
-    version = "v0.24.0";
+    version = "v0.25.3";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.24.0/agent-browser-darwin-x64";
-      sha256 = "sha256-CNGWt4VrpfOsWJqZFzko8MItgPjr80LGCOIPJqDSO0o=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.25.3/agent-browser-darwin-x64";
+      sha256 = "sha256-a6i25NInQQmcwLCQxElyS/X2J8LgP8ZCmdYTxdzCEME=";
     };
   };
   agent-browser-linux-arm64 = {
     pname = "agent-browser-linux-arm64";
-    version = "v0.24.0";
+    version = "v0.25.3";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.24.0/agent-browser-linux-arm64";
-      sha256 = "sha256-YUEZCO5H/nlbV/G5FCg3581YYA0FUj+1qcAVxGvNTk8=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.25.3/agent-browser-linux-arm64";
+      sha256 = "sha256-cd8GYQvLQ+zYPuDiKhhqdseF8vSMWBUG+DaL2Y4+g5o=";
     };
   };
   agsh = {
     pname = "agsh";
-    version = "0.6.1";
+    version = "0.7.1";
     src = fetchFromGitHub {
       owner = "k4yt3x";
       repo = "agsh";
-      rev = "0.6.1";
+      rev = "0.7.1";
       fetchSubmodules = false;
-      sha256 = "sha256-ILMLri+dEt1xZwJB5OBnA76WTffHZiAOqeb7lD1lkg8=";
+      sha256 = "sha256-0hKVysJ0120RKJ48ubXtdwHsgQGDOWWLajuqlvbwc74=";
     };
   };
   bb-browser = {
@@ -155,13 +155,13 @@
   };
   cliproxyapi = {
     pname = "cliproxyapi";
-    version = "v6.9.10";
+    version = "v6.9.16";
     src = fetchFromGitHub {
       owner = "router-for-me";
       repo = "CLIProxyAPI";
-      rev = "v6.9.10";
+      rev = "v6.9.16";
       fetchSubmodules = false;
-      sha256 = "sha256-RTnrFbrtgF0/5AivxW2w9r0w/kXrZpSevdB2uL6W/+c=";
+      sha256 = "sha256-MM9xPn8WYQsmjPbUA0W0DFUIclkfceVGZ16EpcDNOEk=";
     };
   };
   cnb-cli = {
@@ -180,10 +180,10 @@
   };
   cocoindex-code = {
     pname = "cocoindex-code";
-    version = "0.2.10";
+    version = "0.2.11";
     src = fetchurl {
-      url = "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.10.tar.gz";
-      sha256 = "sha256-l539ySPRUHJCt09VQszTw5joHsXgktgJROD+NEk1mEk=";
+      url = "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.11.tar.gz";
+      sha256 = "sha256-8YxjquqAX+VbolgkNSATED1vnje8Gegxsi7B/N0SIPQ=";
     };
   };
   coe = {
@@ -202,13 +202,13 @@
   };
   dagu = {
     pname = "dagu";
-    version = "v2.3.11";
+    version = "v2.4.3";
     src = fetchFromGitHub {
       owner = "dagu-org";
       repo = "dagu";
-      rev = "v2.3.11";
+      rev = "v2.4.3";
       fetchSubmodules = false;
-      sha256 = "sha256-BL6/+POgcsgL3ZQhR8zJN8kB1yGaX2MnOKXWtFBAmKI=";
+      sha256 = "sha256-gaS+uUqi03Q3+KvWMEiWrKR2VNMfiGaLZh6aEHhiNWs=";
     };
   };
   dalvikus = {
@@ -246,34 +246,34 @@
   };
   fff-mcp = {
     pname = "fff-mcp";
-    version = "0.5.1";
+    version = "0.5.2";
     src = fetchurl {
-      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.1/fff-mcp-x86_64-unknown-linux-musl";
-      sha256 = "sha256-uDHndoBEu0S4DWQngKSL0wIqnBac++d6s5Eu1wtTjos=";
+      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.2/fff-mcp-x86_64-unknown-linux-musl";
+      sha256 = "sha256-o7AoV75bm6mR4bn7nmvbA7dCEtpEe2IbuwKEN0g8NJo=";
     };
   };
   fff-mcp-aarch64-linux = {
     pname = "fff-mcp-aarch64-linux";
-    version = "0.5.1";
+    version = "0.5.2";
     src = fetchurl {
-      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.1/fff-mcp-aarch64-unknown-linux-musl";
-      sha256 = "sha256-YNTQOFcNrhX+PVscIDZCStsRs27j8OOEoqAladT4emQ=";
+      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.2/fff-mcp-aarch64-unknown-linux-musl";
+      sha256 = "sha256-MdDeiUghB2unOdzSA7zxpB+CRCbGGm9iO0iWfwgDHeY=";
     };
   };
   fff-mcp-darwin-arm64 = {
     pname = "fff-mcp-darwin-arm64";
-    version = "0.5.1";
+    version = "0.5.2";
     src = fetchurl {
-      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.1/fff-mcp-aarch64-apple-darwin";
-      sha256 = "sha256-dAvbYsYycRyyq6gOIQ9ymJOilU+QuKkTc3yAKU3mOEE=";
+      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.2/fff-mcp-aarch64-apple-darwin";
+      sha256 = "sha256-RrK7HWAGrZxgNoBeG1MdY2cYqBprAQ0NwVzNKEbissk=";
     };
   };
   fff-mcp-darwin-x64 = {
     pname = "fff-mcp-darwin-x64";
-    version = "0.5.1";
+    version = "0.5.2";
     src = fetchurl {
-      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.1/fff-mcp-x86_64-apple-darwin";
-      sha256 = "sha256-C1HmPnGNEBWBCq9JZFzbxXVz4FzpplyflpSkJWnLH4k=";
+      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.2/fff-mcp-x86_64-apple-darwin";
+      sha256 = "sha256-OY7YYI5JHQW0s84BCqOYX/lnuLF0Rt2qTtuzLbIcdZ0=";
     };
   };
   firm = {
@@ -292,13 +292,13 @@
   };
   fish-ai = {
     pname = "fish-ai";
-    version = "v2.10.6";
+    version = "v2.11.1";
     src = fetchFromGitHub {
       owner = "Realiserad";
       repo = "fish-ai";
-      rev = "v2.10.6";
+      rev = "v2.11.1";
       fetchSubmodules = false;
-      sha256 = "sha256-fhfuy6czBU6d8LdjnkcuB9aHXQ+Gs8rD8M5Z6dqwK/w=";
+      sha256 = "sha256-4jCOCx6bLrugIrTRz/Ut/SIMknMTXgyJJINxA9SljCA=";
     };
   };
   gac = {
