@@ -323,6 +323,12 @@ src.git = "https://github.com/JinchengGao-Infty/grok2api.git"
 fetch.git = "https://github.com/JinchengGao-Infty/grok2api.git"
 git.fetch_submodules = false
 
+# Focaltech fingerprint reader SPI driver
+[focaltech-spi]
+src.git = "https://github.com/vobademi/FTEXX00-Ubuntu.git"
+fetch.git = "https://github.com/vobademi/FTEXX00-Ubuntu.git"
+git.fetch_submodules = false
+
 
 # RIME 自建拼音输入法词库
 # 注意：此包使用静态 URL 但内容会更新，版本需手动检查 GitHub releases 页面

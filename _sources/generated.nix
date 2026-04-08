@@ -301,16 +301,19 @@
       sha256 = "sha256-4jCOCx6bLrugIrTRz/Ut/SIMknMTXgyJJINxA9SljCA=";
     };
   };
-  gac = {
-    pname = "gac";
-    version = "v3.11.0";
-    src = fetchFromGitHub {
-      owner = "cellwebb";
-      repo = "gac";
-      rev = "v3.11.0";
+  focaltech-spi = {
+    pname = "focaltech-spi";
+    version = "d4fbbf901aff44b92d4fa212d9b99e43cda00563";
+    src = fetchgit {
+      url = "https://github.com/vobademi/FTEXX00-Ubuntu.git";
+      rev = "d4fbbf901aff44b92d4fa212d9b99e43cda00563";
       fetchSubmodules = false;
-      sha256 = "sha256-TQJtHMqC1reyrxG1SlLuzegeWwXjk7353DNxPko89Q0=";
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-0mnXEQjSWUrz8uSwaeWH6uLLZtGnSUx5OPBxjPNxFTs=";
     };
+    date = "2025-10-21";
   };
   ggwave-to-file = {
     pname = "ggwave-to-file";
@@ -693,20 +696,6 @@
       sha256 = "sha256-rx8JgQtelssslJhFAEKq73LsiHGPoML9Gxvw0lsLacI=";
     };
     date = "2024-07-27";
-  };
-  telegram-send = {
-    pname = "telegram-send";
-    version = "f5466fc2b8b8b9aaa55dd28fb80b6ae138b578d8";
-    src = fetchgit {
-      url = "https://github.com/rahiel/telegram-send.git";
-      rev = "f5466fc2b8b8b9aaa55dd28fb80b6ae138b578d8";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-kc6btKN+IclmbRx6Lko2Jw0XxVaKVo/AnhYsW6C2G4Y=";
-    };
-    date = "2026-01-27";
   };
   uber-apk-signer = {
     pname = "uber-apk-signer";

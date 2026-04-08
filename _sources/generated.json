@@ -518,26 +518,25 @@
         },
         "version": "v2.11.1"
     },
-    "gac": {
+    "focaltech-spi": {
         "cargoLock": null,
-        "date": null,
+        "date": "2025-10-21",
         "extract": null,
-        "name": "gac",
+        "name": "focaltech-spi",
         "passthru": null,
-        "pinned": true,
+        "pinned": false,
         "src": {
             "deepClone": false,
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "owner": "cellwebb",
-            "repo": "gac",
-            "rev": "v3.11.0",
-            "sha256": "sha256-TQJtHMqC1reyrxG1SlLuzegeWwXjk7353DNxPko89Q0=",
+            "rev": "d4fbbf901aff44b92d4fa212d9b99e43cda00563",
+            "sha256": "sha256-0mnXEQjSWUrz8uSwaeWH6uLLZtGnSUx5OPBxjPNxFTs=",
             "sparseCheckout": [],
-            "type": "github"
+            "type": "git",
+            "url": "https://github.com/vobademi/FTEXX00-Ubuntu.git"
         },
-        "version": "v3.11.0"
+        "version": "d4fbbf901aff44b92d4fa212d9b99e43cda00563"
     },
     "ggwave-to-file": {
         "cargoLock": null,
@@ -1172,26 +1171,6 @@
             "url": "https://github.com/apernet/tcp-brutal.git"
         },
         "version": "204aeea3437a83599c1c1fa1b97e4425cfdfc49d"
-    },
-    "telegram-send": {
-        "cargoLock": null,
-        "date": "2026-01-27",
-        "extract": null,
-        "name": "telegram-send",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "f5466fc2b8b8b9aaa55dd28fb80b6ae138b578d8",
-            "sha256": "sha256-kc6btKN+IclmbRx6Lko2Jw0XxVaKVo/AnhYsW6C2G4Y=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/rahiel/telegram-send.git"
-        },
-        "version": "f5466fc2b8b8b9aaa55dd28fb80b6ae138b578d8"
     },
     "uber-apk-signer": {
         "cargoLock": null,
