@@ -356,3 +356,9 @@ fetch.github = "epiral/bb-browser"
 pinned = true
 
 
+
+# substack-dl - Download all public posts from any Substack newsletter
+[substack-dl]
+src.git = "https://github.com/p3psi-boo/substack-dl.git"
+fetch.github = "p3psi-boo/substack-dl"
+
