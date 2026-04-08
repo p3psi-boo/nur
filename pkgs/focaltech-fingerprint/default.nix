@@ -37,7 +37,11 @@ let
       postPatch = lib.optionalString useAltDriver ''
         cp alt/focal_spi.c focal_spi.c
       '' + ''
-        if [ -e "${kernel.dev}/lib/modules/${kernel.modDirVersion}/build/include/linux/unaligned.h" ]; then
+        # Linux 6.18+ dropped asm/unaligned.h for out-of-tree module builds.
+        # The header lives under source/include/linux/unaligned.h in nixpkgs kernels.
+        if [ -e "${kernel.dev}/lib/modules/${kernel.modDirVersion}/build/source/include/linux/unaligned.h" ] \
+          || [ -e "${kernel.dev}/lib/modules/${kernel.modDirVersion}/source/include/linux/unaligned.h" ] \
+          || [ -e "${kernel.dev}/lib/modules/${kernel.modDirVersion}/build/include/linux/unaligned.h" ]; then
           substituteInPlace focal_spi.c \
             --replace-fail '<asm/unaligned.h>' '<linux/unaligned.h>'
         fi
