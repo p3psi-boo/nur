@@ -235,11 +235,6 @@ src.github_tag = "orhun/binsider"
 src.prefix = "v"
 fetch.url = "https://github.com/orhun/binsider/releases/download/v$ver/binsider-$ver-aarch64-apple-darwin.tar.gz"
 
-[telegram-send]
-src.git = "https://github.com/rahiel/telegram-send.git"
-fetch.git = "https://github.com/rahiel/telegram-send.git"
-src.branch = "master"
-
 [fish-ai]
 src.github_tag = "Realiserad/fish-ai"
 src.include_regex = "^v[0-9].*"
