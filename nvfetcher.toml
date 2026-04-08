@@ -55,11 +55,6 @@ src.github = "max-sixty/worktrunk"
 fetch.github = "max-sixty/worktrunk"
 pinned = true
 
-[gac]
-src.github = "cellwebb/gac"
-fetch.github = "cellwebb/gac"
-pinned = true
-
 [realitlscanner]
 src.github = "XTLS/RealiTLScanner"
 fetch.github = "XTLS/RealiTLScanner"
