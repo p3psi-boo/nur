@@ -155,13 +155,13 @@
   };
   cliproxyapi = {
     pname = "cliproxyapi";
-    version = "v6.9.16";
+    version = "v6.9.18";
     src = fetchFromGitHub {
       owner = "router-for-me";
       repo = "CLIProxyAPI";
-      rev = "v6.9.16";
+      rev = "v6.9.18";
       fetchSubmodules = false;
-      sha256 = "sha256-MM9xPn8WYQsmjPbUA0W0DFUIclkfceVGZ16EpcDNOEk=";
+      sha256 = "sha256-boJT2PuoX/di6Fjb6j1q2oEoUv1o7jKOq6ay650QTUg=";
     };
   };
   cnb-cli = {
@@ -514,6 +514,20 @@
       sha256 = "sha256-hCkd7yBHND/UxRjPNU7SaG0l8MvnLgFpSgAms1quAeM=";
     };
     date = "2026-01-31";
+  };
+  paperclip = {
+    pname = "paperclip";
+    version = "3264f9c1f6f0ca6049ed8192a0862fc30e723b20";
+    src = fetchgit {
+      url = "https://github.com/paperclipai/paperclip.git";
+      rev = "3264f9c1f6f0ca6049ed8192a0862fc30e723b20";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-J//Lo9s1JOtgInPDRA8o2hc+bjjEtAisuwevB9/DWWA=";
+    };
+    date = "2026-04-08";
   };
   pg_duckdb = {
     pname = "pg_duckdb";

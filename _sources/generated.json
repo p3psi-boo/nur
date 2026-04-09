@@ -278,12 +278,12 @@
             "name": null,
             "owner": "router-for-me",
             "repo": "CLIProxyAPI",
-            "rev": "v6.9.16",
-            "sha256": "sha256-MM9xPn8WYQsmjPbUA0W0DFUIclkfceVGZ16EpcDNOEk=",
+            "rev": "v6.9.18",
+            "sha256": "sha256-boJT2PuoX/di6Fjb6j1q2oEoUv1o7jKOq6ay650QTUg=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v6.9.16"
+        "version": "v6.9.18"
     },
     "cnb-cli": {
         "cargoLock": null,
@@ -858,6 +858,26 @@
             "url": "https://github.com/p3psi-boo/oura-cli.git"
         },
         "version": "5354384a57006ab68ef448f196b48bf1caebb2ea"
+    },
+    "paperclip": {
+        "cargoLock": null,
+        "date": "2026-04-08",
+        "extract": null,
+        "name": "paperclip",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "3264f9c1f6f0ca6049ed8192a0862fc30e723b20",
+            "sha256": "sha256-J//Lo9s1JOtgInPDRA8o2hc+bjjEtAisuwevB9/DWWA=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/paperclipai/paperclip.git"
+        },
+        "version": "3264f9c1f6f0ca6049ed8192a0862fc30e723b20"
     },
     "pg_duckdb": {
         "cargoLock": null,

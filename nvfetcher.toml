@@ -1,3 +1,8 @@
+[paperclip]
+src.git = "https://github.com/paperclipai/paperclip.git"
+fetch.git = "https://github.com/paperclipai/paperclip.git"
+git.fetch_submodules = false
+
 [okmain]
 src.git = "https://github.com/si14/okmain.git"
 fetch.git = "https://github.com/si14/okmain.git"
