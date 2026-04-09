@@ -278,12 +278,12 @@
             "name": null,
             "owner": "router-for-me",
             "repo": "CLIProxyAPI",
-            "rev": "v6.9.16",
-            "sha256": "sha256-MM9xPn8WYQsmjPbUA0W0DFUIclkfceVGZ16EpcDNOEk=",
+            "rev": "v6.9.18",
+            "sha256": "sha256-boJT2PuoX/di6Fjb6j1q2oEoUv1o7jKOq6ay650QTUg=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v6.9.16"
+        "version": "v6.9.18"
     },
     "cnb-cli": {
         "cargoLock": null,
@@ -518,26 +518,25 @@
         },
         "version": "v2.11.1"
     },
-    "gac": {
+    "focaltech-fingerprint": {
         "cargoLock": null,
-        "date": null,
+        "date": "2025-10-21",
         "extract": null,
-        "name": "gac",
+        "name": "focaltech-fingerprint",
         "passthru": null,
-        "pinned": true,
+        "pinned": false,
         "src": {
             "deepClone": false,
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "owner": "cellwebb",
-            "repo": "gac",
-            "rev": "v3.11.0",
-            "sha256": "sha256-TQJtHMqC1reyrxG1SlLuzegeWwXjk7353DNxPko89Q0=",
+            "rev": "d4fbbf901aff44b92d4fa212d9b99e43cda00563",
+            "sha256": "sha256-0mnXEQjSWUrz8uSwaeWH6uLLZtGnSUx5OPBxjPNxFTs=",
             "sparseCheckout": [],
-            "type": "github"
+            "type": "git",
+            "url": "https://github.com/vobademi/FTEXX00-Ubuntu.git"
         },
-        "version": "v3.11.0"
+        "version": "d4fbbf901aff44b92d4fa212d9b99e43cda00563"
     },
     "ggwave-to-file": {
         "cargoLock": null,
@@ -799,6 +798,26 @@
         },
         "version": "e51da5fa7efde11dad009592bdf3b41980c3555f"
     },
+    "oli": {
+        "cargoLock": null,
+        "date": "2026-04-02",
+        "extract": null,
+        "name": "oli",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "b9e64dd0222d357de4cbd97baf02194ec4656e57",
+            "sha256": "sha256-Fw2Gsr8mp3OyykJJNFBchcCU7Nemzmd6asM/FAKelJc=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/apache/opendal-oli.git"
+        },
+        "version": "b9e64dd0222d357de4cbd97baf02194ec4656e57"
+    },
     "openalice": {
         "cargoLock": null,
         "date": null,
@@ -859,6 +878,26 @@
             "url": "https://github.com/p3psi-boo/oura-cli.git"
         },
         "version": "5354384a57006ab68ef448f196b48bf1caebb2ea"
+    },
+    "paperclip": {
+        "cargoLock": null,
+        "date": "2026-04-08",
+        "extract": null,
+        "name": "paperclip",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "3264f9c1f6f0ca6049ed8192a0862fc30e723b20",
+            "sha256": "sha256-J//Lo9s1JOtgInPDRA8o2hc+bjjEtAisuwevB9/DWWA=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/paperclipai/paperclip.git"
+        },
+        "version": "3264f9c1f6f0ca6049ed8192a0862fc30e723b20"
     },
     "pg_duckdb": {
         "cargoLock": null,
@@ -1194,26 +1233,6 @@
         },
         "version": "204aeea3437a83599c1c1fa1b97e4425cfdfc49d"
     },
-    "telegram-send": {
-        "cargoLock": null,
-        "date": "2026-01-27",
-        "extract": null,
-        "name": "telegram-send",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "f5466fc2b8b8b9aaa55dd28fb80b6ae138b578d8",
-            "sha256": "sha256-kc6btKN+IclmbRx6Lko2Jw0XxVaKVo/AnhYsW6C2G4Y=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/rahiel/telegram-send.git"
-        },
-        "version": "f5466fc2b8b8b9aaa55dd28fb80b6ae138b578d8"
-    },
     "uber-apk-signer": {
         "cargoLock": null,
         "date": null,
@@ -1376,27 +1395,6 @@
             "url": "https://github.com/saveweb/wikiteam3.git"
         },
         "version": "06346a4305f8f8c5ced633c3e0dc38b3bb960e6e"
-    },
-    "worktrunk": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "worktrunk",
-        "passthru": null,
-        "pinned": true,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "max-sixty",
-            "repo": "worktrunk",
-            "rev": "v0.21.0",
-            "sha256": "sha256-quFet61FkksyBtF+tKM3Q1qh1Z02U3fovSm5ObU5HM4=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "v0.21.0"
     },
     "wsl-vpnkit": {
         "cargoLock": null,

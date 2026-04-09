@@ -16,7 +16,7 @@ let
         platform = "macosx_10_12_x86_64";
       };
       aarch64-darwin = {
-        hash = "sha256-uwVw6OjnZBQPfI/1KjnCD1iVLwW6fcrq65upR37CSe4=";
+        hash = "sha256-uwVw6OjXZBQPfo/1KTnCD1iVLwW6fcrq65upR37CSe4=";
         platform = "macosx_11_0_arm64";
       };
     }

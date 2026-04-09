@@ -155,13 +155,13 @@
   };
   cliproxyapi = {
     pname = "cliproxyapi";
-    version = "v6.9.16";
+    version = "v6.9.18";
     src = fetchFromGitHub {
       owner = "router-for-me";
       repo = "CLIProxyAPI";
-      rev = "v6.9.16";
+      rev = "v6.9.18";
       fetchSubmodules = false;
-      sha256 = "sha256-MM9xPn8WYQsmjPbUA0W0DFUIclkfceVGZ16EpcDNOEk=";
+      sha256 = "sha256-boJT2PuoX/di6Fjb6j1q2oEoUv1o7jKOq6ay650QTUg=";
     };
   };
   cnb-cli = {
@@ -301,16 +301,19 @@
       sha256 = "sha256-4jCOCx6bLrugIrTRz/Ut/SIMknMTXgyJJINxA9SljCA=";
     };
   };
-  gac = {
-    pname = "gac";
-    version = "v3.11.0";
-    src = fetchFromGitHub {
-      owner = "cellwebb";
-      repo = "gac";
-      rev = "v3.11.0";
+  focaltech-fingerprint = {
+    pname = "focaltech-fingerprint";
+    version = "d4fbbf901aff44b92d4fa212d9b99e43cda00563";
+    src = fetchgit {
+      url = "https://github.com/vobademi/FTEXX00-Ubuntu.git";
+      rev = "d4fbbf901aff44b92d4fa212d9b99e43cda00563";
       fetchSubmodules = false;
-      sha256 = "sha256-TQJtHMqC1reyrxG1SlLuzegeWwXjk7353DNxPko89Q0=";
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-0mnXEQjSWUrz8uSwaeWH6uLLZtGnSUx5OPBxjPNxFTs=";
     };
+    date = "2025-10-21";
   };
   ggwave-to-file = {
     pname = "ggwave-to-file";
@@ -473,6 +476,20 @@
     };
     date = "2026-03-10";
   };
+  oli = {
+    pname = "oli";
+    version = "b9e64dd0222d357de4cbd97baf02194ec4656e57";
+    src = fetchgit {
+      url = "https://github.com/apache/opendal-oli.git";
+      rev = "b9e64dd0222d357de4cbd97baf02194ec4656e57";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-Fw2Gsr8mp3OyykJJNFBchcCU7Nemzmd6asM/FAKelJc=";
+    };
+    date = "2026-04-02";
+  };
   openalice = {
     pname = "openalice";
     version = "v0.9.0-beta.9";
@@ -511,6 +528,20 @@
       sha256 = "sha256-hCkd7yBHND/UxRjPNU7SaG0l8MvnLgFpSgAms1quAeM=";
     };
     date = "2026-01-31";
+  };
+  paperclip = {
+    pname = "paperclip";
+    version = "3264f9c1f6f0ca6049ed8192a0862fc30e723b20";
+    src = fetchgit {
+      url = "https://github.com/paperclipai/paperclip.git";
+      rev = "3264f9c1f6f0ca6049ed8192a0862fc30e723b20";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-J//Lo9s1JOtgInPDRA8o2hc+bjjEtAisuwevB9/DWWA=";
+    };
+    date = "2026-04-08";
   };
   pg_duckdb = {
     pname = "pg_duckdb";
@@ -706,20 +737,6 @@
     };
     date = "2024-07-27";
   };
-  telegram-send = {
-    pname = "telegram-send";
-    version = "f5466fc2b8b8b9aaa55dd28fb80b6ae138b578d8";
-    src = fetchgit {
-      url = "https://github.com/rahiel/telegram-send.git";
-      rev = "f5466fc2b8b8b9aaa55dd28fb80b6ae138b578d8";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-kc6btKN+IclmbRx6Lko2Jw0XxVaKVo/AnhYsW6C2G4Y=";
-    };
-    date = "2026-01-27";
-  };
   uber-apk-signer = {
     pname = "uber-apk-signer";
     version = "v1.3.0";
@@ -822,17 +839,6 @@
       sha256 = "sha256-gdUZzfIn9nM60+mYacFblmyqa+pY+EbR4lPZnuy6Amk=";
     };
     date = "2025-12-24";
-  };
-  worktrunk = {
-    pname = "worktrunk";
-    version = "v0.21.0";
-    src = fetchFromGitHub {
-      owner = "max-sixty";
-      repo = "worktrunk";
-      rev = "v0.21.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-quFet61FkksyBtF+tKM3Q1qh1Z02U3fovSm5ObU5HM4=";
-    };
   };
   wsl-vpnkit = {
     pname = "wsl-vpnkit";

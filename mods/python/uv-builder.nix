@@ -29,6 +29,9 @@ rec {
       version,
       python ? pkgs.python313,
       bins ? [ pname ],
+      # If workspaceRoot is provided, it must contain pyproject.toml + uv.lock.
+      # In that mode, lockFile/lockUrl and dependency synthesis are skipped.
+      workspaceRoot ? null,
       lockFile ? null,
       lockUrl ? null,
       lockHash ? null,
@@ -53,32 +56,39 @@ rec {
         else if lockFile != null then
           lockFile
         else
-          throw "Either lockFile or lockUrl must be provided";
+          null;
 
       # Build dependency list for pyproject.toml
       dependencies = (if includePin then [ "${pname}==${version}" ] else [ ]) ++ extraDependencies;
 
-      # Create temporary workspace root with pyproject.toml and uv.lock
-      workspaceRoot = runCommand "${pname}-workspace" { } ''
-              mkdir -p $out
-              
-              # Create minimal pyproject.toml
-              cat > $out/pyproject.toml <<EOF
-        [project]
-        name = "${pname}"
-        version = "${version}"
-        dependencies = [
-        ${concatMapStringsSep "\n" (dep: "  \"${dep}\",") dependencies}
-        ]
-        EOF
-              
-              # Copy lock file
-              cp ${lockFileContent} $out/uv.lock
-      '';
+      # Resolve workspace root: either caller-provided project workspace, or
+      # synthesized minimal workspace from lock + dependency list.
+      resolvedWorkspaceRoot =
+        if workspaceRoot != null then
+          workspaceRoot
+        else if lockFileContent != null then
+          runCommand "${pname}-workspace" { } ''
+            mkdir -p $out
+
+            # Create minimal pyproject.toml
+            cat > $out/pyproject.toml <<EOF
+            [project]
+            name = "${pname}"
+            version = "${version}"
+            dependencies = [
+            ${concatMapStringsSep "\n" (dep: "  \"${dep}\",") dependencies}
+            ]
+            EOF
+
+            # Copy lock file
+            cp ${lockFileContent} $out/uv.lock
+          ''
+        else
+          throw "Either workspaceRoot or lockFile/lockUrl must be provided";
 
       # Load workspace using uv2nix
       workspace = uv2nix.lib.workspace.loadWorkspace {
-        inherit workspaceRoot;
+        workspaceRoot = resolvedWorkspaceRoot;
       };
 
       # Create pyproject overlay

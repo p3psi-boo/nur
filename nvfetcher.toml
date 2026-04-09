@@ -1,3 +1,8 @@
+[paperclip]
+src.git = "https://github.com/paperclipai/paperclip.git"
+fetch.git = "https://github.com/paperclipai/paperclip.git"
+git.fetch_submodules = false
+
 [okmain]
 src.git = "https://github.com/si14/okmain.git"
 fetch.git = "https://github.com/si14/okmain.git"
@@ -49,16 +54,6 @@ fetch.github = "dagu-org/dagu"
 src.git = "https://github.com/42futures/firm.git"
 fetch.git = "https://github.com/42futures/firm.git"
 git.fetchSubmodules = true
-
-[worktrunk]
-src.github = "max-sixty/worktrunk"
-fetch.github = "max-sixty/worktrunk"
-pinned = true
-
-[gac]
-src.github = "cellwebb/gac"
-fetch.github = "cellwebb/gac"
-pinned = true
 
 [realitlscanner]
 src.github = "XTLS/RealiTLScanner"
@@ -240,11 +235,6 @@ src.github_tag = "orhun/binsider"
 src.prefix = "v"
 fetch.url = "https://github.com/orhun/binsider/releases/download/v$ver/binsider-$ver-aarch64-apple-darwin.tar.gz"
 
-[telegram-send]
-src.git = "https://github.com/rahiel/telegram-send.git"
-fetch.git = "https://github.com/rahiel/telegram-send.git"
-src.branch = "master"
-
 [fish-ai]
 src.github_tag = "Realiserad/fish-ai"
 src.include_regex = "^v[0-9].*"
@@ -338,6 +328,12 @@ src.git = "https://github.com/JinchengGao-Infty/grok2api.git"
 fetch.git = "https://github.com/JinchengGao-Infty/grok2api.git"
 git.fetch_submodules = false
 
+# Focaltech fingerprint reader driver bundle
+[focaltech-fingerprint]
+src.git = "https://github.com/vobademi/FTEXX00-Ubuntu.git"
+fetch.git = "https://github.com/vobademi/FTEXX00-Ubuntu.git"
+git.fetch_submodules = false
+
 
 # RIME 自建拼音输入法词库
 # 注意：此包使用静态 URL 但内容会更新，版本需手动检查 GitHub releases 页面
@@ -354,6 +350,12 @@ fetch.github = "dnut/clipboard-sync"
 src.github = "epiral/bb-browser"
 fetch.github = "epiral/bb-browser"
 pinned = true
+
+# oli - OpenDAL Command Line Interface
+[oli]
+src.git = "https://github.com/apache/opendal-oli.git"
+fetch.git = "https://github.com/apache/opendal-oli.git"
+git.fetch_submodules = false
 
 
 
