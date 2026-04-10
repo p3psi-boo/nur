@@ -343,6 +343,14 @@
     };
     date = "2026-03-28";
   };
+  ida-mcp = {
+    pname = "ida-mcp";
+    version = "9.3.9";
+    src = fetchurl {
+      url = "https://github.com/blacktop/ida-mcp-rs/releases/download/v9.3.9/ida-mcp_9.3.9_Linux_x86_64.tar.gz";
+      sha256 = "sha256-Y9vOEdPil6zeU1IAImVrBNaQChoyrbHsiHqI/00iobY=";
+    };
+  };
   ida-pro-mcp = {
     pname = "ida-pro-mcp";
     version = "ef91fb467c3bfe266a68c3f898b93c8576eaf2c7";

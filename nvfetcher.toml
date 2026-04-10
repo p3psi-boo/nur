@@ -357,6 +357,67 @@ src.git = "https://github.com/apache/opendal-oli.git"
 fetch.git = "https://github.com/apache/opendal-oli.git"
 git.fetch_submodules = false
 
+# ida-mcp - Headless IDA Pro MCP Server
+# Use pre-built binary releases - version format is 9.3.9 (without v prefix in filename)
+[ida-mcp]
+src.github_tag = "blacktop/ida-mcp-rs"
+src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
+src.prefix = "v"
+fetch.url = "https://github.com/blacktop/ida-mcp-rs/releases/download/v$ver/ida-mcp_$ver_Linux_x86_64.tar.gz"
+
+# bifrost-http - AI gateway (pinned to specific commit)
+[bifrost-http]
+src.git = "https://github.com/maximhq/bifrost.git"
+fetch.git = "https://github.com/maximhq/bifrost.git"
+git.fetch_submodules = false
+
+# bifrost-ui - UI for bifrost (pinned to specific commit)
+[bifrost-ui]
+src.git = "https://github.com/maximhq/bifrost.git"
+fetch.git = "https://github.com/maximhq/bifrost.git"
+git.fetch_submodules = false
+
+# cloudflarespeedtest
+[cloudflarespeedtest]
+src.github = "XIU2/CloudflareSpeedTest"
+fetch.github = "XIU2/CloudflareSpeedTest"
+
+# gkeepapi
+[gkeepapi]
+src.github = "kiizg/gkeep"
+fetch.github = "kiizg/gkeep"
+
+# kylin-virtual-keyboard
+[kylin-virtual-keyboard]
+src.git = "https://github.com/ukui/kylin-virtual-keyboard.git"
+fetch.git = "https://github.com/ukui/kylin-virtual-keyboard.git"
+git.fetch_submodules = false
+
+# liteparse
+[liteparse]
+src.github = "Cergoo/golight"
+fetch.github = "Cergoo/golight"
+
+# micyou
+[micyou]
+src.github = "p3psi-boo/micyou"
+fetch.github = "p3psi-boo/micyou"
+
+# planify
+[planify]
+src.github = "alainm23/planify"
+fetch.github = "alainm23/planify"
+
+# quicssh
+[quicssh]
+src.github = "francois76/quicssh"
+fetch.github = "francois76/quicssh"
+
+# yt-media-storage
+[yt-media-storage]
+src.github = "p3psi-boo/yt-media-storage"
+fetch.github = "p3psi-boo/yt-media-storage"
+
 
 
 # substack-dl - Download all public posts from any Substack newsletter
