@@ -377,6 +377,12 @@ src.git = "https://github.com/maximhq/bifrost.git"
 fetch.git = "https://github.com/maximhq/bifrost.git"
 git.fetch_submodules = false
 
+# gemma-cpp - llama.cpp fork with TurboQuant for Gemma 4 (CUDA only, sm_86)
+[gemma-cpp]
+src.git = "https://github.com/test1111111111111112/llama-cpp-turboquant-gemma4.git"
+fetch.git = "https://github.com/test1111111111111112/llama-cpp-turboquant-gemma4.git"
+git.fetch_submodules = true
+
 # cloudflarespeedtest
 [cloudflarespeedtest]
 src.github = "XIU2/CloudflareSpeedTest"

@@ -1,4 +1,25 @@
 {
+    "gemma-cpp": {
+        "cargoLock": null,
+        "date": "2025-04-11",
+        "extract": null,
+        "name": "gemma-cpp",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": true,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "test1111111111111112",
+            "repo": "llama-cpp-turboquant-gemma4",
+            "rev": "e93b7c56f0d6f3714250482b6a91a027350d0f78",
+            "sha256": "sha256-ykzroJr8zXnLe6Wq279/+ltTxbeSEvcbTufz2EyqYqQ=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "e93b7c56"
+    },
     "agent-browser": {
         "cargoLock": null,
         "date": null,

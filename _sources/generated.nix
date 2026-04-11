@@ -6,6 +6,17 @@
   dockerTools,
 }:
 {
+  gemma-cpp = {
+    pname = "gemma-cpp";
+    version = "2025-04-11";
+    src = fetchFromGitHub {
+      owner = "test1111111111111112";
+      repo = "llama-cpp-turboquant-gemma4";
+      rev = "e93b7c56f0d6f3714250482b6a91a027350d0f78";
+      fetchSubmodules = true;
+      sha256 = "sha256-ykzroJr8zXnLe6Wq279/+ltTxbeSEvcbTufz2EyqYqQ=";
+    };
+  };
   agent-browser = {
     pname = "agent-browser";
     version = "v0.25.3";
