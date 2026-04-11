@@ -425,3 +425,8 @@ fetch.github = "p3psi-boo/yt-media-storage"
 src.git = "https://github.com/p3psi-boo/substack-dl.git"
 fetch.github = "p3psi-boo/substack-dl"
 
+# dbhub - Zero-dependency, token-efficient database MCP server
+[dbhub]
+src.manual = "0.21.2"
+fetch.url = "https://registry.npmjs.org/@bytebase/dbhub/-/dbhub-0.21.2.tgz"
+
