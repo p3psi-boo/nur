@@ -1,48 +1,50 @@
 {
   lib,
-  stdenv,
+  buildNpmPackage,
+  fetchurl,
   makeWrapper,
   nodejs,
-  fetchurl,
 }:
 
-stdenv.mkDerivation {
+buildNpmPackage rec {
   pname = "dbhub";
   version = "0.21.2";
 
   src = fetchurl {
-    url = "https://registry.npmjs.org/@bytebase/dbhub/-/dbhub-0.21.2.tgz";
-    hash = "sha256-0fix36x7wqawscn9vgs4djrrvims59rcsdb6zib2lqs04r237v3q";
+    url = "https://registry.npmjs.org/@bytebase/dbhub/-/dbhub-${version}.tgz";
+    hash = "sha256-eOwzRCZAYypW/GY1zXIqusads2xEv50s01xhfroZPTo=";
   };
+  sourceRoot = "package";
+
+  postPatch = ''
+    cp ${./package-lock.json} package-lock.json
+  '';
+
+  npmDepsHash = "sha256-ggqsoF4LiFrxtsinpANY6oTAzZJY9/xUYsgEOeJ3KFw=";
+  npmInstallFlags = [ "--omit=dev" ];
+  dontNpmBuild = true;
 
   nativeBuildInputs = [ makeWrapper ];
-
-  dontConfigure = true;
-  dontBuild = true;
 
   installPhase = ''
     runHook preInstall
 
-    # Create output directory
-    mkdir -p $out/lib/dbhub
-    mkdir -p $out/bin
+    appDir="$out/lib/dbhub"
 
-    # Extract package contents (npm tarballs have 'package' directory)
-    tar -xzf "$src" -C $out/lib/dbhub --strip-components=1
+    install -d "$appDir" "$out/bin"
+    cp -r dist package.json node_modules "$appDir/"
 
-    # Create wrapper script for the dbhub binary
-    makeWrapper ${nodejs}/bin/node $out/bin/dbhub \
-      --add-flags "$out/lib/dbhub/dist/index.js"
+    makeWrapper ${nodejs}/bin/node "$out/bin/dbhub" \
+      --add-flags "$appDir/dist/index.js"
 
     runHook postInstall
   '';
 
   meta = with lib; {
-    description = "Zero-dependency, token-efficient database MCP server for PostgreSQL, MySQL, SQL Server, MariaDB, SQLite";
+    description = "Token-efficient database MCP server for PostgreSQL, MySQL, SQL Server, MariaDB, SQLite";
     homepage = "https://github.com/bytebase/dbhub";
     license = licenses.mit;
     mainProgram = "dbhub";
     platforms = platforms.unix;
-    sourceProvenance = [ sourceTypes.fromSource ];
   };
 }
