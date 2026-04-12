@@ -870,4 +870,18 @@
       sha256 = "sha256-Igbr3L2W32s4uBepllSz07bkbI3qwAKMZkBrXLqGrGA=";
     };
   };
+  fusion = {
+    pname = "fusion";
+    version = "ecc44eeff94dd4836eed6490a497989194effa2b";
+    src = fetchgit {
+      url = "https://github.com/p3psi-boo/fusion.git";
+      rev = "ecc44eeff94dd4836eed6490a497989194effa2b";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-O9NMromcyvcF97Kb084vrHPjqRgyRqq14Ay8pdsj9rQ=";
+    };
+    date = "2026-04-12";
+  };
 }

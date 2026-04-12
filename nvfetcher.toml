@@ -341,6 +341,12 @@ git.fetch_submodules = false
 src.manual = "20260101"
 fetch.url = "https://github.com/wuhgit/CustomPinyinDictionary/releases/download/assets/CustomPinyinDictionary_Fcitx.dict"
 
+# fusion - A lightweight, self-hosted friendly RSS reader
+[fusion]
+src.git = "https://github.com/p3psi-boo/fusion.git"
+fetch.git = "https://github.com/p3psi-boo/fusion.git"
+git.fetch_submodules = false
+
 [clipboard-sync]
 src.github = "dnut/clipboard-sync"
 fetch.github = "dnut/clipboard-sync"
