@@ -3,7 +3,7 @@
   stdenvNoCC,
   buildGoModule,
   generated,
-  go_1_24,
+  go,
   nodejs_22,
   pnpm_10,
   fetchPnpmDeps,
@@ -48,7 +48,7 @@ let
     '';
   });
 in
-(buildGoModule.override { go = go_1_24; }) {
+(buildGoModule.override { go = go; }) {
   pname = "octopus-api";
   version = lib.removePrefix "v" sourceInfo.version;
 
