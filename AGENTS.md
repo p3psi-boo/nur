@@ -4,7 +4,6 @@
 
 - 打包前先用 `nh search <query>` 在 nixpkgs 里查一下是否已有相关包；如果已有（满足需求），不要在本仓库继续打包/新增。
 - 在写/更新 Nix 包（需要 `fetchFromGitHub`、`fetchgit`、`fetchurl` 等）时，优先用 `nurl` 快速生成/获取 `owner/repo`、`rev`、`hash` 等信息：`https://github.com/nix-community/nurl`。
-- 包相关工具请优先使用 `nix develop ./nur` 进入 NUR 的 devShell。
 
 ## nvfetcher（统一维护源码版本）
 
@@ -50,4 +49,8 @@
 - 工作原理：`buildUvPackage` 会根据 `uv.lock` 生成临时 workspace，通过 `uv2nix.lib.workspace.loadWorkspace` 解析依赖，使用 `pyproject-nix` 构建 Python 包集合，最终组装为虚拟环境
 
 参考：`https://github.com/pyproject-nix/uv2nix`
+
+---
+
+打包请查看 `nix-package` SKILL
 
