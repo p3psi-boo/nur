@@ -93,8 +93,9 @@ buildGoModule {
 
   preBuild = ''
     # Copy pre-built frontend dist into backend embed directory
-    mkdir -p backend/internal/web/dist
-    cp -r ${frontendDist}/. backend/internal/web/dist/
+    # Note: modRoot="backend", so we're already in the backend directory
+    mkdir -p internal/web/dist
+    cp -r ${frontendDist}/. internal/web/dist/
   '';
 
   ldflags = [
