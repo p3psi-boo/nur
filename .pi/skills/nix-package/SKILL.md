@@ -102,7 +102,6 @@ stdenv.mkDerivation (finalAttrs: {
 
 ## 6. 提交前的 Checklist
 1.  [ ] **Format**: 运行 `nixfmt` 格式化代码。
-2.  [ ] **Build**: `nix-build -A pname` 在本地 Sandbox 成功。
-3.  [ ] **Review**: 运行 `nixpkgs-review wip` 检查受影响范围。
-4.  [ ] **Lint**: 运行 `statix check` 和 `deadnix`。
-5.  [ ] **Commit Message**: 遵循规范 `pname: init at 1.2.3` 或 `pname: 1.2.2 -> 1.2.3`。
+2.  [ ] **Build**: `nix build .#pkgs-name` 在本地 Sandbox 成功。
+3.  [ ] **Lint**: 运行 `statix check` 和 `deadnix`。
+4.  [ ] **Commit Message**: 遵循规范 `pname: init at 1.2.3` 或 `pname: 1.2.2 -> 1.2.3`。
