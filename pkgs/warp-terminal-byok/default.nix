@@ -16,17 +16,10 @@ pkgs.stdenv.mkDerivation rec {
 
   src = ./src;
 
-  nativeBuildInputs = [ pkgs.protobuf ];
   buildInputs = [ python ];
 
-  buildPhase = ''
-    # Generate protobuf Python files from proto_src
-    mkdir -p warp_proto
-    for proto in proto_src/*.proto; do
-      protoc --python_out=warp_proto --proto_path=proto_src "$proto"
-    done
-    touch warp_proto/__init__.py
-  '';
+  # All protobuf Python files are pre-generated in warp_proto/
+  # No build phase needed - skip to avoid protoc version mismatches
 
   installPhase = ''
     mkdir -p $out/{bin,lib/warp-terminal-byok,share/applications}

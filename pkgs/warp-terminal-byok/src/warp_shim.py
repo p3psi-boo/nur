@@ -9,9 +9,10 @@ import html
 import json
 import os
 import re
-import subprocess
 import shutil
 import signal
+import sqlite3
+import subprocess
 import sys
 import time
 import traceback
@@ -322,6 +323,7 @@ class ShimConfig:
     google: ProviderConfig | None
     model_overrides: dict[str, str]
     mcp_servers: dict[str, object]
+    log_retention_days: int = 7  # Default: keep 7 days of logs
 
 
 def merge_runtime_provider_config(
@@ -406,6 +408,94 @@ def load_json_config(config_path: str | None) -> dict[str, object]:
 
 
 
+def render_template_string(template: str, variable_map: dict[str, str]) -> str:
+    """Render a template string by replacing {{variable}} placeholders."""
+    rendered = template
+    for key, value in variable_map.items():
+        rendered = rendered.replace(f"{{{{{key}}}}}", value)
+    return rendered
+
+
+def render_template_value(template: object, variable_map: dict[str, str]) -> object:
+    """Recursively render template values in a nested structure."""
+    if isinstance(template, str):
+        return render_template_string(template, variable_map)
+    if isinstance(template, list):
+        return [render_template_value(item, variable_map) for item in template]
+    if isinstance(template, dict):
+        return {
+            key: render_template_value(value, variable_map)
+            for key, value in template.items()
+            if isinstance(key, str)
+        }
+    return template
+
+
+def load_warp_mcp_servers(sqlite_path: Path) -> dict[str, object]:
+    """Load MCP server configurations from Warp's SQLite database."""
+    if not sqlite_path.exists():
+        return {}
+
+    connection = sqlite3.connect(sqlite_path)
+    try:
+        rows = connection.execute(
+            "SELECT templatable_mcp_server, variable_values, restore_running FROM mcp_server_installations"
+        ).fetchall()
+    except sqlite3.DatabaseError:
+        connection.close()
+        return {}
+
+    servers: dict[str, object] = {}
+    try:
+        for templatable_raw, variable_values_raw, restore_running in rows:
+            if not isinstance(templatable_raw, str):
+                continue
+            try:
+                templatable = json.loads(templatable_raw)
+            except json.JSONDecodeError:
+                continue
+            if not isinstance(templatable, dict):
+                continue
+
+            if restore_running not in {0, 1}:
+                continue
+
+            variable_map: dict[str, str] = {}
+            if isinstance(variable_values_raw, str):
+                try:
+                    variable_values = json.loads(variable_values_raw)
+                except json.JSONDecodeError:
+                    variable_values = None
+                if isinstance(variable_values, dict):
+                    for key, value in variable_values.items():
+                        if not isinstance(key, str) or not isinstance(value, dict):
+                            continue
+                        rendered_value = value.get("value")
+                        if isinstance(rendered_value, str):
+                            variable_map[key] = rendered_value
+
+            template = templatable.get("template")
+            template_json = template.get("json") if isinstance(template, dict) else None
+            if not isinstance(template_json, str):
+                continue
+
+            try:
+                template_payload = json.loads(template_json)
+            except json.JSONDecodeError:
+                continue
+            rendered_payload = render_template_value(template_payload, variable_map)
+            if not isinstance(rendered_payload, dict):
+                continue
+
+            for server_name, server_config in rendered_payload.items():
+                if isinstance(server_name, str) and isinstance(server_config, dict):
+                    servers[server_name] = server_config
+    finally:
+        connection.close()
+
+    return servers
+
+
 def resolve_text_value(
     json_config: dict[str, object],
     json_key: str,
@@ -466,15 +556,16 @@ def load_config(arguments: argparse.Namespace) -> ShimConfig:
             if isinstance(key, str) and isinstance(value, str):
                 model_overrides[key] = value
 
+    # Load MCP servers from Warp's SQLite database
+    warp_mcp_servers = load_warp_mcp_servers(DEFAULT_RUNTIME_PATHS.sqlite_path)
+
+    # Load MCP servers from JSON config (takes precedence over Warp's config)
     mcp_servers_raw = json_config.get("mcp_servers")
-    mcp_servers: dict[str, object] = {}
-    for key, value in warp_mcp_servers.items():
-        if isinstance(key, str):
-            mcp_servers[key] = value
+    mcp_servers: dict[str, object] = dict(warp_mcp_servers)  # Start with Warp's config
     if isinstance(mcp_servers_raw, dict):
         for key, value in mcp_servers_raw.items():
             if isinstance(key, str):
-                mcp_servers[key] = value
+                mcp_servers[key] = value  # JSON config overrides Warp's config
 
     if (
         listen_host is None
@@ -485,6 +576,8 @@ def load_config(arguments: argparse.Namespace) -> ShimConfig:
         or capture_dir is None
     ):
         raise ValueError("Failed to resolve required configuration.")
+
+    log_retention_days = resolve_int_value(json_config, "log_retention_days", 7)
 
     return ShimConfig(
         listen_host=listen_host,
@@ -499,6 +592,7 @@ def load_config(arguments: argparse.Namespace) -> ShimConfig:
         google=build_provider_config_with_key(google_base_url, google_api_key),
         model_overrides=model_overrides,
         mcp_servers=mcp_servers,
+        log_retention_days=log_retention_days,
     )
 
 
@@ -4682,13 +4776,53 @@ async def handle_token_proxy_request(
             )
 
 
+def _get_log_file_path(log_path: Path, date: datetime) -> Path:
+    """Get the log file path for a specific date."""
+    # Use date suffix for rotated logs: warp-shim.2025-01-15.log
+    return log_path.parent / f"{log_path.stem}.{date.strftime('%Y-%m-%d')}{log_path.suffix}"
+
+
+def _cleanup_old_logs(log_path: Path, retention_days: int) -> None:
+    """Remove log files older than retention_days."""
+    if retention_days <= 0:
+        return
+
+    cutoff_date = datetime.now(UTC).date() - __import__('datetime').timedelta(days=retention_days)
+
+    try:
+        for log_file in log_path.parent.glob(f"{log_path.stem}.*{log_path.suffix}"):
+            # Extract date from filename
+            try:
+                # Parse date from filename like "warp-shim.2025-01-15.log"
+                date_str = log_file.stem.split('.')[-1]
+                file_date = __import__('datetime').datetime.strptime(date_str, '%Y-%m-%d').date()
+                if file_date < cutoff_date:
+                    log_file.unlink()
+            except (ValueError, IndexError):
+                # Skip files that don't match the expected format
+                continue
+    except OSError:
+        # Ignore errors during cleanup (permissions, etc.)
+        pass
+
+
 async def append_log(config: ShimConfig, payload: dict[str, object]) -> None:
+    """Append log entry with automatic date-based rotation."""
     config.log_path.parent.mkdir(parents=True, exist_ok=True)
     line = json.dumps(payload, ensure_ascii=False)
 
     def write_line() -> None:
-        with config.log_path.open("a", encoding="utf-8") as file_handle:
+        # Determine log file path based on current date
+        now = datetime.now(UTC)
+        log_file_path = _get_log_file_path(config.log_path, now)
+
+        with log_file_path.open("a", encoding="utf-8") as file_handle:
             file_handle.write(f"{line}\n")
+
+        # Cleanup old logs periodically (1% chance to avoid overhead)
+        import random
+        if random.random() < 0.01:
+            _cleanup_old_logs(config.log_path, config.log_retention_days)
 
     await asyncio.to_thread(write_line)
 

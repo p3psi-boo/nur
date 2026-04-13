@@ -88,24 +88,45 @@ def start_shim(config: dict, foreground: bool) -> subprocess.Popen:
         "--config", str(LINUX_DEFAULT_CONFIG_PATH),
     ]
 
-    stdout = None if foreground else subprocess.DEVNULL
-    stderr = None if foreground else subprocess.DEVNULL
-
-    shim_process = subprocess.Popen(
-        shim_cmd,
-        stdout=stdout,
-        stderr=stderr,
-        start_new_session=not foreground,
-    )
+    if foreground:
+        # In foreground mode, inherit stdout/stderr for debugging
+        shim_process = subprocess.Popen(
+            shim_cmd,
+            stdout=None,
+            stderr=None,
+            start_new_session=False,
+        )
+    else:
+        # In background mode, redirect stderr to log file for debugging
+        DEFAULT_RUNTIME_PATHS.stderr_log_path.parent.mkdir(parents=True, exist_ok=True)
+        stderr_file = open(DEFAULT_RUNTIME_PATHS.stderr_log_path, "a", encoding="utf-8")
+        shim_process = subprocess.Popen(
+            shim_cmd,
+            stdout=subprocess.DEVNULL,
+            stderr=stderr_file,
+            start_new_session=True,
+        )
+        # Close file handle in parent process (child keeps it open)
+        # Note: We don't track the file handle since shim is long-running
 
     try:
         listen_host = config.get("listen_host", "127.0.0.1")
         listen_port = config.get("listen_port", 8911)
         wait_for_shim(listen_host, listen_port)
         print(f"✓ Shim proxy running at http://{listen_host}:{listen_port}")
-    except RuntimeError:
+    except RuntimeError as e:
         shim_process.terminate()
-        raise
+        if not foreground:
+            stderr_file.close()
+            # Try to show error from log file
+            try:
+                if DEFAULT_RUNTIME_PATHS.stderr_log_path.exists():
+                    log_content = DEFAULT_RUNTIME_PATHS.stderr_log_path.read_text()
+                    if log_content:
+                        print(f"\nShim stderr log:\n{log_content}", file=sys.stderr)
+            except Exception:
+                pass
+        raise RuntimeError(f"{e}. Check {DEFAULT_RUNTIME_PATHS.stderr_log_path} for details.")
 
     return shim_process
 
@@ -141,9 +162,11 @@ def load_or_create_config() -> dict:
         "listen_host": "127.0.0.1",
         "listen_port": 8911,
         "upstream_http_base": "https://app.warp.dev",
-        "upstream_ws_base": "wss://rtc.app.warp.dev/graphql/v2",
+        "upstream_ws_base": "https://app.warp.dev",
         "upstream_ai_base": "https://app.warp.dev",
         "log_path": str(DEFAULT_RUNTIME_PATHS.log_path),
+        "capture_dir": str(DEFAULT_RUNTIME_PATHS.capture_dir),
+        "log_retention_days": 7,  # Keep 7 days of rotated logs
     }
 
 
@@ -196,12 +219,28 @@ def main() -> int:
     print(f"  - Config: {LINUX_DEFAULT_CONFIG_PATH}")
     print("\nPress Ctrl+C to stop.")
 
-    try:
-        warp_process.wait()
-    except KeyboardInterrupt:
+    def cleanup():
+        """Clean up child processes."""
         print("\nShutting down...")
         warp_process.terminate()
         shim_process.terminate()
+        try:
+            warp_process.wait(timeout=5)
+        except subprocess.TimeoutExpired:
+            warp_process.kill()
+        try:
+            shim_process.wait(timeout=5)
+        except subprocess.TimeoutExpired:
+            shim_process.kill()
+
+    try:
+        warp_process.wait()
+    except KeyboardInterrupt:
+        cleanup()
+    except Exception as e:
+        print(f"\nError: {e}", file=sys.stderr)
+        cleanup()
+        return 1
 
     return 0
 
