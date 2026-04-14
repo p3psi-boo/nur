@@ -89,10 +89,10 @@ def start_shim(config: dict, foreground: bool) -> subprocess.Popen:
     ]
 
     if foreground:
-        # In foreground mode, inherit stdout/stderr for debugging
+        # In foreground mode, suppress stdout; inherit stderr for debugging
         shim_process = subprocess.Popen(
             shim_cmd,
-            stdout=None,
+            stdout=subprocess.DEVNULL,
             stderr=None,
             start_new_session=False,
         )
@@ -151,7 +151,7 @@ def launch_warp(warp_binary: Path, shim_host: str, shim_port: int) -> subprocess
     print(f"  API requests routed to shim: {shim_url}")
     print(f"  WS  requests routed to shim: {ws_url}")
 
-    return subprocess.Popen(warp_command)
+    return subprocess.Popen(warp_command, stdout=subprocess.DEVNULL)
 
 
 def load_or_create_config() -> dict:
