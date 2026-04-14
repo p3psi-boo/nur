@@ -83,12 +83,6 @@ fetch.github = "damonto/sigmo"
 src.git = "https://github.com/k4yt3x/vanissh.git"
 fetch.git = "https://github.com/k4yt3x/vanissh.git"
 
-[ggwave-to-file]
-src.git = "https://github.com/ggerganov/ggwave.git"
-fetch.git = "https://github.com/ggerganov/ggwave.git"
-src.branch = "master"
-git.fetchSubmodules = true
-
 [wsl-vpnkit]
 src.github = "sakai135/wsl-vpnkit"
 fetch.github = "sakai135/wsl-vpnkit"
@@ -174,22 +168,6 @@ src.git = "https://github.com/YuzukiTsuru/OpenixCLI.git"
 fetch.git = "https://github.com/YuzukiTsuru/OpenixCLI.git"
 src.branch = "master"
 git.fetch_submodules = false
-
-[agent-browser]
-src.github = "vercel-labs/agent-browser"
-fetch.url = "https://github.com/vercel-labs/agent-browser/releases/download/$ver/agent-browser-linux-x64"
-
-[agent-browser-linux-arm64]
-src.github = "vercel-labs/agent-browser"
-fetch.url = "https://github.com/vercel-labs/agent-browser/releases/download/$ver/agent-browser-linux-arm64"
-
-[agent-browser-darwin-x64]
-src.github = "vercel-labs/agent-browser"
-fetch.url = "https://github.com/vercel-labs/agent-browser/releases/download/$ver/agent-browser-darwin-x64"
-
-[agent-browser-darwin-arm64]
-src.github = "vercel-labs/agent-browser"
-fetch.url = "https://github.com/vercel-labs/agent-browser/releases/download/$ver/agent-browser-darwin-arm64"
 
 [fff-mcp]
 src.github_tag = "dmtrKovalenko/fff.nvim"
@@ -371,18 +349,6 @@ src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
 src.prefix = "v"
 fetch.url = "https://github.com/blacktop/ida-mcp-rs/releases/download/v$ver/ida-mcp_$ver_Linux_x86_64.tar.gz"
 
-# bifrost-http - AI gateway (pinned to specific commit)
-[bifrost-http]
-src.git = "https://github.com/maximhq/bifrost.git"
-fetch.git = "https://github.com/maximhq/bifrost.git"
-git.fetch_submodules = false
-
-# bifrost-ui - UI for bifrost (pinned to specific commit)
-[bifrost-ui]
-src.git = "https://github.com/maximhq/bifrost.git"
-fetch.git = "https://github.com/maximhq/bifrost.git"
-git.fetch_submodules = false
-
 # gemma-cpp - llama.cpp fork with TurboQuant for Gemma 4 (CUDA only, sm_86)
 [gemma-cpp]
 src.git = "https://github.com/test1111111111111112/llama-cpp-turboquant-gemma4.git"
@@ -394,43 +360,15 @@ git.fetch_submodules = true
 src.github = "XIU2/CloudflareSpeedTest"
 fetch.github = "XIU2/CloudflareSpeedTest"
 
-# gkeepapi
-[gkeepapi]
-src.github = "kiizg/gkeep"
-fetch.github = "kiizg/gkeep"
-
-# kylin-virtual-keyboard
-[kylin-virtual-keyboard]
-src.git = "https://github.com/ukui/kylin-virtual-keyboard.git"
-fetch.git = "https://github.com/ukui/kylin-virtual-keyboard.git"
-git.fetch_submodules = false
-
-# liteparse
-[liteparse]
-src.github = "Cergoo/golight"
-fetch.github = "Cergoo/golight"
-
 # micyou
 [micyou]
-src.github = "p3psi-boo/micyou"
-fetch.github = "p3psi-boo/micyou"
+src.github = "LanRhyme/MicYou"
+fetch.github = "LanRhyme/MicYou"
 
 # planify
 [planify]
 src.github = "alainm23/planify"
 fetch.github = "alainm23/planify"
-
-# quicssh
-[quicssh]
-src.github = "francois76/quicssh"
-fetch.github = "francois76/quicssh"
-
-# yt-media-storage
-[yt-media-storage]
-src.github = "p3psi-boo/yt-media-storage"
-fetch.github = "p3psi-boo/yt-media-storage"
-
-
 
 # substack-dl - Download all public posts from any Substack newsletter
 [substack-dl]
@@ -441,4 +379,11 @@ fetch.github = "p3psi-boo/substack-dl"
 [dbhub]
 src.manual = "0.21.2"
 fetch.url = "https://registry.npmjs.org/@bytebase/dbhub/-/dbhub-0.21.2.tgz"
+
+# cookiecloud-rs - Rust rewrite of CookieCloud API
+[cookiecloud-rs]
+src.git = "https://github.com/p3psi-boo/CookieCloud.git"
+fetch.git = "https://github.com/p3psi-boo/CookieCloud.git"
+git.fetch_submodules = false
+git.get_commit_date = true
 
