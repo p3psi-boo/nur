@@ -365,18 +365,6 @@ src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
 src.prefix = "v"
 fetch.url = "https://github.com/blacktop/ida-mcp-rs/releases/download/v$ver/ida-mcp_$ver_Linux_x86_64.tar.gz"
 
-# bifrost-http - AI gateway (pinned to specific commit)
-[bifrost-http]
-src.git = "https://github.com/maximhq/bifrost.git"
-fetch.git = "https://github.com/maximhq/bifrost.git"
-git.fetch_submodules = false
-
-# bifrost-ui - UI for bifrost (pinned to specific commit)
-[bifrost-ui]
-src.git = "https://github.com/maximhq/bifrost.git"
-fetch.git = "https://github.com/maximhq/bifrost.git"
-git.fetch_submodules = false
-
 # gemma-cpp - llama.cpp fork with TurboQuant for Gemma 4 (CUDA only, sm_86)
 [gemma-cpp]
 src.git = "https://github.com/test1111111111111112/llama-cpp-turboquant-gemma4.git"
@@ -413,13 +401,6 @@ fetch.github = "p3psi-boo/micyou"
 [planify]
 src.github = "alainm23/planify"
 fetch.github = "alainm23/planify"
-
-# yt-media-storage
-[yt-media-storage]
-src.github = "p3psi-boo/yt-media-storage"
-fetch.github = "p3psi-boo/yt-media-storage"
-
-
 
 # substack-dl - Download all public posts from any Substack newsletter
 [substack-dl]
