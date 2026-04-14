@@ -7,6 +7,7 @@
 rustPlatform.buildRustPackage {
   pname = "cookiecloud-rs";
   version = "0-unstable-${generated.cookiecloud-rs.date}";
+
   src = generated.cookiecloud-rs.src;
 
   cargoLock.lockFile = ./Cargo.lock;
