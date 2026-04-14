@@ -376,26 +376,10 @@ git.fetch_submodules = true
 src.github = "XIU2/CloudflareSpeedTest"
 fetch.github = "XIU2/CloudflareSpeedTest"
 
-# gkeepapi
-[gkeepapi]
-src.github = "kiizg/gkeep"
-fetch.github = "kiizg/gkeep"
-
-# kylin-virtual-keyboard
-[kylin-virtual-keyboard]
-src.git = "https://github.com/ukui/kylin-virtual-keyboard.git"
-fetch.git = "https://github.com/ukui/kylin-virtual-keyboard.git"
-git.fetch_submodules = false
-
-# liteparse
-[liteparse]
-src.github = "Cergoo/golight"
-fetch.github = "Cergoo/golight"
-
 # micyou
 [micyou]
-src.github = "p3psi-boo/micyou"
-fetch.github = "p3psi-boo/micyou"
+src.github = "LanRhyme/MicYou"
+fetch.github = "LanRhyme/MicYou"
 
 # planify
 [planify]

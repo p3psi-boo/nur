@@ -6,58 +6,47 @@
   dockerTools,
 }:
 {
-  gemma-cpp = {
-    pname = "gemma-cpp";
-    version = "2025-04-11";
-    src = fetchFromGitHub {
-      owner = "test1111111111111112";
-      repo = "llama-cpp-turboquant-gemma4";
-      rev = "e93b7c56f0d6f3714250482b6a91a027350d0f78";
-      fetchSubmodules = true;
-      sha256 = "sha256-ykzroJr8zXnLe6Wq279/+ltTxbeSEvcbTufz2EyqYqQ=";
-    };
-  };
   agent-browser = {
     pname = "agent-browser";
-    version = "v0.25.3";
+    version = "v0.25.4";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.25.3/agent-browser-linux-x64";
-      sha256 = "sha256-Gz2yACXgm0sgjgOV3A/53zpSOL3gxGF5Uf88EaAYXXQ=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.25.4/agent-browser-linux-x64";
+      sha256 = "sha256-AtJvEFqdjiA/j5Zqz+tLqxkc+kYlQxpTW4vl+PWQVHI=";
     };
   };
   agent-browser-darwin-arm64 = {
     pname = "agent-browser-darwin-arm64";
-    version = "v0.25.3";
+    version = "v0.25.4";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.25.3/agent-browser-darwin-arm64";
-      sha256 = "sha256-B+NSLy6zEF1+nP0rOf6JGpHIsCmOz4JFYqvo161VxbI=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.25.4/agent-browser-darwin-arm64";
+      sha256 = "sha256-ZdEFVX4rD8lQctLLs+0tq3FM73cguFquVvvz4V5ClOc=";
     };
   };
   agent-browser-darwin-x64 = {
     pname = "agent-browser-darwin-x64";
-    version = "v0.25.3";
+    version = "v0.25.4";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.25.3/agent-browser-darwin-x64";
-      sha256 = "sha256-a6i25NInQQmcwLCQxElyS/X2J8LgP8ZCmdYTxdzCEME=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.25.4/agent-browser-darwin-x64";
+      sha256 = "sha256-GE11PwI/aaMHXGXqlCtvbJy038HLU7Nc9mWbFDn2Vfw=";
     };
   };
   agent-browser-linux-arm64 = {
     pname = "agent-browser-linux-arm64";
-    version = "v0.25.3";
+    version = "v0.25.4";
     src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.25.3/agent-browser-linux-arm64";
-      sha256 = "sha256-cd8GYQvLQ+zYPuDiKhhqdseF8vSMWBUG+DaL2Y4+g5o=";
+      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.25.4/agent-browser-linux-arm64";
+      sha256 = "sha256-9EsDfPII4cV3GtSYmD9WdKyitl2lwbL0QKupAfPd9TY=";
     };
   };
   agsh = {
     pname = "agsh";
-    version = "0.7.1";
+    version = "0.9.4";
     src = fetchFromGitHub {
       owner = "k4yt3x";
       repo = "agsh";
-      rev = "0.7.1";
+      rev = "0.9.4";
       fetchSubmodules = false;
-      sha256 = "sha256-0hKVysJ0120RKJ48ubXtdwHsgQGDOWWLajuqlvbwc74=";
+      sha256 = "sha256-wrMbld2ok3GkFbigg+iB4D2WzGb9r7oDnE46d/y6pC0=";
     };
   };
   bb-browser = {
@@ -166,13 +155,24 @@
   };
   cliproxyapi = {
     pname = "cliproxyapi";
-    version = "v6.9.18";
+    version = "v6.9.24";
     src = fetchFromGitHub {
       owner = "router-for-me";
       repo = "CLIProxyAPI";
-      rev = "v6.9.18";
+      rev = "v6.9.24";
       fetchSubmodules = false;
-      sha256 = "sha256-boJT2PuoX/di6Fjb6j1q2oEoUv1o7jKOq6ay650QTUg=";
+      sha256 = "sha256-VG3CA4IgGDi1vVii8zRLtGUFMLwkt2IBLQNIDRYi5IA=";
+    };
+  };
+  cloudflarespeedtest = {
+    pname = "cloudflarespeedtest";
+    version = "v2.3.4";
+    src = fetchFromGitHub {
+      owner = "XIU2";
+      repo = "CloudflareSpeedTest";
+      rev = "v2.3.4";
+      fetchSubmodules = false;
+      sha256 = "sha256-ZrBRHJsVHuTjftMcxpk+p2Z/wm49DmIaO/w0bjQ9ROo=";
     };
   };
   cnb-cli = {
@@ -191,10 +191,10 @@
   };
   cocoindex-code = {
     pname = "cocoindex-code";
-    version = "0.2.11";
+    version = "0.2.22";
     src = fetchurl {
-      url = "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.11.tar.gz";
-      sha256 = "sha256-8YxjquqAX+VbolgkNSATED1vnje8Gegxsi7B/N0SIPQ=";
+      url = "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.22.tar.gz";
+      sha256 = "sha256-txogzJzSyFx3fkoEXeWw98s4J4yVeruIAhxc3+aHA4Y=";
     };
   };
   coe = {
@@ -211,15 +211,29 @@
     };
     date = "2026-04-02";
   };
+  cookiecloud-rs = {
+    pname = "cookiecloud-rs";
+    version = "f8a023f42951c8ba97261d3b16e3a4ff53c91f4a";
+    src = fetchgit {
+      url = "https://github.com/p3psi-boo/CookieCloud.git";
+      rev = "f8a023f42951c8ba97261d3b16e3a4ff53c91f4a";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-ak78lDOAaDWCk9dNpQ9nNObwXrhj71umhzu01hagt2I=";
+    };
+    date = "2026-04-14";
+  };
   dagu = {
     pname = "dagu";
-    version = "v2.4.3";
+    version = "v2.5.0";
     src = fetchFromGitHub {
       owner = "dagu-org";
       repo = "dagu";
-      rev = "v2.4.3";
+      rev = "v2.5.0";
       fetchSubmodules = false;
-      sha256 = "sha256-gaS+uUqi03Q3+KvWMEiWrKR2VNMfiGaLZh6aEHhiNWs=";
+      sha256 = "sha256-zI/SD+uz6lO5woHUCDawaLtOZ0fS8efSaZSh6MTuB5k=";
     };
   };
   dalvikus = {
@@ -228,6 +242,14 @@
     src = fetchurl {
       url = "https://github.com/loerting/dalvikus/archive/refs/tags/v1.0.13.tar.gz";
       sha256 = "sha256-PMSalWlMDIqMWgPZ6Ha7L6TA2VOX6svCAOYMSpzIqHY=";
+    };
+  };
+  dbhub = {
+    pname = "dbhub";
+    version = "0.21.2";
+    src = fetchurl {
+      url = "https://registry.npmjs.org/@bytebase/dbhub/-/dbhub-0.21.2.tgz";
+      sha256 = "sha256-eOwzRCZAYypW/GY1zXIqusads2xEv50s01xhfroZPTo=";
     };
   };
   ecloud-computer-auto-boot = {
@@ -326,19 +348,33 @@
     };
     date = "2025-10-21";
   };
-  ggwave-to-file = {
-    pname = "ggwave-to-file";
-    version = "a38e38b7373f9adf45baf737a104206664b225a1";
+  fusion = {
+    pname = "fusion";
+    version = "ecc44eeff94dd4836eed6490a497989194effa2b";
     src = fetchgit {
-      url = "https://github.com/ggerganov/ggwave.git";
-      rev = "a38e38b7373f9adf45baf737a104206664b225a1";
-      fetchSubmodules = true;
+      url = "https://github.com/p3psi-boo/fusion.git";
+      rev = "ecc44eeff94dd4836eed6490a497989194effa2b";
+      fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-g5OdQLpmHAZXgqm3swdB3icUpNMhHgxrsS5mJjkb/+o=";
+      sha256 = "sha256-O9NMromcyvcF97Kb084vrHPjqRgyRqq14Ay8pdsj9rQ=";
     };
-    date = "2026-03-21";
+    date = "2026-04-12";
+  };
+  gemma-cpp = {
+    pname = "gemma-cpp";
+    version = "e93b7c56f0d6f3714250482b6a91a027350d0f78";
+    src = fetchgit {
+      url = "https://github.com/test1111111111111112/llama-cpp-turboquant-gemma4.git";
+      rev = "e93b7c56f0d6f3714250482b6a91a027350d0f78";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-ykzroJr8zXnLe6Wq279/+ltTxbeSEvcbTufz2EyqYqQ=";
+    };
+    date = "2026-04-04";
   };
   grok2api = {
     pname = "grok2api";
@@ -356,10 +392,10 @@
   };
   ida-mcp = {
     pname = "ida-mcp";
-    version = "9.3.9";
+    version = "9.3.11";
     src = fetchurl {
-      url = "https://github.com/blacktop/ida-mcp-rs/releases/download/v9.3.9/ida-mcp_9.3.9_Linux_x86_64.tar.gz";
-      sha256 = "sha256-Y9vOEdPil6zeU1IAImVrBNaQChoyrbHsiHqI/00iobY=";
+      url = "https://github.com/blacktop/ida-mcp-rs/releases/download/v9.3.11/ida-mcp_9.3.11_Linux_x86_64.tar.gz";
+      sha256 = "sha256-/WqYQ0QCnt1Mm+h2hxix2A6PJPm0gcUyaE5pG75p9bQ=";
     };
   };
   ida-pro-mcp = {
@@ -456,6 +492,17 @@
       sha256 = "sha256-S924rqlVKzUFD63NDyK5bbXnonra+/UoH6j78AAj3d0=";
     };
   };
+  micyou = {
+    pname = "micyou";
+    version = "v1.2.1";
+    src = fetchFromGitHub {
+      owner = "LanRhyme";
+      repo = "MicYou";
+      rev = "v1.2.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-2+c1gcDqJypnuMZOxpgsT9LYK4qOmP6FtsmGY/cc2Yg=";
+    };
+  };
   nf_deaf = {
     pname = "nf_deaf";
     version = "cf346a3c270e5eb6d31b1d0c110efaf7a8b9193e";
@@ -511,13 +558,13 @@
   };
   openalice = {
     pname = "openalice";
-    version = "v0.9.0-beta.9";
+    version = "v0.9.0-beta.12";
     src = fetchFromGitHub {
       owner = "TraderAlice";
       repo = "OpenAlice";
-      rev = "v0.9.0-beta.9";
+      rev = "v0.9.0-beta.12";
       fetchSubmodules = false;
-      sha256 = "sha256-t73VBQwEWYvdFkVM5BBLVcgpT0gDPlgsXcm9cjlCFKg=";
+      sha256 = "sha256-8dSrTIBX8LpdZoDoQmxOybdjW0B6f8uriTrZay8JT3Y=";
     };
   };
   openixcli = {
@@ -550,17 +597,17 @@
   };
   paperclip = {
     pname = "paperclip";
-    version = "3264f9c1f6f0ca6049ed8192a0862fc30e723b20";
+    version = "5d1ed71779df5622d9fd99ad28816b2da4bdee31";
     src = fetchgit {
       url = "https://github.com/paperclipai/paperclip.git";
-      rev = "3264f9c1f6f0ca6049ed8192a0862fc30e723b20";
+      rev = "5d1ed71779df5622d9fd99ad28816b2da4bdee31";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-J//Lo9s1JOtgInPDRA8o2hc+bjjEtAisuwevB9/DWWA=";
+      sha256 = "sha256-R8nNSFT8Gaze7hATAqgXS4LmKZb8N3r9fus6MliMFeE=";
     };
-    date = "2026-04-08";
+    date = "2026-04-13";
   };
   pg_duckdb = {
     pname = "pg_duckdb";
@@ -575,6 +622,17 @@
       sha256 = "sha256-8S2uS6PgjxVzQA1gYVrEeZjnACXt3ADneDe1MlRNb/g=";
     };
     date = "2026-03-16";
+  };
+  planify = {
+    pname = "planify";
+    version = "v4.18.3";
+    src = fetchFromGitHub {
+      owner = "alainm23";
+      repo = "planify";
+      rev = "v4.18.3";
+      fetchSubmodules = false;
+      sha256 = "sha256-VCLXQnB3JhhK3UvnGTfR+mZ/AYGQ2YNxa6hD4QCUfjM=";
+    };
   };
   polymarket-cli = {
     pname = "polymarket-cli";
@@ -594,17 +652,17 @@
   };
   proxy-ns = {
     pname = "proxy-ns";
-    version = "f4adda2ce8add33c438845a65591e3cf11787c62";
+    version = "5d08d18f9171d7e65fabad06ee81021d9bca0a21";
     src = fetchgit {
       url = "https://github.com/OkamiW/proxy-ns.git";
-      rev = "f4adda2ce8add33c438845a65591e3cf11787c62";
+      rev = "5d08d18f9171d7e65fabad06ee81021d9bca0a21";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-da0WLeXh2iGPxXODiy5jFfGx3Mb/UKK48B/Qk/h7PgU=";
+      sha256 = "sha256-4w5aiVpbmlGkCyg5YQnjXYkdgrbZADiWw+l4kd6ecek=";
     };
-    date = "2026-03-28";
+    date = "2026-04-09";
   };
   pymicro-features = {
     pname = "pymicro-features";
@@ -869,33 +927,5 @@
       fetchSubmodules = false;
       sha256 = "sha256-Igbr3L2W32s4uBepllSz07bkbI3qwAKMZkBrXLqGrGA=";
     };
-  };
-  fusion = {
-    pname = "fusion";
-    version = "ecc44eeff94dd4836eed6490a497989194effa2b";
-    src = fetchgit {
-      url = "https://github.com/p3psi-boo/fusion.git";
-      rev = "ecc44eeff94dd4836eed6490a497989194effa2b";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-O9NMromcyvcF97Kb084vrHPjqRgyRqq14Ay8pdsj9rQ=";
-    };
-    date = "2026-04-12";
-  };
-  cookiecloud-rs = {
-    pname = "cookiecloud-rs";
-    version = "f8a023f42951c8ba97261d3b16e3a4ff53c91f4a";
-    src = fetchgit {
-      url = "https://github.com/p3psi-boo/CookieCloud.git";
-      rev = "f8a023f42951c8ba97261d3b16e3a4ff53c91f4a";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-ak78lDOAaDWCk9dNpQ9nNObwXrhj71umhzu01hagt2I=";
-    };
-    date = "2026-04-14";
   };
 }
