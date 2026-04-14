@@ -83,12 +83,6 @@ fetch.github = "damonto/sigmo"
 src.git = "https://github.com/k4yt3x/vanissh.git"
 fetch.git = "https://github.com/k4yt3x/vanissh.git"
 
-[ggwave-to-file]
-src.git = "https://github.com/ggerganov/ggwave.git"
-fetch.git = "https://github.com/ggerganov/ggwave.git"
-src.branch = "master"
-git.fetchSubmodules = true
-
 [wsl-vpnkit]
 src.github = "sakai135/wsl-vpnkit"
 fetch.github = "sakai135/wsl-vpnkit"
@@ -419,11 +413,6 @@ fetch.github = "p3psi-boo/micyou"
 [planify]
 src.github = "alainm23/planify"
 fetch.github = "alainm23/planify"
-
-# quicssh
-[quicssh]
-src.github = "francois76/quicssh"
-fetch.github = "francois76/quicssh"
 
 # yt-media-storage
 [yt-media-storage]
