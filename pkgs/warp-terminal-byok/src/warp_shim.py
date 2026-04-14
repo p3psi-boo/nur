@@ -1447,11 +1447,6 @@ def resolve_provider_name(model_id: str) -> str:
 
 
 def resolve_provider_model(model_id: str, config: ShimConfig) -> str:
-    override = config.model_overrides.get(model_id)
-    if override is not None and override != "":
-        logger.debug("resolve_provider_model: model_id={} -> override={}", model_id, override)
-        return override
-
     normalized = model_id.lower()
     resolved = model_id
 
@@ -1469,6 +1464,14 @@ def resolve_provider_model(model_id: str, config: ShimConfig) -> str:
             resolved = f"claude-{family}-{version}"
     else:
         resolved = model_id
+
+    logger.debug("resolve_provider_model: model_id={} -> normalized={}", model_id, resolved)
+
+    # Check overrides with both the original and normalized model_id
+    override = config.model_overrides.get(model_id) or config.model_overrides.get(resolved)
+    if override is not None and override != "":
+        logger.debug("resolve_provider_model: model_id={} -> override={}", model_id, override)
+        return override
 
     logger.debug("resolve_provider_model: model_id={} -> resolved={}", model_id, resolved)
     return resolved
