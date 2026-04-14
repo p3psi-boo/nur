@@ -15,7 +15,7 @@ let
   pnpm = pnpm_10;
   frontend = stdenvNoCC.mkDerivation (finalAttrs: {
     pname = "octopus-api-ui";
-    version = lib.removePrefix "v" sourceInfo.version;
+    version = "0-unstable-${sourceInfo.date}";
 
     src = sourceInfo.src;
     sourceRoot = "${sourceInfo.src.name}/web";
@@ -50,7 +50,7 @@ let
 in
 (buildGoModule.override { go = go; }) {
   pname = "octopus-api";
-  version = lib.removePrefix "v" sourceInfo.version;
+  version = "0-unstable-${sourceInfo.date}";
 
   src = sourceInfo.src;
 
@@ -89,8 +89,7 @@ in
 
   meta = {
     description = "LLM API aggregation and load balancing service for individuals";
-    homepage = "https://github.com/bestruirui/octopus";
-    changelog = "https://github.com/bestruirui/octopus/releases/tag/${sourceInfo.version}";
+    homepage = "https://github.com/p3psi-boo/octopus";
     license = lib.licenses.agpl3Only;
     mainProgram = "octopus-api";
     platforms = lib.platforms.unix;

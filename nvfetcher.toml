@@ -252,9 +252,10 @@ src.include_regex = "^v[0-9].*"
 fetch.github = "philschmid/mcp-cli"
 
 [octopus-api]
-src.github_tag = "bestruirui/octopus"
-src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
-fetch.github = "bestruirui/octopus"
+src.git = "https://github.com/p3psi-boo/octopus.git"
+fetch.git = "https://github.com/p3psi-boo/octopus.git"
+git.fetch_submodules = false
+git.get_commit_date = true
 
 [sofixer]
 src.github_tag = "F8LEFT/SoFixer"
