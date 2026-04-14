@@ -442,3 +442,10 @@ fetch.github = "p3psi-boo/substack-dl"
 src.manual = "0.21.2"
 fetch.url = "https://registry.npmjs.org/@bytebase/dbhub/-/dbhub-0.21.2.tgz"
 
+# cookiecloud-rs - Rust rewrite of CookieCloud API
+[cookiecloud-rs]
+src.git = "https://github.com/p3psi-boo/CookieCloud.git"
+fetch.git = "https://github.com/p3psi-boo/CookieCloud.git"
+git.fetch_submodules = false
+git.get_commit_date = true
+

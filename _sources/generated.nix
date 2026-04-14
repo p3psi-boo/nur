@@ -884,4 +884,18 @@
     };
     date = "2026-04-12";
   };
+  cookiecloud-rs = {
+    pname = "cookiecloud-rs";
+    version = "f8a023f42951c8ba97261d3b16e3a4ff53c91f4a";
+    src = fetchgit {
+      url = "https://github.com/p3psi-boo/CookieCloud.git";
+      rev = "f8a023f42951c8ba97261d3b16e3a4ff53c91f4a";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-ak78lDOAaDWCk9dNpQ9nNObwXrhj71umhzu01hagt2I=";
+    };
+    date = "2026-04-14";
+  };
 }
