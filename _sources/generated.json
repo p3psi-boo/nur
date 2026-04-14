@@ -275,11 +275,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-txogzJzSyFx3fkoEXeWw98s4J4yVeruIAhxc3+aHA4Y=",
+            "sha256": "sha256-D1D4J8fP5RYCrHHx9sg+Sy4MVUjlgkK/R4kQe89uDZ0=",
             "type": "url",
-            "url": "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.22.tar.gz"
+            "url": "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.23.tar.gz"
         },
-        "version": "0.2.22"
+        "version": "0.2.23"
     },
     "coe": {
         "cargoLock": null,
@@ -811,7 +811,7 @@
     },
     "octopus-api": {
         "cargoLock": null,
-        "date": null,
+        "date": "2026-04-14",
         "extract": null,
         "name": "octopus-api",
         "passthru": null,
@@ -821,14 +821,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "owner": "bestruirui",
-            "repo": "octopus",
-            "rev": "v0.9.26",
-            "sha256": "sha256-4kkzOLXF3l7nD59K7TkbLHxSd3FiwH1uLAL8w1nA2bA=",
+            "rev": "7cdb0b7bcc38a9ff3f881e0b271c8fd8fe809cd4",
+            "sha256": "sha256-o5PgveKaYYqKIHrNZOSBeFR0DjVx0MIt3ugyUfwl13s=",
             "sparseCheckout": [],
-            "type": "github"
+            "type": "git",
+            "url": "https://github.com/p3psi-boo/octopus.git"
         },
-        "version": "v0.9.26"
+        "version": "7cdb0b7bcc38a9ff3f881e0b271c8fd8fe809cd4"
     },
     "okmain": {
         "cargoLock": null,

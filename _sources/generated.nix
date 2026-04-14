@@ -159,10 +159,10 @@
   };
   cocoindex-code = {
     pname = "cocoindex-code";
-    version = "0.2.22";
+    version = "0.2.23";
     src = fetchurl {
-      url = "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.22.tar.gz";
-      sha256 = "sha256-txogzJzSyFx3fkoEXeWw98s4J4yVeruIAhxc3+aHA4Y=";
+      url = "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.23.tar.gz";
+      sha256 = "sha256-D1D4J8fP5RYCrHHx9sg+Sy4MVUjlgkK/R4kQe89uDZ0=";
     };
   };
   coe = {
@@ -487,14 +487,17 @@
   };
   octopus-api = {
     pname = "octopus-api";
-    version = "v0.9.26";
-    src = fetchFromGitHub {
-      owner = "bestruirui";
-      repo = "octopus";
-      rev = "v0.9.26";
+    version = "7cdb0b7bcc38a9ff3f881e0b271c8fd8fe809cd4";
+    src = fetchgit {
+      url = "https://github.com/p3psi-boo/octopus.git";
+      rev = "7cdb0b7bcc38a9ff3f881e0b271c8fd8fe809cd4";
       fetchSubmodules = false;
-      sha256 = "sha256-4kkzOLXF3l7nD59K7TkbLHxSd3FiwH1uLAL8w1nA2bA=";
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-o5PgveKaYYqKIHrNZOSBeFR0DjVx0MIt3ugyUfwl13s=";
     };
+    date = "2026-04-14";
   };
   okmain = {
     pname = "okmain";

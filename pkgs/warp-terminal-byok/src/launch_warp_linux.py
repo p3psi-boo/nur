@@ -136,17 +136,19 @@ def launch_warp(warp_binary: Path, shim_host: str, shim_port: int) -> subprocess
     env = os.environ.copy()
     shim_url = f"http://{shim_host}:{shim_port}"
 
-    # Standard proxy environment variables
-    for key in ["HTTP_PROXY", "http_proxy", "HTTPS_PROXY", "https_proxy"]:
-        env[key] = shim_url
+    # NOTE: We intentionally do NOT set HTTP_PROXY/HTTPS_PROXY here.
+    # The shim proxy does not support HTTP CONNECT tunnels required for
+    # HTTPS proxying. Setting these would break Firebase auth and other
+    # direct HTTPS connections that Warp needs to make.
+    # Instead, we rely on Warp-specific env vars to route API requests.
 
-    # Warp-specific configuration
+    # Warp-specific configuration - only these routes go through shim
     env["WARP_SERVER_ROOT_URL"] = shim_url
     env["WARP_WS_SERVER_URL"] = f"ws://{shim_host}:{shim_port}"
     env["WARP_SESSION_SHARING_SERVER_URL"] = shim_url
 
     print(f"Launching Warp: {warp_binary}")
-    print(f"  HTTP_PROXY={shim_url}")
+    print(f"  API requests routed to shim: {shim_url}")
 
     return subprocess.Popen([str(warp_binary)], env=env)
 
