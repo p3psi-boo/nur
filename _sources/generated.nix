@@ -6,38 +6,6 @@
   dockerTools,
 }:
 {
-  agent-browser = {
-    pname = "agent-browser";
-    version = "v0.25.4";
-    src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.25.4/agent-browser-linux-x64";
-      sha256 = "sha256-AtJvEFqdjiA/j5Zqz+tLqxkc+kYlQxpTW4vl+PWQVHI=";
-    };
-  };
-  agent-browser-darwin-arm64 = {
-    pname = "agent-browser-darwin-arm64";
-    version = "v0.25.4";
-    src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.25.4/agent-browser-darwin-arm64";
-      sha256 = "sha256-ZdEFVX4rD8lQctLLs+0tq3FM73cguFquVvvz4V5ClOc=";
-    };
-  };
-  agent-browser-darwin-x64 = {
-    pname = "agent-browser-darwin-x64";
-    version = "v0.25.4";
-    src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.25.4/agent-browser-darwin-x64";
-      sha256 = "sha256-GE11PwI/aaMHXGXqlCtvbJy038HLU7Nc9mWbFDn2Vfw=";
-    };
-  };
-  agent-browser-linux-arm64 = {
-    pname = "agent-browser-linux-arm64";
-    version = "v0.25.4";
-    src = fetchurl {
-      url = "https://github.com/vercel-labs/agent-browser/releases/download/v0.25.4/agent-browser-linux-arm64";
-      sha256 = "sha256-9EsDfPII4cV3GtSYmD9WdKyitl2lwbL0QKupAfPd9TY=";
-    };
-  };
   agsh = {
     pname = "agsh";
     version = "0.9.4";
