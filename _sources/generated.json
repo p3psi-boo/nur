@@ -821,13 +821,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "7cdb0b7bcc38a9ff3f881e0b271c8fd8fe809cd4",
-            "sha256": "sha256-o5PgveKaYYqKIHrNZOSBeFR0DjVx0MIt3ugyUfwl13s=",
+            "rev": "3d6b9579e832d82c97341dcb17c14aa29d008af7",
+            "sha256": "sha256-+IQXaw6PVVyQwgR/5HO4fdWt0p5jR+hZ3FnCYGZcXzs=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/p3psi-boo/octopus.git"
         },
-        "version": "7cdb0b7bcc38a9ff3f881e0b271c8fd8fe809cd4"
+        "version": "3d6b9579e832d82c97341dcb17c14aa29d008af7"
     },
     "okmain": {
         "cargoLock": null,
