@@ -37,6 +37,7 @@ if str(WARP_PROTO_DIRECTORY) not in sys.path:
 try:
     from aiohttp import ClientSession, ClientTimeout, WSMsgType, web
     from aiohttp.typedefs import LooseHeaders
+    from loguru import logger
     from yarl import URL
 except ModuleNotFoundError as error:  # pragma: no cover - import guard
     missing_name = error.name if error.name is not None else "aiohttp"
@@ -61,6 +62,132 @@ except ModuleNotFoundError as error:  # pragma: no cover - import guard
         file=sys.stderr,
     )
     raise SystemExit(1) from error
+
+# ── loguru logging setup ──────────────────────────────────────────────
+_LOG_LEVEL: str = os.environ.get("LOG_LEVEL", "WARNING").upper()
+_LOG_LEVEL_MAP: dict[str, str] = {
+    "DEBUG": "DEBUG", "INFO": "INFO", "WARNING": "WARNING",
+    "ERROR": "ERROR", "CRITICAL": "CRITICAL",
+}
+_CONSOLE_LEVEL: str = _LOG_LEVEL_MAP.get(_LOG_LEVEL, "WARNING")
+
+# Remove loguru's default stderr handler; we'll add our own.
+logger.remove()
+
+# Console sink: colored, human-readable
+logger.add(
+    sys.stderr,
+    level=_CONSOLE_LEVEL,
+    format=(
+        "<level>{level: <8}</level> "
+        "<cyan>{name}</cyan>:<cyan>{function}</cyan>:<cyan>{line}</cyan> - "
+        "<level>{message}</level>"
+    ),
+    colorize=True,
+)
+
+
+# Default kind-to-level mapping for log_event()
+_KIND_LEVEL_MAP: dict[str, str] = {
+    # errors
+    "provider_error": "ERROR",
+    "mcp_error": "ERROR",
+    "mcp_initialize_error": "ERROR",
+    "local_multi_agent_error": "ERROR",
+    "unhandled_exception": "ERROR",
+    "websocket_error": "ERROR",
+    # important flow
+    "provider_request": "INFO",
+    "provider_response": "DEBUG",
+    "local_multi_agent_request": "INFO",
+    "local_multi_agent_result": "INFO",
+    "local_multi_agent_provider_selection": "INFO",
+    # verbose flow
+    "mcp_request": "DEBUG",
+    "mcp_response": "DEBUG",
+    "mcp_refresh": "DEBUG",
+    "http_request": "DEBUG",
+    "http_response": "DEBUG",
+    "local_ai_loop_iteration": "DEBUG",
+    "local_ai_loop_tool_calls": "DEBUG",
+    "local_tool_execution_start": "DEBUG",
+    "local_tool_execution_result": "DEBUG",
+    "tool_cwd_fallback": "DEBUG",
+    "local_passive_suggestions_request": "DEBUG",
+    "token_proxy_cache_hit": "DEBUG",
+    "token_proxy_cache_store": "DEBUG",
+    "token_proxy_cache_fallback": "DEBUG",
+    "capture_request_body": "DEBUG",
+    "curl_stderr": "DEBUG",
+    "graphql_response_rewrite": "DEBUG",
+    "ai_forward_headers": "DEBUG",
+    "websocket_connecting": "DEBUG",
+    "websocket_connected": "DEBUG",
+    "websocket_closed": "DEBUG",
+    "websocket_request": "DEBUG",
+}
+
+
+def _json_sink(message: object) -> None:
+    """Custom sink that writes one JSON object per line to the log file."""
+    record = message.record
+    entry: dict[str, object] = {
+        "timestamp": record["time"].isoformat(),
+        "level": record["level"].name,
+    }
+    # Merge bound extra fields (kind, plus any contextual data)
+    extra = record.get("extra", {})
+    entry.update(extra)
+    # If there is a plain text message and no explicit message key, add it
+    if "message" not in entry:
+        entry["message"] = str(record["message"])
+    _json_sink._file.write(json.dumps(entry, ensure_ascii=False, default=str) + "\n")  # type: ignore[attr-defined]
+    _json_sink._file.flush()  # type: ignore[attr-defined]
+
+
+# Module-level file handle (set by configure_file_logging)
+setattr(_json_sink, "_file", None)
+
+
+def configure_file_logging(log_path: Path, retention_days: int = 7) -> None:
+    """Open a daily-rotated JSON log file and add it as a loguru file sink."""
+    log_path.parent.mkdir(parents=True, exist_ok=True)
+    now = datetime.now(UTC)
+    current_log = log_path.parent / f"{log_path.stem}.{now.strftime('%Y-%m-%d')}{log_path.suffix}"
+    file_handle = current_log.open("a", encoding="utf-8")
+    setattr(_json_sink, "_file", file_handle)
+
+    file_level = os.environ.get("LOG_LEVEL_FILE", _CONSOLE_LEVEL).upper()
+    file_level = _LOG_LEVEL_MAP.get(file_level, "DEBUG")
+
+    logger.add(
+        _json_sink,
+        level=file_level,
+        format="{message}",
+        filter=lambda r: r["extra"].get("_structured", False),
+    )
+    logger.info("File logging configured: path={}, retention={}d", current_log, retention_days)
+
+
+def log_event(kind: str, **kwargs: object) -> None:
+    """Unified structured logging: writes to both console and JSON file.
+
+    - *kind* selects the log level via _KIND_LEVEL_MAP (defaults to INFO).
+    - All keyword args become structured fields in the JSON file.
+    - The console shows a short human-readable line.
+    """
+    level = _KIND_LEVEL_MAP.get(kind, "INFO")
+    # Build a short console message
+    parts = [kind]
+    for key in ("provider", "server_name", "model_id", "endpoint", "request_id", "error"):
+        val = kwargs.get(key)
+        if val is not None:
+            parts.append(f"{key}={val!r}")
+    console_msg = " ".join(parts)
+    logger.bind(_structured=True, kind=kind, **kwargs).log(level, console_msg)
+
+
+# ── end loguru setup ────────────────────────────────────────────────
 
 HOP_BY_HOP_HEADERS: Final[set[str]] = {
     "connection",
@@ -647,16 +774,7 @@ async def call_mcp_jsonrpc_once(
     if params is not None:
         payload["params"] = params
 
-    await append_log(
-        config,
-        {
-            "timestamp": datetime.now(UTC).isoformat(),
-            "kind": "mcp_request",
-            "server_name": server.name,
-            "method": method,
-            "payload": payload,
-        },
-    )
+    log_event(kind="mcp_request", server_name=server.name, method=method, payload=payload)
 
     try:
         async with session.post(
@@ -667,46 +785,16 @@ async def call_mcp_jsonrpc_once(
         ) as response:
             response_text = await response.text()
             if response.status >= 400:
-                await append_log(
-                    config,
-                    {
-                        "timestamp": datetime.now(UTC).isoformat(),
-                        "kind": "mcp_error",
-                        "server_name": server.name,
-                        "method": method,
-                        "status": response.status,
-                        "body": truncate_text(response_text, limit=8000),
-                    },
-                )
+                log_event(kind="mcp_error", server_name=server.name, method=method, status=response.status, body=truncate_text(response_text, limit=8000))
                 raise RuntimeError(
                     f"MCP server {server.name} request failed: status={response.status}, body={truncate_text(response_text, limit=1000)}"
                 )
             if "MCP-Session-Id" in response.headers:
                 server.session_id = response.headers["MCP-Session-Id"]
-            await append_log(
-                config,
-                {
-                    "timestamp": datetime.now(UTC).isoformat(),
-                    "kind": "mcp_response",
-                    "server_name": server.name,
-                    "method": method,
-                    "status": response.status,
-                    "body": truncate_text(response_text, limit=4000),
-                },
-            )
+            log_event(kind="mcp_response", server_name=server.name, method=method, status=response.status, body=truncate_text(response_text, limit=4000))
             return parse_mcp_http_payload(response_text, response.headers.get("Content-Type", ""))
     except Exception as error:
-        await append_log(
-            config,
-            {
-                "timestamp": datetime.now(UTC).isoformat(),
-                "kind": "mcp_error",
-                "server_name": server.name,
-                "method": method,
-                "error": format_exception_message(error),
-                "error_type": type(error).__name__,
-            },
-        )
+        log_event(kind="mcp_error", server_name=server.name, method=method, error=format_exception_message(error), error_type=type(error).__name__)
         raise
 
 
@@ -719,14 +807,7 @@ async def refresh_mcp_server(
         server.session_id = None
         server.tools.clear()
         server.resources.clear()
-        await append_log(
-            config,
-            {
-                "timestamp": datetime.now(UTC).isoformat(),
-                "kind": "mcp_refresh",
-                "server_name": server.name,
-            },
-        )
+        log_event(kind="mcp_refresh", server_name=server.name)
         await initialize_mcp_server(session, config, server)
 
 
@@ -866,17 +947,7 @@ async def build_mcp_registry(
             await initialize_mcp_server(session, config, server)
         except Exception as error:
             server.initialization_error = format_exception_message(error)
-            await append_log(
-                config,
-                {
-                    "timestamp": datetime.now(UTC).isoformat(),
-                    "kind": "mcp_initialize_error",
-                    "server_name": server_name,
-                    "server_url": server_url,
-                    "error": server.initialization_error,
-                    "error_type": type(error).__name__,
-                },
-            )
+            log_event(kind="mcp_initialize_error", server_name=server_name, server_url=server_url, error=server.initialization_error, error_type=type(error).__name__)
         registry[server_name] = server
     return registry
 
@@ -1356,41 +1427,51 @@ def build_provider_selection_metadata(
         metadata["endpoint"] = normalize_openai_base_url(config.openai.base_url)
     else:
         metadata["endpoint"] = "local-echo"
+        logger.warning("NO MATCHING PROVIDER for provider_name={}, model_id={}", provider_name, local_request.model_id)
+        logger.warning("  config.openai={}, config.anthropic={}, config.google={}", 'SET(' + config.openai.base_url + ')' if config.openai else 'NONE', 'SET(' + config.anthropic.base_url + ')' if config.anthropic else 'NONE', 'SET(' + config.google.base_url + ')' if config.google else 'NONE')
 
+    logger.info("model_id={} -> provider={}, target_model={}, endpoint={}", local_request.model_id, provider_name, target_model, metadata["endpoint"])
     return metadata
 
 
 def resolve_provider_name(model_id: str) -> str:
     normalized = model_id.lower()
     if normalized.startswith("claude"):
-        return "anthropic"
-    if normalized.startswith("gemini"):
-        return "google"
-    return "openai"
+        provider = "anthropic"
+    elif normalized.startswith("gemini"):
+        provider = "google"
+    else:
+        provider = "openai"
+    logger.debug("resolve_provider_name: model_id={} -> provider={}", model_id, provider)
+    return provider
 
 
 def resolve_provider_model(model_id: str, config: ShimConfig) -> str:
     override = config.model_overrides.get(model_id)
     if override is not None and override != "":
+        logger.debug("resolve_provider_model: model_id={} -> override={}", model_id, override)
         return override
 
     normalized = model_id.lower()
+    resolved = model_id
 
     if normalized.startswith("gpt-5-4"):
-        return "gpt-5.4"
-    if normalized.startswith("gpt-5-3"):
-        return "gpt-5.3"
-    if normalized.startswith("gpt-5-2"):
-        return "gpt-5.2"
-
-    if normalized.startswith("claude-"):
+        resolved = "gpt-5.4"
+    elif normalized.startswith("gpt-5-3"):
+        resolved = "gpt-5.3"
+    elif normalized.startswith("gpt-5-2"):
+        resolved = "gpt-5.2"
+    elif normalized.startswith("claude-"):
         parts = normalized.split("-")
         if len(parts) >= 4 and parts[0] == "claude":
             family = parts[3]
             version = "-".join(parts[1:3])
-            return f"claude-{family}-{version}"
+            resolved = f"claude-{family}-{version}"
+    else:
+        resolved = model_id
 
-    return model_id
+    logger.debug("resolve_provider_model: model_id={} -> resolved={}", model_id, resolved)
+    return resolved
 
 
 def build_system_prompt(
@@ -3063,6 +3144,38 @@ def extract_anthropic_tool_calls(
     return tuple(parsed_tool_calls)
 
 
+async def _call_provider_api(
+    session: ClientSession,
+    endpoint: str,
+    payload: dict[str, object],
+    headers: dict[str, str],
+    provider_name: str,
+) -> dict[str, object]:
+    """Generic provider API caller with unified logging and error handling."""
+    log_event(kind="provider_request", provider=provider_name, endpoint=endpoint, payload=payload)
+
+    async with session.post(
+        endpoint,
+        json=payload,
+        headers=headers,
+        timeout=ClientTimeout(total=PROVIDER_REQUEST_TIMEOUT_SECONDS),
+    ) as response:
+        response_text = await response.text()
+        logger.info("{}: response status={}, body_len={}", provider_name, response.status, len(response_text))
+
+        if response.status >= 400:
+            error_body = truncate_text(response_text, limit=2000)
+            logger.error("{}: ERROR status={}, body={}", provider_name, response.status, error_body)
+            log_event(kind="provider_error", provider=provider_name, endpoint=endpoint, status=response.status, body=truncate_text(response_text, limit=8000))
+            raise RuntimeError(
+                f"{provider_name} endpoint failed: status={response.status}, body={truncate_text(response_text, limit=1000)}"
+            )
+
+        data: dict[str, object] = json.loads(response_text)
+        log_event(kind="provider_response", provider=provider_name, endpoint=endpoint, status=200, body=truncate_text(response_text, limit=4000))
+        return data
+
+
 async def run_openai_request(
     session: ClientSession,
     provider: ProviderConfig,
@@ -3075,6 +3188,7 @@ async def run_openai_request(
         raise RuntimeError("OpenAI-compatible API key is not configured.")
 
     endpoint = normalize_openai_base_url(provider.base_url)
+    logger.info("run_openai_request: endpoint={}, model={}", endpoint, conversation_state.target_model)
     messages: list[dict[str, object]] = []
     if conversation_state.system_prompt != "":
         messages.append({"role": "system", "content": conversation_state.system_prompt})
@@ -3102,52 +3216,8 @@ async def run_openai_request(
         "Accept": "application/json",
     }
 
-    await append_log(
-        config,
-        {
-            "timestamp": datetime.now(UTC).isoformat(),
-            "kind": "provider_request",
-            "provider": "openai",
-            "endpoint": endpoint,
-            "payload": payload,
-        },
-    )
-
-    async with session.post(
-        endpoint,
-        json=payload,
-        headers=headers,
-        timeout=ClientTimeout(total=PROVIDER_REQUEST_TIMEOUT_SECONDS),
-    ) as response:
-        response_text = await response.text()
-        if response.status >= 400:
-            await append_log(
-                config,
-                {
-                    "timestamp": datetime.now(UTC).isoformat(),
-                    "kind": "provider_error",
-                    "provider": "openai",
-                    "endpoint": endpoint,
-                    "status": response.status,
-                    "body": truncate_text(response_text, limit=8000),
-                },
-            )
-            raise RuntimeError(
-                f"OpenAI-compatible endpoint failed: status={response.status}, body={truncate_text(response_text, limit=1000)}"
-            )
-        data = json.loads(response_text)
-
-    await append_log(
-        config,
-        {
-            "timestamp": datetime.now(UTC).isoformat(),
-            "kind": "provider_response",
-            "provider": "openai",
-            "endpoint": endpoint,
-            "status": 200,
-            "body": truncate_text(response_text, limit=4000),
-        },
-    )
+    logger.debug("run_openai_request: payload keys={}, payload_model={}", list(payload.keys()), payload.get('model'))
+    data = await _call_provider_api(session, endpoint, payload, headers, "openai")
 
     choices = data.get("choices")
     if not isinstance(choices, list) or not choices:
@@ -3187,6 +3257,7 @@ async def run_anthropic_request(
         raise RuntimeError("Anthropic API key is not configured.")
 
     endpoint = normalize_anthropic_base_url(provider.base_url)
+    logger.info("run_anthropic_request: endpoint={}, model={}", endpoint, conversation_state.target_model)
     _openai_tools, anthropic_tools = build_supported_tool_schemas(local_request, mcp_registry)
     payload: dict[str, object] = {
         "model": conversation_state.target_model,
@@ -3204,52 +3275,7 @@ async def run_anthropic_request(
         "accept": "application/json",
     }
 
-    await append_log(
-        config,
-        {
-            "timestamp": datetime.now(UTC).isoformat(),
-            "kind": "provider_request",
-            "provider": "anthropic",
-            "endpoint": endpoint,
-            "payload": payload,
-        },
-    )
-
-    async with session.post(
-        endpoint,
-        json=payload,
-        headers=headers,
-        timeout=ClientTimeout(total=PROVIDER_REQUEST_TIMEOUT_SECONDS),
-    ) as response:
-        response_text = await response.text()
-        if response.status >= 400:
-            await append_log(
-                config,
-                {
-                    "timestamp": datetime.now(UTC).isoformat(),
-                    "kind": "provider_error",
-                    "provider": "anthropic",
-                    "endpoint": endpoint,
-                    "status": response.status,
-                    "body": truncate_text(response_text, limit=8000),
-                },
-            )
-            raise RuntimeError(
-                f"Anthropic endpoint failed: status={response.status}, body={truncate_text(response_text, limit=1000)}"
-            )
-        data = json.loads(response_text)
-
-    await append_log(
-        config,
-        {
-            "timestamp": datetime.now(UTC).isoformat(),
-            "kind": "provider_response",
-            "provider": "anthropic",
-            "endpoint": endpoint,
-            "status": 200,
-            "body": truncate_text(response_text, limit=4000),
-        },
-    )
+    data = await _call_provider_api(session, endpoint, payload, headers, "anthropic")
 
     content = data.get("content")
     if isinstance(content, list):
@@ -3271,6 +3297,7 @@ async def run_google_request(
 
     target_model = resolve_provider_model(local_request.model_id, config)
     endpoint = normalize_google_base_url(provider.base_url, target_model, provider.api_key)
+    logger.info("run_google_request: endpoint={}, model={}", endpoint, target_model)
     payload = {
         "contents": [
             {
@@ -3279,51 +3306,7 @@ async def run_google_request(
         ]
     }
 
-    await append_log(
-        config,
-        {
-            "timestamp": datetime.now(UTC).isoformat(),
-            "kind": "provider_request",
-            "provider": "google",
-            "endpoint": endpoint,
-            "payload": payload,
-        },
-    )
-
-    async with session.post(
-        endpoint,
-        json=payload,
-        timeout=ClientTimeout(total=PROVIDER_REQUEST_TIMEOUT_SECONDS),
-    ) as response:
-        response_text = await response.text()
-        if response.status >= 400:
-            await append_log(
-                config,
-                {
-                    "timestamp": datetime.now(UTC).isoformat(),
-                    "kind": "provider_error",
-                    "provider": "google",
-                    "endpoint": endpoint,
-                    "status": response.status,
-                    "body": truncate_text(response_text, limit=8000),
-                },
-            )
-            raise RuntimeError(
-                f"Google endpoint failed: status={response.status}, body={truncate_text(response_text, limit=1000)}"
-            )
-        data = json.loads(response_text)
-
-    await append_log(
-        config,
-        {
-            "timestamp": datetime.now(UTC).isoformat(),
-            "kind": "provider_response",
-            "provider": "google",
-            "endpoint": endpoint,
-            "status": 200,
-            "body": truncate_text(response_text, limit=4000),
-        },
-    )
+    data = await _call_provider_api(session, endpoint, payload, {}, "google")
 
     return LocalAIResult(text=extract_google_text(data))
 
@@ -3339,6 +3322,12 @@ async def run_local_ai_request(
 ) -> tuple[LocalAIResult, dict[str, str]]:
     metadata = build_provider_selection_metadata(config, local_request)
     provider_name = conversation_state.provider_name
+    target_model = conversation_state.target_model
+
+    logger.info("run_local_ai_request: model_id={}, provider={}, target_model={}", local_request.model_id, provider_name, target_model)
+    logger.debug("run_local_ai_request: metadata={}", metadata)
+    logger.debug("run_local_ai_request: config.openai={}, config.anthropic={}, config.google={}", config.openai, config.anthropic, config.google)
+    logger.debug("run_local_ai_request: user_text={}, pending_tool_results={}", truncate_text(local_request.user_text, limit=200), len(local_request.pending_tool_results))
 
     if not local_request.pending_tool_results and local_request.user_text.strip() == "":
         return LocalAIResult(text=""), metadata
@@ -3352,18 +3341,9 @@ async def run_local_ai_request(
         append_user_text_to_state(conversation_state, local_request.user_text)
 
     for _loop_index in range(8):
-        await append_log(
-            config,
-            {
-                "timestamp": datetime.now(UTC).isoformat(),
-                "kind": "local_ai_loop_iteration",
-                "provider_name": provider_name,
-                "model_id": local_request.model_id,
-                "iteration": _loop_index + 1,
-                "pending_message_count": len(conversation_state.messages),
-            },
-        )
+        log_event(kind="local_ai_loop_iteration", provider_name=provider_name, model_id=local_request.model_id, iteration=_loop_index + 1, pending_message_count=len(conversation_state.messages))
         if provider_name == "anthropic" and config.anthropic is not None:
+            logger.info("dispatching to Anthropic: endpoint={}, model={}", normalize_anthropic_base_url(config.anthropic.base_url), conversation_state.target_model)
             local_result = await run_anthropic_request(
                 session,
                 config.anthropic,
@@ -3373,8 +3353,10 @@ async def run_local_ai_request(
                 mcp_registry,
             )
         elif provider_name == "google" and config.google is not None:
+            logger.info("dispatching to Google: endpoint base={}, model={}", config.google.base_url, conversation_state.target_model)
             local_result = await run_google_request(session, config.google, local_request, config)
         elif provider_name == "openai" and config.openai is not None:
+            logger.info("dispatching to OpenAI: endpoint={}, model={}", normalize_openai_base_url(config.openai.base_url), conversation_state.target_model)
             local_result = await run_openai_request(
                 session,
                 config.openai,
@@ -3384,6 +3366,8 @@ async def run_local_ai_request(
                 mcp_registry,
             )
         else:
+            logger.warning("NO PROVIDER CONFIGURED for provider_name={}, model_id={}. Falling back to echo.", provider_name, local_request.model_id)
+            logger.warning("config.openai={}, config.anthropic={}, config.google={}", 'SET' if config.openai else 'NONE', 'SET' if config.anthropic else 'NONE', 'SET' if config.google else 'NONE')
             fallback_text = (
                 "[local-shim echo]\n"
                 f"model={local_request.model_id}\n"
@@ -3398,23 +3382,14 @@ async def run_local_ai_request(
             conversation_state.awaiting_client_tool_results = False
             return local_result, metadata
 
-        await append_log(
-            config,
+        log_event(kind="local_ai_loop_tool_calls", provider_name=provider_name, iteration=_loop_index + 1, tool_calls=[
             {
-                "timestamp": datetime.now(UTC).isoformat(),
-                "kind": "local_ai_loop_tool_calls",
-                "provider_name": provider_name,
-                "iteration": _loop_index + 1,
-                "tool_calls": [
-                    {
-                        "tool_call_id": tool_call.tool_call_id,
-                        "tool_name": tool_call.tool_name,
-                        "arguments": truncate_text(json.dumps(tool_call.arguments, ensure_ascii=False), limit=1000),
-                    }
-                    for tool_call in local_result.tool_calls
-                ],
-            },
-        )
+                "tool_call_id": tool_call.tool_call_id,
+                "tool_name": tool_call.tool_name,
+                "arguments": truncate_text(json.dumps(tool_call.arguments, ensure_ascii=False), limit=1000),
+            }
+            for tool_call in local_result.tool_calls
+        ])
 
         delegated_tool_calls = tuple(
             tool_call
@@ -3427,28 +3402,10 @@ async def run_local_ai_request(
 
         cwd_for_tools = resolve_effective_tool_cwd(local_request)
         if local_request.cwd != cwd_for_tools:
-            await append_log(
-                config,
-                {
-                    "timestamp": datetime.now(UTC).isoformat(),
-                    "kind": "tool_cwd_fallback",
-                    "requested_cwd": local_request.cwd,
-                    "effective_cwd": cwd_for_tools,
-                    "shell_name": local_request.shell_name,
-                },
-            )
+            log_event(kind="tool_cwd_fallback", requested_cwd=local_request.cwd, effective_cwd=cwd_for_tools, shell_name=local_request.shell_name)
         executed_tool_results: list[ShellToolResult]
         for tool_call in local_result.tool_calls:
-            await append_log(
-                config,
-                {
-                    "timestamp": datetime.now(UTC).isoformat(),
-                    "kind": "local_tool_execution_start",
-                    "tool_call_id": tool_call.tool_call_id,
-                    "tool_name": tool_call.tool_name,
-                    "arguments": truncate_text(json.dumps(tool_call.arguments, ensure_ascii=False), limit=1000),
-                },
-            )
+            log_event(kind="local_tool_execution_start", tool_call_id=tool_call.tool_call_id, tool_name=tool_call.tool_name, arguments=truncate_text(json.dumps(tool_call.arguments, ensure_ascii=False), limit=1000))
         if should_execute_tool_calls_in_parallel(local_result.tool_calls):
             executed_tool_results = list(
                 await asyncio.gather(
@@ -3478,17 +3435,7 @@ async def run_local_ai_request(
                 )
 
         for tool_result in executed_tool_results:
-            await append_log(
-                config,
-                {
-                    "timestamp": datetime.now(UTC).isoformat(),
-                    "kind": "local_tool_execution_result",
-                    "tool_call_id": tool_result.tool_call_id,
-                    "tool_name": tool_result.tool_name,
-                    "output": truncate_text(tool_result.output, limit=3000),
-                    "exit_code": tool_result.exit_code,
-                },
-            )
+            log_event(kind="local_tool_execution_result", tool_call_id=tool_result.tool_call_id, tool_name=tool_result.tool_name, output=truncate_text(tool_result.output, limit=3000), exit_code=tool_result.exit_code)
 
         append_tool_results_to_state(conversation_state, tuple(executed_tool_results))
         conversation_state.awaiting_client_tool_results = False
@@ -4144,40 +4091,10 @@ async def handle_local_multi_agent(request: web.Request, body: bytes) -> web.Str
             config,
             mcp_registry,
         )
-        await append_log(
-            config,
-            {
-                "timestamp": datetime.now(UTC).isoformat(),
-                "kind": "local_multi_agent_request",
-                "request_id": request_id,
-                "model_id": local_request.model_id,
-                "user_text": local_request.user_text,
-                "cwd": local_request.cwd,
-                "shell_name": local_request.shell_name,
-                "os_platform": local_request.os_platform,
-                "is_remote_context": is_remote_execution_context(local_request),
-                "username": local_request.username,
-                "conversation_id": local_request.conversation_id,
-                "task_id": local_request.task_id,
-                "has_user_input": local_request.has_user_input,
-                "is_resume_conversation": local_request.is_resume_conversation,
-                "tool_result_count": len(local_request.pending_tool_results),
-                "web_context_retrieval_enabled": local_request.raw_request.settings.web_context_retrieval_enabled,
-            },
-        )
+        log_event(kind="local_multi_agent_request", request_id=request_id, model_id=local_request.model_id, user_text=local_request.user_text, cwd=local_request.cwd, shell_name=local_request.shell_name, os_platform=local_request.os_platform, is_remote_context=is_remote_execution_context(local_request), username=local_request.username, conversation_id=local_request.conversation_id, task_id=local_request.task_id, has_user_input=local_request.has_user_input, is_resume_conversation=local_request.is_resume_conversation, tool_result_count=len(local_request.pending_tool_results), web_context_retrieval_enabled=local_request.raw_request.settings.web_context_retrieval_enabled)
 
         if local_request.user_text.strip() == "" and not local_request.has_user_input:
-            await append_log(
-                config,
-                {
-                    "timestamp": datetime.now(UTC).isoformat(),
-                    "kind": "local_multi_agent_result",
-                    "request_id": request_id,
-                    "text": "",
-                    "reasoning": None,
-                    "noop": True,
-                },
-            )
+            log_event(kind="local_multi_agent_result", request_id=request_id, text="", reasoning=None, noop=True)
             await response.write(sse_chunk_from_event(build_stream_init_event(conversation_id, request_id)))
             stream_initialized = True
             await response.write(sse_chunk_from_event(build_finished_done_event()))
@@ -4206,15 +4123,7 @@ async def handle_local_multi_agent(request: web.Request, body: bytes) -> web.Str
             user_message_pushed = True
 
         request_metadata = build_provider_selection_metadata(config, local_request)
-        await append_log(
-            config,
-            {
-                "timestamp": datetime.now(UTC).isoformat(),
-                "kind": "local_multi_agent_provider_selection",
-                "request_id": request_id,
-                **request_metadata,
-            },
-        )
+        log_event(kind="local_multi_agent_provider_selection", request_id=request_id)
 
         async def stream_model_result(local_result: LocalAIResult) -> None:
             if local_result.text != "" or local_result.reasoning:
@@ -4306,25 +4215,15 @@ async def handle_local_multi_agent(request: web.Request, body: bytes) -> web.Str
             on_model_result=stream_model_result,
             on_tool_results=stream_tool_results,
         )
-        await append_log(
-            config,
+        log_event(kind="local_multi_agent_result", request_id=request_id, text=truncate_text(local_result.text, limit=4000), reasoning=truncate_text(local_result.reasoning, limit=2000) if local_result.reasoning else None, tool_calls=[
             {
-                "timestamp": datetime.now(UTC).isoformat(),
-                "kind": "local_multi_agent_result",
-                "request_id": request_id,
-                "text": truncate_text(local_result.text, limit=4000),
-                "reasoning": truncate_text(local_result.reasoning, limit=2000) if local_result.reasoning else None,
-                "tool_calls": [
-                    {
-                        "tool_call_id": tool_call.tool_call_id,
-                        "tool_name": tool_call.tool_name,
-                        "command": truncate_text(tool_call.command, limit=500) if tool_call.command else None,
-                        "arguments": truncate_text(json.dumps(tool_call.arguments, ensure_ascii=False), limit=1000),
-                    }
-                    for tool_call in local_result.tool_calls
-                ],
-            },
-        )
+                "tool_call_id": tool_call.tool_call_id,
+                "tool_name": tool_call.tool_name,
+                "command": truncate_text(tool_call.command, limit=500) if tool_call.command else None,
+                "arguments": truncate_text(json.dumps(tool_call.arguments, ensure_ascii=False), limit=1000),
+            }
+            for tool_call in local_result.tool_calls
+        ])
         if not local_result.tool_calls:
             await response.write(sse_chunk_from_event(build_succeeded_event(task_id)))
         await response.write(sse_chunk_from_event(build_finished_done_event()))
@@ -4333,17 +4232,7 @@ async def handle_local_multi_agent(request: web.Request, body: bytes) -> web.Str
         task_id = locals().get("task_id", str(uuid.uuid4()))
         local_request = locals().get("local_request")
         error_message = str(error)
-        await append_log(
-            config,
-            {
-                "timestamp": datetime.now(UTC).isoformat(),
-                "kind": "local_multi_agent_error",
-                "request_id": request_id,
-                "error": error_message,
-                "error_type": type(error).__name__,
-                "traceback": traceback.format_exc(limit=20),
-            },
-        )
+        log_event(kind="local_multi_agent_error", request_id=request_id, error=error_message, error_type=type(error).__name__, traceback=traceback.format_exc(limit=20))
         if not stream_initialized:
             await response.write(sse_chunk_from_event(build_stream_init_event(conversation_id, request_id)))
             stream_initialized = True
@@ -4394,15 +4283,7 @@ async def handle_local_passive_suggestions(request: web.Request, body: bytes) ->
     request_id = str(uuid.uuid4())
     conversation_id = str(uuid.uuid4())
 
-    await append_log(
-        config,
-        {
-            "timestamp": datetime.now(UTC).isoformat(),
-            "kind": "local_passive_suggestions_request",
-            "request_id": request_id,
-            "byte_count": len(body),
-        },
-    )
+    log_event(kind="local_passive_suggestions_request", request_id=request_id, byte_count=len(body))
 
     response = web.StreamResponse(
         status=200,
@@ -4706,14 +4587,7 @@ async def handle_token_proxy_request(
         prune_token_proxy_cache(token_proxy_cache)
         cached_entry = token_proxy_cache.get(cache_key)
         if cached_entry is not None:
-            await append_log(
-                config,
-                {
-                    "timestamp": datetime.now(UTC).isoformat(),
-                    "kind": "token_proxy_cache_hit",
-                    "request_id": request_id,
-                },
-            )
+            log_event(kind="token_proxy_cache_hit", request_id=request_id)
             return build_cached_token_proxy_response(cached_entry)
 
         upstream_url = request_url(config.upstream_http_base, request.path_qs)
@@ -4726,7 +4600,7 @@ async def handle_token_proxy_request(
             data=body if body != b"" else None,
             allow_redirects=False,
         ) as upstream_response:
-            await log_http_response(config, request_id, upstream_response.status, upstream_response.headers)
+            await log_http_response(request_id, upstream_response.status, upstream_response.headers)
             response_body = await upstream_response.read()
             response_headers = build_buffered_response_headers(upstream_response.headers)
             content_type = str(upstream_response.headers.get("Content-Type", "")).lower()
@@ -4739,14 +4613,7 @@ async def handle_token_proxy_request(
                     expires_at_monotonic=compute_token_proxy_cache_expiry(response_body),
                 )
                 token_proxy_cache[cache_key] = cache_entry
-                await append_log(
-                    config,
-                    {
-                        "timestamp": datetime.now(UTC).isoformat(),
-                        "kind": "token_proxy_cache_store",
-                        "request_id": request_id,
-                    },
-                )
+                log_event(kind="token_proxy_cache_store", request_id=request_id)
                 return build_cached_token_proxy_response(cache_entry)
 
             fallback_entry = token_proxy_cache.get(cache_key)
@@ -4757,16 +4624,7 @@ async def handle_token_proxy_request(
                     token_proxy_cache[cache_key] = fallback_entry
                     fallback_source = "keychain_user"
             if fallback_entry is not None and upstream_response.status in {400, 401, 403, 429, 500, 502, 503}:
-                await append_log(
-                    config,
-                    {
-                        "timestamp": datetime.now(UTC).isoformat(),
-                        "kind": "token_proxy_cache_fallback",
-                        "request_id": request_id,
-                        "upstream_status": upstream_response.status,
-                        "fallback_source": fallback_source,
-                    },
-                )
+                log_event(kind="token_proxy_cache_fallback", request_id=request_id, upstream_status=upstream_response.status, fallback_source=fallback_source)
                 return build_cached_token_proxy_response(fallback_entry)
 
             return web.Response(
@@ -4774,57 +4632,6 @@ async def handle_token_proxy_request(
                 headers=response_headers,
                 body=response_body,
             )
-
-
-def _get_log_file_path(log_path: Path, date: datetime) -> Path:
-    """Get the log file path for a specific date."""
-    # Use date suffix for rotated logs: warp-shim.2025-01-15.log
-    return log_path.parent / f"{log_path.stem}.{date.strftime('%Y-%m-%d')}{log_path.suffix}"
-
-
-def _cleanup_old_logs(log_path: Path, retention_days: int) -> None:
-    """Remove log files older than retention_days."""
-    if retention_days <= 0:
-        return
-
-    cutoff_date = datetime.now(UTC).date() - __import__('datetime').timedelta(days=retention_days)
-
-    try:
-        for log_file in log_path.parent.glob(f"{log_path.stem}.*{log_path.suffix}"):
-            # Extract date from filename
-            try:
-                # Parse date from filename like "warp-shim.2025-01-15.log"
-                date_str = log_file.stem.split('.')[-1]
-                file_date = __import__('datetime').datetime.strptime(date_str, '%Y-%m-%d').date()
-                if file_date < cutoff_date:
-                    log_file.unlink()
-            except (ValueError, IndexError):
-                # Skip files that don't match the expected format
-                continue
-    except OSError:
-        # Ignore errors during cleanup (permissions, etc.)
-        pass
-
-
-async def append_log(config: ShimConfig, payload: dict[str, object]) -> None:
-    """Append log entry with automatic date-based rotation."""
-    config.log_path.parent.mkdir(parents=True, exist_ok=True)
-    line = json.dumps(payload, ensure_ascii=False)
-
-    def write_line() -> None:
-        # Determine log file path based on current date
-        now = datetime.now(UTC)
-        log_file_path = _get_log_file_path(config.log_path, now)
-
-        with log_file_path.open("a", encoding="utf-8") as file_handle:
-            file_handle.write(f"{line}\n")
-
-        # Cleanup old logs periodically (1% chance to avoid overhead)
-        import random
-        if random.random() < 0.01:
-            _cleanup_old_logs(config.log_path, config.log_retention_days)
-
-    await asyncio.to_thread(write_line)
 
 
 async def write_capture_bytes(path: Path, data: bytes) -> None:
@@ -4837,7 +4644,6 @@ async def write_capture_bytes(path: Path, data: bytes) -> None:
 
 
 async def log_http_request(
-    config: ShimConfig,
     request_id: str,
     request: web.Request,
     body: bytes,
@@ -4846,42 +4652,15 @@ async def log_http_request(
     body_text = safe_decode(body)
     graphql_op = request.query.get("op")
 
-    await append_log(
-        config,
-        {
-            "timestamp": datetime.now(UTC).isoformat(),
-            "kind": "http_request",
-            "request_id": request_id,
-            "method": request.method,
-            "path_qs": request.path_qs,
-            "graphql_op": graphql_op,
-            "query": query_map,
-            "headers": {
-                key: ("<redacted>" if key.lower() == "authorization" else value)
-                for key, value in request.headers.items()
-            },
-            "body_text": truncate_text(body_text) if body_text is not None else None,
-            "interesting_graphql_op": graphql_op in INTERESTING_GRAPHQL_OPS if graphql_op is not None else False,
-        },
-    )
+    log_event(kind="http_request", request_id=request_id, method=request.method, path_qs=request.path_qs, graphql_op=graphql_op, query=query_map, body_text=truncate_text(body_text) if body_text is not None else None, interesting_graphql_op=graphql_op in INTERESTING_GRAPHQL_OPS if graphql_op is not None else False)
 
 
 async def log_http_response(
-    config: ShimConfig,
     request_id: str,
     status: int,
     headers: LooseHeaders,
 ) -> None:
-    await append_log(
-        config,
-        {
-            "timestamp": datetime.now(UTC).isoformat(),
-            "kind": "http_response",
-            "request_id": request_id,
-            "status": status,
-            "headers": dict(headers),
-        },
-    )
+    log_event(kind="http_response", request_id=request_id, status=status, response_headers=dict(headers))
 
 
 async def maybe_capture_ai_request_body(
@@ -4900,18 +4679,7 @@ async def maybe_capture_ai_request_body(
     meta_path = config.capture_dir / f"{request_id}.request.json"
 
     await write_capture_bytes(capture_path, body)
-    await append_log(
-        config,
-        {
-            "timestamp": datetime.now(UTC).isoformat(),
-            "kind": "capture_request_body",
-            "request_id": request_id,
-            "path_qs": path_qs,
-            "byte_count": len(body),
-            "capture_path": str(capture_path),
-            "meta_path": str(meta_path),
-        },
-    )
+    log_event(kind="capture_request_body", request_id=request_id, path_qs=path_qs, byte_count=len(body), capture_path=str(capture_path), meta_path=str(meta_path))
 
     await asyncio.to_thread(
         meta_path.write_text,
@@ -4981,7 +4749,7 @@ async def proxy_http(request: web.Request) -> web.StreamResponse:
     body = await request.read()
     graphql_op = request.query.get("op")
 
-    await log_http_request(config, request_id, request, body)
+    await log_http_request(request_id, request, body)
     await maybe_capture_ai_request_body(config, request_id, request.path_qs, body)
     await maybe_capture_graphql_debug_payload(
         config,
@@ -5024,7 +4792,7 @@ async def proxy_http(request: web.Request) -> web.StreamResponse:
         data=body if body != b"" else None,
         allow_redirects=False,
     ) as upstream_response:
-        await log_http_response(config, request_id, upstream_response.status, upstream_response.headers)
+        await log_http_response(request_id, upstream_response.status, upstream_response.headers)
 
         upstream_content_type = str(upstream_response.headers.get("Content-Type", "")).lower()
         if graphql_op in GRAPHQL_RESPONSE_REWRITE_OPS and "application/json" in upstream_content_type:
@@ -5043,16 +4811,7 @@ async def proxy_http(request: web.Request) -> web.StreamResponse:
             response_headers.pop("Transfer-Encoding", None)
 
             if rewritten_field_count > 0:
-                await append_log(
-                    config,
-                    {
-                        "timestamp": datetime.now(UTC).isoformat(),
-                        "kind": "graphql_response_rewrite",
-                        "request_id": request_id,
-                        "graphql_op": graphql_op,
-                        "rewritten_field_count": rewritten_field_count,
-                    },
-                )
+                log_event(kind="graphql_response_rewrite", request_id=request_id, graphql_op=graphql_op, rewritten_field_count=rewritten_field_count)
 
             return web.Response(
                 status=upstream_response.status,
@@ -5124,21 +4883,7 @@ async def proxy_http_with_curl(
     if cookie_header != "":
         forwarded_headers["Cookie"] = cookie_header
 
-    await append_log(
-        config,
-        {
-            "timestamp": datetime.now(UTC).isoformat(),
-            "kind": "ai_forward_headers",
-            "request_id": request_id,
-            "path_qs": request.path_qs,
-            "upstream_url": upstream_url,
-            "headers": {
-                key: ("<redacted>" if key.lower() in {"authorization", "cookie"} else value)
-                for key, value in forwarded_headers.items()
-            },
-            "has_cookie_header": "Cookie" in forwarded_headers,
-        },
-    )
+    log_event(kind="ai_forward_headers", request_id=request_id, path_qs=request.path_qs, upstream_url=upstream_url, has_cookie_header="Cookie" in forwarded_headers)
 
     command = [
         "curl",
@@ -5186,7 +4931,7 @@ async def proxy_http_with_curl(
         raise RuntimeError("curl subprocess pipes were not created.")
 
     status, response_headers, first_body_chunk = await read_curl_headers(process.stdout)
-    await log_http_response(config, request_id, status, response_headers)
+    await log_http_response(request_id, status, response_headers)
 
     response = web.StreamResponse(
         status=status,
@@ -5207,17 +4952,7 @@ async def proxy_http_with_curl(
     return_code = await process.wait()
 
     if stderr_output != "":
-        await append_log(
-            config,
-            {
-                "timestamp": datetime.now(UTC).isoformat(),
-                "kind": "curl_stderr",
-                "request_id": request_id,
-                "return_code": return_code,
-                "stderr": truncate_text(stderr_output),
-                "path_qs": request.path_qs,
-            },
-        )
+        log_event(kind="curl_stderr", request_id=request_id, return_code=return_code, stderr=truncate_text(stderr_output), path_qs=request.path_qs)
 
     await response.write_eof()
     return response
@@ -5269,16 +5004,7 @@ async def proxy_websocket(request: web.Request) -> web.StreamResponse:
     request_id = str(uuid.uuid4())
     requested_protocols = parse_websocket_protocols(request.headers.get("Sec-WebSocket-Protocol"))
 
-    await append_log(
-        config,
-        {
-            "timestamp": datetime.now(UTC).isoformat(),
-            "kind": "websocket_request",
-            "request_id": request_id,
-            "path_qs": request.path_qs,
-            "headers": dict(request.headers),
-        },
-    )
+    log_event(kind="websocket_request", request_id=request_id, path_qs=request.path_qs, headers=dict(request.headers))
 
     client_ws = web.WebSocketResponse(protocols=tuple(requested_protocols))
     await client_ws.prepare(request)
@@ -5290,17 +5016,7 @@ async def proxy_websocket(request: web.Request) -> web.StreamResponse:
     if cookie_header != "":
         headers["Cookie"] = cookie_header
 
-    await append_log(
-        config,
-        {
-            "timestamp": datetime.now(UTC).isoformat(),
-            "kind": "websocket_connecting",
-            "request_id": request_id,
-            "upstream_url": upstream_url,
-            "requested_protocols": requested_protocols,
-            "has_cookie_header": "Cookie" in headers,
-        },
-    )
+    log_event(kind="websocket_connecting", request_id=request_id, upstream_url=upstream_url, requested_protocols=requested_protocols, has_cookie_header="Cookie" in headers)
 
     try:
         async with session.ws_connect(
@@ -5308,17 +5024,7 @@ async def proxy_websocket(request: web.Request) -> web.StreamResponse:
             headers=headers,
             protocols=tuple(requested_protocols),
         ) as upstream_ws:
-            await append_log(
-                config,
-                {
-                    "timestamp": datetime.now(UTC).isoformat(),
-                    "kind": "websocket_connected",
-                    "request_id": request_id,
-                    "requested_protocols": requested_protocols,
-                    "negotiated_client_protocol": client_ws.ws_protocol,
-                    "negotiated_upstream_protocol": upstream_ws.protocol,
-                },
-            )
+            log_event(kind="websocket_connected", request_id=request_id, requested_protocols=requested_protocols, negotiated_client_protocol=client_ws.ws_protocol, negotiated_upstream_protocol=upstream_ws.protocol)
 
             forward_tasks = {
                 asyncio.create_task(pump_client_to_upstream(client_ws, upstream_ws)),
@@ -5340,26 +5046,9 @@ async def proxy_websocket(request: web.Request) -> web.StreamResponse:
                     continue
                 raise exception
 
-            await append_log(
-                config,
-                {
-                    "timestamp": datetime.now(UTC).isoformat(),
-                    "kind": "websocket_closed",
-                    "request_id": request_id,
-                    "task_errors": task_errors,
-                },
-            )
+            log_event(kind="websocket_closed", request_id=request_id, task_errors=task_errors)
     except Exception as error:
-        await append_log(
-            config,
-            {
-                "timestamp": datetime.now(UTC).isoformat(),
-                "kind": "websocket_error",
-                "request_id": request_id,
-                "error": format_exception_message(error),
-                "error_type": type(error).__name__,
-            },
-        )
+        log_event(kind="websocket_error", request_id=request_id, error=format_exception_message(error), error_type=type(error).__name__)
         await client_ws.close()
         return client_ws
 
@@ -5378,16 +5067,7 @@ async def proxy_handler(request: web.Request) -> web.StreamResponse:
         return await proxy_http(request)
     except Exception as error:  # noqa: BLE001
         config = cast(ShimConfig, request.app["config"])
-        await append_log(
-            config,
-            {
-                "timestamp": datetime.now(UTC).isoformat(),
-                "kind": "unhandled_exception",
-                "path_qs": request.path_qs,
-                "error": str(error),
-                "traceback": traceback.format_exc(limit=20),
-            },
-        )
+        log_event(kind="unhandled_exception", path_qs=request.path_qs, error=str(error), traceback=traceback.format_exc(limit=20))
         return web.Response(status=500, text="Internal Server Error")
 
 
@@ -5396,6 +5076,7 @@ async def on_startup(app: web.Application) -> None:
     session = ClientSession(timeout=timeout)
     app["client_session"] = session
     config = cast(ShimConfig, app["config"])
+    configure_file_logging(config.log_path, config.log_retention_days)
     app["mcp_registry"] = await build_mcp_registry(session, config)
 
 
@@ -5436,11 +5117,10 @@ def main() -> int:
     install_signal_handlers()
     app = create_app(config, arguments)
 
-    print(
-        f"Warp shim listening on http://{config.listen_host}:{config.listen_port} "
-        f"-> {config.upstream_http_base}"
+    logger.info(
+        "Warp shim listening on http://{}:{} -> {}",
+        config.listen_host, config.listen_port, config.upstream_http_base
     )
-    print(f"Traffic log: {config.log_path}")
 
     web.run_app(
         app,
