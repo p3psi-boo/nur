@@ -20,6 +20,9 @@ let
       ;
   };
 
+  # NUR 辅助库
+  nurLib = import ./lib { pkgs = prev; };
+
   # 辅助函数：计算包需要的额外参数
   extraArgsFor = pkgName:
     let
@@ -29,8 +32,10 @@ let
       packageSpecificArgs = if meta ? extraArgs then meta.extraArgs prev else { };
       generatedArgs =
         if builtins.hasAttr pkgName generatedSources then { generated = generatedSources; } else { };
+      # 只在 meta.nix 中声明 useNurLib = true 时才传递 nurLib
+      nurLibArgs = if meta ? useNurLib && meta.useNurLib then { inherit nurLib; } else { };
     in
-    packageSpecificArgs // generatedArgs;
+    packageSpecificArgs // generatedArgs // nurLibArgs;
 
   # 本仓库的包发现
   entries = builtins.readDir pkgsDir;
