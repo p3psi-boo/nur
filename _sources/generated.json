@@ -692,6 +692,46 @@
         },
         "version": "v1.6.6"
     },
+    "komari": {
+        "cargoLock": null,
+        "date": "2026-04-14",
+        "extract": null,
+        "name": "komari",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "651d24128c95206b101d1d857524b0b06ca16a7b",
+            "sha256": "sha256-3PkCpmj3AWS+zUkdIOJt9jZxS5g8CUq3Dx/wXOQjDh4=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/komari-monitor/komari.git"
+        },
+        "version": "651d24128c95206b101d1d857524b0b06ca16a7b"
+    },
+    "komari-web": {
+        "cargoLock": null,
+        "date": "2026-04-10",
+        "extract": null,
+        "name": "komari-web",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "d83b76fc61928ff29e1eef72aa2fc9302c16889d",
+            "sha256": "sha256-0i/mr4bd/DAqjiYjOJLRp0HaG5ht5V2v3IUDnHvH1ec=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/komari-monitor/komari-web.git"
+        },
+        "version": "d83b76fc61928ff29e1eef72aa2fc9302c16889d"
+    },
     "lazyssh": {
         "cargoLock": null,
         "date": "2025-11-28",

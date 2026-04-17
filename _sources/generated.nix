@@ -413,6 +413,34 @@
       sha256 = "sha256-QHiZPYFwDQzbXVSuhwzQqBRXlkG9QVU+Jl6SKvBoCwQ=";
     };
   };
+  komari = {
+    pname = "komari";
+    version = "651d24128c95206b101d1d857524b0b06ca16a7b";
+    src = fetchgit {
+      url = "https://github.com/komari-monitor/komari.git";
+      rev = "651d24128c95206b101d1d857524b0b06ca16a7b";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-3PkCpmj3AWS+zUkdIOJt9jZxS5g8CUq3Dx/wXOQjDh4=";
+    };
+    date = "2026-04-14";
+  };
+  komari-web = {
+    pname = "komari-web";
+    version = "d83b76fc61928ff29e1eef72aa2fc9302c16889d";
+    src = fetchgit {
+      url = "https://github.com/komari-monitor/komari-web.git";
+      rev = "d83b76fc61928ff29e1eef72aa2fc9302c16889d";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-0i/mr4bd/DAqjiYjOJLRp0HaG5ht5V2v3IUDnHvH1ec=";
+    };
+    date = "2026-04-10";
+  };
   lazyssh = {
     pname = "lazyssh";
     version = "48995806bf1aa1c9c41bb8dff6b5ddd698539311";

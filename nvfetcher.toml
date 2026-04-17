@@ -257,6 +257,18 @@ fetch.git = "https://github.com/p3psi-boo/octopus.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
+[komari]
+src.git = "https://github.com/komari-monitor/komari.git"
+fetch.git = "https://github.com/komari-monitor/komari.git"
+git.fetch_submodules = false
+git.get_commit_date = true
+
+[komari-web]
+src.git = "https://github.com/komari-monitor/komari-web.git"
+fetch.git = "https://github.com/komari-monitor/komari-web.git"
+git.fetch_submodules = false
+git.get_commit_date = true
+
 [sofixer]
 src.github_tag = "F8LEFT/SoFixer"
 src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
