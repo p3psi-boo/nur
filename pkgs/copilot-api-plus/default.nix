@@ -27,7 +27,7 @@ buildNpmPackage {
 
     # Keep package metadata aligned with the vendored production-only lockfile.
     mv package.json package.json.upstream
-    jq '{
+    ${lib.getExe jq} '{
       name,
       version,
       type,
