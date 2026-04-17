@@ -56,6 +56,14 @@
 - 上游 lockfile 在本仓库环境下会触发离线缓存缺失，因此该包固定使用仓库内 vendored 的生产依赖 lockfile：`pkgs/copilot-api-plus/package-lock.json`。
 - `default.nix` 在 `postPatch` 中同步裁剪 `package.json` 到运行时字段（name/version/type/bin/dependencies），确保与 vendored lockfile 一致，避免 `npm ci` 拉取 devDependencies。
 
+## komari 运行时版本号注入备注
+
+- `pkgs/komari/default.nix` 必须通过 Go `ldflags` 注入：
+  - `github.com/komari-monitor/komari/utils.CurrentVersion`
+  - `github.com/komari-monitor/komari/utils.VersionHash`
+- 原因：上游 `utils/version.go` 默认值是 `0.0.1` / `unknown`，若不注入，`/api/version` 和启动日志会显示错误运行时版本。
+- 注入值应与 Nix 包版本保持一致：`CurrentVersion = 0-unstable-${generated.komari.date}`，`VersionHash = generated.komari.version`。
+
 ---
 
 打包请查看 `nix-package` SKILL

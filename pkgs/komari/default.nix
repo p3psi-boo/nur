@@ -7,10 +7,13 @@
 }:
 
 let
+  backendVersion = "0-unstable-${generated.komari.date}";
+  backendCommit = generated.komari.version;
+
   komariWeb = buildNpmPackage {
     pname = "komari-web";
     version = "0-unstable-${generated.komari-web.date}";
-    src = generated.komari-web.src;
+    inherit (generated.komari-web) src;
     npmDepsHash = "sha256-klP49fxwnuYBNaE7huKdpTDreieCGDnO3E4eOE3j+CE=";
 
     env.CI = "true";
@@ -34,8 +37,8 @@ let
 
   komariBackend = buildGoModule {
     pname = "komari";
-    version = "0-unstable-${generated.komari.date}";
-    src = generated.komari.src;
+    version = backendVersion;
+    inherit (generated.komari) src;
     vendorHash = "sha256-zF2nblVafBt5dbXaZdRwa1RNXPOxJKPAEH7SqaX4c1c=";
 
     env = {
@@ -51,7 +54,12 @@ let
       done
     '';
 
-    ldflags = [ "-s" "-w" ];
+    ldflags = [
+      "-s"
+      "-w"
+      "-X=github.com/komari-monitor/komari/utils.CurrentVersion=${backendVersion}"
+      "-X=github.com/komari-monitor/komari/utils.VersionHash=${backendCommit}"
+    ];
     doCheck = false;
 
     meta = {
@@ -66,7 +74,7 @@ in
 
 stdenv.mkDerivation {
   pname = "komari";
-  version = "0-unstable-${generated.komari.date}";
+  version = backendVersion;
 
   dontUnpack = true;
   dontBuild = true;
