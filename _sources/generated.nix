@@ -610,17 +610,17 @@
   };
   paperclip = {
     pname = "paperclip";
-    version = "e93e418cbf7997a29ff258d51d761572e69bda92";
+    version = "b9a80dcf226c50c8778a70443e41557980376a03";
     src = fetchgit {
       url = "https://github.com/paperclipai/paperclip.git";
-      rev = "e93e418cbf7997a29ff258d51d761572e69bda92";
+      rev = "b9a80dcf226c50c8778a70443e41557980376a03";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-ja9YgSnZO2VN1m6s3ubLAwgwS8igB12d5hsurb9D9YE=";
+      sha256 = "sha256-LYslalfZ7AKSEVzjIdEWVqLn9Y6HYscskK2Y2Ps9Zo8=";
     };
-    date = "2026-04-16";
+    date = "2026-04-17";
   };
   pg_duckdb = {
     pname = "pg_duckdb";
