@@ -39,7 +39,7 @@ let
     vendorHash = "sha256-zF2nblVafBt5dbXaZdRwa1RNXPOxJKPAEH7SqaX4c1c=";
 
     env = {
-      CGO_ENABLED = "0";
+      CGO_ENABLED = "1";
       GOFLAGS = "-trimpath";
     };
 
