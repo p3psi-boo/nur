@@ -400,3 +400,10 @@ fetch.git = "https://github.com/p3psi-boo/CookieCloud.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
+# copilot-api-plus - Turn GitHub Copilot into OpenAI/Anthropic API compatible server
+[copilot-api-plus]
+src.git = "https://github.com/imbuxiangnan-cyber/copilot-api-plus.git"
+fetch.git = "https://github.com/imbuxiangnan-cyber/copilot-api-plus.git"
+git.fetch_submodules = false
+git.get_commit_date = true
+
