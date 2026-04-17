@@ -50,6 +50,12 @@
 
 参考：`https://github.com/pyproject-nix/uv2nix`
 
+## copilot-api-plus 打包备注
+
+- `pkgs/copilot-api-plus` 使用 npm 发布 tarball 作为 `src`（包含 `dist/` 产物），版本号仍使用 nvfetcher 的 `generated.copilot-api-plus.date` 组装 `0-unstable-YYYY-MM-DD`。
+- 上游 lockfile 在本仓库环境下会触发离线缓存缺失，因此该包固定使用仓库内 vendored 的生产依赖 lockfile：`pkgs/copilot-api-plus/package-lock.json`。
+- `default.nix` 在 `postPatch` 中同步裁剪 `package.json` 到运行时字段（name/version/type/bin/dependencies），确保与 vendored lockfile 一致，避免 `npm ci` 拉取 devDependencies。
+
 ---
 
 打包请查看 `nix-package` SKILL
