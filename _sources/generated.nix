@@ -195,15 +195,15 @@
   };
   copilot-api-plus = {
     pname = "copilot-api-plus";
-    version = "f5bf6bb6b88f84f813498bd6006a3db30d32791e";
+    version = "446b562090d22dbaa96ceaf776e70e29757005ba";
     src = fetchgit {
       url = "https://github.com/imbuxiangnan-cyber/copilot-api-plus.git";
-      rev = "f5bf6bb6b88f84f813498bd6006a3db30d32791e";
+      rev = "446b562090d22dbaa96ceaf776e70e29757005ba";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-/RjcUr/H1+zCPUQW9Bc9qT+mVqkWmEzilemOGAz3KF0=";
+      sha256 = "sha256-TNr1leik1h6PiSdFDUPxr4ucNYSB7THO4LMvCUSvzUY=";
     };
     date = "2026-04-17";
   };

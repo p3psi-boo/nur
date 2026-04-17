@@ -333,13 +333,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "f5bf6bb6b88f84f813498bd6006a3db30d32791e",
-            "sha256": "sha256-/RjcUr/H1+zCPUQW9Bc9qT+mVqkWmEzilemOGAz3KF0=",
+            "rev": "446b562090d22dbaa96ceaf776e70e29757005ba",
+            "sha256": "sha256-TNr1leik1h6PiSdFDUPxr4ucNYSB7THO4LMvCUSvzUY=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/imbuxiangnan-cyber/copilot-api-plus.git"
         },
-        "version": "f5bf6bb6b88f84f813498bd6006a3db30d32791e"
+        "version": "446b562090d22dbaa96ceaf776e70e29757005ba"
     },
     "dagu": {
         "cargoLock": null,
