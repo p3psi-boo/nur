@@ -8,13 +8,13 @@
 {
   agsh = {
     pname = "agsh";
-    version = "0.10.3";
+    version = "0.11.0";
     src = fetchFromGitHub {
       owner = "k4yt3x";
       repo = "agsh";
-      rev = "0.10.3";
+      rev = "0.11.0";
       fetchSubmodules = false;
-      sha256 = "sha256-Tq7As5n6LteIIJMwaENoV6MGi65IjXFaqK1hcz5u3JI=";
+      sha256 = "sha256-bFPhf3p6W7tnQzno/kYVYZkO26R0JvcJHbpvNOmhlx4=";
     };
   };
   bb-browser = {
@@ -529,17 +529,17 @@
   };
   octopus-api = {
     pname = "octopus-api";
-    version = "3d6b9579e832d82c97341dcb17c14aa29d008af7";
+    version = "c6485ee0bfcd4cdee867ed7d2b37c0b9938203a5";
     src = fetchgit {
       url = "https://github.com/p3psi-boo/octopus.git";
-      rev = "3d6b9579e832d82c97341dcb17c14aa29d008af7";
+      rev = "c6485ee0bfcd4cdee867ed7d2b37c0b9938203a5";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-+IQXaw6PVVyQwgR/5HO4fdWt0p5jR+hZ3FnCYGZcXzs=";
+      sha256 = "sha256-NTQfukjK5A9s2O378heqLe0uh8++lBn6J0Od+ws1ndQ=";
     };
-    date = "2026-04-14";
+    date = "2026-04-18";
   };
   okmain = {
     pname = "okmain";
@@ -610,17 +610,17 @@
   };
   paperclip = {
     pname = "paperclip";
-    version = "e93e418cbf7997a29ff258d51d761572e69bda92";
+    version = "b9a80dcf226c50c8778a70443e41557980376a03";
     src = fetchgit {
       url = "https://github.com/paperclipai/paperclip.git";
-      rev = "e93e418cbf7997a29ff258d51d761572e69bda92";
+      rev = "b9a80dcf226c50c8778a70443e41557980376a03";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-ja9YgSnZO2VN1m6s3ubLAwgwS8igB12d5hsurb9D9YE=";
+      sha256 = "sha256-LYslalfZ7AKSEVzjIdEWVqLn9Y6HYscskK2Y2Ps9Zo8=";
     };
-    date = "2026-04-16";
+    date = "2026-04-17";
   };
   pg_duckdb = {
     pname = "pg_duckdb";

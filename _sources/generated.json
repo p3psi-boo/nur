@@ -13,12 +13,12 @@
             "name": null,
             "owner": "k4yt3x",
             "repo": "agsh",
-            "rev": "0.10.3",
-            "sha256": "sha256-Tq7As5n6LteIIJMwaENoV6MGi65IjXFaqK1hcz5u3JI=",
+            "rev": "0.11.0",
+            "sha256": "sha256-bFPhf3p6W7tnQzno/kYVYZkO26R0JvcJHbpvNOmhlx4=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "0.10.3"
+        "version": "0.11.0"
     },
     "bb-browser": {
         "cargoLock": null,
@@ -871,7 +871,7 @@
     },
     "octopus-api": {
         "cargoLock": null,
-        "date": "2026-04-14",
+        "date": "2026-04-18",
         "extract": null,
         "name": "octopus-api",
         "passthru": null,
@@ -881,13 +881,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "3d6b9579e832d82c97341dcb17c14aa29d008af7",
-            "sha256": "sha256-+IQXaw6PVVyQwgR/5HO4fdWt0p5jR+hZ3FnCYGZcXzs=",
+            "rev": "c6485ee0bfcd4cdee867ed7d2b37c0b9938203a5",
+            "sha256": "sha256-NTQfukjK5A9s2O378heqLe0uh8++lBn6J0Od+ws1ndQ=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/p3psi-boo/octopus.git"
         },
-        "version": "3d6b9579e832d82c97341dcb17c14aa29d008af7"
+        "version": "c6485ee0bfcd4cdee867ed7d2b37c0b9938203a5"
     },
     "okmain": {
         "cargoLock": null,
@@ -992,7 +992,7 @@
     },
     "paperclip": {
         "cargoLock": null,
-        "date": "2026-04-16",
+        "date": "2026-04-17",
         "extract": null,
         "name": "paperclip",
         "passthru": null,
@@ -1002,13 +1002,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "e93e418cbf7997a29ff258d51d761572e69bda92",
-            "sha256": "sha256-ja9YgSnZO2VN1m6s3ubLAwgwS8igB12d5hsurb9D9YE=",
+            "rev": "b9a80dcf226c50c8778a70443e41557980376a03",
+            "sha256": "sha256-LYslalfZ7AKSEVzjIdEWVqLn9Y6HYscskK2Y2Ps9Zo8=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/paperclipai/paperclip.git"
         },
-        "version": "e93e418cbf7997a29ff258d51d761572e69bda92"
+        "version": "b9a80dcf226c50c8778a70443e41557980376a03"
     },
     "pg_duckdb": {
         "cargoLock": null,
