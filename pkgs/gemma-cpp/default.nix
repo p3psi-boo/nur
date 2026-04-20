@@ -16,10 +16,10 @@
 }:
 
 let
-  # Force CUDA support for gemma-cpp
+  # Keep this package aligned with the CUDA-only deployment target.
   cudaSupport = true;
 
-  # RTX 30 series architecture (sm_86)
+  # Pin kernels to RTX 30 series (Ampere, sm_86) for reproducible binaries.
   cudaArchitectures = "86";
 
   # Use CUDA backend stdenv
@@ -88,9 +88,9 @@ effectiveStdenv.mkDerivation (finalAttrs: {
     (cmakeBool "LLAMA_BUILD_TESTS" (finalAttrs.finalPackage.doCheck or false))
     (cmakeBool "LLAMA_OPENSSL" true)
     (cmakeBool "BUILD_SHARED_LIBS" true)
-    # Force CUDA on
+    # Keep CUDA enabled unconditionally for this package.
     (cmakeBool "GGML_CUDA" true)
-    # RTX 30 series (sm_86) - can override via overrideAttrs if needed
+    # Pin generated kernels to RTX 30 series (Ampere, sm_86).
     (cmakeFeature "CMAKE_CUDA_ARCHITECTURES" cudaArchitectures)
   ];
 
