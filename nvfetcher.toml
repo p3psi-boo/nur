@@ -362,6 +362,13 @@ src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
 src.prefix = "v"
 fetch.url = "https://github.com/blacktop/ida-mcp-rs/releases/download/v$ver/ida-mcp_$ver_Linux_x86_64.tar.gz"
 
+# llama-cpp-turboquant - llama.cpp fork with TurboQuant (CUDA only, sm_86)
+[llama-cpp-turboquant]
+src.git = "https://github.com/johndpope/llama-cpp-turboquant.git"
+src.branch = "feature/planarquant-kv-cache"
+fetch.git = "https://github.com/johndpope/llama-cpp-turboquant.git"
+git.fetch_submodules = true
+
 # gemma-cpp - llama.cpp fork with TurboQuant for Gemma 4 (CUDA only, sm_86)
 [gemma-cpp]
 src.git = "https://github.com/test1111111111111112/llama-cpp-turboquant-gemma4.git"

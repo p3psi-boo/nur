@@ -772,6 +772,26 @@
         },
         "version": "48995806bf1aa1c9c41bb8dff6b5ddd698539311"
     },
+    "llama-cpp-turboquant": {
+        "cargoLock": null,
+        "date": "2026-04-15",
+        "extract": null,
+        "name": "llama-cpp-turboquant",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "fc3d1b6566fa37be532e1153e11c35ceabc13f84",
+            "sha256": "sha256-3HO6l83uiwP+df9LbC9aqqeN+1SN2dgNQGgfil8uCLk=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/johndpope/llama-cpp-turboquant.git"
+        },
+        "version": "fc3d1b6566fa37be532e1153e11c35ceabc13f84"
+    },
     "lotspeed": {
         "cargoLock": null,
         "date": "2026-01-19",

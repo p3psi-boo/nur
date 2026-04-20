@@ -469,6 +469,20 @@
     };
     date = "2025-11-28";
   };
+  llama-cpp-turboquant = {
+    pname = "llama-cpp-turboquant";
+    version = "fc3d1b6566fa37be532e1153e11c35ceabc13f84";
+    src = fetchgit {
+      url = "https://github.com/johndpope/llama-cpp-turboquant.git";
+      rev = "fc3d1b6566fa37be532e1153e11c35ceabc13f84";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-3HO6l83uiwP+df9LbC9aqqeN+1SN2dgNQGgfil8uCLk=";
+    };
+    date = "2026-04-15";
+  };
   lotspeed = {
     pname = "lotspeed";
     version = "3df7cb1e3526526496191edb00e2e4e92e7da761";
