@@ -47,6 +47,12 @@ effectiveStdenv.mkDerivation (finalAttrs: {
 
   src = generated.llama-cpp-turboquant.src;
 
+  # Fix "invalid use of 'extern' in linkage specification" with GCC:
+  # extern "C" + GGML_API (which expands to __attribute__(...) extern) is illegal.
+  postPatch = ''
+    sed -i 's/extern "C" GGML_API/GGML_API/g' ggml/src/ggml-cpu/ops.cpp
+  '';
+
   nativeBuildInputs = [
     cmake
     installShellFiles
