@@ -497,6 +497,20 @@
     };
     date = "2026-01-19";
   };
+  lucebox-hub = {
+    pname = "lucebox-hub";
+    version = "962c54a3ff810fe0d4534a4a18127e8d46cd860f";
+    src = fetchgit {
+      url = "https://github.com/Luce-Org/lucebox-hub.git";
+      rev = "962c54a3ff810fe0d4534a4a18127e8d46cd860f";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-oVMGsyrMmnGHt4pmU3BloA4yiXELvND4bXZnOPU1icY=";
+    };
+    date = "2026-04-21";
+  };
   magiskboot-bin = {
     pname = "magiskboot-bin";
     version = "v30.7";

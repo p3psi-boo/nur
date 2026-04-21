@@ -64,6 +64,16 @@
   - `CMAKE_CUDA_ARCHITECTURES = "86"`
 - 该包当前**没有**对外暴露可覆盖的 CUDA 架构参数；不要在说明中暗示可通过 `overrideAttrs` 直接覆盖，除非先把该参数显式提升到 derivation 接口。
 
+## lucebox-hub 打包备注
+
+- `pkgs/lucebox-hub/default.nix` 当前只打包 **`dflash/` 运行时**，不打包 `megakernel/`；原因是上游仓库根只是聚合入口，而 `megakernel/` 缺少锁文件与稳定的 Python 打包元数据。
+- `dflash` 依赖固定的 `dflash/deps/llama.cpp` 子模块，但当前 `nvfetcher` 生成的 `generated.lucebox-hub.src` 未带出子模块内容；包内通过额外 `fetchFromGitHub` 把 **`Luce-Org/llama.cpp@b16de65904ed7e468397f5417ad130f092cba8f4`** 注入到期望路径。
+- 运行时模型权重始终保持外置，不进入 Nix closure。使用以下环境变量指向本地权重：
+  - `DFLASH_TARGET=/path/to/Qwen3.5-27B-Q4_K_M.gguf`
+  - `DFLASH_DRAFT=/path/to/model.safetensors` 或其 snapshot 目录
+- 上游脚本的运行时路径覆盖统一保存在 `pkgs/lucebox-hub/patches/0001-dflash-runtime-env-overrides.patch`，不要再回退到 `postPatch` 里的脚本式文本替换。
+- CUDA 架构固定为 **Ampere / `sm_86`**，与上游构建说明及仓库内现有 CUDA 包策略保持一致。
+
 ## komari 运行时版本号注入备注
 
 - `pkgs/komari/default.nix` 必须通过 Go `ldflags` 注入：

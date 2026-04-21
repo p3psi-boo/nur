@@ -414,3 +414,10 @@ fetch.git = "https://github.com/imbuxiangnan-cyber/copilot-api-plus.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
+# lucebox-hub - CUDA-first local LLM inference experiments; package the dflash runtime and helpers
+[lucebox-hub]
+src.git = "https://github.com/Luce-Org/lucebox-hub.git"
+fetch.git = "https://github.com/Luce-Org/lucebox-hub.git"
+git.fetch_submodules = true
+git.get_commit_date = true
+

@@ -1,0 +1,51 @@
+diff --git a/scripts/run.py b/scripts/run.py
+index f45730c..badada3 100644
+--- a/scripts/run.py
++++ b/scripts/run.py
+@@ -18,9 +18,9 @@ from pathlib import Path
+ 
+ def default_paths():
+     return {
+-        "target": "models/Qwen3.5-27B-Q4_K_M.gguf",
+-        "draft":  str(Path.home() / ".cache/huggingface/hub/models--z-lab--Qwen3.5-27B-DFlash/snapshots"),
+-        "bin":    "build/test_dflash" + (".exe" if sys.platform == "win32" else ""),
++        "target": os.environ.get("DFLASH_TARGET", "models/Qwen3.5-27B-Q4_K_M.gguf"),
++        "draft":  os.environ.get("DFLASH_DRAFT", str(Path.home() / ".cache/huggingface/hub/models--z-lab--Qwen3.5-27B-DFlash/snapshots")),
++        "bin":    os.environ.get("DFLASH_BIN", "build/test_dflash" + (".exe" if sys.platform == "win32" else "")),
+     }
+ 
+ 
+ diff --git a/scripts/server.py b/scripts/server.py
+index 4acac85..68dbaef 100644
+--- a/scripts/server.py
++++ b/scripts/server.py
+@@ -33,9 +33,9 @@ from transformers import AutoTokenizer
+ 
+ 
+ ROOT = Path(__file__).resolve().parent.parent
+-DEFAULT_TARGET = ROOT / "models" / "Qwen3.5-27B-Q4_K_M.gguf"
+-DEFAULT_DRAFT_ROOT = Path.home() / ".cache/huggingface/hub/models--z-lab--Qwen3.5-27B-DFlash/snapshots"
+-DEFAULT_BIN = ROOT / "build" / "test_dflash"
++DEFAULT_TARGET = Path(os.environ.get("DFLASH_TARGET", str(ROOT / "models" / "Qwen3.5-27B-Q4_K_M.gguf")))
++DEFAULT_DRAFT_ROOT = Path(os.environ.get("DFLASH_DRAFT", str(Path.home() / ".cache/huggingface/hub/models--z-lab--Qwen3.5-27B-DFlash/snapshots")))
++DEFAULT_BIN = Path(os.environ.get("DFLASH_BIN", str(ROOT / "build" / "test_dflash")))
+ DEFAULT_BUDGET = 22
+ MODEL_NAME = "luce-dflash"
+ 
+ diff --git a/examples/chat.py b/examples/chat.py
+index 03ba5be..6f925c7 100644
+--- a/examples/chat.py
++++ b/examples/chat.py
+@@ -15,9 +15,9 @@ from pathlib import Path
+ 
+ 
+ ROOT = Path(__file__).resolve().parent.parent
+-TARGET = ROOT / "models" / "Qwen3.5-27B-Q4_K_M.gguf"
+-DRAFT_SEARCH_ROOT = Path.home() / ".cache/huggingface/hub/models--z-lab--Qwen3.5-27B-DFlash/snapshots"
+-BIN = ROOT / "build" / "test_dflash"
++TARGET = Path(os.environ.get("DFLASH_TARGET", str(ROOT / "models" / "Qwen3.5-27B-Q4_K_M.gguf")))
++DRAFT_SEARCH_ROOT = Path(os.environ.get("DFLASH_DRAFT", str(Path.home() / ".cache/huggingface/hub/models--z-lab--Qwen3.5-27B-DFlash/snapshots")))
++BIN = Path(os.environ.get("DFLASH_BIN", str(ROOT / "build" / "test_dflash")))
+ 
+ BUDGET = 22
+ N_GEN  = 512
