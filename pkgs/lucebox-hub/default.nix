@@ -9,7 +9,7 @@
   makeWrapper,
   autoAddDriverRunpath,
   cudaPackages,
-  python3,
+  python313,
 }:
 
 let
@@ -43,10 +43,21 @@ let
     libcublas
   ];
 
-  pythonEnv = python3.withPackages (
+  python = python313.override {
+    packageOverrides = final: prev: {
+      # Prevent Hugging Face's test-only torch path from pulling Triton into a runtime-only wrapper closure.
+      safetensors = prev.safetensors.overridePythonAttrs (_: {
+        doCheck = false;
+        nativeCheckInputs = [ ];
+      });
+    };
+  };
+
+  pythonEnv = python.withPackages (
     ps: with ps; [
       datasets
       fastapi
+      jinja2
       pydantic
       sentencepiece
       transformers
@@ -71,7 +82,7 @@ effectiveStdenv.mkDerivation {
     makeWrapper
     ninja
     pkg-config
-    python3
+    python
   ];
 
   buildInputs = cudaBuildInputs;

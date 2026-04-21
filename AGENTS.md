@@ -72,6 +72,9 @@
   - `DFLASH_TARGET=/path/to/Qwen3.5-27B-Q4_K_M.gguf`
   - `DFLASH_DRAFT=/path/to/model.safetensors` 或其 snapshot 目录
 - 上游脚本的运行时路径覆盖统一保存在 `pkgs/lucebox-hub/patches/0001-dflash-runtime-env-overrides.patch`，不要再回退到 `postPatch` 里的脚本式文本替换。
+- `lucebox-hub` 的 Python wrapper 环境必须避免把 Hugging Face 依赖链里的 **test-only** `safetensors -> torch -> triton` 带进来；当前做法是在包内局部 override `safetensors` 为 `doCheck = false` 且清空 `nativeCheckInputs`，只收缩本包运行时闭包，不修改仓库全局 Python 策略。
+- `lucebox-hub` 的 `run.py` / `server.py` 都会调用 `tokenizer.apply_chat_template(...)`，运行时必须包含 `jinja2`（及其传递依赖 `markupsafe`）。若缺失会触发 `ImportError: apply_chat_template requires jinja2` 并导致 `lucebox-hub-server` 返回 500。
+- `lucebox-hub` 的 Python 解释器应显式固定为 `python313`，避免依赖 nixpkgs `python3` 别名在未来漂移导致运行时行为变化。
 - CUDA 架构固定为 **Ampere / `sm_86`**，与上游构建说明及仓库内现有 CUDA 包策略保持一致。
 
 ## komari 运行时版本号注入备注
