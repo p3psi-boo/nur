@@ -969,6 +969,26 @@
         },
         "version": "b9e64dd0222d357de4cbd97baf02194ec4656e57"
     },
+    "open-coreui": {
+        "cargoLock": null,
+        "date": "2026-04-02",
+        "extract": null,
+        "name": "open-coreui",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": true,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "20dba39b35394b6f4e66c54b2b0f54a000450312",
+            "sha256": "sha256-eBVH3zVEr9gX4Qjyeaf2kv1o6KL8b2VsXgH+LTfDGO8=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/xxnuo/open-coreui.git"
+        },
+        "version": "20dba39b35394b6f4e66c54b2b0f54a000450312"
+    },
     "openalice": {
         "cargoLock": null,
         "date": null,

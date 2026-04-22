@@ -597,6 +597,20 @@
     };
     date = "2026-04-02";
   };
+  open-coreui = {
+    pname = "open-coreui";
+    version = "20dba39b35394b6f4e66c54b2b0f54a000450312";
+    src = fetchgit {
+      url = "https://github.com/xxnuo/open-coreui.git";
+      rev = "20dba39b35394b6f4e66c54b2b0f54a000450312";
+      fetchSubmodules = true;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-eBVH3zVEr9gX4Qjyeaf2kv1o6KL8b2VsXgH+LTfDGO8=";
+    };
+    date = "2026-04-02";
+  };
   openalice = {
     pname = "openalice";
     version = "v0.9.0-beta.12";
