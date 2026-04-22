@@ -855,6 +855,17 @@
     };
     date = "2024-07-27";
   };
+  trusttunnel = {
+    pname = "trusttunnel";
+    version = "v1.0.33";
+    src = fetchFromGitHub {
+      owner = "TrustTunnel";
+      repo = "TrustTunnel";
+      rev = "v1.0.33";
+      fetchSubmodules = false;
+      sha256 = "sha256-uTAjZbPBCVucjjrl3cYCT6+6cSxiIe/Q3jm+Oa+Fl7E=";
+    };
+  };
   uber-apk-signer = {
     pname = "uber-apk-signer";
     version = "v1.3.0";

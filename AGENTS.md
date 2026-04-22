@@ -85,6 +85,17 @@
 - 原因：上游 `utils/version.go` 默认值是 `0.0.1` / `unknown`，若不注入，`/api/version` 和启动日志会显示错误运行时版本。
 - 注入值应与 Nix 包版本保持一致：`CurrentVersion = 0-unstable-${generated.komari.date}`，`VersionHash = generated.komari.version`。
 
+## trusttunnel 打包备注
+
+- `pkgs/trusttunnel/default.nix` 通过 `rustPlatform.buildRustPackage` 同时构建 workspace 里的 `trusttunnel_endpoint` 与 `setup_wizard` 两个二进制。
+- `trusttunnel` 使用 `nvfetcher` 的 GitHub release 跟踪：
+  - `[trusttunnel]`
+  - `src.github = "TrustTunnel/TrustTunnel"`
+  - `fetch.github = "TrustTunnel/TrustTunnel"`
+- 版本号在包内统一做 `lib.removePrefix "v"`，避免把 tag 前缀带入最终包版本字符串。
+- 上游依赖 `boring-sys` / `quiche`，构建时需要调用 `git` 给 boringssl 源码打补丁；缺失 `git` 会导致 build script 失败。
+- 因此 `nativeBuildInputs` 需要显式包含 `gitMinimal`（以及 `cmake/go/perl/nasm/pkg-config/rustPlatform.bindgenHook`）。
+
 ---
 
 打包请查看 `nix-package` SKILL

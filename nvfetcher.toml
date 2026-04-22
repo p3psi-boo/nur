@@ -421,3 +421,8 @@ fetch.git = "https://github.com/Luce-Org/lucebox-hub.git"
 git.fetch_submodules = true
 git.get_commit_date = true
 
+# trusttunnel - Modern, fast and obfuscated VPN protocol endpoint
+[trusttunnel]
+src.github = "TrustTunnel/TrustTunnel"
+fetch.github = "TrustTunnel/TrustTunnel"
+

@@ -1405,6 +1405,27 @@
         },
         "version": "204aeea3437a83599c1c1fa1b97e4425cfdfc49d"
     },
+    "trusttunnel": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "trusttunnel",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "TrustTunnel",
+            "repo": "TrustTunnel",
+            "rev": "v1.0.33",
+            "sha256": "sha256-uTAjZbPBCVucjjrl3cYCT6+6cSxiIe/Q3jm+Oa+Fl7E=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.0.33"
+    },
     "uber-apk-signer": {
         "cargoLock": null,
         "date": null,

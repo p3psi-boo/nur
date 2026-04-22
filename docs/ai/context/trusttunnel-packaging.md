@@ -1,0 +1,21 @@
+# trusttunnel 打包备注
+
+- `pkgs/trusttunnel/default.nix` 使用 `rustPlatform.buildRustPackage`，构建 workspace 内两个二进制：
+  - `trusttunnel_endpoint`
+  - `setup_wizard`
+- 源码通过 `nvfetcher` 统一维护：
+  - `nvfetcher.toml` 新增 `[trusttunnel]`
+  - `src.github = "TrustTunnel/TrustTunnel"`
+  - `fetch.github = "TrustTunnel/TrustTunnel"`
+- 版本号使用 `generated.trusttunnel.version`，并在包内 `lib.removePrefix "v"`，确保版本语义与其他 semver 包一致。
+- 上游依赖 `boring-sys` / `quiche`，其构建阶段会调用 `git` 对 vendored boringssl 应用补丁；Nix sandbox 下必须显式提供 `gitMinimal`，否则会在 `boring-sys` build script (`ensure_patches_applied`) 处失败。
+- Rust 原生依赖链需要 C toolchain 辅助工具，当前 `nativeBuildInputs` 固定包含：
+  - `cmake`
+  - `go`
+  - `perl`
+  - `nasm`
+  - `pkg-config`
+  - `rustPlatform.bindgenHook`
+  - `gitMinimal`
+- `cargoLock.lockFile` 直接指向源码内 `Cargo.lock`（`sourceInfo.src + "/Cargo.lock"`），避免额外维护 vendored lockfile。
+- 当前禁用测试（`doCheck = false`），因为目标是先稳定提供 endpoint 与 setup wizard 可执行文件。
