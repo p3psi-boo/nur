@@ -8,13 +8,13 @@
 {
   agsh = {
     pname = "agsh";
-    version = "0.11.0";
+    version = "0.14.0";
     src = fetchFromGitHub {
       owner = "k4yt3x";
       repo = "agsh";
-      rev = "0.11.0";
+      rev = "0.14.0";
       fetchSubmodules = false;
-      sha256 = "sha256-bFPhf3p6W7tnQzno/kYVYZkO26R0JvcJHbpvNOmhlx4=";
+      sha256 = "sha256-yDbmSh9oelGuHwPf0niqju91lfLW+nsZ8/eOEWQ4fCk=";
     };
   };
   bb-browser = {
@@ -123,13 +123,13 @@
   };
   cliproxyapi = {
     pname = "cliproxyapi";
-    version = "v6.9.28";
+    version = "v6.9.31";
     src = fetchFromGitHub {
       owner = "router-for-me";
       repo = "CLIProxyAPI";
-      rev = "v6.9.28";
+      rev = "v6.9.31";
       fetchSubmodules = false;
-      sha256 = "sha256-TBSYsH6CW11mQN4Z8Q9wf7piZiggOio8eSejnYUj2Ro=";
+      sha256 = "sha256-QBUQPP0YfTP+5GPeor9bj40A3sCrg/5auGZ/sVRF0CE=";
     };
   };
   cloudflarespeedtest = {
@@ -195,17 +195,17 @@
   };
   copilot-api-plus = {
     pname = "copilot-api-plus";
-    version = "446b562090d22dbaa96ceaf776e70e29757005ba";
+    version = "af64ca08a979a4f2829bb8d0ee130352f32c9ce6";
     src = fetchgit {
       url = "https://github.com/imbuxiangnan-cyber/copilot-api-plus.git";
-      rev = "446b562090d22dbaa96ceaf776e70e29757005ba";
+      rev = "af64ca08a979a4f2829bb8d0ee130352f32c9ce6";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-TNr1leik1h6PiSdFDUPxr4ucNYSB7THO4LMvCUSvzUY=";
+      sha256 = "sha256-qteLeeXBPC8NNDb4zSVMqLSZyu/3nKWMgmQ8HLDWk/0=";
     };
-    date = "2026-04-17";
+    date = "2026-04-22";
   };
   dagu = {
     pname = "dagu";
@@ -261,34 +261,34 @@
   };
   fff-mcp = {
     pname = "fff-mcp";
-    version = "0.5.2";
+    version = "0.6.1";
     src = fetchurl {
-      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.2/fff-mcp-x86_64-unknown-linux-musl";
-      sha256 = "sha256-o7AoV75bm6mR4bn7nmvbA7dCEtpEe2IbuwKEN0g8NJo=";
+      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.6.1/fff-mcp-x86_64-unknown-linux-musl";
+      sha256 = "sha256-XjkXvsXq6S1+vaGpr/QrmiK8bR6ADKNLELksjdSWeEc=";
     };
   };
   fff-mcp-aarch64-linux = {
     pname = "fff-mcp-aarch64-linux";
-    version = "0.5.2";
+    version = "0.6.1";
     src = fetchurl {
-      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.2/fff-mcp-aarch64-unknown-linux-musl";
-      sha256 = "sha256-MdDeiUghB2unOdzSA7zxpB+CRCbGGm9iO0iWfwgDHeY=";
+      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.6.1/fff-mcp-aarch64-unknown-linux-musl";
+      sha256 = "sha256-TsgQPIkjIrDU50Ai+9BrYwwcq/hoUlE4+a4/1ayhYZQ=";
     };
   };
   fff-mcp-darwin-arm64 = {
     pname = "fff-mcp-darwin-arm64";
-    version = "0.5.2";
+    version = "0.6.1";
     src = fetchurl {
-      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.2/fff-mcp-aarch64-apple-darwin";
-      sha256 = "sha256-RrK7HWAGrZxgNoBeG1MdY2cYqBprAQ0NwVzNKEbissk=";
+      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.6.1/fff-mcp-aarch64-apple-darwin";
+      sha256 = "sha256-RQjgzE0brTWToJk/El99t1V29uEkSuiwBvXvE0gdMr4=";
     };
   };
   fff-mcp-darwin-x64 = {
     pname = "fff-mcp-darwin-x64";
-    version = "0.5.2";
+    version = "0.6.1";
     src = fetchurl {
-      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.2/fff-mcp-x86_64-apple-darwin";
-      sha256 = "sha256-OY7YYI5JHQW0s84BCqOYX/lnuLF0Rt2qTtuzLbIcdZ0=";
+      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.6.1/fff-mcp-x86_64-apple-darwin";
+      sha256 = "sha256-3DO8p/e9krN6H1ZVUtPmqw72OcDJciW2ap9agNpQ4W4=";
     };
   };
   firm = {
@@ -372,6 +372,17 @@
     };
     date = "2026-03-28";
   };
+  harlequin-mysql = {
+    pname = "harlequin-mysql";
+    version = "v1.3.0";
+    src = fetchFromGitHub {
+      owner = "tconbeer";
+      repo = "harlequin-mysql";
+      rev = "v1.3.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-yWPysa0+GYq4b6WpjdyONTev5CbORsAdQ2JjZuumZv4=";
+    };
+  };
   ida-mcp = {
     pname = "ida-mcp";
     version = "9.3.14";
@@ -382,17 +393,17 @@
   };
   ida-pro-mcp = {
     pname = "ida-pro-mcp";
-    version = "ef91fb467c3bfe266a68c3f898b93c8576eaf2c7";
+    version = "e838fab94cb1500ea871d635a8b84bfdb1367332";
     src = fetchgit {
       url = "https://github.com/QiuChenly/ida-pro-mcp-enhancement.git";
-      rev = "ef91fb467c3bfe266a68c3f898b93c8576eaf2c7";
+      rev = "e838fab94cb1500ea871d635a8b84bfdb1367332";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-Q0mqcrB/mMcSSGjVxl0528jQgdI82Ko4gCFOZITaTec=";
+      sha256 = "sha256-zO0/givI80l/CbbxYCVZ5MJ55tuig4O0/JSvs6QJABE=";
     };
-    date = "2026-03-09";
+    date = "2026-04-21";
   };
   il2cppdumper = {
     pname = "il2cppdumper";
@@ -504,13 +515,13 @@
   };
   micyou = {
     pname = "micyou";
-    version = "v1.2.1";
+    version = "v1.2.3";
     src = fetchFromGitHub {
       owner = "LanRhyme";
       repo = "MicYou";
-      rev = "v1.2.1";
+      rev = "v1.2.3";
       fetchSubmodules = false;
-      sha256 = "sha256-2+c1gcDqJypnuMZOxpgsT9LYK4qOmP6FtsmGY/cc2Yg=";
+      sha256 = "sha256-o54TJv1T+E4ZPsBkm2NP1xE2jBzSyWUNqprK4DxmZSM=";
     };
   };
   nf_deaf = {
@@ -571,13 +582,13 @@
   };
   openalice = {
     pname = "openalice";
-    version = "v0.9.0-beta.12";
+    version = "v0.9.0-beta.13";
     src = fetchFromGitHub {
       owner = "TraderAlice";
       repo = "OpenAlice";
-      rev = "v0.9.0-beta.12";
+      rev = "v0.9.0-beta.13";
       fetchSubmodules = false;
-      sha256 = "sha256-8dSrTIBX8LpdZoDoQmxOybdjW0B6f8uriTrZay8JT3Y=";
+      sha256 = "sha256-2cPDtBI5l3w0GRYmXHD1m0U1OOm4cXe7cYF0Zag2lVY=";
     };
   };
   openixcli = {
@@ -610,17 +621,17 @@
   };
   paperclip = {
     pname = "paperclip";
-    version = "b9a80dcf226c50c8778a70443e41557980376a03";
+    version = "a95739442027bdec8d291030a91e351dc434f635";
     src = fetchgit {
       url = "https://github.com/paperclipai/paperclip.git";
-      rev = "b9a80dcf226c50c8778a70443e41557980376a03";
+      rev = "a95739442027bdec8d291030a91e351dc434f635";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-LYslalfZ7AKSEVzjIdEWVqLn9Y6HYscskK2Y2Ps9Zo8=";
+      sha256 = "sha256-6tSPWhiRgKYDZwA2G8wRi2HZ+ABRze9Ez982c7L1tBE=";
     };
-    date = "2026-04-17";
+    date = "2026-04-21";
   };
   pg_duckdb = {
     pname = "pg_duckdb";
@@ -638,13 +649,13 @@
   };
   planify = {
     pname = "planify";
-    version = "v4.18.3";
+    version = "v4.19.0";
     src = fetchFromGitHub {
       owner = "alainm23";
       repo = "planify";
-      rev = "v4.18.3";
+      rev = "v4.19.0";
       fetchSubmodules = false;
-      sha256 = "sha256-VCLXQnB3JhhK3UvnGTfR+mZ/AYGQ2YNxa6hD4QCUfjM=";
+      sha256 = "sha256-swZ8kpfDLxe48PqHLiCjxYbsS7RILCPTPHybtrJi0rA=";
     };
   };
   polymarket-cli = {
@@ -737,13 +748,13 @@
   };
   rikugan = {
     pname = "rikugan";
-    version = "v1.2.1";
+    version = "v1.3";
     src = fetchFromGitHub {
       owner = "buzzer-re";
       repo = "Rikugan";
-      rev = "v1.2.1";
+      rev = "v1.3";
       fetchSubmodules = false;
-      sha256 = "sha256-JUiC6CZ0xqOj1t1w80RSHhXLiSXda8nX+HIJEUZvsTM=";
+      sha256 = "sha256-4d57KjiBpLICwX7uJlgFFjAzca+aDwRX2puml6OSkS4=";
     };
   };
   rime-custom-pinyin-dictionary = {
@@ -893,13 +904,13 @@
   };
   vllm = {
     pname = "vllm";
-    version = "v0.19.0";
+    version = "v0.19.1";
     src = fetchFromGitHub {
       owner = "vllm-project";
       repo = "vllm";
-      rev = "v0.19.0";
+      rev = "v0.19.1";
       fetchSubmodules = false;
-      sha256 = "sha256-0gM52DDfLzkE4QXCGR3c3Jq4CQ1PrnDj4Ky0lsUJ2a8=";
+      sha256 = "sha256-NSHGAMB7j/KvRJmwRjwMuHD/oumSeSvWo0gZcfPOOGA=";
     };
   };
   web-search = {

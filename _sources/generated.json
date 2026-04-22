@@ -13,12 +13,12 @@
             "name": null,
             "owner": "k4yt3x",
             "repo": "agsh",
-            "rev": "0.11.0",
-            "sha256": "sha256-bFPhf3p6W7tnQzno/kYVYZkO26R0JvcJHbpvNOmhlx4=",
+            "rev": "0.14.0",
+            "sha256": "sha256-yDbmSh9oelGuHwPf0niqju91lfLW+nsZ8/eOEWQ4fCk=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "0.11.0"
+        "version": "0.14.0"
     },
     "bb-browser": {
         "cargoLock": null,
@@ -218,12 +218,12 @@
             "name": null,
             "owner": "router-for-me",
             "repo": "CLIProxyAPI",
-            "rev": "v6.9.28",
-            "sha256": "sha256-TBSYsH6CW11mQN4Z8Q9wf7piZiggOio8eSejnYUj2Ro=",
+            "rev": "v6.9.31",
+            "sha256": "sha256-QBUQPP0YfTP+5GPeor9bj40A3sCrg/5auGZ/sVRF0CE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v6.9.28"
+        "version": "v6.9.31"
     },
     "cloudflarespeedtest": {
         "cargoLock": null,
@@ -323,7 +323,7 @@
     },
     "copilot-api-plus": {
         "cargoLock": null,
-        "date": "2026-04-17",
+        "date": "2026-04-22",
         "extract": null,
         "name": "copilot-api-plus",
         "passthru": null,
@@ -333,13 +333,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "446b562090d22dbaa96ceaf776e70e29757005ba",
-            "sha256": "sha256-TNr1leik1h6PiSdFDUPxr4ucNYSB7THO4LMvCUSvzUY=",
+            "rev": "af64ca08a979a4f2829bb8d0ee130352f32c9ce6",
+            "sha256": "sha256-qteLeeXBPC8NNDb4zSVMqLSZyu/3nKWMgmQ8HLDWk/0=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/imbuxiangnan-cyber/copilot-api-plus.git"
         },
-        "version": "446b562090d22dbaa96ceaf776e70e29757005ba"
+        "version": "af64ca08a979a4f2829bb8d0ee130352f32c9ce6"
     },
     "dagu": {
         "cargoLock": null,
@@ -442,11 +442,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-o7AoV75bm6mR4bn7nmvbA7dCEtpEe2IbuwKEN0g8NJo=",
+            "sha256": "sha256-XjkXvsXq6S1+vaGpr/QrmiK8bR6ADKNLELksjdSWeEc=",
             "type": "url",
-            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.2/fff-mcp-x86_64-unknown-linux-musl"
+            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.6.1/fff-mcp-x86_64-unknown-linux-musl"
         },
-        "version": "0.5.2"
+        "version": "0.6.1"
     },
     "fff-mcp-aarch64-linux": {
         "cargoLock": null,
@@ -457,11 +457,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-MdDeiUghB2unOdzSA7zxpB+CRCbGGm9iO0iWfwgDHeY=",
+            "sha256": "sha256-TsgQPIkjIrDU50Ai+9BrYwwcq/hoUlE4+a4/1ayhYZQ=",
             "type": "url",
-            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.2/fff-mcp-aarch64-unknown-linux-musl"
+            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.6.1/fff-mcp-aarch64-unknown-linux-musl"
         },
-        "version": "0.5.2"
+        "version": "0.6.1"
     },
     "fff-mcp-darwin-arm64": {
         "cargoLock": null,
@@ -472,11 +472,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-RrK7HWAGrZxgNoBeG1MdY2cYqBprAQ0NwVzNKEbissk=",
+            "sha256": "sha256-RQjgzE0brTWToJk/El99t1V29uEkSuiwBvXvE0gdMr4=",
             "type": "url",
-            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.2/fff-mcp-aarch64-apple-darwin"
+            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.6.1/fff-mcp-aarch64-apple-darwin"
         },
-        "version": "0.5.2"
+        "version": "0.6.1"
     },
     "fff-mcp-darwin-x64": {
         "cargoLock": null,
@@ -487,11 +487,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-OY7YYI5JHQW0s84BCqOYX/lnuLF0Rt2qTtuzLbIcdZ0=",
+            "sha256": "sha256-3DO8p/e9krN6H1ZVUtPmqw72OcDJciW2ap9agNpQ4W4=",
             "type": "url",
-            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.5.2/fff-mcp-x86_64-apple-darwin"
+            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.6.1/fff-mcp-x86_64-apple-darwin"
         },
-        "version": "0.5.2"
+        "version": "0.6.1"
     },
     "firm": {
         "cargoLock": null,
@@ -614,6 +614,27 @@
         },
         "version": "5a81a63c2d92a9f5495c1098b15eb2fe133f9842"
     },
+    "harlequin-mysql": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "harlequin-mysql",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "tconbeer",
+            "repo": "harlequin-mysql",
+            "rev": "v1.3.0",
+            "sha256": "sha256-yWPysa0+GYq4b6WpjdyONTev5CbORsAdQ2JjZuumZv4=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.3.0"
+    },
     "ida-mcp": {
         "cargoLock": null,
         "date": null,
@@ -631,7 +652,7 @@
     },
     "ida-pro-mcp": {
         "cargoLock": null,
-        "date": "2026-03-09",
+        "date": "2026-04-21",
         "extract": null,
         "name": "ida-pro-mcp",
         "passthru": null,
@@ -641,13 +662,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "ef91fb467c3bfe266a68c3f898b93c8576eaf2c7",
-            "sha256": "sha256-Q0mqcrB/mMcSSGjVxl0528jQgdI82Ko4gCFOZITaTec=",
+            "rev": "e838fab94cb1500ea871d635a8b84bfdb1367332",
+            "sha256": "sha256-zO0/givI80l/CbbxYCVZ5MJ55tuig4O0/JSvs6QJABE=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/QiuChenly/ida-pro-mcp-enhancement.git"
         },
-        "version": "ef91fb467c3bfe266a68c3f898b93c8576eaf2c7"
+        "version": "e838fab94cb1500ea871d635a8b84bfdb1367332"
     },
     "il2cppdumper": {
         "cargoLock": null,
@@ -842,12 +863,12 @@
             "name": null,
             "owner": "LanRhyme",
             "repo": "MicYou",
-            "rev": "v1.2.1",
-            "sha256": "sha256-2+c1gcDqJypnuMZOxpgsT9LYK4qOmP6FtsmGY/cc2Yg=",
+            "rev": "v1.2.3",
+            "sha256": "sha256-o54TJv1T+E4ZPsBkm2NP1xE2jBzSyWUNqprK4DxmZSM=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.2.1"
+        "version": "v1.2.3"
     },
     "nf_deaf": {
         "cargoLock": null,
@@ -943,12 +964,12 @@
             "name": null,
             "owner": "TraderAlice",
             "repo": "OpenAlice",
-            "rev": "v0.9.0-beta.12",
-            "sha256": "sha256-8dSrTIBX8LpdZoDoQmxOybdjW0B6f8uriTrZay8JT3Y=",
+            "rev": "v0.9.0-beta.13",
+            "sha256": "sha256-2cPDtBI5l3w0GRYmXHD1m0U1OOm4cXe7cYF0Zag2lVY=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.9.0-beta.12"
+        "version": "v0.9.0-beta.13"
     },
     "openixcli": {
         "cargoLock": null,
@@ -992,7 +1013,7 @@
     },
     "paperclip": {
         "cargoLock": null,
-        "date": "2026-04-17",
+        "date": "2026-04-21",
         "extract": null,
         "name": "paperclip",
         "passthru": null,
@@ -1002,13 +1023,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "b9a80dcf226c50c8778a70443e41557980376a03",
-            "sha256": "sha256-LYslalfZ7AKSEVzjIdEWVqLn9Y6HYscskK2Y2Ps9Zo8=",
+            "rev": "a95739442027bdec8d291030a91e351dc434f635",
+            "sha256": "sha256-6tSPWhiRgKYDZwA2G8wRi2HZ+ABRze9Ez982c7L1tBE=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/paperclipai/paperclip.git"
         },
-        "version": "b9a80dcf226c50c8778a70443e41557980376a03"
+        "version": "a95739442027bdec8d291030a91e351dc434f635"
     },
     "pg_duckdb": {
         "cargoLock": null,
@@ -1044,12 +1065,12 @@
             "name": null,
             "owner": "alainm23",
             "repo": "planify",
-            "rev": "v4.18.3",
-            "sha256": "sha256-VCLXQnB3JhhK3UvnGTfR+mZ/AYGQ2YNxa6hD4QCUfjM=",
+            "rev": "v4.19.0",
+            "sha256": "sha256-swZ8kpfDLxe48PqHLiCjxYbsS7RILCPTPHybtrJi0rA=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v4.18.3"
+        "version": "v4.19.0"
     },
     "polymarket-cli": {
         "cargoLock": null,
@@ -1219,12 +1240,12 @@
             "name": null,
             "owner": "buzzer-re",
             "repo": "Rikugan",
-            "rev": "v1.2.1",
-            "sha256": "sha256-JUiC6CZ0xqOj1t1w80RSHhXLiSXda8nX+HIJEUZvsTM=",
+            "rev": "v1.3",
+            "sha256": "sha256-4d57KjiBpLICwX7uJlgFFjAzca+aDwRX2puml6OSkS4=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.2.1"
+        "version": "v1.3"
     },
     "rime-custom-pinyin-dictionary": {
         "cargoLock": null,
@@ -1481,12 +1502,12 @@
             "name": null,
             "owner": "vllm-project",
             "repo": "vllm",
-            "rev": "v0.19.0",
-            "sha256": "sha256-0gM52DDfLzkE4QXCGR3c3Jq4CQ1PrnDj4Ky0lsUJ2a8=",
+            "rev": "v0.19.1",
+            "sha256": "sha256-NSHGAMB7j/KvRJmwRjwMuHD/oumSeSvWo0gZcfPOOGA=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.19.0"
+        "version": "v0.19.1"
     },
     "web-search": {
         "cargoLock": null,
