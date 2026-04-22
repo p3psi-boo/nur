@@ -793,6 +793,26 @@
         },
         "version": "48995806bf1aa1c9c41bb8dff6b5ddd698539311"
     },
+    "llama-cpp-turboquant": {
+        "cargoLock": null,
+        "date": "2026-04-15",
+        "extract": null,
+        "name": "llama-cpp-turboquant",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "fc3d1b6566fa37be532e1153e11c35ceabc13f84",
+            "sha256": "sha256-3HO6l83uiwP+df9LbC9aqqeN+1SN2dgNQGgfil8uCLk=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/johndpope/llama-cpp-turboquant.git"
+        },
+        "version": "fc3d1b6566fa37be532e1153e11c35ceabc13f84"
+    },
     "lotspeed": {
         "cargoLock": null,
         "date": "2026-01-19",
@@ -812,6 +832,26 @@
             "url": "https://github.com/uk0/lotspeed.git"
         },
         "version": "3df7cb1e3526526496191edb00e2e4e92e7da761"
+    },
+    "lucebox-hub": {
+        "cargoLock": null,
+        "date": "2026-04-21",
+        "extract": null,
+        "name": "lucebox-hub",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "962c54a3ff810fe0d4534a4a18127e8d46cd860f",
+            "sha256": "sha256-oVMGsyrMmnGHt4pmU3BloA4yiXELvND4bXZnOPU1icY=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/Luce-Org/lucebox-hub.git"
+        },
+        "version": "962c54a3ff810fe0d4534a4a18127e8d46cd860f"
     },
     "magiskboot-bin": {
         "cargoLock": null,

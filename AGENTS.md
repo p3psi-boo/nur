@@ -64,6 +64,19 @@
   - `CMAKE_CUDA_ARCHITECTURES = "86"`
 - 该包当前**没有**对外暴露可覆盖的 CUDA 架构参数；不要在说明中暗示可通过 `overrideAttrs` 直接覆盖，除非先把该参数显式提升到 derivation 接口。
 
+## lucebox-hub 打包备注
+
+- `pkgs/lucebox-hub/default.nix` 当前只打包 **`dflash/` 运行时**，不打包 `megakernel/`；原因是上游仓库根只是聚合入口，而 `megakernel/` 缺少锁文件与稳定的 Python 打包元数据。
+- `dflash` 依赖固定的 `dflash/deps/llama.cpp` 子模块，但当前 `nvfetcher` 生成的 `generated.lucebox-hub.src` 未带出子模块内容；包内通过额外 `fetchFromGitHub` 把 **`Luce-Org/llama.cpp@b16de65904ed7e468397f5417ad130f092cba8f4`** 注入到期望路径。
+- 运行时模型权重始终保持外置，不进入 Nix closure。使用以下环境变量指向本地权重：
+  - `DFLASH_TARGET=/path/to/Qwen3.5-27B-Q4_K_M.gguf`
+  - `DFLASH_DRAFT=/path/to/model.safetensors` 或其 snapshot 目录
+- 上游脚本的运行时路径覆盖统一保存在 `pkgs/lucebox-hub/patches/0001-dflash-runtime-env-overrides.patch`，不要再回退到 `postPatch` 里的脚本式文本替换。
+- `lucebox-hub` 的 Python wrapper 环境必须避免把 Hugging Face 依赖链里的 **test-only** `safetensors -> torch -> triton` 带进来；当前做法是在包内局部 override `safetensors` 为 `doCheck = false` 且清空 `nativeCheckInputs`，只收缩本包运行时闭包，不修改仓库全局 Python 策略。
+- `lucebox-hub` 的 `run.py` / `server.py` 都会调用 `tokenizer.apply_chat_template(...)`，运行时必须包含 `jinja2`（及其传递依赖 `markupsafe`）。若缺失会触发 `ImportError: apply_chat_template requires jinja2` 并导致 `lucebox-hub-server` 返回 500。
+- `lucebox-hub` 的 Python 解释器应显式固定为 `python313`，避免依赖 nixpkgs `python3` 别名在未来漂移导致运行时行为变化。
+- CUDA 架构固定为 **Ampere / `sm_86`**，与上游构建说明及仓库内现有 CUDA 包策略保持一致。
+
 ## komari 运行时版本号注入备注
 
 - `pkgs/komari/default.nix` 必须通过 Go `ldflags` 注入：
