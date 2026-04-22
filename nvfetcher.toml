@@ -414,6 +414,11 @@ fetch.git = "https://github.com/imbuxiangnan-cyber/copilot-api-plus.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
+# harlequin-mysql - MySQL adapter for Harlequin SQL IDE
+[harlequin-mysql]
+src.github = "tconbeer/harlequin-mysql"
+fetch.github = "tconbeer/harlequin-mysql"
+
 # lucebox-hub - CUDA-first local LLM inference experiments; package the dflash runtime and helpers
 [lucebox-hub]
 src.git = "https://github.com/Luce-Org/lucebox-hub.git"
