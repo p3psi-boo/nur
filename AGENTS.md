@@ -95,6 +95,25 @@
 - 原因：上游 `utils/version.go` 默认值是 `0.0.1` / `unknown`，若不注入，`/api/version` 和启动日志会显示错误运行时版本。
 - 注入值应与 Nix 包版本保持一致：`CurrentVersion = 0-unstable-${generated.komari.date}`，`VersionHash = generated.komari.version`。
 
+## trusttunnel 打包备注
+
+- `pkgs/trusttunnel/default.nix` 通过 `rustPlatform.buildRustPackage` 同时构建 workspace 里的 `trusttunnel_endpoint` 与 `setup_wizard` 两个二进制。
+- `trusttunnel` 使用 `nvfetcher` 的 GitHub release 跟踪：
+  - `[trusttunnel]`
+  - `src.github = "TrustTunnel/TrustTunnel"`
+  - `fetch.github = "TrustTunnel/TrustTunnel"`
+- 版本号在包内统一做 `lib.removePrefix "v"`，避免把 tag 前缀带入最终包版本字符串。
+- 上游依赖 `boring-sys` / `quiche`，构建时需要调用 `git` 给 boringssl 源码打补丁；缺失 `git` 会导致 build script 失败。
+- 因此 `nativeBuildInputs` 需要显式包含 `gitMinimal`（以及 `cmake/go/perl/nasm/pkg-config/rustPlatform.bindgenHook`）。
+
+## open-coreui 打包备注
+
+- `pkgs/open-coreui/default.nix` 当前仅打包 Go 服务端（`backend/cmd/openwebui`），不打包 Python 后端。
+- 上游 Go module 位于 `backend/`，必须显式设置 `modRoot = "backend"` 与 `subPackages = [ "cmd/openwebui" ]`。
+- 运行时需要 `open-webui` 子模块里的静态资源；`nvfetcher.toml` 的 `[open-coreui]` 必须保持 `git.fetchSubmodules = true`。
+- 包内会把 `open-webui/backend/open_webui/static` 复制到 `$out/share/open-coreui/static`，并通过 wrapper 默认注入 `STATIC_DIR`，避免 `/static/favicon.png` 等资源 404。
+- 服务端默认反向代理到 `OPEN_COREUI_PYTHON_BASE_URL`（默认 `http://127.0.0.1:8080`）；部署时需自行提供该上游服务。
+
 ---
 
 打包请查看 `nix-package` SKILL

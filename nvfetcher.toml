@@ -432,3 +432,16 @@ src.git = "https://github.com/Luce-Org/lucebox-hub.git"
 fetch.git = "https://github.com/Luce-Org/lucebox-hub.git"
 git.fetch_submodules = true
 git.get_commit_date = true
+
+# trusttunnel - Modern, fast and obfuscated VPN protocol endpoint
+[trusttunnel]
+src.github = "TrustTunnel/TrustTunnel"
+fetch.github = "TrustTunnel/TrustTunnel"
+
+# open-coreui - Lightweight Open WebUI backend server implementation
+[open-coreui]
+src.git = "https://github.com/xxnuo/open-coreui.git"
+fetch.git = "https://github.com/xxnuo/open-coreui.git"
+git.fetchSubmodules = true
+git.get_commit_date = true
+
