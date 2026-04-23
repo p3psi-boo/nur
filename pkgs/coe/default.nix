@@ -47,6 +47,10 @@ let
 
     src = sourceInfo.src;
 
+    nativeBuildInputs = [
+      pkg-config
+    ];
+
     buildInputs = opusBuildInputs;
 
     # 运行时性能优化环境 + Opus CGO 配置
