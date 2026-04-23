@@ -123,13 +123,13 @@
   };
   cliproxyapi = {
     pname = "cliproxyapi";
-    version = "v6.9.34";
+    version = "v6.9.35";
     src = fetchFromGitHub {
       owner = "router-for-me";
       repo = "CLIProxyAPI";
-      rev = "v6.9.34";
+      rev = "v6.9.35";
       fetchSubmodules = false;
-      sha256 = "sha256-nhdlLN3NqNqJ0t/rf1DB8x+KnxzcDI3ptyPUuC0ZmNg=";
+      sha256 = "sha256-XgZn1cOk6naqr5cO5lKqjqQWZZR8tlfNm8qKvXQE/cA=";
     };
   };
   cloudflarespeedtest = {
@@ -209,15 +209,15 @@
   };
   copilot-api-plus = {
     pname = "copilot-api-plus";
-    version = "298e72b72120e9fd93c51a676a9396f0a4b03be3";
+    version = "0efdf979bffc0b0529d53ebbb60c14d3960b0f12";
     src = fetchgit {
       url = "https://github.com/imbuxiangnan-cyber/copilot-api-plus.git";
-      rev = "298e72b72120e9fd93c51a676a9396f0a4b03be3";
+      rev = "0efdf979bffc0b0529d53ebbb60c14d3960b0f12";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-P/XqFe7XS7F81o/O3mOMk75Q+3HBzttedjVPoWAZkyY=";
+      sha256 = "sha256-j4fE0jhYVUOitkZJB+4aBG0M40xHbcEVXqeI8UfGZOM=";
     };
     date = "2026-04-23";
   };
@@ -230,6 +230,17 @@
       rev = "v2.6.1";
       fetchSubmodules = false;
       sha256 = "sha256-V6IJicHir4UWeNW7G/IXDPHNn+k4B06OCwzMOgYiNjA=";
+    };
+  };
+  dailyhot-api = {
+    pname = "dailyhot-api";
+    version = "v2.0.8";
+    src = fetchFromGitHub {
+      owner = "imsyy";
+      repo = "DailyHotApi";
+      rev = "v2.0.8";
+      fetchSubmodules = false;
+      sha256 = "sha256-dvQ+jnMbNVLpRSX+TDolDqdiWNXdzxGL3HiQEFy6YlA=";
     };
   };
   dalvikus = {
@@ -492,17 +503,17 @@
   };
   lucebox-hub = {
     pname = "lucebox-hub";
-    version = "b3734788ed86e8766c35050b7be5e3146426295d";
+    version = "04cab0e39ecd2c35d9a168fcd654edf7fd9264cc";
     src = fetchgit {
       url = "https://github.com/Luce-Org/lucebox-hub.git";
-      rev = "b3734788ed86e8766c35050b7be5e3146426295d";
+      rev = "04cab0e39ecd2c35d9a168fcd654edf7fd9264cc";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-Q6sjSKF+cz7MAfiA3aA+DDVBMrcHGIP29Z2n+w1C7ug=";
+      sha256 = "sha256-PwMFe6+kITL7bRMQd9uXOVltPRlDodGz+x4IG9nH2O0=";
     };
-    date = "2026-04-22";
+    date = "2026-04-23";
   };
   magiskboot-bin = {
     pname = "magiskboot-bin";
@@ -578,17 +589,17 @@
   };
   oli = {
     pname = "oli";
-    version = "b9e64dd0222d357de4cbd97baf02194ec4656e57";
+    version = "3d6d2c142c0d0a6a7e344213db41cfcbbad6b55d";
     src = fetchgit {
       url = "https://github.com/apache/opendal-oli.git";
-      rev = "b9e64dd0222d357de4cbd97baf02194ec4656e57";
+      rev = "3d6d2c142c0d0a6a7e344213db41cfcbbad6b55d";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-Fw2Gsr8mp3OyykJJNFBchcCU7Nemzmd6asM/FAKelJc=";
+      sha256 = "sha256-Aps1zSIZGdVoSxrMpTRl3k1B9W5l7XccgI/+bjP42+w=";
     };
-    date = "2026-04-02";
+    date = "2026-04-24";
   };
   open-coreui = {
     pname = "open-coreui";
@@ -645,17 +656,17 @@
   };
   paperclip = {
     pname = "paperclip";
-    version = "13551b2bac6e75fe879f9152ade60030467215cb";
+    version = "854fa817573476186ce8b1e7a9afbcd3b71dd383";
     src = fetchgit {
       url = "https://github.com/paperclipai/paperclip.git";
-      rev = "13551b2bac6e75fe879f9152ade60030467215cb";
+      rev = "854fa817573476186ce8b1e7a9afbcd3b71dd383";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-/8Gw5Ko7ZMf9xlmlNFepDJBItb8iUMEIjfwgO4TZwIc=";
+      sha256 = "sha256-V9zxkhJDUUtDfqcuiQ8a/KGT5MJbf8N+PPHGnNd5tfs=";
     };
-    date = "2026-04-22";
+    date = "2026-04-23";
   };
   pg_duckdb = {
     pname = "pg_duckdb";

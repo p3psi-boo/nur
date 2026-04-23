@@ -218,12 +218,12 @@
             "name": null,
             "owner": "router-for-me",
             "repo": "CLIProxyAPI",
-            "rev": "v6.9.34",
-            "sha256": "sha256-nhdlLN3NqNqJ0t/rf1DB8x+KnxzcDI3ptyPUuC0ZmNg=",
+            "rev": "v6.9.35",
+            "sha256": "sha256-XgZn1cOk6naqr5cO5lKqjqQWZZR8tlfNm8qKvXQE/cA=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v6.9.34"
+        "version": "v6.9.35"
     },
     "cloudflarespeedtest": {
         "cargoLock": null,
@@ -353,13 +353,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "298e72b72120e9fd93c51a676a9396f0a4b03be3",
-            "sha256": "sha256-P/XqFe7XS7F81o/O3mOMk75Q+3HBzttedjVPoWAZkyY=",
+            "rev": "0efdf979bffc0b0529d53ebbb60c14d3960b0f12",
+            "sha256": "sha256-j4fE0jhYVUOitkZJB+4aBG0M40xHbcEVXqeI8UfGZOM=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/imbuxiangnan-cyber/copilot-api-plus.git"
         },
-        "version": "298e72b72120e9fd93c51a676a9396f0a4b03be3"
+        "version": "0efdf979bffc0b0529d53ebbb60c14d3960b0f12"
     },
     "dagu": {
         "cargoLock": null,
@@ -381,6 +381,27 @@
             "type": "github"
         },
         "version": "v2.6.1"
+    },
+    "dailyhot-api": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "dailyhot-api",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "imsyy",
+            "repo": "DailyHotApi",
+            "rev": "v2.0.8",
+            "sha256": "sha256-dvQ+jnMbNVLpRSX+TDolDqdiWNXdzxGL3HiQEFy6YlA=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v2.0.8"
     },
     "dalvikus": {
         "cargoLock": null,
@@ -795,7 +816,7 @@
     },
     "lucebox-hub": {
         "cargoLock": null,
-        "date": "2026-04-22",
+        "date": "2026-04-23",
         "extract": null,
         "name": "lucebox-hub",
         "passthru": null,
@@ -805,13 +826,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "b3734788ed86e8766c35050b7be5e3146426295d",
-            "sha256": "sha256-Q6sjSKF+cz7MAfiA3aA+DDVBMrcHGIP29Z2n+w1C7ug=",
+            "rev": "04cab0e39ecd2c35d9a168fcd654edf7fd9264cc",
+            "sha256": "sha256-PwMFe6+kITL7bRMQd9uXOVltPRlDodGz+x4IG9nH2O0=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/Luce-Org/lucebox-hub.git"
         },
-        "version": "b3734788ed86e8766c35050b7be5e3146426295d"
+        "version": "04cab0e39ecd2c35d9a168fcd654edf7fd9264cc"
     },
     "magiskboot-bin": {
         "cargoLock": null,
@@ -932,7 +953,7 @@
     },
     "oli": {
         "cargoLock": null,
-        "date": "2026-04-02",
+        "date": "2026-04-24",
         "extract": null,
         "name": "oli",
         "passthru": null,
@@ -942,13 +963,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "b9e64dd0222d357de4cbd97baf02194ec4656e57",
-            "sha256": "sha256-Fw2Gsr8mp3OyykJJNFBchcCU7Nemzmd6asM/FAKelJc=",
+            "rev": "3d6d2c142c0d0a6a7e344213db41cfcbbad6b55d",
+            "sha256": "sha256-Aps1zSIZGdVoSxrMpTRl3k1B9W5l7XccgI/+bjP42+w=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/apache/opendal-oli.git"
         },
-        "version": "b9e64dd0222d357de4cbd97baf02194ec4656e57"
+        "version": "3d6d2c142c0d0a6a7e344213db41cfcbbad6b55d"
     },
     "open-coreui": {
         "cargoLock": null,
@@ -1033,7 +1054,7 @@
     },
     "paperclip": {
         "cargoLock": null,
-        "date": "2026-04-22",
+        "date": "2026-04-23",
         "extract": null,
         "name": "paperclip",
         "passthru": null,
@@ -1043,13 +1064,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "13551b2bac6e75fe879f9152ade60030467215cb",
-            "sha256": "sha256-/8Gw5Ko7ZMf9xlmlNFepDJBItb8iUMEIjfwgO4TZwIc=",
+            "rev": "854fa817573476186ce8b1e7a9afbcd3b71dd383",
+            "sha256": "sha256-V9zxkhJDUUtDfqcuiQ8a/KGT5MJbf8N+PPHGnNd5tfs=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/paperclipai/paperclip.git"
         },
-        "version": "13551b2bac6e75fe879f9152ade60030467215cb"
+        "version": "854fa817573476186ce8b1e7a9afbcd3b71dd383"
     },
     "pg_duckdb": {
         "cargoLock": null,

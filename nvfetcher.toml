@@ -421,3 +421,8 @@ fetch.git = "https://github.com/xxnuo/open-coreui.git"
 git.fetchSubmodules = true
 git.get_commit_date = true
 
+# DailyHotApi - 今日热榜 API，聚合热门数据的 API 接口
+[dailyhot-api]
+src.github = "imsyy/DailyHotApi"
+fetch.github = "imsyy/DailyHotApi"
+
