@@ -10,11 +10,35 @@
   generated,
   lib,
   withFcitx5 ? true,  # 默认启用 fcitx5 模块
+  # Opus 库依赖（CGO 编译需要）
+  libopus,
+  opusfile,
+  libogg,
 }:
 
 let
   sourceInfo = generated.coe;
   version = "0-unstable-${sourceInfo.date}";
+
+  # Opus 相关构建输入
+  opusBuildInputs = [
+    libopus
+    opusfile
+    libogg
+  ];
+
+  # CGO flags for opus headers
+  CGO_CFLAGS = builtins.concatStringsSep " " [
+    "-I${libogg.dev}/include"
+    "-I${libopus.dev}/include"
+  ];
+
+  # pkg-config path for opus libraries
+  PKG_CONFIG_PATH = builtins.concatStringsSep ":" [
+    "${libopus.dev}/lib/pkgconfig"
+    "${opusfile.dev}/lib/pkgconfig"
+    "${libogg.dev}/lib/pkgconfig"
+  ];
 
   # coe 主程序（Go 构建）
   coeMain = buildGoModule {
@@ -23,12 +47,20 @@ let
 
     src = sourceInfo.src;
 
-    # 运行时性能优化环境
+    buildInputs = opusBuildInputs;
+
+    # 运行时性能优化环境 + Opus CGO 配置
     env = {
-      CGO_ENABLED = "0";
+      CGO_ENABLED = "1";
       GOFLAGS = "-trimpath";
       GOAMD64 = "v3";  # x86-64-v3 指令集优化
     };
+
+    preBuild = ''
+      export CGO_CFLAGS="${CGO_CFLAGS}"
+      export CGO_LDFLAGS="-L${libopus}/lib -L${opusfile}/lib -L${libogg}/lib"
+      export PKG_CONFIG_PATH="${PKG_CONFIG_PATH}"
+    '';
 
     # Upstream v0.0.6 misses the module checksum line required by `go mod vendor`.
     postPatch = ''
@@ -36,7 +68,7 @@ let
         echo 'golang.org/x/sys v0.40.0 h1:DBZZqJ2Rkml6QMQsZywtnjnnGvHza6BTfYFWY9kjEWQ=' >> go.sum
     '';
 
-    vendorHash = "sha256-LUytq4Cow3TYOTZThdIsX1R4DnRw9sy4AuOQYi+8Ht8=";
+    vendorHash = "sha256-hmdZV8tyRivKEQEQA47gRB9N6Eof6Cf3mbZRKTK9yZQ=";
 
     # 运行时性能优化
     ldflags = [
