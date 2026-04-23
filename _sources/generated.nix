@@ -123,13 +123,13 @@
   };
   cliproxyapi = {
     pname = "cliproxyapi";
-    version = "v6.9.31";
+    version = "v6.9.34";
     src = fetchFromGitHub {
       owner = "router-for-me";
       repo = "CLIProxyAPI";
-      rev = "v6.9.31";
+      rev = "v6.9.34";
       fetchSubmodules = false;
-      sha256 = "sha256-QBUQPP0YfTP+5GPeor9bj40A3sCrg/5auGZ/sVRF0CE=";
+      sha256 = "sha256-nhdlLN3NqNqJ0t/rf1DB8x+KnxzcDI3ptyPUuC0ZmNg=";
     };
   };
   cloudflarespeedtest = {
@@ -510,17 +510,17 @@
   };
   lucebox-hub = {
     pname = "lucebox-hub";
-    version = "962c54a3ff810fe0d4534a4a18127e8d46cd860f";
+    version = "b3734788ed86e8766c35050b7be5e3146426295d";
     src = fetchgit {
       url = "https://github.com/Luce-Org/lucebox-hub.git";
-      rev = "962c54a3ff810fe0d4534a4a18127e8d46cd860f";
+      rev = "b3734788ed86e8766c35050b7be5e3146426295d";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-oVMGsyrMmnGHt4pmU3BloA4yiXELvND4bXZnOPU1icY=";
+      sha256 = "sha256-Q6sjSKF+cz7MAfiA3aA+DDVBMrcHGIP29Z2n+w1C7ug=";
     };
-    date = "2026-04-21";
+    date = "2026-04-22";
   };
   magiskboot-bin = {
     pname = "magiskboot-bin";
@@ -663,17 +663,17 @@
   };
   paperclip = {
     pname = "paperclip";
-    version = "a95739442027bdec8d291030a91e351dc434f635";
+    version = "b69b563aa88af811ad45e658b0d8778ccb2f373d";
     src = fetchgit {
       url = "https://github.com/paperclipai/paperclip.git";
-      rev = "a95739442027bdec8d291030a91e351dc434f635";
+      rev = "b69b563aa88af811ad45e658b0d8778ccb2f373d";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-6tSPWhiRgKYDZwA2G8wRi2HZ+ABRze9Ez982c7L1tBE=";
+      sha256 = "sha256-yx1ZsJt51l2k+Dd6DFUfeuF10Rzu5zlAFAUAtEFE0Ec=";
     };
-    date = "2026-04-21";
+    date = "2026-04-22";
   };
   pg_duckdb = {
     pname = "pg_duckdb";

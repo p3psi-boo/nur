@@ -218,12 +218,12 @@
             "name": null,
             "owner": "router-for-me",
             "repo": "CLIProxyAPI",
-            "rev": "v6.9.31",
-            "sha256": "sha256-QBUQPP0YfTP+5GPeor9bj40A3sCrg/5auGZ/sVRF0CE=",
+            "rev": "v6.9.34",
+            "sha256": "sha256-nhdlLN3NqNqJ0t/rf1DB8x+KnxzcDI3ptyPUuC0ZmNg=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v6.9.31"
+        "version": "v6.9.34"
     },
     "cloudflarespeedtest": {
         "cargoLock": null,
@@ -835,7 +835,7 @@
     },
     "lucebox-hub": {
         "cargoLock": null,
-        "date": "2026-04-21",
+        "date": "2026-04-22",
         "extract": null,
         "name": "lucebox-hub",
         "passthru": null,
@@ -845,13 +845,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "962c54a3ff810fe0d4534a4a18127e8d46cd860f",
-            "sha256": "sha256-oVMGsyrMmnGHt4pmU3BloA4yiXELvND4bXZnOPU1icY=",
+            "rev": "b3734788ed86e8766c35050b7be5e3146426295d",
+            "sha256": "sha256-Q6sjSKF+cz7MAfiA3aA+DDVBMrcHGIP29Z2n+w1C7ug=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/Luce-Org/lucebox-hub.git"
         },
-        "version": "962c54a3ff810fe0d4534a4a18127e8d46cd860f"
+        "version": "b3734788ed86e8766c35050b7be5e3146426295d"
     },
     "magiskboot-bin": {
         "cargoLock": null,
@@ -1073,7 +1073,7 @@
     },
     "paperclip": {
         "cargoLock": null,
-        "date": "2026-04-21",
+        "date": "2026-04-22",
         "extract": null,
         "name": "paperclip",
         "passthru": null,
@@ -1083,13 +1083,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "a95739442027bdec8d291030a91e351dc434f635",
-            "sha256": "sha256-6tSPWhiRgKYDZwA2G8wRi2HZ+ABRze9Ez982c7L1tBE=",
+            "rev": "b69b563aa88af811ad45e658b0d8778ccb2f373d",
+            "sha256": "sha256-yx1ZsJt51l2k+Dd6DFUfeuF10Rzu5zlAFAUAtEFE0Ec=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/paperclipai/paperclip.git"
         },
-        "version": "a95739442027bdec8d291030a91e351dc434f635"
+        "version": "b69b563aa88af811ad45e658b0d8778ccb2f373d"
     },
     "pg_duckdb": {
         "cargoLock": null,
