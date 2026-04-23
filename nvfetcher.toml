@@ -414,6 +414,13 @@ fetch.git = "https://github.com/imbuxiangnan-cyber/copilot-api-plus.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
+# codex-desktop-linux - Linux installer/wrapper for OpenAI Codex Desktop
+[codex-desktop-linux]
+src.git = "https://github.com/ilysenko/codex-desktop-linux.git"
+fetch.git = "https://github.com/ilysenko/codex-desktop-linux.git"
+git.fetch_submodules = false
+git.get_commit_date = true
+
 # harlequin-mysql - MySQL adapter for Harlequin SQL IDE
 [harlequin-mysql]
 src.github = "tconbeer/harlequin-mysql"
