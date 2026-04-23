@@ -15,7 +15,7 @@ index f45730c..badada3 100644
      }
  
  
- diff --git a/scripts/server.py b/scripts/server.py
+diff --git a/scripts/server.py b/scripts/server.py
 index 4acac85..68dbaef 100644
 --- a/scripts/server.py
 +++ b/scripts/server.py
@@ -24,10 +24,10 @@ index 4acac85..68dbaef 100644
  
  ROOT = Path(__file__).resolve().parent.parent
 -DEFAULT_TARGET = ROOT / "models" / "Qwen3.5-27B-Q4_K_M.gguf"
--DEFAULT_DRAFT_ROOT = Path.home() / ".cache/huggingface/hub/models--z-lab--Qwen3.5-27B-DFlash/snapshots"
+-DEFAULT_DRAFT_ROOT = ROOT / "models" / "draft"
 -DEFAULT_BIN = ROOT / "build" / "test_dflash"
 +DEFAULT_TARGET = Path(os.environ.get("DFLASH_TARGET", str(ROOT / "models" / "Qwen3.5-27B-Q4_K_M.gguf")))
-+DEFAULT_DRAFT_ROOT = Path(os.environ.get("DFLASH_DRAFT", str(Path.home() / ".cache/huggingface/hub/models--z-lab--Qwen3.5-27B-DFlash/snapshots")))
++DEFAULT_DRAFT_ROOT = Path(os.environ.get("DFLASH_DRAFT", str(ROOT / "models" / "draft")))
 +DEFAULT_BIN = Path(os.environ.get("DFLASH_BIN", str(ROOT / "build" / "test_dflash")))
  DEFAULT_BUDGET = 22
  MODEL_NAME = "luce-dflash"
