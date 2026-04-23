@@ -17,6 +17,7 @@
   libxrandr,
   libxrender,
   libxtst,
+  ...
 }:
 
 let
