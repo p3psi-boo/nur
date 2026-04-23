@@ -8,13 +8,13 @@
 {
   agsh = {
     pname = "agsh";
-    version = "0.14.0";
+    version = "0.15.1";
     src = fetchFromGitHub {
       owner = "k4yt3x";
       repo = "agsh";
-      rev = "0.14.0";
+      rev = "0.15.1";
       fetchSubmodules = false;
-      sha256 = "sha256-yDbmSh9oelGuHwPf0niqju91lfLW+nsZ8/eOEWQ4fCk=";
+      sha256 = "sha256-6vn70/4j2mEgAw6P7dsAiBmn971hb7RO+tjXW22EcY0=";
     };
   };
   bb-browser = {
@@ -159,10 +159,10 @@
   };
   cocoindex-code = {
     pname = "cocoindex-code";
-    version = "0.2.27";
+    version = "0.2.28";
     src = fetchurl {
-      url = "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.27.tar.gz";
-      sha256 = "sha256-QmPnOBqFsDn4raBgmTYWq8P2JHVp96KKax8cQAu95xY=";
+      url = "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.28.tar.gz";
+      sha256 = "sha256-QZNzMVgBjv0aFbJYSd10u9pvvS15gEQVbpoUc0r/qhk=";
     };
   };
   codex-desktop-linux = {
@@ -181,17 +181,17 @@
   };
   coe = {
     pname = "coe";
-    version = "8ce49ed06b88dc610d34b04acfd03bfdc0f78787";
+    version = "c326261675a2455e6dd8c22576681e91644600ef";
     src = fetchgit {
       url = "https://github.com/p3psi-boo/coe.git";
-      rev = "8ce49ed06b88dc610d34b04acfd03bfdc0f78787";
+      rev = "c326261675a2455e6dd8c22576681e91644600ef";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-I1KFljvfmZ2pwOvqSMrvO6rZfvdA6xrFR2j8eEkgq94=";
+      sha256 = "sha256-0VL8NsKi1zl8fWJHn9khUwb0Jx0NIEvAdqe7slSfPyw=";
     };
-    date = "2026-04-02";
+    date = "2026-04-23";
   };
   cookiecloud-rs = {
     pname = "cookiecloud-rs";
@@ -209,27 +209,27 @@
   };
   copilot-api-plus = {
     pname = "copilot-api-plus";
-    version = "af64ca08a979a4f2829bb8d0ee130352f32c9ce6";
+    version = "298e72b72120e9fd93c51a676a9396f0a4b03be3";
     src = fetchgit {
       url = "https://github.com/imbuxiangnan-cyber/copilot-api-plus.git";
-      rev = "af64ca08a979a4f2829bb8d0ee130352f32c9ce6";
+      rev = "298e72b72120e9fd93c51a676a9396f0a4b03be3";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-qteLeeXBPC8NNDb4zSVMqLSZyu/3nKWMgmQ8HLDWk/0=";
+      sha256 = "sha256-P/XqFe7XS7F81o/O3mOMk75Q+3HBzttedjVPoWAZkyY=";
     };
-    date = "2026-04-22";
+    date = "2026-04-23";
   };
   dagu = {
     pname = "dagu";
-    version = "v2.5.0";
+    version = "v2.6.1";
     src = fetchFromGitHub {
       owner = "dagu-org";
       repo = "dagu";
-      rev = "v2.5.0";
+      rev = "v2.6.1";
       fetchSubmodules = false;
-      sha256 = "sha256-zI/SD+uz6lO5woHUCDawaLtOZ0fS8efSaZSh6MTuB5k=";
+      sha256 = "sha256-V6IJicHir4UWeNW7G/IXDPHNn+k4B06OCwzMOgYiNjA=";
     };
   };
   dalvikus = {
@@ -272,38 +272,6 @@
       sha256 = "sha256-P0Q8DdeEns5xcALj5vIyubc1AE073nozbNoTzRso37w=";
     };
     date = "2025-12-11";
-  };
-  fff-mcp = {
-    pname = "fff-mcp";
-    version = "0.6.1";
-    src = fetchurl {
-      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.6.1/fff-mcp-x86_64-unknown-linux-musl";
-      sha256 = "sha256-XjkXvsXq6S1+vaGpr/QrmiK8bR6ADKNLELksjdSWeEc=";
-    };
-  };
-  fff-mcp-aarch64-linux = {
-    pname = "fff-mcp-aarch64-linux";
-    version = "0.6.1";
-    src = fetchurl {
-      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.6.1/fff-mcp-aarch64-unknown-linux-musl";
-      sha256 = "sha256-TsgQPIkjIrDU50Ai+9BrYwwcq/hoUlE4+a4/1ayhYZQ=";
-    };
-  };
-  fff-mcp-darwin-arm64 = {
-    pname = "fff-mcp-darwin-arm64";
-    version = "0.6.1";
-    src = fetchurl {
-      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.6.1/fff-mcp-aarch64-apple-darwin";
-      sha256 = "sha256-RQjgzE0brTWToJk/El99t1V29uEkSuiwBvXvE0gdMr4=";
-    };
-  };
-  fff-mcp-darwin-x64 = {
-    pname = "fff-mcp-darwin-x64";
-    version = "0.6.1";
-    src = fetchurl {
-      url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.6.1/fff-mcp-x86_64-apple-darwin";
-      sha256 = "sha256-3DO8p/e9krN6H1ZVUtPmqw72OcDJciW2ap9agNpQ4W4=";
-    };
   };
   firm = {
     pname = "firm";
@@ -677,15 +645,15 @@
   };
   paperclip = {
     pname = "paperclip";
-    version = "b69b563aa88af811ad45e658b0d8778ccb2f373d";
+    version = "13551b2bac6e75fe879f9152ade60030467215cb";
     src = fetchgit {
       url = "https://github.com/paperclipai/paperclip.git";
-      rev = "b69b563aa88af811ad45e658b0d8778ccb2f373d";
+      rev = "13551b2bac6e75fe879f9152ade60030467215cb";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-yx1ZsJt51l2k+Dd6DFUfeuF10Rzu5zlAFAUAtEFE0Ec=";
+      sha256 = "sha256-/8Gw5Ko7ZMf9xlmlNFepDJBItb8iUMEIjfwgO4TZwIc=";
     };
     date = "2026-04-22";
   };

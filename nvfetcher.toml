@@ -169,30 +169,6 @@ fetch.git = "https://github.com/YuzukiTsuru/OpenixCLI.git"
 src.branch = "master"
 git.fetch_submodules = false
 
-[fff-mcp]
-src.github_tag = "dmtrKovalenko/fff.nvim"
-src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
-src.prefix = "v"
-fetch.url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v$ver/fff-mcp-x86_64-unknown-linux-musl"
-
-[fff-mcp-aarch64-linux]
-src.github_tag = "dmtrKovalenko/fff.nvim"
-src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
-src.prefix = "v"
-fetch.url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v$ver/fff-mcp-aarch64-unknown-linux-musl"
-
-[fff-mcp-darwin-x64]
-src.github_tag = "dmtrKovalenko/fff.nvim"
-src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
-src.prefix = "v"
-fetch.url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v$ver/fff-mcp-x86_64-apple-darwin"
-
-[fff-mcp-darwin-arm64]
-src.github_tag = "dmtrKovalenko/fff.nvim"
-src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
-src.prefix = "v"
-fetch.url = "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v$ver/fff-mcp-aarch64-apple-darwin"
-
 [binsider-bin]
 src.github_tag = "orhun/binsider"
 src.prefix = "v"

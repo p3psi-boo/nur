@@ -13,12 +13,12 @@
             "name": null,
             "owner": "k4yt3x",
             "repo": "agsh",
-            "rev": "0.14.0",
-            "sha256": "sha256-yDbmSh9oelGuHwPf0niqju91lfLW+nsZ8/eOEWQ4fCk=",
+            "rev": "0.15.1",
+            "sha256": "sha256-6vn70/4j2mEgAw6P7dsAiBmn971hb7RO+tjXW22EcY0=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "0.14.0"
+        "version": "0.15.1"
     },
     "bb-browser": {
         "cargoLock": null,
@@ -275,11 +275,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-QmPnOBqFsDn4raBgmTYWq8P2JHVp96KKax8cQAu95xY=",
+            "sha256": "sha256-QZNzMVgBjv0aFbJYSd10u9pvvS15gEQVbpoUc0r/qhk=",
             "type": "url",
-            "url": "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.27.tar.gz"
+            "url": "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.28.tar.gz"
         },
-        "version": "0.2.27"
+        "version": "0.2.28"
     },
     "codex-desktop-linux": {
         "cargoLock": null,
@@ -303,7 +303,7 @@
     },
     "coe": {
         "cargoLock": null,
-        "date": "2026-04-02",
+        "date": "2026-04-23",
         "extract": null,
         "name": "coe",
         "passthru": null,
@@ -313,13 +313,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "8ce49ed06b88dc610d34b04acfd03bfdc0f78787",
-            "sha256": "sha256-I1KFljvfmZ2pwOvqSMrvO6rZfvdA6xrFR2j8eEkgq94=",
+            "rev": "c326261675a2455e6dd8c22576681e91644600ef",
+            "sha256": "sha256-0VL8NsKi1zl8fWJHn9khUwb0Jx0NIEvAdqe7slSfPyw=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/p3psi-boo/coe.git"
         },
-        "version": "8ce49ed06b88dc610d34b04acfd03bfdc0f78787"
+        "version": "c326261675a2455e6dd8c22576681e91644600ef"
     },
     "cookiecloud-rs": {
         "cargoLock": null,
@@ -343,7 +343,7 @@
     },
     "copilot-api-plus": {
         "cargoLock": null,
-        "date": "2026-04-22",
+        "date": "2026-04-23",
         "extract": null,
         "name": "copilot-api-plus",
         "passthru": null,
@@ -353,13 +353,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "af64ca08a979a4f2829bb8d0ee130352f32c9ce6",
-            "sha256": "sha256-qteLeeXBPC8NNDb4zSVMqLSZyu/3nKWMgmQ8HLDWk/0=",
+            "rev": "298e72b72120e9fd93c51a676a9396f0a4b03be3",
+            "sha256": "sha256-P/XqFe7XS7F81o/O3mOMk75Q+3HBzttedjVPoWAZkyY=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/imbuxiangnan-cyber/copilot-api-plus.git"
         },
-        "version": "af64ca08a979a4f2829bb8d0ee130352f32c9ce6"
+        "version": "298e72b72120e9fd93c51a676a9396f0a4b03be3"
     },
     "dagu": {
         "cargoLock": null,
@@ -375,12 +375,12 @@
             "name": null,
             "owner": "dagu-org",
             "repo": "dagu",
-            "rev": "v2.5.0",
-            "sha256": "sha256-zI/SD+uz6lO5woHUCDawaLtOZ0fS8efSaZSh6MTuB5k=",
+            "rev": "v2.6.1",
+            "sha256": "sha256-V6IJicHir4UWeNW7G/IXDPHNn+k4B06OCwzMOgYiNjA=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.5.0"
+        "version": "v2.6.1"
     },
     "dalvikus": {
         "cargoLock": null,
@@ -452,66 +452,6 @@
             "url": "https://github.com/EHfive/einat-ebpf.git"
         },
         "version": "b226ff98856e59be7f091bc7d81ceba8ac38bd19"
-    },
-    "fff-mcp": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "fff-mcp",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-XjkXvsXq6S1+vaGpr/QrmiK8bR6ADKNLELksjdSWeEc=",
-            "type": "url",
-            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.6.1/fff-mcp-x86_64-unknown-linux-musl"
-        },
-        "version": "0.6.1"
-    },
-    "fff-mcp-aarch64-linux": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "fff-mcp-aarch64-linux",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-TsgQPIkjIrDU50Ai+9BrYwwcq/hoUlE4+a4/1ayhYZQ=",
-            "type": "url",
-            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.6.1/fff-mcp-aarch64-unknown-linux-musl"
-        },
-        "version": "0.6.1"
-    },
-    "fff-mcp-darwin-arm64": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "fff-mcp-darwin-arm64",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-RQjgzE0brTWToJk/El99t1V29uEkSuiwBvXvE0gdMr4=",
-            "type": "url",
-            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.6.1/fff-mcp-aarch64-apple-darwin"
-        },
-        "version": "0.6.1"
-    },
-    "fff-mcp-darwin-x64": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "fff-mcp-darwin-x64",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-3DO8p/e9krN6H1ZVUtPmqw72OcDJciW2ap9agNpQ4W4=",
-            "type": "url",
-            "url": "https://github.com/dmtrKovalenko/fff.nvim/releases/download/v0.6.1/fff-mcp-x86_64-apple-darwin"
-        },
-        "version": "0.6.1"
     },
     "firm": {
         "cargoLock": null,
@@ -1103,13 +1043,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "b69b563aa88af811ad45e658b0d8778ccb2f373d",
-            "sha256": "sha256-yx1ZsJt51l2k+Dd6DFUfeuF10Rzu5zlAFAUAtEFE0Ec=",
+            "rev": "13551b2bac6e75fe879f9152ade60030467215cb",
+            "sha256": "sha256-/8Gw5Ko7ZMf9xlmlNFepDJBItb8iUMEIjfwgO4TZwIc=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/paperclipai/paperclip.git"
         },
-        "version": "b69b563aa88af811ad45e658b0d8778ccb2f373d"
+        "version": "13551b2bac6e75fe879f9152ade60030467215cb"
     },
     "pg_duckdb": {
         "cargoLock": null,
