@@ -56,6 +56,16 @@
 - 上游 lockfile 在本仓库环境下会触发离线缓存缺失，因此该包固定使用仓库内 vendored 的生产依赖 lockfile：`pkgs/copilot-api-plus/package-lock.json`。
 - `default.nix` 在 `postPatch` 中同步裁剪 `package.json` 到运行时字段（name/version/type/bin/dependencies），确保与 vendored lockfile 一致，避免 `npm ci` 拉取 devDependencies。
 
+## codex-desktop-linux 打包备注
+
+- `pkgs/codex-desktop-linux` 采用 **runtime installer wrapper** 模式：Nix 包仅分发上游安装脚本与固定哈希的 `Codex.dmg`，实际 `codex-app/` 由用户在运行时目录生成。
+- 这样处理是为了避免把 Electron 重建产物写入 Nix store（上游安装流程要求可写工作目录，并会执行 `npm/npx` 的本地重建步骤）。
+- 运行入口 `codex-desktop-linux` 会在临时目录复制上游源码并执行 `install.sh`，然后对生成的 Electron 二进制做 `patchelf`（`interpreter + rpath`）以适配 NixOS 动态链接行为。
+- 上游生成的 `start.sh` 默认 shebang 为 `/bin/bash`；wrapper 会在安装完成后重写为 Nix store 内 `bash` 路径，避免 NixOS 上 `bad interpreter: /bin/bash`。
+- 包输出额外提供桌面集成：`$out/share/applications/codex-desktop-linux.desktop` 与图标 `$out/share/icons/hicolor/256x256/apps/codex-desktop-linux.png`；桌面入口调用 `codex-desktop-linux-launcher`（已安装时直启，未安装时触发首次安装）。
+- `Codex.dmg` 是固定输出依赖；若上游在同 URL 发布新版本导致 hash mismatch，需要同步更新 `pkgs/codex-desktop-linux/default.nix` 内 `codexDmg.hash`。
+- 版本号遵循仓库现有不稳定包规范：`0-unstable-${generated.codex-desktop-linux.date}`。
+
 ## gemma-cpp CUDA 构建备注
 
 - `pkgs/gemma-cpp/default.nix` 固定为 **CUDA-only** 构建，且目标架构固定为 **RTX 30 系列 / Ampere (`sm_86`)**。
