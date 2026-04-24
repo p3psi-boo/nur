@@ -6,6 +6,8 @@
   jdk21_headless,
   jre,
   makeWrapper,
+  makeDesktopItem,
+  copyDesktopItems,
   alsa-lib,
   fontconfig,
   freetype,
@@ -49,6 +51,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     gradle
     makeWrapper
+    copyDesktopItems
   ];
 
   mitmCache = gradle.fetchDeps {
@@ -71,6 +74,17 @@ stdenv.mkDerivation (finalAttrs: {
   '';
   doCheck = false;
 
+  desktopItems = [
+    (makeDesktopItem {
+      name = "dalvikus";
+      exec = "dalvikus";
+      icon = "dalvikus";
+      desktopName = "Dalvikus";
+      comment = "Android reverse-engineering tool and smali editor";
+      categories = [ "Development" ];
+    })
+  ];
+
   installPhase = ''
     runHook preInstall
 
@@ -82,18 +96,6 @@ stdenv.mkDerivation (finalAttrs: {
 
     install -Dm644 "$appDist/lib/dalvikus.png" \
       "$out/share/icons/hicolor/256x256/apps/dalvikus.png"
-    install -d "$out/share/applications"
-
-    cat > "$out/share/applications/dalvikus.desktop" <<EOF
-[Desktop Entry]
-Name=Dalvikus
-Comment=Android reverse-engineering tool and smali editor
-Exec=$out/bin/dalvikus
-Icon=dalvikus
-Terminal=false
-Type=Application
-Categories=Development;
-EOF
 
     makeWrapper ${lib.getExe jre} "$out/bin/dalvikus" \
       --add-flags "-Dcompose.application.configure.swing.globals=true" \

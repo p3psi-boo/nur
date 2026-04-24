@@ -3,6 +3,8 @@
   stdenv,
   fetchzip,
   makeWrapper,
+  makeDesktopItem,
+  copyDesktopItems,
   jdk17,
   libpulseaudio,
   alsa-lib,
@@ -48,11 +50,26 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "sha256-iZH66Y4650OfVfgmS0x8REfKiu4/oiLRRtfJ12NHkKc=";
   };
 
-  nativeBuildInputs = [ makeWrapper ];
+  nativeBuildInputs = [ makeWrapper copyDesktopItems ];
 
   buildInputs = [
     libpulseaudio
     alsa-lib
+  ];
+
+  desktopItems = [
+    (makeDesktopItem {
+      name = "micyou";
+      exec = "micyou";
+      icon = "micyou";
+      desktopName = "MicYou";
+      comment = "Turn your Android device into a wireless microphone";
+      categories = [
+        "AudioVideo"
+        "Audio"
+        "Utility"
+      ];
+    })
   ];
 
   installPhase = ''
@@ -81,18 +98,6 @@ stdenv.mkDerivation (finalAttrs: {
     install -Dm644 \
       "$tmpDir/composeResources/micyou.composeapp.generated.resources/drawable/app_icon.png" \
       "$out/share/icons/hicolor/256x256/apps/micyou.png"
-
-    install -d "$out/share/applications"
-    cat > "$out/share/applications/micyou.desktop" <<EOF
-[Desktop Entry]
-Name=MicYou
-Comment=Turn your Android device into a wireless microphone
-Exec=micyou
-Icon=micyou
-Terminal=false
-Type=Application
-Categories=AudioVideo;Audio;Utility;
-EOF
 
     rm -rf "$tmpDir"
 

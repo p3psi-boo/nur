@@ -5,6 +5,8 @@
   generated,
   fetchurl,
   makeWrapper,
+  makeDesktopItem,
+  copyDesktopItems,
   bash,
   nodejs,
   python3,
@@ -101,8 +103,32 @@ stdenvNoCC.mkDerivation {
 
   src = sourceInfo.src;
 
-  nativeBuildInputs = [ makeWrapper ];
+  nativeBuildInputs = [
+    makeWrapper
+    copyDesktopItems
+  ];
   dontBuild = true;
+
+  desktopItems = [
+    (makeDesktopItem {
+      name = "codex-desktop-linux";
+      exec = "codex-desktop-linux-launcher";
+      icon = "codex-desktop-linux";
+      desktopName = "Codex Desktop Linux";
+      comment = "Launch Codex Desktop on Linux (installs on first run)";
+      categories = [
+        "Development"
+        "Utility"
+      ];
+      keywords = [
+        "codex"
+        "openai"
+        "assistant"
+      ];
+      terminal = true;
+      startupNotify = true;
+    })
+  ];
 
   installPhase = ''
     runHook preInstall
@@ -197,21 +223,8 @@ exec codex-desktop-linux "$@"
 EOF
     chmod +x "$out/bin/codex-desktop-linux-launcher"
 
-    install -d "$out/share/applications" "$out/share/icons/hicolor/256x256/apps"
+    install -d "$out/share/icons/hicolor/256x256/apps"
     install -m644 "$sourceDir/assets/codex.png" "$out/share/icons/hicolor/256x256/apps/codex-desktop-linux.png"
-
-    cat > "$out/share/applications/codex-desktop-linux.desktop" <<'EOF'
-[Desktop Entry]
-Name=Codex Desktop Linux
-Comment=Launch Codex Desktop on Linux (installs on first run)
-Exec=codex-desktop-linux-launcher
-Icon=codex-desktop-linux
-Terminal=true
-Type=Application
-Categories=Development;Utility;
-Keywords=codex;openai;assistant;
-StartupNotify=true
-EOF
 
     runHook postInstall
   '';
