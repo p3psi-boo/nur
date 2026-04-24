@@ -123,13 +123,13 @@
   };
   cliproxyapi = {
     pname = "cliproxyapi";
-    version = "v6.9.35";
+    version = "v6.9.36";
     src = fetchFromGitHub {
       owner = "router-for-me";
       repo = "CLIProxyAPI";
-      rev = "v6.9.35";
+      rev = "v6.9.36";
       fetchSubmodules = false;
-      sha256 = "sha256-XgZn1cOk6naqr5cO5lKqjqQWZZR8tlfNm8qKvXQE/cA=";
+      sha256 = "sha256-Eml2MW7/H1ctw2lg1U6W3TyZ3SJKy+j+27/8aUf0ymQ=";
     };
   };
   cloudflarespeedtest = {
@@ -656,15 +656,15 @@
   };
   paperclip = {
     pname = "paperclip";
-    version = "854fa817573476186ce8b1e7a9afbcd3b71dd383";
+    version = "e4995bbb1cc36454fc0fa3142ad9c7030c397ff0";
     src = fetchgit {
       url = "https://github.com/paperclipai/paperclip.git";
-      rev = "854fa817573476186ce8b1e7a9afbcd3b71dd383";
+      rev = "e4995bbb1cc36454fc0fa3142ad9c7030c397ff0";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-V9zxkhJDUUtDfqcuiQ8a/KGT5MJbf8N+PPHGnNd5tfs=";
+      sha256 = "sha256-gCl3UQwHTzUDdQ0MAvcJk9f8TvOSlZEChc3WQtM1fQs=";
     };
     date = "2026-04-23";
   };
