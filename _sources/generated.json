@@ -61,6 +61,27 @@
         },
         "version": "07fc48213a415490da1ae40cd8988a087cb02ec6"
     },
+    "bichon": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "bichon",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "rustmailer",
+            "repo": "bichon",
+            "rev": "0.3.7",
+            "sha256": "sha256-0uba/4NMh6ib//rgmYcUk+5qVzBg+yWMaVbCcoM+8jE=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "0.3.7"
+    },
     "binsider-bin": {
         "cargoLock": null,
         "date": null,
@@ -275,15 +296,15 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-QZNzMVgBjv0aFbJYSd10u9pvvS15gEQVbpoUc0r/qhk=",
+            "sha256": "sha256-Y0TmKuBZKMeBvaXqt5MuuaTE5dlSBhDq/CYuUhwhdWE=",
             "type": "url",
-            "url": "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.28.tar.gz"
+            "url": "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.29.tar.gz"
         },
-        "version": "0.2.28"
+        "version": "0.2.29"
     },
     "codex-desktop-linux": {
         "cargoLock": null,
-        "date": "2026-04-21",
+        "date": "2026-04-24",
         "extract": null,
         "name": "codex-desktop-linux",
         "passthru": null,
@@ -293,13 +314,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "6b93c7289f43b30e36a37e9766ba768440cfdb26",
-            "sha256": "sha256-6omTsOGB1do6D+Aw4tT1mjuY5xCNONoCECpXdH1jkCA=",
+            "rev": "008a627fc810daf053137ad817284268ed803904",
+            "sha256": "sha256-D8gTD//fKse4BensrthWgyihot0YpZdg0pGRBTDWfG8=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/ilysenko/codex-desktop-linux.git"
         },
-        "version": "6b93c7289f43b30e36a37e9766ba768440cfdb26"
+        "version": "008a627fc810daf053137ad817284268ed803904"
     },
     "coe": {
         "cargoLock": null,
@@ -816,7 +837,7 @@
     },
     "lucebox-hub": {
         "cargoLock": null,
-        "date": "2026-04-23",
+        "date": "2026-04-24",
         "extract": null,
         "name": "lucebox-hub",
         "passthru": null,
@@ -826,13 +847,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "04cab0e39ecd2c35d9a168fcd654edf7fd9264cc",
-            "sha256": "sha256-PwMFe6+kITL7bRMQd9uXOVltPRlDodGz+x4IG9nH2O0=",
+            "rev": "471e11fa9fdb745d8310f60a9c920fea703575b9",
+            "sha256": "sha256-8qIPnuUgIrShe7gvqTWwTl6F6jr3LFtgAs0Y94+RiSg=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/Luce-Org/lucebox-hub.git"
         },
-        "version": "04cab0e39ecd2c35d9a168fcd654edf7fd9264cc"
+        "version": "471e11fa9fdb745d8310f60a9c920fea703575b9"
     },
     "magiskboot-bin": {
         "cargoLock": null,
@@ -1054,7 +1075,7 @@
     },
     "paperclip": {
         "cargoLock": null,
-        "date": "2026-04-23",
+        "date": "2026-04-24",
         "extract": null,
         "name": "paperclip",
         "passthru": null,
@@ -1064,13 +1085,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "e4995bbb1cc36454fc0fa3142ad9c7030c397ff0",
-            "sha256": "sha256-gCl3UQwHTzUDdQ0MAvcJk9f8TvOSlZEChc3WQtM1fQs=",
+            "rev": "5bd0f578fd3f44aac910aab774443980696f4f97",
+            "sha256": "sha256-cEm9xCrav1gBuxVpoztCSNfbO4R0Q+NuMDS2IbQ8huM=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/paperclipai/paperclip.git"
         },
-        "version": "e4995bbb1cc36454fc0fa3142ad9c7030c397ff0"
+        "version": "5bd0f578fd3f44aac910aab774443980696f4f97"
     },
     "pg_duckdb": {
         "cargoLock": null,

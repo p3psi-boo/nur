@@ -426,3 +426,8 @@ git.get_commit_date = true
 src.github = "imsyy/DailyHotApi"
 fetch.github = "imsyy/DailyHotApi"
 
+# bichon - A lightweight, high-performance Rust email archiver with WebUI
+[bichon]
+src.github = "rustmailer/bichon"
+fetch.github = "rustmailer/bichon"
+
