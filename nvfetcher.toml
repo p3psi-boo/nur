@@ -291,8 +291,8 @@ git.get_commit_date = true
 src.github_tag = "TraderAlice/OpenAlice"
 fetch.github = "TraderAlice/OpenAlice"
 [grok2api]
-src.git = "https://github.com/JinchengGao-Infty/grok2api.git"
-fetch.git = "https://github.com/JinchengGao-Infty/grok2api.git"
+src.git = "https://github.com/chenyme/grok2api.git"
+fetch.git = "https://github.com/chenyme/grok2api.git"
 git.fetch_submodules = false
 
 # Focaltech fingerprint reader driver bundle

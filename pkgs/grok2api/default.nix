@@ -1,5 +1,5 @@
 # grok2api - Grok2API built with FastAPI (Runtime Performance Optimized)
-# https://github.com/JinchengGao-Infty/grok2api
+# https://github.com/chenyme/grok2api
 # Runtime optimizations for I/O-heavy workloads (API proxy to Grok)
 {
   lib,
@@ -147,7 +147,7 @@ stdenv.mkDerivation {
       GRANIAN_ARGS+=(--threads "$GRANIAN_THREADS")
     fi
     
-    exec @python@ -m granian main:app "''${GRANIAN_ARGS[@]}" "''$@"
+    exec @python@ -m granian app.main:app "''${GRANIAN_ARGS[@]}" "''$@"
     EOF
 
     substituteInPlace $out/bin/grok2api \
@@ -165,8 +165,8 @@ stdenv.mkDerivation {
   };
 
   meta = {
-    description = "Grok2API (JinchengGao-Infty fork) - FastAPI-based Grok API with runtime performance optimizations";
-    homepage = "https://github.com/JinchengGao-Infty/grok2api";
+    description = "Grok2API - FastAPI-based Grok API with runtime performance optimizations";
+    homepage = "https://github.com/chenyme/grok2api";
     license = lib.licenses.mit;
     mainProgram = "grok2api";
     platforms = lib.platforms.linux ++ lib.platforms.darwin;

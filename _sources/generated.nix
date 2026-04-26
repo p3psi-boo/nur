@@ -8,13 +8,13 @@
 {
   agsh = {
     pname = "agsh";
-    version = "0.15.1";
+    version = "0.16.0";
     src = fetchFromGitHub {
       owner = "k4yt3x";
       repo = "agsh";
-      rev = "0.15.1";
+      rev = "0.16.0";
       fetchSubmodules = false;
-      sha256 = "sha256-6vn70/4j2mEgAw6P7dsAiBmn971hb7RO+tjXW22EcY0=";
+      sha256 = "sha256-CsEDb/oKLG+UqZTSX6qceAk4+quC3TeHtAY2koGStzU=";
     };
   };
   bb-browser = {
@@ -134,13 +134,13 @@
   };
   cliproxyapi = {
     pname = "cliproxyapi";
-    version = "v6.9.36";
+    version = "v6.9.38";
     src = fetchFromGitHub {
       owner = "router-for-me";
       repo = "CLIProxyAPI";
-      rev = "v6.9.36";
+      rev = "v6.9.38";
       fetchSubmodules = false;
-      sha256 = "sha256-Eml2MW7/H1ctw2lg1U6W3TyZ3SJKy+j+27/8aUf0ymQ=";
+      sha256 = "sha256-vjSSDtyQpWj8Zv9n2Ra8ohoHfpOxdLTu4jUHCbC0p44=";
     };
   };
   cloudflarespeedtest = {
@@ -170,25 +170,25 @@
   };
   cocoindex-code = {
     pname = "cocoindex-code";
-    version = "0.2.29";
+    version = "0.2.30";
     src = fetchurl {
-      url = "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.29.tar.gz";
-      sha256 = "sha256-Y0TmKuBZKMeBvaXqt5MuuaTE5dlSBhDq/CYuUhwhdWE=";
+      url = "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.30.tar.gz";
+      sha256 = "sha256-TWCFXStHt1X0LZ8pZMuFG5cb9kdkjAKP1M+Yr2hchgw=";
     };
   };
   codex-desktop-linux = {
     pname = "codex-desktop-linux";
-    version = "008a627fc810daf053137ad817284268ed803904";
+    version = "d6125b59b8c2aa7365ca450c85b30fbe679391a1";
     src = fetchgit {
       url = "https://github.com/ilysenko/codex-desktop-linux.git";
-      rev = "008a627fc810daf053137ad817284268ed803904";
+      rev = "d6125b59b8c2aa7365ca450c85b30fbe679391a1";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-D8gTD//fKse4BensrthWgyihot0YpZdg0pGRBTDWfG8=";
+      sha256 = "sha256-1NWjTJyuH1z0AYV520/D18l+8z1Ylfy06TJ5YmuGXPI=";
     };
-    date = "2026-04-24";
+    date = "2026-04-25";
   };
   coe = {
     pname = "coe";
@@ -220,17 +220,17 @@
   };
   copilot-api-plus = {
     pname = "copilot-api-plus";
-    version = "0efdf979bffc0b0529d53ebbb60c14d3960b0f12";
+    version = "9e8e8abaeecacb77e86ed7b45c80bae92fb636c4";
     src = fetchgit {
       url = "https://github.com/imbuxiangnan-cyber/copilot-api-plus.git";
-      rev = "0efdf979bffc0b0529d53ebbb60c14d3960b0f12";
+      rev = "9e8e8abaeecacb77e86ed7b45c80bae92fb636c4";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-j4fE0jhYVUOitkZJB+4aBG0M40xHbcEVXqeI8UfGZOM=";
+      sha256 = "sha256-gVpLRwelyhRGDzqeHHxP55gXk9KGu6IhEHunp+23FU4=";
     };
-    date = "2026-04-23";
+    date = "2026-04-25";
   };
   dagu = {
     pname = "dagu";
@@ -364,17 +364,17 @@
   };
   grok2api = {
     pname = "grok2api";
-    version = "5a81a63c2d92a9f5495c1098b15eb2fe133f9842";
+    version = "ae9b5b979d1c867b681219d3bbcd66734fb9244a";
     src = fetchgit {
-      url = "https://github.com/JinchengGao-Infty/grok2api.git";
-      rev = "5a81a63c2d92a9f5495c1098b15eb2fe133f9842";
+      url = "https://github.com/chenyme/grok2api.git";
+      rev = "ae9b5b979d1c867b681219d3bbcd66734fb9244a";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-FquCukmOoCpTC+wPa+MdfMvZARLJwB1YOem61DDuVcg=";
+      sha256 = "sha256-svIhTICA1ZzSHAFB89bLzkKZXhr/klj25macEaeKdSE=";
     };
-    date = "2026-03-28";
+    date = "2026-04-24";
   };
   harlequin-mysql = {
     pname = "harlequin-mysql";
@@ -600,17 +600,17 @@
   };
   oli = {
     pname = "oli";
-    version = "3d6d2c142c0d0a6a7e344213db41cfcbbad6b55d";
+    version = "007b436ad93eb28d547257238ae0bbc20fb0a74b";
     src = fetchgit {
       url = "https://github.com/apache/opendal-oli.git";
-      rev = "3d6d2c142c0d0a6a7e344213db41cfcbbad6b55d";
+      rev = "007b436ad93eb28d547257238ae0bbc20fb0a74b";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-Aps1zSIZGdVoSxrMpTRl3k1B9W5l7XccgI/+bjP42+w=";
+      sha256 = "sha256-1zzqrK/u6AczNpqAGqZ1VCQbAR05QhQs4WACjWA6+uM=";
     };
-    date = "2026-04-24";
+    date = "2026-04-26";
   };
   open-coreui = {
     pname = "open-coreui";
@@ -667,17 +667,17 @@
   };
   paperclip = {
     pname = "paperclip";
-    version = "5bd0f578fd3f44aac910aab774443980696f4f97";
+    version = "40782f703d1f4a13f4ceadbe84c9b92be0bfacaf";
     src = fetchgit {
       url = "https://github.com/paperclipai/paperclip.git";
-      rev = "5bd0f578fd3f44aac910aab774443980696f4f97";
+      rev = "40782f703d1f4a13f4ceadbe84c9b92be0bfacaf";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-cEm9xCrav1gBuxVpoztCSNfbO4R0Q+NuMDS2IbQ8huM=";
+      sha256 = "sha256-oh+8iO3CrpliEAl8vSDChfxG3xmZRQGHxMZPx4hIBMk=";
     };
-    date = "2026-04-24";
+    date = "2026-04-25";
   };
   pg_duckdb = {
     pname = "pg_duckdb";
