@@ -8,13 +8,13 @@
 {
   agsh = {
     pname = "agsh";
-    version = "0.16.0";
+    version = "0.16.1";
     src = fetchFromGitHub {
       owner = "k4yt3x";
       repo = "agsh";
-      rev = "0.16.0";
+      rev = "0.16.1";
       fetchSubmodules = false;
-      sha256 = "sha256-CsEDb/oKLG+UqZTSX6qceAk4+quC3TeHtAY2koGStzU=";
+      sha256 = "sha256-wh8TeYR+mjZhA2NAURKb6jxk3sDeUZgAGY8bopJlQ1E=";
     };
   };
   bb-browser = {
@@ -178,17 +178,17 @@
   };
   codex-desktop-linux = {
     pname = "codex-desktop-linux";
-    version = "d6125b59b8c2aa7365ca450c85b30fbe679391a1";
+    version = "ce0f1f043ecda2828474163415e701eee9ebf7ed";
     src = fetchgit {
       url = "https://github.com/ilysenko/codex-desktop-linux.git";
-      rev = "d6125b59b8c2aa7365ca450c85b30fbe679391a1";
+      rev = "ce0f1f043ecda2828474163415e701eee9ebf7ed";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-1NWjTJyuH1z0AYV520/D18l+8z1Ylfy06TJ5YmuGXPI=";
+      sha256 = "sha256-Opr9tQRd5+ewjaZ8tAtu3+GxsyirNfJ9MwwM2e3KS+s=";
     };
-    date = "2026-04-25";
+    date = "2026-04-26";
   };
   coe = {
     pname = "coe";
@@ -695,13 +695,13 @@
   };
   planify = {
     pname = "planify";
-    version = "v4.19.0";
+    version = "v4.19.1";
     src = fetchFromGitHub {
       owner = "alainm23";
       repo = "planify";
-      rev = "v4.19.0";
+      rev = "v4.19.1";
       fetchSubmodules = false;
-      sha256 = "sha256-swZ8kpfDLxe48PqHLiCjxYbsS7RILCPTPHybtrJi0rA=";
+      sha256 = "sha256-aja+WAMlWaO3RpeUQJ/D7kTGfGelJz+Wl7Sq7TZelOw=";
     };
   };
   polymarket-cli = {

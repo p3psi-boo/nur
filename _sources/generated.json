@@ -13,12 +13,12 @@
             "name": null,
             "owner": "k4yt3x",
             "repo": "agsh",
-            "rev": "0.16.0",
-            "sha256": "sha256-CsEDb/oKLG+UqZTSX6qceAk4+quC3TeHtAY2koGStzU=",
+            "rev": "0.16.1",
+            "sha256": "sha256-wh8TeYR+mjZhA2NAURKb6jxk3sDeUZgAGY8bopJlQ1E=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "0.16.0"
+        "version": "0.16.1"
     },
     "bb-browser": {
         "cargoLock": null,
@@ -304,7 +304,7 @@
     },
     "codex-desktop-linux": {
         "cargoLock": null,
-        "date": "2026-04-25",
+        "date": "2026-04-26",
         "extract": null,
         "name": "codex-desktop-linux",
         "passthru": null,
@@ -314,13 +314,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "d6125b59b8c2aa7365ca450c85b30fbe679391a1",
-            "sha256": "sha256-1NWjTJyuH1z0AYV520/D18l+8z1Ylfy06TJ5YmuGXPI=",
+            "rev": "ce0f1f043ecda2828474163415e701eee9ebf7ed",
+            "sha256": "sha256-Opr9tQRd5+ewjaZ8tAtu3+GxsyirNfJ9MwwM2e3KS+s=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/ilysenko/codex-desktop-linux.git"
         },
-        "version": "d6125b59b8c2aa7365ca450c85b30fbe679391a1"
+        "version": "ce0f1f043ecda2828474163415e701eee9ebf7ed"
     },
     "coe": {
         "cargoLock": null,
@@ -1127,12 +1127,12 @@
             "name": null,
             "owner": "alainm23",
             "repo": "planify",
-            "rev": "v4.19.0",
-            "sha256": "sha256-swZ8kpfDLxe48PqHLiCjxYbsS7RILCPTPHybtrJi0rA=",
+            "rev": "v4.19.1",
+            "sha256": "sha256-aja+WAMlWaO3RpeUQJ/D7kTGfGelJz+Wl7Sq7TZelOw=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v4.19.0"
+        "version": "v4.19.1"
     },
     "polymarket-cli": {
         "cargoLock": null,
