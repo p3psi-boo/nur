@@ -2,6 +2,8 @@
   lib,
   stdenvNoCC,
   fetchzip,
+  makeDesktopItem,
+  copyDesktopItems,
   wineWow64Packages,
 }:
 
@@ -17,6 +19,22 @@ stdenvNoCC.mkDerivation {
     stripRoot = false;
     hash = "sha256-skB3qtSlin7JVefaG/IgfAFjGz9mEZrySkLOTVjTFhg=";
   };
+
+  nativeBuildInputs = [ copyDesktopItems ];
+
+  desktopItems = [
+    (makeDesktopItem {
+      name = "apk-easy-tool";
+      exec = "apk-easy-tool";
+      desktopName = "APK Easy Tool";
+      comment = "APK reverse engineering utility (Wine)";
+      categories = [
+        "Development"
+        "Utility"
+      ];
+      startupNotify = true;
+    })
+  ];
 
   sourceRoot = ".";
 
@@ -49,18 +67,6 @@ EOF
       --replace-fail '@OUT@' "$out"
 
     chmod +x "$out/bin/apk-easy-tool"
-
-    install -d "$out/share/applications"
-    cat > "$out/share/applications/apk-easy-tool.desktop" <<EOF
-[Desktop Entry]
-Name=APK Easy Tool
-Comment=APK reverse engineering utility (Wine)
-Exec=apk-easy-tool
-Terminal=false
-Type=Application
-Categories=Development;Utility;
-StartupNotify=true
-EOF
 
     runHook postInstall
   '';

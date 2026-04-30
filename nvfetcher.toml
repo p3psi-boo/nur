@@ -291,8 +291,8 @@ git.get_commit_date = true
 src.github_tag = "TraderAlice/OpenAlice"
 fetch.github = "TraderAlice/OpenAlice"
 [grok2api]
-src.git = "https://github.com/JinchengGao-Infty/grok2api.git"
-fetch.git = "https://github.com/JinchengGao-Infty/grok2api.git"
+src.git = "https://github.com/chenyme/grok2api.git"
+fetch.git = "https://github.com/chenyme/grok2api.git"
 git.fetch_submodules = false
 
 # Focaltech fingerprint reader driver bundle
@@ -344,12 +344,14 @@ src.git = "https://github.com/johndpope/llama-cpp-turboquant.git"
 src.branch = "feature/planarquant-kv-cache"
 fetch.git = "https://github.com/johndpope/llama-cpp-turboquant.git"
 git.fetch_submodules = true
+git.get_commit_date = true
 
 # gemma-cpp - llama.cpp fork with TurboQuant for Gemma 4 (CUDA only, sm_86)
 [gemma-cpp]
 src.git = "https://github.com/test1111111111111112/llama-cpp-turboquant-gemma4.git"
 fetch.git = "https://github.com/test1111111111111112/llama-cpp-turboquant-gemma4.git"
 git.fetch_submodules = true
+git.get_commit_date = true
 
 # cloudflarespeedtest
 [cloudflarespeedtest]
@@ -419,5 +421,22 @@ fetch.github = "TrustTunnel/TrustTunnel"
 src.git = "https://github.com/xxnuo/open-coreui.git"
 fetch.git = "https://github.com/xxnuo/open-coreui.git"
 git.fetchSubmodules = true
+git.get_commit_date = true
+
+# DailyHotApi - 今日热榜 API，聚合热门数据的 API 接口
+[dailyhot-api]
+src.github = "imsyy/DailyHotApi"
+fetch.github = "imsyy/DailyHotApi"
+
+# bichon - A lightweight, high-performance Rust email archiver with WebUI
+[bichon]
+src.github = "rustmailer/bichon"
+fetch.github = "rustmailer/bichon"
+
+# wtfps - Scrape estimated locations from Apple's Wi-Fi Positioning System
+[wtfps]
+src.git = "https://codeberg.org/joelkoen/wtfps.git"
+fetch.git = "https://codeberg.org/joelkoen/wtfps.git"
+git.fetch_submodules = false
 git.get_commit_date = true
 

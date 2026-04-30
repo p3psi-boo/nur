@@ -38,7 +38,7 @@ in
 
 effectiveStdenv.mkDerivation (finalAttrs: {
   pname = "llama-cpp-turboquant";
-  version = generated.llama-cpp-turboquant.version;
+  version = "0-unstable-${generated.llama-cpp-turboquant.date}";
 
   outputs = [
     "out"

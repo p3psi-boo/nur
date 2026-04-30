@@ -22,8 +22,30 @@ pkgs.stdenv.mkDerivation rec {
   # All protobuf Python files are pre-generated in warp_proto/
   # No build phase needed - skip to avoid protoc version mismatches
 
+  nativeBuildInputs = [ pkgs.copyDesktopItems ];
+
+  desktopItems = [
+    (pkgs.makeDesktopItem {
+      name = "warp-byok";
+      exec = "warp-byok";
+      icon = "warp-terminal";
+      desktopName = "Warp (BYOK)";
+      comment = "Warp Terminal with Bring Your Own Key support";
+      categories = [
+        "System"
+        "TerminalEmulator"
+      ];
+      keywords = [
+        "terminal"
+        "warp"
+        "ai"
+        "byok"
+      ];
+    })
+  ];
+
   installPhase = ''
-    mkdir -p $out/{bin,lib/warp-terminal-byok,share/applications}
+    mkdir -p $out/{bin,lib/warp-terminal-byok}
 
     # Copy Python files
     cp *.py $out/lib/warp-terminal-byok/
@@ -36,19 +58,6 @@ pkgs.stdenv.mkDerivation rec {
     exec ${python}/bin/python $out/lib/warp-terminal-byok/launch_warp_linux.py "\$@"
     EOF
     chmod +x $out/bin/warp-byok
-
-    # Create .desktop entry
-    cat > $out/share/applications/warp-byok.desktop << EOF
-    [Desktop Entry]
-    Name=Warp (BYOK)
-    Comment=Warp Terminal with Bring Your Own Key support
-    Exec=$out/bin/warp-byok
-    Type=Application
-    Terminal=false
-    Icon=warp-terminal
-    Categories=System;TerminalEmulator;
-    Keywords=terminal;warp;ai;byok;
-    EOF
   '';
 
   meta = with pkgs.lib; {

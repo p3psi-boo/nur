@@ -22,8 +22,8 @@ let
   llamaCppSrc = fetchFromGitHub {
     owner = "Luce-Org";
     repo = "llama.cpp";
-    rev = "b16de65904ed7e468397f5417ad130f092cba8f4";
-    hash = "sha256-W8m1ozA8qLHBu4G/LWlSqmTMfyt1ZYC3Sboqr5e80ro=";
+    rev = "1823460262950917e7ddcf65040295b41a423c55";
+    hash = "sha256-IaSju4OSO6UDtTxBiC+h8rIw0hDzYZMDcHDN90yPupo=";
   };
 
   workspaceRoot = runCommand "lucebox-hub-workspace-${version}" { } ''
