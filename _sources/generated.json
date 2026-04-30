@@ -1652,5 +1652,25 @@
             "type": "github"
         },
         "version": "v0.4.1"
+    },
+    "wtfps": {
+        "cargoLock": null,
+        "date": "2024-10-21",
+        "extract": null,
+        "name": "wtfps",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "44ea48854ac49396f35426246426ffcdf5616631",
+            "sha256": "sha256-kWN9jOOEY1uW/1VtEYLzhm3Q2RbrjlGETk+RS2v2mTc=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://codeberg.org/joelkoen/wtfps.git"
+        },
+        "version": "44ea48854ac49396f35426246426ffcdf5616631"
     }
 }

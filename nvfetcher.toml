@@ -431,3 +431,10 @@ fetch.github = "imsyy/DailyHotApi"
 src.github = "rustmailer/bichon"
 fetch.github = "rustmailer/bichon"
 
+# wtfps - Scrape estimated locations from Apple's Wi-Fi Positioning System
+[wtfps]
+src.git = "https://codeberg.org/joelkoen/wtfps.git"
+fetch.git = "https://codeberg.org/joelkoen/wtfps.git"
+git.fetch_submodules = false
+git.get_commit_date = true
+

@@ -1009,4 +1009,18 @@
       sha256 = "sha256-Igbr3L2W32s4uBepllSz07bkbI3qwAKMZkBrXLqGrGA=";
     };
   };
+  wtfps = {
+    pname = "wtfps";
+    version = "44ea48854ac49396f35426246426ffcdf5616631";
+    src = fetchgit {
+      url = "https://codeberg.org/joelkoen/wtfps.git";
+      rev = "44ea48854ac49396f35426246426ffcdf5616631";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-kWN9jOOEY1uW/1VtEYLzhm3Q2RbrjlGETk+RS2v2mTc=";
+    };
+    date = "2024-10-21";
+  };
 }
