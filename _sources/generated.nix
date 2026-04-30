@@ -42,6 +42,17 @@
     };
     date = "2026-01-14";
   };
+  bichon = {
+    pname = "bichon";
+    version = "0.3.7";
+    src = fetchFromGitHub {
+      owner = "rustmailer";
+      repo = "bichon";
+      rev = "0.3.7";
+      fetchSubmodules = false;
+      sha256 = "sha256-0uba/4NMh6ib//rgmYcUk+5qVzBg+yWMaVbCcoM+8jE=";
+    };
+  };
   binsider-bin = {
     pname = "binsider-bin";
     version = "0.3.2";
@@ -232,6 +243,17 @@
       sha256 = "sha256-0JLRx7m2wEVno7u2SZ2saG8ZLQdmmd0ELvM8Ydf2lA4=";
     };
   };
+  dailyhot-api = {
+    pname = "dailyhot-api";
+    version = "v2.0.8";
+    src = fetchFromGitHub {
+      owner = "imsyy";
+      repo = "DailyHotApi";
+      rev = "v2.0.8";
+      fetchSubmodules = false;
+      sha256 = "sha256-dvQ+jnMbNVLpRSX+TDolDqdiWNXdzxGL3HiQEFy6YlA=";
+    };
+  };
   dalvikus = {
     pname = "dalvikus";
     version = "1.0.13";
@@ -342,17 +364,17 @@
   };
   grok2api = {
     pname = "grok2api";
-    version = "5a81a63c2d92a9f5495c1098b15eb2fe133f9842";
+    version = "64a71f16e02ef100f64256c61923047621d45270";
     src = fetchgit {
-      url = "https://github.com/JinchengGao-Infty/grok2api.git";
-      rev = "5a81a63c2d92a9f5495c1098b15eb2fe133f9842";
+      url = "https://github.com/chenyme/grok2api.git";
+      rev = "64a71f16e02ef100f64256c61923047621d45270";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-FquCukmOoCpTC+wPa+MdfMvZARLJwB1YOem61DDuVcg=";
+      sha256 = "sha256-42z45WpgmCJclLs1tvckwvs6CWO4neRjRnUOLhEOsoQ=";
     };
-    date = "2026-03-28";
+    date = "2026-04-28";
   };
   harlequin-mysql = {
     pname = "harlequin-mysql";
@@ -986,5 +1008,19 @@
       fetchSubmodules = false;
       sha256 = "sha256-Igbr3L2W32s4uBepllSz07bkbI3qwAKMZkBrXLqGrGA=";
     };
+  };
+  wtfps = {
+    pname = "wtfps";
+    version = "44ea48854ac49396f35426246426ffcdf5616631";
+    src = fetchgit {
+      url = "https://codeberg.org/joelkoen/wtfps.git";
+      rev = "44ea48854ac49396f35426246426ffcdf5616631";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-kWN9jOOEY1uW/1VtEYLzhm3Q2RbrjlGETk+RS2v2mTc=";
+    };
+    date = "2024-10-21";
   };
 }

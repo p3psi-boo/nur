@@ -61,6 +61,27 @@
         },
         "version": "07fc48213a415490da1ae40cd8988a087cb02ec6"
     },
+    "bichon": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "bichon",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "rustmailer",
+            "repo": "bichon",
+            "rev": "0.3.7",
+            "sha256": "sha256-0uba/4NMh6ib//rgmYcUk+5qVzBg+yWMaVbCcoM+8jE=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "0.3.7"
+    },
     "binsider-bin": {
         "cargoLock": null,
         "date": null,
@@ -382,6 +403,27 @@
         },
         "version": "v2.6.2"
     },
+    "dailyhot-api": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "dailyhot-api",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "imsyy",
+            "repo": "DailyHotApi",
+            "rev": "v2.0.8",
+            "sha256": "sha256-dvQ+jnMbNVLpRSX+TDolDqdiWNXdzxGL3HiQEFy6YlA=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v2.0.8"
+    },
     "dalvikus": {
         "cargoLock": null,
         "date": null,
@@ -556,7 +598,7 @@
     },
     "grok2api": {
         "cargoLock": null,
-        "date": "2026-03-28",
+        "date": "2026-04-28",
         "extract": null,
         "name": "grok2api",
         "passthru": null,
@@ -566,13 +608,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "5a81a63c2d92a9f5495c1098b15eb2fe133f9842",
-            "sha256": "sha256-FquCukmOoCpTC+wPa+MdfMvZARLJwB1YOem61DDuVcg=",
+            "rev": "64a71f16e02ef100f64256c61923047621d45270",
+            "sha256": "sha256-42z45WpgmCJclLs1tvckwvs6CWO4neRjRnUOLhEOsoQ=",
             "sparseCheckout": [],
             "type": "git",
-            "url": "https://github.com/JinchengGao-Infty/grok2api.git"
+            "url": "https://github.com/chenyme/grok2api.git"
         },
-        "version": "5a81a63c2d92a9f5495c1098b15eb2fe133f9842"
+        "version": "64a71f16e02ef100f64256c61923047621d45270"
     },
     "harlequin-mysql": {
         "cargoLock": null,
@@ -1610,5 +1652,25 @@
             "type": "github"
         },
         "version": "v0.4.1"
+    },
+    "wtfps": {
+        "cargoLock": null,
+        "date": "2024-10-21",
+        "extract": null,
+        "name": "wtfps",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "44ea48854ac49396f35426246426ffcdf5616631",
+            "sha256": "sha256-kWN9jOOEY1uW/1VtEYLzhm3Q2RbrjlGETk+RS2v2mTc=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://codeberg.org/joelkoen/wtfps.git"
+        },
+        "version": "44ea48854ac49396f35426246426ffcdf5616631"
     }
 }
