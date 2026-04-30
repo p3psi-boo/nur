@@ -8,13 +8,13 @@
 {
   agsh = {
     pname = "agsh";
-    version = "0.15.1";
+    version = "0.18.0";
     src = fetchFromGitHub {
       owner = "k4yt3x";
       repo = "agsh";
-      rev = "0.15.1";
+      rev = "0.18.0";
       fetchSubmodules = false;
-      sha256 = "sha256-6vn70/4j2mEgAw6P7dsAiBmn971hb7RO+tjXW22EcY0=";
+      sha256 = "sha256-nG0KeRIM8jDMgpFvgY6BAMYN4L3wvw968UP8bdq5O/Y=";
     };
   };
   bb-browser = {
@@ -123,24 +123,24 @@
   };
   cliproxyapi = {
     pname = "cliproxyapi";
-    version = "v6.9.34";
+    version = "v6.9.45";
     src = fetchFromGitHub {
       owner = "router-for-me";
       repo = "CLIProxyAPI";
-      rev = "v6.9.34";
+      rev = "v6.9.45";
       fetchSubmodules = false;
-      sha256 = "sha256-nhdlLN3NqNqJ0t/rf1DB8x+KnxzcDI3ptyPUuC0ZmNg=";
+      sha256 = "sha256-xqlnJu9MdcpnR2IpOi1cVt9tmt5O4IlQtq3j0ia2dWY=";
     };
   };
   cloudflarespeedtest = {
     pname = "cloudflarespeedtest";
-    version = "v2.3.4";
+    version = "v2.3.5";
     src = fetchFromGitHub {
       owner = "XIU2";
       repo = "CloudflareSpeedTest";
-      rev = "v2.3.4";
+      rev = "v2.3.5";
       fetchSubmodules = false;
-      sha256 = "sha256-ZrBRHJsVHuTjftMcxpk+p2Z/wm49DmIaO/w0bjQ9ROo=";
+      sha256 = "sha256-C/LvXIC2ng5FtEDMhoxilTayKVplJfzD27QLT7pbSVY=";
     };
   };
   cnb-cli = {
@@ -159,25 +159,25 @@
   };
   cocoindex-code = {
     pname = "cocoindex-code";
-    version = "0.2.28";
+    version = "0.2.31";
     src = fetchurl {
-      url = "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.28.tar.gz";
-      sha256 = "sha256-QZNzMVgBjv0aFbJYSd10u9pvvS15gEQVbpoUc0r/qhk=";
+      url = "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.31.tar.gz";
+      sha256 = "sha256-63NsesjXNyrN4ntUlcnJZJTc3BMKYBz38kMI+mNuwI0=";
     };
   };
   codex-desktop-linux = {
     pname = "codex-desktop-linux";
-    version = "6b93c7289f43b30e36a37e9766ba768440cfdb26";
+    version = "625ed02770a7e3b47408abeb024ec264f12a2d19";
     src = fetchgit {
       url = "https://github.com/ilysenko/codex-desktop-linux.git";
-      rev = "6b93c7289f43b30e36a37e9766ba768440cfdb26";
+      rev = "625ed02770a7e3b47408abeb024ec264f12a2d19";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-6omTsOGB1do6D+Aw4tT1mjuY5xCNONoCECpXdH1jkCA=";
+      sha256 = "sha256-IRbVrT3ul+G3/Y6peVSq6GuZ/aDy3G2N2pEyDZ0+YVU=";
     };
-    date = "2026-04-21";
+    date = "2026-04-30";
   };
   coe = {
     pname = "coe";
@@ -209,27 +209,27 @@
   };
   copilot-api-plus = {
     pname = "copilot-api-plus";
-    version = "298e72b72120e9fd93c51a676a9396f0a4b03be3";
+    version = "024d6d2e93ccc16569300a4a88483458d44eeb9d";
     src = fetchgit {
       url = "https://github.com/imbuxiangnan-cyber/copilot-api-plus.git";
-      rev = "298e72b72120e9fd93c51a676a9396f0a4b03be3";
+      rev = "024d6d2e93ccc16569300a4a88483458d44eeb9d";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-P/XqFe7XS7F81o/O3mOMk75Q+3HBzttedjVPoWAZkyY=";
+      sha256 = "sha256-XoHjRzlU9HtVgnJvy3j+x5LRmjBrrqSrJhOhGhFeaZo=";
     };
-    date = "2026-04-23";
+    date = "2026-04-30";
   };
   dagu = {
     pname = "dagu";
-    version = "v2.6.1";
+    version = "v2.6.2";
     src = fetchFromGitHub {
       owner = "dagu-org";
       repo = "dagu";
-      rev = "v2.6.1";
+      rev = "v2.6.2";
       fetchSubmodules = false;
-      sha256 = "sha256-V6IJicHir4UWeNW7G/IXDPHNn+k4B06OCwzMOgYiNjA=";
+      sha256 = "sha256-0JLRx7m2wEVno7u2SZ2saG8ZLQdmmd0ELvM8Ydf2lA4=";
     };
   };
   dalvikus = {
@@ -492,17 +492,17 @@
   };
   lucebox-hub = {
     pname = "lucebox-hub";
-    version = "b3734788ed86e8766c35050b7be5e3146426295d";
+    version = "30ddc47ffa662e8ed682c2f3e391241ebf1f7470";
     src = fetchgit {
       url = "https://github.com/Luce-Org/lucebox-hub.git";
-      rev = "b3734788ed86e8766c35050b7be5e3146426295d";
+      rev = "30ddc47ffa662e8ed682c2f3e391241ebf1f7470";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-Q6sjSKF+cz7MAfiA3aA+DDVBMrcHGIP29Z2n+w1C7ug=";
+      sha256 = "sha256-4OuFzpnpb8J3V0tPx+5esJ92XE/RYcPprtblHkbYVCU=";
     };
-    date = "2026-04-22";
+    date = "2026-04-29";
   };
   magiskboot-bin = {
     pname = "magiskboot-bin";
@@ -550,17 +550,17 @@
   };
   octopus-api = {
     pname = "octopus-api";
-    version = "c6485ee0bfcd4cdee867ed7d2b37c0b9938203a5";
+    version = "3382f5b5e59255479dd4e8e405a504a69d217aba";
     src = fetchgit {
       url = "https://github.com/p3psi-boo/octopus.git";
-      rev = "c6485ee0bfcd4cdee867ed7d2b37c0b9938203a5";
+      rev = "3382f5b5e59255479dd4e8e405a504a69d217aba";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-NTQfukjK5A9s2O378heqLe0uh8++lBn6J0Od+ws1ndQ=";
+      sha256 = "sha256-CMv7JbeWdoIq+Uhyoj27ROxrtqJ8xapFK4p/kcBPBkk=";
     };
-    date = "2026-04-18";
+    date = "2026-04-30";
   };
   okmain = {
     pname = "okmain";
@@ -578,17 +578,17 @@
   };
   oli = {
     pname = "oli";
-    version = "b9e64dd0222d357de4cbd97baf02194ec4656e57";
+    version = "007b436ad93eb28d547257238ae0bbc20fb0a74b";
     src = fetchgit {
       url = "https://github.com/apache/opendal-oli.git";
-      rev = "b9e64dd0222d357de4cbd97baf02194ec4656e57";
+      rev = "007b436ad93eb28d547257238ae0bbc20fb0a74b";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-Fw2Gsr8mp3OyykJJNFBchcCU7Nemzmd6asM/FAKelJc=";
+      sha256 = "sha256-1zzqrK/u6AczNpqAGqZ1VCQbAR05QhQs4WACjWA6+uM=";
     };
-    date = "2026-04-02";
+    date = "2026-04-26";
   };
   open-coreui = {
     pname = "open-coreui";
@@ -606,13 +606,13 @@
   };
   openalice = {
     pname = "openalice";
-    version = "v0.9.0-beta.13";
+    version = "v0.10.0-beta.0";
     src = fetchFromGitHub {
       owner = "TraderAlice";
       repo = "OpenAlice";
-      rev = "v0.9.0-beta.13";
+      rev = "v0.10.0-beta.0";
       fetchSubmodules = false;
-      sha256 = "sha256-2cPDtBI5l3w0GRYmXHD1m0U1OOm4cXe7cYF0Zag2lVY=";
+      sha256 = "sha256-1eaSBDIlXmC7Jh88MZnBWjN+CWMFbWMF5kzqEEY93eE=";
     };
   };
   openixcli = {
@@ -645,17 +645,17 @@
   };
   paperclip = {
     pname = "paperclip";
-    version = "13551b2bac6e75fe879f9152ade60030467215cb";
+    version = "c0ce35d1fbcbe03b83ef85a770dd155af818305b";
     src = fetchgit {
       url = "https://github.com/paperclipai/paperclip.git";
-      rev = "13551b2bac6e75fe879f9152ade60030467215cb";
+      rev = "c0ce35d1fbcbe03b83ef85a770dd155af818305b";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-/8Gw5Ko7ZMf9xlmlNFepDJBItb8iUMEIjfwgO4TZwIc=";
+      sha256 = "sha256-jV1v814O7Rp9ko1nPZzp7np1fmGIAbR76GZgVGAkClM=";
     };
-    date = "2026-04-22";
+    date = "2026-04-29";
   };
   pg_duckdb = {
     pname = "pg_duckdb";
@@ -673,13 +673,13 @@
   };
   planify = {
     pname = "planify";
-    version = "v4.19.0";
+    version = "v4.19.1";
     src = fetchFromGitHub {
       owner = "alainm23";
       repo = "planify";
-      rev = "v4.19.0";
+      rev = "v4.19.1";
       fetchSubmodules = false;
-      sha256 = "sha256-swZ8kpfDLxe48PqHLiCjxYbsS7RILCPTPHybtrJi0rA=";
+      sha256 = "sha256-aja+WAMlWaO3RpeUQJ/D7kTGfGelJz+Wl7Sq7TZelOw=";
     };
   };
   polymarket-cli = {
@@ -791,13 +791,13 @@
   };
   sigmo = {
     pname = "sigmo";
-    version = "v4.0.3";
+    version = "v4.0.4";
     src = fetchFromGitHub {
       owner = "damonto";
       repo = "sigmo";
-      rev = "v4.0.3";
+      rev = "v4.0.4";
       fetchSubmodules = false;
-      sha256 = "sha256-5syKKb+dSdFL52j/gCwoM4ClRZe0PL9ch3AMqhhmQ0k=";
+      sha256 = "sha256-V7x1YE/ZkMbtlGJ8OqdrcA3rnGgnySi5t4M2P2BTFpc=";
     };
   };
   smali = {
@@ -850,17 +850,17 @@
   };
   tcp-brutal = {
     pname = "tcp-brutal";
-    version = "204aeea3437a83599c1c1fa1b97e4425cfdfc49d";
+    version = "f11e52d88c7ad2285896de018c2d96d4687f0ab6";
     src = fetchgit {
       url = "https://github.com/apernet/tcp-brutal.git";
-      rev = "204aeea3437a83599c1c1fa1b97e4425cfdfc49d";
+      rev = "f11e52d88c7ad2285896de018c2d96d4687f0ab6";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-rx8JgQtelssslJhFAEKq73LsiHGPoML9Gxvw0lsLacI=";
+      sha256 = "sha256-2oi3TrpNllyayzmZeSvYWHuisZOZpfobqxWRqh/zyRY=";
     };
-    date = "2024-07-27";
+    date = "2026-04-26";
   };
   trusttunnel = {
     pname = "trusttunnel";
@@ -939,13 +939,13 @@
   };
   vllm = {
     pname = "vllm";
-    version = "v0.19.1";
+    version = "v0.20.0";
     src = fetchFromGitHub {
       owner = "vllm-project";
       repo = "vllm";
-      rev = "v0.19.1";
+      rev = "v0.20.0";
       fetchSubmodules = false;
-      sha256 = "sha256-NSHGAMB7j/KvRJmwRjwMuHD/oumSeSvWo0gZcfPOOGA=";
+      sha256 = "sha256-YNcHGpME04mXeTm6chHct4HBfS43tmPIUL9m5vkdpR0=";
     };
   };
   web-search = {
