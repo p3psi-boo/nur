@@ -39,7 +39,7 @@ in
 
 effectiveStdenv.mkDerivation (finalAttrs: {
   pname = "gemma-cpp";
-  version = generated.gemma-cpp.version;
+  version = "0-unstable-${generated.gemma-cpp.date}";
 
   outputs = [
     "out"
