@@ -209,17 +209,17 @@
   };
   copilot-api-plus = {
     pname = "copilot-api-plus";
-    version = "024d6d2e93ccc16569300a4a88483458d44eeb9d";
+    version = "41cccce440c95a327ffbeceb3d90332a7f9953ab";
     src = fetchgit {
       url = "https://github.com/imbuxiangnan-cyber/copilot-api-plus.git";
-      rev = "024d6d2e93ccc16569300a4a88483458d44eeb9d";
+      rev = "41cccce440c95a327ffbeceb3d90332a7f9953ab";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-XoHjRzlU9HtVgnJvy3j+x5LRmjBrrqSrJhOhGhFeaZo=";
+      sha256 = "sha256-G9EwjmRMNKTM0b/lP3rUk1EmtdMOyM5MoGA8U3W/xKE=";
     };
-    date = "2026-04-30";
+    date = "2026-05-05";
   };
   dagu = {
     pname = "dagu";
@@ -517,17 +517,17 @@
   };
   lucebox-hub = {
     pname = "lucebox-hub";
-    version = "82b99b0bb68b3aa4a7bcaf9ca94270250d92c9b9";
+    version = "7d6f081899cd887135d45242d3ec8a5a7fa41800";
     src = fetchgit {
       url = "https://github.com/Luce-Org/lucebox-hub.git";
-      rev = "82b99b0bb68b3aa4a7bcaf9ca94270250d92c9b9";
+      rev = "7d6f081899cd887135d45242d3ec8a5a7fa41800";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-ea93RqYhpTJwj2yACddVagrMf4iC5W7SxQqB09sc1C0=";
+      sha256 = "sha256-HDtxrVnQwfkaXyhihmyDUFOg5pHUOhPTzWqbZoAVDhw=";
     };
-    date = "2026-05-04";
+    date = "2026-05-05";
   };
   magiskboot-bin = {
     pname = "magiskboot-bin";
@@ -681,17 +681,17 @@
   };
   paperclip = {
     pname = "paperclip";
-    version = "d6bee62f02de058a4f12ac9a10dedf8c58c4b1d5";
+    version = "50db8c01d2885ddeb558ac55dde5cc0ed7957e76";
     src = fetchgit {
       url = "https://github.com/paperclipai/paperclip.git";
-      rev = "d6bee62f02de058a4f12ac9a10dedf8c58c4b1d5";
+      rev = "50db8c01d2885ddeb558ac55dde5cc0ed7957e76";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-q0oVVIXiEyevRR0BIZPmqqFhIAU0KL3ZF52JOhQgN58=";
+      sha256 = "sha256-+hZfyanKLbh8SURCSvPRdIP9BH3f8bQhERKV7v7y/BM=";
     };
-    date = "2026-05-04";
+    date = "2026-05-05";
   };
   pg_duckdb = {
     pname = "pg_duckdb";
@@ -819,13 +819,13 @@
   };
   rustconn = {
     pname = "rustconn";
-    version = "v0.13.3";
+    version = "v0.13.4";
     src = fetchFromGitHub {
       owner = "totoshko88";
       repo = "RustConn";
-      rev = "v0.13.3";
+      rev = "v0.13.4";
       fetchSubmodules = false;
-      sha256 = "sha256-xVKiEi7RFAXsDiSMB2oGh4GmXKW4N6YDzpaBIr2gQC0=";
+      sha256 = "sha256-LzTwbF8XClBDBVJLscQq1XFG5PRJntGii0LRieAJxLg=";
     };
   };
   sigmo = {
