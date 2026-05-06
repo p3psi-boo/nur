@@ -1,19 +1,17 @@
 {
   lib,
   buildNpmPackage,
-  fetchurl,
   makeWrapper,
   nodejs,
+  generated,
 }:
 
-buildNpmPackage rec {
+let
+  sourceInfo = generated.dbhub;
+in
+buildNpmPackage {
   pname = "dbhub";
-  version = "0.21.2";
-
-  src = fetchurl {
-    url = "https://registry.npmjs.org/@bytebase/dbhub/-/dbhub-${version}.tgz";
-    hash = "sha256-eOwzRCZAYypW/GY1zXIqusads2xEv50s01xhfroZPTo=";
-  };
+  inherit (sourceInfo) version src;
   sourceRoot = "package";
 
   postPatch = ''

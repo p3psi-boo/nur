@@ -302,12 +302,6 @@ fetch.git = "https://github.com/vobademi/FTEXX00-Ubuntu.git"
 git.fetch_submodules = false
 
 
-# RIME 自建拼音输入法词库
-# 注意：此包使用静态 URL 但内容会更新，版本需手动检查 GitHub releases 页面
-[rime-custom-pinyin-dictionary]
-src.manual = "20260101"
-fetch.url = "https://github.com/wuhgit/CustomPinyinDictionary/releases/download/assets/CustomPinyinDictionary_Fcitx.dict"
-
 # fusion - A lightweight, self-hosted friendly RSS reader
 [fusion]
 src.git = "https://github.com/p3psi-boo/fusion.git"
@@ -352,11 +346,6 @@ src.git = "https://github.com/test1111111111111112/llama-cpp-turboquant-gemma4.g
 fetch.git = "https://github.com/test1111111111111112/llama-cpp-turboquant-gemma4.git"
 git.fetch_submodules = true
 git.get_commit_date = true
-
-# cloudflarespeedtest
-[cloudflarespeedtest]
-src.github = "XIU2/CloudflareSpeedTest"
-fetch.github = "XIU2/CloudflareSpeedTest"
 
 # micyou
 [micyou]
@@ -440,3 +429,22 @@ fetch.git = "https://codeberg.org/joelkoen/wtfps.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
+
+# RustConn - Modern connection manager for Linux (SSH, RDP, VNC, SPICE, and more)
+[rustconn]
+src.github = "totoshko88/RustConn"
+fetch.github = "totoshko88/RustConn"
+
+# MinerU - Document understanding / parsing toolkit (mineru-api FastAPI server)
+# Linux + CUDA (vllm) build target. Source is only used for version tracking
+# and CLI metadata; the runtime itself is built from PyPI via uv2nix.
+[mineru-api]
+src.github = "opendatalab/MinerU"
+fetch.github = "opendatalab/MinerU"
+
+# deepseek-ocr-rs - Rust rewrite of DeepSeek-OCR (CLI + OpenAI-compatible server)
+[deepseek-ocr-rs]
+src.git = "https://github.com/TimmyOVO/deepseek-ocr.rs.git"
+fetch.git = "https://github.com/TimmyOVO/deepseek-ocr.rs.git"
+git.fetch_submodules = false
+git.get_commit_date = true

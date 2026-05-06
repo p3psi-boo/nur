@@ -21,6 +21,11 @@
       inputs.pyproject-nix.follows = "pyproject-nix";
     };
 
+    fenix = {
+      url = "github:nix-community/fenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     bun2nix = {
       url = "github:nix-community/bun2nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -49,6 +54,7 @@
           inherit system;
           config = nixpkgsConfig;
           overlays = [
+            inputs.fenix.overlays.default
             inputs.bun2nix.overlays.default
             self.overlays.default
           ];
