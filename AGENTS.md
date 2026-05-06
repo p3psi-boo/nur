@@ -23,98 +23,39 @@
 
 参考：`https://github.com/berberman/nvfetcher`
 
-## uv2nix（Python 项目打包）
-
-本仓库使用 [uv2nix](https://github.com/pyproject-nix/uv2nix) 将基于 `uv.lock` 的 Python 项目打包为 Nix 包。核心封装在 `mods/python/uv-builder.nix`，通过 `python-uv.nix` overlay 暴露为 `pkgs.uv-builder`。
-
-- 使用方式：
-  - 在包的 `default.nix` 中引入 `uv-builder`，调用 `uv-builder.buildUvPackage { ... }` 构建 Python 环境
-  - 必需参数：`pname`、`version`、`lockFile`（本地路径）或 `lockUrl` + `lockHash`（远程 URL）
-  - 常用可选参数：
-    - `bins`：要暴露的可执行文件列表（默认 `[ pname ]`）
-    - `python`：Python 解释器（默认 `python313`）
-    - `extraDependencies`：额外 pip 依赖
-    - `cudaSupport`：启用 CUDA 支持（自动处理 torch/vllm 等常见包的 autoPatchelf）
-    - `pyprojectOverrides`：自定义 pyproject overlay（用于修补特定 Python 包）
-    - `excludePackages`：排除冲突包
-- 示例（参考 `pkgs/grok2api/default.nix`）：
-  ```nix
-  pythonEnv = uv-builder.buildUvPackage {
-    pname = "my-app";
-    version = "1.0.0";
-    lockFile = "${src}/uv.lock";
-    bins = [ "python" "my-app" ];
-  };
-  ```
-- 工作原理：`buildUvPackage` 会根据 `uv.lock` 生成临时 workspace，通过 `uv2nix.lib.workspace.loadWorkspace` 解析依赖，使用 `pyproject-nix` 构建 Python 包集合，最终组装为虚拟环境
-
-参考：`https://github.com/pyproject-nix/uv2nix`
-
-## copilot-api-plus 打包备注
-
-- `pkgs/copilot-api-plus` 使用 npm 发布 tarball 作为 `src`（包含 `dist/` 产物），版本号仍使用 nvfetcher 的 `generated.copilot-api-plus.date` 组装 `0-unstable-YYYY-MM-DD`。
-- 上游 lockfile 在本仓库环境下会触发离线缓存缺失，因此该包固定使用仓库内 vendored 的生产依赖 lockfile：`pkgs/copilot-api-plus/package-lock.json`。
-- `default.nix` 在 `postPatch` 中同步裁剪 `package.json` 到运行时字段（name/version/type/bin/dependencies），确保与 vendored lockfile 一致，避免 `npm ci` 拉取 devDependencies。
-
-## codex-desktop-linux 打包备注
-
-- `pkgs/codex-desktop-linux` 采用 **runtime installer wrapper** 模式：Nix 包仅分发上游安装脚本与固定哈希的 `Codex.dmg`，实际 `codex-app/` 由用户在运行时目录生成。
-- 这样处理是为了避免把 Electron 重建产物写入 Nix store（上游安装流程要求可写工作目录，并会执行 `npm/npx` 的本地重建步骤）。
-- 运行入口 `codex-desktop-linux` 会在临时目录复制上游源码并执行 `install.sh`，然后对生成的 Electron 二进制做 `patchelf`（`interpreter + rpath`）以适配 NixOS 动态链接行为。
-- 上游生成的 `start.sh` 默认 shebang 为 `/bin/bash`；wrapper 会在安装完成后重写为 Nix store 内 `bash` 路径，避免 NixOS 上 `bad interpreter: /bin/bash`。
-- 包输出额外提供桌面集成：`$out/share/applications/codex-desktop-linux.desktop` 与图标 `$out/share/icons/hicolor/256x256/apps/codex-desktop-linux.png`；桌面入口调用 `codex-desktop-linux-launcher`（已安装时直启，未安装时触发首次安装）。
-- `Codex.dmg` 是固定输出依赖；若上游在同 URL 发布新版本导致 hash mismatch，需要同步更新 `pkgs/codex-desktop-linux/default.nix` 内 `codexDmg.hash`。
-- 版本号遵循仓库现有不稳定包规范：`0-unstable-${generated.codex-desktop-linux.date}`。
-
-## gemma-cpp CUDA 构建备注
-
-- `pkgs/gemma-cpp/default.nix` 固定为 **CUDA-only** 构建，且目标架构固定为 **RTX 30 系列 / Ampere (`sm_86`)**。
-- 关键开关：
-  - `GGML_CUDA = true`
-  - `CMAKE_CUDA_ARCHITECTURES = "86"`
-- 该包当前**没有**对外暴露可覆盖的 CUDA 架构参数；不要在说明中暗示可通过 `overrideAttrs` 直接覆盖，除非先把该参数显式提升到 derivation 接口。
-
-## lucebox-hub 打包备注
-
-- `pkgs/lucebox-hub/default.nix` 当前只打包 **`dflash/` 运行时**，不打包 `megakernel/`；原因是上游仓库根只是聚合入口，而 `megakernel/` 缺少锁文件与稳定的 Python 打包元数据。
-- `dflash` 依赖固定的 `dflash/deps/llama.cpp` 子模块，但当前 `nvfetcher` 生成的 `generated.lucebox-hub.src` 未带出子模块内容；包内通过额外 `fetchFromGitHub` 把 **`Luce-Org/llama.cpp@b16de65904ed7e468397f5417ad130f092cba8f4`** 注入到期望路径。
-- 运行时模型权重始终保持外置，不进入 Nix closure。使用以下环境变量指向本地权重：
-  - `DFLASH_TARGET=/path/to/Qwen3.5-27B-Q4_K_M.gguf`
-  - `DFLASH_DRAFT=/path/to/model.safetensors` 或其 snapshot 目录
-- 上游脚本的运行时路径覆盖统一保存在 `pkgs/lucebox-hub/patches/0001-dflash-runtime-env-overrides.patch`，不要再回退到 `postPatch` 里的脚本式文本替换。
-- `lucebox-hub` 的 Python wrapper 环境必须避免把 Hugging Face 依赖链里的 **test-only** `safetensors -> torch -> triton` 带进来；当前做法是在包内局部 override `safetensors` 为 `doCheck = false` 且清空 `nativeCheckInputs`，只收缩本包运行时闭包，不修改仓库全局 Python 策略。
-- `lucebox-hub` 的 `run.py` / `server.py` 都会调用 `tokenizer.apply_chat_template(...)`，运行时必须包含 `jinja2`（及其传递依赖 `markupsafe`）。若缺失会触发 `ImportError: apply_chat_template requires jinja2` 并导致 `lucebox-hub-server` 返回 500。
-- `lucebox-hub` 的 Python 解释器应显式固定为 `python313`，避免依赖 nixpkgs `python3` 别名在未来漂移导致运行时行为变化。
-- CUDA 架构固定为 **Ampere / `sm_86`**，与上游构建说明及仓库内现有 CUDA 包策略保持一致。
-
-## komari 运行时版本号注入备注
-
-- `pkgs/komari/default.nix` 必须通过 Go `ldflags` 注入：
-  - `github.com/komari-monitor/komari/utils.CurrentVersion`
-  - `github.com/komari-monitor/komari/utils.VersionHash`
-- 原因：上游 `utils/version.go` 默认值是 `0.0.1` / `unknown`，若不注入，`/api/version` 和启动日志会显示错误运行时版本。
-- 注入值应与 Nix 包版本保持一致：`CurrentVersion = 0-unstable-${generated.komari.date}`，`VersionHash = generated.komari.version`。
-
-## trusttunnel 打包备注
-
-- `pkgs/trusttunnel/default.nix` 通过 `rustPlatform.buildRustPackage` 同时构建 workspace 里的 `trusttunnel_endpoint` 与 `setup_wizard` 两个二进制。
-- `trusttunnel` 使用 `nvfetcher` 的 GitHub release 跟踪：
-  - `[trusttunnel]`
-  - `src.github = "TrustTunnel/TrustTunnel"`
-  - `fetch.github = "TrustTunnel/TrustTunnel"`
-- 版本号在包内统一做 `lib.removePrefix "v"`，避免把 tag 前缀带入最终包版本字符串。
-- 上游依赖 `boring-sys` / `quiche`，构建时需要调用 `git` 给 boringssl 源码打补丁；缺失 `git` 会导致 build script 失败。
-- 因此 `nativeBuildInputs` 需要显式包含 `gitMinimal`（以及 `cmake/go/perl/nasm/pkg-config/rustPlatform.bindgenHook`）。
-
-## open-coreui 打包备注
-
-- `pkgs/open-coreui/default.nix` 当前仅打包 Go 服务端（`backend/cmd/openwebui`），不打包 Python 后端。
-- 上游 Go module 位于 `backend/`，必须显式设置 `modRoot = "backend"` 与 `subPackages = [ "cmd/openwebui" ]`。
-- 运行时需要 `open-webui` 子模块里的静态资源；`nvfetcher.toml` 的 `[open-coreui]` 必须保持 `git.fetchSubmodules = true`。
-- 包内会把 `open-webui/backend/open_webui/static` 复制到 `$out/share/open-coreui/static`，并通过 wrapper 默认注入 `STATIC_DIR`，避免 `/static/favicon.png` 等资源 404。
-- 服务端默认反向代理到 `OPEN_COREUI_PYTHON_BASE_URL`（默认 `http://127.0.0.1:8080`）；部署时需自行提供该上游服务。
-
 ---
 
 打包请查看 `nix-package` SKILL
 
+<!-- TRELLIS:START -->
+# Trellis Instructions
+
+These instructions are for AI assistants working in this project.
+
+This project is managed by Trellis. The working knowledge you need lives under `.trellis/`:
+
+- `.trellis/workflow.md` — development phases, when to create tasks, skill routing
+- `.trellis/spec/` — package- and layer-scoped coding guidelines (read before writing code in a given layer)
+- `.trellis/workspace/` — per-developer journals and session traces
+- `.trellis/tasks/` — active and archived tasks (PRDs, research, jsonl context)
+
+If a Trellis command is available on your platform (e.g. `/trellis:finish-work`, `/trellis:continue`), prefer it over manual steps. Not every platform exposes every command.
+
+If you're using Codex or another agent-capable tool, additional project-scoped helpers may live in:
+- `.agents/skills/` — reusable Trellis skills
+- `.codex/agents/` — optional custom subagents
+
+## Subagents
+
+- ALWAYS wait for every spawned subagent to reach a terminal status before yielding, acting on partial results, or spawning followups.
+  - On Codex, this means calling the `wait` tool with the subagent's thread id (requires `multi_agent_v2`). Do NOT infer completion from elapsed time.
+  - On Claude Code / OpenCode, this means awaiting the Task/agent tool result before continuing.
+- NEVER cancel or re-spawn a subagent that hasn't finished. If a subagent appears stuck, raise the wait timeout (Codex default 30s, max 1h) before judging it broken.
+- Spawn subagents automatically when:
+  - Parallelizable work (e.g., install + verify, npm test + typecheck, multiple tasks from plan)
+  - Long-running or blocking tasks where a worker can run independently
+  - Isolation for risky changes or checks
+
+Managed by Trellis. Edits outside this block are preserved; edits inside may be overwritten by a future `trellis update`.
+
+<!-- TRELLIS:END -->
