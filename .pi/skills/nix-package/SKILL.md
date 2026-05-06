@@ -1,14 +1,9 @@
 ---
-name: nixpkgs-packaging-standard
+name: nix-package
 description: A comprehensive guide and rule set for packaging software within the Nixpkgs ecosystem. It ensures packages are reproducible, maintainable, and compliant with modern Nixpkgs standards (2025+), including the mandatory by-name structure, proper dependency categorization, and validation workflows. Use this when initializing new packages, updating existing ones, or reviewing Nix expressions for nixpkgs submission.
 ---
 
 ## 1. 核心工作流与结构
-### 📂 目录规范 (By-Name)
-所有新包**必须**遵循 `pkgs/by-name` 结构：
-* **路径**：`pkgs/by-name/<pname-前两位>/<pname>/package.nix`
-* **示例**：`ripgrep` -> `pkgs/by-name/ri/ripgrep/package.nix`
-* **注意**：`by-name` 内的包会自动在 `all-packages.nix` 中注册，严禁手动修改 `all-packages.nix`（除非是复杂的覆盖逻辑）。
 
 ### 📝 命名规范
 * `pname`: 全小写，使用 kebab-case（如 `my-awesome-tool`）。
