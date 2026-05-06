@@ -1577,6 +1577,26 @@
         },
         "version": "v19.1"
     },
+    "vibevoice-cpp": {
+        "cargoLock": null,
+        "date": "2026-05-05",
+        "extract": null,
+        "name": "vibevoice-cpp",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": true,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "ad856bda6b1311b7f3d7c4a667be43eeb8a8249a",
+            "sha256": "sha256-No0jOFb/NzWOkNzTrFK/O4D6aKJZlDnExfw+cpDWYw0=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/mudler/vibevoice.cpp.git"
+        },
+        "version": "ad856bda6b1311b7f3d7c4a667be43eeb8a8249a"
+    },
     "vikunja-cli": {
         "cargoLock": null,
         "date": "2026-02-25",

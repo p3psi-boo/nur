@@ -347,6 +347,13 @@ fetch.git = "https://github.com/test1111111111111112/llama-cpp-turboquant-gemma4
 git.fetch_submodules = true
 git.get_commit_date = true
 
+# vibevoice-cpp - C++ inference engine for Microsoft VibeVoice
+[vibevoice-cpp]
+src.git = "https://github.com/mudler/vibevoice.cpp.git"
+fetch.git = "https://github.com/mudler/vibevoice.cpp.git"
+git.fetchSubmodules = true
+git.get_commit_date = true
+
 # micyou
 [micyou]
 src.github = "LanRhyme/MicYou"

@@ -962,6 +962,20 @@
       sha256 = "sha256-CdLh8OU/idWLzdPEfQpF5Uost1vaNSEJkBJJlHdPb1c=";
     };
   };
+  vibevoice-cpp = {
+    pname = "vibevoice-cpp";
+    version = "ad856bda6b1311b7f3d7c4a667be43eeb8a8249a";
+    src = fetchgit {
+      url = "https://github.com/mudler/vibevoice.cpp.git";
+      rev = "ad856bda6b1311b7f3d7c4a667be43eeb8a8249a";
+      fetchSubmodules = true;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-No0jOFb/NzWOkNzTrFK/O4D6aKJZlDnExfw+cpDWYw0=";
+    };
+    date = "2026-05-05";
+  };
   vikunja-cli = {
     pname = "vikunja-cli";
     version = "7d96f181c2e0e07b4e75c7f540e9a8cfdf9065dc";
