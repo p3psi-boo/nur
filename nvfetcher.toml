@@ -461,3 +461,10 @@ src.git = "https://github.com/nakagami/grdpwasm.git"
 fetch.git = "https://github.com/nakagami/grdpwasm.git"
 git.fetch_submodules = false
 git.get_commit_date = true
+
+# BBDown - Bilibili Downloader (.NET 9 global tool, build from source)
+[bbdown]
+src.git = "https://github.com/nilaoda/BBDown.git"
+fetch.git = "https://github.com/nilaoda/BBDown.git"
+git.fetch_submodules = false
+git.get_commit_date = true

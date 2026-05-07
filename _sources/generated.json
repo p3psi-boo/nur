@@ -41,6 +41,26 @@
         },
         "version": "bb-browser-v0.11.2"
     },
+    "bbdown": {
+        "cargoLock": null,
+        "date": "2026-01-10",
+        "extract": null,
+        "name": "bbdown",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "259a5558cee0a349a7ebb60bd31e40c88e5bc1ed",
+            "sha256": "sha256-5c+tvWOx9BMOfqZGGkPw86abhfezYXVpz1J/RLEQnA8=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/nilaoda/BBDown.git"
+        },
+        "version": "259a5558cee0a349a7ebb60bd31e40c88e5bc1ed"
+    },
     "bcut-asr": {
         "cargoLock": null,
         "date": "2026-01-14",

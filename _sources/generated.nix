@@ -28,6 +28,20 @@
       sha256 = "sha256-DoAd8oN4Il5xGHkcDKgmLczUYj0D0PvxhbSmnDYb+wI=";
     };
   };
+  bbdown = {
+    pname = "bbdown";
+    version = "259a5558cee0a349a7ebb60bd31e40c88e5bc1ed";
+    src = fetchgit {
+      url = "https://github.com/nilaoda/BBDown.git";
+      rev = "259a5558cee0a349a7ebb60bd31e40c88e5bc1ed";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-5c+tvWOx9BMOfqZGGkPw86abhfezYXVpz1J/RLEQnA8=";
+    };
+    date = "2026-01-10";
+  };
   bcut-asr = {
     pname = "bcut-asr";
     version = "07fc48213a415490da1ae40cd8988a087cb02ec6";
