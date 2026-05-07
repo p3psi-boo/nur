@@ -455,3 +455,9 @@ src.git = "https://github.com/TimmyOVO/deepseek-ocr.rs.git"
 fetch.git = "https://github.com/TimmyOVO/deepseek-ocr.rs.git"
 git.fetch_submodules = false
 git.get_commit_date = true
+
+[grdpwasm]
+src.git = "https://github.com/nakagami/grdpwasm.git"
+fetch.git = "https://github.com/nakagami/grdpwasm.git"
+git.fetch_submodules = false
+git.get_commit_date = true

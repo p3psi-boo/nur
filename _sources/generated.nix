@@ -365,6 +365,20 @@
     };
     date = "2026-04-04";
   };
+  grdpwasm = {
+    pname = "grdpwasm";
+    version = "4f698e5c610c440e7ad6635bb958fb551a7e51fe";
+    src = fetchgit {
+      url = "https://github.com/nakagami/grdpwasm.git";
+      rev = "4f698e5c610c440e7ad6635bb958fb551a7e51fe";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-XY23R5X+XSTehMg8PDILWDFV/LTB2CdmAcLT+lMU7g4=";
+    };
+    date = "2026-05-06";
+  };
   grok2api = {
     pname = "grok2api";
     version = "64a71f16e02ef100f64256c61923047621d45270";
