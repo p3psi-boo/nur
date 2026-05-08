@@ -903,6 +903,20 @@
     };
     date = "2026-02-08";
   };
+  subs-check = {
+    pname = "subs-check";
+    version = "8055505bf95631bf4dc6beabaa4956567b1c7f4e";
+    src = fetchgit {
+      url = "https://github.com/sinspired/subs-check.git";
+      rev = "8055505bf95631bf4dc6beabaa4956567b1c7f4e";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-b5rLCIIBY312cuNqIxw7a/Go3noYtnKHZnkPam6eR9c=";
+    };
+    date = "2026-01-23";
+  };
   substack-dl = {
     pname = "substack-dl";
     version = "866b2566f9244374e7df5f0f404098c5f81e7b06";

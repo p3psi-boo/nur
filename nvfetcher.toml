@@ -468,3 +468,10 @@ src.git = "https://github.com/nilaoda/BBDown.git"
 fetch.git = "https://github.com/nilaoda/BBDown.git"
 git.fetch_submodules = false
 git.get_commit_date = true
+
+# subs-check - High-performance proxy subscription checker
+[subs-check]
+src.git = "https://github.com/sinspired/subs-check.git"
+fetch.git = "https://github.com/sinspired/subs-check.git"
+git.fetch_submodules = false
+git.get_commit_date = true
