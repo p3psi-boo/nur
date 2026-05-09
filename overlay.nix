@@ -24,7 +24,8 @@ let
   nurLib = import ./lib { pkgs = prev; };
 
   # 辅助函数：计算包需要的额外参数
-  extraArgsFor = pkgName:
+  extraArgsFor =
+    pkgName:
     let
       metaPath = "${pkgsDir}/${pkgName}/meta.nix";
       hasMeta = builtins.pathExists metaPath;
@@ -47,15 +48,11 @@ let
   ) (builtins.attrNames entries);
 
   repoOverlay = lib.listToAttrs (
-    map (
-      pkgName:
-      {
-        name = pkgName;
-        value = prev.callPackage (pkgsDir + "/${pkgName}") (extraArgsFor pkgName);
-      }
-    ) publicPackageNames
+    map (pkgName: {
+      name = pkgName;
+      value = prev.callPackage (pkgsDir + "/${pkgName}") (extraArgsFor pkgName);
+    }) publicPackageNames
   );
-
 
   # Python UV 工具链
   inherit (inputs) uv2nix pyproject-nix pyproject-build-systems;
@@ -68,13 +65,19 @@ let
   };
 
   # Python 包（legacy）
-  pythonPackagesOverlay = import ./python-packages final prev;
+  pythonPackagesOverlay = import ./python-packages {
+    inherit final prev lib;
+    generated = generatedSources;
+  };
 
   # AOCC 编译器
   aoccOverlay = import ./nix/overlays/aocc.nix final prev;
+
+  harlequinOverlay = {
+    harlequin = prev.harlequin.overridePythonAttrs (oldAttrs: {
+      dependencies = (oldAttrs.dependencies or [ ]) ++ [ final.python3Packages.harlequin-mysql ];
+    });
+  };
 in
 
-repoOverlay
-// pythonUvOverlay
-// pythonPackagesOverlay
-// aoccOverlay
+repoOverlay // pythonUvOverlay // pythonPackagesOverlay // aoccOverlay // harlequinOverlay
