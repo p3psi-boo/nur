@@ -482,3 +482,4 @@ src.git = "https://github.com/mokeyish/smartdns-rs.git"
 fetch.git = "https://github.com/mokeyish/smartdns-rs.git"
 git.fetch_submodules = false
 git.get_commit_date = true
+pinned = true
