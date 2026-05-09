@@ -65,19 +65,38 @@ let
   };
 
   # Python 包（legacy）
-  pythonPackagesOverlay = import ./python-packages {
-    inherit final prev lib;
-    generated = generatedSources;
-  };
+  pythonPackagesOverlay = import ./python-packages final prev;
 
   # AOCC 编译器
   aoccOverlay = import ./nix/overlays/aocc.nix final prev;
 
-  harlequinOverlay = {
-    harlequin = prev.harlequin.overridePythonAttrs (oldAttrs: {
-      dependencies = (oldAttrs.dependencies or [ ]) ++ [ final.python3Packages.harlequin-mysql ];
-    });
-  };
+  harlequinOverlay =
+    let
+      inherit (generatedSources) harlequin-mysql;
+      harlequin-mysql-pkg = prev.python3Packages.buildPythonPackage {
+        pname = "harlequin-mysql";
+        version = prev.lib.removePrefix "v" harlequin-mysql.version;
+        inherit (harlequin-mysql) src;
+        pyproject = true;
+        build-system = [ prev.python3Packages.hatchling ];
+        dependencies = [
+          prev.python3Packages.mysql-connector
+        ]
+        ++ prev.lib.optional (prev.python3Packages.pythonAtLeast "3.14") prev.python3Packages.duckdb;
+        doCheck = false;
+        pythonRemoveDeps = [ "harlequin" ];
+        meta = {
+          description = "Harlequin adapter for MySQL/MariaDB";
+          homepage = "https://github.com/tconbeer/harlequin-mysql";
+          license = prev.lib.licenses.mit;
+        };
+      };
+    in
+    {
+      harlequin = prev.harlequin.overridePythonAttrs (oldAttrs: {
+        dependencies = (oldAttrs.dependencies or [ ]) ++ [ harlequin-mysql-pkg ];
+      });
+    };
 in
 
 repoOverlay // pythonUvOverlay // pythonPackagesOverlay // aoccOverlay // harlequinOverlay

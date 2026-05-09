@@ -47,25 +47,28 @@ Questions to answer:
     existing-package = python-prev.existing-package.overridePythonAttrs (_old: { ... });
   }
   ```
-- Top-level overlay import may pass extra arguments (for example `generated`) when an extension needs nvfetcher sources.
+- Top-level overlay import remains `import ./python-packages final prev` unless a real public Python extension needs extra shared arguments.
 
 **Contracts**:
 
 - `default.nix` only aggregates extensions; keep package logic in a dedicated `python-packages/<name>.nix` file.
 - Use `python-final` for Python dependencies/build helpers and `python-prev` when overriding existing Python packages.
+- If a Python plugin is only needed to augment one top-level application, keep that plugin derivation local to the application override instead of exporting it through `pythonPackagesExtensions`.
 - If a Python plugin depends on the application that will include it, remove that dependency in the plugin package (for example `pythonRemoveDeps = [ "harlequin" ];`) and verify it through the final application package to avoid dependency cycles.
 - Do not edit `_sources/generated.{nix,json}` directly; consume `generated.<pkg>.src` / `generated.<pkg>.version` from nvfetcher output.
 
 **Good/Base/Bad Cases**:
 
-- Good: add `python-packages/harlequin-mysql.nix`, import it from `python-packages/default.nix`, then add it to the consuming app's dependencies in `overlay.nix`.
+- Good: for user-facing reusable Python packages, add `python-packages/<name>.nix`, import it from `python-packages/default.nix`, then use it from consumers.
+- Good: for private app plugins, define the plugin derivation in a local `let` near the app override and append it only to that app's dependencies.
 - Base: simple existing-package override in one extension file, imported by `default.nix`.
+- Bad: exporting a plugin as a public package when users should only install the parent application.
 - Bad: manually copying site-packages into a separate derivation when the goal is to make a Python application see a plugin distribution.
 
 **Tests Required**:
 
 - `nixfmt` on modified Nix files.
-- `nix eval` that proves the extension is visible in the relevant Python package set or top-level package dependencies.
+- `nix eval` that proves a public extension is visible in the relevant Python package set, or that a private plugin is present only in the final top-level package dependencies.
 - `nix build` of the final consumer package when practical.
 
 **Wrong vs Correct**:
