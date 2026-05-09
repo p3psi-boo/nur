@@ -475,3 +475,10 @@ src.git = "https://github.com/sinspired/subs-check.git"
 fetch.git = "https://github.com/sinspired/subs-check.git"
 git.fetch_submodules = false
 git.get_commit_date = true
+
+# smartdns-rs - Cross-platform local DNS server written in Rust
+[smartdns-rs]
+src.git = "https://github.com/mokeyish/smartdns-rs.git"
+fetch.git = "https://github.com/mokeyish/smartdns-rs.git"
+git.fetch_submodules = false
+git.get_commit_date = true

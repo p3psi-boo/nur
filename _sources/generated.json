@@ -1432,6 +1432,26 @@
         },
         "version": "v2.5.2"
     },
+    "smartdns-rs": {
+        "cargoLock": null,
+        "date": "2026-04-07",
+        "extract": null,
+        "name": "smartdns-rs",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "303ade885aeee45c2798de7c20a3bcccf48e6e7c",
+            "sha256": "sha256-U1pTM0aXSlXZJ8LfTL3mZJstAKo5GdMyZ9g3omazFfc=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/mokeyish/smartdns-rs.git"
+        },
+        "version": "303ade885aeee45c2798de7c20a3bcccf48e6e7c"
+    },
     "sofixer": {
         "cargoLock": null,
         "date": null,

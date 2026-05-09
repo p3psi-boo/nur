@@ -878,6 +878,20 @@
       sha256 = "sha256-UkABsX7KaDZyFR4MTmpjnw4dGXChbLB281Kav/k7/00=";
     };
   };
+  smartdns-rs = {
+    pname = "smartdns-rs";
+    version = "303ade885aeee45c2798de7c20a3bcccf48e6e7c";
+    src = fetchgit {
+      url = "https://github.com/mokeyish/smartdns-rs.git";
+      rev = "303ade885aeee45c2798de7c20a3bcccf48e6e7c";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-U1pTM0aXSlXZJ8LfTL3mZJstAKo5GdMyZ9g3omazFfc=";
+    };
+    date = "2026-04-07";
+  };
   sofixer = {
     pname = "sofixer";
     version = "v2.1.7";
