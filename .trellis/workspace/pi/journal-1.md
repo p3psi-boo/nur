@@ -38,3 +38,36 @@ Overrode nixpkgs harlequin in the NUR overlay to include a packaged harlequin-my
 ### Next Steps
 
 - None - task complete
+
+
+## Session 2: Simplify Harlequin MySQL packaging
+
+**Date**: 2026-05-09
+**Task**: Simplify Harlequin MySQL packaging
+**Branch**: `main`
+
+### Summary
+
+Hid the harlequin-mysql adapter as a private local derivation inside the harlequin override, removed public adapter exports, and verified harlequin still builds and lists the MySQL adapter.
+
+### Main Changes
+
+(Add details)
+
+### Git Commits
+
+| Hash | Message |
+|------|---------|
+| `0ee9843` | (see git log) |
+
+### Testing
+
+- [OK] (Add test results)
+
+### Status
+
+[OK] **Completed**
+
+### Next Steps
+
+- None - task complete
