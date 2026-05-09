@@ -979,6 +979,20 @@
       sha256 = "sha256-pxGzRAUuYUyqcanoaQ4rqbZQfLMWdmc4GdGBeLw7O+M=";
     };
   };
+  usque = {
+    pname = "usque";
+    version = "47c1b1bf2c8675d906bc8026515585ced27beef7";
+    src = fetchgit {
+      url = "https://github.com/Diniboy1123/usque.git";
+      rev = "47c1b1bf2c8675d906bc8026515585ced27beef7";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-xgndE4kfR7LVLBvcxJ68Yq0NLN+8zyciMYaP9K+qS9M=";
+    };
+    date = "2026-04-22";
+  };
   ut = {
     pname = "ut";
     version = "6ea80d7d40c67d81569ddc814b9ef9e835dff388";
