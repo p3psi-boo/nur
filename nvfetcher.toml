@@ -471,8 +471,8 @@ git.get_commit_date = true
 
 # subs-check - High-performance proxy subscription checker
 [subs-check]
-src.git = "https://github.com/sinspired/subs-check.git"
-fetch.git = "https://github.com/sinspired/subs-check.git"
+src.git = "https://github.com/p3psi-boo/subs-check.git"
+fetch.git = "https://github.com/p3psi-boo/subs-check.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
@@ -489,3 +489,10 @@ pinned = true
 src.github_tag = "browseros-ai/BrowserOS"
 src.prefix = "v"
 fetch.url = "https://github.com/browseros-ai/BrowserOS/releases/download/v$ver/BrowserOS_v$ver_x64.AppImage"
+
+# usque - Open-source reimplementation of Cloudflare WARP client's MASQUE protocol
+[usque]
+src.git = "https://github.com/Diniboy1123/usque.git"
+fetch.git = "https://github.com/Diniboy1123/usque.git"
+git.fetch_submodules = false
+git.get_commit_date = true

@@ -927,17 +927,17 @@
   };
   subs-check = {
     pname = "subs-check";
-    version = "8055505bf95631bf4dc6beabaa4956567b1c7f4e";
+    version = "f4dbe04587215291496c1ea5215bdaae167c7715";
     src = fetchgit {
-      url = "https://github.com/sinspired/subs-check.git";
-      rev = "8055505bf95631bf4dc6beabaa4956567b1c7f4e";
+      url = "https://github.com/p3psi-boo/subs-check.git";
+      rev = "f4dbe04587215291496c1ea5215bdaae167c7715";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-b5rLCIIBY312cuNqIxw7a/Go3noYtnKHZnkPam6eR9c=";
+      sha256 = "sha256-KtK3G3MjOWDezIjfYbmkMOHdYIz+IIDe0gHy49VMYbI=";
     };
-    date = "2026-01-23";
+    date = "2026-05-09";
   };
   substack-dl = {
     pname = "substack-dl";
@@ -986,6 +986,20 @@
       fetchSubmodules = false;
       sha256 = "sha256-pxGzRAUuYUyqcanoaQ4rqbZQfLMWdmc4GdGBeLw7O+M=";
     };
+  };
+  usque = {
+    pname = "usque";
+    version = "47c1b1bf2c8675d906bc8026515585ced27beef7";
+    src = fetchgit {
+      url = "https://github.com/Diniboy1123/usque.git";
+      rev = "47c1b1bf2c8675d906bc8026515585ced27beef7";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-xgndE4kfR7LVLBvcxJ68Yq0NLN+8zyciMYaP9K+qS9M=";
+    };
+    date = "2026-04-22";
   };
   ut = {
     pname = "ut";

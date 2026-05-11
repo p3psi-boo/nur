@@ -14,7 +14,7 @@ in
 
   src = sourceInfo.src;
 
-  vendorHash = "sha256-MOGi8ffwEnfVymUJchEZBfCg7PpspOEG6xwkz1ITBkU=";
+  vendorHash = "sha256-JMQMqc/0Ja5BEP3wI2/2MhwaRYHKShbqAGh1V2Lzacs=";
 
   env = {
     CGO_ENABLED = "0";
@@ -36,8 +36,8 @@ in
 
   meta = {
     description = "High-performance proxy subscription checker";
-    homepage = "https://github.com/sinspired/subs-check";
-    changelog = "https://github.com/sinspired/subs-check/commits/main/";
+    homepage = "https://github.com/p3psi-boo/subs-check";
+    changelog = "https://github.com/p3psi-boo/subs-check/commits/main/";
     license = lib.licenses.gpl3Only;
     mainProgram = "subs-check";
     platforms = lib.platforms.unix;

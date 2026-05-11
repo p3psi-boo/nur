@@ -1510,7 +1510,7 @@
     },
     "subs-check": {
         "cargoLock": null,
-        "date": "2026-01-23",
+        "date": "2026-05-09",
         "extract": null,
         "name": "subs-check",
         "passthru": null,
@@ -1520,13 +1520,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "8055505bf95631bf4dc6beabaa4956567b1c7f4e",
-            "sha256": "sha256-b5rLCIIBY312cuNqIxw7a/Go3noYtnKHZnkPam6eR9c=",
+            "rev": "f4dbe04587215291496c1ea5215bdaae167c7715",
+            "sha256": "sha256-KtK3G3MjOWDezIjfYbmkMOHdYIz+IIDe0gHy49VMYbI=",
             "sparseCheckout": [],
             "type": "git",
-            "url": "https://github.com/sinspired/subs-check.git"
+            "url": "https://github.com/p3psi-boo/subs-check.git"
         },
-        "version": "8055505bf95631bf4dc6beabaa4956567b1c7f4e"
+        "version": "f4dbe04587215291496c1ea5215bdaae167c7715"
     },
     "substack-dl": {
         "cargoLock": null,
@@ -1610,6 +1610,26 @@
             "type": "github"
         },
         "version": "v1.3.0"
+    },
+    "usque": {
+        "cargoLock": null,
+        "date": "2026-04-22",
+        "extract": null,
+        "name": "usque",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "47c1b1bf2c8675d906bc8026515585ced27beef7",
+            "sha256": "sha256-xgndE4kfR7LVLBvcxJ68Yq0NLN+8zyciMYaP9K+qS9M=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/Diniboy1123/usque.git"
+        },
+        "version": "47c1b1bf2c8675d906bc8026515585ced27beef7"
     },
     "ut": {
         "cargoLock": null,
