@@ -227,6 +227,11 @@ src.github_tag = "philschmid/mcp-cli"
 src.include_regex = "^v[0-9].*"
 fetch.github = "philschmid/mcp-cli"
 
+[hev-socks5-server]
+src.github_tag = "heiher/hev-socks5-server"
+fetch.git = "https://github.com/heiher/hev-socks5-server.git"
+git.fetchSubmodules = true
+
 [octopus-api]
 src.git = "https://github.com/p3psi-boo/octopus.git"
 fetch.git = "https://github.com/p3psi-boo/octopus.git"
