@@ -483,3 +483,9 @@ fetch.git = "https://github.com/mokeyish/smartdns-rs.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 pinned = true
+
+# browseros - The Open source agentic browser (AppImage)
+[browseros]
+src.github_tag = "browseros-ai/BrowserOS"
+src.prefix = "v"
+fetch.url = "https://github.com/browseros-ai/BrowserOS/releases/download/v$ver/BrowserOS_v$ver_x64.AppImage"

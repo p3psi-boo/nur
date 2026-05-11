@@ -182,6 +182,21 @@
         },
         "version": "c815bfbe3cefd0104adf411cd2148995c31f2ba0"
     },
+    "browseros": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "browseros",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-ALnyVMnexYy48br9qbWaEbOZm7hJR9g39a9nYzbWXwo=",
+            "type": "url",
+            "url": "https://github.com/browseros-ai/BrowserOS/releases/download/v0.44.0.1/BrowserOS_v0.44.0.1_x64.AppImage"
+        },
+        "version": "0.44.0.1"
+    },
     "classyshark": {
         "cargoLock": null,
         "date": null,

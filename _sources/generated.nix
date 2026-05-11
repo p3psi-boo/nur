@@ -113,6 +113,14 @@
     };
     date = "2026-03-09";
   };
+  browseros = {
+    pname = "browseros";
+    version = "0.44.0.1";
+    src = fetchurl {
+      url = "https://github.com/browseros-ai/BrowserOS/releases/download/v0.44.0.1/BrowserOS_v0.44.0.1_x64.AppImage";
+      sha256 = "sha256-ALnyVMnexYy48br9qbWaEbOZm7hJR9g39a9nYzbWXwo=";
+    };
+  };
   classyshark = {
     pname = "classyshark";
     version = "8.2";
