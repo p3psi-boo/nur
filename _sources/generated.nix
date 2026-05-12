@@ -877,6 +877,17 @@
       sha256 = "sha256-Zfe+H/Ifp3Y8X9MMAn5nnpWTYw7DI21IX/hS7x1VoQk=";
     };
   };
+  selector4nix = {
+    pname = "selector4nix";
+    version = "v0.2.0";
+    src = fetchFromGitHub {
+      owner = "StarryReverie";
+      repo = "selector4nix";
+      rev = "v0.2.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-mSNFjwZyHFYcVhF22EhuCNDthnDpksTbIuxh88D0kIg=";
+    };
+  };
   sigmo = {
     pname = "sigmo";
     version = "v4.1.2";
