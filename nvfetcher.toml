@@ -442,13 +442,6 @@ git.get_commit_date = true
 src.github = "totoshko88/RustConn"
 fetch.github = "totoshko88/RustConn"
 
-# MinerU - Document understanding / parsing toolkit (mineru-api FastAPI server)
-# Linux + CUDA (vllm) build target. Source is only used for version tracking
-# and CLI metadata; the runtime itself is built from PyPI via uv2nix.
-[mineru-api]
-src.github = "opendatalab/MinerU"
-fetch.github = "opendatalab/MinerU"
-
 # deepseek-ocr-rs - Rust rewrite of DeepSeek-OCR (CLI + OpenAI-compatible server)
 [deepseek-ocr-rs]
 src.git = "https://github.com/TimmyOVO/deepseek-ocr.rs.git"

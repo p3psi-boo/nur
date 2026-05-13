@@ -951,27 +951,6 @@
         },
         "version": "v1.3.0"
     },
-    "mineru-api": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "mineru-api",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "opendatalab",
-            "repo": "MinerU",
-            "rev": "mineru-3.1.6-released",
-            "sha256": "sha256-SrMoB1AW0yWhIxIVnzl576xWyjVcIj4rSNHuKiapRZc=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "mineru-3.1.6-released"
-    },
     "nf_deaf": {
         "cargoLock": null,
         "date": "2026-01-23",

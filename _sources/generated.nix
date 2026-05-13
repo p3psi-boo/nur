@@ -587,17 +587,6 @@
       sha256 = "sha256-aPxJOSemde379WDOyFLWbX+WZVfRj/qn+r036w9/3jQ=";
     };
   };
-  mineru-api = {
-    pname = "mineru-api";
-    version = "mineru-3.1.6-released";
-    src = fetchFromGitHub {
-      owner = "opendatalab";
-      repo = "MinerU";
-      rev = "mineru-3.1.6-released";
-      fetchSubmodules = false;
-      sha256 = "sha256-SrMoB1AW0yWhIxIVnzl576xWyjVcIj4rSNHuKiapRZc=";
-    };
-  };
   nf_deaf = {
     pname = "nf_deaf";
     version = "cf346a3c270e5eb6d31b1d0c110efaf7a8b9193e";
