@@ -35,7 +35,7 @@ buildGo126Module (finalAttrs: {
   # 启用激进内联优化
   buildFlags = [ "-gcflags=all=-l=4" ];
 
-  vendorHash = "sha256-qvQO7c/780UWxvM/Lp/KHqcd/pFqzyJx6ILaOeZId7A=";
+  vendorHash = "sha256-AIue9XBsfsKGClRLB1DCME+36crapnOdQrEICFYG1a0=";
 
   postInstall = ''
     if [ -e "$out/bin/server" ]; then
