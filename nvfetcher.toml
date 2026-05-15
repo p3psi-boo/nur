@@ -498,3 +498,10 @@ git.get_commit_date = true
 [selector4nix]
 src.github_tag = "StarryReverie/selector4nix"
 fetch.github = "StarryReverie/selector4nix"
+
+# xurl - Client for AI Agents URLs
+[xurl]
+src.git = "https://github.com/Xuanwo/xurl.git"
+fetch.git = "https://github.com/Xuanwo/xurl.git"
+git.fetch_submodules = false
+git.get_commit_date = true
