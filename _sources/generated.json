@@ -95,12 +95,12 @@
             "name": null,
             "owner": "rustmailer",
             "repo": "bichon",
-            "rev": "1.0.1",
-            "sha256": "sha256-FxN2d39QTQseZE+IPVc1LGuwtDGpJlepObjpMMqhciw=",
+            "rev": "1.0.2",
+            "sha256": "sha256-JVjTqKKsaglRnx7o00UyhbzMtd2U9LU1teQW8y0kYNs=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "1.0.1"
+        "version": "1.0.2"
     },
     "binsider-bin": {
         "cargoLock": null,
@@ -274,12 +274,12 @@
             "name": null,
             "owner": "router-for-me",
             "repo": "CLIProxyAPI",
-            "rev": "v7.1.5",
-            "sha256": "sha256-/XqmecaRSWfTxsV+FgyoiSuZABKusMDJCgxVIWeD6tM=",
+            "rev": "v7.1.6",
+            "sha256": "sha256-bQg9CeQqkVS7McOsPxTwjGM4u9kFypMRcUF80nzb/w4=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v7.1.5"
+        "version": "v7.1.6"
     },
     "cnb-cli": {
         "cargoLock": null,
@@ -318,7 +318,7 @@
     },
     "codex-desktop-linux": {
         "cargoLock": null,
-        "date": "2026-05-16",
+        "date": "2026-05-17",
         "extract": null,
         "name": "codex-desktop-linux",
         "passthru": null,
@@ -328,13 +328,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "cfc41871068fab112626080074f111a99bd8a5eb",
-            "sha256": "sha256-1AVdSdgkkmR4cgCuHIdSaY2vjHhb/gVLSlmN/QebC8Q=",
+            "rev": "280459de8a1f8073b3129ae3ca930d0af29fc761",
+            "sha256": "sha256-UXaoNPbvmWVsB+e0KHfJSU5BNz/GJ2JlheviafdaDWY=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/ilysenko/codex-desktop-linux.git"
         },
-        "version": "cfc41871068fab112626080074f111a99bd8a5eb"
+        "version": "280459de8a1f8073b3129ae3ca930d0af29fc761"
     },
     "coe": {
         "cargoLock": null,
@@ -388,13 +388,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "d3249cc3498e3b8377b29de68e1a51c52f0e3112",
-            "sha256": "sha256-HZRIpsV0tjXAthSKZsCy5yWvKhWA/O0c45QhOQDtsoo=",
+            "rev": "5ea8924e1b42b9b768bbadee7e69a8a18126d991",
+            "sha256": "sha256-hZMWAc1vxibTx3hfBw4JDhNr5vGl4Ozwvjhr9rqGvpc=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/imbuxiangnan-cyber/copilot-api-plus.git"
         },
-        "version": "d3249cc3498e3b8377b29de68e1a51c52f0e3112"
+        "version": "5ea8924e1b42b9b768bbadee7e69a8a18126d991"
     },
     "dagu": {
         "cargoLock": null,
@@ -1260,7 +1260,7 @@
     },
     "proxy_pool": {
         "cargoLock": null,
-        "date": "2026-05-14",
+        "date": "2026-05-17",
         "extract": null,
         "name": "proxy_pool",
         "passthru": null,
@@ -1270,13 +1270,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "e7208a2ca2589ff0c20239bac9473e83f9a053df",
-            "sha256": "sha256-S9s8IrnrkydCBHdGgAisX+PoYZyyQdXvGgLytmpzRck=",
+            "rev": "edd637ad8edb83c68134d532e1340a8d3195bb9d",
+            "sha256": "sha256-tdJvMNDUUgbv7l0iaubTsEGQmWiwUo28uC7WLaXjZS8=",
             "sparseCheckout": [],
             "type": "git",
-            "url": "https://github.com/jhao104/proxy_pool.git"
+            "url": "https://github.com/p3psi-boo/proxy_pool.git"
         },
-        "version": "e7208a2ca2589ff0c20239bac9473e83f9a053df"
+        "version": "edd637ad8edb83c68134d532e1340a8d3195bb9d"
     },
     "pymicro-features": {
         "cargoLock": null,

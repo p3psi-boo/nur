@@ -53,7 +53,7 @@ stdenv.mkDerivation {
 
   meta = with lib; {
     description = "Python ProxyPool for web spider";
-    homepage = "https://github.com/jhao104/proxy_pool";
+    homepage = "https://github.com/p3psi-boo/proxy_pool";
     license = licenses.mit;
     mainProgram = "proxyPool";
     platforms = platforms.unix;
