@@ -21,6 +21,7 @@ stdenv.mkDerivation {
     click
     flask
     werkzeug
+    pproxy
   ];
 
   postPatch = ''
