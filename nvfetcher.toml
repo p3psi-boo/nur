@@ -505,3 +505,10 @@ src.git = "https://github.com/Xuanwo/xurl.git"
 fetch.git = "https://github.com/Xuanwo/xurl.git"
 git.fetch_submodules = false
 git.get_commit_date = true
+
+# proxy_pool - Python ProxyPool for web spider
+[proxy_pool]
+src.git = "https://github.com/p3psi-boo/proxy_pool.git"
+fetch.git = "https://github.com/p3psi-boo/proxy_pool.git"
+git.fetch_submodules = false
+git.get_commit_date = true

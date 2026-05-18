@@ -30,8 +30,8 @@ let
     inherit version;
     src = frontendSrc;
     pnpm = pnpm_10;
-    fetcherVersion = 1;
-    hash = "sha256-hc+GtZOzP47Joyak6KhmifG7jV4kpVG5+zCMKe7Emuk=";
+    fetcherVersion = 3;
+    hash = "sha256-T7Y9QLO6ruPQ6eRqTq7NeSPkp4oBOjgd/U3PXbYzRuk=";
     NODE_ENV = "production";
   };
 

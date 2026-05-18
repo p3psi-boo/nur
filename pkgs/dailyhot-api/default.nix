@@ -26,8 +26,8 @@ let
     pname = "dailyhot-api";
     inherit version src;
     pnpm = pnpm_10;
-    fetcherVersion = 1;
-    hash = "sha256-miXYbAi+8mTsdigirC7D/RlHgFbv5DjbfM8lq38AGio=";
+    fetcherVersion = 3;
+    hash = "sha256-rxLpQjcKDCXTVfaL5TjDj03phtG96bBPWm/GoOLU2E0=";
   };
 in
 stdenv.mkDerivation (finalAttrs: {

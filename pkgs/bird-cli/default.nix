@@ -69,8 +69,8 @@ stdenv.mkDerivation (finalAttrs: {
   pnpmDeps = fetchPnpmDeps {
     inherit (finalAttrs) pname version src;
     pnpm = pnpm;
-    fetcherVersion = 1;
-    hash = "sha256-NRzbBZAy2lZTz2gt2ztl6B0r521ryKYDEgkppnqiC6M=";
+    fetcherVersion = 3;
+    hash = "sha256-+6W5uSqvQS0SIO7cgIhZvL+dBahCs5ws/8ex6kqkpx4=";
     prePnpmInstall = setPnpmArch;
     # Only fetch production deps; devDeps are not needed at runtime
     # and significantly bloat the fixed-output derivation.
