@@ -26,7 +26,7 @@ rustPlatform.buildRustPackage {
     homepage = "https://github.com/p3psi-boo/komari-monitor-rs";
     license = lib.licenses.wtfpl;
     maintainers = [ ];
-    platforms = lib.platforms.linux;
+    platforms = lib.platforms.linux ++ lib.platforms.darwin;
     mainProgram = "komari-monitor-rs";
   };
 }
