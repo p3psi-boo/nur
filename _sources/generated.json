@@ -788,6 +788,26 @@
         },
         "version": "v1.1.2"
     },
+    "jarm": {
+        "cargoLock": null,
+        "date": "2021-10-12",
+        "extract": null,
+        "name": "jarm",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "dcd6ee2d5d9a819fe2200f7a6c1f478b896a2f5d",
+            "sha256": "sha256-2Xy4osJOSrrc/UkEifeQTQejcJ02szNzE3fMO5PzQz8=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/salesforce/jarm.git"
+        },
+        "version": "dcd6ee2d5d9a819fe2200f7a6c1f478b896a2f5d"
+    },
     "jd-gui": {
         "cargoLock": null,
         "date": null,

@@ -483,6 +483,20 @@
       sha256 = "sha256-xAXYhvN7rdXvA2EWsNXRfXlIrumyPluAcmVbMY/pZxE=";
     };
   };
+  jarm = {
+    pname = "jarm";
+    version = "dcd6ee2d5d9a819fe2200f7a6c1f478b896a2f5d";
+    src = fetchgit {
+      url = "https://github.com/salesforce/jarm.git";
+      rev = "dcd6ee2d5d9a819fe2200f7a6c1f478b896a2f5d";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-2Xy4osJOSrrc/UkEifeQTQejcJ02szNzE3fMO5PzQz8=";
+    };
+    date = "2021-10-12";
+  };
   jd-gui = {
     pname = "jd-gui";
     version = "v1.6.6";

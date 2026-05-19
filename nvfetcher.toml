@@ -512,3 +512,10 @@ src.git = "https://github.com/p3psi-boo/proxy_pool.git"
 fetch.git = "https://github.com/p3psi-boo/proxy_pool.git"
 git.fetch_submodules = false
 git.get_commit_date = true
+
+# jarm - TLS server fingerprinting tool by Salesforce
+[jarm]
+src.git = "https://github.com/salesforce/jarm.git"
+fetch.git = "https://github.com/salesforce/jarm.git"
+git.fetch_submodules = false
+git.get_commit_date = true
