@@ -8,13 +8,13 @@
 {
   agsh = {
     pname = "agsh";
-    version = "0.22.1";
+    version = "0.23.1";
     src = fetchFromGitHub {
       owner = "k4yt3x";
       repo = "agsh";
-      rev = "0.22.1";
+      rev = "0.23.1";
       fetchSubmodules = false;
-      sha256 = "sha256-B0Wu/XlpKTzr3VQKeZfqqoPtUeISrNxq2XzgVlmKovc=";
+      sha256 = "sha256-PVGBNim2ORmytfpcOcIUIa5C6KGRLsx12NriNYTC+U4=";
     };
   };
   bb-browser = {
@@ -58,13 +58,13 @@
   };
   bichon = {
     pname = "bichon";
-    version = "1.0.2";
+    version = "1.1.0";
     src = fetchFromGitHub {
       owner = "rustmailer";
       repo = "bichon";
-      rev = "1.0.2";
+      rev = "1.1.0";
       fetchSubmodules = false;
-      sha256 = "sha256-JVjTqKKsaglRnx7o00UyhbzMtd2U9LU1teQW8y0kYNs=";
+      sha256 = "sha256-TE3xcBQtz8JZwIXGYFBZHUmAVyErn9/13a4Qtd1ONxY=";
     };
   };
   binsider-bin = {
@@ -156,13 +156,13 @@
   };
   cliproxyapi = {
     pname = "cliproxyapi";
-    version = "v7.1.6";
+    version = "v7.1.15";
     src = fetchFromGitHub {
       owner = "router-for-me";
       repo = "CLIProxyAPI";
-      rev = "v7.1.6";
+      rev = "v7.1.15";
       fetchSubmodules = false;
-      sha256 = "sha256-bQg9CeQqkVS7McOsPxTwjGM4u9kFypMRcUF80nzb/w4=";
+      sha256 = "sha256-UbUzsJVFnlbD69NJAk1eq52iSTOnVDN1nRd+E+6CuXs=";
     };
   };
   cnb-cli = {
@@ -189,17 +189,17 @@
   };
   codex-desktop-linux = {
     pname = "codex-desktop-linux";
-    version = "280459de8a1f8073b3129ae3ca930d0af29fc761";
+    version = "01b1ad7ddf68f6f3d38ab858a78745e63968db89";
     src = fetchgit {
       url = "https://github.com/ilysenko/codex-desktop-linux.git";
-      rev = "280459de8a1f8073b3129ae3ca930d0af29fc761";
+      rev = "01b1ad7ddf68f6f3d38ab858a78745e63968db89";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-UXaoNPbvmWVsB+e0KHfJSU5BNz/GJ2JlheviafdaDWY=";
+      sha256 = "sha256-zJweCjk5UMVtNiihRG/jptz4HeyvlQWiYNWCmtx3LAY=";
     };
-    date = "2026-05-17";
+    date = "2026-05-18";
   };
   coe = {
     pname = "coe";
@@ -231,27 +231,27 @@
   };
   copilot-api-plus = {
     pname = "copilot-api-plus";
-    version = "5ea8924e1b42b9b768bbadee7e69a8a18126d991";
+    version = "7e3740477983154682689b3ce86a871bfd5b208c";
     src = fetchgit {
       url = "https://github.com/imbuxiangnan-cyber/copilot-api-plus.git";
-      rev = "5ea8924e1b42b9b768bbadee7e69a8a18126d991";
+      rev = "7e3740477983154682689b3ce86a871bfd5b208c";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-hZMWAc1vxibTx3hfBw4JDhNr5vGl4Ozwvjhr9rqGvpc=";
+      sha256 = "sha256-hvK221fLsbHv5vE1pw2depDOiL2ReQ1qLJBFqPkFInU=";
     };
-    date = "2026-05-17";
+    date = "2026-05-19";
   };
   dagu = {
     pname = "dagu";
-    version = "v2.6.10";
+    version = "v2.7.2";
     src = fetchFromGitHub {
       owner = "dagu-org";
       repo = "dagu";
-      rev = "v2.6.10";
+      rev = "v2.7.2";
       fetchSubmodules = false;
-      sha256 = "sha256-Jw3VnSKLJKMXiKq4bSVVMM4mwNzD6cFxS9M/WqukcDk=";
+      sha256 = "sha256-GuWsWbUE3Qvv/YAFWPm6Z3lh5B663L8GY1GSob8h7vg=";
     };
   };
   dailyhot-api = {
@@ -580,17 +580,17 @@
   };
   lucebox-hub = {
     pname = "lucebox-hub";
-    version = "f230aaf55af7d7d069fb293481107cd7be49ed82";
+    version = "984953e1193141b4166540111ea9e180ccd9fc13";
     src = fetchgit {
       url = "https://github.com/Luce-Org/lucebox-hub.git";
-      rev = "f230aaf55af7d7d069fb293481107cd7be49ed82";
+      rev = "984953e1193141b4166540111ea9e180ccd9fc13";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-1JgZRsAiGPVmeo9DPl7L/Lrvg5WlwRDUNmkpWjZFn/w=";
+      sha256 = "sha256-MYJB1yy9Tvn08/GHOHiZTzB3RN7OjAd1YgzmOVMW7j4=";
     };
-    date = "2026-05-16";
+    date = "2026-05-19";
   };
   magiskboot-bin = {
     pname = "magiskboot-bin";
@@ -678,20 +678,6 @@
     };
     date = "2026-05-08";
   };
-  open-coreui = {
-    pname = "open-coreui";
-    version = "20dba39b35394b6f4e66c54b2b0f54a000450312";
-    src = fetchgit {
-      url = "https://github.com/xxnuo/open-coreui.git";
-      rev = "20dba39b35394b6f4e66c54b2b0f54a000450312";
-      fetchSubmodules = true;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-eBVH3zVEr9gX4Qjyeaf2kv1o6KL8b2VsXgH+LTfDGO8=";
-    };
-    date = "2026-04-02";
-  };
   openalice = {
     pname = "openalice";
     version = "v0.21.0-beta.5";
@@ -733,17 +719,17 @@
   };
   paperclip = {
     pname = "paperclip";
-    version = "3e6610fb938d04638fa578a1fc0d119b434fa2e4";
+    version = "c0c5a8263dc7e43e6f39bb69504659ed257ac5c7";
     src = fetchgit {
       url = "https://github.com/paperclipai/paperclip.git";
-      rev = "3e6610fb938d04638fa578a1fc0d119b434fa2e4";
+      rev = "c0c5a8263dc7e43e6f39bb69504659ed257ac5c7";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-WgsyiEq/rEYk/RgU/p/dBYok1WdN4tZfWgQePJw6m08=";
+      sha256 = "sha256-mjJOnhUBc4Y4WS+AByrOegtHXSzZ2qCP2MVD07jJp8Q=";
     };
-    date = "2026-05-16";
+    date = "2026-05-18";
   };
   pg_duckdb = {
     pname = "pg_duckdb";
@@ -761,13 +747,13 @@
   };
   planify = {
     pname = "planify";
-    version = "v4.19.2";
+    version = "v4.19.3";
     src = fetchFromGitHub {
       owner = "alainm23";
       repo = "planify";
-      rev = "v4.19.2";
+      rev = "v4.19.3";
       fetchSubmodules = false;
-      sha256 = "sha256-QEcZg38Dm1pTAI55vLLjJeIo2bPIIr0roi8Al1jIJy4=";
+      sha256 = "sha256-811T28jvPTHwNDlR03Ym2f6RPq0N3FLZFqnThBIW1CU=";
     };
   };
   polymarket-cli = {
@@ -885,24 +871,24 @@
   };
   rustconn = {
     pname = "rustconn";
-    version = "v0.13.17";
+    version = "v0.14.1";
     src = fetchFromGitHub {
       owner = "totoshko88";
       repo = "RustConn";
-      rev = "v0.13.17";
+      rev = "v0.14.1";
       fetchSubmodules = false;
-      sha256 = "sha256-u2J6JSZ/nb7Xids/KJaEMmAS20zeLK85xxofsWbRmcM=";
+      sha256 = "sha256-oUn/sXGgh2EItPQgYjFkoOVguEQ0HS07FAgxNUOOPo4=";
     };
   };
   selector4nix = {
     pname = "selector4nix";
-    version = "v0.2.0";
+    version = "v0.3.1";
     src = fetchFromGitHub {
       owner = "StarryReverie";
       repo = "selector4nix";
-      rev = "v0.2.0";
+      rev = "v0.3.1";
       fetchSubmodules = false;
-      sha256 = "sha256-mSNFjwZyHFYcVhF22EhuCNDthnDpksTbIuxh88D0kIg=";
+      sha256 = "sha256-Dx8NfelWH6P0SRMosQ8UV+xeccZ3oXwFYCFtfHc0jyM=";
     };
   };
   sigmo = {
