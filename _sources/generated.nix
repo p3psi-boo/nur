@@ -165,20 +165,6 @@
       sha256 = "sha256-UbUzsJVFnlbD69NJAk1eq52iSTOnVDN1nRd+E+6CuXs=";
     };
   };
-  cnb-cli = {
-    pname = "cnb-cli";
-    version = "4fb4e70a616a809755f2feefda1aee50ff88450e";
-    src = fetchgit {
-      url = "https://github.com/p3psi-boo/cnb-cli.git";
-      rev = "4fb4e70a616a809755f2feefda1aee50ff88450e";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-0Yqn/akLsksS3Z6WBx3jZ9pG0n/lgLQSK8Z3iWfZkuA=";
-    };
-    date = "2026-02-26";
-  };
   cocoindex-code = {
     pname = "cocoindex-code";
     version = "0.2.33";

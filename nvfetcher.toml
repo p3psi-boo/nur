@@ -128,11 +128,6 @@ src.github_tag = "rbqvq/vgpu_unlock-rs"
 src.include_regex = "^v[0-9].*"
 fetch.github = "rbqvq/vgpu_unlock-rs"
 
-[cnb-cli]
-src.git = "https://github.com/p3psi-boo/cnb-cli.git"
-fetch.git = "https://github.com/p3psi-boo/cnb-cli.git"
-git.fetch_submodules = false
-
 [magiskboot-bin]
 src.github = "topjohnwu/Magisk"
 fetch.url = "https://github.com/topjohnwu/Magisk/releases/download/$ver/Magisk-$ver.apk"

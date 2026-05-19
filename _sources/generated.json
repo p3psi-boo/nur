@@ -281,26 +281,6 @@
         },
         "version": "v7.1.15"
     },
-    "cnb-cli": {
-        "cargoLock": null,
-        "date": "2026-02-26",
-        "extract": null,
-        "name": "cnb-cli",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "4fb4e70a616a809755f2feefda1aee50ff88450e",
-            "sha256": "sha256-0Yqn/akLsksS3Z6WBx3jZ9pG0n/lgLQSK8Z3iWfZkuA=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/p3psi-boo/cnb-cli.git"
-        },
-        "version": "4fb4e70a616a809755f2feefda1aee50ff88450e"
-    },
     "cocoindex-code": {
         "cargoLock": null,
         "date": null,
