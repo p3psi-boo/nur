@@ -1,53 +1,64 @@
 {
   lib,
-  stdenv,
-  fetchurl,
+  buildGoModule,
   generated,
 }:
 
 let
   sourceInfo = generated.cliproxyapi;
+in
+buildGoModule {
+  pname = "cliproxyapi";
   version = lib.removePrefix "v" sourceInfo.version;
 
-  platform = stdenv.hostPlatform.system;
-  urls = {
-    x86_64-linux = {
-      url = "https://github.com/router-for-me/CLIProxyAPI/releases/download/${sourceInfo.version}/CLIProxyAPI_${version}_linux_amd64.tar.gz";
-      hash = "sha256-XzH9Ex9YIyIBOWU0g5J5nDqiWUfo2O6mAt8WQ7KRUKY=";
-    };
-    aarch64-linux = {
-      url = "https://github.com/router-for-me/CLIProxyAPI/releases/download/${sourceInfo.version}/CLIProxyAPI_${version}_linux_aarch64.tar.gz";
-      hash = "sha256-IAyWk6qovB3ozbkCHZ6rrh6hO3Urpneg+QWKIwRmTAs=";
-    };
+  src = sourceInfo.src;
+
+  subPackages = [ "cmd/server" ];
+
+  env = {
+    CGO_ENABLED = "0";
+    GOFLAGS = "-trimpath";
+    GOAMD64 = "v3";
+    # 使用公共 Go 代理镜像，避免 Google proxy 的 abuse/rate-limit
+    GOPROXY = "https://goproxy.cn";
+    GOSUMDB = "sum.golang.google.cn";
   };
 
-  platformInfo = urls.${platform} or (throw "Unsupported platform: ${platform}");
-in
-stdenv.mkDerivation {
-  pname = "cliproxyapi";
-  inherit version;
+  ldflags = [
+    "-s"
+    "-w"
+    "-X=main.Version=${sourceInfo.version}"
+    "-X=main.Commit=unknown"
+    "-X=main.BuildDate=unknown"
+  ];
 
-  src = fetchurl {
-    url = platformInfo.url;
-    hash = platformInfo.hash;
+  overrideModAttrs = old: {
+    preBuild = ''
+      export GOPROXY="https://goproxy.cn"
+      export GOSUMDB="off"
+      # Remove test file that imports v6 of this module (circular test dependency not in go.mod)
+      rm -f sdk/cliproxy/auth/request_auth_prepare_test.go
+    '';
   };
 
-  sourceRoot = ".";
+  vendorHash = "sha256-AIue9XBsfsKGClRLB1DCME+36crapnOdQrEICFYG1a0=";
 
-  installPhase = ''
-    runHook preInstall
-    install -D -m755 cli-proxy-api $out/bin/cli-proxy-api
-    runHook postInstall
+  postInstall = ''
+    if [ -e "$out/bin/server" ]; then
+      mv "$out/bin/server" "$out/bin/cliproxyapi"
+    fi
+
+    install -Dm644 config.example.yaml "$out/share/cliproxyapi/config.example.yaml"
   '';
 
   doCheck = false;
 
   meta = {
-    description = "Wrap Gemini CLI, Antigravity, ChatGPT Codex, Claude Code, Grok Build as an OpenAI/Gemini/Claude/Codex compatible API service";
+    description = "OpenAI/Gemini/Claude/Codex compatible API proxy for CLI tools";
     homepage = "https://github.com/router-for-me/CLIProxyAPI";
+    downloadPage = "https://github.com/router-for-me/CLIProxyAPI/releases";
+    changelog = "https://github.com/router-for-me/CLIProxyAPI/releases/tag/${sourceInfo.version}";
     license = lib.licenses.mit;
-    mainProgram = "CLIProxyAPI";
-    platforms = [ "x86_64-linux" "aarch64-linux" ];
-    sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
+    mainProgram = "cliproxyapi";
   };
 }
