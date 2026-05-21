@@ -70,6 +70,10 @@ let
   # AOCC 编译器
   aoccOverlay = import ./nix/overlays/aocc.nix final prev;
 
+  # ntfy-sh Darwin build fix: serve_unix.go excludes darwin from build tag
+  # https://github.com/binwiederhier/ntfy/issues/1631
+  ntfyDarwinFixOverlay = import ./overlays/ntfy-sh-darwin-fix.nix final prev;
+
   harlequinOverlay =
     let
       inherit (generatedSources) harlequin-mysql;
@@ -99,4 +103,4 @@ let
     };
 in
 
-repoOverlay // pythonUvOverlay // pythonPackagesOverlay // aoccOverlay // harlequinOverlay
+repoOverlay // pythonUvOverlay // pythonPackagesOverlay // aoccOverlay // harlequinOverlay // ntfyDarwinFixOverlay
