@@ -5,6 +5,7 @@
   makeWrapper,
   makeDesktopItem,
   copyDesktopItems,
+  generated,
   jdk17,
   libpulseaudio,
   alsa-lib,
@@ -23,6 +24,9 @@
 }:
 
 let
+  sourceInfo = generated.micyou;
+  version = lib.removePrefix "v" sourceInfo.version;
+
   runtimeLibPath = lib.makeLibraryPath [
     libpulseaudio
     alsa-lib
@@ -42,12 +46,12 @@ let
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "micyou";
-  version = "1.1.5";
+  inherit version;
 
   # Use the Linux NoJRE build - users need to provide their own JDK
   src = fetchzip {
-    url = "https://github.com/LanRhyme/MicYou/releases/download/v${finalAttrs.version}/MicYou-Linux-NoJRE-${finalAttrs.version}.tar.gz";
-    sha256 = "sha256-iZH66Y4650OfVfgmS0x8REfKiu4/oiLRRtfJ12NHkKc=";
+    url = "https://github.com/LanRhyme/MicYou/releases/download/v${version}/MicYou-Linux-NoJRE-${version}.tar.gz";
+    hash = "sha256-rrjQRG5fcaA8mGPrCEVQgAQEXXWbASxPQvNryHc8fng=";
   };
 
   nativeBuildInputs = [ makeWrapper copyDesktopItems ];

@@ -1,58 +1,53 @@
 {
-  buildGo126Module ? buildGoModule,
-  buildGoModule,
-  generated,
   lib,
+  stdenv,
+  fetchurl,
+  generated,
 }:
 
 let
   sourceInfo = generated.cliproxyapi;
-  pkgVersion = lib.removePrefix "v" sourceInfo.version;
-in
-buildGo126Module (finalAttrs: {
-  pname = "cli-proxy-api";
-  version = pkgVersion;
+  version = lib.removePrefix "v" sourceInfo.version;
 
-  src = sourceInfo.src;
-
-  subPackages = [ "cmd/server" ];
-
-  env = {
-    CGO_ENABLED = "0";
-    GOFLAGS = "-trimpath";
-    GOAMD64 = "v3";  # x86-64-v3 指令集优化
+  platform = stdenv.hostPlatform.system;
+  urls = {
+    x86_64-linux = {
+      url = "https://github.com/router-for-me/CLIProxyAPI/releases/download/${sourceInfo.version}/CLIProxyAPI_${version}_linux_amd64.tar.gz";
+      hash = "sha256-XzH9Ex9YIyIBOWU0g5J5nDqiWUfo2O6mAt8WQ7KRUKY=";
+    };
+    aarch64-linux = {
+      url = "https://github.com/router-for-me/CLIProxyAPI/releases/download/${sourceInfo.version}/CLIProxyAPI_${version}_linux_aarch64.tar.gz";
+      hash = "sha256-IAyWk6qovB3ozbkCHZ6rrh6hO3Urpneg+QWKIwRmTAs=";
+    };
   };
 
-  # 运行时性能优化
-  ldflags = [
-    "-s"
-    "-w"
-    "-X=main.Version=${sourceInfo.version}"
-    "-X=main.Commit=unknown"
-    "-X=main.BuildDate=unknown"
-  ];
+  platformInfo = urls.${platform} or (throw "Unsupported platform: ${platform}");
+in
+stdenv.mkDerivation {
+  pname = "cliproxyapi";
+  inherit version;
 
-  # 启用激进内联优化
-  buildFlags = [ "-gcflags=all=-l=4" ];
+  src = fetchurl {
+    url = platformInfo.url;
+    hash = platformInfo.hash;
+  };
 
-  vendorHash = "sha256-AIue9XBsfsKGClRLB1DCME+36crapnOdQrEICFYG1a0=";
+  sourceRoot = ".";
 
-  postInstall = ''
-    if [ -e "$out/bin/server" ]; then
-      mv "$out/bin/server" "$out/bin/cli-proxy-api"
-    fi
-
-    install -Dm644 config.example.yaml "$out/share/cli-proxy-api/config.example.yaml"
+  installPhase = ''
+    runHook preInstall
+    install -D -m755 cli-proxy-api $out/bin/cli-proxy-api
+    runHook postInstall
   '';
 
   doCheck = false;
 
   meta = {
-    description = "OpenAI/Gemini/Claude/Codex compatible API proxy for CLI tools";
+    description = "Wrap Gemini CLI, Antigravity, ChatGPT Codex, Claude Code, Grok Build as an OpenAI/Gemini/Claude/Codex compatible API service";
     homepage = "https://github.com/router-for-me/CLIProxyAPI";
-    downloadPage = "https://github.com/router-for-me/CLIProxyAPI/releases";
-    changelog = "https://github.com/router-for-me/CLIProxyAPI/releases/tag/${sourceInfo.version}";
     license = lib.licenses.mit;
-    mainProgram = "cli-proxy-api";
+    mainProgram = "CLIProxyAPI";
+    platforms = [ "x86_64-linux" "aarch64-linux" ];
+    sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
   };
-})
+}

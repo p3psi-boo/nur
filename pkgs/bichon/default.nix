@@ -1,121 +1,55 @@
 {
   lib,
   stdenv,
-  rustPlatform,
+  fetchurl,
   generated,
-  nodejs_22,
-  pnpm_10,
-  fetchPnpmDeps,
-  pnpmConfigHook,
-  runCommandLocal,
-  pkg-config,
-  openssl,
 }:
 
 let
   sourceInfo = generated.bichon;
   version = sourceInfo.version;
 
-  # Prepare frontend source with pnpm-lock.yaml
-  frontendSrc = runCommandLocal "bichon-frontend-src" { } ''
-    mkdir -p $out
-    cp -r ${sourceInfo.src}/web/. $out/
-    chmod -R u+w $out
-    cp ${./pnpm-lock.yaml} $out/pnpm-lock.yaml
-  '';
-
-  # Prefetched pnpm dependencies for the frontend
-  pnpmDeps = fetchPnpmDeps {
-    pname = "bichon-frontend";
-    inherit version;
-    src = frontendSrc;
-    pnpm = pnpm_10;
-    fetcherVersion = 3;
-    hash = "sha256-T7Y9QLO6ruPQ6eRqTq7NeSPkp4oBOjgd/U3PXbYzRuk=";
-    NODE_ENV = "production";
-  };
-
-  # Built frontend dist directory
-  frontendDist = stdenv.mkDerivation {
-    pname = "bichon-frontend-dist";
-    inherit version;
-    src = frontendSrc;
-
-    nativeBuildInputs = [
-      nodejs_22
-      pnpmConfigHook
-      pnpm_10
-    ];
-
-    inherit pnpmDeps;
-
-    NODE_ENV = "production";
-
-    configurePhase = ''
-      runHook preConfigure
-      echo "supportedArchitectures.os=[\"${stdenv.hostPlatform.parsed.kernel.name}\"]" >> .npmrc
-      echo "supportedArchitectures.cpu=[\"${stdenv.hostPlatform.parsed.cpu.name}\"]" >> .npmrc
-      echo "auto-install-peers=true" >> .npmrc
-      runHook postConfigure
-    '';
-
-    buildPhase = ''
-      runHook preBuild
-      pnpm install --frozen-lockfile --offline --ignore-scripts
-      pnpm run build
-      runHook postBuild
-    '';
-
-    installPhase = ''
-      runHook preInstall
-      mkdir -p $out
-      cp -r dist/. $out/
-      runHook postInstall
-    '';
-  };
-in
-rustPlatform.buildRustPackage {
-  pname = "bichon";
-  inherit version;
-
-  src = sourceInfo.src;
-
-  cargoLock = {
-    lockFile = sourceInfo.src + "/Cargo.lock";
-    outputHashes = {
-      "outlook-pst-1.1.0" = "sha256-yQ+yk+Rjaxz7SoC/7T4Jy7R+IJmuTLZrcRyThtZhIys=";
+  platform = stdenv.hostPlatform.system;
+  urls = {
+    x86_64-linux = {
+      url = "https://github.com/rustmailer/bichon/releases/download/${version}/bichon-server-${version}-x86_64-unknown-linux-gnu.tar.gz";
+      hash = "sha256-N7gYmFZV1W9eziEDdj0HpEm8GP2ybPMQ2MdbBqIANQc=";
+    };
+    aarch64-linux = {
+      url = "https://github.com/rustmailer/bichon/releases/download/${version}/bichon-server-${version}-aarch64-unknown-linux-gnu.tar.gz";
+      hash = "sha256-PyYqlG0klF3ZbV9hPz9VN9hgF3yINIOxg7akHgLBnOQ=";
     };
   };
 
-  # Patch build.rs to not require git (no .git in fetched source)
-  postPatch = ''
-    substituteInPlace build.rs \
-      --replace-fail 'Command::new("git")' 'Command::new("echo")' \
-      --replace-fail '.args(&["rev-parse", "--short", "HEAD"])' '.arg("${version}")'
-  '';
+  platformInfo = urls.${platform} or (throw "Unsupported platform: ${platform}");
+in
+stdenv.mkDerivation {
+  pname = "bichon";
+  inherit version;
 
-  nativeBuildInputs = [
-    pkg-config
-  ];
+  src = fetchurl {
+    url = platformInfo.url;
+    hash = platformInfo.hash;
+  };
 
-  buildInputs = [
-    openssl
-  ];
+  sourceRoot = ".";
 
-  preBuild = ''
-    # Copy pre-built frontend dist into the web/dist directory for rust-embed
-    rm -rf web/dist
-    mkdir -p web/dist
-    cp -r ${frontendDist}/. web/dist/
+  installPhase = ''
+    runHook preInstall
+    install -D -m755 bichon-cli $out/bin/bichon-cli
+    install -D -m755 bichon-admin $out/bin/bichon-admin
+    install -D -m755 bichon-server $out/bin/bichon-server
+    runHook postInstall
   '';
 
   doCheck = false;
 
-  meta = with lib; {
+  meta = {
     description = "A lightweight, high-performance Rust email archiver with WebUI";
     homepage = "https://github.com/rustmailer/bichon";
-    license = licenses.agpl3Only;
-    mainProgram = "bichon";
-    platforms = platforms.unix;
+    license = lib.licenses.agpl3Only;
+    mainProgram = "bichon-server";
+    platforms = [ "x86_64-linux" "aarch64-linux" ];
+    sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
   };
 }

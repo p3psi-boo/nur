@@ -1,44 +1,43 @@
 {
-  buildGoModule,
-  generated,
-  go_1_26,
   lib,
+  stdenv,
+  fetchurl,
+  generated,
 }:
 
 let
   sourceInfo = generated.dagu;
-in
-(buildGoModule.override { go = go_1_26; }) (finalAttrs: {
-  pname = "dagu";
   version = lib.removePrefix "v" sourceInfo.version;
 
-  src = sourceInfo.src;
-
-  subPackages = [ "cmd" ];
-
-  # 运行时性能优化环境
-  env = {
-    CGO_ENABLED = "0";
-    GOFLAGS = "-trimpath";
-    GOAMD64 = "v3";  # x86-64-v3 指令集优化
+  platform = stdenv.hostPlatform.system;
+  urls = {
+    x86_64-linux = {
+      url = "https://github.com/dagucloud/dagu/releases/download/${sourceInfo.version}/dagu_${version}_linux_amd64.tar.gz";
+      hash = "sha256-xkko+0Q5SnHNKyEC7g07uPso7/f2cetdp2kAkeK8Cyg=";
+    };
+    aarch64-linux = {
+      url = "https://github.com/dagucloud/dagu/releases/download/${sourceInfo.version}/dagu_${version}_linux_arm64.tar.gz";
+      hash = "sha256-bAUjISCEa+cy1riaftLetPWUAE2FL1abEvBSZgzihJs=";
+    };
   };
 
-  vendorHash = "sha256-VZlskGF/qsZ8UeaGuaWF9+biAHcdxo34wmQJeFua+c8=";
+  platformInfo = urls.${platform} or (throw "Unsupported platform: ${platform}");
+in
+stdenv.mkDerivation {
+  pname = "dagu";
+  inherit version;
 
-  # 运行时性能优化
-  ldflags = [
-    "-s"
-    "-w"
-    "-X main.version=${sourceInfo.version}"
-  ];
+  src = fetchurl {
+    url = platformInfo.url;
+    hash = platformInfo.hash;
+  };
 
-  # 启用激进内联优化
-  buildFlags = [ "-gcflags=all=-l=4" ];
+  sourceRoot = ".";
 
-  postInstall = ''
-    if [ -e "$out/bin/cmd" ]; then
-      mv "$out/bin/cmd" "$out/bin/dagu"
-    fi
+  installPhase = ''
+    runHook preInstall
+    install -D -m755 dagu $out/bin/dagu
+    runHook postInstall
   '';
 
   doCheck = false;
@@ -49,5 +48,7 @@ in
     changelog = "https://docs.dagu.sh/reference/changelog";
     license = lib.licenses.gpl3Only;
     mainProgram = "dagu";
+    platforms = [ "x86_64-linux" "aarch64-linux" ];
+    sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
   };
-})
+}
