@@ -986,6 +986,26 @@
         },
         "version": "v1.3.3"
     },
+    "mihomo-to-uri": {
+        "cargoLock": null,
+        "date": "2026-05-19",
+        "extract": null,
+        "name": "mihomo-to-uri",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "ce092a6b93a191873c4c63beb694654ac38b5e96",
+            "sha256": "sha256-+tx2CBZ+ipqUrUoAMsmdj/QpLabSFlcwy4rKsQ8rTio=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/p3psi-boo/mihomo-to-uri.git"
+        },
+        "version": "ce092a6b93a191873c4c63beb694654ac38b5e96"
+    },
     "nf_deaf": {
         "cargoLock": null,
         "date": "2026-01-23",

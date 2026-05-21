@@ -507,3 +507,10 @@ src.git = "https://github.com/salesforce/jarm.git"
 fetch.git = "https://github.com/salesforce/jarm.git"
 git.fetch_submodules = false
 git.get_commit_date = true
+
+# mihomo-to-uri - Convert mihomo/Clash proxy config to plain-text URI
+[mihomo-to-uri]
+src.git = "https://github.com/p3psi-boo/mihomo-to-uri.git"
+fetch.git = "https://github.com/p3psi-boo/mihomo-to-uri.git"
+git.fetch_submodules = false
+git.get_commit_date = true

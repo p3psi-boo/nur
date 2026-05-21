@@ -608,6 +608,20 @@
       sha256 = "sha256-DvBXWWHzQ/YkGkt2+oycefKulokfgoFxulHbGY8F2uU=";
     };
   };
+  mihomo-to-uri = {
+    pname = "mihomo-to-uri";
+    version = "ce092a6b93a191873c4c63beb694654ac38b5e96";
+    src = fetchgit {
+      url = "https://github.com/p3psi-boo/mihomo-to-uri.git";
+      rev = "ce092a6b93a191873c4c63beb694654ac38b5e96";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-+tx2CBZ+ipqUrUoAMsmdj/QpLabSFlcwy4rKsQ8rTio=";
+    };
+    date = "2026-05-19";
+  };
   nf_deaf = {
     pname = "nf_deaf";
     version = "cf346a3c270e5eb6d31b1d0c110efaf7a8b9193e";
