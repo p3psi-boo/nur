@@ -13,12 +13,12 @@
             "name": null,
             "owner": "k4yt3x",
             "repo": "agsh",
-            "rev": "0.23.1",
-            "sha256": "sha256-PVGBNim2ORmytfpcOcIUIa5C6KGRLsx12NriNYTC+U4=",
+            "rev": "0.26.0",
+            "sha256": "sha256-vNZs+jyNctoqgXKhwnsIRpLIjaEFeBNkQotuharJYXA=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "0.23.1"
+        "version": "0.26.0"
     },
     "bb-browser": {
         "cargoLock": null,
@@ -95,12 +95,12 @@
             "name": null,
             "owner": "rustmailer",
             "repo": "bichon",
-            "rev": "1.1.0",
-            "sha256": "sha256-TE3xcBQtz8JZwIXGYFBZHUmAVyErn9/13a4Qtd1ONxY=",
+            "rev": "1.1.2",
+            "sha256": "sha256-O7eLJmBH64qYy0v1htzRf4wX/2Bb2uWBytVG8SbLM/I=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "1.1.0"
+        "version": "1.1.2"
     },
     "binsider-bin": {
         "cargoLock": null,
@@ -274,12 +274,12 @@
             "name": null,
             "owner": "router-for-me",
             "repo": "CLIProxyAPI",
-            "rev": "v7.1.15",
-            "sha256": "sha256-UbUzsJVFnlbD69NJAk1eq52iSTOnVDN1nRd+E+6CuXs=",
+            "rev": "v7.1.19",
+            "sha256": "sha256-Fzc1jXvTVrnTfO4tuEtRjBSUYivqpGDZUIbLQQxaG+k=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v7.1.15"
+        "version": "v7.1.19"
     },
     "cocoindex-code": {
         "cargoLock": null,
@@ -298,7 +298,7 @@
     },
     "codex-desktop-linux": {
         "cargoLock": null,
-        "date": "2026-05-18",
+        "date": "2026-05-20",
         "extract": null,
         "name": "codex-desktop-linux",
         "passthru": null,
@@ -308,13 +308,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "01b1ad7ddf68f6f3d38ab858a78745e63968db89",
-            "sha256": "sha256-zJweCjk5UMVtNiihRG/jptz4HeyvlQWiYNWCmtx3LAY=",
+            "rev": "4c8ba4da432768c48c219dbabcf8faa69ead8e3e",
+            "sha256": "sha256-ErBEySFT37OMAQCytepiwO/5IMCHa/NdgutCHLBOHA0=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/ilysenko/codex-desktop-linux.git"
         },
-        "version": "01b1ad7ddf68f6f3d38ab858a78745e63968db89"
+        "version": "4c8ba4da432768c48c219dbabcf8faa69ead8e3e"
     },
     "coe": {
         "cargoLock": null,
@@ -368,13 +368,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "7e3740477983154682689b3ce86a871bfd5b208c",
-            "sha256": "sha256-hvK221fLsbHv5vE1pw2depDOiL2ReQ1qLJBFqPkFInU=",
+            "rev": "15447c372a46b02b54031c68a5f86837b9370c4d",
+            "sha256": "sha256-owSGSfw6BskEwUBh31pJswrKeQb9OXELbuYEakn/YTE=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/imbuxiangnan-cyber/copilot-api-plus.git"
         },
-        "version": "7e3740477983154682689b3ce86a871bfd5b208c"
+        "version": "15447c372a46b02b54031c68a5f86837b9370c4d"
     },
     "dagu": {
         "cargoLock": null,
@@ -390,12 +390,12 @@
             "name": null,
             "owner": "dagu-org",
             "repo": "dagu",
-            "rev": "v2.7.2",
-            "sha256": "sha256-GuWsWbUE3Qvv/YAFWPm6Z3lh5B663L8GY1GSob8h7vg=",
+            "rev": "v2.7.3",
+            "sha256": "sha256-g41XMd0nz2InW9lCI5nxkdIJ0PonNBm02LNk+92QfFc=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.7.2"
+        "version": "v2.7.3"
     },
     "dailyhot-api": {
         "cargoLock": null,
@@ -911,7 +911,7 @@
     },
     "lucebox-hub": {
         "cargoLock": null,
-        "date": "2026-05-19",
+        "date": "2026-05-20",
         "extract": null,
         "name": "lucebox-hub",
         "passthru": null,
@@ -921,13 +921,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "984953e1193141b4166540111ea9e180ccd9fc13",
-            "sha256": "sha256-MYJB1yy9Tvn08/GHOHiZTzB3RN7OjAd1YgzmOVMW7j4=",
+            "rev": "06aaf4fdd2a3486051a7fc27d007e3da6903d772",
+            "sha256": "sha256-geGx7vVGf0vLR2uPYvUavWTnegjaydCoPLhDMNDMyfs=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/Luce-Org/lucebox-hub.git"
         },
-        "version": "984953e1193141b4166540111ea9e180ccd9fc13"
+        "version": "06aaf4fdd2a3486051a7fc27d007e3da6903d772"
     },
     "magiskboot-bin": {
         "cargoLock": null,
@@ -979,12 +979,12 @@
             "name": null,
             "owner": "LanRhyme",
             "repo": "MicYou",
-            "rev": "v1.3.2",
-            "sha256": "sha256-3bRiZkQz7eLLxeUeUauRxq2G4EUbio1Vb6Z3B/x7kz0=",
+            "rev": "v1.3.3",
+            "sha256": "sha256-DvBXWWHzQ/YkGkt2+oycefKulokfgoFxulHbGY8F2uU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.3.2"
+        "version": "v1.3.3"
     },
     "nf_deaf": {
         "cargoLock": null,
@@ -1129,7 +1129,7 @@
     },
     "paperclip": {
         "cargoLock": null,
-        "date": "2026-05-18",
+        "date": "2026-05-20",
         "extract": null,
         "name": "paperclip",
         "passthru": null,
@@ -1139,13 +1139,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "c0c5a8263dc7e43e6f39bb69504659ed257ac5c7",
-            "sha256": "sha256-mjJOnhUBc4Y4WS+AByrOegtHXSzZ2qCP2MVD07jJp8Q=",
+            "rev": "c91a06232625d1939858fcdfbdc0c9b3a64a8296",
+            "sha256": "sha256-jS628KNDNyWRko5EAhq8+8FiyG7tg9pf7D75zvx0IG4=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/paperclipai/paperclip.git"
         },
-        "version": "c0c5a8263dc7e43e6f39bb69504659ed257ac5c7"
+        "version": "c91a06232625d1939858fcdfbdc0c9b3a64a8296"
     },
     "pg_duckdb": {
         "cargoLock": null,
@@ -1181,12 +1181,12 @@
             "name": null,
             "owner": "alainm23",
             "repo": "planify",
-            "rev": "v4.19.3",
-            "sha256": "sha256-811T28jvPTHwNDlR03Ym2f6RPq0N3FLZFqnThBIW1CU=",
+            "rev": "v4.19.4",
+            "sha256": "sha256-TUtaz0dYy4j6WBcHCLJR5+Rh6PwcU51PfxvdgEUM+vU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v4.19.3"
+        "version": "v4.19.4"
     },
     "polymarket-cli": {
         "cargoLock": null,
@@ -1397,12 +1397,12 @@
             "name": null,
             "owner": "totoshko88",
             "repo": "RustConn",
-            "rev": "v0.14.1",
-            "sha256": "sha256-oUn/sXGgh2EItPQgYjFkoOVguEQ0HS07FAgxNUOOPo4=",
+            "rev": "v0.14.4",
+            "sha256": "sha256-oyrWuRqoGfMqvCBu5rwU3mCfpQvtFuVnwx01ZAFlBGw=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.14.1"
+        "version": "v0.14.4"
     },
     "selector4nix": {
         "cargoLock": null,
@@ -1418,12 +1418,12 @@
             "name": null,
             "owner": "StarryReverie",
             "repo": "selector4nix",
-            "rev": "v0.3.1",
-            "sha256": "sha256-Dx8NfelWH6P0SRMosQ8UV+xeccZ3oXwFYCFtfHc0jyM=",
+            "rev": "v0.4.0",
+            "sha256": "sha256-gsWbItf/5VjraCl1cUuWvpysooXypnSFLSfrLSxr4qo=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.3.1"
+        "version": "v0.4.0"
     },
     "sigmo": {
         "cargoLock": null,
