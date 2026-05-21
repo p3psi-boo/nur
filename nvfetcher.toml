@@ -42,10 +42,6 @@ src.github_tag = "thellimist/clihub"
 src.include_regex = "^v[0-9].*"
 fetch.github = "thellimist/clihub"
 
-[agsh]
-src.github = "k4yt3x/agsh"
-fetch.github = "k4yt3x/agsh"
-
 [dagu]
 src.github = "dagu-org/dagu"
 fetch.github = "dagu-org/dagu"

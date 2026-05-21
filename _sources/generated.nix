@@ -6,17 +6,6 @@
   dockerTools,
 }:
 {
-  agsh = {
-    pname = "agsh";
-    version = "0.26.0";
-    src = fetchFromGitHub {
-      owner = "k4yt3x";
-      repo = "agsh";
-      rev = "0.26.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-vNZs+jyNctoqgXKhwnsIRpLIjaEFeBNkQotuharJYXA=";
-    };
-  };
   bb-browser = {
     pname = "bb-browser";
     version = "bb-browser-v0.11.2";

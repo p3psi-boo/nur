@@ -1,25 +1,4 @@
 {
-    "agsh": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "agsh",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "k4yt3x",
-            "repo": "agsh",
-            "rev": "0.26.0",
-            "sha256": "sha256-vNZs+jyNctoqgXKhwnsIRpLIjaEFeBNkQotuharJYXA=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "0.26.0"
-    },
     "bb-browser": {
         "cargoLock": null,
         "date": null,
