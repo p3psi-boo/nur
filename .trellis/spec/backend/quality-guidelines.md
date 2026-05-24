@@ -87,6 +87,69 @@ python-final.buildPythonPackage { pname = "plugin"; ...; }
 
 ---
 
+### Dart CLI packages from monorepos
+
+**Scope / Trigger**: When packaging Dart CLI applications, especially multiple `pubspec.yaml` packages from one upstream repository.
+
+**Signatures**:
+
+- Source metadata comes from nvfetcher and is passed as `generated.<pkg>`.
+- Component derivations use `buildDartApplication` with:
+  ```nix
+  buildDartApplication {
+    pname = "component-name";
+    src = generated.<pkg>.src;
+    version = "0-unstable-${generated.<pkg>.date}";
+    setSourceRoot = ''
+      sourceRoot=$(echo */<packageRoot>)
+    '';
+    autoPubspecLock = "${generated.<pkg>.src}/<packageRoot>/pubspec.lock";
+  }
+  ```
+- If upstream executable names are generic, combine component outputs with `symlinkJoin` and expose repository-specific binary names.
+
+**Contracts**:
+
+- Do not build Flutter/mobile clients unless explicitly in scope; separate Dart CLI packages from Flutter application packaging.
+- Do not run `dart pub get` during the build. Use `autoPubspecLock` from the fetched source so dependencies are fixed before sandboxed build.
+- For untagged Git sources, prefer `git.get_commit_date = true` and derive Nix `version` as `0-unstable-${generated.<pkg>.date}`.
+- If upstream has no license file or explicit license declaration, use `lib.licenses.unfree` rather than guessing from README/package metadata.
+
+**Good/Base/Bad Cases**:
+
+- Good: build each Dart CLI subpackage independently, then symlink prefixed binaries such as `project-hub` / `project-node` in the final package.
+- Base: single Dart CLI package with one `pubspec.lock` and an upstream-specific executable name.
+- Bad: exposing generic binary names like `hub` or `daemon` from a NUR package, causing user PATH conflicts.
+- Bad: setting `license = lib.licenses.mit` without an upstream license file or explicit license field.
+
+**Tests Required**:
+
+- `nvfetcher -o _sources -c ./nvfetcher.toml --keyfile ./keyfile.toml` (or a documented focused rerun plus explanation when unrelated entries fail).
+- `nixfmt` on modified Nix files.
+- `nix build .#<pkg>`.
+- Smoke check final binary paths and ensure generic upstream binary names are not exposed when prefixed names are required.
+
+**Wrong vs Correct**:
+
+Wrong:
+```nix
+# Exposes generic names and may conflict with other packages.
+symlinkJoin { paths = [ hub daemon ]; }
+```
+
+Correct:
+```nix
+symlinkJoin {
+  paths = [ hub node ];
+  postBuild = ''
+    mv $out/bin/hub $out/bin/project-hub
+    mv $out/bin/daemon $out/bin/project-node
+  '';
+}
+```
+
+---
+
 ## Testing Requirements
 
 <!-- What level of testing is expected -->
