@@ -1,0 +1,4 @@
+{"file":".trellis/spec/backend/index.md","reason":"NUR package task uses backend/spec quality context"}
+{"file":".trellis/spec/backend/quality-guidelines.md","reason":"Contains repository packaging rule to consume nvfetcher generated sources and not edit generated files manually"}
+{"file":".trellis/spec/guides/index.md","reason":"Shared pre-modification and quality thinking rules"}
+{"file":".trellis/tasks/05-24-package-mobilepi/research/mobilepi-packaging.md","reason":"Upstream MobilePi build structure and packaging recommendation"}
