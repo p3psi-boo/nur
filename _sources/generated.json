@@ -985,6 +985,26 @@
         },
         "version": "ce092a6b93a191873c4c63beb694654ac38b5e96"
     },
+    "mobilepi": {
+        "cargoLock": null,
+        "date": "2026-05-24",
+        "extract": null,
+        "name": "mobilepi",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "e8be508009fbbcd6d27ba6c28f520bfb95827d5d",
+            "sha256": "sha256-2tneqGAGBg5MLElZIRyPK7CULoLux1OCrkPGkx/8VTo=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/p3psi-boo/MobilePi.git"
+        },
+        "version": "e8be508009fbbcd6d27ba6c28f520bfb95827d5d"
+    },
     "nf_deaf": {
         "cargoLock": null,
         "date": "2026-01-23",

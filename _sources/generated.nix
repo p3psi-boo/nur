@@ -611,6 +611,20 @@
     };
     date = "2026-05-19";
   };
+  mobilepi = {
+    pname = "mobilepi";
+    version = "e8be508009fbbcd6d27ba6c28f520bfb95827d5d";
+    src = fetchgit {
+      url = "https://github.com/p3psi-boo/MobilePi.git";
+      rev = "e8be508009fbbcd6d27ba6c28f520bfb95827d5d";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-2tneqGAGBg5MLElZIRyPK7CULoLux1OCrkPGkx/8VTo=";
+    };
+    date = "2026-05-24";
+  };
   nf_deaf = {
     pname = "nf_deaf";
     version = "cf346a3c270e5eb6d31b1d0c110efaf7a8b9193e";
