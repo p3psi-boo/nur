@@ -19,7 +19,7 @@ let
     buildDartApplication {
       inherit pname version packageRoot;
 
-      src = sourceInfo.src;
+      inherit (sourceInfo) src;
       setSourceRoot = ''
         sourceRoot=$(echo */${packageRoot})
       '';

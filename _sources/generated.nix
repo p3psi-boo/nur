@@ -164,17 +164,17 @@
   };
   codex-desktop-linux = {
     pname = "codex-desktop-linux";
-    version = "19d3ca11ac74916ac6df068fce85abfd6f20069c";
+    version = "a174d9c4963ff73df8c1125d3503b1114329d41d";
     src = fetchgit {
       url = "https://github.com/ilysenko/codex-desktop-linux.git";
-      rev = "19d3ca11ac74916ac6df068fce85abfd6f20069c";
+      rev = "a174d9c4963ff73df8c1125d3503b1114329d41d";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-8/pte9IZ54xANxfljCFfISoUtSb+qSYc46pdZiXFIjE=";
+      sha256 = "sha256-YICpbz9a3XaxmUedOdgTfCdOUMjGSAfq8Vx8LQZ4ezU=";
     };
-    date = "2026-05-24";
+    date = "2026-05-25";
   };
   coe = {
     pname = "coe";
@@ -555,17 +555,17 @@
   };
   lucebox-hub = {
     pname = "lucebox-hub";
-    version = "8c232344189b28fbcc7eaaed53cc1f5ba63dfe71";
+    version = "2c93676aafe530a7c2569a537a4608394aabb1ca";
     src = fetchgit {
       url = "https://github.com/Luce-Org/lucebox-hub.git";
-      rev = "8c232344189b28fbcc7eaaed53cc1f5ba63dfe71";
+      rev = "2c93676aafe530a7c2569a537a4608394aabb1ca";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-MqnvYN1fPPlBxdqNX6ViYs5DpqhY6tgXEOnprX43Pmk=";
+      sha256 = "sha256-ykXkcjP309DpCi/d+EzyRhZVohodyQgUYNu4ZToCvKs=";
     };
-    date = "2026-05-24";
+    date = "2026-05-25";
   };
   magiskboot-bin = {
     pname = "magiskboot-bin";
@@ -611,19 +611,19 @@
     };
     date = "2026-05-19";
   };
-  mobile-pi = {
-    pname = "mobile-pi";
-    version = "e8be508009fbbcd6d27ba6c28f520bfb95827d5d";
+  mobilepi = {
+    pname = "mobilepi";
+    version = "6d6e45c7da503f5b958a52fe6581a7f49ffd22fb";
     src = fetchgit {
       url = "https://github.com/p3psi-boo/MobilePi.git";
-      rev = "e8be508009fbbcd6d27ba6c28f520bfb95827d5d";
+      rev = "6d6e45c7da503f5b958a52fe6581a7f49ffd22fb";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-2tneqGAGBg5MLElZIRyPK7CULoLux1OCrkPGkx/8VTo=";
+      sha256 = "sha256-wdvKZxBzz5Su2t7wN2M9PDjY4Wnpbpf+B+QWlgcySP4=";
     };
-    date = "2026-05-24";
+    date = "2026-05-25";
   };
   nf_deaf = {
     pname = "nf_deaf";
@@ -874,13 +874,13 @@
   };
   rustconn = {
     pname = "rustconn";
-    version = "v0.14.6";
+    version = "v0.14.7";
     src = fetchFromGitHub {
       owner = "totoshko88";
       repo = "RustConn";
-      rev = "v0.14.6";
+      rev = "v0.14.7";
       fetchSubmodules = false;
-      sha256 = "sha256-t4N+QzCYadXxtVNNMC24iB6/bFQJGlCUaBMOjKfZ7H8=";
+      sha256 = "sha256-06eVJP93HsQVQWihnX2QZz1QAAyPzCxvq47SWeX90L0=";
     };
   };
   selector4nix = {
