@@ -511,7 +511,8 @@ fetch.git = "https://github.com/p3psi-boo/mihomo-to-uri.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
-[mobilepi]
+# mobile-pi - Distributed Coding Agent mobile dispatch dashboard
+[mobile-pi]
 src.git = "https://github.com/p3psi-boo/MobilePi.git"
 fetch.git = "https://github.com/p3psi-boo/MobilePi.git"
 git.fetch_submodules = false

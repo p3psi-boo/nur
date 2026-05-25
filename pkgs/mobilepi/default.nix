@@ -42,27 +42,27 @@ let
 
   };
 
-  node = mkComponent {
-    pname = "mobile-pi-node";
+  daemon = mkComponent {
+    pname = "mobile-pi-daemon";
     packageRoot = "node";
     pubspecLock = "${sourceInfo.src}/node/pubspec.lock";
-    mainProgram = "mobile-pi-node";
+    mainProgram = "mobile-pi-daemon";
   };
 in
 symlinkJoin {
   name = "mobilepi-${version}";
   paths = [
     hub
-    node
+    daemon
   ];
 
   postBuild = ''
     mv $out/bin/hub $out/bin/mobile-pi-hub
-    mv $out/bin/daemon $out/bin/mobile-pi-node
+    mv $out/bin/daemon $out/bin/mobile-pi-daemon
   '';
 
   passthru = {
-    inherit hub node;
+    inherit hub daemon;
   };
 
   meta = {

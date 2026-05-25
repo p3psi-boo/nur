@@ -164,15 +164,15 @@
   };
   codex-desktop-linux = {
     pname = "codex-desktop-linux";
-    version = "0850ed9f8efd2dbac58a82b597c7e6506487f0f9";
+    version = "19d3ca11ac74916ac6df068fce85abfd6f20069c";
     src = fetchgit {
       url = "https://github.com/ilysenko/codex-desktop-linux.git";
-      rev = "0850ed9f8efd2dbac58a82b597c7e6506487f0f9";
+      rev = "19d3ca11ac74916ac6df068fce85abfd6f20069c";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-MfKVDR44CuFfPp5MZWaMOrmi2+k6PCfVok1amGk15yM=";
+      sha256 = "sha256-8/pte9IZ54xANxfljCFfISoUtSb+qSYc46pdZiXFIjE=";
     };
     date = "2026-05-24";
   };
@@ -611,19 +611,19 @@
     };
     date = "2026-05-19";
   };
-  mobilepi = {
-    pname = "mobilepi";
-    version = "6d6e45c7da503f5b958a52fe6581a7f49ffd22fb";
+  mobile-pi = {
+    pname = "mobile-pi";
+    version = "e8be508009fbbcd6d27ba6c28f520bfb95827d5d";
     src = fetchgit {
       url = "https://github.com/p3psi-boo/MobilePi.git";
-      rev = "6d6e45c7da503f5b958a52fe6581a7f49ffd22fb";
+      rev = "e8be508009fbbcd6d27ba6c28f520bfb95827d5d";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-wdvKZxBzz5Su2t7wN2M9PDjY4Wnpbpf+B+QWlgcySP4=";
+      sha256 = "sha256-2tneqGAGBg5MLElZIRyPK7CULoLux1OCrkPGkx/8VTo=";
     };
-    date = "2026-05-25";
+    date = "2026-05-24";
   };
   nf_deaf = {
     pname = "nf_deaf";
@@ -874,13 +874,13 @@
   };
   rustconn = {
     pname = "rustconn";
-    version = "v0.14.7";
+    version = "v0.14.6";
     src = fetchFromGitHub {
       owner = "totoshko88";
       repo = "RustConn";
-      rev = "v0.14.7";
+      rev = "v0.14.6";
       fetchSubmodules = false;
-      sha256 = "sha256-06eVJP93HsQVQWihnX2QZz1QAAyPzCxvq47SWeX90L0=";
+      sha256 = "sha256-t4N+QzCYadXxtVNNMC24iB6/bFQJGlCUaBMOjKfZ7H8=";
     };
   };
   selector4nix = {
