@@ -74,12 +74,12 @@
             "name": null,
             "owner": "rustmailer",
             "repo": "bichon",
-            "rev": "1.1.2",
-            "sha256": "sha256-O7eLJmBH64qYy0v1htzRf4wX/2Bb2uWBytVG8SbLM/I=",
+            "rev": "1.3.0",
+            "sha256": "sha256-oukNbQyHHAzqEtGl6PiOgWApxdGbFi3c8Hn1PI+gtrI=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "1.1.2"
+        "version": "1.3.0"
     },
     "binsider-bin": {
         "cargoLock": null,
@@ -253,12 +253,12 @@
             "name": null,
             "owner": "router-for-me",
             "repo": "CLIProxyAPI",
-            "rev": "v7.1.19",
-            "sha256": "sha256-Fzc1jXvTVrnTfO4tuEtRjBSUYivqpGDZUIbLQQxaG+k=",
+            "rev": "v7.1.20",
+            "sha256": "sha256-vzaZDcdKsS1WtwxpHMq5gizmG/vcvWEf/15o5QK+Vxo=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v7.1.19"
+        "version": "v7.1.20"
     },
     "cocoindex-code": {
         "cargoLock": null,
@@ -277,7 +277,7 @@
     },
     "codex-desktop-linux": {
         "cargoLock": null,
-        "date": "2026-05-20",
+        "date": "2026-05-24",
         "extract": null,
         "name": "codex-desktop-linux",
         "passthru": null,
@@ -287,13 +287,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "4c8ba4da432768c48c219dbabcf8faa69ead8e3e",
-            "sha256": "sha256-ErBEySFT37OMAQCytepiwO/5IMCHa/NdgutCHLBOHA0=",
+            "rev": "0850ed9f8efd2dbac58a82b597c7e6506487f0f9",
+            "sha256": "sha256-MfKVDR44CuFfPp5MZWaMOrmi2+k6PCfVok1amGk15yM=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/ilysenko/codex-desktop-linux.git"
         },
-        "version": "4c8ba4da432768c48c219dbabcf8faa69ead8e3e"
+        "version": "0850ed9f8efd2dbac58a82b597c7e6506487f0f9"
     },
     "coe": {
         "cargoLock": null,
@@ -337,7 +337,7 @@
     },
     "copilot-api-plus": {
         "cargoLock": null,
-        "date": "2026-05-19",
+        "date": "2026-05-24",
         "extract": null,
         "name": "copilot-api-plus",
         "passthru": null,
@@ -347,13 +347,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "15447c372a46b02b54031c68a5f86837b9370c4d",
-            "sha256": "sha256-owSGSfw6BskEwUBh31pJswrKeQb9OXELbuYEakn/YTE=",
+            "rev": "0350e8805456b2c14e12358db66ae0584a5cc4ac",
+            "sha256": "sha256-TEROakqOoE2jRa4taSZ5mYmDAIjy5otYQ2aJniyFzz8=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/imbuxiangnan-cyber/copilot-api-plus.git"
         },
-        "version": "15447c372a46b02b54031c68a5f86837b9370c4d"
+        "version": "0350e8805456b2c14e12358db66ae0584a5cc4ac"
     },
     "dagu": {
         "cargoLock": null,
@@ -369,12 +369,12 @@
             "name": null,
             "owner": "dagu-org",
             "repo": "dagu",
-            "rev": "v2.7.3",
-            "sha256": "sha256-g41XMd0nz2InW9lCI5nxkdIJ0PonNBm02LNk+92QfFc=",
+            "rev": "v2.7.4",
+            "sha256": "sha256-GJn8zM5pNON6jO+pO4U6b5NkYKFQff2iOekmz8I1g+g=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.7.3"
+        "version": "v2.7.4"
     },
     "dailyhot-api": {
         "cargoLock": null,
@@ -591,7 +591,7 @@
     },
     "grdpwasm": {
         "cargoLock": null,
-        "date": "2026-05-16",
+        "date": "2026-05-24",
         "extract": null,
         "name": "grdpwasm",
         "passthru": null,
@@ -601,13 +601,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "000bb57204c31043875517ea9a51b6dc606b504a",
-            "sha256": "sha256-WW7RYiOsSZuahgw2hBp4x1N2wOp23W2ktKKOKhkRcjk=",
+            "rev": "a86c64fc9ead223a2f41ee46c39d1edc482cdb13",
+            "sha256": "sha256-mSKem4Eb8WZXLeX1e6qgYeyNDtalD+9aqLK8NweMo1E=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/nakagami/grdpwasm.git"
         },
-        "version": "000bb57204c31043875517ea9a51b6dc606b504a"
+        "version": "a86c64fc9ead223a2f41ee46c39d1edc482cdb13"
     },
     "grok2api": {
         "cargoLock": null,
@@ -679,15 +679,15 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-Zb7I8M8xZF7YydSlLl97qCmBZgHPGaWXZo97idYLPEs=",
+            "sha256": "sha256-tm5DqW2TfNR6t0VFrhAYSd4TySN4by8PPO2mCZwWa8M=",
             "type": "url",
-            "url": "https://github.com/blacktop/ida-mcp-rs/releases/download/v9.3.20/ida-mcp_9.3.20_Linux_x86_64.tar.gz"
+            "url": "https://github.com/blacktop/ida-mcp-rs/releases/download/v9.3.23/ida-mcp_9.3.23_Linux_x86_64.tar.gz"
         },
-        "version": "9.3.20"
+        "version": "9.3.23"
     },
     "ida-pro-mcp": {
         "cargoLock": null,
-        "date": "2026-05-14",
+        "date": "2026-05-23",
         "extract": null,
         "name": "ida-pro-mcp",
         "passthru": null,
@@ -697,13 +697,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "9bf7774865a746c174ebd620bced2df1f5852fa9",
-            "sha256": "sha256-As1e9ggpt6EH2q9cvVEILcJt+/WugK1eYcykhW0snMI=",
+            "rev": "7886e460f61f22839ecc5d6a85c7c1b378567cd3",
+            "sha256": "sha256-oNXWKDTEI/2iIwnRBrOHNUW6USYFB7KAF2krv+OIQoA=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/QiuChenly/ida-pro-mcp-enhancement.git"
         },
-        "version": "9bf7774865a746c174ebd620bced2df1f5852fa9"
+        "version": "7886e460f61f22839ecc5d6a85c7c1b378567cd3"
     },
     "il2cppdumper": {
         "cargoLock": null,
@@ -890,7 +890,7 @@
     },
     "lucebox-hub": {
         "cargoLock": null,
-        "date": "2026-05-20",
+        "date": "2026-05-24",
         "extract": null,
         "name": "lucebox-hub",
         "passthru": null,
@@ -900,13 +900,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "06aaf4fdd2a3486051a7fc27d007e3da6903d772",
-            "sha256": "sha256-geGx7vVGf0vLR2uPYvUavWTnegjaydCoPLhDMNDMyfs=",
+            "rev": "8c232344189b28fbcc7eaaed53cc1f5ba63dfe71",
+            "sha256": "sha256-MqnvYN1fPPlBxdqNX6ViYs5DpqhY6tgXEOnprX43Pmk=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/Luce-Org/lucebox-hub.git"
         },
-        "version": "06aaf4fdd2a3486051a7fc27d007e3da6903d772"
+        "version": "8c232344189b28fbcc7eaaed53cc1f5ba63dfe71"
     },
     "magiskboot-bin": {
         "cargoLock": null,
@@ -958,12 +958,12 @@
             "name": null,
             "owner": "LanRhyme",
             "repo": "MicYou",
-            "rev": "v1.3.3",
-            "sha256": "sha256-DvBXWWHzQ/YkGkt2+oycefKulokfgoFxulHbGY8F2uU=",
+            "rev": "v1.3.4hotfix",
+            "sha256": "sha256-6JyfNrhNhdeX5F3Hy132ZITpmqQsFYJ1Uwx3EVkij9Q=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.3.3"
+        "version": "v1.3.4hotfix"
     },
     "mihomo-to-uri": {
         "cargoLock": null,
@@ -1108,7 +1108,7 @@
     },
     "openixcli": {
         "cargoLock": null,
-        "date": "2026-03-21",
+        "date": "2026-05-24",
         "extract": null,
         "name": "openixcli",
         "passthru": null,
@@ -1118,13 +1118,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "6f0da7324a5aa8c89e40f88b4dea2fcf5647ca11",
-            "sha256": "sha256-UMa3C6rqaWRqMrzh/JCgWBfzy+xbuXD3qQIpq5vqKZs=",
+            "rev": "c36f2443adf5aae9d11cfe4171666925523e5646",
+            "sha256": "sha256-u+qzxHSgftJYjmvmOs8xWEMY+vSoR5jM83o1DFmSqnY=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/YuzukiTsuru/OpenixCLI.git"
         },
-        "version": "6f0da7324a5aa8c89e40f88b4dea2fcf5647ca11"
+        "version": "c36f2443adf5aae9d11cfe4171666925523e5646"
     },
     "oura-cli": {
         "cargoLock": null,
@@ -1148,7 +1148,7 @@
     },
     "paperclip": {
         "cargoLock": null,
-        "date": "2026-05-20",
+        "date": "2026-05-23",
         "extract": null,
         "name": "paperclip",
         "passthru": null,
@@ -1158,13 +1158,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "c91a06232625d1939858fcdfbdc0c9b3a64a8296",
-            "sha256": "sha256-jS628KNDNyWRko5EAhq8+8FiyG7tg9pf7D75zvx0IG4=",
+            "rev": "96f0279e081ccc2745f3898a5aa9309b4d015def",
+            "sha256": "sha256-ODog9KXiFO05Oqz2I+wn1gUv0q/SmaFewaTTA/Rge10=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/paperclipai/paperclip.git"
         },
-        "version": "c91a06232625d1939858fcdfbdc0c9b3a64a8296"
+        "version": "96f0279e081ccc2745f3898a5aa9309b4d015def"
     },
     "pg_duckdb": {
         "cargoLock": null,
@@ -1416,12 +1416,12 @@
             "name": null,
             "owner": "totoshko88",
             "repo": "RustConn",
-            "rev": "v0.14.4",
-            "sha256": "sha256-oyrWuRqoGfMqvCBu5rwU3mCfpQvtFuVnwx01ZAFlBGw=",
+            "rev": "v0.14.7",
+            "sha256": "sha256-06eVJP93HsQVQWihnX2QZz1QAAyPzCxvq47SWeX90L0=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.14.4"
+        "version": "v0.14.7"
     },
     "selector4nix": {
         "cargoLock": null,
@@ -1437,12 +1437,12 @@
             "name": null,
             "owner": "StarryReverie",
             "repo": "selector4nix",
-            "rev": "v0.4.0",
-            "sha256": "sha256-gsWbItf/5VjraCl1cUuWvpysooXypnSFLSfrLSxr4qo=",
+            "rev": "v0.4.2",
+            "sha256": "sha256-9CWlUdUm/zA54Msf/EMxS2uXTiyrdqBiETtIBkLAO78=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.4.0"
+        "version": "v0.4.2"
     },
     "sigmo": {
         "cargoLock": null,
