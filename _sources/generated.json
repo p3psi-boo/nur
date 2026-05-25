@@ -987,7 +987,7 @@
     },
     "mobilepi": {
         "cargoLock": null,
-        "date": "2026-05-24",
+        "date": "2026-05-25",
         "extract": null,
         "name": "mobilepi",
         "passthru": null,
@@ -997,13 +997,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "e8be508009fbbcd6d27ba6c28f520bfb95827d5d",
-            "sha256": "sha256-2tneqGAGBg5MLElZIRyPK7CULoLux1OCrkPGkx/8VTo=",
+            "rev": "6d6e45c7da503f5b958a52fe6581a7f49ffd22fb",
+            "sha256": "sha256-wdvKZxBzz5Su2t7wN2M9PDjY4Wnpbpf+B+QWlgcySP4=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/p3psi-boo/MobilePi.git"
         },
-        "version": "e8be508009fbbcd6d27ba6c28f520bfb95827d5d"
+        "version": "6d6e45c7da503f5b958a52fe6581a7f49ffd22fb"
     },
     "nf_deaf": {
         "cargoLock": null,

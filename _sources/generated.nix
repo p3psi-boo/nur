@@ -613,17 +613,17 @@
   };
   mobilepi = {
     pname = "mobilepi";
-    version = "e8be508009fbbcd6d27ba6c28f520bfb95827d5d";
+    version = "6d6e45c7da503f5b958a52fe6581a7f49ffd22fb";
     src = fetchgit {
       url = "https://github.com/p3psi-boo/MobilePi.git";
-      rev = "e8be508009fbbcd6d27ba6c28f520bfb95827d5d";
+      rev = "6d6e45c7da503f5b958a52fe6581a7f49ffd22fb";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-2tneqGAGBg5MLElZIRyPK7CULoLux1OCrkPGkx/8VTo=";
+      sha256 = "sha256-wdvKZxBzz5Su2t7wN2M9PDjY4Wnpbpf+B+QWlgcySP4=";
     };
-    date = "2026-05-24";
+    date = "2026-05-25";
   };
   nf_deaf = {
     pname = "nf_deaf";

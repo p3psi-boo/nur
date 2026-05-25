@@ -39,6 +39,7 @@ let
     packageRoot = "hub";
     pubspecLock = "${sourceInfo.src}/hub/pubspec.lock";
     mainProgram = "mobile-pi-hub";
+
   };
 
   node = mkComponent {
