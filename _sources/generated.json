@@ -315,6 +315,26 @@
         },
         "version": "c326261675a2455e6dd8c22576681e91644600ef"
     },
+    "commandcode2api": {
+        "cargoLock": null,
+        "date": "2026-05-25",
+        "extract": null,
+        "name": "commandcode2api",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "8ea3fd40c8a910b4c042f84440eae02cc2abdd1c",
+            "sha256": "sha256-dXu5+6+yeraWxy8SfR08QQTBSSfic/J20V41ujhKDxc=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/p3psi-boo/commandcode2api.git"
+        },
+        "version": "8ea3fd40c8a910b4c042f84440eae02cc2abdd1c"
+    },
     "cookiecloud-rs": {
         "cargoLock": null,
         "date": "2026-04-14",
@@ -1168,7 +1188,7 @@
     },
     "paperclip": {
         "cargoLock": null,
-        "date": "2026-05-23",
+        "date": "2026-05-25",
         "extract": null,
         "name": "paperclip",
         "passthru": null,
@@ -1178,13 +1198,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "96f0279e081ccc2745f3898a5aa9309b4d015def",
-            "sha256": "sha256-ODog9KXiFO05Oqz2I+wn1gUv0q/SmaFewaTTA/Rge10=",
+            "rev": "ece8a51e22144df916d977f0ac98e4affe3fa48c",
+            "sha256": "sha256-Y50hPtZbXA86yiKARfuUDfETTuCVEu+tInz/TaaMS2s=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/paperclipai/paperclip.git"
         },
-        "version": "96f0279e081ccc2745f3898a5aa9309b4d015def"
+        "version": "ece8a51e22144df916d977f0ac98e4affe3fa48c"
     },
     "pg_duckdb": {
         "cargoLock": null,

@@ -510,6 +510,13 @@ fetch.git = "https://github.com/salesforce/jarm.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
+# commandcode2api - OpenAI-compatible API proxy for Command Code
+[commandcode2api]
+src.git = "https://github.com/p3psi-boo/commandcode2api.git"
+fetch.git = "https://github.com/p3psi-boo/commandcode2api.git"
+git.fetch_submodules = false
+git.get_commit_date = true
+
 # mihomo-to-uri - Convert mihomo/Clash proxy config to plain-text URI
 [mihomo-to-uri]
 src.git = "https://github.com/p3psi-boo/mihomo-to-uri.git"

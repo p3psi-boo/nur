@@ -190,6 +190,20 @@
     };
     date = "2026-04-23";
   };
+  commandcode2api = {
+    pname = "commandcode2api";
+    version = "8ea3fd40c8a910b4c042f84440eae02cc2abdd1c";
+    src = fetchgit {
+      url = "https://github.com/p3psi-boo/commandcode2api.git";
+      rev = "8ea3fd40c8a910b4c042f84440eae02cc2abdd1c";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-dXu5+6+yeraWxy8SfR08QQTBSSfic/J20V41ujhKDxc=";
+    };
+    date = "2026-05-25";
+  };
   cookiecloud-rs = {
     pname = "cookiecloud-rs";
     version = "f8a023f42951c8ba97261d3b16e3a4ff53c91f4a";
@@ -736,17 +750,17 @@
   };
   paperclip = {
     pname = "paperclip";
-    version = "96f0279e081ccc2745f3898a5aa9309b4d015def";
+    version = "ece8a51e22144df916d977f0ac98e4affe3fa48c";
     src = fetchgit {
       url = "https://github.com/paperclipai/paperclip.git";
-      rev = "96f0279e081ccc2745f3898a5aa9309b4d015def";
+      rev = "ece8a51e22144df916d977f0ac98e4affe3fa48c";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-ODog9KXiFO05Oqz2I+wn1gUv0q/SmaFewaTTA/Rge10=";
+      sha256 = "sha256-Y50hPtZbXA86yiKARfuUDfETTuCVEu+tInz/TaaMS2s=";
     };
-    date = "2026-05-23";
+    date = "2026-05-25";
   };
   pg_duckdb = {
     pname = "pg_duckdb";
