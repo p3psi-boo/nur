@@ -530,3 +530,10 @@ src.git = "https://github.com/p3psi-boo/MobilePi.git"
 fetch.git = "https://github.com/p3psi-boo/MobilePi.git"
 git.fetch_submodules = false
 git.get_commit_date = true
+
+# n9router - Self-hosted AI routing gateway for 40+ AI providers
+[n9router]
+src.git = "https://github.com/nightwalker89/n9router.git"
+fetch.git = "https://github.com/nightwalker89/n9router.git"
+git.fetch_submodules = false
+git.get_commit_date = true

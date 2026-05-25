@@ -145,13 +145,13 @@
   };
   cliproxyapi = {
     pname = "cliproxyapi";
-    version = "v7.1.20";
+    version = "v7.1.21";
     src = fetchFromGitHub {
       owner = "router-for-me";
       repo = "CLIProxyAPI";
-      rev = "v7.1.20";
+      rev = "v7.1.21";
       fetchSubmodules = false;
-      sha256 = "sha256-vzaZDcdKsS1WtwxpHMq5gizmG/vcvWEf/15o5QK+Vxo=";
+      sha256 = "sha256-db4krV1qYEaESWLLCuOfN6rgq+ZZJOeo5T/qfMzCMa8=";
     };
   };
   cocoindex-code = {
@@ -650,6 +650,20 @@
       leaveDotGit = false;
       sparseCheckout = [ ];
       sha256 = "sha256-wdvKZxBzz5Su2t7wN2M9PDjY4Wnpbpf+B+QWlgcySP4=";
+    };
+    date = "2026-05-25";
+  };
+  n9router = {
+    pname = "n9router";
+    version = "bd0cc558730412bfab646a0f1feec348dd871d1c";
+    src = fetchgit {
+      url = "https://github.com/nightwalker89/n9router.git";
+      rev = "bd0cc558730412bfab646a0f1feec348dd871d1c";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-hHzSTe77OTZ704TPvUnMLWOEE4ysWdLEZZsNpg7cnr0=";
     };
     date = "2026-05-25";
   };

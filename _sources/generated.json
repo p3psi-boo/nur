@@ -253,12 +253,12 @@
             "name": null,
             "owner": "router-for-me",
             "repo": "CLIProxyAPI",
-            "rev": "v7.1.20",
-            "sha256": "sha256-vzaZDcdKsS1WtwxpHMq5gizmG/vcvWEf/15o5QK+Vxo=",
+            "rev": "v7.1.21",
+            "sha256": "sha256-db4krV1qYEaESWLLCuOfN6rgq+ZZJOeo5T/qfMzCMa8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v7.1.20"
+        "version": "v7.1.21"
     },
     "cocoindex-code": {
         "cargoLock": null,
@@ -1044,6 +1044,26 @@
             "url": "https://github.com/p3psi-boo/MobilePi.git"
         },
         "version": "6d6e45c7da503f5b958a52fe6581a7f49ffd22fb"
+    },
+    "n9router": {
+        "cargoLock": null,
+        "date": "2026-05-25",
+        "extract": null,
+        "name": "n9router",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "bd0cc558730412bfab646a0f1feec348dd871d1c",
+            "sha256": "sha256-hHzSTe77OTZ704TPvUnMLWOEE4ysWdLEZZsNpg7cnr0=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/nightwalker89/n9router.git"
+        },
+        "version": "bd0cc558730412bfab646a0f1feec348dd871d1c"
     },
     "nf_deaf": {
         "cargoLock": null,
