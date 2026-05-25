@@ -808,6 +808,26 @@
         },
         "version": "567d2b66fb5d05545abd89a2843f1c7c94e8fff4"
     },
+    "komari-monitor-rs": {
+        "cargoLock": null,
+        "date": "2026-05-22",
+        "extract": null,
+        "name": "komari-monitor-rs",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "dc43edac07dec2edc0d99acb10d0fdeb07f771f1",
+            "sha256": "sha256-ZS8A4BD1Tzrum9c/Z2uP3BLChOs/H4xjTjjyI+qVJQ8=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/p3psi-boo/komari-monitor-rs.git"
+        },
+        "version": "dc43edac07dec2edc0d99acb10d0fdeb07f771f1"
+    },
     "komari-web": {
         "cargoLock": null,
         "date": "2026-05-07",

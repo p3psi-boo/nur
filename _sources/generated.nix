@@ -497,6 +497,20 @@
     };
     date = "2026-05-08";
   };
+  komari-monitor-rs = {
+    pname = "komari-monitor-rs";
+    version = "dc43edac07dec2edc0d99acb10d0fdeb07f771f1";
+    src = fetchgit {
+      url = "https://github.com/p3psi-boo/komari-monitor-rs.git";
+      rev = "dc43edac07dec2edc0d99acb10d0fdeb07f771f1";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-ZS8A4BD1Tzrum9c/Z2uP3BLChOs/H4xjTjjyI+qVJQ8=";
+    };
+    date = "2026-05-22";
+  };
   komari-web = {
     pname = "komari-web";
     version = "d93e15719e6bea6a09bf223a00995bf1b147ddd3";
