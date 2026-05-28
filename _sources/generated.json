@@ -74,12 +74,12 @@
             "name": null,
             "owner": "rustmailer",
             "repo": "bichon",
-            "rev": "1.3.0",
-            "sha256": "sha256-oukNbQyHHAzqEtGl6PiOgWApxdGbFi3c8Hn1PI+gtrI=",
+            "rev": "1.4.1",
+            "sha256": "sha256-EfFBZDKIkdAV7g4jjO0vHKRLItRJjIcArMIYcFUQW/Q=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "1.3.0"
+        "version": "1.4.1"
     },
     "binsider-bin": {
         "cargoLock": null,
@@ -253,12 +253,12 @@
             "name": null,
             "owner": "router-for-me",
             "repo": "CLIProxyAPI",
-            "rev": "v7.1.21",
-            "sha256": "sha256-db4krV1qYEaESWLLCuOfN6rgq+ZZJOeo5T/qfMzCMa8=",
+            "rev": "v7.1.28",
+            "sha256": "sha256-HC2McUg4agl85Cju20aDNR0iSWPrD5c/f0DxUo86fsM=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v7.1.21"
+        "version": "v7.1.28"
     },
     "cocoindex-code": {
         "cargoLock": null,
@@ -277,7 +277,7 @@
     },
     "codex-desktop-linux": {
         "cargoLock": null,
-        "date": "2026-05-25",
+        "date": "2026-05-28",
         "extract": null,
         "name": "codex-desktop-linux",
         "passthru": null,
@@ -287,13 +287,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "a174d9c4963ff73df8c1125d3503b1114329d41d",
-            "sha256": "sha256-YICpbz9a3XaxmUedOdgTfCdOUMjGSAfq8Vx8LQZ4ezU=",
+            "rev": "0142eb191eb589a9d8377a87222675d4a8e02ac3",
+            "sha256": "sha256-N20qkBc5Z47c5PKxWFn5XR+EgVw3Ok4WAl9ktsxCTTY=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/ilysenko/codex-desktop-linux.git"
         },
-        "version": "a174d9c4963ff73df8c1125d3503b1114329d41d"
+        "version": "0142eb191eb589a9d8377a87222675d4a8e02ac3"
     },
     "coe": {
         "cargoLock": null,
@@ -830,7 +830,7 @@
     },
     "komari-monitor-rs": {
         "cargoLock": null,
-        "date": "2026-05-22",
+        "date": "2026-05-26",
         "extract": null,
         "name": "komari-monitor-rs",
         "passthru": null,
@@ -840,13 +840,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "dc43edac07dec2edc0d99acb10d0fdeb07f771f1",
-            "sha256": "sha256-ZS8A4BD1Tzrum9c/Z2uP3BLChOs/H4xjTjjyI+qVJQ8=",
+            "rev": "a17a8b2ee5404f769ab28e7079f1b41b4be1cb12",
+            "sha256": "sha256-Bbh0vfAUKS8sf2JR+8N8UmtiL6oQ1VSzAkDNRPrRD0g=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/p3psi-boo/komari-monitor-rs.git"
         },
-        "version": "dc43edac07dec2edc0d99acb10d0fdeb07f771f1"
+        "version": "a17a8b2ee5404f769ab28e7079f1b41b4be1cb12"
     },
     "komari-web": {
         "cargoLock": null,
@@ -930,7 +930,7 @@
     },
     "lucebox-hub": {
         "cargoLock": null,
-        "date": "2026-05-25",
+        "date": "2026-05-28",
         "extract": null,
         "name": "lucebox-hub",
         "passthru": null,
@@ -940,13 +940,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "2c93676aafe530a7c2569a537a4608394aabb1ca",
-            "sha256": "sha256-ykXkcjP309DpCi/d+EzyRhZVohodyQgUYNu4ZToCvKs=",
+            "rev": "43457d8fd188ed29dd38805978c91f726e1f7da1",
+            "sha256": "sha256-wOSWCcellSbaNDO+TRoc73s2qiXPKNc+UB5VuF2ma9I=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/Luce-Org/lucebox-hub.git"
         },
-        "version": "2c93676aafe530a7c2569a537a4608394aabb1ca"
+        "version": "43457d8fd188ed29dd38805978c91f726e1f7da1"
     },
     "magiskboot-bin": {
         "cargoLock": null,
@@ -1027,7 +1027,7 @@
     },
     "mobilepi": {
         "cargoLock": null,
-        "date": "2026-05-25",
+        "date": "2026-05-28",
         "extract": null,
         "name": "mobilepi",
         "passthru": null,
@@ -1037,13 +1037,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "6d6e45c7da503f5b958a52fe6581a7f49ffd22fb",
-            "sha256": "sha256-wdvKZxBzz5Su2t7wN2M9PDjY4Wnpbpf+B+QWlgcySP4=",
+            "rev": "c4d0fc36758e24deb6a14401626a99fad18c369c",
+            "sha256": "sha256-LXrhOQwPdfq+2nuAfm+CkcuhrYFVds2iDHjhOT2ybyQ=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/p3psi-boo/MobilePi.git"
         },
-        "version": "6d6e45c7da503f5b958a52fe6581a7f49ffd22fb"
+        "version": "c4d0fc36758e24deb6a14401626a99fad18c369c"
     },
     "n9router": {
         "cargoLock": null,
@@ -1208,7 +1208,7 @@
     },
     "paperclip": {
         "cargoLock": null,
-        "date": "2026-05-25",
+        "date": "2026-05-27",
         "extract": null,
         "name": "paperclip",
         "passthru": null,
@@ -1218,13 +1218,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "ece8a51e22144df916d977f0ac98e4affe3fa48c",
-            "sha256": "sha256-Y50hPtZbXA86yiKARfuUDfETTuCVEu+tInz/TaaMS2s=",
+            "rev": "8da50dbcf8f98e82fb313c1fb023c13047d44bb6",
+            "sha256": "sha256-yHukboI46OJS5ppSPuU1OX6YRI1RRIbv8EcXoneKfgM=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/paperclipai/paperclip.git"
         },
-        "version": "ece8a51e22144df916d977f0ac98e4affe3fa48c"
+        "version": "8da50dbcf8f98e82fb313c1fb023c13047d44bb6"
     },
     "pg_duckdb": {
         "cargoLock": null,
@@ -1476,12 +1476,12 @@
             "name": null,
             "owner": "totoshko88",
             "repo": "RustConn",
-            "rev": "v0.14.7",
-            "sha256": "sha256-06eVJP93HsQVQWihnX2QZz1QAAyPzCxvq47SWeX90L0=",
+            "rev": "v0.15.0",
+            "sha256": "sha256-YUmjO/yJkVVqqfqopUdFOics7ADnntnh7ANMlO44Fw4=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.14.7"
+        "version": "v0.15.0"
     },
     "selector4nix": {
         "cargoLock": null,
@@ -1497,12 +1497,12 @@
             "name": null,
             "owner": "StarryReverie",
             "repo": "selector4nix",
-            "rev": "v0.4.2",
-            "sha256": "sha256-9CWlUdUm/zA54Msf/EMxS2uXTiyrdqBiETtIBkLAO78=",
+            "rev": "v0.5.0",
+            "sha256": "sha256-7OH+5mWUwmWFAdnz84VDo9OafQY4IhR+qMEygwFK1Y0=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.4.2"
+        "version": "v0.5.0"
     },
     "sigmo": {
         "cargoLock": null,
