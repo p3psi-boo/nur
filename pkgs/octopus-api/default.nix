@@ -67,7 +67,7 @@ in
     cp -r ${frontend}/. static/out/
   '';
 
-  vendorHash = "sha256-0GLn/CfYu1flQpYmR9IoaYd6pTWwqqMLS3x1DsqRres=";
+  vendorHash = "sha256-5pRwsWIRmB9jHeRSmb8ysOLU1Kz7Zbu4jYBXKZKQN3o=";
 
   # 运行时性能优化
   ldflags = [
