@@ -162,20 +162,6 @@
       sha256 = "sha256-zRHuoEw1Vx5LBnE+K+JLYxSOwF2Vyd4Kyd4sypJd84A=";
     };
   };
-  codex-desktop-linux = {
-    pname = "codex-desktop-linux";
-    version = "defa5d3c027cfcef51e0f4026e3446312cde30b8";
-    src = fetchgit {
-      url = "https://github.com/ilysenko/codex-desktop-linux.git";
-      rev = "defa5d3c027cfcef51e0f4026e3446312cde30b8";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-xqFWCCEa8i1zD0NolREtdT8JNDv2pNZ7DQnNvsm0Qas=";
-    };
-    date = "2026-05-30";
-  };
   coe = {
     pname = "coe";
     version = "c326261675a2455e6dd8c22576681e91644600ef";

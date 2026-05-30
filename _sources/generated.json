@@ -275,26 +275,6 @@
         },
         "version": "0.2.33"
     },
-    "codex-desktop-linux": {
-        "cargoLock": null,
-        "date": "2026-05-30",
-        "extract": null,
-        "name": "codex-desktop-linux",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "defa5d3c027cfcef51e0f4026e3446312cde30b8",
-            "sha256": "sha256-xqFWCCEa8i1zD0NolREtdT8JNDv2pNZ7DQnNvsm0Qas=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/ilysenko/codex-desktop-linux.git"
-        },
-        "version": "defa5d3c027cfcef51e0f4026e3446312cde30b8"
-    },
     "coe": {
         "cargoLock": null,
         "date": "2026-04-23",
