@@ -369,12 +369,12 @@
             "name": null,
             "owner": "dagu-org",
             "repo": "dagu",
-            "rev": "v2.7.4",
-            "sha256": "sha256-GJn8zM5pNON6jO+pO4U6b5NkYKFQff2iOekmz8I1g+g=",
+            "rev": "v2.7.5",
+            "sha256": "sha256-wi1J7JXjon+/rlKnLY1kCEJrZN9qzuIk53jJ9oQKd+U=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.7.4"
+        "version": "v2.7.5"
     },
     "dailyhot-api": {
         "cargoLock": null,
@@ -867,6 +867,27 @@
             "url": "https://github.com/p3psi-boo/lazyssh.git"
         },
         "version": "48995806bf1aa1c9c41bb8dff6b5ddd698539311"
+    },
+    "leaf": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "leaf",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "rivolink",
+            "repo": "leaf",
+            "rev": "1.23.2",
+            "sha256": "sha256-jBEMiHclkXVeXy59LSrR3tRL/+HEs0AhBGf1mMiaiqA=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "1.23.2"
     },
     "llama-cpp-turboquant": {
         "cargoLock": null,

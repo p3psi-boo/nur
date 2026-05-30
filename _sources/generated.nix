@@ -220,13 +220,13 @@
   };
   dagu = {
     pname = "dagu";
-    version = "v2.7.4";
+    version = "v2.7.5";
     src = fetchFromGitHub {
       owner = "dagu-org";
       repo = "dagu";
-      rev = "v2.7.4";
+      rev = "v2.7.5";
       fetchSubmodules = false;
-      sha256 = "sha256-GJn8zM5pNON6jO+pO4U6b5NkYKFQff2iOekmz8I1g+g=";
+      sha256 = "sha256-wi1J7JXjon+/rlKnLY1kCEJrZN9qzuIk53jJ9oQKd+U=";
     };
   };
   dailyhot-api = {
@@ -538,6 +538,17 @@
       sha256 = "sha256-/jywzjLZ51nSbiDbhw3H1eES3p0sZ9MSayGjJFQ+RKM=";
     };
     date = "2025-11-28";
+  };
+  leaf = {
+    pname = "leaf";
+    version = "1.23.2";
+    src = fetchFromGitHub {
+      owner = "rivolink";
+      repo = "leaf";
+      rev = "1.23.2";
+      fetchSubmodules = false;
+      sha256 = "sha256-jBEMiHclkXVeXy59LSrR3tRL/+HEs0AhBGf1mMiaiqA=";
+    };
   };
   llama-cpp-turboquant = {
     pname = "llama-cpp-turboquant";

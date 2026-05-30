@@ -524,6 +524,13 @@ fetch.git = "https://github.com/p3psi-boo/MobilePi.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
+# leaf - Terminal Markdown previewer
+[leaf]
+src.github_tag = "rivolink/leaf"
+src.prefix = ""
+src.include_regex = "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+fetch.github = "rivolink/leaf"
+
 # n9router - Self-hosted AI routing gateway for 40+ AI providers
 [n9router]
 src.git = "https://github.com/nightwalker89/n9router.git"
