@@ -14,7 +14,7 @@ let
     pname = "komari-web";
     version = "0-unstable-${generated.komari-web.date}";
     inherit (generated.komari-web) src;
-    npmDepsHash = "sha256-klP49fxwnuYBNaE7huKdpTDreieCGDnO3E4eOE3j+CE=";
+    npmDepsHash = "sha256-4X1AOUzsgrbxIsrI2FKVm3Qsz/WqhIUxxS+RiIw3P6M=";
 
     env.CI = "true";
 
@@ -22,8 +22,16 @@ let
       runHook preInstall
       mkdir -p $out
       cp -r dist $out/
-      cp *.json $out/ 2>/dev/null || true
-      cp preview.png perview.png $out/ 2>/dev/null || true
+      cp komari-theme.json $out/
+      cp preview.png $out/ 2>/dev/null || true
+      cp perview.png $out/ 2>/dev/null || true
+      # Ensure both filenames exist for compatibility
+      if [ -f $out/preview.png ] && [ ! -f $out/perview.png ]; then
+        cp $out/preview.png $out/perview.png
+      fi
+      if [ -f $out/perview.png ] && [ ! -f $out/preview.png ]; then
+        cp $out/perview.png $out/preview.png
+      fi
       runHook postInstall
     '';
 
@@ -39,7 +47,7 @@ let
     pname = "komari";
     version = backendVersion;
     inherit (generated.komari) src;
-    vendorHash = "sha256-Gm+DH0oDv/hV3JzxJRsRMp0DXPAOfoFMAz60dqEMSig=";
+    vendorHash = "sha256-m3UOkJ299aKop7SXho+DNl41DRHUr42OHGFfLV3OPe0=";
 
     env = {
       CGO_ENABLED = "1";
@@ -47,11 +55,18 @@ let
     };
 
     preBuild = ''
-      mkdir -p public/defaultTheme
-      cp -r ${komariWeb}/dist public/defaultTheme/
-      for f in ${komariWeb}/*.{json,png}; do
-        [ -e "$f" ] && cp "$f" public/defaultTheme/
-      done
+      mkdir -p web/public/defaultTheme/dist
+      cp -r ${komariWeb}/dist/* web/public/defaultTheme/dist/
+      cp -f ${komariWeb}/komari-theme.json web/public/defaultTheme/
+      if [ -f ${komariWeb}/preview.png ]; then cp -f ${komariWeb}/preview.png web/public/defaultTheme/; fi
+      if [ -f ${komariWeb}/perview.png ]; then cp -f ${komariWeb}/perview.png web/public/defaultTheme/; fi
+      # Compatibility: ensure both filenames exist if only one is present
+      if [ -f web/public/defaultTheme/preview.png ] && [ ! -f web/public/defaultTheme/perview.png ]; then
+        cp -f web/public/defaultTheme/preview.png web/public/defaultTheme/perview.png
+      fi
+      if [ -f web/public/defaultTheme/perview.png ] && [ ! -f web/public/defaultTheme/preview.png ]; then
+        cp -f web/public/defaultTheme/perview.png web/public/defaultTheme/preview.png
+      fi
     '';
 
     ldflags = [
