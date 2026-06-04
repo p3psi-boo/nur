@@ -488,6 +488,27 @@
         },
         "version": "b226ff98856e59be7f091bc7d81ceba8ac38bd19"
     },
+    "fdb": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "fdb",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "andrzejchm",
+            "repo": "fdb",
+            "rev": "v1.9.0",
+            "sha256": "sha256-2DRMbYHf8dVTiEmggcPRh1oaDhNlxqB+bH9QhKpNi0Q=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.9.0"
+    },
     "firm": {
         "cargoLock": null,
         "date": "2026-03-11",

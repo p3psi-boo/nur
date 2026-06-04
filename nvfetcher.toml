@@ -489,6 +489,12 @@ fetch.git = "https://github.com/Xuanwo/xurl.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
+# fdb - Flutter Debug Bridge
+[fdb]
+src.github_tag = "andrzejchm/fdb"
+src.include_regex = "^v[0-9].*"
+fetch.github = "andrzejchm/fdb"
+
 # proxy_pool - Python ProxyPool for web spider
 [proxy_pool]
 src.git = "https://github.com/p3psi-boo/proxy_pool.git"

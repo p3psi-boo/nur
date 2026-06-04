@@ -295,6 +295,17 @@
     };
     date = "2025-12-11";
   };
+  fdb = {
+    pname = "fdb";
+    version = "v1.9.0";
+    src = fetchFromGitHub {
+      owner = "andrzejchm";
+      repo = "fdb";
+      rev = "v1.9.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-2DRMbYHf8dVTiEmggcPRh1oaDhNlxqB+bH9QhKpNi0Q=";
+    };
+  };
   firm = {
     pname = "firm";
     version = "4144d4a08bdf285c09ed2b9781e5ec448004e506";
