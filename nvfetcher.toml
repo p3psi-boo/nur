@@ -544,9 +544,3 @@ fetch.git = "https://github.com/nightwalker89/n9router.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
-# herdr - Terminal workspace manager for AI coding agents (Rust + vendored Zig libghostty-vt)
-[herdr]
-src.github_tag = "ogulcancelik/herdr"
-src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
-src.prefix = "v"
-fetch.github = "ogulcancelik/herdr"
