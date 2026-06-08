@@ -47,13 +47,13 @@
   };
   bichon = {
     pname = "bichon";
-    version = "1.4.3";
+    version = "1.5.1";
     src = fetchFromGitHub {
       owner = "rustmailer";
       repo = "bichon";
-      rev = "1.4.3";
+      rev = "1.5.1";
       fetchSubmodules = false;
-      sha256 = "sha256-XOEP429FOrTVd7eUkN/gICPgemTC9/h/NegiVyqTqmA=";
+      sha256 = "sha256-cNl0RNi/2BW72SytFicEclqwEOtAHL4iOso9WeoPvoQ=";
     };
   };
   binsider-bin = {
@@ -145,21 +145,21 @@
   };
   cliproxyapi = {
     pname = "cliproxyapi";
-    version = "v7.1.37";
+    version = "v7.1.54";
     src = fetchFromGitHub {
       owner = "router-for-me";
       repo = "CLIProxyAPI";
-      rev = "v7.1.37";
+      rev = "v7.1.54";
       fetchSubmodules = false;
-      sha256 = "sha256-5D5QvhIUh71oJjp2fBv/fpFV2zLl3RBdtvspxbuqCqc=";
+      sha256 = "sha256-WqUNpT8msyUThTniVmSXdbC7vciUW6W0qsLZELFxSVY=";
     };
   };
   cocoindex-code = {
     pname = "cocoindex-code";
-    version = "0.2.33";
+    version = "0.2.34";
     src = fetchurl {
-      url = "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.33.tar.gz";
-      sha256 = "sha256-zRHuoEw1Vx5LBnE+K+JLYxSOwF2Vyd4Kyd4sypJd84A=";
+      url = "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.34.tar.gz";
+      sha256 = "sha256-68z3BdHjEDBva30Mz4+Smo8yATnnLX+a3N1jJxIhpIo=";
     };
   };
   coe = {
@@ -178,17 +178,17 @@
   };
   commandcode2api = {
     pname = "commandcode2api";
-    version = "8ea3fd40c8a910b4c042f84440eae02cc2abdd1c";
+    version = "30a6adc138b118ffda394ba162cf26d85fa1f13f";
     src = fetchgit {
       url = "https://github.com/p3psi-boo/commandcode2api.git";
-      rev = "8ea3fd40c8a910b4c042f84440eae02cc2abdd1c";
+      rev = "30a6adc138b118ffda394ba162cf26d85fa1f13f";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-dXu5+6+yeraWxy8SfR08QQTBSSfic/J20V41ujhKDxc=";
+      sha256 = "sha256-g12WHKkkoZO8OSyypm1EGEIKJxhpvJv7yqvV5NUTHdw=";
     };
-    date = "2026-05-25";
+    date = "2026-06-03";
   };
   cookiecloud-rs = {
     pname = "cookiecloud-rs";
@@ -220,13 +220,13 @@
   };
   dagu = {
     pname = "dagu";
-    version = "v2.7.7";
+    version = "v2.7.12";
     src = fetchFromGitHub {
       owner = "dagu-org";
       repo = "dagu";
-      rev = "v2.7.7";
+      rev = "v2.7.12";
       fetchSubmodules = false;
-      sha256 = "sha256-NISU0lCJCqj1gGMffClLxlopjrQ2adK+q0W/c6TIdC0=";
+      sha256 = "sha256-G6aIj1BOWERxE2AdFht7iGjo+5QQ135mRCTyKXcV0A8=";
     };
   };
   dailyhot-api = {
@@ -389,17 +389,17 @@
   };
   grok2api = {
     pname = "grok2api";
-    version = "64a71f16e02ef100f64256c61923047621d45270";
+    version = "5805cbb5a0e5338d2be6f86bc1e6f7682d8311ed";
     src = fetchgit {
       url = "https://github.com/chenyme/grok2api.git";
-      rev = "64a71f16e02ef100f64256c61923047621d45270";
+      rev = "5805cbb5a0e5338d2be6f86bc1e6f7682d8311ed";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-42z45WpgmCJclLs1tvckwvs6CWO4neRjRnUOLhEOsoQ=";
+      sha256 = "sha256-7w1HvQ6eMgtRMONiqcQ7b7o7jVc0amgNhA9Ao7i1CCc=";
     };
-    date = "2026-04-28";
+    date = "2026-06-03";
   };
   harlequin-mysql = {
     pname = "harlequin-mysql";
@@ -471,17 +471,17 @@
   };
   jarm = {
     pname = "jarm";
-    version = "dcd6ee2d5d9a819fe2200f7a6c1f478b896a2f5d";
+    version = "2c0cf5ce8418c7a1d03edb219acea3c18e068289";
     src = fetchgit {
       url = "https://github.com/salesforce/jarm.git";
-      rev = "dcd6ee2d5d9a819fe2200f7a6c1f478b896a2f5d";
+      rev = "2c0cf5ce8418c7a1d03edb219acea3c18e068289";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-2Xy4osJOSrrc/UkEifeQTQejcJ02szNzE3fMO5PzQz8=";
+      sha256 = "sha256-PPtGS2pYXZga0eYtrKeg4Q/XpIhhTuuILZF+Bw8203c=";
     };
-    date = "2021-10-12";
+    date = "2026-06-02";
   };
   jd-gui = {
     pname = "jd-gui";
@@ -496,17 +496,17 @@
   };
   komari = {
     pname = "komari";
-    version = "fb0b9b991058aa35e732871d0a88d32a94c983c5";
+    version = "9d914e70b90dce6fb9f6a0fa3655a033d54a07fa";
     src = fetchgit {
       url = "https://github.com/komari-monitor/komari.git";
-      rev = "fb0b9b991058aa35e732871d0a88d32a94c983c5";
+      rev = "9d914e70b90dce6fb9f6a0fa3655a033d54a07fa";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-UeV+h0g/zGKYtgLMEOutw2XWf14FXGGRUT2nKQCFyc4=";
+      sha256 = "sha256-8IIruLRJAzaxuEWto81DopHXJrq2SizZfdedXXmikJk=";
     };
-    date = "2026-05-31";
+    date = "2026-06-08";
   };
   komari-monitor-rs = {
     pname = "komari-monitor-rs";
@@ -524,17 +524,17 @@
   };
   komari-web = {
     pname = "komari-web";
-    version = "4f1ea05bf7ac3579731080ee860550433f600a2d";
+    version = "733337a111008e5f9d824dcf7983346490461877";
     src = fetchgit {
       url = "https://github.com/komari-monitor/komari-web.git";
-      rev = "4f1ea05bf7ac3579731080ee860550433f600a2d";
+      rev = "733337a111008e5f9d824dcf7983346490461877";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-CA1z7czYD1iFvwYNIUPsQ+9dZaZJhaSJiJj7OZGNKe4=";
+      sha256 = "sha256-BHwy/q/raaNcFLmGZKUnusTuRQg+sxYgQ+sTbx4/DP4=";
     };
-    date = "2026-05-31";
+    date = "2026-06-08";
   };
   lazyssh = {
     pname = "lazyssh";
@@ -552,13 +552,13 @@
   };
   leaf = {
     pname = "leaf";
-    version = "1.24.0";
+    version = "1.24.1";
     src = fetchFromGitHub {
       owner = "rivolink";
       repo = "leaf";
-      rev = "1.24.0";
+      rev = "1.24.1";
       fetchSubmodules = false;
-      sha256 = "sha256-wqp2VUBqYFk9eLrVuNqmUyEPINYhuWf5Iq8Ye0oicEA=";
+      sha256 = "sha256-8APYzvxKqvF9BbGkdpphbmpf+8gqNqfS/ao01sy4opU=";
     };
   };
   llama-cpp-turboquant = {
@@ -591,17 +591,17 @@
   };
   lucebox-hub = {
     pname = "lucebox-hub";
-    version = "8305b6c2b10b303e71383bd9777a9664370976c0";
+    version = "33c3122828644fb94183195b76952c34c186905d";
     src = fetchgit {
       url = "https://github.com/Luce-Org/lucebox-hub.git";
-      rev = "8305b6c2b10b303e71383bd9777a9664370976c0";
+      rev = "33c3122828644fb94183195b76952c34c186905d";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-Wu6LUdSPQyVnoG3l5dKY5ddBYwm1wfGLnCPq5kP4t1U=";
+      sha256 = "sha256-ky/sF4id3fF7hL7F/N02cQ6bikjOGOifLYXh1z89FdY=";
     };
-    date = "2026-05-31";
+    date = "2026-06-08";
   };
   magiskboot-bin = {
     pname = "magiskboot-bin";
@@ -624,13 +624,13 @@
   };
   micyou = {
     pname = "micyou";
-    version = "v1.3.4hotfix";
+    version = "v1.3.5";
     src = fetchFromGitHub {
       owner = "LanRhyme";
       repo = "MicYou";
-      rev = "v1.3.4hotfix";
+      rev = "v1.3.5";
       fetchSubmodules = false;
-      sha256 = "sha256-6JyfNrhNhdeX5F3Hy132ZITpmqQsFYJ1Uwx3EVkij9Q=";
+      sha256 = "sha256-qefp7gG7DfE/GN81UB981KvS4Q2oIxNLM2/76NLacXs=";
     };
   };
   mihomo-to-uri = {
@@ -649,31 +649,31 @@
   };
   mobilepi = {
     pname = "mobilepi";
-    version = "04f4a4250e9cb1fef2ce2753ac49b397da40bb3e";
+    version = "255b6cab076bf634409574a548f76b3111f30c1e";
     src = fetchgit {
       url = "https://github.com/p3psi-boo/MobilePi.git";
-      rev = "04f4a4250e9cb1fef2ce2753ac49b397da40bb3e";
+      rev = "255b6cab076bf634409574a548f76b3111f30c1e";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-Zd2TzUlkXWCt4LTUjccDIZ4BrZrs3ma2CRsSwKg4K6s=";
+      sha256 = "sha256-yzjQeHwwrn96DgqRlxNBx7L9wD8mkpGrg7O11VBFdzE=";
     };
-    date = "2026-06-01";
+    date = "2026-06-02";
   };
   n9router = {
     pname = "n9router";
-    version = "9172a4784dcaf08a16479503dd19bf0083cd3a72";
+    version = "a002ec50f1546c4cdf43fbb473b1480eeeb6a292";
     src = fetchgit {
       url = "https://github.com/nightwalker89/n9router.git";
-      rev = "9172a4784dcaf08a16479503dd19bf0083cd3a72";
+      rev = "a002ec50f1546c4cdf43fbb473b1480eeeb6a292";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-zES1ZGGT8/6Q+KfzAtBvqWpNntoHytsqLVsfqwwmq7U=";
+      sha256 = "sha256-s8VzswM2uPibs0W4APKWvytOpQ8cgIKwBD9Pe69qD2Y=";
     };
-    date = "2026-05-31";
+    date = "2026-06-06";
   };
   nf_deaf = {
     pname = "nf_deaf";
@@ -719,28 +719,17 @@
   };
   oli = {
     pname = "oli";
-    version = "fd6e9563272b49d23129bdc72bfdd7a2d73185b5";
+    version = "32f1cc2b5840718a26b286f8b2b8975401f7e720";
     src = fetchgit {
       url = "https://github.com/apache/opendal-oli.git";
-      rev = "fd6e9563272b49d23129bdc72bfdd7a2d73185b5";
+      rev = "32f1cc2b5840718a26b286f8b2b8975401f7e720";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-qd1/AQQaYMtCF/aFm8blyrXHhffsxRXqCwFdgCSa85Q=";
+      sha256 = "sha256-jsWtl+OchX6tgoyr1xCzZZfpA3UzcCfTzwl7Xc1sojU=";
     };
-    date = "2026-05-08";
-  };
-  openalice = {
-    pname = "openalice";
-    version = "v0.30.0-beta.1";
-    src = fetchFromGitHub {
-      owner = "TraderAlice";
-      repo = "OpenAlice";
-      rev = "v0.30.0-beta.1";
-      fetchSubmodules = false;
-      sha256 = "sha256-Sr6iW5LCxBdxp7Ia1jmIUIiNAQ3CIh+1zdXTP5+U+iw=";
-    };
+    date = "2026-06-03";
   };
   openixcli = {
     pname = "openixcli";
@@ -769,20 +758,6 @@
       sha256 = "sha256-hCkd7yBHND/UxRjPNU7SaG0l8MvnLgFpSgAms1quAeM=";
     };
     date = "2026-01-31";
-  };
-  paperclip = {
-    pname = "paperclip";
-    version = "9f8636cf49c6886ce2487c7683aae6acaf4e8126";
-    src = fetchgit {
-      url = "https://github.com/paperclipai/paperclip.git";
-      rev = "9f8636cf49c6886ce2487c7683aae6acaf4e8126";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-Szi92aO1rydPjbvmxGNbNto+QKL3z4/4TNrN86SpSkk=";
-    };
-    date = "2026-05-31";
   };
   pg_duckdb = {
     pname = "pg_duckdb";
@@ -866,13 +841,13 @@
   };
   pymicro-wakeword = {
     pname = "pymicro-wakeword";
-    version = "v2.2.1";
+    version = "v2.3.0";
     src = fetchFromGitHub {
       owner = "OHF-Voice";
       repo = "pymicro-wakeword";
-      rev = "v2.2.1";
+      rev = "v2.3.0";
       fetchSubmodules = false;
-      sha256 = "sha256-PLGwpmmiLwpDn+Dh5HhaE2w7hJLC0xK/wsuhxxR8rwU=";
+      sha256 = "sha256-Ie7juxo1ae5VnLuF/IBy9GCMUprwigJI1UqAT+KDztQ=";
     };
   };
   python-mpv = {
@@ -924,24 +899,24 @@
   };
   rustconn = {
     pname = "rustconn";
-    version = "v0.15.4";
+    version = "v0.15.10";
     src = fetchFromGitHub {
       owner = "totoshko88";
       repo = "RustConn";
-      rev = "v0.15.4";
+      rev = "v0.15.10";
       fetchSubmodules = false;
-      sha256 = "sha256-m/nrzP7NJmDazSL0h7vGfTcVTDhhO4nyWe/RORDdvPA=";
+      sha256 = "sha256-D+9TQiRsY5IiX/ZDtYo1J4Cnu1QxRSa0nQrVamy+VlY=";
     };
   };
   selector4nix = {
     pname = "selector4nix";
-    version = "v0.5.0";
+    version = "v0.6.0";
     src = fetchFromGitHub {
       owner = "StarryReverie";
       repo = "selector4nix";
-      rev = "v0.5.0";
+      rev = "v0.6.0";
       fetchSubmodules = false;
-      sha256 = "sha256-7OH+5mWUwmWFAdnz84VDo9OafQY4IhR+qMEygwFK1Y0=";
+      sha256 = "sha256-e1MmfZyDGFQFBZJbrLhnl2Aq6vLoyH3dg6XTcJZ79w4=";
     };
   };
   sigmo = {
@@ -1147,17 +1122,6 @@
       sha256 = "sha256-ZxsFScCas6Uvt91eWzdwfTAsWZnVooRp/QaIp2IdHVw=";
     };
     date = "2026-02-25";
-  };
-  vllm = {
-    pname = "vllm";
-    version = "v0.22.0";
-    src = fetchFromGitHub {
-      owner = "vllm-project";
-      repo = "vllm";
-      rev = "v0.22.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-BiaC6inRc5GJVSZMplhQYT8/RLyvFydpDAD6YZPMXTo=";
-    };
   };
   web-search = {
     pname = "web-search";

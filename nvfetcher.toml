@@ -1,8 +1,3 @@
-[paperclip]
-src.git = "https://github.com/paperclipai/paperclip.git"
-fetch.git = "https://github.com/paperclipai/paperclip.git"
-git.fetch_submodules = false
-
 [okmain]
 src.git = "https://github.com/si14/okmain.git"
 fetch.git = "https://github.com/si14/okmain.git"
@@ -114,10 +109,6 @@ fetch.git = "https://github.com/jaseg/python-mpv.git"
 src.git = "https://github.com/saveweb/wikiteam3.git"
 fetch.git = "https://github.com/saveweb/wikiteam3.git"
 src.branch = "v4-main"
-
-[vllm]
-src.github = "vllm-project/vllm"
-fetch.github = "vllm-project/vllm"
 
 [vgpu_unlock-rs]
 src.github_tag = "rbqvq/vgpu_unlock-rs"
@@ -289,9 +280,6 @@ fetch.git = "https://github.com/p3psi-boo/coe.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
-[openalice]
-src.github_tag = "TraderAlice/OpenAlice"
-fetch.github = "TraderAlice/OpenAlice"
 [grok2api]
 src.git = "https://github.com/chenyme/grok2api.git"
 fetch.git = "https://github.com/chenyme/grok2api.git"
