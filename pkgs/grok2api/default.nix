@@ -17,7 +17,7 @@ let
     pname = "grok2api-python";
     version = "0.0.0";
     lockFile = "${src}/uv.lock";
-    bins = [ "python" "python3" "uvicorn" ];
+    bins = [ "python" "python3" "uvicorn" "granian" ];
     meta = {
       description = "Grok2API Python environment";
     };
@@ -47,8 +47,7 @@ stdenv.mkDerivation {
     done
 
     # Create grok2api wrapper script
-    # upstream main.py handles env vars (SERVER_HOST, SERVER_PORT, SERVER_WORKERS, LOG_LEVEL)
-    # and calls uvicorn internally.
+    # upstream: granian --interface asgi --host 0.0.0.0 --port 8000 --workers 1 app.main:app
     cat > $out/bin/grok2api << 'EOF'
     #!/usr/bin/env bash
     set -e
@@ -61,7 +60,7 @@ stdenv.mkDerivation {
     # Change to source directory
     cd @src@
 
-    exec @python@ main.py "''$@"
+    exec @python@ -m granian app.main:app "''$@"
     EOF
 
     substituteInPlace $out/bin/grok2api \
