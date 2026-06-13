@@ -632,7 +632,7 @@
     },
     "grok2api": {
         "cargoLock": null,
-        "date": "2026-06-13",
+        "date": "2026-06-12",
         "extract": null,
         "name": "grok2api",
         "passthru": null,
@@ -642,13 +642,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "231000a44982719ffe50e0892a0065d62ecc48f2",
-            "sha256": "sha256-MdS5dR0LMf60A3jHxkw9AHWYm3pmTHvaNU89FVkQKts=",
+            "rev": "74f69f94c9d7d816c2fb641a4829c206431beb4f",
+            "sha256": "sha256-ifL5o3C9UVRUQXS3Ee4N841WXDqOFb6blGGT29L1Lds=",
             "sparseCheckout": [],
             "type": "git",
-            "url": "https://github.com/XianYuDaXian/grok2api.git"
+            "url": "https://github.com/jiujiu532/grok2api.git"
         },
-        "version": "231000a44982719ffe50e0892a0065d62ecc48f2"
+        "version": "74f69f94c9d7d816c2fb641a4829c206431beb4f"
     },
     "harlequin-mysql": {
         "cargoLock": null,
@@ -1714,7 +1714,7 @@
     },
     "usque": {
         "cargoLock": null,
-        "date": "2026-05-30",
+        "date": "2026-06-13",
         "extract": null,
         "name": "usque",
         "passthru": null,
@@ -1724,13 +1724,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "827ebf177da2dbcbf20448305c19e45e21e30c3b",
-            "sha256": "sha256-+iuVCjwpngpcCSZBlhCLebI5J/wKgZ6TserCsK2xL4U=",
+            "rev": "10bc84c032210a2fb565c8393a60d141afb5d500",
+            "sha256": "sha256-4vFlHJINMDlaOC+R5Q+vUhmyrXlv1r8UiNVRx8juxZ4=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/Diniboy1123/usque.git"
         },
-        "version": "827ebf177da2dbcbf20448305c19e45e21e30c3b"
+        "version": "10bc84c032210a2fb565c8393a60d141afb5d500"
     },
     "ut": {
         "cargoLock": null,

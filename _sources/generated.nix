@@ -389,17 +389,17 @@
   };
   grok2api = {
     pname = "grok2api";
-    version = "231000a44982719ffe50e0892a0065d62ecc48f2";
+    version = "74f69f94c9d7d816c2fb641a4829c206431beb4f";
     src = fetchgit {
-      url = "https://github.com/XianYuDaXian/grok2api.git";
-      rev = "231000a44982719ffe50e0892a0065d62ecc48f2";
+      url = "https://github.com/jiujiu532/grok2api.git";
+      rev = "74f69f94c9d7d816c2fb641a4829c206431beb4f";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-MdS5dR0LMf60A3jHxkw9AHWYm3pmTHvaNU89FVkQKts=";
+      sha256 = "sha256-ifL5o3C9UVRUQXS3Ee4N841WXDqOFb6blGGT29L1Lds=";
     };
-    date = "2026-06-13";
+    date = "2026-06-12";
   };
   harlequin-mysql = {
     pname = "harlequin-mysql";
@@ -1055,17 +1055,17 @@
   };
   usque = {
     pname = "usque";
-    version = "827ebf177da2dbcbf20448305c19e45e21e30c3b";
+    version = "10bc84c032210a2fb565c8393a60d141afb5d500";
     src = fetchgit {
       url = "https://github.com/Diniboy1123/usque.git";
-      rev = "827ebf177da2dbcbf20448305c19e45e21e30c3b";
+      rev = "10bc84c032210a2fb565c8393a60d141afb5d500";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-+iuVCjwpngpcCSZBlhCLebI5J/wKgZ6TserCsK2xL4U=";
+      sha256 = "sha256-4vFlHJINMDlaOC+R5Q+vUhmyrXlv1r8UiNVRx8juxZ4=";
     };
-    date = "2026-05-30";
+    date = "2026-06-13";
   };
   ut = {
     pname = "ut";
