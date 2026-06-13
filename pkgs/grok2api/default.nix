@@ -111,7 +111,7 @@ stdenv.mkDerivation {
     # Line buffering for logs
     export PYTHONUNBUFFERED=1
     # Optimize Python memory allocator for small objects
-    export PYTHONMALLOC= pymalloc
+    export PYTHONMALLOC=pymalloc
     
     # ===== HTTP Client Tuning (for requests to Grok API) =====
     # Connection pool size for outbound HTTP requests

@@ -525,6 +525,11 @@ src.prefix = ""
 src.include_regex = "^[0-9]+\\.[0-9]+\\.[0-9]+$"
 fetch.github = "rivolink/leaf"
 
+# omniroute - Free AI gateway: one endpoint, 160+ providers
+[omniroute]
+src.github = "diegosouzapw/OmniRoute"
+fetch.github = "diegosouzapw/OmniRoute"
+
 # n9router - Self-hosted AI routing gateway for 40+ AI providers
 [n9router]
 src.git = "https://github.com/nightwalker89/n9router.git"
