@@ -691,17 +691,17 @@
   };
   octopus-api = {
     pname = "octopus-api";
-    version = "8e45d8b0bce6f0d8808f6cd7f979e17ef1ab1b0a";
+    version = "f79365ca0c84966daeead0e70ece04ed6969dda7";
     src = fetchgit {
       url = "https://github.com/p3psi-boo/octopus.git";
-      rev = "8e45d8b0bce6f0d8808f6cd7f979e17ef1ab1b0a";
+      rev = "f79365ca0c84966daeead0e70ece04ed6969dda7";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-qzBa/c6DKElxStPnLBNwskuptLG3aAXwyqexzu5a/uw=";
+      sha256 = "sha256-mdVKnhPGHaZVursHVbDed6Q29t5LUtr4Rbw72g0Voaw=";
     };
-    date = "2026-05-30";
+    date = "2026-06-13";
   };
   okmain = {
     pname = "okmain";
