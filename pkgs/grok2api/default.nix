@@ -57,14 +57,19 @@ stdenv.mkDerivation {
       mkdir -p "''$DATA_DIR"
     fi
 
-    # Change to source directory
-    cd @src@
+    _HOST="''${SERVER_HOST:-0.0.0.0}"
+    _PORT="''${SERVER_PORT:-8000}"
+    _WORKERS="''${SERVER_WORKERS:-1}"
 
-    exec @python@ -m granian app.main:app "''$@"
+    exec @python@ -m granian app.main:app \
+      --interface asgi \
+      --host "$_HOST" \
+      --port "$_PORT" \
+      --workers "$_WORKERS" \
+      "''$@"
     EOF
 
     substituteInPlace $out/bin/grok2api \
-      --subst-var-by src "${src}" \
       --subst-var-by python "${pythonEnv}/bin/python3"
 
     chmod +x $out/bin/grok2api
