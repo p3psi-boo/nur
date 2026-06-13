@@ -281,8 +281,8 @@ git.fetch_submodules = false
 git.get_commit_date = true
 
 [grok2api]
-src.git = "https://github.com/chenyme/grok2api.git"
-fetch.git = "https://github.com/chenyme/grok2api.git"
+src.git = "https://github.com/XianYuDaXian/grok2api.git"
+fetch.git = "https://github.com/XianYuDaXian/grok2api.git"
 git.fetch_submodules = false
 
 # Focaltech fingerprint reader driver bundle

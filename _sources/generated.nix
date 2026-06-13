@@ -389,17 +389,17 @@
   };
   grok2api = {
     pname = "grok2api";
-    version = "5805cbb5a0e5338d2be6f86bc1e6f7682d8311ed";
+    version = "231000a44982719ffe50e0892a0065d62ecc48f2";
     src = fetchgit {
-      url = "https://github.com/chenyme/grok2api.git";
-      rev = "5805cbb5a0e5338d2be6f86bc1e6f7682d8311ed";
+      url = "https://github.com/XianYuDaXian/grok2api.git";
+      rev = "231000a44982719ffe50e0892a0065d62ecc48f2";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-7w1HvQ6eMgtRMONiqcQ7b7o7jVc0amgNhA9Ao7i1CCc=";
+      sha256 = "sha256-MdS5dR0LMf60A3jHxkw9AHWYm3pmTHvaNU89FVkQKts=";
     };
-    date = "2026-06-03";
+    date = "2026-06-13";
   };
   harlequin-mysql = {
     pname = "harlequin-mysql";

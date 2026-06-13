@@ -1,5 +1,5 @@
 # grok2api - Grok2API built with FastAPI (Runtime Performance Optimized)
-# https://github.com/chenyme/grok2api
+# https://github.com/XianYuDaXian/grok2api
 # Runtime optimizations for I/O-heavy workloads (API proxy to Grok)
 {
   lib,
@@ -166,7 +166,7 @@ stdenv.mkDerivation {
 
   meta = {
     description = "Grok2API - FastAPI-based Grok API with runtime performance optimizations";
-    homepage = "https://github.com/chenyme/grok2api";
+    homepage = "https://github.com/XianYuDaXian/grok2api";
     license = lib.licenses.mit;
     mainProgram = "grok2api";
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
