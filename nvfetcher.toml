@@ -537,3 +537,10 @@ fetch.git = "https://github.com/nightwalker89/n9router.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
+
+# sugar-wifi-conf - BLE service to configure WiFi + SSH-over-BLE tunnel (PiSugar)
+[sugar-wifi-conf]
+src.git = "https://github.com/PiSugar/sugar-wifi-conf.git"
+fetch.git = "https://github.com/PiSugar/sugar-wifi-conf.git"
+git.fetch_submodules = false
+git.get_commit_date = true

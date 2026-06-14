@@ -1650,6 +1650,26 @@
         },
         "version": "866b2566f9244374e7df5f0f404098c5f81e7b06"
     },
+    "sugar-wifi-conf": {
+        "cargoLock": null,
+        "date": "2026-04-09",
+        "extract": null,
+        "name": "sugar-wifi-conf",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "4813c9d4568fa1ce3b1f1b6f354cbab1500d6542",
+            "sha256": "sha256-DtehGwT1Szy5qUL5Iwpn9oIevhUdRap5AdV36mWDqRo=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/PiSugar/sugar-wifi-conf.git"
+        },
+        "version": "4813c9d4568fa1ce3b1f1b6f354cbab1500d6542"
+    },
     "tcp-brutal": {
         "cargoLock": null,
         "date": "2026-04-26",

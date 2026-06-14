@@ -1017,6 +1017,20 @@
     };
     date = "2022-08-08";
   };
+  sugar-wifi-conf = {
+    pname = "sugar-wifi-conf";
+    version = "4813c9d4568fa1ce3b1f1b6f354cbab1500d6542";
+    src = fetchgit {
+      url = "https://github.com/PiSugar/sugar-wifi-conf.git";
+      rev = "4813c9d4568fa1ce3b1f1b6f354cbab1500d6542";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-DtehGwT1Szy5qUL5Iwpn9oIevhUdRap5AdV36mWDqRo=";
+    };
+    date = "2026-04-09";
+  };
   tcp-brutal = {
     pname = "tcp-brutal";
     version = "f11e52d88c7ad2285896de018c2d96d4687f0ab6";
