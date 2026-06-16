@@ -383,6 +383,11 @@ git.get_commit_date = true
 src.github = "tconbeer/harlequin-mysql"
 fetch.github = "tconbeer/harlequin-mysql"
 
+# mlx-optiq - Mixed-precision quantization optimizer for Apple Silicon MLX
+[mlx-optiq]
+src.manual = "0.2.4"
+fetch.url = "https://files.pythonhosted.org/packages/source/m/mlx-optiq/mlx_optiq-$ver.tar.gz"
+
 # lucebox-hub - CUDA-first local LLM inference experiments; package the dflash runtime and helpers
 [lucebox-hub]
 src.git = "https://github.com/Luce-Org/lucebox-hub.git"

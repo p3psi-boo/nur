@@ -647,6 +647,14 @@
     };
     date = "2026-05-19";
   };
+  mlx-optiq = {
+    pname = "mlx-optiq";
+    version = "0.2.4";
+    src = fetchurl {
+      url = "https://files.pythonhosted.org/packages/source/m/mlx-optiq/mlx_optiq-0.2.4.tar.gz";
+      sha256 = "sha256-3XUYB71Aqqr3jtoiVG3eDsQis7OhC2J8eka18edrnQ0=";
+    };
+  };
   mobilepi = {
     pname = "mobilepi";
     version = "8847d4e6fdf59563d4284f812c4ac36ff2bda1e3";

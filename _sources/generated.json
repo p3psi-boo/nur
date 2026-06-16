@@ -1047,6 +1047,21 @@
         },
         "version": "ce092a6b93a191873c4c63beb694654ac38b5e96"
     },
+    "mlx-optiq": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "mlx-optiq",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-3XUYB71Aqqr3jtoiVG3eDsQis7OhC2J8eka18edrnQ0=",
+            "type": "url",
+            "url": "https://files.pythonhosted.org/packages/source/m/mlx-optiq/mlx_optiq-0.2.4.tar.gz"
+        },
+        "version": "0.2.4"
+    },
     "mobilepi": {
         "cargoLock": null,
         "date": "2026-06-12",
