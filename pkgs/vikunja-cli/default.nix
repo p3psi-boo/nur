@@ -8,7 +8,7 @@ let
   sourceInfo = generated.vikunja-cli;
 in
 buildGoModule {
-  pname = "vikunja-cli";
+  pname = "vja";
   version = "0-unstable-${sourceInfo.date}";
 
   src = sourceInfo.src;
@@ -32,7 +32,7 @@ buildGoModule {
 
   postInstall = ''
     if [ -f "$out/bin/vikunja-cli" ]; then
-      ln -s "$out/bin/vikunja-cli" "$out/bin/vja"
+      mv "$out/bin/vikunja-cli" "$out/bin/vja"
     fi
   '';
 
