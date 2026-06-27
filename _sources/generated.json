@@ -1860,13 +1860,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "2c0570bc9fac9f71f0bfa9ba19e8e64047167a5c",
-            "sha256": "sha256-ocr/Um/PFUcEZJzBijjrEWyBxdhUaaS+NOZC7kPjCv8=",
+            "rev": "08532e323273786a781f0cab02bd969160d0180a",
+            "sha256": "sha256-9DpBO8qQIkU87SUN1kmpHwq3xYByMFQJjHtBz6486ps=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/p3psi-boo/vikunja-cli.git"
         },
-        "version": "2c0570bc9fac9f71f0bfa9ba19e8e64047167a5c"
+        "version": "08532e323273786a781f0cab02bd969160d0180a"
     },
     "web-search": {
         "cargoLock": null,
