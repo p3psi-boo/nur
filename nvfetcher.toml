@@ -123,7 +123,7 @@ fetch.url = "https://github.com/topjohnwu/Magisk/releases/download/$ver/Magisk-$
 src.git = "https://github.com/p3psi-boo/srv.us.git"
 fetch.git = "https://github.com/p3psi-boo/srv.us.git"
 
-[vikunja-cli]
+[vja]
 src.git = "https://github.com/p3psi-boo/vikunja-cli.git"
 fetch.git = "https://github.com/p3psi-boo/vikunja-cli.git"
 git.fetch_submodules = false

@@ -1142,19 +1142,19 @@
     };
     date = "2026-05-05";
   };
-  vikunja-cli = {
-    pname = "vikunja-cli";
-    version = "7d96f181c2e0e07b4e75c7f540e9a8cfdf9065dc";
+  vja = {
+    pname = "vja";
+    version = "2c0570bc9fac9f71f0bfa9ba19e8e64047167a5c";
     src = fetchgit {
       url = "https://github.com/p3psi-boo/vikunja-cli.git";
-      rev = "7d96f181c2e0e07b4e75c7f540e9a8cfdf9065dc";
+      rev = "2c0570bc9fac9f71f0bfa9ba19e8e64047167a5c";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-ZxsFScCas6Uvt91eWzdwfTAsWZnVooRp/QaIp2IdHVw=";
+      sha256 = "sha256-ocr/Um/PFUcEZJzBijjrEWyBxdhUaaS+NOZC7kPjCv8=";
     };
-    date = "2026-02-25";
+    date = "2026-06-27";
   };
   web-search = {
     pname = "web-search";

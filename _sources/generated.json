@@ -1848,11 +1848,11 @@
         },
         "version": "ad856bda6b1311b7f3d7c4a667be43eeb8a8249a"
     },
-    "vikunja-cli": {
+    "vja": {
         "cargoLock": null,
-        "date": "2026-02-25",
+        "date": "2026-06-27",
         "extract": null,
-        "name": "vikunja-cli",
+        "name": "vja",
         "passthru": null,
         "pinned": false,
         "src": {
@@ -1860,13 +1860,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "7d96f181c2e0e07b4e75c7f540e9a8cfdf9065dc",
-            "sha256": "sha256-ZxsFScCas6Uvt91eWzdwfTAsWZnVooRp/QaIp2IdHVw=",
+            "rev": "2c0570bc9fac9f71f0bfa9ba19e8e64047167a5c",
+            "sha256": "sha256-ocr/Um/PFUcEZJzBijjrEWyBxdhUaaS+NOZC7kPjCv8=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/p3psi-boo/vikunja-cli.git"
         },
-        "version": "7d96f181c2e0e07b4e75c7f540e9a8cfdf9065dc"
+        "version": "2c0570bc9fac9f71f0bfa9ba19e8e64047167a5c"
     },
     "web-search": {
         "cargoLock": null,

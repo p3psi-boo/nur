@@ -5,7 +5,7 @@
 }:
 
 let
-  sourceInfo = generated.vikunja-cli;
+  sourceInfo = generated.vja;
 in
 buildGoModule {
   pname = "vja";
@@ -13,7 +13,7 @@ buildGoModule {
 
   src = sourceInfo.src;
 
-  vendorHash = "sha256-oRpnvnlTqo0pFgTTk8vFvB659GI8qCcSFuXNaXzigbs=";
+  vendorHash = "sha256-UGqqyMt8dEtILYEskblkNJKDk7h+QHZMsNZX/C1W5aI=";
 
   # 运行时性能优化
   env = {
