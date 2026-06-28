@@ -1144,17 +1144,17 @@
   };
   vja = {
     pname = "vja";
-    version = "08532e323273786a781f0cab02bd969160d0180a";
+    version = "1bbea5452dae7a7ee97c2b9b3317fc989a4cf3ea";
     src = fetchgit {
       url = "https://github.com/p3psi-boo/vikunja-cli.git";
-      rev = "08532e323273786a781f0cab02bd969160d0180a";
+      rev = "1bbea5452dae7a7ee97c2b9b3317fc989a4cf3ea";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-9DpBO8qQIkU87SUN1kmpHwq3xYByMFQJjHtBz6486ps=";
+      sha256 = "sha256-cDEquvuDHqz2bm9oecHWvTyB2fop6ORgPu8GQ3t2xNE=";
     };
-    date = "2026-06-27";
+    date = "2026-06-28";
   };
   web-search = {
     pname = "web-search";

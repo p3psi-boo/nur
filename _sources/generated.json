@@ -1850,7 +1850,7 @@
     },
     "vja": {
         "cargoLock": null,
-        "date": "2026-06-27",
+        "date": "2026-06-28",
         "extract": null,
         "name": "vja",
         "passthru": null,
@@ -1860,13 +1860,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "08532e323273786a781f0cab02bd969160d0180a",
-            "sha256": "sha256-9DpBO8qQIkU87SUN1kmpHwq3xYByMFQJjHtBz6486ps=",
+            "rev": "1bbea5452dae7a7ee97c2b9b3317fc989a4cf3ea",
+            "sha256": "sha256-cDEquvuDHqz2bm9oecHWvTyB2fop6ORgPu8GQ3t2xNE=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/p3psi-boo/vikunja-cli.git"
         },
-        "version": "08532e323273786a781f0cab02bd969160d0180a"
+        "version": "1bbea5452dae7a7ee97c2b9b3317fc989a4cf3ea"
     },
     "web-search": {
         "cargoLock": null,
