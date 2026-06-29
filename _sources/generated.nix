@@ -1063,6 +1063,7 @@
       fetchSubmodules = false;
       sha256 = "sha256-wHu+L//x1NiXTxD2mas0niV/TbTezg4MC7wUWAfgxpY=";
     };
+    date = "2026-06-25";
   };
   trusttunnel = {
     pname = "trusttunnel";

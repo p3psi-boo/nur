@@ -9,7 +9,7 @@ let
 in
 rustPlatform.buildRustPackage {
   pname = "terminal-use";
-  version = lib.removePrefix "v" sourceInfo.version;
+  version = "0-unstable-${sourceInfo.date}";
 
   src = sourceInfo.src;
 
