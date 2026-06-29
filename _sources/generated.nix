@@ -1053,6 +1053,17 @@
     };
     date = "2026-04-26";
   };
+  terminal-use = {
+    pname = "terminal-use";
+    version = "v1.2.0";
+    src = fetchFromGitHub {
+      owner = "flipbit03";
+      repo = "terminal-use";
+      rev = "v1.2.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-wHu+L//x1NiXTxD2mas0niV/TbTezg4MC7wUWAfgxpY=";
+    };
+  };
   trusttunnel = {
     pname = "trusttunnel";
     version = "v1.0.33";

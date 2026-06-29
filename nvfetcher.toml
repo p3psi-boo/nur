@@ -549,3 +549,9 @@ src.git = "https://github.com/PiSugar/sugar-wifi-conf.git"
 fetch.git = "https://github.com/PiSugar/sugar-wifi-conf.git"
 git.fetch_submodules = false
 git.get_commit_date = true
+
+# terminal-use - Headless virtual terminal for AI agents (tu)
+[terminal-use]
+src.github_tag = "flipbit03/terminal-use"
+src.include_regex = "^v[0-9].*"
+fetch.github = "flipbit03/terminal-use"
