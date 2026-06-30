@@ -475,6 +475,14 @@ git.get_commit_date = true
 src.github_tag = "StarryReverie/selector4nix"
 fetch.github = "StarryReverie/selector4nix"
 
+# powermem - AI Memory Plugin for persistent, self-evolving agent memory
+# Pre-built standalone binaries (PyInstaller), ~130MB each
+[powermem]
+src.github_tag = "oceanbase/powermem"
+src.prefix = "v"
+src.include_regex = "^v[0-9].*"
+fetch.url = "https://github.com/oceanbase/powermem/releases/download/v$ver/powermem-$ver-linux-amd64-binaries.tar.gz"
+
 # xurl - Client for AI Agents URLs
 [xurl]
 src.git = "https://github.com/Xuanwo/xurl.git"

@@ -74,12 +74,12 @@
             "name": null,
             "owner": "rustmailer",
             "repo": "bichon",
-            "rev": "1.5.2",
-            "sha256": "sha256-QvAUM1fncnbmXGJ4fhq7c4ZvE4rquMQqdqq6RlOIBxI=",
+            "rev": "1.6.1",
+            "sha256": "sha256-IWtJ/FUAysAasfNowQZfewhx2brzXGSW4EZtQbijlfE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "1.5.2"
+        "version": "1.6.1"
     },
     "binsider-bin": {
         "cargoLock": null,
@@ -170,11 +170,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-ALnyVMnexYy48br9qbWaEbOZm7hJR9g39a9nYzbWXwo=",
+            "sha256": "sha256-IV3Agg5i4TKDMQy+BjNbW6sqPsLfPcSOQkOADHhSmTw=",
             "type": "url",
-            "url": "https://github.com/browseros-ai/BrowserOS/releases/download/v0.44.0.1/BrowserOS_v0.44.0.1_x64.AppImage"
+            "url": "https://github.com/browseros-ai/BrowserOS/releases/download/v0.46.0/BrowserOS_v0.46.0_x64.AppImage"
         },
-        "version": "0.44.0.1"
+        "version": "0.46.0"
     },
     "classyshark": {
         "cargoLock": null,
@@ -253,12 +253,12 @@
             "name": null,
             "owner": "router-for-me",
             "repo": "CLIProxyAPI",
-            "rev": "v7.1.74",
-            "sha256": "sha256-ehN4xAR4lBNVcsyoGnHEKMeCcwWEPbPp42u7crTGmSU=",
+            "rev": "v7.2.47",
+            "sha256": "sha256-bQYzaLi5DIP3gCnZ5LyqO1iyGHiOWsiWen+dfQBEWOU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v7.1.74"
+        "version": "v7.2.47"
     },
     "cocoindex-code": {
         "cargoLock": null,
@@ -269,11 +269,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-9NicjrnPL137B2wEOm7rA/oMfMY8tOw4GjaCE68+aRc=",
+            "sha256": "sha256-+Lt0w/ATc2TYA1Qe/TAWr/PnstHXvUizlIxEY1JmYfc=",
             "type": "url",
-            "url": "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.35.tar.gz"
+            "url": "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.37.tar.gz"
         },
-        "version": "0.2.35"
+        "version": "0.2.37"
     },
     "coe": {
         "cargoLock": null,
@@ -337,7 +337,7 @@
     },
     "copilot-api-plus": {
         "cargoLock": null,
-        "date": "2026-05-29",
+        "date": "2026-06-24",
         "extract": null,
         "name": "copilot-api-plus",
         "passthru": null,
@@ -347,13 +347,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "33eab1d693d9d0997c284b737549495965d3250e",
-            "sha256": "sha256-JdUglXB9oowhZS6482e9HklJESsj01st0QPw0VzNzVw=",
+            "rev": "b7b610f59c48897d223d320fd8e44740ade8f131",
+            "sha256": "sha256-QRRrQ455FAtaK3aM7vyss5aeKpe/iQ0rTwwhBKioI6k=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/imbuxiangnan-cyber/copilot-api-plus.git"
         },
-        "version": "33eab1d693d9d0997c284b737549495965d3250e"
+        "version": "b7b610f59c48897d223d320fd8e44740ade8f131"
     },
     "dagu": {
         "cargoLock": null,
@@ -369,12 +369,12 @@
             "name": null,
             "owner": "dagu-org",
             "repo": "dagu",
-            "rev": "v2.7.16",
-            "sha256": "sha256-BgtRRjcl5OZb0OoM+4kaRzhWtkCw8BRu1eV0sryIy4k=",
+            "rev": "v2.8.3",
+            "sha256": "sha256-aQZ9QMYU0wWQROFU8anWXRJYj6VOdnKY38/Wu2QbnNA=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.7.16"
+        "version": "v2.8.3"
     },
     "dailyhot-api": {
         "cargoLock": null,
@@ -470,7 +470,7 @@
     },
     "einat": {
         "cargoLock": null,
-        "date": "2025-12-11",
+        "date": "2026-06-27",
         "extract": null,
         "name": "einat",
         "passthru": null,
@@ -480,13 +480,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "b226ff98856e59be7f091bc7d81ceba8ac38bd19",
-            "sha256": "sha256-P0Q8DdeEns5xcALj5vIyubc1AE073nozbNoTzRso37w=",
+            "rev": "30e6af3740e279efb254568c0ec1ad54c0cccd35",
+            "sha256": "sha256-QPvyJGd35V5D8Q9mZUPNt8kfpG75qNHxr30oQkfDcV0=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/EHfive/einat-ebpf.git"
         },
-        "version": "b226ff98856e59be7f091bc7d81ceba8ac38bd19"
+        "version": "30e6af3740e279efb254568c0ec1ad54c0cccd35"
     },
     "fdb": {
         "cargoLock": null,
@@ -612,7 +612,7 @@
     },
     "grdpwasm": {
         "cargoLock": null,
-        "date": "2026-05-24",
+        "date": "2026-06-13",
         "extract": null,
         "name": "grdpwasm",
         "passthru": null,
@@ -622,17 +622,17 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "a86c64fc9ead223a2f41ee46c39d1edc482cdb13",
-            "sha256": "sha256-mSKem4Eb8WZXLeX1e6qgYeyNDtalD+9aqLK8NweMo1E=",
+            "rev": "ab8580656c1c9055caf774e72b46a6d4c262627b",
+            "sha256": "sha256-SJbYMg8Gd//PT1y5SVgbmTjuMUGXqr/CJEIYKtpa+W4=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/nakagami/grdpwasm.git"
         },
-        "version": "a86c64fc9ead223a2f41ee46c39d1edc482cdb13"
+        "version": "ab8580656c1c9055caf774e72b46a6d4c262627b"
     },
     "grok2api": {
         "cargoLock": null,
-        "date": "2026-06-12",
+        "date": "2026-06-23",
         "extract": null,
         "name": "grok2api",
         "passthru": null,
@@ -642,13 +642,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "74f69f94c9d7d816c2fb641a4829c206431beb4f",
-            "sha256": "sha256-ifL5o3C9UVRUQXS3Ee4N841WXDqOFb6blGGT29L1Lds=",
+            "rev": "14b0937600847d71c4235dde34573d7835b5007e",
+            "sha256": "sha256-g5MqhTTbysvFXTYkGP/09EyDi5s8vLcz887lGb73Dpw=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/jiujiu532/grok2api.git"
         },
-        "version": "74f69f94c9d7d816c2fb641a4829c206431beb4f"
+        "version": "14b0937600847d71c4235dde34573d7835b5007e"
     },
     "harlequin-mysql": {
         "cargoLock": null,
@@ -708,7 +708,7 @@
     },
     "ida-pro-mcp": {
         "cargoLock": null,
-        "date": "2026-05-23",
+        "date": "2026-06-15",
         "extract": null,
         "name": "ida-pro-mcp",
         "passthru": null,
@@ -718,13 +718,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "7886e460f61f22839ecc5d6a85c7c1b378567cd3",
-            "sha256": "sha256-oNXWKDTEI/2iIwnRBrOHNUW6USYFB7KAF2krv+OIQoA=",
+            "rev": "f4754e45e7d76bfcebb5dcbe700577fa52ff71cd",
+            "sha256": "sha256-c4kb2qwNrWI/r7teRfBG02ONdA3nxbA0Izl1BiWxABg=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/QiuChenly/ida-pro-mcp-enhancement.git"
         },
-        "version": "7886e460f61f22839ecc5d6a85c7c1b378567cd3"
+        "version": "f4754e45e7d76bfcebb5dcbe700577fa52ff71cd"
     },
     "il2cppdumper": {
         "cargoLock": null,
@@ -811,7 +811,7 @@
     },
     "komari": {
         "cargoLock": null,
-        "date": "2026-06-11",
+        "date": "2026-06-29",
         "extract": null,
         "name": "komari",
         "passthru": null,
@@ -821,13 +821,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "25f3e1d2bd655b0fc4979b83e1b666701c215315",
-            "sha256": "sha256-86zLzE8Q3EkVcTcFJwXvPAllLVBSd+tQK2j6X+swUBY=",
+            "rev": "0132d1cbd8cdd5f1780847ed28b2a97c7e34cdc7",
+            "sha256": "sha256-NO0ZxXtaTbjh5JghpLOMI/eIVYoFlk09BoMTrfpa8bI=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/komari-monitor/komari.git"
         },
-        "version": "25f3e1d2bd655b0fc4979b83e1b666701c215315"
+        "version": "0132d1cbd8cdd5f1780847ed28b2a97c7e34cdc7"
     },
     "komari-monitor-rs": {
         "cargoLock": null,
@@ -851,7 +851,7 @@
     },
     "komari-web": {
         "cargoLock": null,
-        "date": "2026-06-12",
+        "date": "2026-06-29",
         "extract": null,
         "name": "komari-web",
         "passthru": null,
@@ -861,13 +861,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "64967beef7fcbf6cd16776f55f2c68508ffe89ff",
-            "sha256": "sha256-GkBJylCTn0KKy07Jx0P44xuziI0Svk/2svS3YCe1wY8=",
+            "rev": "5e5afdd9847f13abbb7c329f9747443010ec4d64",
+            "sha256": "sha256-0xUocrmoFywWL/TNEt2YEMhJgdoJYrkBdLEGZCtdGoU=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/komari-monitor/komari-web.git"
         },
-        "version": "64967beef7fcbf6cd16776f55f2c68508ffe89ff"
+        "version": "5e5afdd9847f13abbb7c329f9747443010ec4d64"
     },
     "lazyssh": {
         "cargoLock": null,
@@ -903,12 +903,12 @@
             "name": null,
             "owner": "rivolink",
             "repo": "leaf",
-            "rev": "1.24.1",
-            "sha256": "sha256-8APYzvxKqvF9BbGkdpphbmpf+8gqNqfS/ao01sy4opU=",
+            "rev": "1.25.0",
+            "sha256": "sha256-OSx797tkwjKU9j+0AhQIT7uLM75PzHVw12d5LG6vT3Q=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "1.24.1"
+        "version": "1.25.0"
     },
     "llama-cpp-turboquant": {
         "cargoLock": null,
@@ -952,7 +952,7 @@
     },
     "lucebox-hub": {
         "cargoLock": null,
-        "date": "2026-06-12",
+        "date": "2026-06-29",
         "extract": null,
         "name": "lucebox-hub",
         "passthru": null,
@@ -962,13 +962,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "7500f000bac346a87da6bbf5157d7a6ff038379b",
-            "sha256": "sha256-o0Iele2/ZrDarhQheYAizL7POb1klTzIqQ7CCOuA6kE=",
+            "rev": "cbaf548687434d88fc8203e2951a33f46bfaa049",
+            "sha256": "sha256-kb7gwHxLGK8NaYfj0/2LfryXulPVbjI9Ln69mJuvzmw=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/Luce-Org/lucebox-hub.git"
         },
-        "version": "7500f000bac346a87da6bbf5157d7a6ff038379b"
+        "version": "cbaf548687434d88fc8203e2951a33f46bfaa049"
     },
     "magiskboot-bin": {
         "cargoLock": null,
@@ -1196,16 +1196,16 @@
             "name": null,
             "owner": "diegosouzapw",
             "repo": "OmniRoute",
-            "rev": "v3.8.23",
-            "sha256": "sha256-cnkYlxxece1bSzw/R1scz00JkqYKS/P1JJuPNOqWihA=",
+            "rev": "v3.8.41",
+            "sha256": "sha256-KtTa9RaOk69pHK/cdVWVspcrcYKMFUGrIEoXyNHWC/U=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v3.8.23"
+        "version": "v3.8.41"
     },
     "openixcli": {
         "cargoLock": null,
-        "date": "2026-05-30",
+        "date": "2026-06-18",
         "extract": null,
         "name": "openixcli",
         "passthru": null,
@@ -1215,13 +1215,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "f0ce24a36a4ffdf4be5d22bcd1f83abd330189d9",
-            "sha256": "sha256-VtyAk8GldFH6UZFKIJ2RrSAtR0PT1pIGTFIMO9r0eUc=",
+            "rev": "668d7b1678f8abbffdb4160da69da713cdc026c9",
+            "sha256": "sha256-dvvkh6gcN9cUFd7NmNYcW7lI+q2S5vWiyB4GHv6AyMo=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/YuzukiTsuru/OpenixCLI.git"
         },
-        "version": "f0ce24a36a4ffdf4be5d22bcd1f83abd330189d9"
+        "version": "668d7b1678f8abbffdb4160da69da713cdc026c9"
     },
     "oura-cli": {
         "cargoLock": null,
@@ -1245,7 +1245,7 @@
     },
     "pg_duckdb": {
         "cargoLock": null,
-        "date": "2026-03-16",
+        "date": "2026-06-26",
         "extract": null,
         "name": "pg_duckdb",
         "passthru": null,
@@ -1255,13 +1255,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "318ee16cd8c647daa89198a675039726626f44b9",
-            "sha256": "sha256-8S2uS6PgjxVzQA1gYVrEeZjnACXt3ADneDe1MlRNb/g=",
+            "rev": "95d5524a78d70c96b58583608257d7ec7b98b449",
+            "sha256": "sha256-2wtnSc79m5Rrt40oLqhJxzUEtBTnXU/GQQ+LbH/g3JQ=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/duckdb/pg_duckdb.git"
         },
-        "version": "318ee16cd8c647daa89198a675039726626f44b9"
+        "version": "95d5524a78d70c96b58583608257d7ec7b98b449"
     },
     "planify": {
         "cargoLock": null,
@@ -1313,6 +1313,21 @@
             "url": "https://github.com/Polymarket/polymarket-cli/releases/download/v0.1.5/polymarket-v0.1.5-aarch64-unknown-linux-gnu.tar.gz"
         },
         "version": "v0.1.5"
+    },
+    "powermem": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "powermem",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-kQx3Chho6W5Gsf12EZAQV78/M+kiMgUysNKvWl/6XZU=",
+            "type": "url",
+            "url": "https://github.com/oceanbase/powermem/releases/download/v1.1.6/powermem-1.1.6-linux-amd64-binaries.tar.gz"
+        },
+        "version": "1.1.6"
     },
     "proxy-ns": {
         "cargoLock": null,
@@ -1389,12 +1404,12 @@
             "name": null,
             "owner": "OHF-Voice",
             "repo": "pymicro-wakeword",
-            "rev": "v2.3.0",
-            "sha256": "sha256-Ie7juxo1ae5VnLuF/IBy9GCMUprwigJI1UqAT+KDztQ=",
+            "rev": "v2.4.1",
+            "sha256": "sha256-R8uAKJygh5mo8U9k0uT358RMxJnezRxAATjjaK4D9PI=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.3.0"
+        "version": "v2.4.1"
     },
     "python-mpv": {
         "cargoLock": null,
@@ -1472,12 +1487,12 @@
             "name": null,
             "owner": "buzzer-re",
             "repo": "Rikugan",
-            "rev": "v1.3.1",
-            "sha256": "sha256-xYPk6HWo1nfpKP2piEDuuX2fvcFmiZ8e6NgZPfuHNNI=",
+            "rev": "v1.3.2",
+            "sha256": "sha256-Fw4Ya3rh3PYP9cBq0d+1TW/ekL5II00OPExqUIx57AA=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v1.3.1"
+        "version": "v1.3.2"
     },
     "rustconn": {
         "cargoLock": null,
@@ -1493,12 +1508,12 @@
             "name": null,
             "owner": "totoshko88",
             "repo": "RustConn",
-            "rev": "v0.16.2",
-            "sha256": "sha256-TrlvjvKGHvFw6eGkRgbJHtrCLWDVzcoiR6rWlwFvSWs=",
+            "rev": "v0.17.4",
+            "sha256": "sha256-NejzcjBKZuM4MLULuB6jAJd5tG0doNK0vFBx6iSql6w=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.16.2"
+        "version": "v0.17.4"
     },
     "selector4nix": {
         "cargoLock": null,
@@ -1514,12 +1529,12 @@
             "name": null,
             "owner": "StarryReverie",
             "repo": "selector4nix",
-            "rev": "v0.6.1",
-            "sha256": "sha256-DlLuqvRmHhqL5jPMMwlYk61C9rRSydNZshEJxW1VV9E=",
+            "rev": "v0.7.0",
+            "sha256": "sha256-yuVXPzbaudYkGA3Vud+L2fFy6onF703MkAUgBVYrcK8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.6.1"
+        "version": "v0.7.0"
     },
     "sigmo": {
         "cargoLock": null,
@@ -1667,7 +1682,7 @@
     },
     "sugar-wifi-conf": {
         "cargoLock": null,
-        "date": "2026-04-09",
+        "date": "2026-06-27",
         "extract": null,
         "name": "sugar-wifi-conf",
         "passthru": null,
@@ -1677,13 +1692,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "4813c9d4568fa1ce3b1f1b6f354cbab1500d6542",
-            "sha256": "sha256-DtehGwT1Szy5qUL5Iwpn9oIevhUdRap5AdV36mWDqRo=",
+            "rev": "2c578f1163f0b6f55ad4d005c5580b8ddcf92bff",
+            "sha256": "sha256-3/ElVEjNyusipLLDHuE9vdvjkmPRw2GtKCQwnPxQQx0=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/PiSugar/sugar-wifi-conf.git"
         },
-        "version": "4813c9d4568fa1ce3b1f1b6f354cbab1500d6542"
+        "version": "2c578f1163f0b6f55ad4d005c5580b8ddcf92bff"
     },
     "tcp-brutal": {
         "cargoLock": null,
@@ -1704,6 +1719,27 @@
             "url": "https://github.com/apernet/tcp-brutal.git"
         },
         "version": "f11e52d88c7ad2285896de018c2d96d4687f0ab6"
+    },
+    "terminal-use": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "terminal-use",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "flipbit03",
+            "repo": "terminal-use",
+            "rev": "v1.2.0",
+            "sha256": "sha256-wHu+L//x1NiXTxD2mas0niV/TbTezg4MC7wUWAfgxpY=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.2.0"
     },
     "trusttunnel": {
         "cargoLock": null,
@@ -1749,7 +1785,7 @@
     },
     "usque": {
         "cargoLock": null,
-        "date": "2026-06-13",
+        "date": "2026-06-21",
         "extract": null,
         "name": "usque",
         "passthru": null,
@@ -1759,13 +1795,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "10bc84c032210a2fb565c8393a60d141afb5d500",
-            "sha256": "sha256-4vFlHJINMDlaOC+R5Q+vUhmyrXlv1r8UiNVRx8juxZ4=",
+            "rev": "0fa6da9e34714a13676361afbfe6a58ad6597110",
+            "sha256": "sha256-qP7OsjuaSlEjQm1t/EiRcOGdffgc8opdwlQ6xuIslYA=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/Diniboy1123/usque.git"
         },
-        "version": "10bc84c032210a2fb565c8393a60d141afb5d500"
+        "version": "0fa6da9e34714a13676361afbfe6a58ad6597110"
     },
     "ut": {
         "cargoLock": null,

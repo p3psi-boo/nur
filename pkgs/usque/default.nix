@@ -2,7 +2,7 @@
   lib,
   stdenv,
   buildGoModule,
-  go_1_25,
+  go_1_26,
   generated,
   installShellFiles,
 }:
@@ -10,13 +10,13 @@
 let
   sourceInfo = generated.usque;
 in
-(buildGoModule.override { go = go_1_25; }) (finalAttrs: {
+(buildGoModule.override { go = go_1_26; }) (finalAttrs: {
   pname = "usque";
   version = "0-unstable-${sourceInfo.date}";
 
   src = sourceInfo.src;
 
-  vendorHash = "sha256-/SYyIWRr+uwF5Jr5Ql08a+WwrZMXmKEa+Q7Nxzt2wKw=";
+  vendorHash = "sha256-XvbH6w0po2piUwuHTRxGbqwoKEOl2nLp0VnXONOvA14=";
 
   ldflags = [
     "-s"
