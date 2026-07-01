@@ -792,6 +792,17 @@
     };
     date = "2026-06-26";
   };
+  pi-agent-rust = {
+    pname = "pi-agent-rust";
+    version = "v0.1.20";
+    src = fetchFromGitHub {
+      owner = "Dicklesworthstone";
+      repo = "pi_agent_rust";
+      rev = "v0.1.20";
+      fetchSubmodules = false;
+      sha256 = "sha256-OWbxlt7+Z+C62YoslJCL9DvxeWs0mCoH4GC3R45/hDA=";
+    };
+  };
   planify = {
     pname = "planify";
     version = "v4.19.4";

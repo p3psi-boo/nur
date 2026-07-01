@@ -1263,6 +1263,27 @@
         },
         "version": "95d5524a78d70c96b58583608257d7ec7b98b449"
     },
+    "pi-agent-rust": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "pi-agent-rust",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Dicklesworthstone",
+            "repo": "pi_agent_rust",
+            "rev": "v0.1.20",
+            "sha256": "sha256-OWbxlt7+Z+C62YoslJCL9DvxeWs0mCoH4GC3R45/hDA=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.1.20"
+    },
     "planify": {
         "cargoLock": null,
         "date": null,
