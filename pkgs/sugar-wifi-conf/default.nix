@@ -18,7 +18,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     sourceRoot="$sourceRoot/rust"
   '';
 
-  cargoHash = "sha256-HeaW28X91ffgaB9yiMKmsKtkom4+RB5yDrqk9ssPxdU=";
+  cargoHash = "sha256-MLsV7GPOpfuH/kgwGlayHxluP5Y73e6zwROhPkWUKBg=";
 
   # bluer links libdbus-1 and discovers it via pkg-config.
   nativeBuildInputs = [ pkg-config ];
