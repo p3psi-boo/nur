@@ -20,6 +20,6 @@ buildDartApplication {
     homepage = "https://github.com/andrzejchm/fdb";
     license = lib.licenses.mit;
     mainProgram = "fdb";
-    platforms = [ "aarch64-darwin" ];
+    platforms = lib.platforms.unix;
   };
 }

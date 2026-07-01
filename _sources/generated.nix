@@ -496,17 +496,17 @@
   };
   komari = {
     pname = "komari";
-    version = "0132d1cbd8cdd5f1780847ed28b2a97c7e34cdc7";
+    version = "be6af33d85079394161b4101614004c5b8003d27";
     src = fetchgit {
       url = "https://github.com/komari-monitor/komari.git";
-      rev = "0132d1cbd8cdd5f1780847ed28b2a97c7e34cdc7";
+      rev = "be6af33d85079394161b4101614004c5b8003d27";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-NO0ZxXtaTbjh5JghpLOMI/eIVYoFlk09BoMTrfpa8bI=";
+      sha256 = "sha256-MsP3Jj9w9E7h2DdjyV4CV39GXBC5QWe/6DRRA3f16Oo=";
     };
-    date = "2026-06-29";
+    date = "2026-06-30";
   };
   komari-monitor-rs = {
     pname = "komari-monitor-rs";
@@ -524,17 +524,17 @@
   };
   komari-web = {
     pname = "komari-web";
-    version = "5e5afdd9847f13abbb7c329f9747443010ec4d64";
+    version = "50996de81156028cd96269b6cc89ce9bb37b898d";
     src = fetchgit {
       url = "https://github.com/komari-monitor/komari-web.git";
-      rev = "5e5afdd9847f13abbb7c329f9747443010ec4d64";
+      rev = "50996de81156028cd96269b6cc89ce9bb37b898d";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-0xUocrmoFywWL/TNEt2YEMhJgdoJYrkBdLEGZCtdGoU=";
+      sha256 = "sha256-6wDLVoK5B5dDpUm4e2/RrKYrInWmrwHo8cn5L6DwVR0=";
     };
-    date = "2026-06-29";
+    date = "2026-06-30";
   };
   lazyssh = {
     pname = "lazyssh";
@@ -591,17 +591,17 @@
   };
   lucebox-hub = {
     pname = "lucebox-hub";
-    version = "cbaf548687434d88fc8203e2951a33f46bfaa049";
+    version = "f7fc9448c4b006a8a697176d1a557fdf16146561";
     src = fetchgit {
       url = "https://github.com/Luce-Org/lucebox-hub.git";
-      rev = "cbaf548687434d88fc8203e2951a33f46bfaa049";
+      rev = "f7fc9448c4b006a8a697176d1a557fdf16146561";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-kb7gwHxLGK8NaYfj0/2LfryXulPVbjI9Ln69mJuvzmw=";
+      sha256 = "sha256-hpz0EASxtbAFMkG+A/+wq4jJbPaEAvUMDk3LFghvhhA=";
     };
-    date = "2026-06-29";
+    date = "2026-06-30";
   };
   magiskboot-bin = {
     pname = "magiskboot-bin";
@@ -741,13 +741,13 @@
   };
   omniroute = {
     pname = "omniroute";
-    version = "v3.8.41";
+    version = "v3.8.42";
     src = fetchFromGitHub {
       owner = "diegosouzapw";
       repo = "OmniRoute";
-      rev = "v3.8.41";
+      rev = "v3.8.42";
       fetchSubmodules = false;
-      sha256 = "sha256-KtTa9RaOk69pHK/cdVWVspcrcYKMFUGrIEoXyNHWC/U=";
+      sha256 = "sha256-D1qAjdNRMVecvOxpk/eE6mpwoa/ktvEFTxKgXJzMH8w=";
     };
   };
   openixcli = {
@@ -821,10 +821,10 @@
   };
   powermem = {
     pname = "powermem";
-    version = "1.1.6";
+    version = "1.1.7";
     src = fetchurl {
-      url = "https://github.com/oceanbase/powermem/releases/download/v1.1.6/powermem-1.1.6-linux-amd64-binaries.tar.gz";
-      sha256 = "sha256-kQx3Chho6W5Gsf12EZAQV78/M+kiMgUysNKvWl/6XZU=";
+      url = "https://github.com/oceanbase/powermem/releases/download/v1.1.7/powermem-1.1.7-linux-amd64-binaries.tar.gz";
+      sha256 = "sha256-CmicB7f9t4RJ7QCQVWduaFn6TqcE4CalI3SDOvnl6/g=";
     };
   };
   proxy-ns = {
@@ -926,13 +926,13 @@
   };
   rustconn = {
     pname = "rustconn";
-    version = "v0.17.4";
+    version = "v0.17.5";
     src = fetchFromGitHub {
       owner = "totoshko88";
       repo = "RustConn";
-      rev = "v0.17.4";
+      rev = "v0.17.5";
       fetchSubmodules = false;
-      sha256 = "sha256-NejzcjBKZuM4MLULuB6jAJd5tG0doNK0vFBx6iSql6w=";
+      sha256 = "sha256-gDQnVMuSaJM0RFUySPpF+n0FLZ0yeA5v0Vca4QLtJ8c=";
     };
   };
   selector4nix = {
@@ -1006,20 +1006,6 @@
       sha256 = "sha256-CEaSHwR8munYwKkLkCAGGbnRsel+by72QBY28lIRQO4=";
     };
     date = "2026-02-08";
-  };
-  subs-check = {
-    pname = "subs-check";
-    version = "f4dbe04587215291496c1ea5215bdaae167c7715";
-    src = fetchgit {
-      url = "https://github.com/p3psi-boo/subs-check.git";
-      rev = "f4dbe04587215291496c1ea5215bdaae167c7715";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-KtK3G3MjOWDezIjfYbmkMOHdYIz+IIDe0gHy49VMYbI=";
-    };
-    date = "2026-05-09";
   };
   substack-dl = {
     pname = "substack-dl";

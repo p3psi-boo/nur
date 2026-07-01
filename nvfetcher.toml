@@ -443,13 +443,6 @@ fetch.git = "https://github.com/nilaoda/BBDown.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
-# subs-check - High-performance proxy subscription checker
-[subs-check]
-src.git = "https://github.com/p3psi-boo/subs-check.git"
-fetch.git = "https://github.com/p3psi-boo/subs-check.git"
-git.fetch_submodules = false
-git.get_commit_date = true
-
 # smartdns-rs - Cross-platform local DNS server written in Rust
 [smartdns-rs]
 src.git = "https://github.com/mokeyish/smartdns-rs.git"
