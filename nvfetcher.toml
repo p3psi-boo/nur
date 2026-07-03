@@ -173,26 +173,30 @@ fetch.url = "https://github.com/orhun/binsider/releases/download/v$ver/binsider-
 
 [kimi-code-linux-x64]
 src.github_tag = "MoonshotAI/kimi-code"
-src.prefix = "@moonshot-ai/kimi-code@"
-src.include_regex = "^@moonshot-ai/kimi-code@[0-9]"
+src.include_regex = ".*kimi-code.*"
+src.from_pattern = "^@moonshot-ai/kimi-code@(.*)$"
+src.to_pattern = "\\1"
 fetch.url = "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@$ver/kimi-code-linux-x64.zip"
 
 [kimi-code-linux-arm64]
 src.github_tag = "MoonshotAI/kimi-code"
-src.prefix = "@moonshot-ai/kimi-code@"
-src.include_regex = "^@moonshot-ai/kimi-code@[0-9]"
+src.include_regex = ".*kimi-code.*"
+src.from_pattern = "^@moonshot-ai/kimi-code@(.*)$"
+src.to_pattern = "\\1"
 fetch.url = "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@$ver/kimi-code-linux-arm64.zip"
 
 [kimi-code-darwin-x64]
 src.github_tag = "MoonshotAI/kimi-code"
-src.prefix = "@moonshot-ai/kimi-code@"
-src.include_regex = "^@moonshot-ai/kimi-code@[0-9]"
+src.include_regex = ".*kimi-code.*"
+src.from_pattern = "^@moonshot-ai/kimi-code@(.*)$"
+src.to_pattern = "\\1"
 fetch.url = "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@$ver/kimi-code-darwin-x64.zip"
 
 [kimi-code-darwin-arm64]
 src.github_tag = "MoonshotAI/kimi-code"
-src.prefix = "@moonshot-ai/kimi-code@"
-src.include_regex = "^@moonshot-ai/kimi-code@[0-9]"
+src.include_regex = ".*kimi-code.*"
+src.from_pattern = "^@moonshot-ai/kimi-code@(.*)$"
+src.to_pattern = "\\1"
 fetch.url = "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@$ver/kimi-code-darwin-arm64.zip"
 
 [fish-ai]

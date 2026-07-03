@@ -494,6 +494,38 @@
       sha256 = "sha256-QHiZPYFwDQzbXVSuhwzQqBRXlkG9QVU+Jl6SKvBoCwQ=";
     };
   };
+  kimi-code-darwin-arm64 = {
+    pname = "kimi-code-darwin-arm64";
+    version = "0.22.1";
+    src = fetchurl {
+      url = "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@0.22.1/kimi-code-darwin-arm64.zip";
+      sha256 = "sha256-kTYYdsuVhDpKOq0TFW7dwMrxwH7ZZ2S9/ECdO/fKpMw=";
+    };
+  };
+  kimi-code-darwin-x64 = {
+    pname = "kimi-code-darwin-x64";
+    version = "0.22.1";
+    src = fetchurl {
+      url = "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@0.22.1/kimi-code-darwin-x64.zip";
+      sha256 = "sha256-jgnesSKI/YFrUix4bZNVenRlkufmg6Vw/CBWbuuHnd0=";
+    };
+  };
+  kimi-code-linux-arm64 = {
+    pname = "kimi-code-linux-arm64";
+    version = "0.22.1";
+    src = fetchurl {
+      url = "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@0.22.1/kimi-code-linux-arm64.zip";
+      sha256 = "sha256-BR/mwebAelkIv/PF42rx2zRi2Wdzrtkn+Y9ZhAFCWp8=";
+    };
+  };
+  kimi-code-linux-x64 = {
+    pname = "kimi-code-linux-x64";
+    version = "0.22.1";
+    src = fetchurl {
+      url = "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@0.22.1/kimi-code-linux-x64.zip";
+      sha256 = "sha256-qyCy7rAMgvrqsbgYaJV7Kv08fK/toUjw531sStKnNFA=";
+    };
+  };
   komari = {
     pname = "komari";
     version = "be6af33d85079394161b4101614004c5b8003d27";

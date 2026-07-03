@@ -27,12 +27,14 @@ let
   extraArgsFor =
     pkgName:
     let
+      pkgPath = pkgsDir + "/${pkgName}";
+      pkgArgs = builtins.functionArgs (import pkgPath);
       metaPath = "${pkgsDir}/${pkgName}/meta.nix";
       hasMeta = builtins.pathExists metaPath;
       meta = if hasMeta then import metaPath else { };
       packageSpecificArgs = if meta ? extraArgs then meta.extraArgs prev else { };
       generatedArgs =
-        if builtins.hasAttr pkgName generatedSources then { generated = generatedSources; } else { };
+        if pkgArgs ? generated then { generated = generatedSources; } else { };
       # 只在 meta.nix 中声明 useNurLib = true 时才传递 nurLib
       nurLibArgs = if meta ? useNurLib && meta.useNurLib then { inherit nurLib; } else { };
     in

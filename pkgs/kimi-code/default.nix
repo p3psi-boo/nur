@@ -1,6 +1,6 @@
 {
   lib,
-  stdenvNoCC,
+  stdenv,
   autoPatchelfHook,
   generated,
   unzip,
@@ -15,15 +15,15 @@ let
   };
 
   sourceInfo =
-    sources.${stdenvNoCC.hostPlatform.system}
-      or (throw "kimi-code: unsupported system ${stdenvNoCC.hostPlatform.system}");
+    sources.${stdenv.hostPlatform.system}
+      or (throw "kimi-code: unsupported system ${stdenv.hostPlatform.system}");
 in
-stdenvNoCC.mkDerivation {
+stdenv.mkDerivation {
   pname = "kimi-code";
   inherit (sourceInfo) version src;
 
-  nativeBuildInputs = [ unzip ] ++ lib.optionals stdenvNoCC.isLinux [ autoPatchelfHook ];
-  buildInputs = lib.optionals stdenvNoCC.isLinux [ stdenvNoCC.cc.cc.lib ];
+  nativeBuildInputs = [ unzip ] ++ lib.optionals stdenv.isLinux [ autoPatchelfHook ];
+  buildInputs = lib.optionals stdenv.isLinux [ stdenv.cc.cc.lib ];
 
   unpackPhase = ''
     runHook preUnpack
