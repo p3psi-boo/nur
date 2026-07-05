@@ -1722,7 +1722,7 @@
     },
     "subs-check": {
         "cargoLock": null,
-        "date": "2026-05-09",
+        "date": "2026-07-05",
         "extract": null,
         "name": "subs-check",
         "passthru": null,
@@ -1732,13 +1732,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "f4dbe04587215291496c1ea5215bdaae167c7715",
-            "sha256": "sha256-KtK3G3MjOWDezIjfYbmkMOHdYIz+IIDe0gHy49VMYbI=",
+            "rev": "87eeee99a1faaa753eac6e4ab24107b9c53c09fe",
+            "sha256": "sha256-espBOu7bFpTAZW1TwpWB7loEUDRLbO0rcJLev/SlZNI=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/p3psi-boo/subs-check.git"
         },
-        "version": "f4dbe04587215291496c1ea5215bdaae167c7715"
+        "version": "87eeee99a1faaa753eac6e4ab24107b9c53c09fe"
     },
     "substack-dl": {
         "cargoLock": null,

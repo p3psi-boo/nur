@@ -1052,17 +1052,17 @@
   };
   subs-check = {
     pname = "subs-check";
-    version = "f4dbe04587215291496c1ea5215bdaae167c7715";
+    version = "87eeee99a1faaa753eac6e4ab24107b9c53c09fe";
     src = fetchgit {
       url = "https://github.com/p3psi-boo/subs-check.git";
-      rev = "f4dbe04587215291496c1ea5215bdaae167c7715";
+      rev = "87eeee99a1faaa753eac6e4ab24107b9c53c09fe";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-KtK3G3MjOWDezIjfYbmkMOHdYIz+IIDe0gHy49VMYbI=";
+      sha256 = "sha256-espBOu7bFpTAZW1TwpWB7loEUDRLbO0rcJLev/SlZNI=";
     };
-    date = "2026-05-09";
+    date = "2026-07-05";
   };
   substack-dl = {
     pname = "substack-dl";
