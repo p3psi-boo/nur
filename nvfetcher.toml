@@ -450,6 +450,13 @@ fetch.git = "https://codeberg.org/joelkoen/wtfps.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
+# subs-check - High-performance proxy subscription checker
+[subs-check]
+src.git = "https://github.com/p3psi-boo/subs-check.git"
+fetch.git = "https://github.com/p3psi-boo/subs-check.git"
+git.fetch_submodules = false
+git.get_commit_date = true
+
 
 # RustConn - Modern connection manager for Linux (SSH, RDP, VNC, SPICE, and more)
 [rustconn]

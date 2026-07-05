@@ -1720,6 +1720,26 @@
         },
         "version": "664ef6a4fab24c5f3f1fc2fa07cc3e0c43d90cf9"
     },
+    "subs-check": {
+        "cargoLock": null,
+        "date": "2026-05-09",
+        "extract": null,
+        "name": "subs-check",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "f4dbe04587215291496c1ea5215bdaae167c7715",
+            "sha256": "sha256-KtK3G3MjOWDezIjfYbmkMOHdYIz+IIDe0gHy49VMYbI=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/p3psi-boo/subs-check.git"
+        },
+        "version": "f4dbe04587215291496c1ea5215bdaae167c7715"
+    },
     "substack-dl": {
         "cargoLock": null,
         "date": "2022-08-08",
