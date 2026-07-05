@@ -1206,15 +1206,15 @@
   };
   vohive = {
     pname = "vohive";
-    version = "c69e12a4ac645b2fb266f9ecf3f133211ef0ccf8";
+    version = "9465ae76ea36067d7feef33aee80ff0a1ec376a0";
     src = fetchgit {
       url = "https://github.com/p3psi-boo/vohive.git";
-      rev = "c69e12a4ac645b2fb266f9ecf3f133211ef0ccf8";
+      rev = "9465ae76ea36067d7feef33aee80ff0a1ec376a0";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-TcBrnp90qNmAGb1loXDCC0/GtA2FzyS+2E087RmSJDQ=";
+      sha256 = "sha256-knya7EaLnmeY24/TwAq6XpulvhOYKnpV3gEqy8PMQMM=";
     };
     date = "2026-07-05";
   };
