@@ -1965,6 +1965,26 @@
         },
         "version": "1bbea5452dae7a7ee97c2b9b3317fc989a4cf3ea"
     },
+    "vohive": {
+        "cargoLock": null,
+        "date": "2026-07-05",
+        "extract": null,
+        "name": "vohive",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "c69e12a4ac645b2fb266f9ecf3f133211ef0ccf8",
+            "sha256": "sha256-TcBrnp90qNmAGb1loXDCC0/GtA2FzyS+2E087RmSJDQ=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/p3psi-boo/vohive.git"
+        },
+        "version": "c69e12a4ac645b2fb266f9ecf3f133211ef0ccf8"
+    },
     "web-search": {
         "cargoLock": null,
         "date": "2026-03-21",

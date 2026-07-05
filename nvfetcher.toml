@@ -93,6 +93,11 @@ src.git = "https://github.com/p3psi-boo/web-search.git"
 fetch.git = "https://github.com/p3psi-boo/web-search.git"
 git.fetch_submodules = false
 
+[vohive]
+src.git = "https://github.com/p3psi-boo/vohive.git"
+fetch.git = "https://github.com/p3psi-boo/vohive.git"
+git.fetch_submodules = false
+
 [pymicro-features]
 src.github = "rhasspy/pymicro-features"
 fetch.github = "rhasspy/pymicro-features"
