@@ -1,8 +1,8 @@
 {
   lib,
   stdenv,
-  autoPatchelfHook,
   generated,
+  makeWrapper,
   unzip,
 }:
 
@@ -22,7 +22,7 @@ stdenv.mkDerivation {
   pname = "kimi-code";
   inherit (sourceInfo) version src;
 
-  nativeBuildInputs = [ unzip ] ++ lib.optionals stdenv.isLinux [ autoPatchelfHook ];
+  nativeBuildInputs = [ unzip ] ++ lib.optionals stdenv.isLinux [ makeWrapper ];
   buildInputs = lib.optionals stdenv.isLinux [ stdenv.cc.cc.lib ];
 
   unpackPhase = ''
@@ -33,10 +33,23 @@ stdenv.mkDerivation {
 
   dontBuild = true;
   dontConfigure = true;
+  dontStrip = true;
 
   installPhase = ''
     runHook preInstall
-    install -Dm755 kimi "$out/bin/kimi"
+
+    install -Dm755 kimi "$out/libexec/kimi-code/kimi"
+  ''
+  + lib.optionalString stdenv.isLinux ''
+    makeWrapper ${stdenv.cc.bintools.dynamicLinker} "$out/bin/kimi" \
+      --add-flags "--library-path ${lib.makeLibraryPath [ stdenv.cc.cc.lib ]}" \
+      --add-flags "$out/libexec/kimi-code/kimi"
+  ''
+  + lib.optionalString stdenv.isDarwin ''
+    mkdir -p "$out/bin"
+    ln -s "$out/libexec/kimi-code/kimi" "$out/bin/kimi"
+  ''
+  + ''
     runHook postInstall
   '';
 
