@@ -93,6 +93,11 @@ src.git = "https://github.com/p3psi-boo/web-search.git"
 fetch.git = "https://github.com/p3psi-boo/web-search.git"
 git.fetch_submodules = false
 
+[vohive]
+src.git = "https://github.com/p3psi-boo/vohive.git"
+fetch.git = "https://github.com/p3psi-boo/vohive.git"
+git.fetch_submodules = false
+
 [pymicro-features]
 src.github = "rhasspy/pymicro-features"
 fetch.github = "rhasspy/pymicro-features"
@@ -170,6 +175,34 @@ fetch.url = "https://github.com/orhun/binsider/releases/download/v$ver/binsider-
 src.github_tag = "orhun/binsider"
 src.prefix = "v"
 fetch.url = "https://github.com/orhun/binsider/releases/download/v$ver/binsider-$ver-aarch64-apple-darwin.tar.gz"
+
+[kimi-code-linux-x64]
+src.github_tag = "MoonshotAI/kimi-code"
+src.include_regex = ".*kimi-code.*"
+src.from_pattern = "^@moonshot-ai/kimi-code@(.*)$"
+src.to_pattern = "\\1"
+fetch.url = "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@$ver/kimi-code-linux-x64.zip"
+
+[kimi-code-linux-arm64]
+src.github_tag = "MoonshotAI/kimi-code"
+src.include_regex = ".*kimi-code.*"
+src.from_pattern = "^@moonshot-ai/kimi-code@(.*)$"
+src.to_pattern = "\\1"
+fetch.url = "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@$ver/kimi-code-linux-arm64.zip"
+
+[kimi-code-darwin-x64]
+src.github_tag = "MoonshotAI/kimi-code"
+src.include_regex = ".*kimi-code.*"
+src.from_pattern = "^@moonshot-ai/kimi-code@(.*)$"
+src.to_pattern = "\\1"
+fetch.url = "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@$ver/kimi-code-darwin-x64.zip"
+
+[kimi-code-darwin-arm64]
+src.github_tag = "MoonshotAI/kimi-code"
+src.include_regex = ".*kimi-code.*"
+src.from_pattern = "^@moonshot-ai/kimi-code@(.*)$"
+src.to_pattern = "\\1"
+fetch.url = "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@$ver/kimi-code-darwin-arm64.zip"
 
 [fish-ai]
 src.github_tag = "Realiserad/fish-ai"
@@ -417,6 +450,13 @@ fetch.git = "https://codeberg.org/joelkoen/wtfps.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
+# subs-check - High-performance proxy subscription checker
+[subs-check]
+src.git = "https://github.com/p3psi-boo/subs-check.git"
+fetch.git = "https://github.com/p3psi-boo/subs-check.git"
+git.fetch_submodules = false
+git.get_commit_date = true
+
 
 # RustConn - Modern connection manager for Linux (SSH, RDP, VNC, SPICE, and more)
 [rustconn]
@@ -440,13 +480,6 @@ git.get_commit_date = true
 [bbdown]
 src.git = "https://github.com/nilaoda/BBDown.git"
 fetch.git = "https://github.com/nilaoda/BBDown.git"
-git.fetch_submodules = false
-git.get_commit_date = true
-
-# subs-check - High-performance proxy subscription checker
-[subs-check]
-src.git = "https://github.com/p3psi-boo/subs-check.git"
-fetch.git = "https://github.com/p3psi-boo/subs-check.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
@@ -564,3 +597,9 @@ src.github_tag = "flipbit03/terminal-use"
 src.include_regex = "^v[0-9].*"
 fetch.github = "flipbit03/terminal-use"
 git.get_commit_date = true
+
+# pi-agent-rust - High-performance AI coding agent CLI (Rust port of Pi Agent)
+[pi-agent-rust]
+src.github_tag = "Dicklesworthstone/pi_agent_rust"
+src.include_regex = "^v[0-9].*"
+fetch.github = "Dicklesworthstone/pi_agent_rust"
