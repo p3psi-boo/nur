@@ -433,11 +433,6 @@ git.get_commit_date = true
 src.github = "TrustTunnel/TrustTunnel"
 fetch.github = "TrustTunnel/TrustTunnel"
 
-# DailyHotApi - 今日热榜 API，聚合热门数据的 API 接口
-[dailyhot-api]
-src.github = "imsyy/DailyHotApi"
-fetch.github = "imsyy/DailyHotApi"
-
 # bichon - A lightweight, high-performance Rust email archiver with WebUI
 [bichon]
 src.github = "rustmailer/bichon"

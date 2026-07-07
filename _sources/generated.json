@@ -376,27 +376,6 @@
         },
         "version": "v2.8.3"
     },
-    "dailyhot-api": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "dailyhot-api",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "imsyy",
-            "repo": "DailyHotApi",
-            "rev": "v2.0.8",
-            "sha256": "sha256-dvQ+jnMbNVLpRSX+TDolDqdiWNXdzxGL3HiQEFy6YlA=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "v2.0.8"
-    },
     "dalvikus": {
         "cargoLock": null,
         "date": null,

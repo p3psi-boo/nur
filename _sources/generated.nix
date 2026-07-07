@@ -229,17 +229,6 @@
       sha256 = "sha256-aQZ9QMYU0wWQROFU8anWXRJYj6VOdnKY38/Wu2QbnNA=";
     };
   };
-  dailyhot-api = {
-    pname = "dailyhot-api";
-    version = "v2.0.8";
-    src = fetchFromGitHub {
-      owner = "imsyy";
-      repo = "DailyHotApi";
-      rev = "v2.0.8";
-      fetchSubmodules = false;
-      sha256 = "sha256-dvQ+jnMbNVLpRSX+TDolDqdiWNXdzxGL3HiQEFy6YlA=";
-    };
-  };
   dalvikus = {
     pname = "dalvikus";
     version = "1.0.13";
