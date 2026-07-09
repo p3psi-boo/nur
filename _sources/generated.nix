@@ -824,6 +824,17 @@
       sha256 = "sha256-OWbxlt7+Z+C62YoslJCL9DvxeWs0mCoH4GC3R45/hDA=";
     };
   };
+  piko = {
+    pname = "piko";
+    version = "v0.1.0";
+    src = fetchFromGitHub {
+      owner = "UruhaLushia";
+      repo = "piko";
+      rev = "v0.1.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-lqNVYMhTbiF5lbehPMg1irNzbrOsoXIPu0fSBn+N6F4=";
+    };
+  };
   planify = {
     pname = "planify";
     version = "v4.19.4";
