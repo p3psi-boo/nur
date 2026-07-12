@@ -2086,6 +2086,26 @@
         },
         "version": "44ea48854ac49396f35426246426ffcdf5616631"
     },
+    "wxmp_searxng": {
+        "cargoLock": null,
+        "date": "2026-07-12",
+        "extract": null,
+        "name": "wxmp_searxng",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "f055197fe81897e0cb8bdf37046fe34f7596f346",
+            "sha256": "sha256-wVbL5R5bv1k4FHinT5M8lW91rUCzCug9M6Zdbzq020M=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/p3psi-boo/wxmp_searxng.git"
+        },
+        "version": "f055197fe81897e0cb8bdf37046fe34f7596f346"
+    },
     "xurl": {
         "cargoLock": null,
         "date": "2026-03-23",

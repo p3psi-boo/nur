@@ -1285,6 +1285,20 @@
     };
     date = "2024-10-21";
   };
+  wxmp_searxng = {
+    pname = "wxmp_searxng";
+    version = "f055197fe81897e0cb8bdf37046fe34f7596f346";
+    src = fetchgit {
+      url = "https://github.com/p3psi-boo/wxmp_searxng.git";
+      rev = "f055197fe81897e0cb8bdf37046fe34f7596f346";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-wVbL5R5bv1k4FHinT5M8lW91rUCzCug9M6Zdbzq020M=";
+    };
+    date = "2026-07-12";
+  };
   xurl = {
     pname = "xurl";
     version = "24eedb2ff2b141b025efa1a1658fd7f3e88cdd01";
