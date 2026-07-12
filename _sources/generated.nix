@@ -676,20 +676,6 @@
       sha256 = "sha256-3XUYB71Aqqr3jtoiVG3eDsQis7OhC2J8eka18edrnQ0=";
     };
   };
-  mobilepi = {
-    pname = "mobilepi";
-    version = "8847d4e6fdf59563d4284f812c4ac36ff2bda1e3";
-    src = fetchgit {
-      url = "https://github.com/p3psi-boo/MobilePi.git";
-      rev = "8847d4e6fdf59563d4284f812c4ac36ff2bda1e3";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-Kdn6KSUwHX6G1kb+Q5BIUTacYFxsiUnGaf/mxsCCP9M=";
-    };
-    date = "2026-06-12";
-  };
   n9router = {
     pname = "n9router";
     version = "f493218f288c0db1951fa6ef01c611781cf9ce10";

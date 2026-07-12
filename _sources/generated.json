@@ -1101,26 +1101,6 @@
         },
         "version": "0.2.4"
     },
-    "mobilepi": {
-        "cargoLock": null,
-        "date": "2026-06-12",
-        "extract": null,
-        "name": "mobilepi",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "8847d4e6fdf59563d4284f812c4ac36ff2bda1e3",
-            "sha256": "sha256-Kdn6KSUwHX6G1kb+Q5BIUTacYFxsiUnGaf/mxsCCP9M=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/p3psi-boo/MobilePi.git"
-        },
-        "version": "8847d4e6fdf59563d4284f812c4ac36ff2bda1e3"
-    },
     "n9router": {
         "cargoLock": null,
         "date": "2026-06-10",
