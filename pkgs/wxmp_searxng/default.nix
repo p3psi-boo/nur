@@ -12,7 +12,7 @@ buildGoModule {
   version = "0-unstable-${sourceInfo.date}";
 
   src = sourceInfo.src;
-  vendorHash = lib.fakeHash;
+  vendorHash = "sha256-7Zr7sMQ/x9RzDsMhqqLqh8VPy0YjK8kNavfwE5uX43U=";
 
   subPackages = [ "cmd/server" ];
 
