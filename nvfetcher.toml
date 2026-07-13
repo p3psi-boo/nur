@@ -41,6 +41,11 @@ fetch.github = "thellimist/clihub"
 src.github = "dagu-org/dagu"
 fetch.github = "dagu-org/dagu"
 
+[multica-cli]
+src.github_tag = "multica-ai/multica"
+src.include_regex = "^v[0-9].*"
+fetch.github = "multica-ai/multica"
+
 [firm]
 src.git = "https://github.com/42futures/firm.git"
 fetch.git = "https://github.com/42futures/firm.git"

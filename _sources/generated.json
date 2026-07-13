@@ -1101,6 +1101,27 @@
         },
         "version": "0.2.4"
     },
+    "multica-cli": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "multica-cli",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "multica-ai",
+            "repo": "multica",
+            "rev": "v0.4.0",
+            "sha256": "sha256-DOcTIhDxVKyXXG/WXMEXNFh81Veg6HaGogxjnYOKw+o=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.4.0"
+    },
     "n9router": {
         "cargoLock": null,
         "date": "2026-06-10",
