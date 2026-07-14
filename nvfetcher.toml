@@ -66,6 +66,13 @@ src.github = "Samler-Lee/ecloud_computer_auto_boot"
 fetch.github = "Samler-Lee/ecloud_computer_auto_boot"
 pinned = true
 
+# eCloud Cloud PC account and desktop session keepalive tool
+[ecloud-cloudpc-keepalive]
+src.git = "https://github.com/p3psi-boo/ecloud-cloudpc-keepalive.git"
+src.branch = "main"
+fetch.github = "p3psi-boo/ecloud-cloudpc-keepalive"
+git.get_commit_date = true
+
 [bcut-asr]
 src.git = "https://github.com/p3psi-boo/bcut-asr-go.git"
 fetch.git = "https://github.com/p3psi-boo/bcut-asr-go.git"

@@ -259,6 +259,18 @@
     };
     date = "2026-02-12";
   };
+  ecloud-cloudpc-keepalive = {
+    pname = "ecloud-cloudpc-keepalive";
+    version = "d8625ec87671814f14b4275f7dbe7eb05039fa5b";
+    src = fetchFromGitHub {
+      owner = "p3psi-boo";
+      repo = "ecloud-cloudpc-keepalive";
+      rev = "d8625ec87671814f14b4275f7dbe7eb05039fa5b";
+      fetchSubmodules = false;
+      sha256 = "sha256-4wIZf7JPHgpdcxSfrIlA51nCPyg78NoZreqo8REh124=";
+    };
+    date = "2026-07-14";
+  };
   ecloud-computer-auto-boot = {
     pname = "ecloud-computer-auto-boot";
     version = "1.0.0";

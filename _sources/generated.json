@@ -426,6 +426,27 @@
         },
         "version": "02b933df24f5658d10b37dd48c9c354d95c530c3"
     },
+    "ecloud-cloudpc-keepalive": {
+        "cargoLock": null,
+        "date": "2026-07-14",
+        "extract": null,
+        "name": "ecloud-cloudpc-keepalive",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "p3psi-boo",
+            "repo": "ecloud-cloudpc-keepalive",
+            "rev": "d8625ec87671814f14b4275f7dbe7eb05039fa5b",
+            "sha256": "sha256-4wIZf7JPHgpdcxSfrIlA51nCPyg78NoZreqo8REh124=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "d8625ec87671814f14b4275f7dbe7eb05039fa5b"
+    },
     "ecloud-computer-auto-boot": {
         "cargoLock": null,
         "date": null,
