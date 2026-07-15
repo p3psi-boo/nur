@@ -260,6 +260,21 @@
         },
         "version": "v7.2.47"
     },
+    "cloakbrowser": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "cloakbrowser",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-ShK83pX6G7G+7ytBq15cJ8Nr544749DayMZNcFIWZw4=",
+            "type": "url",
+            "url": "https://cloakbrowser.dev/chromium-v146.0.7680.177.5/cloakbrowser-linux-x64.tar.gz"
+        },
+        "version": "146.0.7680.177.5"
+    },
     "cocoindex-code": {
         "cargoLock": null,
         "date": null,

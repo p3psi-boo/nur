@@ -154,6 +154,14 @@
       sha256 = "sha256-bQYzaLi5DIP3gCnZ5LyqO1iyGHiOWsiWen+dfQBEWOU=";
     };
   };
+  cloakbrowser = {
+    pname = "cloakbrowser";
+    version = "146.0.7680.177.5";
+    src = fetchurl {
+      url = "https://cloakbrowser.dev/chromium-v146.0.7680.177.5/cloakbrowser-linux-x64.tar.gz";
+      sha256 = "sha256-ShK83pX6G7G+7ytBq15cJ8Nr544749DayMZNcFIWZw4=";
+    };
+  };
   cocoindex-code = {
     pname = "cocoindex-code";
     version = "0.2.37";
