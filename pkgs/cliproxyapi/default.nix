@@ -41,7 +41,7 @@ buildGoModule {
     '';
   };
 
-  vendorHash = "sha256-AIue9XBsfsKGClRLB1DCME+36crapnOdQrEICFYG1a0=";
+  vendorHash = "sha256-vQU3hLDga5PMUwH4KSB3T5sZ1uPUgHQHeyQGJTKHIYs=";
 
   postInstall = ''
     if [ -e "$out/bin/server" ]; then
