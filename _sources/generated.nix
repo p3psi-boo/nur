@@ -841,6 +841,17 @@
       sha256 = "sha256-OWbxlt7+Z+C62YoslJCL9DvxeWs0mCoH4GC3R45/hDA=";
     };
   };
+  picoclaw = {
+    pname = "picoclaw";
+    version = "v0.3.1";
+    src = fetchFromGitHub {
+      owner = "sipeed";
+      repo = "picoclaw";
+      rev = "v0.3.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-QYfHXIHJjeZJdkhGNNhdO91Q8EFgSP+ubqGJ8VgTEtc=";
+    };
+  };
   piko = {
     pname = "piko";
     version = "v0.1.0";
