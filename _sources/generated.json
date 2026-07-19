@@ -1654,6 +1654,46 @@
         },
         "version": "v0.17.5"
     },
+    "searxng-baidu-qianfan-bridge": {
+        "cargoLock": null,
+        "date": "2026-07-19",
+        "extract": null,
+        "name": "searxng-baidu-qianfan-bridge",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "a9826ab251fa3d52a59a3900f702ab53cd602793",
+            "sha256": "sha256-oaPrdnj4OBjTyxeMKDVBpxzbGMoSQjLc1lvbRdLCeCs=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/p3psi-boo/searxng-baidu-qianfan-bridge.git"
+        },
+        "version": "a9826ab251fa3d52a59a3900f702ab53cd602793"
+    },
+    "searxng-doubao-bridge": {
+        "cargoLock": null,
+        "date": "2026-07-19",
+        "extract": null,
+        "name": "searxng-doubao-bridge",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "72e59326cd34d94f47a632c3a4e692aea7d84ffc",
+            "sha256": "sha256-CfBX/IonAHjO+IEZs3/NSkG72t4vfjFCh2CMfuQVxhk=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/p3psi-boo/searxng-doubao-bridge.git"
+        },
+        "version": "72e59326cd34d94f47a632c3a4e692aea7d84ffc"
+    },
     "selector4nix": {
         "cargoLock": null,
         "date": null,

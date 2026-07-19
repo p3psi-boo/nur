@@ -105,6 +105,16 @@ src.git = "https://github.com/p3psi-boo/web-search.git"
 fetch.git = "https://github.com/p3psi-boo/web-search.git"
 git.fetch_submodules = false
 
+[searxng-baidu-qianfan-bridge]
+src.git = "https://github.com/p3psi-boo/searxng-baidu-qianfan-bridge.git"
+fetch.git = "https://github.com/p3psi-boo/searxng-baidu-qianfan-bridge.git"
+git.fetch_submodules = false
+
+[searxng-doubao-bridge]
+src.git = "https://github.com/p3psi-boo/searxng-doubao-bridge.git"
+fetch.git = "https://github.com/p3psi-boo/searxng-doubao-bridge.git"
+git.fetch_submodules = false
+
 [vohive]
 src.git = "https://github.com/p3psi-boo/vohive.git"
 fetch.git = "https://github.com/p3psi-boo/vohive.git"

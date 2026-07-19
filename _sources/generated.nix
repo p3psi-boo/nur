@@ -1006,6 +1006,34 @@
       sha256 = "sha256-gDQnVMuSaJM0RFUySPpF+n0FLZ0yeA5v0Vca4QLtJ8c=";
     };
   };
+  searxng-baidu-qianfan-bridge = {
+    pname = "searxng-baidu-qianfan-bridge";
+    version = "a9826ab251fa3d52a59a3900f702ab53cd602793";
+    src = fetchgit {
+      url = "https://github.com/p3psi-boo/searxng-baidu-qianfan-bridge.git";
+      rev = "a9826ab251fa3d52a59a3900f702ab53cd602793";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-oaPrdnj4OBjTyxeMKDVBpxzbGMoSQjLc1lvbRdLCeCs=";
+    };
+    date = "2026-07-19";
+  };
+  searxng-doubao-bridge = {
+    pname = "searxng-doubao-bridge";
+    version = "72e59326cd34d94f47a632c3a4e692aea7d84ffc";
+    src = fetchgit {
+      url = "https://github.com/p3psi-boo/searxng-doubao-bridge.git";
+      rev = "72e59326cd34d94f47a632c3a4e692aea7d84ffc";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-CfBX/IonAHjO+IEZs3/NSkG72t4vfjFCh2CMfuQVxhk=";
+    };
+    date = "2026-07-19";
+  };
   selector4nix = {
     pname = "selector4nix";
     version = "v0.7.0";
