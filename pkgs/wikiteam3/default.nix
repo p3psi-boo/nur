@@ -21,7 +21,11 @@ python3.pkgs.buildPythonPackage {
   dependencies = with python3.pkgs; [
     requests
     internetarchive
-    mwclient
+    # mwclient's upstream test suite still imports pkg_resources, which is no
+    # longer provided by current setuptools on Python 3.14.
+    (mwclient.overridePythonAttrs (_: {
+      doCheck = false;
+    }))
     file-read-backwards
     python-slugify
     lxml
