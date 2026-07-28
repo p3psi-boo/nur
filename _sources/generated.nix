@@ -434,6 +434,20 @@
       sha256 = "sha256-8U6NXHiL3ZFb+HuBPm4RKLyKn8YNOQg7DJivsOv0Y5w=";
     };
   };
+  ida-headless-mcp = {
+    pname = "ida-headless-mcp";
+    version = "dc9c56f9d4d8dd3855a1a26ff56d8197acdc5b02";
+    src = fetchgit {
+      url = "https://github.com/zboralski/ida-headless-mcp.git";
+      rev = "dc9c56f9d4d8dd3855a1a26ff56d8197acdc5b02";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-38Mg8iJ69l8eveP8AQGKVBbWclLVuz8pZ5oG9DrV2gY=";
+    };
+    date = "2026-02-16";
+  };
   ida-mcp = {
     pname = "ida-mcp";
     version = "9.3.24";
