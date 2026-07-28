@@ -51,6 +51,7 @@ let
 
     def add_every_addon(license):
         addons = [
+            "LUMINA", "TEAMS",
             "HEXX86", "HEXX64", "HEXARM", "HEXARM64",
             "HEXMIPS", "HEXMIPS64", "HEXPPC", "HEXPPC64",
             "HEXRV64", "HEXARC", "HEXARC64",
@@ -159,6 +160,7 @@ pkgs.stdenv.mkDerivation (finalAttrs: {
     autoPatchelfHook
     qt6.wrapQtAppsHook
     python3
+    nodejs
   ];
 
   autoPatchelfIgnoreMissingDeps = [
@@ -255,7 +257,9 @@ pkgs.stdenv.mkDerivation (finalAttrs: {
 
     addAutoPatchelfSearchPath $IDADIR
 
-    echo "Running auto-crack keygen..."
+    echo "Running auto-crack keygens..."
+    cp ${./keygen.js} $IDADIR/keygen.js
+    node $IDADIR/keygen.js $IDADIR
     python3 ${idaKeygen} $IDADIR
 
     for bb in ida ida64 assistant; do
