@@ -25,11 +25,6 @@
       url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    bun2nix = {
-      url = "github:nix-community/bun2nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = inputs@{ self, nixpkgs, ... }:
@@ -55,7 +50,6 @@
           config = nixpkgsConfig;
           overlays = [
             inputs.fenix.overlays.default
-            inputs.bun2nix.overlays.default
             self.overlays.default
           ];
         };
@@ -97,7 +91,6 @@
               yq
               nurl
               nvfetcher
-              inputs.bun2nix.packages.${system}.default
             ];
           };
         }
