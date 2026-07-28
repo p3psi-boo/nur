@@ -18,7 +18,7 @@ let
         sys.exit(1)
 
     LOCATION = Path(sys.argv[1])
-    VERSION = "9.3.0.260213"  # Match package version
+    VERSION = "9.4.0"  # Match package version
     
     NAME = "meow@colonthree"
     EMAIL = "nixos@localhost"
@@ -133,12 +133,12 @@ let
 in
 pkgs.stdenv.mkDerivation (finalAttrs: {
   pname = "ida-pro";
-  version = "9.3.260213";
+  version = "9.4";
 
   src = pkgs.fetchurl {
-    name = "ida-pro_93_x64linux.run";
-    url = "https://archive.org/download/ida-pro_93_x64linux/ida-pro_93_x64linux.run";
-    sha256 = "sha256-LtQ65LuE103K5vAJkhDfqNYb/qSVL1+aB6mq4Wy3D4I=";
+    name = "ida-pro_94_x64linux.run";
+    url = "https://archive.org/download/ida-pro-94/ida-pro_94_x64linux.run";
+    sha256 = "sha256-6rtkw8hJ04WHWVWDWenOvPF+KpH8xgUVUz37iERii1Q=";
   };
 
   desktopItem = pkgs.makeDesktopItem {
