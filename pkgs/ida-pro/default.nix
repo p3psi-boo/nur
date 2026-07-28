@@ -161,6 +161,18 @@ pkgs.stdenv.mkDerivation (finalAttrs: {
     python3
   ];
 
+  autoPatchelfIgnoreMissingDeps = [
+    "libQt6WaylandCompositor.so.6"
+    "libQt6EglFSDeviceIntegration.so.6"
+    "libQt6WlShellIntegration.so.6"
+    "libQt6Network.so.6"
+    "libQt6Svg.so.6"
+    "libQt6Core.so.6"
+    "libQt6Gui.so.6"
+    "libQt6Widgets.so.6"
+    "libpython3.*\\.so"
+  ];
+
   dontUnpack = true;
 
   runtimeDependencies = with pkgs; [
@@ -193,6 +205,8 @@ pkgs.stdenv.mkDerivation (finalAttrs: {
     libxcb-keysyms
     libxcb-render-util
     libxcb-wm
+    xcb-util-cursor
+    libxcrypt-legacy
     zlib
     curl.out
     pythonForIDA
@@ -223,29 +237,41 @@ pkgs.stdenv.mkDerivation (finalAttrs: {
       --mode unattended --debuglevel 4 --prefix $IDADIR
 
     for lib in $IDADIR/*.so $IDADIR/*.so.6; do
-      ln -s $lib $out/lib/$(basename $lib)
+      ln -s $lib $out/lib/$(basename $lib) 2>/dev/null || true
     done
 
-    patchelf --add-needed libpython3.13.so $out/lib/libida.so
-    patchelf --add-needed libcrypto.so $out/lib/libida.so
-    patchelf --add-needed libsecret-1.so.0 $out/lib/libida.so
+    for libso in $out/lib/libida.so $out/lib/libida64.so $out/lib/libida32.so; do
+      if [ -f "$libso" ]; then
+        patchelf --add-needed libpython3.13.so "$libso" 2>/dev/null || true
+        patchelf --add-needed libcrypto.so "$libso" 2>/dev/null || true
+        patchelf --add-needed libsecret-1.so.0 "$libso" 2>/dev/null || true
+      fi
+    done
+
+    # IDAPython 运行环境链接
+    mkdir -p $IDADIR/opt/python/lib-dynload
+    ln -sf ${pythonForIDA}/lib/libpython*.so $IDADIR/opt/python/ 2>/dev/null || true
+    ln -sf ${pythonForIDA}/lib/python*/lib-dynload/* $IDADIR/opt/python/lib-dynload/ 2>/dev/null || true
 
     addAutoPatchelfSearchPath $IDADIR
 
     echo "Running auto-crack keygen..."
     python3 ${idaKeygen} $IDADIR
 
-    for bb in ida; do
-      wrapProgram $IDADIR/$bb \
-        --prefix IDADIR : $IDADIR \
-        --set QT_QPA_PLATFORM xcb \
-        --set QT_QPA_PLATFORM_PLUGIN_PATH $IDADIR/plugins/platforms \
-        --set QT_PLUGIN_PATH $IDADIR/plugins \
-        --unset QT_QPA_PLATFORMTHEME \
-        --prefix PYTHONPATH : $out/bin/idalib/python \
-        --prefix PATH : ${pythonForIDA}/bin:$IDADIR \
-        --prefix LD_LIBRARY_PATH : $out/lib
-      ln -s $IDADIR/$bb $out/bin/$bb
+    for bb in ida ida64 assistant; do
+      if [ -f "$IDADIR/$bb" ]; then
+        wrapProgram $IDADIR/$bb \
+          --prefix IDADIR : $IDADIR \
+          --set QT_QPA_PLATFORM xcb \
+          --set QT_QPA_PLATFORM_PLUGIN_PATH $IDADIR/plugins/platforms \
+          --set QT_PLUGIN_PATH $IDADIR/plugins \
+          --unset QT_QPA_PLATFORMTHEME \
+          --prefix PYTHONPATH : $IDADIR/opt/python:$out/bin/idalib/python \
+          --prefix PATH : ${pythonForIDA}/bin:$IDADIR \
+          --prefix LD_LIBRARY_PATH : $out/lib:$IDADIR:${pythonForIDA}/lib \
+          --chdir $IDADIR
+        ln -sf $IDADIR/$bb $out/bin/$bb
+      fi
     done
 
     if [ -n "${extraFiles}" ]; then
