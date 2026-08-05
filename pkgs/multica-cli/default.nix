@@ -16,7 +16,7 @@ buildGoModule {
   src = sourceInfo.src;
   sourceRoot = "${sourceInfo.src.name}/server";
 
-  vendorHash = "sha256-+IZt3ZQDHEcLA1cOcN4j4cTtIbATzAowUL3i1ZQnzBc=";
+  vendorHash = "sha256-SL//NLuzLV+faAjD7SR9f9j0AaDHel2haZajLJpsj5s=";
 
   subPackages = [ "cmd/multica" ];
 
