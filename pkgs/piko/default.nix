@@ -13,7 +13,7 @@ buildGoModule {
 
   src = sourceInfo.src;
 
-  vendorHash = "sha256-IuH/IKLRQE6eQarXQrgUz2Obpy1Zn5hxtx44eUXGM+Y=";
+  vendorHash = "sha256-9KFcAPkf4RG9yTBuiKjOcC5OsymxEtdllvIzQsXowUs=";
 
   subPackages = [ "cmd/piko" ];
 
