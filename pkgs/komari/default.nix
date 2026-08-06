@@ -14,7 +14,7 @@ let
     pname = "komari-web";
     version = "0-unstable-${generated.komari-web.date}";
     inherit (generated.komari-web) src;
-    npmDepsHash = "sha256-4X1AOUzsgrbxIsrI2FKVm3Qsz/WqhIUxxS+RiIw3P6M=";
+    npmDepsHash = "sha256-f7AVozQrWhCmjF1zBo/QqzWJyN+FzaQOXA0NYK5AIEw=";
 
     env.CI = "true";
 
@@ -47,11 +47,20 @@ let
     pname = "komari";
     version = backendVersion;
     inherit (generated.komari) src;
-    vendorHash = "sha256-9cs48hWOn1e69W4oqnT6udekMHdzxc+fN/M+1KxRsmE=";
+    vendorHash = "sha256-tnB4wcWZK7WmLG80CkHpJq9SqksOofgjxUL5qa8DtoE=";
 
     env = {
       CGO_ENABLED = "1";
       GOFLAGS = "-trimpath";
+      GOPROXY = "https://goproxy.cn";
+      GOSUMDB = "off";
+    };
+
+    overrideModAttrs = old: {
+      preBuild = ''
+        export GOPROXY="https://goproxy.cn"
+        export GOSUMDB="off"
+      '';
     };
 
     preBuild = ''
