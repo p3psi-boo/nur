@@ -47,13 +47,13 @@
   };
   bichon = {
     pname = "bichon";
-    version = "2.0.1-alpha.1";
+    version = "2.0.0";
     src = fetchFromGitHub {
       owner = "rustmailer";
       repo = "bichon";
-      rev = "2.0.1-alpha.1";
+      rev = "2.0.0";
       fetchSubmodules = false;
-      sha256 = "sha256-juB4TUNpvd/ROJzLgWMLQhMZmAnoHb0Zv/aGIifnU9U=";
+      sha256 = "sha256-WL3FC0ohdB6iB+D7xyVAeaZVGd/vyoraEI7W9ypRcIE=";
     };
   };
   binsider-bin = {
@@ -137,13 +137,13 @@
   };
   cliproxyapi = {
     pname = "cliproxyapi";
-    version = "v7.2.119";
+    version = "v7.2.120";
     src = fetchFromGitHub {
       owner = "router-for-me";
       repo = "CLIProxyAPI";
-      rev = "v7.2.119";
+      rev = "v7.2.120";
       fetchSubmodules = false;
-      sha256 = "sha256-eb2thKSGTFjLyaLZrVmCCk3bo+Rlv+txht5RygdXryM=";
+      sha256 = "sha256-4B/M1VKVvKPy9TVyCgOPfP1lQASscVT784q4chL8nWE=";
     };
   };
   cloakbrowser = {
@@ -404,13 +404,13 @@
   };
   harlequin-mysql = {
     pname = "harlequin-mysql";
-    version = "v1.3.0";
+    version = "v1.3.1";
     src = fetchFromGitHub {
       owner = "tconbeer";
       repo = "harlequin-mysql";
-      rev = "v1.3.0";
+      rev = "v1.3.1";
       fetchSubmodules = false;
-      sha256 = "sha256-yWPysa0+GYq4b6WpjdyONTev5CbORsAdQ2JjZuumZv4=";
+      sha256 = "sha256-haY8LTzcXm7+peKl9rzv1AE8jktBUsK2S6R0vzXHmTQ=";
     };
   };
   hev-socks5-server = {
@@ -599,13 +599,13 @@
   };
   leaf = {
     pname = "leaf";
-    version = "1.26.2";
+    version = "1.27.0";
     src = fetchFromGitHub {
       owner = "rivolink";
       repo = "leaf";
-      rev = "1.26.2";
+      rev = "1.27.0";
       fetchSubmodules = false;
-      sha256 = "sha256-i56BfHHkWl6gfhYXhrwEymlPTc+V4msnxlV7LSUy8X0=";
+      sha256 = "sha256-jaubn5szSZv0O6+19isxI1iCm9T5qiIp56tekA3/26A=";
     };
   };
   llama-cpp-turboquant = {
@@ -1003,13 +1003,13 @@
   };
   rustconn = {
     pname = "rustconn";
-    version = "v0.19.12";
+    version = "v0.19.13";
     src = fetchFromGitHub {
       owner = "totoshko88";
       repo = "RustConn";
-      rev = "v0.19.12";
+      rev = "v0.19.13";
       fetchSubmodules = false;
-      sha256 = "sha256-cx1WouHKAwprhGFAuSkEIF4aZkjnBu2NDYhpUMtYwHk=";
+      sha256 = "sha256-MVizlkc+tEETmgug5cTgq+IY03wZ11YdzMnIRYf+hGk=";
     };
   };
   searxng-baidu-qianfan-bridge = {
