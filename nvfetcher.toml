@@ -637,3 +637,9 @@ fetch.github = "Dicklesworthstone/pi_agent_rust"
 src.github_tag = "sipeed/picoclaw"
 src.include_regex = "^v[0-9].*"
 fetch.github = "sipeed/picoclaw"
+
+# celld - self-hosted, distributed Durable Objects (Cloudflare Workers runtime)
+[celld]
+src.github_tag = "denoland/celld"
+src.include_regex = "^v[0-9].*"
+fetch.github = "denoland/celld"

@@ -161,6 +161,27 @@
         },
         "version": "c815bfbe3cefd0104adf411cd2148995c31f2ba0"
     },
+    "celld": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "celld",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "denoland",
+            "repo": "celld",
+            "rev": "v0.1.0",
+            "sha256": "sha256-Iew3/ugHftS1Ui6tiVRPj3FguYmGx9vwMfS6pY00CWQ=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.1.0"
+    },
     "classyshark": {
         "cargoLock": null,
         "date": null,
@@ -238,12 +259,12 @@
             "name": null,
             "owner": "router-for-me",
             "repo": "CLIProxyAPI",
-            "rev": "v7.2.120",
-            "sha256": "sha256-4B/M1VKVvKPy9TVyCgOPfP1lQASscVT784q4chL8nWE=",
+            "rev": "v7.2.123",
+            "sha256": "sha256-N7dmlOfEqJsr2uPhvwuJBDQixVZT92HnfsjiFU93vxE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v7.2.120"
+        "version": "v7.2.123"
     },
     "cloakbrowser": {
         "cargoLock": null,
@@ -269,11 +290,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-7w4+PlmA4uKFp/zOlFpnfQ/Gcey2pl1gxqfIJ4Wa+to=",
+            "sha256": "sha256-ZIzQxtwEh6FfBFUrMj1hDpOLy7knHmeS8d5YeMNWLVs=",
             "type": "url",
-            "url": "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.39.tar.gz"
+            "url": "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.41.tar.gz"
         },
-        "version": "0.2.39"
+        "version": "0.2.41"
     },
     "coe": {
         "cargoLock": null,
@@ -369,12 +390,12 @@
             "name": null,
             "owner": "dagu-org",
             "repo": "dagu",
-            "rev": "v2.11.4",
-            "sha256": "sha256-HLeYr+qOjFZSsz+SGq9B2HSP4pFcGd+pb1JTsYBAo8Y=",
+            "rev": "v2.12.0",
+            "sha256": "sha256-F3dJLGbtS57cvym0VXnLkFFuLP9bQXIIKc67kj3vcFw=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v2.11.4"
+        "version": "v2.12.0"
     },
     "dalvikus": {
         "cargoLock": null,
@@ -838,11 +859,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-pqyJ5SnQucVn9Y5l9I/KKsygBJHGPmerFJnBJ7YV5+I=",
+            "sha256": "sha256-W4nSKY8Fu+EArosU38od9Wvtwe2D/yp2+O+5SALxaS0=",
             "type": "url",
-            "url": "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@0.33.0/kimi-code-darwin-arm64.zip"
+            "url": "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@0.34.0/kimi-code-darwin-arm64.zip"
         },
-        "version": "0.33.0"
+        "version": "0.34.0"
     },
     "kimi-code-darwin-x64": {
         "cargoLock": null,
@@ -853,11 +874,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-gecuPl5rAQUCUErPoi+V0c2AGAck4KSam9e62Yd7CRA=",
+            "sha256": "sha256-fMSJfMlQjgpx8/IdZjMZTbQEkHwcbn+3tVo1eS0Y/fc=",
             "type": "url",
-            "url": "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@0.33.0/kimi-code-darwin-x64.zip"
+            "url": "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@0.34.0/kimi-code-darwin-x64.zip"
         },
-        "version": "0.33.0"
+        "version": "0.34.0"
     },
     "kimi-code-linux-arm64": {
         "cargoLock": null,
@@ -868,11 +889,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-rlr3EeXx2We8Vp/CRrMwGEJN66UK2S/IvFyQBcbsC+w=",
+            "sha256": "sha256-OBdVv9xFvZYHL5xshPhxzVLvt1YOfqnE5NMu0/ifZf0=",
             "type": "url",
-            "url": "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@0.33.0/kimi-code-linux-arm64.zip"
+            "url": "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@0.34.0/kimi-code-linux-arm64.zip"
         },
-        "version": "0.33.0"
+        "version": "0.34.0"
     },
     "kimi-code-linux-x64": {
         "cargoLock": null,
@@ -883,15 +904,15 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-ldKcXs4vyOi0Nu3tWNt9Tg+q1LoqBuJfXeSEk6T6kjY=",
+            "sha256": "sha256-iFWH8gpR2U3KGPyb/xEkZULAF/t6xFmpaTu6o8pnsZk=",
             "type": "url",
-            "url": "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@0.33.0/kimi-code-linux-x64.zip"
+            "url": "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@0.34.0/kimi-code-linux-x64.zip"
         },
-        "version": "0.33.0"
+        "version": "0.34.0"
     },
     "komari": {
         "cargoLock": null,
-        "date": "2026-08-05",
+        "date": "2026-08-07",
         "extract": null,
         "name": "komari",
         "passthru": null,
@@ -901,13 +922,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "61bd0c8bdd0abe9d9aaf2430058b344217561714",
-            "sha256": "sha256-/fsMK6aqI5zCaMdkBxMZzWl9msiVwXm2E5vEeurDjeY=",
+            "rev": "14bf8bde7cf1313e674e4bf28198f84e9b934794",
+            "sha256": "sha256-ep83GqGCUiqthzzx9mV0Bvl76divEvps1R/meUYUKIM=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/komari-monitor/komari.git"
         },
-        "version": "61bd0c8bdd0abe9d9aaf2430058b344217561714"
+        "version": "14bf8bde7cf1313e674e4bf28198f84e9b934794"
     },
     "komari-monitor-rs": {
         "cargoLock": null,
@@ -931,7 +952,7 @@
     },
     "komari-web": {
         "cargoLock": null,
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "extract": null,
         "name": "komari-web",
         "passthru": null,
@@ -941,13 +962,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "254a72c5075486bb801d3163f2f7dccc8c5298d3",
-            "sha256": "sha256-++lH55Y5x9hX3loEm6t1/Gjdl0z7fuQeuC0VSi0ZRq8=",
+            "rev": "f625b348b339fcb9f699bf7b5028d6678cfc0ab9",
+            "sha256": "sha256-sXBl8Kwulv2qwEco66WrHVIB6OGHEAFSGP40DtEEQx0=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/komari-monitor/komari-web.git"
         },
-        "version": "254a72c5075486bb801d3163f2f7dccc8c5298d3"
+        "version": "f625b348b339fcb9f699bf7b5028d6678cfc0ab9"
     },
     "lazyssh": {
         "cargoLock": null,
@@ -1032,7 +1053,7 @@
     },
     "lucebox-hub": {
         "cargoLock": null,
-        "date": "2026-08-05",
+        "date": "2026-08-06",
         "extract": null,
         "name": "lucebox-hub",
         "passthru": null,
@@ -1042,13 +1063,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "3f3d60bb418a2cbc24f7cd972a553316fdf99e01",
-            "sha256": "sha256-xQnmjOk2nl/Z3RWbwXNApGtaWliq2a817hEsexQQBd4=",
+            "rev": "4fa8937c69aa68658a14ec3cab16e1da22886dd0",
+            "sha256": "sha256-cgkvzzEc3+gLMUMigAVfa1fYExBqHuf0rFaSCO/vr7c=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/Luce-Org/lucebox-hub.git"
         },
-        "version": "3f3d60bb418a2cbc24f7cd972a553316fdf99e01"
+        "version": "4fa8937c69aa68658a14ec3cab16e1da22886dd0"
     },
     "magiskboot-bin": {
         "cargoLock": null,
@@ -1156,16 +1177,16 @@
             "name": null,
             "owner": "multica-ai",
             "repo": "multica",
-            "rev": "v0.4.19",
-            "sha256": "sha256-2cPBML/QwVW4BTDDXWAG/Loo3EKTnM2XI+KGoc/pBtY=",
+            "rev": "v0.4.21",
+            "sha256": "sha256-DQr5Gjl4VURuEJZdkJxqgbA3eE2OoqRZrtU6Qap6OIU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.4.19"
+        "version": "v0.4.21"
     },
     "n9router": {
         "cargoLock": null,
-        "date": "2026-07-22",
+        "date": "2026-08-07",
         "extract": null,
         "name": "n9router",
         "passthru": null,
@@ -1175,13 +1196,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "fe6ad2e390d7ab0632fd9015298a14089caa4c5a",
-            "sha256": "sha256-Xeh6Oh79uWABOI71SYZFJRp2GXLlqWoNzk5YIUTGi3c=",
+            "rev": "5267933548622f7ad78a7f63f1619ef1507dec02",
+            "sha256": "sha256-svEU6IgxBtKzF9ziFZl+DHRDsCZ8It2v9uToZm6C8sU=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/nightwalker89/n9router.git"
         },
-        "version": "fe6ad2e390d7ab0632fd9015298a14089caa4c5a"
+        "version": "5267933548622f7ad78a7f63f1619ef1507dec02"
     },
     "nf_deaf": {
         "cargoLock": null,
@@ -1205,7 +1226,7 @@
     },
     "octopus-api": {
         "cargoLock": null,
-        "date": "2026-06-13",
+        "date": "2026-08-06",
         "extract": null,
         "name": "octopus-api",
         "passthru": null,
@@ -1215,13 +1236,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "f79365ca0c84966daeead0e70ece04ed6969dda7",
-            "sha256": "sha256-mdVKnhPGHaZVursHVbDed6Q29t5LUtr4Rbw72g0Voaw=",
+            "rev": "7b7a4801fa501f9244a1d9dfb47da56d1600b970",
+            "sha256": "sha256-pwKEYRAPnPwElyFhh4tI+vVV/BMLLCFnFIpgotMd0Wc=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/p3psi-boo/octopus.git"
         },
-        "version": "f79365ca0c84966daeead0e70ece04ed6969dda7"
+        "version": "7b7a4801fa501f9244a1d9dfb47da56d1600b970"
     },
     "okmain": {
         "cargoLock": null,
@@ -1245,7 +1266,7 @@
     },
     "oli": {
         "cargoLock": null,
-        "date": "2026-08-05",
+        "date": "2026-08-07",
         "extract": null,
         "name": "oli",
         "passthru": null,
@@ -1255,13 +1276,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "6228e7747a1edc90cafa5619c576416c2f1bf734",
-            "sha256": "sha256-9BIKWT/CTcbIqBbBavyJYSAROL9vYnDDrGkXDP1OVA8=",
+            "rev": "3d6e427e8c0c92aec1430e2f4bbb777e4e08d81e",
+            "sha256": "sha256-X6QOFs94jOQeZySmSyWP3VVgPyWNC8ihW2IFu9loKR0=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/apache/opendal-oli.git"
         },
-        "version": "6228e7747a1edc90cafa5619c576416c2f1bf734"
+        "version": "3d6e427e8c0c92aec1430e2f4bbb777e4e08d81e"
     },
     "omniroute": {
         "cargoLock": null,
@@ -1652,12 +1673,12 @@
             "name": null,
             "owner": "totoshko88",
             "repo": "RustConn",
-            "rev": "v0.19.13",
-            "sha256": "sha256-MVizlkc+tEETmgug5cTgq+IY03wZ11YdzMnIRYf+hGk=",
+            "rev": "v0.19.15",
+            "sha256": "sha256-Qks/G2V8Jp6VUwxtMeAE6ZLPzbf6H7TNSHuz2oID1Gk=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.19.13"
+        "version": "v0.19.15"
     },
     "searxng-baidu-qianfan-bridge": {
         "cargoLock": null,
@@ -2090,7 +2111,7 @@
     },
     "vohive": {
         "cargoLock": null,
-        "date": "2026-08-03",
+        "date": "2026-08-06",
         "extract": null,
         "name": "vohive",
         "passthru": null,
@@ -2100,13 +2121,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "c4ba8446a6aec40fdff11d9bbe84814e345cb5e7",
-            "sha256": "sha256-XylJsgmzxt209/v9e9aGCNoBIRuLBbr8nWJ0bvbKqvA=",
+            "rev": "6f8bc6ff7b0f644f939a4a2f1d8a748b74174473",
+            "sha256": "sha256-ng8l/4FfuEgW6QIJFlD62XYXG00/mVdnEbTvdDZN7SA=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/p3psi-boo/vohive.git"
         },
-        "version": "c4ba8446a6aec40fdff11d9bbe84814e345cb5e7"
+        "version": "6f8bc6ff7b0f644f939a4a2f1d8a748b74174473"
     },
     "web-search": {
         "cargoLock": null,
