@@ -74,12 +74,12 @@
             "name": null,
             "owner": "rustmailer",
             "repo": "bichon",
-            "rev": "2.0.0",
-            "sha256": "sha256-WL3FC0ohdB6iB+D7xyVAeaZVGd/vyoraEI7W9ypRcIE=",
+            "rev": "2.0.1",
+            "sha256": "sha256-pL/1W51x9ZqUHLLzdLUpb54crvhG8JhDqJu47CRZAd4=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "2.0.0"
+        "version": "2.0.1"
     },
     "binsider-bin": {
         "cargoLock": null,
@@ -259,12 +259,12 @@
             "name": null,
             "owner": "router-for-me",
             "repo": "CLIProxyAPI",
-            "rev": "v7.2.123",
-            "sha256": "sha256-N7dmlOfEqJsr2uPhvwuJBDQixVZT92HnfsjiFU93vxE=",
+            "rev": "v7.2.127",
+            "sha256": "sha256-gVy/bErDmZnKrbp4CwMBjFqIhdLGmqVN34bTF2gqWmQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v7.2.123"
+        "version": "v7.2.127"
     },
     "cloakbrowser": {
         "cargoLock": null,
@@ -692,6 +692,36 @@
         },
         "version": "v1.3.1"
     },
+    "herdr": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "herdr",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-uHLqfkD6LLF+hXrJtisb8m23tAPGIvXS8/WzX26azSg=",
+            "type": "url",
+            "url": "https://github.com/herdrdev/herdr/releases/download/v0.8.0/herdr-linux-x86_64"
+        },
+        "version": "v0.8.0"
+    },
+    "herdr-aarch64-linux": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "herdr-aarch64-linux",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-9kesZkaNnvvGQv5TT7KERo8K6mBkFgb8AI38DYKjyoc=",
+            "type": "url",
+            "url": "https://github.com/herdrdev/herdr/releases/download/v0.8.0/herdr-linux-aarch64"
+        },
+        "version": "v0.8.0"
+    },
     "hev-socks5-server": {
         "cargoLock": null,
         "date": null,
@@ -704,13 +734,13 @@
             "fetchSubmodules": true,
             "leaveDotGit": false,
             "name": null,
-            "rev": "2.13.0",
-            "sha256": "sha256-NHndG41oiQgxE1QLU8OcKikNapIs4GvoCH/3D4gtxJ0=",
+            "rev": "2.13.1",
+            "sha256": "sha256-DvG2w5aKKes33Wj/b8SLjv5+C+k3Q2Ro37JgAyqMibw=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/heiher/hev-socks5-server.git"
         },
-        "version": "2.13.0"
+        "version": "2.13.1"
     },
     "ida-headless-mcp": {
         "cargoLock": null,
@@ -1053,7 +1083,7 @@
     },
     "lucebox-hub": {
         "cargoLock": null,
-        "date": "2026-08-06",
+        "date": "2026-08-09",
         "extract": null,
         "name": "lucebox-hub",
         "passthru": null,
@@ -1063,13 +1093,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "4fa8937c69aa68658a14ec3cab16e1da22886dd0",
-            "sha256": "sha256-cgkvzzEc3+gLMUMigAVfa1fYExBqHuf0rFaSCO/vr7c=",
+            "rev": "b8c3a0dfa9317b358f2a51ff7abb41e60f23b82d",
+            "sha256": "sha256-004UZxEvBVgVvt7m4+kRnpovgtkpvN1fYg7OsUu2tSg=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/Luce-Org/lucebox-hub.git"
         },
-        "version": "4fa8937c69aa68658a14ec3cab16e1da22886dd0"
+        "version": "b8c3a0dfa9317b358f2a51ff7abb41e60f23b82d"
     },
     "magiskboot-bin": {
         "cargoLock": null,
@@ -1186,7 +1216,7 @@
     },
     "n9router": {
         "cargoLock": null,
-        "date": "2026-08-07",
+        "date": "2026-08-08",
         "extract": null,
         "name": "n9router",
         "passthru": null,
@@ -1196,13 +1226,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "5267933548622f7ad78a7f63f1619ef1507dec02",
-            "sha256": "sha256-svEU6IgxBtKzF9ziFZl+DHRDsCZ8It2v9uToZm6C8sU=",
+            "rev": "a7d5780a9fe16ee31a39010af9b892033c1d58fc",
+            "sha256": "sha256-N6H0+C+SK/K4gJCPJAqe5kTpBkHuYLRu6+OE2nBOAXE=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/nightwalker89/n9router.git"
         },
-        "version": "5267933548622f7ad78a7f63f1619ef1507dec02"
+        "version": "a7d5780a9fe16ee31a39010af9b892033c1d58fc"
     },
     "nf_deaf": {
         "cargoLock": null,
@@ -1673,12 +1703,12 @@
             "name": null,
             "owner": "totoshko88",
             "repo": "RustConn",
-            "rev": "v0.19.15",
-            "sha256": "sha256-Qks/G2V8Jp6VUwxtMeAE6ZLPzbf6H7TNSHuz2oID1Gk=",
+            "rev": "v0.19.19",
+            "sha256": "sha256-fUzNABLMCw52kAS4s2OnJU8+3Fzg4uO6vZ2MqWIvroY=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.19.15"
+        "version": "v0.19.19"
     },
     "searxng-baidu-qianfan-bridge": {
         "cargoLock": null,
@@ -2151,7 +2181,7 @@
     },
     "wikiteam3": {
         "cargoLock": null,
-        "date": "2025-12-24",
+        "date": "2026-08-10",
         "extract": null,
         "name": "wikiteam3",
         "passthru": null,
@@ -2161,13 +2191,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "06346a4305f8f8c5ced633c3e0dc38b3bb960e6e",
-            "sha256": "sha256-gdUZzfIn9nM60+mYacFblmyqa+pY+EbR4lPZnuy6Amk=",
+            "rev": "317f63f69d0f136783f95d0d54e7e03bf4d483dd",
+            "sha256": "sha256-QE6XPxAe1cRQWWawhRZiyXwS/VDm+Ybze8eNcgDyLAg=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/saveweb/wikiteam3.git"
         },
-        "version": "06346a4305f8f8c5ced633c3e0dc38b3bb960e6e"
+        "version": "317f63f69d0f136783f95d0d54e7e03bf4d483dd"
     },
     "wsl-vpnkit": {
         "cargoLock": null,

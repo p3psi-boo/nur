@@ -47,13 +47,13 @@
   };
   bichon = {
     pname = "bichon";
-    version = "2.0.0";
+    version = "2.0.1";
     src = fetchFromGitHub {
       owner = "rustmailer";
       repo = "bichon";
-      rev = "2.0.0";
+      rev = "2.0.1";
       fetchSubmodules = false;
-      sha256 = "sha256-WL3FC0ohdB6iB+D7xyVAeaZVGd/vyoraEI7W9ypRcIE=";
+      sha256 = "sha256-pL/1W51x9ZqUHLLzdLUpb54crvhG8JhDqJu47CRZAd4=";
     };
   };
   binsider-bin = {
@@ -148,13 +148,13 @@
   };
   cliproxyapi = {
     pname = "cliproxyapi";
-    version = "v7.2.123";
+    version = "v7.2.127";
     src = fetchFromGitHub {
       owner = "router-for-me";
       repo = "CLIProxyAPI";
-      rev = "v7.2.123";
+      rev = "v7.2.127";
       fetchSubmodules = false;
-      sha256 = "sha256-N7dmlOfEqJsr2uPhvwuJBDQixVZT92HnfsjiFU93vxE=";
+      sha256 = "sha256-gVy/bErDmZnKrbp4CwMBjFqIhdLGmqVN34bTF2gqWmQ=";
     };
   };
   cloakbrowser = {
@@ -424,17 +424,33 @@
       sha256 = "sha256-haY8LTzcXm7+peKl9rzv1AE8jktBUsK2S6R0vzXHmTQ=";
     };
   };
+  herdr = {
+    pname = "herdr";
+    version = "v0.8.0";
+    src = fetchurl {
+      url = "https://github.com/herdrdev/herdr/releases/download/v0.8.0/herdr-linux-x86_64";
+      sha256 = "sha256-uHLqfkD6LLF+hXrJtisb8m23tAPGIvXS8/WzX26azSg=";
+    };
+  };
+  herdr-aarch64-linux = {
+    pname = "herdr-aarch64-linux";
+    version = "v0.8.0";
+    src = fetchurl {
+      url = "https://github.com/herdrdev/herdr/releases/download/v0.8.0/herdr-linux-aarch64";
+      sha256 = "sha256-9kesZkaNnvvGQv5TT7KERo8K6mBkFgb8AI38DYKjyoc=";
+    };
+  };
   hev-socks5-server = {
     pname = "hev-socks5-server";
-    version = "2.13.0";
+    version = "2.13.1";
     src = fetchgit {
       url = "https://github.com/heiher/hev-socks5-server.git";
-      rev = "2.13.0";
+      rev = "2.13.1";
       fetchSubmodules = true;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-NHndG41oiQgxE1QLU8OcKikNapIs4GvoCH/3D4gtxJ0=";
+      sha256 = "sha256-DvG2w5aKKes33Wj/b8SLjv5+C+k3Q2Ro37JgAyqMibw=";
     };
   };
   ida-headless-mcp = {
@@ -649,17 +665,17 @@
   };
   lucebox-hub = {
     pname = "lucebox-hub";
-    version = "4fa8937c69aa68658a14ec3cab16e1da22886dd0";
+    version = "b8c3a0dfa9317b358f2a51ff7abb41e60f23b82d";
     src = fetchgit {
       url = "https://github.com/Luce-Org/lucebox-hub.git";
-      rev = "4fa8937c69aa68658a14ec3cab16e1da22886dd0";
+      rev = "b8c3a0dfa9317b358f2a51ff7abb41e60f23b82d";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-cgkvzzEc3+gLMUMigAVfa1fYExBqHuf0rFaSCO/vr7c=";
+      sha256 = "sha256-004UZxEvBVgVvt7m4+kRnpovgtkpvN1fYg7OsUu2tSg=";
     };
-    date = "2026-08-06";
+    date = "2026-08-09";
   };
   magiskboot-bin = {
     pname = "magiskboot-bin";
@@ -726,17 +742,17 @@
   };
   n9router = {
     pname = "n9router";
-    version = "5267933548622f7ad78a7f63f1619ef1507dec02";
+    version = "a7d5780a9fe16ee31a39010af9b892033c1d58fc";
     src = fetchgit {
       url = "https://github.com/nightwalker89/n9router.git";
-      rev = "5267933548622f7ad78a7f63f1619ef1507dec02";
+      rev = "a7d5780a9fe16ee31a39010af9b892033c1d58fc";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-svEU6IgxBtKzF9ziFZl+DHRDsCZ8It2v9uToZm6C8sU=";
+      sha256 = "sha256-N6H0+C+SK/K4gJCPJAqe5kTpBkHuYLRu6+OE2nBOAXE=";
     };
-    date = "2026-08-07";
+    date = "2026-08-08";
   };
   nf_deaf = {
     pname = "nf_deaf";
@@ -1014,13 +1030,13 @@
   };
   rustconn = {
     pname = "rustconn";
-    version = "v0.19.15";
+    version = "v0.19.19";
     src = fetchFromGitHub {
       owner = "totoshko88";
       repo = "RustConn";
-      rev = "v0.19.15";
+      rev = "v0.19.19";
       fetchSubmodules = false;
-      sha256 = "sha256-Qks/G2V8Jp6VUwxtMeAE6ZLPzbf6H7TNSHuz2oID1Gk=";
+      sha256 = "sha256-fUzNABLMCw52kAS4s2OnJU8+3Fzg4uO6vZ2MqWIvroY=";
     };
   };
   searxng-baidu-qianfan-bridge = {
@@ -1321,17 +1337,17 @@
   };
   wikiteam3 = {
     pname = "wikiteam3";
-    version = "06346a4305f8f8c5ced633c3e0dc38b3bb960e6e";
+    version = "317f63f69d0f136783f95d0d54e7e03bf4d483dd";
     src = fetchgit {
       url = "https://github.com/saveweb/wikiteam3.git";
-      rev = "06346a4305f8f8c5ced633c3e0dc38b3bb960e6e";
+      rev = "317f63f69d0f136783f95d0d54e7e03bf4d483dd";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-gdUZzfIn9nM60+mYacFblmyqa+pY+EbR4lPZnuy6Amk=";
+      sha256 = "sha256-QE6XPxAe1cRQWWawhRZiyXwS/VDm+Ybze8eNcgDyLAg=";
     };
-    date = "2025-12-24";
+    date = "2026-08-10";
   };
   wsl-vpnkit = {
     pname = "wsl-vpnkit";

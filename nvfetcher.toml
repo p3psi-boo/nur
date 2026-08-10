@@ -643,3 +643,15 @@ fetch.github = "sipeed/picoclaw"
 src.github_tag = "denoland/celld"
 src.include_regex = "^v[0-9].*"
 fetch.github = "denoland/celld"
+
+# herdr - the runtime your coding agents live on (prebuilt static binaries)
+# Version tracks latest stable release tag (vX.Y.Z), skipping preview-* prereleases.
+[herdr]
+src.github_tag = "herdrdev/herdr"
+src.include_regex = "^v[0-9].*"
+fetch.url = "https://github.com/herdrdev/herdr/releases/download/$ver/herdr-linux-x86_64"
+
+[herdr-aarch64-linux]
+src.github_tag = "herdrdev/herdr"
+src.include_regex = "^v[0-9].*"
+fetch.url = "https://github.com/herdrdev/herdr/releases/download/$ver/herdr-linux-aarch64"
