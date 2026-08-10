@@ -692,36 +692,6 @@
         },
         "version": "v1.3.1"
     },
-    "herdr": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "herdr",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-uHLqfkD6LLF+hXrJtisb8m23tAPGIvXS8/WzX26azSg=",
-            "type": "url",
-            "url": "https://github.com/herdrdev/herdr/releases/download/v0.8.0/herdr-linux-x86_64"
-        },
-        "version": "v0.8.0"
-    },
-    "herdr-aarch64-linux": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "herdr-aarch64-linux",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-9kesZkaNnvvGQv5TT7KERo8K6mBkFgb8AI38DYKjyoc=",
-            "type": "url",
-            "url": "https://github.com/herdrdev/herdr/releases/download/v0.8.0/herdr-linux-aarch64"
-        },
-        "version": "v0.8.0"
-    },
     "hev-socks5-server": {
         "cargoLock": null,
         "date": null,

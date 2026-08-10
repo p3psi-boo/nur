@@ -424,22 +424,6 @@
       sha256 = "sha256-haY8LTzcXm7+peKl9rzv1AE8jktBUsK2S6R0vzXHmTQ=";
     };
   };
-  herdr = {
-    pname = "herdr";
-    version = "v0.8.0";
-    src = fetchurl {
-      url = "https://github.com/herdrdev/herdr/releases/download/v0.8.0/herdr-linux-x86_64";
-      sha256 = "sha256-uHLqfkD6LLF+hXrJtisb8m23tAPGIvXS8/WzX26azSg=";
-    };
-  };
-  herdr-aarch64-linux = {
-    pname = "herdr-aarch64-linux";
-    version = "v0.8.0";
-    src = fetchurl {
-      url = "https://github.com/herdrdev/herdr/releases/download/v0.8.0/herdr-linux-aarch64";
-      sha256 = "sha256-9kesZkaNnvvGQv5TT7KERo8K6mBkFgb8AI38DYKjyoc=";
-    };
-  };
   hev-socks5-server = {
     pname = "hev-socks5-server";
     version = "2.13.1";
