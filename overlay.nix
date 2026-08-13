@@ -72,7 +72,16 @@ let
     else
       withGoProxyAttrs args;
   nurPrev = prev // {
-    buildGoModule = args: prev.buildGoModule (withGoProxy args);
+    buildGoModule =
+      let
+        orig = prev.buildGoModule;
+      in
+      # 保留 orig 的 .override/.overrideAttrs（octopus-api 用 .override { go = ...; }），
+      # 同时把调用重定向到带 goproxy.cn 注入的版本。
+      (builtins.removeAttrs orig [ "__functor" ])
+      // {
+        __functor = self: args: orig (withGoProxy args);
+      };
   };
 
   repoOverlay = lib.listToAttrs (
