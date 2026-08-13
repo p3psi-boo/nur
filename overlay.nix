@@ -78,7 +78,7 @@ let
   repoOverlay = lib.listToAttrs (
     map (pkgName: {
       name = pkgName;
-      value = (lib.callPackageWith nurPrev) (pkgsDir + "/${pkgName}") (extraArgsFor pkgName);
+      value = (lib.callPackageWith (nurPrev // pythonUvOverlay)) (pkgsDir + "/${pkgName}") (extraArgsFor pkgName);
     }) publicPackageNames
   );
 
