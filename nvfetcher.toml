@@ -613,6 +613,13 @@ git.fetch_submodules = false
 git.get_commit_date = true
 
 
+# ironet - Demand-aware Linux overlay network using iroh and a single FlowRouter TUN
+[ironet]
+src.git = "https://github.com/p3psi-boo/ironet.git"
+fetch.git = "https://github.com/p3psi-boo/ironet.git"
+git.fetch_submodules = false
+git.get_commit_date = true
+
 # sugar-wifi-conf - BLE service to configure WiFi + SSH-over-BLE tunnel (PiSugar)
 [sugar-wifi-conf]
 src.git = "https://github.com/PiSugar/sugar-wifi-conf.git"

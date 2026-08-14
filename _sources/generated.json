@@ -809,6 +809,26 @@
         },
         "version": "v1.1.2"
     },
+    "ironet": {
+        "cargoLock": null,
+        "date": "2026-08-14",
+        "extract": null,
+        "name": "ironet",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "d6988356fe688d1ea234ec92c00ce537318f6f20",
+            "sha256": "sha256-l70gtKEGayGDGSSm1d7Rk4gWupT8lSr9psI5ID8jynA=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/p3psi-boo/ironet.git"
+        },
+        "version": "d6988356fe688d1ea234ec92c00ce537318f6f20"
+    },
     "jarm": {
         "cargoLock": null,
         "date": "2026-06-02",

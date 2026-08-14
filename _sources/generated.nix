@@ -495,6 +495,20 @@
       sha256 = "sha256-xAXYhvN7rdXvA2EWsNXRfXlIrumyPluAcmVbMY/pZxE=";
     };
   };
+  ironet = {
+    pname = "ironet";
+    version = "d6988356fe688d1ea234ec92c00ce537318f6f20";
+    src = fetchgit {
+      url = "https://github.com/p3psi-boo/ironet.git";
+      rev = "d6988356fe688d1ea234ec92c00ce537318f6f20";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-l70gtKEGayGDGSSm1d7Rk4gWupT8lSr9psI5ID8jynA=";
+    };
+    date = "2026-08-14";
+  };
   jarm = {
     pname = "jarm";
     version = "2c0cf5ce8418c7a1d03edb219acea3c18e068289";
