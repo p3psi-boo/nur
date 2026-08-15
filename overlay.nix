@@ -47,6 +47,7 @@ let
     entries.${name} == "directory"
     && builtins.pathExists (pkgsDir + "/${name}/default.nix")
     && name != "focaltech-spi"
+    && name != "grok2api"
   ) (builtins.attrNames entries);
 
   # proxy.golang.org 在国内网络不可达，NUR 内 Go 包的 module 下载统一走 goproxy.cn。
