@@ -189,17 +189,17 @@
   };
   commandcode2api = {
     pname = "commandcode2api";
-    version = "30a6adc138b118ffda394ba162cf26d85fa1f13f";
+    version = "1010b2292ebd626d16662f878350e173286110c2";
     src = fetchgit {
       url = "https://github.com/p3psi-boo/commandcode2api.git";
-      rev = "30a6adc138b118ffda394ba162cf26d85fa1f13f";
+      rev = "1010b2292ebd626d16662f878350e173286110c2";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-g12WHKkkoZO8OSyypm1EGEIKJxhpvJv7yqvV5NUTHdw=";
+      sha256 = "sha256-rMry5ozjcwK044CivmqEwTUajKId2PYIs3NOGjh0gjk=";
     };
-    date = "2026-06-03";
+    date = "2026-08-15";
   };
   cookiecloud-rs = {
     pname = "cookiecloud-rs";

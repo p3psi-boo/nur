@@ -318,7 +318,7 @@
     },
     "commandcode2api": {
         "cargoLock": null,
-        "date": "2026-06-03",
+        "date": "2026-08-15",
         "extract": null,
         "name": "commandcode2api",
         "passthru": null,
@@ -328,13 +328,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "30a6adc138b118ffda394ba162cf26d85fa1f13f",
-            "sha256": "sha256-g12WHKkkoZO8OSyypm1EGEIKJxhpvJv7yqvV5NUTHdw=",
+            "rev": "1010b2292ebd626d16662f878350e173286110c2",
+            "sha256": "sha256-rMry5ozjcwK044CivmqEwTUajKId2PYIs3NOGjh0gjk=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/p3psi-boo/commandcode2api.git"
         },
-        "version": "30a6adc138b118ffda394ba162cf26d85fa1f13f"
+        "version": "1010b2292ebd626d16662f878350e173286110c2"
     },
     "cookiecloud-rs": {
         "cargoLock": null,
