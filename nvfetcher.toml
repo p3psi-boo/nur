@@ -5,6 +5,7 @@ git.fetch_submodules = false
 
 [lotspeed]
 src.git = "https://github.com/uk0/lotspeed.git"
+src.branch = "adaptive-accel"
 fetch.git = "https://github.com/uk0/lotspeed.git"
 git.fetch_submodules = false
 

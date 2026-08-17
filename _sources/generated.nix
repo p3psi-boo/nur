@@ -649,17 +649,17 @@
   };
   lotspeed = {
     pname = "lotspeed";
-    version = "3df7cb1e3526526496191edb00e2e4e92e7da761";
+    version = "df78e23472f2d291ee41cca2d308f67d5828fb22";
     src = fetchgit {
       url = "https://github.com/uk0/lotspeed.git";
-      rev = "3df7cb1e3526526496191edb00e2e4e92e7da761";
+      rev = "df78e23472f2d291ee41cca2d308f67d5828fb22";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-Z6m93vi8u3BeQ1SW2sgKVrhHykyp/WTrcJMOaRzFJ38=";
+      sha256 = "sha256-br29pDUjrNCS2BL+u3ZTixyYR3iKj6fn8WvQQE+T63Y=";
     };
-    date = "2026-01-19";
+    date = "2026-06-18";
   };
   lucebox-hub = {
     pname = "lucebox-hub";

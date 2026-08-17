@@ -1053,7 +1053,7 @@
     },
     "lotspeed": {
         "cargoLock": null,
-        "date": "2026-01-19",
+        "date": "2026-06-18",
         "extract": null,
         "name": "lotspeed",
         "passthru": null,
@@ -1063,13 +1063,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "3df7cb1e3526526496191edb00e2e4e92e7da761",
-            "sha256": "sha256-Z6m93vi8u3BeQ1SW2sgKVrhHykyp/WTrcJMOaRzFJ38=",
+            "rev": "df78e23472f2d291ee41cca2d308f67d5828fb22",
+            "sha256": "sha256-br29pDUjrNCS2BL+u3ZTixyYR3iKj6fn8WvQQE+T63Y=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/uk0/lotspeed.git"
         },
-        "version": "3df7cb1e3526526496191edb00e2e4e92e7da761"
+        "version": "df78e23472f2d291ee41cca2d308f67d5828fb22"
     },
     "lucebox-hub": {
         "cargoLock": null,
