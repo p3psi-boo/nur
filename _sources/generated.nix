@@ -399,6 +399,20 @@
     };
     date = "2026-07-04";
   };
+  grok-search-rs = {
+    pname = "grok-search-rs";
+    version = "06643b3e3d0e1b22527d096e6bfadfda692749b3";
+    src = fetchgit {
+      url = "https://github.com/Episkey-G/GrokSearch-rs.git";
+      rev = "06643b3e3d0e1b22527d096e6bfadfda692749b3";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-0oQTPLQoQmH985whZil2w2RQPgC81E2N6JuPMCk4W8w=";
+    };
+    date = "2026-08-08";
+  };
   grok2api = {
     pname = "grok2api";
     version = "ef7fb4f224062be15ab8745389a5c13ab4dc846b";

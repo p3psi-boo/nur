@@ -651,6 +651,26 @@
         },
         "version": "a9e7e92050f3f5fd3a957bc70c2458723ea3744a"
     },
+    "grok-search-rs": {
+        "cargoLock": null,
+        "date": "2026-08-08",
+        "extract": null,
+        "name": "grok-search-rs",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "06643b3e3d0e1b22527d096e6bfadfda692749b3",
+            "sha256": "sha256-0oQTPLQoQmH985whZil2w2RQPgC81E2N6JuPMCk4W8w=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/Episkey-G/GrokSearch-rs.git"
+        },
+        "version": "06643b3e3d0e1b22527d096e6bfadfda692749b3"
+    },
     "grok2api": {
         "cargoLock": null,
         "date": "2026-07-09",

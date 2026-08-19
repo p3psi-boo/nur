@@ -341,6 +341,13 @@ src.git = "https://github.com/jiujiu532/grok2api.git"
 fetch.git = "https://github.com/jiujiu532/grok2api.git"
 git.fetch_submodules = false
 
+# grok-search-rs - Rust MCP server for Grok web search and Tavily-backed source retrieval
+[grok-search-rs]
+src.git = "https://github.com/Episkey-G/GrokSearch-rs.git"
+fetch.git = "https://github.com/Episkey-G/GrokSearch-rs.git"
+git.fetch_submodules = false
+git.get_commit_date = true
+
 # Focaltech fingerprint reader driver bundle
 [focaltech-fingerprint]
 src.git = "https://github.com/vobademi/FTEXX00-Ubuntu.git"
