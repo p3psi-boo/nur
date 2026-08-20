@@ -447,21 +447,6 @@
     };
   };
 
-  usque = {
-    pname = "usque";
-    version = "6aa03fc97d12848dce34eedbd187fb1077b5d1ea";
-    src = fetchgit {
-      url = "https://github.com/Diniboy1123/usque.git";
-      rev = "6aa03fc97d12848dce34eedbd187fb1077b5d1ea";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-aUAji41gVsRs47IDtLAinxUZsZjTQvO/SMWe5GdmJLw=";
-    };
-    date = "2026-07-20";
-  };
-
   vja = {
     pname = "vja";
     version = "1bbea5452dae7a7ee97c2b9b3317fc989a4cf3ea";

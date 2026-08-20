@@ -659,26 +659,6 @@
     },
     "version": "v1.2.0"
   },
-  "usque": {
-    "cargoLock": null,
-    "date": "2026-07-20",
-    "extract": null,
-    "name": "usque",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "6aa03fc97d12848dce34eedbd187fb1077b5d1ea",
-      "sha256": "sha256-aUAji41gVsRs47IDtLAinxUZsZjTQvO/SMWe5GdmJLw=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/Diniboy1123/usque.git"
-    },
-    "version": "6aa03fc97d12848dce34eedbd187fb1077b5d1ea"
-  },
   "vja": {
     "cargoLock": null,
     "date": "2026-06-28",

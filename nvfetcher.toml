@@ -141,13 +141,6 @@ git.get_commit_date = true
 src.manual = "146.0.7680.177.5"
 fetch.url = "https://cloakbrowser.dev/chromium-v$ver/cloakbrowser-linux-x64.tar.gz"
 
-# usque - Open-source reimplementation of Cloudflare WARP client's MASQUE protocol
-[usque]
-src.git = "https://github.com/Diniboy1123/usque.git"
-fetch.git = "https://github.com/Diniboy1123/usque.git"
-git.fetch_submodules = false
-git.get_commit_date = true
-
 [selector4nix]
 src.github_tag = "StarryReverie/selector4nix"
 fetch.github = "StarryReverie/selector4nix"
