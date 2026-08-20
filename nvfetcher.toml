@@ -19,11 +19,6 @@ src.git = "https://github.com/duckdb/pg_duckdb.git"
 fetch.git = "https://github.com/duckdb/pg_duckdb.git"
 git.fetch_submodules = true
 
-[tcp-brutal]
-src.git = "https://github.com/apernet/tcp-brutal.git"
-fetch.git = "https://github.com/apernet/tcp-brutal.git"
-git.fetch_submodules = false
-
 [nf_deaf]
 src.git = "https://github.com/kmb21y66/nf_deaf.git"
 fetch.git = "https://github.com/kmb21y66/nf_deaf.git"
@@ -96,11 +91,6 @@ src.git = "https://github.com/p3psi-boo/bird-fork.git"
 fetch.git = "https://github.com/p3psi-boo/bird-fork.git"
 git.fetch_submodules = false
 
-[web-search]
-src.git = "https://github.com/p3psi-boo/web-search.git"
-fetch.git = "https://github.com/p3psi-boo/web-search.git"
-git.fetch_submodules = false
-
 [searxng-baidu-qianfan-bridge]
 src.git = "https://github.com/p3psi-boo/searxng-baidu-qianfan-bridge.git"
 fetch.git = "https://github.com/p3psi-boo/searxng-baidu-qianfan-bridge.git"
@@ -151,22 +141,9 @@ src.git = "https://github.com/p3psi-boo/vikunja-cli.git"
 fetch.git = "https://github.com/p3psi-boo/vikunja-cli.git"
 git.fetch_submodules = false
 
-[polymarket-cli]
-src.github = "Polymarket/polymarket-cli"
-fetch.url = "https://github.com/Polymarket/polymarket-cli/releases/download/$ver/polymarket-$ver-x86_64-unknown-linux-gnu.tar.gz"
-
-[polymarket-cli-aarch64-linux]
-src.github = "Polymarket/polymarket-cli"
-fetch.url = "https://github.com/Polymarket/polymarket-cli/releases/download/$ver/polymarket-$ver-aarch64-unknown-linux-gnu.tar.gz"
-
 [inet-speed-cli]
 src.github = "tsosunchia/iNetSpeed-CLI"
 fetch.github = "tsosunchia/iNetSpeed-CLI"
-
-[qmdr]
-src.github_tag = "uf-hy/qmdr"
-src.include_regex = "^v[0-9].*"
-fetch.github = "uf-hy/qmdr"
 
 [openixcli]
 src.git = "https://github.com/YuzukiTsuru/OpenixCLI.git"
@@ -326,13 +303,6 @@ src.github = "epiral/bb-browser"
 fetch.github = "epiral/bb-browser"
 pinned = true
 
-# oli - OpenDAL Command Line Interface
-[oli]
-src.git = "https://github.com/apache/opendal-oli.git"
-fetch.git = "https://github.com/apache/opendal-oli.git"
-git.fetch_submodules = false
-
-# ida-mcp - Headless IDA Pro MCP Server
 # Use pre-built binary releases - version format is 9.3.9 (without v prefix in filename)
 [ida-mcp]
 src.github_tag = "blacktop/ida-mcp-rs"
@@ -340,22 +310,10 @@ src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
 src.prefix = "v"
 fetch.url = "https://github.com/blacktop/ida-mcp-rs/releases/download/v$ver/ida-mcp_$ver_Linux_x86_64.tar.gz"
 
-# vibevoice-cpp - C++ inference engine for Microsoft VibeVoice
-[vibevoice-cpp]
-src.git = "https://github.com/mudler/vibevoice.cpp.git"
-fetch.git = "https://github.com/mudler/vibevoice.cpp.git"
-git.fetchSubmodules = true
-git.get_commit_date = true
-
 # micyou
 [micyou]
 src.github = "LanRhyme/MicYou"
 fetch.github = "LanRhyme/MicYou"
-
-# planify
-[planify]
-src.github = "alainm23/planify"
-fetch.github = "alainm23/planify"
 
 # substack-dl - Download all public posts from any Substack newsletter
 [substack-dl]
@@ -378,11 +336,6 @@ git.get_commit_date = true
 [harlequin-mysql]
 src.github = "tconbeer/harlequin-mysql"
 fetch.github = "tconbeer/harlequin-mysql"
-
-# trusttunnel - Modern, fast and obfuscated VPN protocol endpoint
-[trusttunnel]
-src.github = "TrustTunnel/TrustTunnel"
-fetch.github = "TrustTunnel/TrustTunnel"
 
 # bichon - A lightweight, high-performance Rust email archiver with WebUI
 [bichon]
@@ -415,26 +368,12 @@ fetch.git = "https://github.com/TimmyOVO/deepseek-ocr.rs.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
-[grdpwasm]
-src.git = "https://github.com/nakagami/grdpwasm.git"
-fetch.git = "https://github.com/nakagami/grdpwasm.git"
-git.fetch_submodules = false
-git.get_commit_date = true
-
 # BBDown - Bilibili Downloader (.NET 9 global tool, build from source)
 [bbdown]
 src.git = "https://github.com/nilaoda/BBDown.git"
 fetch.git = "https://github.com/nilaoda/BBDown.git"
 git.fetch_submodules = false
 git.get_commit_date = true
-
-# smartdns-rs - Cross-platform local DNS server written in Rust
-[smartdns-rs]
-src.git = "https://github.com/mokeyish/smartdns-rs.git"
-fetch.git = "https://github.com/mokeyish/smartdns-rs.git"
-git.fetch_submodules = false
-git.get_commit_date = true
-pinned = true
 
 # CloakBrowser - official delayed-release stealth Chromium binary
 [cloakbrowser]
@@ -466,25 +405,11 @@ src.prefix = "v"
 src.include_regex = "^v[0-9].*"
 fetch.url = "https://github.com/oceanbase/powermem/releases/download/v$ver/powermem-$ver-linux-amd64-binaries.tar.gz"
 
-# xurl - Client for AI Agents URLs
-[xurl]
-src.git = "https://github.com/Xuanwo/xurl.git"
-fetch.git = "https://github.com/Xuanwo/xurl.git"
-git.fetch_submodules = false
-git.get_commit_date = true
-
 # fdb - Flutter Debug Bridge
 [fdb]
 src.github_tag = "andrzejchm/fdb"
 src.include_regex = "^v[0-9].*"
 fetch.github = "andrzejchm/fdb"
-
-# proxy_pool - Python ProxyPool for web spider
-[proxy_pool]
-src.git = "https://github.com/p3psi-boo/proxy_pool.git"
-fetch.git = "https://github.com/p3psi-boo/proxy_pool.git"
-git.fetch_submodules = false
-git.get_commit_date = true
 
 # wxmp_searxng - Sogou Weixin JSON engine for SearXNG
 [wxmp_searxng]
@@ -546,12 +471,6 @@ src.github_tag = "flipbit03/terminal-use"
 src.include_regex = "^v[0-9].*"
 fetch.github = "flipbit03/terminal-use"
 git.get_commit_date = true
-
-# pi-agent-rust - High-performance AI coding agent CLI (Rust port of Pi Agent)
-[pi-agent-rust]
-src.github_tag = "Dicklesworthstone/pi_agent_rust"
-src.include_regex = "^v[0-9].*"
-fetch.github = "Dicklesworthstone/pi_agent_rust"
 
 [picoclaw]
 src.github_tag = "sipeed/picoclaw"

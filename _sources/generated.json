@@ -570,26 +570,6 @@
     },
     "version": "ecc44eeff94dd4836eed6490a497989194effa2b"
   },
-  "grdpwasm": {
-    "cargoLock": null,
-    "date": "2026-07-04",
-    "extract": null,
-    "name": "grdpwasm",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "a9e7e92050f3f5fd3a957bc70c2458723ea3744a",
-      "sha256": "sha256-F6tg/g2/0Ast4KGB29yBB5RkAoJOccWRFV4sMlS9lbQ=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/nakagami/grdpwasm.git"
-    },
-    "version": "a9e7e92050f3f5fd3a957bc70c2458723ea3744a"
-  },
   "grok-search-rs": {
     "cargoLock": null,
     "date": "2026-08-08",
@@ -1047,26 +1027,6 @@
     },
     "version": "e51da5fa7efde11dad009592bdf3b41980c3555f"
   },
-  "oli": {
-    "cargoLock": null,
-    "date": "2026-08-07",
-    "extract": null,
-    "name": "oli",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "3d6e427e8c0c92aec1430e2f4bbb777e4e08d81e",
-      "sha256": "sha256-X6QOFs94jOQeZySmSyWP3VVgPyWNC8ihW2IFu9loKR0=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/apache/opendal-oli.git"
-    },
-    "version": "3d6e427e8c0c92aec1430e2f4bbb777e4e08d81e"
-  },
   "omniroute": {
     "cargoLock": null,
     "date": null,
@@ -1148,27 +1108,6 @@
     },
     "version": "ee38d3b540ecea1d93683ba99bdcec5632a21eaf"
   },
-  "pi-agent-rust": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "pi-agent-rust",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "Dicklesworthstone",
-      "repo": "pi_agent_rust",
-      "rev": "v0.1.23",
-      "sha256": "sha256-zifnkV5kjEBlAwmRY6Lk7N46NZY5jx/xxofHY32F6UE=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "v0.1.23"
-  },
   "picoclaw": {
     "cargoLock": null,
     "date": null,
@@ -1211,57 +1150,6 @@
     },
     "version": "v0.1.5"
   },
-  "planify": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "planify",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "alainm23",
-      "repo": "planify",
-      "rev": "v4.19.5",
-      "sha256": "sha256-MBJfPUKAZvfU3ZxpWqW3kueDFP7F8Uhhn9ASNbIpUb4=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "v4.19.5"
-  },
-  "polymarket-cli": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "polymarket-cli",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "name": null,
-      "sha256": "sha256-3ZyMnzlliEJ+/X9ThHSyoRQ0wh/fbKkKp1oO2yvT2KY=",
-      "type": "url",
-      "url": "https://github.com/Polymarket/polymarket-cli/releases/download/v0.1.5/polymarket-v0.1.5-x86_64-unknown-linux-gnu.tar.gz"
-    },
-    "version": "v0.1.5"
-  },
-  "polymarket-cli-aarch64-linux": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "polymarket-cli-aarch64-linux",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "name": null,
-      "sha256": "sha256-GjPJLG/7IRciVEltQA5Ki/aZbNAO6Q4FGZvkdgAFfNo=",
-      "type": "url",
-      "url": "https://github.com/Polymarket/polymarket-cli/releases/download/v0.1.5/polymarket-v0.1.5-aarch64-unknown-linux-gnu.tar.gz"
-    },
-    "version": "v0.1.5"
-  },
   "powermem": {
     "cargoLock": null,
     "date": null,
@@ -1296,26 +1184,6 @@
       "url": "https://github.com/OkamiW/proxy-ns.git"
     },
     "version": "5d08d18f9171d7e65fabad06ee81021d9bca0a21"
-  },
-  "proxy_pool": {
-    "cargoLock": null,
-    "date": "2026-05-17",
-    "extract": null,
-    "name": "proxy_pool",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "edd637ad8edb83c68134d532e1340a8d3195bb9d",
-      "sha256": "sha256-tdJvMNDUUgbv7l0iaubTsEGQmWiwUo28uC7WLaXjZS8=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/p3psi-boo/proxy_pool.git"
-    },
-    "version": "edd637ad8edb83c68134d532e1340a8d3195bb9d"
   },
   "pymicro-features": {
     "cargoLock": null,
@@ -1378,27 +1246,6 @@
       "url": "https://github.com/jaseg/python-mpv.git"
     },
     "version": "93c4de9bb7a0e1cfcb9d305a58a326bb24ef9d47"
-  },
-  "qmdr": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "qmdr",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "uf-hy",
-      "repo": "qmdr",
-      "rev": "v1.0.3",
-      "sha256": "sha256-hVHdio3IlOU7kJwBXFuKNVTBKf+IpnamTokRPdyQ1Q0=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "v1.0.3"
   },
   "realitlscanner": {
     "cargoLock": null,
@@ -1566,26 +1413,6 @@
     },
     "version": "v2.5.2"
   },
-  "smartdns-rs": {
-    "cargoLock": null,
-    "date": "2026-04-07",
-    "extract": null,
-    "name": "smartdns-rs",
-    "passthru": null,
-    "pinned": true,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "303ade885aeee45c2798de7c20a3bcccf48e6e7c",
-      "sha256": "sha256-U1pTM0aXSlXZJ8LfTL3mZJstAKo5GdMyZ9g3omazFfc=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/mokeyish/smartdns-rs.git"
-    },
-    "version": "303ade885aeee45c2798de7c20a3bcccf48e6e7c"
-  },
   "sofixer": {
     "cargoLock": null,
     "date": null,
@@ -1688,26 +1515,6 @@
     },
     "version": "956d493be87b928688bd08a87f5851fb8ef0fcba"
   },
-  "tcp-brutal": {
-    "cargoLock": null,
-    "date": "2026-04-26",
-    "extract": null,
-    "name": "tcp-brutal",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "f11e52d88c7ad2285896de018c2d96d4687f0ab6",
-      "sha256": "sha256-2oi3TrpNllyayzmZeSvYWHuisZOZpfobqxWRqh/zyRY=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/apernet/tcp-brutal.git"
-    },
-    "version": "f11e52d88c7ad2285896de018c2d96d4687f0ab6"
-  },
   "terminal-use": {
     "cargoLock": null,
     "date": null,
@@ -1728,27 +1535,6 @@
       "type": "github"
     },
     "version": "v1.2.0"
-  },
-  "trusttunnel": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "trusttunnel",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "TrustTunnel",
-      "repo": "TrustTunnel",
-      "rev": "v1.0.33",
-      "sha256": "sha256-uTAjZbPBCVucjjrl3cYCT6+6cSxiIe/Q3jm+Oa+Fl7E=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "v1.0.33"
   },
   "uber-apk-signer": {
     "cargoLock": null,
@@ -1852,26 +1638,6 @@
     },
     "version": "v19.1"
   },
-  "vibevoice-cpp": {
-    "cargoLock": null,
-    "date": "2026-07-09",
-    "extract": null,
-    "name": "vibevoice-cpp",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": true,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "000e37282bc5bb09edc20f7047a47924122ba3a0",
-      "sha256": "sha256-HSwZaEsCfpsqjMh/gW5xxwhwLQE7R3NqEMYEKmL7gIs=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/mudler/vibevoice.cpp.git"
-    },
-    "version": "000e37282bc5bb09edc20f7047a47924122ba3a0"
-  },
   "vja": {
     "cargoLock": null,
     "date": "2026-06-28",
@@ -1911,26 +1677,6 @@
       "url": "https://github.com/p3psi-boo/vohive.git"
     },
     "version": "6f8bc6ff7b0f644f939a4a2f1d8a748b74174473"
-  },
-  "web-search": {
-    "cargoLock": null,
-    "date": "2026-03-21",
-    "extract": null,
-    "name": "web-search",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "d3be36dc80cc5d8f91df78ddb0d1a018d49d5e70",
-      "sha256": "sha256-7eTnPf+pb2yFK/qrLP37GI96EqexbWDHqfNhoMYNdJg=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/p3psi-boo/web-search.git"
-    },
-    "version": "d3be36dc80cc5d8f91df78ddb0d1a018d49d5e70"
   },
   "wikiteam3": {
     "cargoLock": null,
@@ -2012,25 +1758,5 @@
       "url": "https://github.com/p3psi-boo/wxmp_searxng.git"
     },
     "version": "edb809f0c67238e26caae840fd3ef7ff653792b3"
-  },
-  "xurl": {
-    "cargoLock": null,
-    "date": "2026-03-23",
-    "extract": null,
-    "name": "xurl",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "24eedb2ff2b141b025efa1a1658fd7f3e88cdd01",
-      "sha256": "sha256-M5GurO0O5LRDvFg6MtDZz40Qjdj3EKvzMiJWhVvwDwg=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/Xuanwo/xurl.git"
-    },
-    "version": "24eedb2ff2b141b025efa1a1658fd7f3e88cdd01"
   }
 }

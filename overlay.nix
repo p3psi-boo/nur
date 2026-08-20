@@ -58,7 +58,7 @@ let
   # 因此除 env 外还要在 preBuild hook 里显式 export。
   # buildGoModule 兼容两种调用方式：旧式 `buildGoModule { ... }`（属性集）
   # 与新式 `buildGoModule (finalAttrs: { ... })`（函数，lazyssh /
-  # ecloud-computer-auto-boot / proxy-ns / web-search 使用）。`//` 只能合并
+  # ecloud-computer-auto-boot / proxy-ns 使用）。`//` 只能合并
   # 属性集，函数入参需先 apply finalAttrs 拿到属性集后再合并。
   withGoProxyAttrs = args: args // {
     env = (args.env or { }) // { GOPROXY = "https://goproxy.cn,direct"; };
