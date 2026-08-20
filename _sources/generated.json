@@ -70,12 +70,12 @@
             "name": null,
             "owner": "p3psi-boo",
             "repo": "cmcc-ec-keepalive",
-            "rev": "b955a74a0212fa0c4850d2f847081980b7ece8bc",
-            "sha256": "sha256-MAI8D1batW3lLMZLCXhmTGWFpiEv7IdxoMdJYjII53I=",
+            "rev": "dae23c54a6eb1057c4a016914347f0abdd6fd163",
+            "sha256": "sha256-9L9c68TkiUHgnPJyFQiXVfLSsSEiEXDPpg7zyV0EVxQ=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "b955a74a0212fa0c4850d2f847081980b7ece8bc"
+        "version": "dae23c54a6eb1057c4a016914347f0abdd6fd163"
     },
     "coe": {
         "cargoLock": null,

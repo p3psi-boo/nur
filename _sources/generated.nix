@@ -38,13 +38,13 @@
   };
   cmcc-ec-keepalive = {
     pname = "cmcc-ec-keepalive";
-    version = "b955a74a0212fa0c4850d2f847081980b7ece8bc";
+    version = "dae23c54a6eb1057c4a016914347f0abdd6fd163";
     src = fetchFromGitHub {
       owner = "p3psi-boo";
       repo = "cmcc-ec-keepalive";
-      rev = "b955a74a0212fa0c4850d2f847081980b7ece8bc";
+      rev = "dae23c54a6eb1057c4a016914347f0abdd6fd163";
       fetchSubmodules = false;
-      sha256 = "sha256-MAI8D1batW3lLMZLCXhmTGWFpiEv7IdxoMdJYjII53I=";
+      sha256 = "sha256-9L9c68TkiUHgnPJyFQiXVfLSsSEiEXDPpg7zyV0EVxQ=";
     };
     date = "2026-08-20";
   };
