@@ -6,102 +6,7 @@
   dockerTools,
 }:
 {
-  bb-browser = {
-    pname = "bb-browser";
-    version = "bb-browser-v0.11.2";
-    src = fetchFromGitHub {
-      owner = "epiral";
-      repo = "bb-browser";
-      rev = "bb-browser-v0.11.2";
-      fetchSubmodules = false;
-      sha256 = "sha256-DoAd8oN4Il5xGHkcDKgmLczUYj0D0PvxhbSmnDYb+wI=";
-    };
-  };
-  bbdown = {
-    pname = "bbdown";
-    version = "1b2fbd4372d0b9840d28072f7914ae9887508e5d";
-    src = fetchgit {
-      url = "https://github.com/nilaoda/BBDown.git";
-      rev = "1b2fbd4372d0b9840d28072f7914ae9887508e5d";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-GrBD4PptkryCfpyvnRTPoNfvnT2hAUhZQeS+0SQwJzo=";
-    };
-    date = "2026-05-14";
-  };
-  bcut-asr = {
-    pname = "bcut-asr";
-    version = "07fc48213a415490da1ae40cd8988a087cb02ec6";
-    src = fetchgit {
-      url = "https://github.com/p3psi-boo/bcut-asr-go.git";
-      rev = "07fc48213a415490da1ae40cd8988a087cb02ec6";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-uGhqogSabFpuWQ1h88oXrCOPuJPyfuR9nx8Ug5WbUl0=";
-    };
-    date = "2026-01-14";
-  };
-  bichon = {
-    pname = "bichon";
-    version = "2.0.1";
-    src = fetchFromGitHub {
-      owner = "rustmailer";
-      repo = "bichon";
-      rev = "2.0.1";
-      fetchSubmodules = false;
-      sha256 = "sha256-pL/1W51x9ZqUHLLzdLUpb54crvhG8JhDqJu47CRZAd4=";
-    };
-  };
-  binsider-bin = {
-    pname = "binsider-bin";
-    version = "0.3.2";
-    src = fetchurl {
-      url = "https://github.com/orhun/binsider/releases/download/v0.3.2/binsider-0.3.2-x86_64-unknown-linux-musl.tar.gz";
-      sha256 = "sha256-/TScWAgk8rUv981qMCqqd0o/5L7t2TeFFb3+zsDYd6M=";
-    };
-  };
-  binsider-bin-aarch64-linux = {
-    pname = "binsider-bin-aarch64-linux";
-    version = "0.3.2";
-    src = fetchurl {
-      url = "https://github.com/orhun/binsider/releases/download/v0.3.2/binsider-0.3.2-aarch64-unknown-linux-musl.tar.gz";
-      sha256 = "sha256-pedF8eMfFmfsFPYjm6w8McxQQ5YmJLEtrkGC0xtSROI=";
-    };
-  };
-  binsider-bin-darwin-arm64 = {
-    pname = "binsider-bin-darwin-arm64";
-    version = "0.3.2";
-    src = fetchurl {
-      url = "https://github.com/orhun/binsider/releases/download/v0.3.2/binsider-0.3.2-aarch64-apple-darwin.tar.gz";
-      sha256 = "sha256-CNYBoXtsEpvWzXGqp2+loZT88hgVzLocm//4tklnT78=";
-    };
-  };
-  binsider-bin-darwin-x64 = {
-    pname = "binsider-bin-darwin-x64";
-    version = "0.3.2";
-    src = fetchurl {
-      url = "https://github.com/orhun/binsider/releases/download/v0.3.2/binsider-0.3.2-x86_64-apple-darwin.tar.gz";
-      sha256 = "sha256-HDz+JDAf3WeezxZTeLsTNb9kAdAHfPOxu6/lkchG6Bo=";
-    };
-  };
-  bird-cli = {
-    pname = "bird-cli";
-    version = "c815bfbe3cefd0104adf411cd2148995c31f2ba0";
-    src = fetchgit {
-      url = "https://github.com/p3psi-boo/bird-fork.git";
-      rev = "c815bfbe3cefd0104adf411cd2148995c31f2ba0";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-47N0//wE3G9RGrcSa0JJTnu9mbw/MK58PNnuqYyitvw=";
-    };
-    date = "2026-03-09";
-  };
+
   celld = {
     pname = "celld";
     version = "v0.1.0";
@@ -113,39 +18,7 @@
       sha256 = "sha256-Iew3/ugHftS1Ui6tiVRPj3FguYmGx9vwMfS6pY00CWQ=";
     };
   };
-  classyshark = {
-    pname = "classyshark";
-    version = "8.2";
-    src = fetchFromGitHub {
-      owner = "google";
-      repo = "android-classyshark";
-      rev = "8.2";
-      fetchSubmodules = false;
-      sha256 = "sha256-9gENYNWfbPK2jpxiHOf8ETJwXqjFMgplaHNkO3ohhDQ=";
-    };
-  };
-  clihub = {
-    pname = "clihub";
-    version = "v0.0.8";
-    src = fetchFromGitHub {
-      owner = "thellimist";
-      repo = "clihub";
-      rev = "v0.0.8";
-      fetchSubmodules = false;
-      sha256 = "sha256-Y/O2XmhMYUCV269g+h+DsQT80yVR0ot9RIS+mBJP7BA=";
-    };
-  };
-  clipboard-sync = {
-    pname = "clipboard-sync";
-    version = "0.2.0";
-    src = fetchFromGitHub {
-      owner = "dnut";
-      repo = "clipboard-sync";
-      rev = "0.2.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-gme5pwQrwQbk8MroF/mGYqlY6hcjM5cHKHL7Y3nlW9k=";
-    };
-  };
+
   cliproxyapi = {
     pname = "cliproxyapi";
     version = "v7.2.127";
@@ -165,14 +38,7 @@
       sha256 = "sha256-ShK83pX6G7G+7ytBq15cJ8Nr544749DayMZNcFIWZw4=";
     };
   };
-  cocoindex-code = {
-    pname = "cocoindex-code";
-    version = "0.2.41";
-    src = fetchurl {
-      url = "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.41.tar.gz";
-      sha256 = "sha256-ZIzQxtwEh6FfBFUrMj1hDpOLy7knHmeS8d5YeMNWLVs=";
-    };
-  };
+
   coe = {
     pname = "coe";
     version = "c326261675a2455e6dd8c22576681e91644600ef";
@@ -216,47 +82,6 @@
     date = "2026-04-14";
   };
 
-  dagu = {
-    pname = "dagu";
-    version = "v2.12.0";
-    src = fetchFromGitHub {
-      owner = "dagu-org";
-      repo = "dagu";
-      rev = "v2.12.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-F3dJLGbtS57cvym0VXnLkFFuLP9bQXIIKc67kj3vcFw=";
-    };
-  };
-  dalvikus = {
-    pname = "dalvikus";
-    version = "1.0.13";
-    src = fetchurl {
-      url = "https://github.com/loerting/dalvikus/archive/refs/tags/v1.0.13.tar.gz";
-      sha256 = "sha256-PMSalWlMDIqMWgPZ6Ha7L6TA2VOX6svCAOYMSpzIqHY=";
-    };
-  };
-  dbhub = {
-    pname = "dbhub";
-    version = "0.21.2";
-    src = fetchurl {
-      url = "https://registry.npmjs.org/@bytebase/dbhub/-/dbhub-0.21.2.tgz";
-      sha256 = "sha256-eOwzRCZAYypW/GY1zXIqusads2xEv50s01xhfroZPTo=";
-    };
-  };
-  deepseek-ocr-rs = {
-    pname = "deepseek-ocr-rs";
-    version = "02b933df24f5658d10b37dd48c9c354d95c530c3";
-    src = fetchgit {
-      url = "https://github.com/TimmyOVO/deepseek-ocr.rs.git";
-      rev = "02b933df24f5658d10b37dd48c9c354d95c530c3";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-A15gHXKIi/EieK1JpYLedUd63jCfh19S+1e2TS2cdjQ=";
-    };
-    date = "2026-02-12";
-  };
   ecloud-cloudpc-keepalive = {
     pname = "ecloud-cloudpc-keepalive";
     version = "d8625ec87671814f14b4275f7dbe7eb05039fa5b";
@@ -269,17 +94,7 @@
     };
     date = "2026-07-14";
   };
-  ecloud-computer-auto-boot = {
-    pname = "ecloud-computer-auto-boot";
-    version = "1.0.0";
-    src = fetchFromGitHub {
-      owner = "Samler-Lee";
-      repo = "ecloud_computer_auto_boot";
-      rev = "1.0.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-9H11Jli1Ls8FNtvfgt5X+1yEw4zcrqcmBWPdyq8TIf8=";
-    };
-  };
+
   einat = {
     pname = "einat";
     version = "30e6af3740e279efb254568c0ec1ad54c0cccd35";
@@ -293,31 +108,6 @@
       sha256 = "sha256-QPvyJGd35V5D8Q9mZUPNt8kfpG75qNHxr30oQkfDcV0=";
     };
     date = "2026-06-27";
-  };
-  fdb = {
-    pname = "fdb";
-    version = "v1.10.1";
-    src = fetchFromGitHub {
-      owner = "andrzejchm";
-      repo = "fdb";
-      rev = "v1.10.1";
-      fetchSubmodules = false;
-      sha256 = "sha256-jV68ZSkZNH4x00nXU+JXTsgi+PvlAy20PDZXLlJg+P0=";
-    };
-  };
-  firm = {
-    pname = "firm";
-    version = "4144d4a08bdf285c09ed2b9781e5ec448004e506";
-    src = fetchgit {
-      url = "https://github.com/42futures/firm.git";
-      rev = "4144d4a08bdf285c09ed2b9781e5ec448004e506";
-      fetchSubmodules = true;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-PgFYlw9XNxcPlRXLIBwfVV+geu3NZ9y2+puN6FczIfg=";
-    };
-    date = "2026-03-11";
   };
 
   focaltech-fingerprint = {
@@ -349,20 +139,6 @@
     date = "2026-04-12";
   };
 
-  grok-search-rs = {
-    pname = "grok-search-rs";
-    version = "06643b3e3d0e1b22527d096e6bfadfda692749b3";
-    src = fetchgit {
-      url = "https://github.com/Episkey-G/GrokSearch-rs.git";
-      rev = "06643b3e3d0e1b22527d096e6bfadfda692749b3";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-0oQTPLQoQmH985whZil2w2RQPgC81E2N6JuPMCk4W8w=";
-    };
-    date = "2026-08-08";
-  };
   grok2api = {
     pname = "grok2api";
     version = "ef7fb4f224062be15ab8745389a5c13ab4dc846b";
@@ -388,51 +164,7 @@
       sha256 = "sha256-haY8LTzcXm7+peKl9rzv1AE8jktBUsK2S6R0vzXHmTQ=";
     };
   };
-  hev-socks5-server = {
-    pname = "hev-socks5-server";
-    version = "2.13.1";
-    src = fetchgit {
-      url = "https://github.com/heiher/hev-socks5-server.git";
-      rev = "2.13.1";
-      fetchSubmodules = true;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-DvG2w5aKKes33Wj/b8SLjv5+C+k3Q2Ro37JgAyqMibw=";
-    };
-  };
 
-  ida-mcp = {
-    pname = "ida-mcp";
-    version = "9.4.1";
-    src = fetchurl {
-      url = "https://github.com/blacktop/ida-mcp-rs/releases/download/v9.4.1/ida-mcp_9.4.1_Linux_x86_64.tar.gz";
-      sha256 = "sha256-P3uLfRZk1+VxtQ7pYKCfo4wTGJmPQiL3m3m8ScZ3PmY=";
-    };
-  };
-
-  il2cppdumper = {
-    pname = "il2cppdumper";
-    version = "v6.7.46";
-    src = fetchFromGitHub {
-      owner = "Perfare";
-      repo = "Il2CppDumper";
-      rev = "v6.7.46";
-      fetchSubmodules = false;
-      sha256 = "sha256-pMxxwBpuZ2EuP7O99XTJcnS3Dq8MdxvUGQHJ0U3bnTY=";
-    };
-  };
-  inet-speed-cli = {
-    pname = "inet-speed-cli";
-    version = "v1.1.2";
-    src = fetchFromGitHub {
-      owner = "tsosunchia";
-      repo = "iNetSpeed-CLI";
-      rev = "v1.1.2";
-      fetchSubmodules = false;
-      sha256 = "sha256-xAXYhvN7rdXvA2EWsNXRfXlIrumyPluAcmVbMY/pZxE=";
-    };
-  };
   ironet = {
     pname = "ironet";
     version = "d6988356fe688d1ea234ec92c00ce537318f6f20";
@@ -446,31 +178,6 @@
       sha256 = "sha256-l70gtKEGayGDGSSm1d7Rk4gWupT8lSr9psI5ID8jynA=";
     };
     date = "2026-08-14";
-  };
-  jarm = {
-    pname = "jarm";
-    version = "2c0cf5ce8418c7a1d03edb219acea3c18e068289";
-    src = fetchgit {
-      url = "https://github.com/salesforce/jarm.git";
-      rev = "2c0cf5ce8418c7a1d03edb219acea3c18e068289";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-PPtGS2pYXZga0eYtrKeg4Q/XpIhhTuuILZF+Bw8203c=";
-    };
-    date = "2026-06-02";
-  };
-  jd-gui = {
-    pname = "jd-gui";
-    version = "v1.6.6";
-    src = fetchFromGitHub {
-      owner = "java-decompiler";
-      repo = "jd-gui";
-      rev = "v1.6.6";
-      fetchSubmodules = false;
-      sha256 = "sha256-QHiZPYFwDQzbXVSuhwzQqBRXlkG9QVU+Jl6SKvBoCwQ=";
-    };
   };
 
   komari = {
@@ -529,17 +236,7 @@
     };
     date = "2025-11-28";
   };
-  leaf = {
-    pname = "leaf";
-    version = "1.27.0";
-    src = fetchFromGitHub {
-      owner = "rivolink";
-      repo = "leaf";
-      rev = "1.27.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-jaubn5szSZv0O6+19isxI1iCm9T5qiIp56tekA3/26A=";
-    };
-  };
+
   lotspeed = {
     pname = "lotspeed";
     version = "df78e23472f2d291ee41cca2d308f67d5828fb22";
@@ -554,25 +251,7 @@
     };
     date = "2026-06-18";
   };
-  magiskboot-bin = {
-    pname = "magiskboot-bin";
-    version = "v30.7";
-    src = fetchurl {
-      url = "https://github.com/topjohnwu/Magisk/releases/download/v30.7/Magisk-v30.7.apk";
-      sha256 = "sha256-4NMtISNTKGD5cSPZJ7G7hsTgjm/YpIv8a1vuCvrp69U=";
-    };
-  };
-  mcp-cli = {
-    pname = "mcp-cli";
-    version = "v0.3.0";
-    src = fetchFromGitHub {
-      owner = "philschmid";
-      repo = "mcp-cli";
-      rev = "v0.3.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-S924rqlVKzUFD63NDyK5bbXnonra+/UoH6j78AAj3d0=";
-    };
-  };
+
   micyou = {
     pname = "micyou";
     version = "v1.3.5";
@@ -599,20 +278,7 @@
     };
     date = "2026-08-08";
   };
-  nf_deaf = {
-    pname = "nf_deaf";
-    version = "cf346a3c270e5eb6d31b1d0c110efaf7a8b9193e";
-    src = fetchgit {
-      url = "https://github.com/kmb21y66/nf_deaf.git";
-      rev = "cf346a3c270e5eb6d31b1d0c110efaf7a8b9193e";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-vLcJWJtD7W1D37yFE5fGnZP6ZOKdfKkd+fTte0GDu0g=";
-    };
-    date = "2026-01-23";
-  };
+
   octopus-api = {
     pname = "octopus-api";
     version = "7b7a4801fa501f9244a1d9dfb47da56d1600b970";
@@ -626,74 +292,6 @@
       sha256 = "sha256-pwKEYRAPnPwElyFhh4tI+vVV/BMLLCFnFIpgotMd0Wc=";
     };
     date = "2026-08-06";
-  };
-  okmain = {
-    pname = "okmain";
-    version = "e51da5fa7efde11dad009592bdf3b41980c3555f";
-    src = fetchgit {
-      url = "https://github.com/si14/okmain.git";
-      rev = "e51da5fa7efde11dad009592bdf3b41980c3555f";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-klCN4sgRvN/9QyXgu0+XBJMpjTOBscNG0ZqM4CV2QBo=";
-    };
-    date = "2026-03-10";
-  };
-
-  omniroute = {
-    pname = "omniroute";
-    version = "v3.8.49";
-    src = fetchFromGitHub {
-      owner = "diegosouzapw";
-      repo = "OmniRoute";
-      rev = "v3.8.49";
-      fetchSubmodules = false;
-      sha256 = "sha256-nRLziV4NWPoa0ev57DV7jmAvLpL/1MP1EMZO2/drrTU=";
-    };
-  };
-  openixcli = {
-    pname = "openixcli";
-    version = "668d7b1678f8abbffdb4160da69da713cdc026c9";
-    src = fetchgit {
-      url = "https://github.com/YuzukiTsuru/OpenixCLI.git";
-      rev = "668d7b1678f8abbffdb4160da69da713cdc026c9";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-dvvkh6gcN9cUFd7NmNYcW7lI+q2S5vWiyB4GHv6AyMo=";
-    };
-    date = "2026-06-18";
-  };
-  oura-cli = {
-    pname = "oura-cli";
-    version = "5354384a57006ab68ef448f196b48bf1caebb2ea";
-    src = fetchgit {
-      url = "https://github.com/p3psi-boo/oura-cli.git";
-      rev = "5354384a57006ab68ef448f196b48bf1caebb2ea";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-hCkd7yBHND/UxRjPNU7SaG0l8MvnLgFpSgAms1quAeM=";
-    };
-    date = "2026-01-31";
-  };
-  pg_duckdb = {
-    pname = "pg_duckdb";
-    version = "ee38d3b540ecea1d93683ba99bdcec5632a21eaf";
-    src = fetchgit {
-      url = "https://github.com/duckdb/pg_duckdb.git";
-      rev = "ee38d3b540ecea1d93683ba99bdcec5632a21eaf";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-WMDRidLOlajVbWmIt52kgwpQcAUCPT8+eVL1wk5FzGw=";
-    };
-    date = "2026-07-17";
   };
 
   picoclaw = {
@@ -742,76 +340,6 @@
     date = "2026-04-09";
   };
 
-  pymicro-features = {
-    pname = "pymicro-features";
-    version = "v2.0.2";
-    src = fetchFromGitHub {
-      owner = "rhasspy";
-      repo = "pymicro-features";
-      rev = "v2.0.2";
-      fetchSubmodules = false;
-      sha256 = "sha256-bCvrsvifUxM7jfqBePmcYviZ5pIy1ZApq48Pu/5b7AM=";
-    };
-  };
-  pymicro-wakeword = {
-    pname = "pymicro-wakeword";
-    version = "v2.4.1";
-    src = fetchFromGitHub {
-      owner = "OHF-Voice";
-      repo = "pymicro-wakeword";
-      rev = "v2.4.1";
-      fetchSubmodules = false;
-      sha256 = "sha256-R8uAKJygh5mo8U9k0uT358RMxJnezRxAATjjaK4D9PI=";
-    };
-  };
-  python-mpv = {
-    pname = "python-mpv";
-    version = "93c4de9bb7a0e1cfcb9d305a58a326bb24ef9d47";
-    src = fetchgit {
-      url = "https://github.com/jaseg/python-mpv.git";
-      rev = "93c4de9bb7a0e1cfcb9d305a58a326bb24ef9d47";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-fTvEcYJR7gOjmgsQkHIB+VM2rgWZLA6D/Wqa/QTyn9Q=";
-    };
-    date = "2025-04-25";
-  };
-
-  realitlscanner = {
-    pname = "realitlscanner";
-    version = "v0.2.1";
-    src = fetchFromGitHub {
-      owner = "XTLS";
-      repo = "RealiTLScanner";
-      rev = "v0.2.1";
-      fetchSubmodules = false;
-      sha256 = "sha256-rshU3nBguzBleM9zlPHPFQy0C+C6LYE2EI1uKRl4DN4=";
-    };
-  };
-  rikugan = {
-    pname = "rikugan";
-    version = "v1.3.2";
-    src = fetchFromGitHub {
-      owner = "buzzer-re";
-      repo = "Rikugan";
-      rev = "v1.3.2";
-      fetchSubmodules = false;
-      sha256 = "sha256-Fw4Ya3rh3PYP9cBq0d+1TW/ekL5II00OPExqUIx57AA=";
-    };
-  };
-  rustconn = {
-    pname = "rustconn";
-    version = "v0.19.19";
-    src = fetchFromGitHub {
-      owner = "totoshko88";
-      repo = "RustConn";
-      rev = "v0.19.19";
-      fetchSubmodules = false;
-      sha256 = "sha256-fUzNABLMCw52kAS4s2OnJU8+3Fzg4uO6vZ2MqWIvroY=";
-    };
-  };
   searxng-baidu-qianfan-bridge = {
     pname = "searxng-baidu-qianfan-bridge";
     version = "a9826ab251fa3d52a59a3900f702ab53cd602793";
@@ -849,28 +377,6 @@
       rev = "v0.9.0";
       fetchSubmodules = false;
       sha256 = "sha256-zWpQBvTrE18lQvTErj/fJMLssrSgrbzTLVto/j78qqg=";
-    };
-  };
-  sigmo = {
-    pname = "sigmo";
-    version = "v4.1.2";
-    src = fetchFromGitHub {
-      owner = "damonto";
-      repo = "sigmo";
-      rev = "v4.1.2";
-      fetchSubmodules = false;
-      sha256 = "sha256-T6+V2W95aelYhGoxnmm+MkE1G82IRJvGpujDEaVXJrg=";
-    };
-  };
-  smali = {
-    pname = "smali";
-    version = "v2.5.2";
-    src = fetchFromGitHub {
-      owner = "JesusFreke";
-      repo = "smali";
-      rev = "v2.5.2";
-      fetchSubmodules = false;
-      sha256 = "sha256-UkABsX7KaDZyFR4MTmpjnw4dGXChbLB281Kav/k7/00=";
     };
   };
 
@@ -913,18 +419,7 @@
     };
     date = "2026-07-05";
   };
-  substack-dl = {
-    pname = "substack-dl";
-    version = "866b2566f9244374e7df5f0f404098c5f81e7b06";
-    src = fetchFromGitHub {
-      owner = "p3psi-boo";
-      repo = "substack-dl";
-      rev = "866b2566f9244374e7df5f0f404098c5f81e7b06";
-      fetchSubmodules = false;
-      sha256 = "sha256-F8497VhGZXCyYd2pHaJKr1WXWKEbUSSQ+3LaA1cnZXs=";
-    };
-    date = "2022-08-08";
-  };
+
   sugar-wifi-conf = {
     pname = "sugar-wifi-conf";
     version = "956d493be87b928688bd08a87f5851fb8ef0fcba";
@@ -952,17 +447,6 @@
     };
   };
 
-  uber-apk-signer = {
-    pname = "uber-apk-signer";
-    version = "v1.3.0";
-    src = fetchFromGitHub {
-      owner = "patrickfav";
-      repo = "uber-apk-signer";
-      rev = "v1.3.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-pxGzRAUuYUyqcanoaQ4rqbZQfLMWdmc4GdGBeLw7O+M=";
-    };
-  };
   usque = {
     pname = "usque";
     version = "6aa03fc97d12848dce34eedbd187fb1077b5d1ea";
@@ -976,45 +460,6 @@
       sha256 = "sha256-aUAji41gVsRs47IDtLAinxUZsZjTQvO/SMWe5GdmJLw=";
     };
     date = "2026-07-20";
-  };
-  ut = {
-    pname = "ut";
-    version = "0e19819cf148ae60ae7b1e279ef2e5646bb40f6d";
-    src = fetchgit {
-      url = "https://github.com/ksdme/ut.git";
-      rev = "0e19819cf148ae60ae7b1e279ef2e5646bb40f6d";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-jWI1IUHxKfx9FeTyxdorKk0nTrhqASHODlp3CbET0zk=";
-    };
-    date = "2026-05-09";
-  };
-  vanissh = {
-    pname = "vanissh";
-    version = "c2ee4700d8112b5c6f06fd587b6f11c9aafbdf72";
-    src = fetchgit {
-      url = "https://github.com/k4yt3x/vanissh.git";
-      rev = "c2ee4700d8112b5c6f06fd587b6f11c9aafbdf72";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-5pn2gKiGnd5nfGv3qjaFdvWzMnFjWLUwLtoZb8es7YE=";
-    };
-    date = "2025-09-21";
-  };
-  vgpu_unlock-rs = {
-    pname = "vgpu_unlock-rs";
-    version = "v19.1";
-    src = fetchFromGitHub {
-      owner = "rbqvq";
-      repo = "vgpu_unlock-rs";
-      rev = "v19.1";
-      fetchSubmodules = false;
-      sha256 = "sha256-CdLh8OU/idWLzdPEfQpF5Uost1vaNSEJkBJJlHdPb1c=";
-    };
   };
 
   vja = {
@@ -1060,31 +505,7 @@
     };
     date = "2026-08-10";
   };
-  wsl-vpnkit = {
-    pname = "wsl-vpnkit";
-    version = "v0.4.1";
-    src = fetchFromGitHub {
-      owner = "sakai135";
-      repo = "wsl-vpnkit";
-      rev = "v0.4.1";
-      fetchSubmodules = false;
-      sha256 = "sha256-Igbr3L2W32s4uBepllSz07bkbI3qwAKMZkBrXLqGrGA=";
-    };
-  };
-  wtfps = {
-    pname = "wtfps";
-    version = "44ea48854ac49396f35426246426ffcdf5616631";
-    src = fetchgit {
-      url = "https://codeberg.org/joelkoen/wtfps.git";
-      rev = "44ea48854ac49396f35426246426ffcdf5616631";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-kWN9jOOEY1uW/1VtEYLzhm3Q2RbrjlGETk+RS2v2mTc=";
-    };
-    date = "2024-10-21";
-  };
+
   wxmp_searxng = {
     pname = "wxmp_searxng";
     version = "edb809f0c67238e26caae840fd3ef7ff653792b3";

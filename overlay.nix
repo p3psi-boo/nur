@@ -1,5 +1,4 @@
-# NUR 主 Overlay 入口（兼容性保留）
-# 整合所有子 overlay：本仓库包、Python UV、Python 包、AOCC
+# NUR overlay entrypoint: repo packages, Python UV toolchain, harlequin-mysql.
 
 { inputs }:
 
@@ -10,7 +9,6 @@ let
   pkgsDir = ./pkgs;
   generatedPath = ./_sources/generated.nix;
 
-  # 加载 nvfetcher 生成的源信息
   generatedSources = import generatedPath {
     inherit (prev)
       fetchgit
@@ -20,10 +18,8 @@ let
       ;
   };
 
-  # NUR 辅助库
   nurLib = import ./lib { pkgs = prev; };
 
-  # 辅助函数：计算包需要的额外参数
   extraArgsFor =
     pkgName:
     let
@@ -33,33 +29,19 @@ let
       hasMeta = builtins.pathExists metaPath;
       meta = if hasMeta then import metaPath else { };
       packageSpecificArgs = if meta ? extraArgs then meta.extraArgs prev else { };
-      generatedArgs =
-        if pkgArgs ? generated then { generated = generatedSources; } else { };
-      # 只在 meta.nix 中声明 useNurLib = true 时才传递 nurLib
+      generatedArgs = if pkgArgs ? generated then { generated = generatedSources; } else { };
       nurLibArgs = if meta ? useNurLib && meta.useNurLib then { inherit nurLib; } else { };
     in
     packageSpecificArgs // generatedArgs // nurLibArgs;
 
-  # 本仓库的包发现
   entries = builtins.readDir pkgsDir;
   publicPackageNames = builtins.filter (
-    name:
-    entries.${name} == "directory"
-    && builtins.pathExists (pkgsDir + "/${name}/default.nix")
-    && name != "focaltech-spi"
-    && name != "grok2api"
+    name: entries.${name} == "directory" && builtins.pathExists (pkgsDir + "/${name}/default.nix")
   ) (builtins.attrNames entries);
 
-  # proxy.golang.org 在国内网络不可达，NUR 内 Go 包的 module 下载统一走 goproxy.cn。
-  # 直接覆盖 prev.buildGoModule，使 repoOverlay 里的包（lazyssh /
-  # ecloud-cloudpc-keepalive 等，它们本就需要本地构建）在 go mod vendor 阶段
-  # 使用国内代理。nixpkgs 自身的 Go 包不受影响（走缓存，drv 不变）。
-  # 注意：GOPROXY 在 go-modules 的 impureEnvVars 里，构建时会被 nix 清空，
-  # 因此除 env 外还要在 preBuild hook 里显式 export。
-  # buildGoModule 兼容两种调用方式：旧式 `buildGoModule { ... }`（属性集）
-  # 与新式 `buildGoModule (finalAttrs: { ... })`（函数，lazyssh /
-  # ecloud-computer-auto-boot / proxy-ns 使用）。`//` 只能合并
-  # 属性集，函数入参需先 apply finalAttrs 拿到属性集后再合并。
+  # proxy.golang.org is often unreachable from CN; force goproxy.cn for NUR Go builds.
+  # GOPROXY is in go-modules impureEnvVars and gets cleared by nix, so also export in preBuild.
+  # buildGoModule accepts either an attrset or (finalAttrs: attrset).
   withGoProxyAttrs = args: args // {
     env = (args.env or { }) // { GOPROXY = "https://goproxy.cn,direct"; };
     preBuild =
@@ -77,22 +59,12 @@ let
       let
         orig = prev.buildGoModule;
       in
-      # 保留 orig 的 .override/.overrideAttrs（octopus-api 用 .override { go = ...; }），
-      # 同时把调用重定向到带 goproxy.cn 注入的版本。
       (builtins.removeAttrs orig [ "__functor" ])
       // {
         __functor = self: args: orig (withGoProxy args);
       };
   };
 
-  repoOverlay = lib.listToAttrs (
-    map (pkgName: {
-      name = pkgName;
-      value = (lib.callPackageWith (nurPrev // pythonUvOverlay)) (pkgsDir + "/${pkgName}") (extraArgsFor pkgName);
-    }) publicPackageNames
-  );
-
-  # Python UV 工具链
   inherit (inputs) uv2nix pyproject-nix pyproject-build-systems;
   pythonUvOverlay = {
     uv2nix-lib = uv2nix.lib.override { pkgs = prev; };
@@ -102,8 +74,12 @@ let
     };
   };
 
-  # Python 包（legacy）
-  pythonPackagesOverlay = import ./python-packages final prev;
+  repoOverlay = lib.listToAttrs (
+    map (pkgName: {
+      name = pkgName;
+      value = (lib.callPackageWith (nurPrev // pythonUvOverlay)) (pkgsDir + "/${pkgName}") (extraArgsFor pkgName);
+    }) publicPackageNames
+  );
 
   harlequinOverlay =
     let
@@ -119,9 +95,7 @@ let
         ]
         ++ prev.lib.optional (prev.python3Packages.pythonAtLeast "3.14") prev.python3Packages.duckdb;
         doCheck = false;
-        # nixpkgs 的 mysql-connector-python 已升到 26.x，而 harlequin-mysql 上游
-        # pyproject 仍约束 `<10`，导致 pythonRuntimeDepsCheckHook 误报不满足。
-        # 运行时依赖已由 `dependencies` 显式声明，跳过该检查即可。
+        # nixpkgs mysql-connector-python is 26.x while upstream still constrains <10.
         dontCheckRuntimeDeps = true;
         pythonRemoveDeps = [ "harlequin" ];
         meta = {
@@ -138,4 +112,4 @@ let
     };
 in
 
-repoOverlay // pythonUvOverlay // pythonPackagesOverlay // harlequinOverlay
+repoOverlay // pythonUvOverlay // harlequinOverlay

@@ -1,7 +1,3 @@
-[okmain]
-src.git = "https://github.com/si14/okmain.git"
-fetch.git = "https://github.com/si14/okmain.git"
-git.fetch_submodules = false
 
 [lotspeed]
 src.git = "https://github.com/uk0/lotspeed.git"
@@ -14,48 +10,14 @@ src.git = "https://github.com/EHfive/einat-ebpf.git"
 fetch.git = "https://github.com/EHfive/einat-ebpf.git"
 git.fetch_submodules = false
 
-[pg_duckdb]
-src.git = "https://github.com/duckdb/pg_duckdb.git"
-fetch.git = "https://github.com/duckdb/pg_duckdb.git"
-git.fetch_submodules = true
-
-[nf_deaf]
-src.git = "https://github.com/kmb21y66/nf_deaf.git"
-fetch.git = "https://github.com/kmb21y66/nf_deaf.git"
-git.fetch_submodules = false
-
 [cliproxyapi]
 src.github = "router-for-me/CLIProxyAPI"
 fetch.github = "router-for-me/CLIProxyAPI"
-
-[clihub]
-src.github_tag = "thellimist/clihub"
-src.include_regex = "^v[0-9].*"
-fetch.github = "thellimist/clihub"
-
-[dagu]
-src.github = "dagu-org/dagu"
-fetch.github = "dagu-org/dagu"
-
-[firm]
-src.git = "https://github.com/42futures/firm.git"
-fetch.git = "https://github.com/42futures/firm.git"
-git.fetchSubmodules = true
-
-[realitlscanner]
-src.github = "XTLS/RealiTLScanner"
-fetch.github = "XTLS/RealiTLScanner"
-pinned = true
 
 [proxy-ns]
 src.git = "https://github.com/OkamiW/proxy-ns.git"
 fetch.git = "https://github.com/OkamiW/proxy-ns.git"
 src.branch = "master"
-
-[ecloud-computer-auto-boot] 
-src.github = "Samler-Lee/ecloud_computer_auto_boot"
-fetch.github = "Samler-Lee/ecloud_computer_auto_boot"
-pinned = true
 
 # eCloud Cloud PC account and desktop session keepalive tool
 [ecloud-cloudpc-keepalive]
@@ -63,33 +25,6 @@ src.git = "https://github.com/p3psi-boo/ecloud-cloudpc-keepalive.git"
 src.branch = "main"
 fetch.github = "p3psi-boo/ecloud-cloudpc-keepalive"
 git.get_commit_date = true
-
-[bcut-asr]
-src.git = "https://github.com/p3psi-boo/bcut-asr-go.git"
-fetch.git = "https://github.com/p3psi-boo/bcut-asr-go.git"
-git.fetch_submodules = false
-
-[sigmo]
-src.github = "damonto/sigmo"
-fetch.github = "damonto/sigmo"
-
-[vanissh]
-src.git = "https://github.com/k4yt3x/vanissh.git"
-fetch.git = "https://github.com/k4yt3x/vanissh.git"
-
-[wsl-vpnkit]
-src.github = "sakai135/wsl-vpnkit"
-fetch.github = "sakai135/wsl-vpnkit"
-
-[oura-cli]
-src.git = "https://github.com/p3psi-boo/oura-cli.git"
-fetch.git = "https://github.com/p3psi-boo/oura-cli.git"
-git.fetch_submodules = false
-
-[bird-cli]
-src.git = "https://github.com/p3psi-boo/bird-fork.git"
-fetch.git = "https://github.com/p3psi-boo/bird-fork.git"
-git.fetch_submodules = false
 
 [searxng-baidu-qianfan-bridge]
 src.git = "https://github.com/p3psi-boo/searxng-baidu-qianfan-bridge.git"
@@ -106,31 +41,10 @@ src.git = "https://github.com/p3psi-boo/vohive.git"
 fetch.git = "https://github.com/p3psi-boo/vohive.git"
 git.fetch_submodules = false
 
-[pymicro-features]
-src.github = "rhasspy/pymicro-features"
-fetch.github = "rhasspy/pymicro-features"
-
-[pymicro-wakeword]
-src.github = "OHF-Voice/pymicro-wakeword"
-fetch.github = "OHF-Voice/pymicro-wakeword"
-
-[python-mpv]
-src.git = "https://github.com/jaseg/python-mpv.git"
-fetch.git = "https://github.com/jaseg/python-mpv.git"
-
 [wikiteam3]
 src.git = "https://github.com/saveweb/wikiteam3.git"
 fetch.git = "https://github.com/saveweb/wikiteam3.git"
 src.branch = "v4-main"
-
-[vgpu_unlock-rs]
-src.github_tag = "rbqvq/vgpu_unlock-rs"
-src.include_regex = "^v[0-9].*"
-fetch.github = "rbqvq/vgpu_unlock-rs"
-
-[magiskboot-bin]
-src.github = "topjohnwu/Magisk"
-fetch.url = "https://github.com/topjohnwu/Magisk/releases/download/$ver/Magisk-$ver.apk"
 
 [srv-us]
 src.git = "https://github.com/p3psi-boo/srv.us.git"
@@ -141,67 +55,10 @@ src.git = "https://github.com/p3psi-boo/vikunja-cli.git"
 fetch.git = "https://github.com/p3psi-boo/vikunja-cli.git"
 git.fetch_submodules = false
 
-[inet-speed-cli]
-src.github = "tsosunchia/iNetSpeed-CLI"
-fetch.github = "tsosunchia/iNetSpeed-CLI"
-
-[openixcli]
-src.git = "https://github.com/YuzukiTsuru/OpenixCLI.git"
-fetch.git = "https://github.com/YuzukiTsuru/OpenixCLI.git"
-src.branch = "master"
-git.fetch_submodules = false
-
-[binsider-bin]
-src.github_tag = "orhun/binsider"
-src.prefix = "v"
-fetch.url = "https://github.com/orhun/binsider/releases/download/v$ver/binsider-$ver-x86_64-unknown-linux-musl.tar.gz"
-
-[binsider-bin-aarch64-linux]
-src.github_tag = "orhun/binsider"
-src.prefix = "v"
-fetch.url = "https://github.com/orhun/binsider/releases/download/v$ver/binsider-$ver-aarch64-unknown-linux-musl.tar.gz"
-
-[binsider-bin-darwin-x64]
-src.github_tag = "orhun/binsider"
-src.prefix = "v"
-fetch.url = "https://github.com/orhun/binsider/releases/download/v$ver/binsider-$ver-x86_64-apple-darwin.tar.gz"
-
-[binsider-bin-darwin-arm64]
-src.github_tag = "orhun/binsider"
-src.prefix = "v"
-fetch.url = "https://github.com/orhun/binsider/releases/download/v$ver/binsider-$ver-aarch64-apple-darwin.tar.gz"
-
-[rikugan]
-src.github_tag = "buzzer-re/Rikugan"
-src.include_regex = "^(v)?[0-9].*"
-fetch.github = "buzzer-re/Rikugan"
-
-[cocoindex-code]
-src.github_tag = "cocoindex-io/cocoindex-code"
-src.prefix = "v"
-src.include_regex = "^v[0-9].*"
-fetch.url = "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v$ver.tar.gz"
-
 [lazyssh]
 src.git = "https://github.com/p3psi-boo/lazyssh.git"
 fetch.git = "https://github.com/p3psi-boo/lazyssh.git"
 git.fetch_submodules = false
-
-[ut]
-src.git = "https://github.com/ksdme/ut.git"
-fetch.git = "https://github.com/ksdme/ut.git"
-src.branch = "main"
-git.fetch_submodules = false
-
-[mcp-cli]
-src.github_tag = "philschmid/mcp-cli"
-src.include_regex = "^v[0-9].*"
-fetch.github = "philschmid/mcp-cli"
-
-[hev-socks5-server]
-src.github_tag = "heiher/hev-socks5-server"
-fetch.git = "https://github.com/heiher/hev-socks5-server.git"
-git.fetchSubmodules = true
 
 [octopus-api]
 src.git = "https://github.com/p3psi-boo/octopus.git"
@@ -232,37 +89,6 @@ src.github_tag = "F8LEFT/SoFixer"
 src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
 fetch.github = "F8LEFT/SoFixer"
 
-[uber-apk-signer]
-src.github_tag = "patrickfav/uber-apk-signer"
-src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
-fetch.github = "patrickfav/uber-apk-signer"
-
-[smali]
-src.github_tag = "JesusFreke/smali"
-src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
-fetch.github = "JesusFreke/smali"
-
-[jd-gui]
-src.github_tag = "java-decompiler/jd-gui"
-src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
-fetch.github = "java-decompiler/jd-gui"
-
-[il2cppdumper]
-src.github_tag = "Perfare/Il2CppDumper"
-src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
-fetch.github = "Perfare/Il2CppDumper"
-
-[classyshark]
-src.github_tag = "google/android-classyshark"
-src.include_regex = "^[0-9]+\\.[0-9]+$"
-fetch.github = "google/android-classyshark"
-
-[dalvikus]
-src.github_tag = "loerting/dalvikus"
-src.prefix = "v"
-src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
-fetch.url = "https://github.com/loerting/dalvikus/archive/refs/tags/v$ver.tar.gz"
-
 [coe]
 src.git = "https://github.com/p3psi-boo/coe.git"
 fetch.git = "https://github.com/p3psi-boo/coe.git"
@@ -273,13 +99,6 @@ git.get_commit_date = true
 src.git = "https://github.com/jiujiu532/grok2api.git"
 fetch.git = "https://github.com/jiujiu532/grok2api.git"
 git.fetch_submodules = false
-
-# grok-search-rs - Rust MCP server for Grok web search and Tavily-backed source retrieval
-[grok-search-rs]
-src.git = "https://github.com/Episkey-G/GrokSearch-rs.git"
-fetch.git = "https://github.com/Episkey-G/GrokSearch-rs.git"
-git.fetch_submodules = false
-git.get_commit_date = true
 
 # Focaltech fingerprint reader driver bundle
 [focaltech-fingerprint]
@@ -293,37 +112,10 @@ src.git = "https://github.com/p3psi-boo/fusion.git"
 fetch.git = "https://github.com/p3psi-boo/fusion.git"
 git.fetch_submodules = false
 
-[clipboard-sync]
-src.github = "dnut/clipboard-sync"
-fetch.github = "dnut/clipboard-sync"
-
-# bb-browser - BadBoy Browser CLI + MCP server
-[bb-browser]
-src.github = "epiral/bb-browser"
-fetch.github = "epiral/bb-browser"
-pinned = true
-
-# Use pre-built binary releases - version format is 9.3.9 (without v prefix in filename)
-[ida-mcp]
-src.github_tag = "blacktop/ida-mcp-rs"
-src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
-src.prefix = "v"
-fetch.url = "https://github.com/blacktop/ida-mcp-rs/releases/download/v$ver/ida-mcp_$ver_Linux_x86_64.tar.gz"
-
 # micyou
 [micyou]
 src.github = "LanRhyme/MicYou"
 fetch.github = "LanRhyme/MicYou"
-
-# substack-dl - Download all public posts from any Substack newsletter
-[substack-dl]
-src.git = "https://github.com/p3psi-boo/substack-dl.git"
-fetch.github = "p3psi-boo/substack-dl"
-
-# dbhub - Zero-dependency, token-efficient database MCP server
-[dbhub]
-src.manual = "0.21.2"
-fetch.url = "https://registry.npmjs.org/@bytebase/dbhub/-/dbhub-0.21.2.tgz"
 
 # cookiecloud-rs - Rust rewrite of CookieCloud API
 [cookiecloud-rs]
@@ -337,41 +129,10 @@ git.get_commit_date = true
 src.github = "tconbeer/harlequin-mysql"
 fetch.github = "tconbeer/harlequin-mysql"
 
-# bichon - A lightweight, high-performance Rust email archiver with WebUI
-[bichon]
-src.github = "rustmailer/bichon"
-fetch.github = "rustmailer/bichon"
-
-# wtfps - Scrape estimated locations from Apple's Wi-Fi Positioning System
-[wtfps]
-src.git = "https://codeberg.org/joelkoen/wtfps.git"
-fetch.git = "https://codeberg.org/joelkoen/wtfps.git"
-git.fetch_submodules = false
-git.get_commit_date = true
-
 # subs-check - High-performance proxy subscription checker
 [subs-check]
 src.git = "https://github.com/p3psi-boo/subs-check.git"
 fetch.git = "https://github.com/p3psi-boo/subs-check.git"
-git.fetch_submodules = false
-git.get_commit_date = true
-
-# RustConn - Modern connection manager for Linux (SSH, RDP, VNC, SPICE, and more)
-[rustconn]
-src.github = "totoshko88/RustConn"
-fetch.github = "totoshko88/RustConn"
-
-# deepseek-ocr-rs - Rust rewrite of DeepSeek-OCR (CLI + OpenAI-compatible server)
-[deepseek-ocr-rs]
-src.git = "https://github.com/TimmyOVO/deepseek-ocr.rs.git"
-fetch.git = "https://github.com/TimmyOVO/deepseek-ocr.rs.git"
-git.fetch_submodules = false
-git.get_commit_date = true
-
-# BBDown - Bilibili Downloader (.NET 9 global tool, build from source)
-[bbdown]
-src.git = "https://github.com/nilaoda/BBDown.git"
-fetch.git = "https://github.com/nilaoda/BBDown.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
@@ -405,23 +166,10 @@ src.prefix = "v"
 src.include_regex = "^v[0-9].*"
 fetch.url = "https://github.com/oceanbase/powermem/releases/download/v$ver/powermem-$ver-linux-amd64-binaries.tar.gz"
 
-# fdb - Flutter Debug Bridge
-[fdb]
-src.github_tag = "andrzejchm/fdb"
-src.include_regex = "^v[0-9].*"
-fetch.github = "andrzejchm/fdb"
-
 # wxmp_searxng - Sogou Weixin JSON engine for SearXNG
 [wxmp_searxng]
 src.git = "https://github.com/p3psi-boo/wxmp_searxng.git"
 fetch.git = "https://github.com/p3psi-boo/wxmp_searxng.git"
-git.fetch_submodules = false
-git.get_commit_date = true
-
-# jarm - TLS server fingerprinting tool by Salesforce
-[jarm]
-src.git = "https://github.com/salesforce/jarm.git"
-fetch.git = "https://github.com/salesforce/jarm.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
@@ -431,18 +179,6 @@ src.git = "https://github.com/p3psi-boo/commandcode2api.git"
 fetch.git = "https://github.com/p3psi-boo/commandcode2api.git"
 git.fetch_submodules = false
 git.get_commit_date = true
-
-# leaf - Terminal Markdown previewer
-[leaf]
-src.github_tag = "rivolink/leaf"
-src.prefix = ""
-src.include_regex = "^[0-9]+\\.[0-9]+\\.[0-9]+$"
-fetch.github = "rivolink/leaf"
-
-# omniroute - Free AI gateway: one endpoint, 160+ providers
-[omniroute]
-src.github = "diegosouzapw/OmniRoute"
-fetch.github = "diegosouzapw/OmniRoute"
 
 # n9router - Self-hosted AI routing gateway for 40+ AI providers
 [n9router]

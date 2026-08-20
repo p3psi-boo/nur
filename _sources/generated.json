@@ -1,166 +1,4 @@
 {
-  "bb-browser": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "bb-browser",
-    "passthru": null,
-    "pinned": true,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "epiral",
-      "repo": "bb-browser",
-      "rev": "bb-browser-v0.11.2",
-      "sha256": "sha256-DoAd8oN4Il5xGHkcDKgmLczUYj0D0PvxhbSmnDYb+wI=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "bb-browser-v0.11.2"
-  },
-  "bbdown": {
-    "cargoLock": null,
-    "date": "2026-05-14",
-    "extract": null,
-    "name": "bbdown",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "1b2fbd4372d0b9840d28072f7914ae9887508e5d",
-      "sha256": "sha256-GrBD4PptkryCfpyvnRTPoNfvnT2hAUhZQeS+0SQwJzo=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/nilaoda/BBDown.git"
-    },
-    "version": "1b2fbd4372d0b9840d28072f7914ae9887508e5d"
-  },
-  "bcut-asr": {
-    "cargoLock": null,
-    "date": "2026-01-14",
-    "extract": null,
-    "name": "bcut-asr",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "07fc48213a415490da1ae40cd8988a087cb02ec6",
-      "sha256": "sha256-uGhqogSabFpuWQ1h88oXrCOPuJPyfuR9nx8Ug5WbUl0=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/p3psi-boo/bcut-asr-go.git"
-    },
-    "version": "07fc48213a415490da1ae40cd8988a087cb02ec6"
-  },
-  "bichon": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "bichon",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "rustmailer",
-      "repo": "bichon",
-      "rev": "2.0.1",
-      "sha256": "sha256-pL/1W51x9ZqUHLLzdLUpb54crvhG8JhDqJu47CRZAd4=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "2.0.1"
-  },
-  "binsider-bin": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "binsider-bin",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "name": null,
-      "sha256": "sha256-/TScWAgk8rUv981qMCqqd0o/5L7t2TeFFb3+zsDYd6M=",
-      "type": "url",
-      "url": "https://github.com/orhun/binsider/releases/download/v0.3.2/binsider-0.3.2-x86_64-unknown-linux-musl.tar.gz"
-    },
-    "version": "0.3.2"
-  },
-  "binsider-bin-aarch64-linux": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "binsider-bin-aarch64-linux",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "name": null,
-      "sha256": "sha256-pedF8eMfFmfsFPYjm6w8McxQQ5YmJLEtrkGC0xtSROI=",
-      "type": "url",
-      "url": "https://github.com/orhun/binsider/releases/download/v0.3.2/binsider-0.3.2-aarch64-unknown-linux-musl.tar.gz"
-    },
-    "version": "0.3.2"
-  },
-  "binsider-bin-darwin-arm64": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "binsider-bin-darwin-arm64",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "name": null,
-      "sha256": "sha256-CNYBoXtsEpvWzXGqp2+loZT88hgVzLocm//4tklnT78=",
-      "type": "url",
-      "url": "https://github.com/orhun/binsider/releases/download/v0.3.2/binsider-0.3.2-aarch64-apple-darwin.tar.gz"
-    },
-    "version": "0.3.2"
-  },
-  "binsider-bin-darwin-x64": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "binsider-bin-darwin-x64",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "name": null,
-      "sha256": "sha256-HDz+JDAf3WeezxZTeLsTNb9kAdAHfPOxu6/lkchG6Bo=",
-      "type": "url",
-      "url": "https://github.com/orhun/binsider/releases/download/v0.3.2/binsider-0.3.2-x86_64-apple-darwin.tar.gz"
-    },
-    "version": "0.3.2"
-  },
-  "bird-cli": {
-    "cargoLock": null,
-    "date": "2026-03-09",
-    "extract": null,
-    "name": "bird-cli",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "c815bfbe3cefd0104adf411cd2148995c31f2ba0",
-      "sha256": "sha256-47N0//wE3G9RGrcSa0JJTnu9mbw/MK58PNnuqYyitvw=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/p3psi-boo/bird-fork.git"
-    },
-    "version": "c815bfbe3cefd0104adf411cd2148995c31f2ba0"
-  },
   "celld": {
     "cargoLock": null,
     "date": null,
@@ -181,69 +19,6 @@
       "type": "github"
     },
     "version": "v0.1.0"
-  },
-  "classyshark": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "classyshark",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "google",
-      "repo": "android-classyshark",
-      "rev": "8.2",
-      "sha256": "sha256-9gENYNWfbPK2jpxiHOf8ETJwXqjFMgplaHNkO3ohhDQ=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "8.2"
-  },
-  "clihub": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "clihub",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "thellimist",
-      "repo": "clihub",
-      "rev": "v0.0.8",
-      "sha256": "sha256-Y/O2XmhMYUCV269g+h+DsQT80yVR0ot9RIS+mBJP7BA=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "v0.0.8"
-  },
-  "clipboard-sync": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "clipboard-sync",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "dnut",
-      "repo": "clipboard-sync",
-      "rev": "0.2.0",
-      "sha256": "sha256-gme5pwQrwQbk8MroF/mGYqlY6hcjM5cHKHL7Y3nlW9k=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "0.2.0"
   },
   "cliproxyapi": {
     "cargoLock": null,
@@ -280,21 +55,6 @@
       "url": "https://cloakbrowser.dev/chromium-v146.0.7680.177.5/cloakbrowser-linux-x64.tar.gz"
     },
     "version": "146.0.7680.177.5"
-  },
-  "cocoindex-code": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "cocoindex-code",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "name": null,
-      "sha256": "sha256-ZIzQxtwEh6FfBFUrMj1hDpOLy7knHmeS8d5YeMNWLVs=",
-      "type": "url",
-      "url": "https://github.com/cocoindex-io/cocoindex-code/archive/refs/tags/v0.2.41.tar.gz"
-    },
-    "version": "0.2.41"
   },
   "coe": {
     "cargoLock": null,
@@ -356,77 +116,6 @@
     },
     "version": "f8a023f42951c8ba97261d3b16e3a4ff53c91f4a"
   },
-  "dagu": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "dagu",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "dagu-org",
-      "repo": "dagu",
-      "rev": "v2.12.0",
-      "sha256": "sha256-F3dJLGbtS57cvym0VXnLkFFuLP9bQXIIKc67kj3vcFw=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "v2.12.0"
-  },
-  "dalvikus": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "dalvikus",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "name": null,
-      "sha256": "sha256-PMSalWlMDIqMWgPZ6Ha7L6TA2VOX6svCAOYMSpzIqHY=",
-      "type": "url",
-      "url": "https://github.com/loerting/dalvikus/archive/refs/tags/v1.0.13.tar.gz"
-    },
-    "version": "1.0.13"
-  },
-  "dbhub": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "dbhub",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "name": null,
-      "sha256": "sha256-eOwzRCZAYypW/GY1zXIqusads2xEv50s01xhfroZPTo=",
-      "type": "url",
-      "url": "https://registry.npmjs.org/@bytebase/dbhub/-/dbhub-0.21.2.tgz"
-    },
-    "version": "0.21.2"
-  },
-  "deepseek-ocr-rs": {
-    "cargoLock": null,
-    "date": "2026-02-12",
-    "extract": null,
-    "name": "deepseek-ocr-rs",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "02b933df24f5658d10b37dd48c9c354d95c530c3",
-      "sha256": "sha256-A15gHXKIi/EieK1JpYLedUd63jCfh19S+1e2TS2cdjQ=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/TimmyOVO/deepseek-ocr.rs.git"
-    },
-    "version": "02b933df24f5658d10b37dd48c9c354d95c530c3"
-  },
   "ecloud-cloudpc-keepalive": {
     "cargoLock": null,
     "date": "2026-07-14",
@@ -448,27 +137,6 @@
     },
     "version": "d8625ec87671814f14b4275f7dbe7eb05039fa5b"
   },
-  "ecloud-computer-auto-boot": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "ecloud-computer-auto-boot",
-    "passthru": null,
-    "pinned": true,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "Samler-Lee",
-      "repo": "ecloud_computer_auto_boot",
-      "rev": "1.0.0",
-      "sha256": "sha256-9H11Jli1Ls8FNtvfgt5X+1yEw4zcrqcmBWPdyq8TIf8=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "1.0.0"
-  },
   "einat": {
     "cargoLock": null,
     "date": "2026-06-27",
@@ -488,47 +156,6 @@
       "url": "https://github.com/EHfive/einat-ebpf.git"
     },
     "version": "30e6af3740e279efb254568c0ec1ad54c0cccd35"
-  },
-  "fdb": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "fdb",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "andrzejchm",
-      "repo": "fdb",
-      "rev": "v1.10.1",
-      "sha256": "sha256-jV68ZSkZNH4x00nXU+JXTsgi+PvlAy20PDZXLlJg+P0=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "v1.10.1"
-  },
-  "firm": {
-    "cargoLock": null,
-    "date": "2026-03-11",
-    "extract": null,
-    "name": "firm",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": true,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "4144d4a08bdf285c09ed2b9781e5ec448004e506",
-      "sha256": "sha256-PgFYlw9XNxcPlRXLIBwfVV+geu3NZ9y2+puN6FczIfg=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/42futures/firm.git"
-    },
-    "version": "4144d4a08bdf285c09ed2b9781e5ec448004e506"
   },
   "focaltech-fingerprint": {
     "cargoLock": null,
@@ -569,26 +196,6 @@
       "url": "https://github.com/p3psi-boo/fusion.git"
     },
     "version": "ecc44eeff94dd4836eed6490a497989194effa2b"
-  },
-  "grok-search-rs": {
-    "cargoLock": null,
-    "date": "2026-08-08",
-    "extract": null,
-    "name": "grok-search-rs",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "06643b3e3d0e1b22527d096e6bfadfda692749b3",
-      "sha256": "sha256-0oQTPLQoQmH985whZil2w2RQPgC81E2N6JuPMCk4W8w=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/Episkey-G/GrokSearch-rs.git"
-    },
-    "version": "06643b3e3d0e1b22527d096e6bfadfda692749b3"
   },
   "grok2api": {
     "cargoLock": null,
@@ -631,83 +238,6 @@
     },
     "version": "v1.3.1"
   },
-  "hev-socks5-server": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "hev-socks5-server",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": true,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "2.13.1",
-      "sha256": "sha256-DvG2w5aKKes33Wj/b8SLjv5+C+k3Q2Ro37JgAyqMibw=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/heiher/hev-socks5-server.git"
-    },
-    "version": "2.13.1"
-  },
-  "ida-mcp": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "ida-mcp",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "name": null,
-      "sha256": "sha256-P3uLfRZk1+VxtQ7pYKCfo4wTGJmPQiL3m3m8ScZ3PmY=",
-      "type": "url",
-      "url": "https://github.com/blacktop/ida-mcp-rs/releases/download/v9.4.1/ida-mcp_9.4.1_Linux_x86_64.tar.gz"
-    },
-    "version": "9.4.1"
-  },
-  "il2cppdumper": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "il2cppdumper",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "Perfare",
-      "repo": "Il2CppDumper",
-      "rev": "v6.7.46",
-      "sha256": "sha256-pMxxwBpuZ2EuP7O99XTJcnS3Dq8MdxvUGQHJ0U3bnTY=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "v6.7.46"
-  },
-  "inet-speed-cli": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "inet-speed-cli",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "tsosunchia",
-      "repo": "iNetSpeed-CLI",
-      "rev": "v1.1.2",
-      "sha256": "sha256-xAXYhvN7rdXvA2EWsNXRfXlIrumyPluAcmVbMY/pZxE=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "v1.1.2"
-  },
   "ironet": {
     "cargoLock": null,
     "date": "2026-08-14",
@@ -727,47 +257,6 @@
       "url": "https://github.com/p3psi-boo/ironet.git"
     },
     "version": "d6988356fe688d1ea234ec92c00ce537318f6f20"
-  },
-  "jarm": {
-    "cargoLock": null,
-    "date": "2026-06-02",
-    "extract": null,
-    "name": "jarm",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "2c0cf5ce8418c7a1d03edb219acea3c18e068289",
-      "sha256": "sha256-PPtGS2pYXZga0eYtrKeg4Q/XpIhhTuuILZF+Bw8203c=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/salesforce/jarm.git"
-    },
-    "version": "2c0cf5ce8418c7a1d03edb219acea3c18e068289"
-  },
-  "jd-gui": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "jd-gui",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "java-decompiler",
-      "repo": "jd-gui",
-      "rev": "v1.6.6",
-      "sha256": "sha256-QHiZPYFwDQzbXVSuhwzQqBRXlkG9QVU+Jl6SKvBoCwQ=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "v1.6.6"
   },
   "komari": {
     "cargoLock": null,
@@ -849,27 +338,6 @@
     },
     "version": "48995806bf1aa1c9c41bb8dff6b5ddd698539311"
   },
-  "leaf": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "leaf",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "rivolink",
-      "repo": "leaf",
-      "rev": "1.27.0",
-      "sha256": "sha256-jaubn5szSZv0O6+19isxI1iCm9T5qiIp56tekA3/26A=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "1.27.0"
-  },
   "lotspeed": {
     "cargoLock": null,
     "date": "2026-06-18",
@@ -889,42 +357,6 @@
       "url": "https://github.com/uk0/lotspeed.git"
     },
     "version": "df78e23472f2d291ee41cca2d308f67d5828fb22"
-  },
-  "magiskboot-bin": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "magiskboot-bin",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "name": null,
-      "sha256": "sha256-4NMtISNTKGD5cSPZJ7G7hsTgjm/YpIv8a1vuCvrp69U=",
-      "type": "url",
-      "url": "https://github.com/topjohnwu/Magisk/releases/download/v30.7/Magisk-v30.7.apk"
-    },
-    "version": "v30.7"
-  },
-  "mcp-cli": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "mcp-cli",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "philschmid",
-      "repo": "mcp-cli",
-      "rev": "v0.3.0",
-      "sha256": "sha256-S924rqlVKzUFD63NDyK5bbXnonra+/UoH6j78AAj3d0=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "v0.3.0"
   },
   "micyou": {
     "cargoLock": null,
@@ -967,26 +399,6 @@
     },
     "version": "a7d5780a9fe16ee31a39010af9b892033c1d58fc"
   },
-  "nf_deaf": {
-    "cargoLock": null,
-    "date": "2026-01-23",
-    "extract": null,
-    "name": "nf_deaf",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "cf346a3c270e5eb6d31b1d0c110efaf7a8b9193e",
-      "sha256": "sha256-vLcJWJtD7W1D37yFE5fGnZP6ZOKdfKkd+fTte0GDu0g=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/kmb21y66/nf_deaf.git"
-    },
-    "version": "cf346a3c270e5eb6d31b1d0c110efaf7a8b9193e"
-  },
   "octopus-api": {
     "cargoLock": null,
     "date": "2026-08-06",
@@ -1006,107 +418,6 @@
       "url": "https://github.com/p3psi-boo/octopus.git"
     },
     "version": "7b7a4801fa501f9244a1d9dfb47da56d1600b970"
-  },
-  "okmain": {
-    "cargoLock": null,
-    "date": "2026-03-10",
-    "extract": null,
-    "name": "okmain",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "e51da5fa7efde11dad009592bdf3b41980c3555f",
-      "sha256": "sha256-klCN4sgRvN/9QyXgu0+XBJMpjTOBscNG0ZqM4CV2QBo=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/si14/okmain.git"
-    },
-    "version": "e51da5fa7efde11dad009592bdf3b41980c3555f"
-  },
-  "omniroute": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "omniroute",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "diegosouzapw",
-      "repo": "OmniRoute",
-      "rev": "v3.8.49",
-      "sha256": "sha256-nRLziV4NWPoa0ev57DV7jmAvLpL/1MP1EMZO2/drrTU=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "v3.8.49"
-  },
-  "openixcli": {
-    "cargoLock": null,
-    "date": "2026-06-18",
-    "extract": null,
-    "name": "openixcli",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "668d7b1678f8abbffdb4160da69da713cdc026c9",
-      "sha256": "sha256-dvvkh6gcN9cUFd7NmNYcW7lI+q2S5vWiyB4GHv6AyMo=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/YuzukiTsuru/OpenixCLI.git"
-    },
-    "version": "668d7b1678f8abbffdb4160da69da713cdc026c9"
-  },
-  "oura-cli": {
-    "cargoLock": null,
-    "date": "2026-01-31",
-    "extract": null,
-    "name": "oura-cli",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "5354384a57006ab68ef448f196b48bf1caebb2ea",
-      "sha256": "sha256-hCkd7yBHND/UxRjPNU7SaG0l8MvnLgFpSgAms1quAeM=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/p3psi-boo/oura-cli.git"
-    },
-    "version": "5354384a57006ab68ef448f196b48bf1caebb2ea"
-  },
-  "pg_duckdb": {
-    "cargoLock": null,
-    "date": "2026-07-17",
-    "extract": null,
-    "name": "pg_duckdb",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "ee38d3b540ecea1d93683ba99bdcec5632a21eaf",
-      "sha256": "sha256-WMDRidLOlajVbWmIt52kgwpQcAUCPT8+eVL1wk5FzGw=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/duckdb/pg_duckdb.git"
-    },
-    "version": "ee38d3b540ecea1d93683ba99bdcec5632a21eaf"
   },
   "picoclaw": {
     "cargoLock": null,
@@ -1185,131 +496,6 @@
     },
     "version": "5d08d18f9171d7e65fabad06ee81021d9bca0a21"
   },
-  "pymicro-features": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "pymicro-features",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "rhasspy",
-      "repo": "pymicro-features",
-      "rev": "v2.0.2",
-      "sha256": "sha256-bCvrsvifUxM7jfqBePmcYviZ5pIy1ZApq48Pu/5b7AM=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "v2.0.2"
-  },
-  "pymicro-wakeword": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "pymicro-wakeword",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "OHF-Voice",
-      "repo": "pymicro-wakeword",
-      "rev": "v2.4.1",
-      "sha256": "sha256-R8uAKJygh5mo8U9k0uT358RMxJnezRxAATjjaK4D9PI=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "v2.4.1"
-  },
-  "python-mpv": {
-    "cargoLock": null,
-    "date": "2025-04-25",
-    "extract": null,
-    "name": "python-mpv",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "93c4de9bb7a0e1cfcb9d305a58a326bb24ef9d47",
-      "sha256": "sha256-fTvEcYJR7gOjmgsQkHIB+VM2rgWZLA6D/Wqa/QTyn9Q=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/jaseg/python-mpv.git"
-    },
-    "version": "93c4de9bb7a0e1cfcb9d305a58a326bb24ef9d47"
-  },
-  "realitlscanner": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "realitlscanner",
-    "passthru": null,
-    "pinned": true,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "XTLS",
-      "repo": "RealiTLScanner",
-      "rev": "v0.2.1",
-      "sha256": "sha256-rshU3nBguzBleM9zlPHPFQy0C+C6LYE2EI1uKRl4DN4=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "v0.2.1"
-  },
-  "rikugan": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "rikugan",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "buzzer-re",
-      "repo": "Rikugan",
-      "rev": "v1.3.2",
-      "sha256": "sha256-Fw4Ya3rh3PYP9cBq0d+1TW/ekL5II00OPExqUIx57AA=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "v1.3.2"
-  },
-  "rustconn": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "rustconn",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "totoshko88",
-      "repo": "RustConn",
-      "rev": "v0.19.19",
-      "sha256": "sha256-fUzNABLMCw52kAS4s2OnJU8+3Fzg4uO6vZ2MqWIvroY=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "v0.19.19"
-  },
   "searxng-baidu-qianfan-bridge": {
     "cargoLock": null,
     "date": "2026-07-19",
@@ -1370,48 +556,6 @@
       "type": "github"
     },
     "version": "v0.9.0"
-  },
-  "sigmo": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "sigmo",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "damonto",
-      "repo": "sigmo",
-      "rev": "v4.1.2",
-      "sha256": "sha256-T6+V2W95aelYhGoxnmm+MkE1G82IRJvGpujDEaVXJrg=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "v4.1.2"
-  },
-  "smali": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "smali",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "JesusFreke",
-      "repo": "smali",
-      "rev": "v2.5.2",
-      "sha256": "sha256-UkABsX7KaDZyFR4MTmpjnw4dGXChbLB281Kav/k7/00=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "v2.5.2"
   },
   "sofixer": {
     "cargoLock": null,
@@ -1474,27 +618,6 @@
     },
     "version": "753fe79b88d07eea1affb141174344113d5825d6"
   },
-  "substack-dl": {
-    "cargoLock": null,
-    "date": "2022-08-08",
-    "extract": null,
-    "name": "substack-dl",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "p3psi-boo",
-      "repo": "substack-dl",
-      "rev": "866b2566f9244374e7df5f0f404098c5f81e7b06",
-      "sha256": "sha256-F8497VhGZXCyYd2pHaJKr1WXWKEbUSSQ+3LaA1cnZXs=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "866b2566f9244374e7df5f0f404098c5f81e7b06"
-  },
   "sugar-wifi-conf": {
     "cargoLock": null,
     "date": "2026-08-03",
@@ -1536,27 +659,6 @@
     },
     "version": "v1.2.0"
   },
-  "uber-apk-signer": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "uber-apk-signer",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "patrickfav",
-      "repo": "uber-apk-signer",
-      "rev": "v1.3.0",
-      "sha256": "sha256-pxGzRAUuYUyqcanoaQ4rqbZQfLMWdmc4GdGBeLw7O+M=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "v1.3.0"
-  },
   "usque": {
     "cargoLock": null,
     "date": "2026-07-20",
@@ -1576,67 +678,6 @@
       "url": "https://github.com/Diniboy1123/usque.git"
     },
     "version": "6aa03fc97d12848dce34eedbd187fb1077b5d1ea"
-  },
-  "ut": {
-    "cargoLock": null,
-    "date": "2026-05-09",
-    "extract": null,
-    "name": "ut",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "0e19819cf148ae60ae7b1e279ef2e5646bb40f6d",
-      "sha256": "sha256-jWI1IUHxKfx9FeTyxdorKk0nTrhqASHODlp3CbET0zk=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/ksdme/ut.git"
-    },
-    "version": "0e19819cf148ae60ae7b1e279ef2e5646bb40f6d"
-  },
-  "vanissh": {
-    "cargoLock": null,
-    "date": "2025-09-21",
-    "extract": null,
-    "name": "vanissh",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "c2ee4700d8112b5c6f06fd587b6f11c9aafbdf72",
-      "sha256": "sha256-5pn2gKiGnd5nfGv3qjaFdvWzMnFjWLUwLtoZb8es7YE=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/k4yt3x/vanissh.git"
-    },
-    "version": "c2ee4700d8112b5c6f06fd587b6f11c9aafbdf72"
-  },
-  "vgpu_unlock-rs": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "vgpu_unlock-rs",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "rbqvq",
-      "repo": "vgpu_unlock-rs",
-      "rev": "v19.1",
-      "sha256": "sha256-CdLh8OU/idWLzdPEfQpF5Uost1vaNSEJkBJJlHdPb1c=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "v19.1"
   },
   "vja": {
     "cargoLock": null,
@@ -1697,47 +738,6 @@
       "url": "https://github.com/saveweb/wikiteam3.git"
     },
     "version": "317f63f69d0f136783f95d0d54e7e03bf4d483dd"
-  },
-  "wsl-vpnkit": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "wsl-vpnkit",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "sakai135",
-      "repo": "wsl-vpnkit",
-      "rev": "v0.4.1",
-      "sha256": "sha256-Igbr3L2W32s4uBepllSz07bkbI3qwAKMZkBrXLqGrGA=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "v0.4.1"
-  },
-  "wtfps": {
-    "cargoLock": null,
-    "date": "2024-10-21",
-    "extract": null,
-    "name": "wtfps",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "44ea48854ac49396f35426246426ffcdf5616631",
-      "sha256": "sha256-kWN9jOOEY1uW/1VtEYLzhm3Q2RbrjlGETk+RS2v2mTc=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://codeberg.org/joelkoen/wtfps.git"
-    },
-    "version": "44ea48854ac49396f35426246426ffcdf5616631"
   },
   "wxmp_searxng": {
     "cargoLock": null,
