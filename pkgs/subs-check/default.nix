@@ -14,7 +14,7 @@ in
 
   src = sourceInfo.src;
 
-  vendorHash = "sha256-yUQlKB30UHZdmGa2saFpZwse0U3AsIkLnCk27kJBXSA=";
+  vendorHash = "sha256-h63FPB3VzvcHDuGe7lNOyQbao0hpsbgxABt/euq506M=";
 
   env = {
     CGO_ENABLED = "0";

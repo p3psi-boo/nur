@@ -19,6 +19,13 @@ src.git = "https://github.com/OkamiW/proxy-ns.git"
 fetch.git = "https://github.com/OkamiW/proxy-ns.git"
 src.branch = "master"
 
+# China Mobile Cloud PC keepalive daemon and CLI control tool
+[cmcc-ec-keepalive]
+src.git = "https://github.com/p3psi-boo/cmcc-ec-keepalive.git"
+src.branch = "main"
+fetch.github = "p3psi-boo/cmcc-ec-keepalive"
+git.get_commit_date = true
+
 # eCloud Cloud PC account and desktop session keepalive tool
 [ecloud-cloudpc-keepalive]
 src.git = "https://github.com/p3psi-boo/ecloud-cloudpc-keepalive.git"
