@@ -294,6 +294,12 @@ fetch.git = "https://github.com/p3psi-boo/komari-monitor-rs.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
+[komari-agent-zig]
+src.git = "https://github.com/luodaoyi/komari-zig-agent.git"
+fetch.git = "https://github.com/luodaoyi/komari-zig-agent.git"
+git.fetch_submodules = false
+git.get_commit_date = true
+
 [sofixer]
 src.github_tag = "F8LEFT/SoFixer"
 src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"

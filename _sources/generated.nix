@@ -594,6 +594,20 @@
     };
     date = "2026-08-07";
   };
+  komari-agent-zig = {
+    pname = "komari-agent-zig";
+    version = "41555ce88a322dbaab229e81120a7bb130d230ea";
+    src = fetchgit {
+      url = "https://github.com/luodaoyi/komari-zig-agent.git";
+      rev = "41555ce88a322dbaab229e81120a7bb130d230ea";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-VJmH4lR6XrlD00EJvJEts8ShEBMQ6LWrqeHeJkymbco=";
+    };
+    date = "2026-08-11";
+  };
   komari-monitor-rs = {
     pname = "komari-monitor-rs";
     version = "a17a8b2ee5404f769ab28e7079f1b41b4be1cb12";

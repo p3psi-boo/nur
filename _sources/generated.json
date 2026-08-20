@@ -970,6 +970,26 @@
         },
         "version": "14bf8bde7cf1313e674e4bf28198f84e9b934794"
     },
+    "komari-agent-zig": {
+        "cargoLock": null,
+        "date": "2026-08-11",
+        "extract": null,
+        "name": "komari-agent-zig",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "41555ce88a322dbaab229e81120a7bb130d230ea",
+            "sha256": "sha256-VJmH4lR6XrlD00EJvJEts8ShEBMQ6LWrqeHeJkymbco=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/luodaoyi/komari-zig-agent.git"
+        },
+        "version": "41555ce88a322dbaab229e81120a7bb130d230ea"
+    },
     "komari-monitor-rs": {
         "cargoLock": null,
         "date": "2026-05-26",
