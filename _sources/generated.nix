@@ -215,20 +215,7 @@
     };
     date = "2026-04-14";
   };
-  copilot-api-plus = {
-    pname = "copilot-api-plus";
-    version = "b7b610f59c48897d223d320fd8e44740ade8f131";
-    src = fetchgit {
-      url = "https://github.com/imbuxiangnan-cyber/copilot-api-plus.git";
-      rev = "b7b610f59c48897d223d320fd8e44740ade8f131";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-QRRrQ455FAtaK3aM7vyss5aeKpe/iQ0rTwwhBKioI6k=";
-    };
-    date = "2026-06-24";
-  };
+
   dagu = {
     pname = "dagu";
     version = "v2.12.0";
@@ -332,17 +319,7 @@
     };
     date = "2026-03-11";
   };
-  fish-ai = {
-    pname = "fish-ai";
-    version = "v2.13.1";
-    src = fetchFromGitHub {
-      owner = "Realiserad";
-      repo = "fish-ai";
-      rev = "v2.13.1";
-      fetchSubmodules = false;
-      sha256 = "sha256-ZSFoE9/UesA6GVSYyRKAfj7+uw1gTZ/E08zAHPizAAQ=";
-    };
-  };
+
   focaltech-fingerprint = {
     pname = "focaltech-fingerprint";
     version = "d4fbbf901aff44b92d4fa212d9b99e43cda00563";
@@ -437,20 +414,7 @@
       sha256 = "sha256-DvG2w5aKKes33Wj/b8SLjv5+C+k3Q2Ro37JgAyqMibw=";
     };
   };
-  ida-headless-mcp = {
-    pname = "ida-headless-mcp";
-    version = "dc9c56f9d4d8dd3855a1a26ff56d8197acdc5b02";
-    src = fetchgit {
-      url = "https://github.com/zboralski/ida-headless-mcp.git";
-      rev = "dc9c56f9d4d8dd3855a1a26ff56d8197acdc5b02";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-38Mg8iJ69l8eveP8AQGKVBbWclLVuz8pZ5oG9DrV2gY=";
-    };
-    date = "2026-02-16";
-  };
+
   ida-mcp = {
     pname = "ida-mcp";
     version = "9.4.1";
@@ -459,20 +423,7 @@
       sha256 = "sha256-P3uLfRZk1+VxtQ7pYKCfo4wTGJmPQiL3m3m8ScZ3PmY=";
     };
   };
-  ida-pro-mcp = {
-    pname = "ida-pro-mcp";
-    version = "f4754e45e7d76bfcebb5dcbe700577fa52ff71cd";
-    src = fetchgit {
-      url = "https://github.com/QiuChenly/ida-pro-mcp-enhancement.git";
-      rev = "f4754e45e7d76bfcebb5dcbe700577fa52ff71cd";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-c4kb2qwNrWI/r7teRfBG02ONdA3nxbA0Izl1BiWxABg=";
-    };
-    date = "2026-06-15";
-  };
+
   il2cppdumper = {
     pname = "il2cppdumper";
     version = "v6.7.46";
@@ -534,38 +485,7 @@
       sha256 = "sha256-QHiZPYFwDQzbXVSuhwzQqBRXlkG9QVU+Jl6SKvBoCwQ=";
     };
   };
-  kimi-code-darwin-arm64 = {
-    pname = "kimi-code-darwin-arm64";
-    version = "0.34.0";
-    src = fetchurl {
-      url = "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@0.34.0/kimi-code-darwin-arm64.zip";
-      sha256 = "sha256-W4nSKY8Fu+EArosU38od9Wvtwe2D/yp2+O+5SALxaS0=";
-    };
-  };
-  kimi-code-darwin-x64 = {
-    pname = "kimi-code-darwin-x64";
-    version = "0.34.0";
-    src = fetchurl {
-      url = "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@0.34.0/kimi-code-darwin-x64.zip";
-      sha256 = "sha256-fMSJfMlQjgpx8/IdZjMZTbQEkHwcbn+3tVo1eS0Y/fc=";
-    };
-  };
-  kimi-code-linux-arm64 = {
-    pname = "kimi-code-linux-arm64";
-    version = "0.34.0";
-    src = fetchurl {
-      url = "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@0.34.0/kimi-code-linux-arm64.zip";
-      sha256 = "sha256-OBdVv9xFvZYHL5xshPhxzVLvt1YOfqnE5NMu0/ifZf0=";
-    };
-  };
-  kimi-code-linux-x64 = {
-    pname = "kimi-code-linux-x64";
-    version = "0.34.0";
-    src = fetchurl {
-      url = "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@0.34.0/kimi-code-linux-x64.zip";
-      sha256 = "sha256-iFWH8gpR2U3KGPyb/xEkZULAF/t6xFmpaTu6o8pnsZk=";
-    };
-  };
+
   komari = {
     pname = "komari";
     version = "14bf8bde7cf1313e674e4bf28198f84e9b934794";
@@ -593,7 +513,8 @@
       sha256 = "sha256-VJmH4lR6XrlD00EJvJEts8ShEBMQ6LWrqeHeJkymbco=";
     };
     date = "2026-08-11";
-  };  komari-web = {
+  };
+  komari-web = {
     pname = "komari-web";
     version = "f625b348b339fcb9f699bf7b5028d6678cfc0ab9";
     src = fetchgit {
@@ -631,7 +552,8 @@
       fetchSubmodules = false;
       sha256 = "sha256-jaubn5szSZv0O6+19isxI1iCm9T5qiIp56tekA3/26A=";
     };
-  };  lotspeed = {
+  };
+  lotspeed = {
     pname = "lotspeed";
     version = "df78e23472f2d291ee41cca2d308f67d5828fb22";
     src = fetchgit {
@@ -644,7 +566,8 @@
       sha256 = "sha256-br29pDUjrNCS2BL+u3ZTixyYR3iKj6fn8WvQQE+T63Y=";
     };
     date = "2026-06-18";
-  };  magiskboot-bin = {
+  };
+  magiskboot-bin = {
     pname = "magiskboot-bin";
     version = "v30.7";
     src = fetchurl {
@@ -674,30 +597,7 @@
       sha256 = "sha256-qefp7gG7DfE/GN81UB981KvS4Q2oIxNLM2/76NLacXs=";
     };
   };
-  mihomo-to-uri = {
-    pname = "mihomo-to-uri";
-    version = "ce092a6b93a191873c4c63beb694654ac38b5e96";
-    src = fetchgit {
-      url = "https://github.com/p3psi-boo/mihomo-to-uri.git";
-      rev = "ce092a6b93a191873c4c63beb694654ac38b5e96";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-+tx2CBZ+ipqUrUoAMsmdj/QpLabSFlcwy4rKsQ8rTio=";
-    };
-    date = "2026-05-19";
-  };  multica-cli = {
-    pname = "multica-cli";
-    version = "v0.4.21";
-    src = fetchFromGitHub {
-      owner = "multica-ai";
-      repo = "multica";
-      rev = "v0.4.21";
-      fetchSubmodules = false;
-      sha256 = "sha256-DQr5Gjl4VURuEJZdkJxqgbA3eE2OoqRZrtU6Qap6OIU=";
-    };
-  };
+
   n9router = {
     pname = "n9router";
     version = "a7d5780a9fe16ee31a39010af9b892033c1d58fc";

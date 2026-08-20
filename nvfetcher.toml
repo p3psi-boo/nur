@@ -42,11 +42,6 @@ fetch.github = "thellimist/clihub"
 src.github = "dagu-org/dagu"
 fetch.github = "dagu-org/dagu"
 
-[multica-cli]
-src.github_tag = "multica-ai/multica"
-src.include_regex = "^v[0-9].*"
-fetch.github = "multica-ai/multica"
-
 [firm]
 src.git = "https://github.com/42futures/firm.git"
 fetch.git = "https://github.com/42futures/firm.git"
@@ -199,45 +194,6 @@ src.github_tag = "orhun/binsider"
 src.prefix = "v"
 fetch.url = "https://github.com/orhun/binsider/releases/download/v$ver/binsider-$ver-aarch64-apple-darwin.tar.gz"
 
-[kimi-code-linux-x64]
-src.github_tag = "MoonshotAI/kimi-code"
-src.include_regex = ".*kimi-code.*"
-src.from_pattern = "^@moonshot-ai/kimi-code@(.*)$"
-src.to_pattern = "\\1"
-fetch.url = "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@$ver/kimi-code-linux-x64.zip"
-
-[kimi-code-linux-arm64]
-src.github_tag = "MoonshotAI/kimi-code"
-src.include_regex = ".*kimi-code.*"
-src.from_pattern = "^@moonshot-ai/kimi-code@(.*)$"
-src.to_pattern = "\\1"
-fetch.url = "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@$ver/kimi-code-linux-arm64.zip"
-
-[kimi-code-darwin-x64]
-src.github_tag = "MoonshotAI/kimi-code"
-src.include_regex = ".*kimi-code.*"
-src.from_pattern = "^@moonshot-ai/kimi-code@(.*)$"
-src.to_pattern = "\\1"
-fetch.url = "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@$ver/kimi-code-darwin-x64.zip"
-
-[kimi-code-darwin-arm64]
-src.github_tag = "MoonshotAI/kimi-code"
-src.include_regex = ".*kimi-code.*"
-src.from_pattern = "^@moonshot-ai/kimi-code@(.*)$"
-src.to_pattern = "\\1"
-fetch.url = "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@$ver/kimi-code-darwin-arm64.zip"
-
-[fish-ai]
-src.github_tag = "Realiserad/fish-ai"
-src.include_regex = "^v[0-9].*"
-fetch.github = "Realiserad/fish-ai"
-
-[ida-pro-mcp]
-src.git = "https://github.com/QiuChenly/ida-pro-mcp-enhancement.git"
-fetch.git = "https://github.com/QiuChenly/ida-pro-mcp-enhancement.git"
-src.branch = "main"
-git.fetch_submodules = false
-
 [rikugan]
 src.github_tag = "buzzer-re/Rikugan"
 src.include_regex = "^(v)?[0-9].*"
@@ -354,7 +310,6 @@ src.git = "https://github.com/vobademi/FTEXX00-Ubuntu.git"
 fetch.git = "https://github.com/vobademi/FTEXX00-Ubuntu.git"
 git.fetch_submodules = false
 
-
 # fusion - A lightweight, self-hosted friendly RSS reader
 [fusion]
 src.git = "https://github.com/p3psi-boo/fusion.git"
@@ -384,14 +339,6 @@ src.github_tag = "blacktop/ida-mcp-rs"
 src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
 src.prefix = "v"
 fetch.url = "https://github.com/blacktop/ida-mcp-rs/releases/download/v$ver/ida-mcp_$ver_Linux_x86_64.tar.gz"
-
-# ida-headless-mcp - Headless IDA Pro binary analysis via Model Context Protocol
-[ida-headless-mcp]
-src.git = "https://github.com/zboralski/ida-headless-mcp.git"
-fetch.git = "https://github.com/zboralski/ida-headless-mcp.git"
-git.fetch_submodules = false
-git.get_commit_date = true
-
 
 # vibevoice-cpp - C++ inference engine for Microsoft VibeVoice
 [vibevoice-cpp]
@@ -427,13 +374,6 @@ fetch.git = "https://github.com/p3psi-boo/CookieCloud.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
-# copilot-api-plus - Turn GitHub Copilot into OpenAI/Anthropic API compatible server
-[copilot-api-plus]
-src.git = "https://github.com/imbuxiangnan-cyber/copilot-api-plus.git"
-fetch.git = "https://github.com/imbuxiangnan-cyber/copilot-api-plus.git"
-git.fetch_submodules = false
-git.get_commit_date = true
-
 # harlequin-mysql - MySQL adapter for Harlequin SQL IDE
 [harlequin-mysql]
 src.github = "tconbeer/harlequin-mysql"
@@ -462,7 +402,6 @@ src.git = "https://github.com/p3psi-boo/subs-check.git"
 fetch.git = "https://github.com/p3psi-boo/subs-check.git"
 git.fetch_submodules = false
 git.get_commit_date = true
-
 
 # RustConn - Modern connection manager for Linux (SSH, RDP, VNC, SPICE, and more)
 [rustconn]
@@ -568,13 +507,6 @@ fetch.git = "https://github.com/p3psi-boo/commandcode2api.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
-# mihomo-to-uri - Convert mihomo/Clash proxy config to plain-text URI
-[mihomo-to-uri]
-src.git = "https://github.com/p3psi-boo/mihomo-to-uri.git"
-fetch.git = "https://github.com/p3psi-boo/mihomo-to-uri.git"
-git.fetch_submodules = false
-git.get_commit_date = true
-
 # leaf - Terminal Markdown previewer
 [leaf]
 src.github_tag = "rivolink/leaf"
@@ -593,7 +525,6 @@ src.git = "https://github.com/nightwalker89/n9router.git"
 fetch.git = "https://github.com/nightwalker89/n9router.git"
 git.fetch_submodules = false
 git.get_commit_date = true
-
 
 # ironet - Demand-aware Linux overlay network using iroh and a single FlowRouter TUN
 [ironet]

@@ -51,7 +51,7 @@ let
   ) (builtins.attrNames entries);
 
   # proxy.golang.org 在国内网络不可达，NUR 内 Go 包的 module 下载统一走 goproxy.cn。
-  # 直接覆盖 prev.buildGoModule，使 repoOverlay 里的包（multica-cli / lazyssh /
+  # 直接覆盖 prev.buildGoModule，使 repoOverlay 里的包（lazyssh /
   # ecloud-cloudpc-keepalive 等，它们本就需要本地构建）在 go mod vendor 阶段
   # 使用国内代理。nixpkgs 自身的 Go 包不受影响（走缓存，drv 不变）。
   # 注意：GOPROXY 在 go-modules 的 impureEnvVars 里，构建时会被 nix 清空，

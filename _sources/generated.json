@@ -356,26 +356,6 @@
     },
     "version": "f8a023f42951c8ba97261d3b16e3a4ff53c91f4a"
   },
-  "copilot-api-plus": {
-    "cargoLock": null,
-    "date": "2026-06-24",
-    "extract": null,
-    "name": "copilot-api-plus",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "b7b610f59c48897d223d320fd8e44740ade8f131",
-      "sha256": "sha256-QRRrQ455FAtaK3aM7vyss5aeKpe/iQ0rTwwhBKioI6k=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/imbuxiangnan-cyber/copilot-api-plus.git"
-    },
-    "version": "b7b610f59c48897d223d320fd8e44740ade8f131"
-  },
   "dagu": {
     "cargoLock": null,
     "date": null,
@@ -550,27 +530,6 @@
     },
     "version": "4144d4a08bdf285c09ed2b9781e5ec448004e506"
   },
-  "fish-ai": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "fish-ai",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "Realiserad",
-      "repo": "fish-ai",
-      "rev": "v2.13.1",
-      "sha256": "sha256-ZSFoE9/UesA6GVSYyRKAfj7+uw1gTZ/E08zAHPizAAQ=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "v2.13.1"
-  },
   "focaltech-fingerprint": {
     "cargoLock": null,
     "date": "2025-10-21",
@@ -712,26 +671,6 @@
     },
     "version": "2.13.1"
   },
-  "ida-headless-mcp": {
-    "cargoLock": null,
-    "date": "2026-02-16",
-    "extract": null,
-    "name": "ida-headless-mcp",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "dc9c56f9d4d8dd3855a1a26ff56d8197acdc5b02",
-      "sha256": "sha256-38Mg8iJ69l8eveP8AQGKVBbWclLVuz8pZ5oG9DrV2gY=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/zboralski/ida-headless-mcp.git"
-    },
-    "version": "dc9c56f9d4d8dd3855a1a26ff56d8197acdc5b02"
-  },
   "ida-mcp": {
     "cargoLock": null,
     "date": null,
@@ -746,26 +685,6 @@
       "url": "https://github.com/blacktop/ida-mcp-rs/releases/download/v9.4.1/ida-mcp_9.4.1_Linux_x86_64.tar.gz"
     },
     "version": "9.4.1"
-  },
-  "ida-pro-mcp": {
-    "cargoLock": null,
-    "date": "2026-06-15",
-    "extract": null,
-    "name": "ida-pro-mcp",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "f4754e45e7d76bfcebb5dcbe700577fa52ff71cd",
-      "sha256": "sha256-c4kb2qwNrWI/r7teRfBG02ONdA3nxbA0Izl1BiWxABg=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/QiuChenly/ida-pro-mcp-enhancement.git"
-    },
-    "version": "f4754e45e7d76bfcebb5dcbe700577fa52ff71cd"
   },
   "il2cppdumper": {
     "cargoLock": null,
@@ -869,66 +788,6 @@
       "type": "github"
     },
     "version": "v1.6.6"
-  },
-  "kimi-code-darwin-arm64": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "kimi-code-darwin-arm64",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "name": null,
-      "sha256": "sha256-W4nSKY8Fu+EArosU38od9Wvtwe2D/yp2+O+5SALxaS0=",
-      "type": "url",
-      "url": "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@0.34.0/kimi-code-darwin-arm64.zip"
-    },
-    "version": "0.34.0"
-  },
-  "kimi-code-darwin-x64": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "kimi-code-darwin-x64",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "name": null,
-      "sha256": "sha256-fMSJfMlQjgpx8/IdZjMZTbQEkHwcbn+3tVo1eS0Y/fc=",
-      "type": "url",
-      "url": "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@0.34.0/kimi-code-darwin-x64.zip"
-    },
-    "version": "0.34.0"
-  },
-  "kimi-code-linux-arm64": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "kimi-code-linux-arm64",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "name": null,
-      "sha256": "sha256-OBdVv9xFvZYHL5xshPhxzVLvt1YOfqnE5NMu0/ifZf0=",
-      "type": "url",
-      "url": "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@0.34.0/kimi-code-linux-arm64.zip"
-    },
-    "version": "0.34.0"
-  },
-  "kimi-code-linux-x64": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "kimi-code-linux-x64",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "name": null,
-      "sha256": "sha256-iFWH8gpR2U3KGPyb/xEkZULAF/t6xFmpaTu6o8pnsZk=",
-      "type": "url",
-      "url": "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@0.34.0/kimi-code-linux-x64.zip"
-    },
-    "version": "0.34.0"
   },
   "komari": {
     "cargoLock": null,
@@ -1107,47 +966,6 @@
       "type": "github"
     },
     "version": "v1.3.5"
-  },
-  "mihomo-to-uri": {
-    "cargoLock": null,
-    "date": "2026-05-19",
-    "extract": null,
-    "name": "mihomo-to-uri",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "rev": "ce092a6b93a191873c4c63beb694654ac38b5e96",
-      "sha256": "sha256-+tx2CBZ+ipqUrUoAMsmdj/QpLabSFlcwy4rKsQ8rTio=",
-      "sparseCheckout": [],
-      "type": "git",
-      "url": "https://github.com/p3psi-boo/mihomo-to-uri.git"
-    },
-    "version": "ce092a6b93a191873c4c63beb694654ac38b5e96"
-  },
-  "multica-cli": {
-    "cargoLock": null,
-    "date": null,
-    "extract": null,
-    "name": "multica-cli",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": false,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "multica-ai",
-      "repo": "multica",
-      "rev": "v0.4.21",
-      "sha256": "sha256-DQr5Gjl4VURuEJZdkJxqgbA3eE2OoqRZrtU6Qap6OIU=",
-      "sparseCheckout": [],
-      "type": "github"
-    },
-    "version": "v0.4.21"
   },
   "n9router": {
     "cargoLock": null,
