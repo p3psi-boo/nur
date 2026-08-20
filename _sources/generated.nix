@@ -371,20 +371,6 @@
     };
     date = "2026-04-12";
   };
-  gemma-cpp = {
-    pname = "gemma-cpp";
-    version = "e93b7c56f0d6f3714250482b6a91a027350d0f78";
-    src = fetchgit {
-      url = "https://github.com/test1111111111111112/llama-cpp-turboquant-gemma4.git";
-      rev = "e93b7c56f0d6f3714250482b6a91a027350d0f78";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-ykzroJr8zXnLe6Wq279/+ltTxbeSEvcbTufz2EyqYqQ=";
-    };
-    date = "2026-04-04";
-  };
   grdpwasm = {
     pname = "grdpwasm";
     version = "a9e7e92050f3f5fd3a957bc70c2458723ea3744a";

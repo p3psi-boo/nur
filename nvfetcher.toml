@@ -392,12 +392,6 @@ fetch.git = "https://github.com/zboralski/ida-headless-mcp.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
-# gemma-cpp - llama.cpp fork with TurboQuant for Gemma 4 (CUDA only, sm_86)
-[gemma-cpp]
-src.git = "https://github.com/test1111111111111112/llama-cpp-turboquant-gemma4.git"
-fetch.git = "https://github.com/test1111111111111112/llama-cpp-turboquant-gemma4.git"
-git.fetch_submodules = true
-git.get_commit_date = true
 
 # vibevoice-cpp - C++ inference engine for Microsoft VibeVoice
 [vibevoice-cpp]
