@@ -52,15 +52,6 @@ let
     env = {
       CGO_ENABLED = "1";
       GOFLAGS = "-trimpath";
-      GOPROXY = "https://goproxy.cn";
-      GOSUMDB = "off";
-    };
-
-    overrideModAttrs = old: {
-      preBuild = ''
-        export GOPROXY="https://goproxy.cn"
-        export GOSUMDB="off"
-      '';
     };
 
     preBuild = ''

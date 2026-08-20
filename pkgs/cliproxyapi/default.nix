@@ -19,9 +19,6 @@ buildGoModule {
     CGO_ENABLED = "0";
     GOFLAGS = "-trimpath";
     GOAMD64 = "v3";
-    # 使用公共 Go 代理镜像，避免 Google proxy 的 abuse/rate-limit
-    GOPROXY = "https://goproxy.cn";
-    GOSUMDB = "sum.golang.google.cn";
   };
 
   ldflags = [
@@ -34,8 +31,6 @@ buildGoModule {
 
   overrideModAttrs = old: {
     preBuild = ''
-      export GOPROXY="https://goproxy.cn"
-      export GOSUMDB="off"
       # Remove test file that imports v6 of this module (circular test dependency not in go.mod)
       rm -f sdk/cliproxy/auth/request_auth_prepare_test.go
     '';

@@ -39,32 +39,6 @@ let
     name: entries.${name} == "directory" && builtins.pathExists (pkgsDir + "/${name}/default.nix")
   ) (builtins.attrNames entries);
 
-  # proxy.golang.org is often unreachable from CN; force goproxy.cn for NUR Go builds.
-  # GOPROXY is in go-modules impureEnvVars and gets cleared by nix, so also export in preBuild.
-  # buildGoModule accepts either an attrset or (finalAttrs: attrset).
-  withGoProxyAttrs = args: args // {
-    env = (args.env or { }) // { GOPROXY = "https://goproxy.cn,direct"; };
-    preBuild =
-      (args.preBuild or "")
-      + "\nexport GOPROXY=https://goproxy.cn,direct\n";
-  };
-  withGoProxy =
-    args:
-    if builtins.isFunction args then
-      (finalAttrs: withGoProxyAttrs (args finalAttrs))
-    else
-      withGoProxyAttrs args;
-  nurPrev = prev // {
-    buildGoModule =
-      let
-        orig = prev.buildGoModule;
-      in
-      (builtins.removeAttrs orig [ "__functor" ])
-      // {
-        __functor = self: args: orig (withGoProxy args);
-      };
-  };
-
   inherit (inputs) uv2nix pyproject-nix pyproject-build-systems;
   pythonUvOverlay = {
     uv2nix-lib = uv2nix.lib.override { pkgs = prev; };
@@ -77,7 +51,7 @@ let
   repoOverlay = lib.listToAttrs (
     map (pkgName: {
       name = pkgName;
-      value = (lib.callPackageWith (nurPrev // pythonUvOverlay)) (pkgsDir + "/${pkgName}") (extraArgsFor pkgName);
+      value = (lib.callPackageWith (prev // pythonUvOverlay)) (pkgsDir + "/${pkgName}") (extraArgsFor pkgName);
     }) publicPackageNames
   );
 
