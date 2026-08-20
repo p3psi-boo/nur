@@ -16,7 +16,7 @@ let
 
   # CUDA-only build target. Pin kernels to RTX 30 series (Ampere, sm_86) for
   # reproducible binaries, consistent with other CUDA packages in this repo
-  # (gemma-cpp, llama-cpp-turboquant, lucebox-hub).
+  # (e.g. gemma-cpp).
   cudaArchitecture = "86";
 
   # cudarc / candle-kernels' build scripts (via bindgen_cuda) probe a single

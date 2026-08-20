@@ -288,12 +288,6 @@ fetch.git = "https://github.com/komari-monitor/komari-web.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
-[komari-monitor-rs]
-src.git = "https://github.com/p3psi-boo/komari-monitor-rs.git"
-fetch.git = "https://github.com/p3psi-boo/komari-monitor-rs.git"
-git.fetch_submodules = false
-git.get_commit_date = true
-
 [komari-agent-zig]
 src.git = "https://github.com/luodaoyi/komari-zig-agent.git"
 fetch.git = "https://github.com/luodaoyi/komari-zig-agent.git"
@@ -398,14 +392,6 @@ fetch.git = "https://github.com/zboralski/ida-headless-mcp.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
-# llama-cpp-turboquant - llama.cpp fork with TurboQuant (CUDA only, sm_86)
-[llama-cpp-turboquant]
-src.git = "https://github.com/johndpope/llama-cpp-turboquant.git"
-src.branch = "feature/planarquant-kv-cache"
-fetch.git = "https://github.com/johndpope/llama-cpp-turboquant.git"
-git.fetch_submodules = true
-git.get_commit_date = true
-
 # gemma-cpp - llama.cpp fork with TurboQuant for Gemma 4 (CUDA only, sm_86)
 [gemma-cpp]
 src.git = "https://github.com/test1111111111111112/llama-cpp-turboquant-gemma4.git"
@@ -458,18 +444,6 @@ git.get_commit_date = true
 [harlequin-mysql]
 src.github = "tconbeer/harlequin-mysql"
 fetch.github = "tconbeer/harlequin-mysql"
-
-# mlx-optiq - Mixed-precision quantization optimizer for Apple Silicon MLX
-[mlx-optiq]
-src.manual = "0.2.4"
-fetch.url = "https://files.pythonhosted.org/packages/source/m/mlx-optiq/mlx_optiq-$ver.tar.gz"
-
-# lucebox-hub - CUDA-first local LLM inference experiments; package the dflash runtime and helpers
-[lucebox-hub]
-src.git = "https://github.com/Luce-Org/lucebox-hub.git"
-fetch.git = "https://github.com/Luce-Org/lucebox-hub.git"
-git.fetch_submodules = true
-git.get_commit_date = true
 
 # trusttunnel - Modern, fast and obfuscated VPN protocol endpoint
 [trusttunnel]

@@ -990,26 +990,6 @@
         },
         "version": "41555ce88a322dbaab229e81120a7bb130d230ea"
     },
-    "komari-monitor-rs": {
-        "cargoLock": null,
-        "date": "2026-05-26",
-        "extract": null,
-        "name": "komari-monitor-rs",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "a17a8b2ee5404f769ab28e7079f1b41b4be1cb12",
-            "sha256": "sha256-Bbh0vfAUKS8sf2JR+8N8UmtiL6oQ1VSzAkDNRPrRD0g=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/p3psi-boo/komari-monitor-rs.git"
-        },
-        "version": "a17a8b2ee5404f769ab28e7079f1b41b4be1cb12"
-    },
     "komari-web": {
         "cargoLock": null,
         "date": "2026-08-06",
@@ -1071,26 +1051,6 @@
         },
         "version": "1.27.0"
     },
-    "llama-cpp-turboquant": {
-        "cargoLock": null,
-        "date": "2026-05-08",
-        "extract": null,
-        "name": "llama-cpp-turboquant",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "08e025c06ab521e4fa9e5c08b80af57614543e53",
-            "sha256": "sha256-Ve6ddo4JvFX8T5o/iGpKlm5Sa5OKJ/CyrY3MZuMdgC0=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/johndpope/llama-cpp-turboquant.git"
-        },
-        "version": "08e025c06ab521e4fa9e5c08b80af57614543e53"
-    },
     "lotspeed": {
         "cargoLock": null,
         "date": "2026-06-18",
@@ -1110,26 +1070,6 @@
             "url": "https://github.com/uk0/lotspeed.git"
         },
         "version": "df78e23472f2d291ee41cca2d308f67d5828fb22"
-    },
-    "lucebox-hub": {
-        "cargoLock": null,
-        "date": "2026-08-09",
-        "extract": null,
-        "name": "lucebox-hub",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "b8c3a0dfa9317b358f2a51ff7abb41e60f23b82d",
-            "sha256": "sha256-004UZxEvBVgVvt7m4+kRnpovgtkpvN1fYg7OsUu2tSg=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/Luce-Org/lucebox-hub.git"
-        },
-        "version": "b8c3a0dfa9317b358f2a51ff7abb41e60f23b82d"
     },
     "magiskboot-bin": {
         "cargoLock": null,
@@ -1207,21 +1147,6 @@
             "url": "https://github.com/p3psi-boo/mihomo-to-uri.git"
         },
         "version": "ce092a6b93a191873c4c63beb694654ac38b5e96"
-    },
-    "mlx-optiq": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "mlx-optiq",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-3XUYB71Aqqr3jtoiVG3eDsQis7OhC2J8eka18edrnQ0=",
-            "type": "url",
-            "url": "https://files.pythonhosted.org/packages/source/m/mlx-optiq/mlx_optiq-0.2.4.tar.gz"
-        },
-        "version": "0.2.4"
     },
     "multica-cli": {
         "cargoLock": null,

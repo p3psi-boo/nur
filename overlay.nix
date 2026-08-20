@@ -105,9 +105,6 @@ let
   # Python 包（legacy）
   pythonPackagesOverlay = import ./python-packages final prev;
 
-  # AOCC 编译器
-  aoccOverlay = import ./nix/overlays/aocc.nix final prev;
-
   harlequinOverlay =
     let
       inherit (generatedSources) harlequin-mysql;
@@ -141,4 +138,4 @@ let
     };
 in
 
-repoOverlay // pythonUvOverlay // pythonPackagesOverlay // aoccOverlay // harlequinOverlay
+repoOverlay // pythonUvOverlay // pythonPackagesOverlay // harlequinOverlay

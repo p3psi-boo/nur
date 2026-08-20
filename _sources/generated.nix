@@ -607,22 +607,7 @@
       sha256 = "sha256-VJmH4lR6XrlD00EJvJEts8ShEBMQ6LWrqeHeJkymbco=";
     };
     date = "2026-08-11";
-  };
-  komari-monitor-rs = {
-    pname = "komari-monitor-rs";
-    version = "a17a8b2ee5404f769ab28e7079f1b41b4be1cb12";
-    src = fetchgit {
-      url = "https://github.com/p3psi-boo/komari-monitor-rs.git";
-      rev = "a17a8b2ee5404f769ab28e7079f1b41b4be1cb12";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-Bbh0vfAUKS8sf2JR+8N8UmtiL6oQ1VSzAkDNRPrRD0g=";
-    };
-    date = "2026-05-26";
-  };
-  komari-web = {
+  };  komari-web = {
     pname = "komari-web";
     version = "f625b348b339fcb9f699bf7b5028d6678cfc0ab9";
     src = fetchgit {
@@ -660,22 +645,7 @@
       fetchSubmodules = false;
       sha256 = "sha256-jaubn5szSZv0O6+19isxI1iCm9T5qiIp56tekA3/26A=";
     };
-  };
-  llama-cpp-turboquant = {
-    pname = "llama-cpp-turboquant";
-    version = "08e025c06ab521e4fa9e5c08b80af57614543e53";
-    src = fetchgit {
-      url = "https://github.com/johndpope/llama-cpp-turboquant.git";
-      rev = "08e025c06ab521e4fa9e5c08b80af57614543e53";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-Ve6ddo4JvFX8T5o/iGpKlm5Sa5OKJ/CyrY3MZuMdgC0=";
-    };
-    date = "2026-05-08";
-  };
-  lotspeed = {
+  };  lotspeed = {
     pname = "lotspeed";
     version = "df78e23472f2d291ee41cca2d308f67d5828fb22";
     src = fetchgit {
@@ -688,22 +658,7 @@
       sha256 = "sha256-br29pDUjrNCS2BL+u3ZTixyYR3iKj6fn8WvQQE+T63Y=";
     };
     date = "2026-06-18";
-  };
-  lucebox-hub = {
-    pname = "lucebox-hub";
-    version = "b8c3a0dfa9317b358f2a51ff7abb41e60f23b82d";
-    src = fetchgit {
-      url = "https://github.com/Luce-Org/lucebox-hub.git";
-      rev = "b8c3a0dfa9317b358f2a51ff7abb41e60f23b82d";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-004UZxEvBVgVvt7m4+kRnpovgtkpvN1fYg7OsUu2tSg=";
-    };
-    date = "2026-08-09";
-  };
-  magiskboot-bin = {
+  };  magiskboot-bin = {
     pname = "magiskboot-bin";
     version = "v30.7";
     src = fetchurl {
@@ -746,16 +701,7 @@
       sha256 = "sha256-+tx2CBZ+ipqUrUoAMsmdj/QpLabSFlcwy4rKsQ8rTio=";
     };
     date = "2026-05-19";
-  };
-  mlx-optiq = {
-    pname = "mlx-optiq";
-    version = "0.2.4";
-    src = fetchurl {
-      url = "https://files.pythonhosted.org/packages/source/m/mlx-optiq/mlx_optiq-0.2.4.tar.gz";
-      sha256 = "sha256-3XUYB71Aqqr3jtoiVG3eDsQis7OhC2J8eka18edrnQ0=";
-    };
-  };
-  multica-cli = {
+  };  multica-cli = {
     pname = "multica-cli";
     version = "v0.4.21";
     src = fetchFromGitHub {
