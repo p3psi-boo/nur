@@ -42,7 +42,12 @@ EOF
 
   postInstall = ''
     wrapProgram $out/bin/lotspeedctl \
-      --prefix PATH : ${lib.makeBinPath [ iproute2 iputils ]}
+      --prefix PATH : ${
+        lib.makeBinPath [
+          iproute2
+          iputils
+        ]
+      }
   '';
 
   meta = {
