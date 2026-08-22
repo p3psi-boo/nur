@@ -366,14 +366,17 @@
   };
   selector4nix = {
     pname = "selector4nix";
-    version = "v0.9.1";
-    src = fetchFromGitHub {
-      owner = "StarryReverie";
-      repo = "selector4nix";
-      rev = "v0.9.1";
+    version = "d84897760620d8c593ae52c94c0774936afcf3aa";
+    src = fetchgit {
+      url = "https://github.com/p3psi-boo/selector4nix.git";
+      rev = "d84897760620d8c593ae52c94c0774936afcf3aa";
       fetchSubmodules = false;
-      sha256 = "sha256-iuXk5BqDh50intHbsVR7+VDzKz+YZq+2L8bLXtNFnJY=";
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-5rOTEmlYuyP2x6YGjJNleUML+FD15iFJvCMRePyNhuk=";
     };
+    date = "2026-08-22";
   };
   sofixer = {
     pname = "sofixer";

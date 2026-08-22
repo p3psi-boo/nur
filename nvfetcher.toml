@@ -149,8 +149,9 @@ src.manual = "146.0.7680.177.5"
 fetch.url = "https://cloakbrowser.dev/chromium-v$ver/cloakbrowser-linux-x64.tar.gz"
 
 [selector4nix]
-src.github_tag = "StarryReverie/selector4nix"
-fetch.github = "StarryReverie/selector4nix"
+src.git = "https://github.com/p3psi-boo/selector4nix.git"
+fetch.git = "https://github.com/p3psi-boo/selector4nix.git"
+src.branch = "master"
 
 # piko - A small segmented downloader for CLI and Go programs
 [piko]
