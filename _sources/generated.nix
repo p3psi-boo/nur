@@ -19,13 +19,13 @@
   };
   cliproxyapi = {
     pname = "cliproxyapi";
-    version = "v7.2.137";
+    version = "v7.2.140";
     src = fetchFromGitHub {
       owner = "router-for-me";
       repo = "CLIProxyAPI";
-      rev = "v7.2.137";
+      rev = "v7.2.140";
       fetchSubmodules = false;
-      sha256 = "sha256-8YipHopQcbr+mw8c34o8EArgzDJtIXu88fF6PBlGGyU=";
+      sha256 = "sha256-XM5pW3a0Y1oYPVk1DjHTs0zBV7N+Hnw5lYMlORNypkQ=";
     };
   };
   cloakbrowser = {
@@ -171,17 +171,17 @@
   };
   ironet = {
     pname = "ironet";
-    version = "de1046b7e2edd10e62aae13cca5320db263c68a4";
+    version = "0497d199fe83a2e30a14d1fe32a71038eb41a818";
     src = fetchgit {
       url = "https://github.com/p3psi-boo/ironet.git";
-      rev = "de1046b7e2edd10e62aae13cca5320db263c68a4";
+      rev = "0497d199fe83a2e30a14d1fe32a71038eb41a818";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-NQtILz4e92ED7A9DoqE+S6lGbsXXa8GPvdp3ujUqfKE=";
+      sha256 = "sha256-yI7m4nqZIM3qxLd2Lx4T08ckoYyAJBZ6MpOFBD1BVv8=";
     };
-    date = "2026-08-17";
+    date = "2026-08-22";
   };
   komari = {
     pname = "komari";
@@ -366,15 +366,15 @@
   };
   selector4nix = {
     pname = "selector4nix";
-    version = "d84897760620d8c593ae52c94c0774936afcf3aa";
+    version = "3f5e7a14abb7d3d8cb7650a430b608edd9f8430f";
     src = fetchgit {
       url = "https://github.com/p3psi-boo/selector4nix.git";
-      rev = "d84897760620d8c593ae52c94c0774936afcf3aa";
+      rev = "3f5e7a14abb7d3d8cb7650a430b608edd9f8430f";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-5rOTEmlYuyP2x6YGjJNleUML+FD15iFJvCMRePyNhuk=";
+      sha256 = "sha256-IXgELGntpHSiw1Mcz1POkXuLen0f71wH62GPmBDDwGg=";
     };
     date = "2026-08-22";
   };
@@ -472,17 +472,17 @@
   };
   wikiteam3 = {
     pname = "wikiteam3";
-    version = "f574df29889b0ee03c7ca65acb6fa8395992f51c";
+    version = "66b0df8031d96e363e7ebff9b060c832d9c57c48";
     src = fetchgit {
       url = "https://github.com/saveweb/wikiteam3.git";
-      rev = "f574df29889b0ee03c7ca65acb6fa8395992f51c";
+      rev = "66b0df8031d96e363e7ebff9b060c832d9c57c48";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-YoE4L4vf9RZses4ytqnJsOFnpCgn1qMWlHJUWMHOJvc=";
+      sha256 = "sha256-sBacccf5xWl1CO8ymcS6Dy84pO1ELENqXl/fWV5PORk=";
     };
-    date = "2026-08-11";
+    date = "2026-08-21";
   };
   wxmp_searxng = {
     pname = "wxmp_searxng";
