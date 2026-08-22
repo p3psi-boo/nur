@@ -1,4 +1,4 @@
-# NUR overlay entrypoint: repo packages, Python UV toolchain, harlequin-mysql.
+# NUR overlay entrypoint: repo packages, Python UV toolchain.
 
 { inputs }:
 
@@ -55,35 +55,6 @@ let
     }) publicPackageNames
   );
 
-  harlequinOverlay =
-    let
-      inherit (generatedSources) harlequin-mysql;
-      harlequin-mysql-pkg = prev.python3Packages.buildPythonPackage {
-        pname = "harlequin-mysql";
-        version = prev.lib.removePrefix "v" harlequin-mysql.version;
-        inherit (harlequin-mysql) src;
-        pyproject = true;
-        build-system = [ prev.python3Packages.hatchling ];
-        dependencies = [
-          prev.python3Packages.mysql-connector
-        ]
-        ++ prev.lib.optional (prev.python3Packages.pythonAtLeast "3.14") prev.python3Packages.duckdb;
-        doCheck = false;
-        # nixpkgs mysql-connector-python is 26.x while upstream still constrains <10.
-        dontCheckRuntimeDeps = true;
-        pythonRemoveDeps = [ "harlequin" ];
-        meta = {
-          description = "Harlequin adapter for MySQL/MariaDB";
-          homepage = "https://github.com/tconbeer/harlequin-mysql";
-          license = prev.lib.licenses.mit;
-        };
-      };
-    in
-    {
-      harlequin = prev.harlequin.overridePythonAttrs (oldAttrs: {
-        dependencies = (oldAttrs.dependencies or [ ]) ++ [ harlequin-mysql-pkg ];
-      });
-    };
 in
 
-repoOverlay // pythonUvOverlay // harlequinOverlay
+repoOverlay // pythonUvOverlay

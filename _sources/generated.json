@@ -238,27 +238,6 @@
         },
         "version": "ef7fb4f224062be15ab8745389a5c13ab4dc846b"
     },
-    "harlequin-mysql": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "harlequin-mysql",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "tconbeer",
-            "repo": "harlequin-mysql",
-            "rev": "v1.3.1",
-            "sha256": "sha256-haY8LTzcXm7+peKl9rzv1AE8jktBUsK2S6R0vzXHmTQ=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "v1.3.1"
-    },
     "ironet": {
         "cargoLock": null,
         "date": "2026-08-22",

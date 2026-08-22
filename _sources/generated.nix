@@ -158,17 +158,6 @@
     };
     date = "2026-07-09";
   };
-  harlequin-mysql = {
-    pname = "harlequin-mysql";
-    version = "v1.3.1";
-    src = fetchFromGitHub {
-      owner = "tconbeer";
-      repo = "harlequin-mysql";
-      rev = "v1.3.1";
-      fetchSubmodules = false;
-      sha256 = "sha256-haY8LTzcXm7+peKl9rzv1AE8jktBUsK2S6R0vzXHmTQ=";
-    };
-  };
   ironet = {
     pname = "ironet";
     version = "0497d199fe83a2e30a14d1fe32a71038eb41a818";

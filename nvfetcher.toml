@@ -131,11 +131,6 @@ fetch.git = "https://github.com/p3psi-boo/CookieCloud.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
-# harlequin-mysql - MySQL adapter for Harlequin SQL IDE
-[harlequin-mysql]
-src.github = "tconbeer/harlequin-mysql"
-fetch.github = "tconbeer/harlequin-mysql"
-
 # subs-check - High-performance proxy subscription checker
 [subs-check]
 src.git = "https://github.com/p3psi-boo/subs-check.git"
