@@ -26,13 +26,6 @@ src.branch = "main"
 fetch.github = "p3psi-boo/cmcc-ec-keepalive"
 git.get_commit_date = true
 
-# eCloud Cloud PC account and desktop session keepalive tool
-[ecloud-cloudpc-keepalive]
-src.git = "https://github.com/p3psi-boo/ecloud-cloudpc-keepalive.git"
-src.branch = "main"
-fetch.github = "p3psi-boo/ecloud-cloudpc-keepalive"
-git.get_commit_date = true
-
 [searxng-baidu-qianfan-bridge]
 src.git = "https://github.com/p3psi-boo/searxng-baidu-qianfan-bridge.git"
 fetch.git = "https://github.com/p3psi-boo/searxng-baidu-qianfan-bridge.git"
