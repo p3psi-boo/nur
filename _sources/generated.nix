@@ -343,17 +343,17 @@
   };
   selector4nix = {
     pname = "selector4nix";
-    version = "3f5e7a14abb7d3d8cb7650a430b608edd9f8430f";
+    version = "7c97c3b801473649155ea58e2c388df0582859fb";
     src = fetchgit {
       url = "https://github.com/p3psi-boo/selector4nix.git";
-      rev = "3f5e7a14abb7d3d8cb7650a430b608edd9f8430f";
+      rev = "7c97c3b801473649155ea58e2c388df0582859fb";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-IXgELGntpHSiw1Mcz1POkXuLen0f71wH62GPmBDDwGg=";
+      sha256 = "sha256-h3znoIrVNHhGibpFv9HmuRbGEXLTRgagmgcYWAJrDEM=";
     };
-    date = "2026-08-22";
+    date = "2026-08-25";
   };
   sofixer = {
     pname = "sofixer";
