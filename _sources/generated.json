@@ -1,4 +1,25 @@
 {
+    "agentreach": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "agentreach",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "bojieli",
+            "repo": "agentreach",
+            "rev": "v0.4.0",
+            "sha256": "sha256-oSj0q7dDq0aXAUQqoiZF3ENXS7uo8F7s/cjFHuJGvGA=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.4.0"
+    },
     "celld": {
         "cargoLock": null,
         "date": null,

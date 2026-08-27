@@ -95,6 +95,11 @@ fetch.git = "https://github.com/p3psi-boo/coe.git"
 git.fetch_submodules = false
 git.get_commit_date = true
 
+[agentreach]
+src.github_tag = "bojieli/agentreach"
+src.include_regex = "^v[0-9].*"
+fetch.github = "bojieli/agentreach"
+
 [grok2api]
 src.git = "https://github.com/jiujiu532/grok2api.git"
 fetch.git = "https://github.com/jiujiu532/grok2api.git"

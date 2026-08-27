@@ -6,6 +6,17 @@
   dockerTools,
 }:
 {
+  agentreach = {
+    pname = "agentreach";
+    version = "v0.4.0";
+    src = fetchFromGitHub {
+      owner = "bojieli";
+      repo = "agentreach";
+      rev = "v0.4.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-oSj0q7dDq0aXAUQqoiZF3ENXS7uo8F7s/cjFHuJGvGA=";
+    };
+  };
   celld = {
     pname = "celld";
     version = "v0.3.0";
