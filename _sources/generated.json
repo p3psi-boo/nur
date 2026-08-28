@@ -698,26 +698,6 @@
         },
         "version": "6f8bc6ff7b0f644f939a4a2f1d8a748b74174473"
     },
-    "webp-server-go": {
-        "cargoLock": null,
-        "date": "2026-08-27",
-        "extract": null,
-        "name": "webp-server-go",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "ec00fd113c1c5a366e6cd937f2bbf0591900bb1d",
-            "sha256": "sha256-ygk9mWJdoUvV4cy29IH4jFK2wO1nH+V/ZovSlzP2wqQ=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/webp-sh/webp_server_go.git"
-        },
-        "version": "ec00fd113c1c5a366e6cd937f2bbf0591900bb1d"
-    },
     "wikiteam3": {
         "cargoLock": null,
         "date": "2026-08-21",
