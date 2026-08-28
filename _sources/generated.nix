@@ -458,6 +458,20 @@
     };
     date = "2026-08-06";
   };
+  webp-server-go = {
+    pname = "webp-server-go";
+    version = "ec00fd113c1c5a366e6cd937f2bbf0591900bb1d";
+    src = fetchgit {
+      url = "https://github.com/webp-sh/webp_server_go.git";
+      rev = "ec00fd113c1c5a366e6cd937f2bbf0591900bb1d";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-ygk9mWJdoUvV4cy29IH4jFK2wO1nH+V/ZovSlzP2wqQ=";
+    };
+    date = "2026-08-27";
+  };
   wikiteam3 = {
     pname = "wikiteam3";
     version = "66b0df8031d96e363e7ebff9b060c832d9c57c48";
