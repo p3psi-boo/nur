@@ -538,7 +538,7 @@
     },
     "selector4nix": {
         "cargoLock": null,
-        "date": "2026-08-25",
+        "date": "2026-08-29",
         "extract": null,
         "name": "selector4nix",
         "passthru": null,
@@ -548,13 +548,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "7c97c3b801473649155ea58e2c388df0582859fb",
-            "sha256": "sha256-h3znoIrVNHhGibpFv9HmuRbGEXLTRgagmgcYWAJrDEM=",
+            "rev": "0416addebc4d2379e06c127e2beaebf8d780577f",
+            "sha256": "sha256-9LE6MnRMzMuxdAYpcqYqIt+p/debkTzl0y1vuxoVyUQ=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/p3psi-boo/selector4nix.git"
         },
-        "version": "7c97c3b801473649155ea58e2c388df0582859fb"
+        "version": "0416addebc4d2379e06c127e2beaebf8d780577f"
     },
     "sofixer": {
         "cargoLock": null,
