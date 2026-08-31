@@ -1,7 +1,6 @@
 {
   lib,
   buildLinux,
-  kernelPatches,
   generated,
   ...
 }@args:
@@ -15,10 +14,6 @@ buildLinux (
     inherit (source) src version;
 
     modDirVersion = lib.versions.pad 3 source.version;
-    kernelPatches = [
-      kernelPatches.bridge_stp_helper
-      kernelPatches.request_key_helper
-    ];
 
     extraMeta.branch = "7.3";
   }
