@@ -15,7 +15,7 @@ python3.pkgs.buildPythonPackage {
   pyproject = true;
 
   build-system = with python3.pkgs; [
-    pdm-backend
+    uv-build
   ];
 
   dependencies = with python3.pkgs; [
