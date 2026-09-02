@@ -77,6 +77,26 @@
         },
         "version": "146.0.7680.177.5"
     },
+    "cloakbrowser-manager": {
+        "cargoLock": null,
+        "date": "2026-08-30",
+        "extract": null,
+        "name": "cloakbrowser-manager",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "8c7e3649fe30c3d2c8cd266a52e407a2d0a3c22c",
+            "sha256": "sha256-IeeGIRH8xyij5Q0w9pWLZJWgMo0OuT4vWc+YR2XZk9Y=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/CloakHQ/CloakBrowser-Manager.git"
+        },
+        "version": "8c7e3649fe30c3d2c8cd266a52e407a2d0a3c22c"
+    },
     "cmcc-ec-keepalive": {
         "cargoLock": null,
         "date": "2026-08-20",

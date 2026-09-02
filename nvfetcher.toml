@@ -148,6 +148,13 @@ git.get_commit_date = true
 src.manual = "146.0.7680.177.5"
 fetch.url = "https://cloakbrowser.dev/chromium-v$ver/cloakbrowser-linux-x64.tar.gz"
 
+# CloakBrowser Manager - web UI for the CloakBrowser profile runtime
+[cloakbrowser-manager]
+src.git = "https://github.com/CloakHQ/CloakBrowser-Manager.git"
+fetch.git = "https://github.com/CloakHQ/CloakBrowser-Manager.git"
+git.fetch_submodules = false
+git.get_commit_date = true
+
 [selector4nix]
 src.git = "https://github.com/p3psi-boo/selector4nix.git"
 fetch.git = "https://github.com/p3psi-boo/selector4nix.git"
