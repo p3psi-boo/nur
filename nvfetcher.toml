@@ -60,6 +60,13 @@ src.git = "https://github.com/p3psi-boo/lazyssh.git"
 fetch.git = "https://github.com/p3psi-boo/lazyssh.git"
 git.fetch_submodules = false
 
+# sing-box-tui - Terminal UI for sing-box management APIs
+[sing-box-tui]
+src.git = "https://github.com/p3psi-boo/sing-box-tui.git"
+fetch.git = "https://github.com/p3psi-boo/sing-box-tui.git"
+git.fetch_submodules = false
+git.get_commit_date = true
+
 [octopus-api]
 src.git = "https://github.com/p3psi-boo/octopus.git"
 fetch.git = "https://github.com/p3psi-boo/octopus.git"
