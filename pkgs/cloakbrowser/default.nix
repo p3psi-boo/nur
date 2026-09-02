@@ -169,8 +169,6 @@ stdenvNoCC.mkDerivation {
     ln -s cloakbrowser-chrome "$out/bin/cloakbrowser"
   '';
 
-  passthru.runtimeLibraries = runtimeLibraries;
-
   meta = {
     description = "Official CloakBrowser patched Chromium binary";
     homepage = "https://github.com/CloakHQ/CloakBrowser";

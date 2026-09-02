@@ -47,20 +47,6 @@
       sha256 = "sha256-ShK83pX6G7G+7ytBq15cJ8Nr544749DayMZNcFIWZw4=";
     };
   };
-  cloakbrowser-manager = {
-    pname = "cloakbrowser-manager";
-    version = "8c7e3649fe30c3d2c8cd266a52e407a2d0a3c22c";
-    src = fetchgit {
-      url = "https://github.com/CloakHQ/CloakBrowser-Manager.git";
-      rev = "8c7e3649fe30c3d2c8cd266a52e407a2d0a3c22c";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-IeeGIRH8xyij5Q0w9pWLZJWgMo0OuT4vWc+YR2XZk9Y=";
-    };
-    date = "2026-08-30";
-  };
   cmcc-ec-keepalive = {
     pname = "cmcc-ec-keepalive";
     version = "dae23c54a6eb1057c4a016914347f0abdd6fd163";
