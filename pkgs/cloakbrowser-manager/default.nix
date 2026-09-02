@@ -81,7 +81,9 @@ stdenvNoCC.mkDerivation {
     substituteInPlace backend/vnc_manager.py \
       --replace-fail 'import logging' $'import logging\nimport os' \
       --replace-fail 'httpd_dir = "/usr/share/kasmvnc/www"' \
-        'httpd_dir = os.environ.get("KASMVNC_WEB_ROOT", "/usr/share/kasmvnc/www")'
+        'httpd_dir = os.environ.get("KASMVNC_WEB_ROOT", "/usr/share/kasmvnc/www")' \
+      --replace-fail '["pkill", "-f", r"Xvnc :[0-9]"],' \
+        '["pkill", "-f", r"Xvnc :[1-9][0-9][0-9]($| )"],'
   '';
 
   installPhase = ''
