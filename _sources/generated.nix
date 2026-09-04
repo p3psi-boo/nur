@@ -101,6 +101,17 @@
     };
     date = "2026-04-14";
   };
+  couic = {
+    pname = "couic";
+    version = "v1.0.2";
+    src = fetchFromGitHub {
+      owner = "FCSC-FR";
+      repo = "couic";
+      rev = "v1.0.2";
+      fetchSubmodules = false;
+      sha256 = "sha256-84mMlLC/zEg4rYJ1Ag3PHmj4LZ0CNI5QCq4Uc9A1IMk=";
+    };
+  };
   einat = {
     pname = "einat";
     version = "30e6af3740e279efb254568c0ec1ad54c0cccd35";

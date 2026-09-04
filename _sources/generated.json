@@ -158,6 +158,27 @@
         },
         "version": "f8a023f42951c8ba97261d3b16e3a4ff53c91f4a"
     },
+    "couic": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "couic",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "FCSC-FR",
+            "repo": "couic",
+            "rev": "v1.0.2",
+            "sha256": "sha256-84mMlLC/zEg4rYJ1Ag3PHmj4LZ0CNI5QCq4Uc9A1IMk=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.0.2"
+    },
     "einat": {
         "cargoLock": null,
         "date": "2026-06-27",
