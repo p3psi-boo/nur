@@ -252,6 +252,17 @@
     };
     date = "2026-06-18";
   };
+  mebox = {
+    pname = "mebox";
+    version = "mebox-v0.1.17";
+    src = fetchFromGitHub {
+      owner = "truewhile";
+      repo = "MeBox";
+      rev = "mebox-v0.1.17";
+      fetchSubmodules = false;
+      sha256 = "sha256-226aOERdzqLKGbb9fjIwg5frl33EtatU2043hhecAvo=";
+    };
+  };
   micyou = {
     pname = "micyou";
     version = "v2.0.1";

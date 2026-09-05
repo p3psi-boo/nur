@@ -379,6 +379,27 @@
         },
         "version": "df78e23472f2d291ee41cca2d308f67d5828fb22"
     },
+    "mebox": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "mebox",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "truewhile",
+            "repo": "MeBox",
+            "rev": "mebox-v0.1.17",
+            "sha256": "sha256-226aOERdzqLKGbb9fjIwg5frl33EtatU2043hhecAvo=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "mebox-v0.1.17"
+    },
     "micyou": {
         "cargoLock": null,
         "date": null,
