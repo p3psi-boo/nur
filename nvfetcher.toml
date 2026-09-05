@@ -214,11 +214,6 @@ src.github_tag = "sipeed/picoclaw"
 src.include_regex = "^v[0-9].*"
 fetch.github = "sipeed/picoclaw"
 
-# Linux 7.3 release candidate requested as a fixed, reproducible kernel source.
-[linux_7_3_rc1]
-src.manual = "7.3-rc1"
-fetch.url = "https://git.kernel.org/torvalds/t/linux-$ver.tar.gz"
-
 # celld - self-hosted, distributed Durable Objects (Cloudflare Workers runtime)
 [celld]
 src.github_tag = "denoland/celld"

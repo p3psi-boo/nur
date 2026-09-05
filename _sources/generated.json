@@ -359,21 +359,6 @@
         },
         "version": "48995806bf1aa1c9c41bb8dff6b5ddd698539311"
     },
-    "linux_7_3_rc1": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "linux_7_3_rc1",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-jTb7/HyJBsz6HrrMMPhJmEBlBMPxNzOgQLs6P76KwnA=",
-            "type": "url",
-            "url": "https://git.kernel.org/torvalds/t/linux-7.3-rc1.tar.gz"
-        },
-        "version": "7.3-rc1"
-    },
     "lotspeed": {
         "cargoLock": null,
         "date": "2026-06-18",

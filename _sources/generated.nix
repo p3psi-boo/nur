@@ -238,14 +238,6 @@
     };
     date = "2025-11-28";
   };
-  linux_7_3_rc1 = {
-    pname = "linux_7_3_rc1";
-    version = "7.3-rc1";
-    src = fetchurl {
-      url = "https://git.kernel.org/torvalds/t/linux-7.3-rc1.tar.gz";
-      sha256 = "sha256-jTb7/HyJBsz6HrrMMPhJmEBlBMPxNzOgQLs6P76KwnA=";
-    };
-  };
   lotspeed = {
     pname = "lotspeed";
     version = "df78e23472f2d291ee41cca2d308f67d5828fb22";
