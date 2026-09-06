@@ -699,6 +699,27 @@
         },
         "version": "956d493be87b928688bd08a87f5851fb8ef0fcba"
     },
+    "taierspeedtest": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "taierspeedtest",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "MiaM1ku",
+            "repo": "taierspeedtest",
+            "rev": "v1.0.3",
+            "sha256": "sha256-jITzS2zDqadmt8XRWVio2u/T9vDrb/AAhNJHTnFVEHw=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v1.0.3"
+    },
     "terminal-use": {
         "cargoLock": null,
         "date": null,

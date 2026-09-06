@@ -231,3 +231,9 @@ fetch.github = "FCSC-FR/couic"
 src.github_tag = "truewhile/MeBox"
 src.include_regex = "^mebox-v[0-9].*"
 fetch.github = "truewhile/MeBox"
+
+# taierspeedtest - 全球网测 / 泰尔测速 Linux 客户端
+[taierspeedtest]
+src.github_tag = "MiaM1ku/taierspeedtest"
+src.include_regex = "^v[0-9].*"
+fetch.github = "MiaM1ku/taierspeedtest"

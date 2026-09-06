@@ -455,6 +455,17 @@
     };
     date = "2026-08-03";
   };
+  taierspeedtest = {
+    pname = "taierspeedtest";
+    version = "v1.0.3";
+    src = fetchFromGitHub {
+      owner = "MiaM1ku";
+      repo = "taierspeedtest";
+      rev = "v1.0.3";
+      fetchSubmodules = false;
+      sha256 = "sha256-jITzS2zDqadmt8XRWVio2u/T9vDrb/AAhNJHTnFVEHw=";
+    };
+  };
   terminal-use = {
     pname = "terminal-use";
     version = "v1.4.1";
