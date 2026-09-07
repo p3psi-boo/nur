@@ -14,7 +14,7 @@ let
     pname = "komari-web";
     version = "0-unstable-${generated.komari-web.date}";
     inherit (generated.komari-web) src;
-    npmDepsHash = "sha256-f7AVozQrWhCmjF1zBo/QqzWJyN+FzaQOXA0NYK5AIEw=";
+    npmDepsHash = "sha256-e9kXBw773ozXFkAnTBzJp6Y2PRi1TTPb6sgTcj/jqs8=";
 
     env.CI = "true";
 

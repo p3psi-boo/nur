@@ -1,10 +1,4 @@
 
-[lotspeed]
-src.git = "https://github.com/uk0/lotspeed.git"
-src.branch = "adaptive-accel"
-fetch.git = "https://github.com/uk0/lotspeed.git"
-git.fetch_submodules = false
-
 [einat]
 src.git = "https://github.com/EHfive/einat-ebpf.git"
 fetch.git = "https://github.com/EHfive/einat-ebpf.git"
@@ -237,3 +231,9 @@ fetch.github = "truewhile/MeBox"
 src.github_tag = "MiaM1ku/taierspeedtest"
 src.include_regex = "^v[0-9].*"
 fetch.github = "MiaM1ku/taierspeedtest"
+
+# ripwire - C++23 CLI + MCP server: ranked repo map for coding agents
+[ripwire]
+src.github_tag = "redhat-et/ripwire"
+src.include_regex = "^v[0-9].*"
+fetch.github = "redhat-et/ripwire"

@@ -21,9 +21,6 @@ buildNpmPackage {
 
   postPatch = ''
     cp ${./package-lock.json} package-lock.json
-
-    # Replace next/font/google with a local stub to avoid network access during build
-    python3 ${./patch-layout.py}
   '';
 
   nativeBuildInputs = [
@@ -38,6 +35,12 @@ buildNpmPackage {
 
   # Skip the automatic npm build; we run it manually to control the process
   dontNpmBuild = true;
+
+  preBuild = ''
+    # Replace next/font/google with a local stub to avoid network access during build.
+    # Kept out of postPatch because the npm-deps FOD has no python3.
+    python3 ${./patch-layout.py}
+  '';
 
   buildPhase = ''
     runHook preBuild
