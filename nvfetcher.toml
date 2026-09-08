@@ -232,6 +232,14 @@ src.github_tag = "MiaM1ku/taierspeedtest"
 src.include_regex = "^v[0-9].*"
 fetch.github = "MiaM1ku/taierspeedtest"
 
+# herdr - agent multiplexer that lives in your terminal (track master)
+[herdr]
+src.git = "https://github.com/herdrdev/herdr.git"
+src.branch = "master"
+fetch.github = "herdrdev/herdr"
+git.fetch_submodules = false
+git.get_commit_date = true
+
 # ripwire - C++23 CLI + MCP server: ranked repo map for coding agents
 [ripwire]
 src.github_tag = "redhat-et/ripwire"

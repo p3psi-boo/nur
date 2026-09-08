@@ -259,6 +259,27 @@
         },
         "version": "ef7fb4f224062be15ab8745389a5c13ab4dc846b"
     },
+    "herdr": {
+        "cargoLock": null,
+        "date": "2026-09-08",
+        "extract": null,
+        "name": "herdr",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "herdrdev",
+            "repo": "herdr",
+            "rev": "9e01168b140ce8e3821131345dc82bc2bf9994eb",
+            "sha256": "sha256-yTmO5EfIS//FPR60oWt0W0lN8rMYSbLTN7jLSLXSJ7o=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "9e01168b140ce8e3821131345dc82bc2bf9994eb"
+    },
     "ironet": {
         "cargoLock": null,
         "date": "2026-09-02",

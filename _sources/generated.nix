@@ -168,6 +168,18 @@
     };
     date = "2026-07-09";
   };
+  herdr = {
+    pname = "herdr";
+    version = "9e01168b140ce8e3821131345dc82bc2bf9994eb";
+    src = fetchFromGitHub {
+      owner = "herdrdev";
+      repo = "herdr";
+      rev = "9e01168b140ce8e3821131345dc82bc2bf9994eb";
+      fetchSubmodules = false;
+      sha256 = "sha256-yTmO5EfIS//FPR60oWt0W0lN8rMYSbLTN7jLSLXSJ7o=";
+    };
+    date = "2026-09-08";
+  };
   ironet = {
     pname = "ironet";
     version = "f9d656b86d31bd56ffc347e58341fffc5490eab5";
