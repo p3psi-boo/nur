@@ -168,8 +168,8 @@
     };
     date = "2026-07-09";
   };
-  herdr = {
-    pname = "herdr";
+  herdr-git = {
+    pname = "herdr-git";
     version = "9e01168b140ce8e3821131345dc82bc2bf9994eb";
     src = fetchFromGitHub {
       owner = "herdrdev";

@@ -259,11 +259,11 @@
         },
         "version": "ef7fb4f224062be15ab8745389a5c13ab4dc846b"
     },
-    "herdr": {
+    "herdr-git": {
         "cargoLock": null,
         "date": "2026-09-08",
         "extract": null,
-        "name": "herdr",
+        "name": "herdr-git",
         "passthru": null,
         "pinned": false,
         "src": {

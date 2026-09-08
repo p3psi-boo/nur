@@ -10,7 +10,7 @@
 }:
 
 let
-  sourceInfo = generated.herdr;
+  sourceInfo = generated.herdr-git;
 in
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "herdr";
