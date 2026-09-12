@@ -526,6 +526,17 @@
     };
     date = "2026-08-06";
   };
+  wallos = {
+    pname = "wallos";
+    version = "v5.7.1";
+    src = fetchFromGitHub {
+      owner = "ellite";
+      repo = "Wallos";
+      rev = "v5.7.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-1XSUkqcCpXtCIeCgmvFLc3YXXfpvMCCY9DD3Ct0aYng=";
+    };
+  };
   wikiteam3 = {
     pname = "wikiteam3";
     version = "66b0df8031d96e363e7ebff9b060c832d9c57c48";

@@ -58,6 +58,8 @@
       overlays.default = import ./overlay.nix { inherit inputs; };
       overlay = self.overlays.default;
 
+      nixosModules.wallos = import ./modules/wallos.nix;
+
       packages = forAllPackageSystems (
         system:
         let
@@ -73,6 +75,9 @@
         system:
         import ./nix/config/ci.nix {
           pkgs = pkgsFor system;
+        }
+        // lib.optionalAttrs (pkgsFor system).stdenv.hostPlatform.isLinux {
+          wallos-module = import ./nix/tests/wallos.nix { pkgs = pkgsFor system; };
         }
       );
 

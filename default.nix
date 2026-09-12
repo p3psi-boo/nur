@@ -8,4 +8,7 @@
   lib ? pkgs.lib,
 }:
 
-lib.filterAttrs (_: v: lib.isDerivation v) (import ./repo.nix { inherit pkgs lib; })
+(lib.filterAttrs (_: v: lib.isDerivation v) (import ./repo.nix { inherit pkgs lib; }))
+// {
+  modules.wallos = ./modules/wallos.nix;
+}

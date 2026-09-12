@@ -824,6 +824,27 @@
         },
         "version": "6f8bc6ff7b0f644f939a4a2f1d8a748b74174473"
     },
+    "wallos": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "wallos",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ellite",
+            "repo": "Wallos",
+            "rev": "v5.7.1",
+            "sha256": "sha256-1XSUkqcCpXtCIeCgmvFLc3YXXfpvMCCY9DD3Ct0aYng=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v5.7.1"
+    },
     "wikiteam3": {
         "cargoLock": null,
         "date": "2026-08-21",

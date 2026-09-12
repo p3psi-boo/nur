@@ -253,3 +253,8 @@ src.branch = "master"
 fetch.github = "openbfdev/sdbd"
 git.fetch_submodules = false
 git.get_commit_date = true
+
+[wallos]
+src.github_tag = "ellite/Wallos"
+src.include_regex = '^v[0-9]+\.[0-9]+\.[0-9]+$'
+fetch.github = "ellite/Wallos"
