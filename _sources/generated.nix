@@ -355,6 +355,18 @@
       sha256 = "sha256-CShX6EcrkzJZ7KBI6YFIvC4dHANQDHy3fqkP4yNCjrY=";
     };
   };
+  sdbd = {
+    pname = "sdbd";
+    version = "0a0a15b694108328be1ede66ee32f6acbd95d3d7";
+    src = fetchFromGitHub {
+      owner = "openbfdev";
+      repo = "sdbd";
+      rev = "0a0a15b694108328be1ede66ee32f6acbd95d3d7";
+      fetchSubmodules = false;
+      sha256 = "sha256-5tHq2nFl1IKfx2iHLxzbMl7wtCe/zkcmQa3nfXTaBss=";
+    };
+    date = "2025-04-03";
+  };
   searxng-baidu-qianfan-bridge = {
     pname = "searxng-baidu-qianfan-bridge";
     version = "a9826ab251fa3d52a59a3900f702ab53cd602793";
