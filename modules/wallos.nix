@@ -6,7 +6,7 @@
 }:
 
 let
-  cfg = config.suites.wallos;
+  cfg = config.services.wallos;
   php = cfg.package.php;
   pool = config.services.phpfpm.pools.wallos;
   timezoneOption = lib.optionalString (
@@ -44,7 +44,7 @@ let
   };
 in
 {
-  options.suites.wallos = {
+  options.services.wallos = {
     enable = lib.mkEnableOption "Wallos subscription tracker";
     package = lib.mkOption {
       type = lib.types.package;
@@ -83,7 +83,7 @@ in
     assertions = [
       {
         assertion = lib.hasPrefix "/" cfg.dataDir;
-        message = "suites.wallos.dataDir must be an absolute path.";
+        message = "services.wallos.dataDir must be an absolute path.";
       }
     ];
 

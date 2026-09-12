@@ -20,7 +20,7 @@ PHP 运行环境可通过包的 `php` 属性取得。
 {
   imports = [ inputs.nur.nixosModules.wallos ];
 
-  suites.wallos = {
+  services.wallos = {
     enable = true;
     hostName = "wallos.example.org";
   };
@@ -54,7 +54,7 @@ services.nginx.virtualHosts."wallos.example.org".listen = [
 
 ## 模块保留数据库和上传文件。
 
-`suites.wallos.dataDir` 默认是 `/var/lib/wallos`。数据库位于其 `db` 子目录，
+`services.wallos.dataDir` 默认是 `/var/lib/wallos`。数据库位于其 `db` 子目录，
 上传图片位于 `logos` 子目录，导入和恢复使用 `tmp` 子目录。
 模块将应用代码保存在只读 Nix store 中，仅上述目录可由 `wallos` 用户写入。
 Nginx 阻止直接读取数据库、临时文件和 PHP include 文件，并阻止执行上传目录中的 PHP 文件。
@@ -66,7 +66,7 @@ Nginx 阻止直接读取数据库、临时文件和 PHP include 文件，并阻�
 任务使用主机时区；未设置主机时区时，PHP 保留默认配置。
 
 模块沿用上游的 256M 上传限制，以及 15 个 PHP 子进程和每进程 500 次请求限制。
-`suites.wallos.poolSettings` 可以覆盖 PHP 进程配置，进程按请求启动。
+`services.wallos.poolSettings` 可以覆盖 PHP 进程配置，进程按请求启动。
 包不改写 PHP 业务代码；运行时仍由 PHP 执行原应用并读写 SQLite。
 模块构建时额外生成带状态目录链接的应用副本，不在每次服务启动时复制应用。
 

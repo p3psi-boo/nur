@@ -4,7 +4,7 @@ pkgs.testers.runNixOSTest {
   name = "wallos";
   nodes.machine = { ... }: {
     imports = [ ../../modules/wallos.nix ];
-    suites.wallos = {
+    services.wallos = {
       enable = true;
       hostName = "wallos.test";
       # Exercise the configurable state path, not only its default.
