@@ -17,7 +17,8 @@ buildNpmPackage {
   inherit version;
   src = sourceInfo.src;
 
-  npmDepsHash = "sha256-9TKIa39Fn57GwYSA1tkmupnVr61vRD+5lYnwTepfbpw=";
+  npmDepsHash = "sha256-FiGEg+FfOXcnvSlmhK0KIH4jZYbSvDvRIUxBb9Pt9f8=";
+  npmDepsFetcherVersion = 2;
 
   postPatch = ''
     cp ${./package-lock.json} package-lock.json

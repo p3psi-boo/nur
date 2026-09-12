@@ -35,11 +35,6 @@ src.git = "https://github.com/p3psi-boo/vohive.git"
 fetch.git = "https://github.com/p3psi-boo/vohive.git"
 git.fetch_submodules = false
 
-[wikiteam3]
-src.git = "https://github.com/saveweb/wikiteam3.git"
-fetch.git = "https://github.com/saveweb/wikiteam3.git"
-src.branch = "v4-main"
-
 [srv-us]
 src.git = "https://github.com/p3psi-boo/srv.us.git"
 fetch.git = "https://github.com/p3psi-boo/srv.us.git"
@@ -101,11 +96,6 @@ src.github_tag = "bojieli/agentreach"
 src.include_regex = "^v[0-9].*"
 fetch.github = "bojieli/agentreach"
 
-[grok2api]
-src.git = "https://github.com/jiujiu532/grok2api.git"
-fetch.git = "https://github.com/jiujiu532/grok2api.git"
-git.fetch_submodules = false
-
 # Focaltech fingerprint reader driver bundle
 [focaltech-fingerprint]
 src.git = "https://github.com/vobademi/FTEXX00-Ubuntu.git"
@@ -152,14 +142,6 @@ src.branch = "master"
 src.github_tag = "UruhaLushia/piko"
 src.include_regex = "^v[0-9].*"
 fetch.github = "UruhaLushia/piko"
-
-# powermem - AI Memory Plugin for persistent, self-evolving agent memory
-# Pre-built standalone binaries (PyInstaller), ~130MB each
-[powermem]
-src.github_tag = "oceanbase/powermem"
-src.prefix = "v"
-src.include_regex = "^v[0-9].*"
-fetch.url = "https://github.com/oceanbase/powermem/releases/download/v$ver/powermem-$ver-linux-amd64-binaries.tar.gz"
 
 # wxmp_searxng - Sogou Weixin JSON engine for SearXNG
 [wxmp_searxng]
@@ -239,12 +221,6 @@ src.branch = "master"
 fetch.github = "herdrdev/herdr"
 git.fetch_submodules = false
 git.get_commit_date = true
-
-# ripwire - C++23 CLI + MCP server: ranked repo map for coding agents
-[ripwire]
-src.github_tag = "redhat-et/ripwire"
-src.include_regex = "^v[0-9].*"
-fetch.github = "redhat-et/ripwire"
 
 # sdbd - lightweight Android Debug Bridge daemon (track master directly)
 [sdbd]

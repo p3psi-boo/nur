@@ -4,6 +4,7 @@
   buildGoModule,
   buildNpmPackage,
   generated,
+  zstd,
 }:
 
 let
@@ -54,9 +55,21 @@ let
       GOFLAGS = "-trimpath";
     };
 
+    nativeBuildInputs = [ zstd ];
+
     preBuild = ''
-      mkdir -p web/public/defaultTheme/dist
-      cp -r ${komariWeb}/dist/* web/public/defaultTheme/dist/
+      mkdir -p web/public/defaultTheme
+      tar \
+        --sort=name \
+        --mtime=@1 \
+        --owner=0 \
+        --group=0 \
+        --numeric-owner \
+        -cf "$TMPDIR/komari-default-dist.tar" \
+        -C ${komariWeb}/dist .
+      zstd -19 -T0 -q -f \
+        "$TMPDIR/komari-default-dist.tar" \
+        -o web/public/defaultTheme/dist.tar.zst
       cp -f ${komariWeb}/komari-theme.json web/public/defaultTheme/
       if [ -f ${komariWeb}/preview.png ]; then cp -f ${komariWeb}/preview.png web/public/defaultTheme/; fi
       if [ -f ${komariWeb}/perview.png ]; then cp -f ${komariWeb}/perview.png web/public/defaultTheme/; fi

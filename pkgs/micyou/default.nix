@@ -1,65 +1,30 @@
 {
   lib,
-  stdenv,
-  fetchzip,
-  makeWrapper,
+  appimageTools,
+  fetchurl,
   makeDesktopItem,
   copyDesktopItems,
   generated,
-  jdk17,
-  libpulseaudio,
-  alsa-lib,
-  fontconfig,
-  freetype,
-  libGL,
-  libxkbcommon,
-  libx11,
-  libxcursor,
-  libxext,
-  libxi,
-  libxrandr,
-  libxrender,
-  libxtst,
-  ...
 }:
 
 let
   sourceInfo = generated.micyou;
   version = lib.removePrefix "v" sourceInfo.version;
-
-  runtimeLibPath = lib.makeLibraryPath [
-    libpulseaudio
-    alsa-lib
-    fontconfig
-    freetype
-    libGL
-    libxkbcommon
-    libx11
-    libxcursor
-    libxext
-    libxi
-    libxrandr
-    libxrender
-    libxtst
-    stdenv.cc.cc.lib
-  ];
-in
-stdenv.mkDerivation (finalAttrs: {
   pname = "micyou";
-  inherit version;
 
-  # Use the Linux NoJRE build - users need to provide their own JDK
-  src = fetchzip {
-    url = "https://github.com/LanRhyme/MicYou/releases/download/v${version}/MicYou-Linux-NoJRE-${version}.tar.gz";
-    hash = "sha256-rrjQRG5fcaA8mGPrCEVQgAQEXXWbASxPQvNryHc8fng=";
+  src = fetchurl {
+    url = "https://github.com/LanRhyme/MicYou/releases/download/v${version}/MicYou-Linux-${version}.AppImage";
+    hash = "sha256-XNpIURMtcasVKopQinrKTQvDI3ULkQLKpXdjHCuYpj4=";
   };
 
-  nativeBuildInputs = [ makeWrapper copyDesktopItems ];
+  contents = appimageTools.extract {
+    inherit pname version src;
+  };
+in
+appimageTools.wrapType2 {
+  inherit pname version src;
 
-  buildInputs = [
-    libpulseaudio
-    alsa-lib
-  ];
+  nativeBuildInputs = [ copyDesktopItems ];
 
   desktopItems = [
     (makeDesktopItem {
@@ -76,44 +41,25 @@ stdenv.mkDerivation (finalAttrs: {
     })
   ];
 
-  installPhase = ''
-    runHook preInstall
-
-    mkdir -p $out/lib/micyou
-    cp -r . $out/lib/micyou/
-
-    # Make the shell script executable
-    chmod +x $out/lib/micyou/MicYou.sh
-
-    mkdir -p $out/bin
-    makeWrapper $out/lib/micyou/MicYou.sh $out/bin/micyou \
-      --prefix PATH : ${lib.makeBinPath [ jdk17 ]} \
-      --prefix LD_LIBRARY_PATH : ${runtimeLibPath} \
-      --set JAVA_HOME ${jdk17.home}
-
-    # Extract upstream app icon from bundled JAR resources for desktop integration.
-    tmpDir="$(mktemp -d)"
-    (
-      cd "$tmpDir"
-      ${jdk17}/bin/jar xf "$out/lib/micyou/lib/MicYou.jar" \
-        composeResources/micyou.composeapp.generated.resources/drawable/app_icon.png
-    )
-
-    install -Dm644 \
-      "$tmpDir/composeResources/micyou.composeapp.generated.resources/drawable/app_icon.png" \
-      "$out/share/icons/hicolor/256x256/apps/micyou.png"
-
-    rm -rf "$tmpDir"
-
-    runHook postInstall
+  extraInstallCommands = ''
+    for icon in \
+      ${contents}/*.png \
+      ${contents}/usr/share/icons/hicolor/*/apps/*.png
+    do
+      if [ -f "$icon" ]; then
+        install -Dm644 "$icon" "$out/share/icons/hicolor/256x256/apps/micyou.png"
+        break
+      fi
+    done
   '';
 
   meta = {
     description = "Turn your Android device into a high-quality wireless microphone for your PC";
     homepage = "https://micyou.top";
     license = lib.licenses.gpl3Only;
-    platforms = lib.platforms.linux;
+    platforms = [ "x86_64-linux" ];
     mainProgram = "micyou";
     maintainers = [ ];
+    sourceProvenance = [ lib.sourceTypes.binaryNativeCode ];
   };
-})
+}

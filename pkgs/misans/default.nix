@@ -9,16 +9,19 @@ stdenvNoCC.mkDerivation {
   version = "1.0";
 
   src = fetchzip {
-    url = "https://hyperos.mi.com/font-download/MiSans.zip";
+    url = "https://cdn.cnbj1.fds.api.mi-img.com/vipmlmodel/font/MiSans/MiSans.zip";
     stripRoot = false;
-    hash = "sha256-MH4t7oXDUiH1TAm0xKa0AENmB1zoedd8X5BcQFNw8GM=";
+    hash = "sha256-sDVOF7wZ22qsPkoQjFYNjaB4TrDbbNk+a2oHr8KbA+o=";
   };
 
-  # only extract the variable font because everything else is a duplicate
   installPhase = ''
     runHook preInstall
 
-    install -Dm644 MiSans/ttf/*.ttf -t $out/share/fonts/truetype
+    mkdir -p $out/share/fonts/truetype
+    find . \
+      -path './__MACOSX*' -prune -o \
+      -type f -name '*.ttf' \
+      -exec install -m644 {} $out/share/fonts/truetype/ \;
 
     runHook postInstall
   '';

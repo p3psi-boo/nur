@@ -30,13 +30,13 @@
   };
   cliproxyapi = {
     pname = "cliproxyapi";
-    version = "v7.2.152";
+    version = "v7.2.158";
     src = fetchFromGitHub {
       owner = "router-for-me";
       repo = "CLIProxyAPI";
-      rev = "v7.2.152";
+      rev = "v7.2.158";
       fetchSubmodules = false;
-      sha256 = "sha256-vw90wcPsmU7sbp4k1XJ4mqdoQD1dWY58PYq163ZqmeQ=";
+      sha256 = "sha256-Zb7rA/DUOwC0cvEGRjZruzik58cTRtcblVc/92VaaHg=";
     };
   };
   cloakbrowser = {
@@ -154,31 +154,17 @@
     };
     date = "2026-04-12";
   };
-  grok2api = {
-    pname = "grok2api";
-    version = "ef7fb4f224062be15ab8745389a5c13ab4dc846b";
-    src = fetchgit {
-      url = "https://github.com/jiujiu532/grok2api.git";
-      rev = "ef7fb4f224062be15ab8745389a5c13ab4dc846b";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-FLYqGRSY47IGrA0j08U5PCfyWMEe8clFlGM5TBP4Ulw=";
-    };
-    date = "2026-07-09";
-  };
   herdr-git = {
     pname = "herdr-git";
-    version = "9e01168b140ce8e3821131345dc82bc2bf9994eb";
+    version = "9ad65d9031e8cb16a7b553c0e6f74809e9811e92";
     src = fetchFromGitHub {
       owner = "herdrdev";
       repo = "herdr";
-      rev = "9e01168b140ce8e3821131345dc82bc2bf9994eb";
+      rev = "9ad65d9031e8cb16a7b553c0e6f74809e9811e92";
       fetchSubmodules = false;
-      sha256 = "sha256-yTmO5EfIS//FPR60oWt0W0lN8rMYSbLTN7jLSLXSJ7o=";
+      sha256 = "sha256-ACzb5WjoD3eiHQ/xjyTcHXOG60vNEXPcmHZgloi14Vs=";
     };
-    date = "2026-09-08";
+    date = "2026-09-12";
   };
   ironet = {
     pname = "ironet";
@@ -224,17 +210,17 @@
   };
   komari-web = {
     pname = "komari-web";
-    version = "abaaa4ec8fffaa67c8dbafcbdaa654f47794f8b3";
+    version = "83b42c3c4b2a52b546005ecf4cd534a3bd9d4c5b";
     src = fetchgit {
       url = "https://github.com/komari-monitor/komari-web.git";
-      rev = "abaaa4ec8fffaa67c8dbafcbdaa654f47794f8b3";
+      rev = "83b42c3c4b2a52b546005ecf4cd534a3bd9d4c5b";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-gujPuJNJZXEWe56yPPDDvswFbM8pvcawMg/CHlT9o9Y=";
+      sha256 = "sha256-Jar8tcnmsmqcfltGVKtlD++sT+vZzi1hcxBd8FaBNgw=";
     };
-    date = "2026-09-04";
+    date = "2026-09-09";
   };
   lazyssh = {
     pname = "lazyssh";
@@ -252,13 +238,13 @@
   };
   mebox = {
     pname = "mebox";
-    version = "mebox-v0.1.32";
+    version = "mebox-v0.1.76";
     src = fetchFromGitHub {
       owner = "truewhile";
       repo = "MeBox";
-      rev = "mebox-v0.1.32";
+      rev = "mebox-v0.1.76";
       fetchSubmodules = false;
-      sha256 = "sha256-J+lkz/NGj+xgFJs6Yc/o2qGuo2S0J9ZMARhaf45ujhw=";
+      sha256 = "sha256-s961UHlS7a73nNLLgbtaN1kcV7ILpy568EboAKgKqYs=";
     };
   };
   micyou = {
@@ -274,17 +260,17 @@
   };
   n9router = {
     pname = "n9router";
-    version = "41ae4655a6d5e8c3bc5b67d4684ae45cf2a6b3a6";
+    version = "9d2e4a2093c8fdc9fbd8a90b44d69c98ee0f40d3";
     src = fetchgit {
       url = "https://github.com/nightwalker89/n9router.git";
-      rev = "41ae4655a6d5e8c3bc5b67d4684ae45cf2a6b3a6";
+      rev = "9d2e4a2093c8fdc9fbd8a90b44d69c98ee0f40d3";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-xlXPihxJZ0EYxlErfGj+v0c53N1R3uD8MutpuLskJng=";
+      sha256 = "sha256-Q/Z2SPODwrANyGjjZIMgh81XMmprF4B/7xRDVh8sV3k=";
     };
-    date = "2026-09-05";
+    date = "2026-09-11";
   };
   octopus-api = {
     pname = "octopus-api";
@@ -322,14 +308,6 @@
       sha256 = "sha256-36JrU8a+XUUUiQT39x9495/xk1zjP1q+OlMcR7ZPq9o=";
     };
   };
-  powermem = {
-    pname = "powermem";
-    version = "1.1.7";
-    src = fetchurl {
-      url = "https://github.com/oceanbase/powermem/releases/download/v1.1.7/powermem-1.1.7-linux-amd64-binaries.tar.gz";
-      sha256 = "sha256-CmicB7f9t4RJ7QCQVWduaFn6TqcE4CalI3SDOvnl6/g=";
-    };
-  };
   proxy-ns = {
     pname = "proxy-ns";
     version = "5d08d18f9171d7e65fabad06ee81021d9bca0a21";
@@ -343,17 +321,6 @@
       sha256 = "sha256-4w5aiVpbmlGkCyg5YQnjXYkdgrbZADiWw+l4kd6ecek=";
     };
     date = "2026-04-09";
-  };
-  ripwire = {
-    pname = "ripwire";
-    version = "v0.4.0";
-    src = fetchFromGitHub {
-      owner = "redhat-et";
-      repo = "ripwire";
-      rev = "v0.4.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-CShX6EcrkzJZ7KBI6YFIvC4dHANQDHy3fqkP4yNCjrY=";
-    };
   };
   sdbd = {
     pname = "sdbd";
@@ -411,17 +378,17 @@
   };
   sing-box-tui = {
     pname = "sing-box-tui";
-    version = "9ec6fc2d9ccb38acbfbc2a5eef34bfbca234df91";
+    version = "174949240004c45b4cefe8bc8fdaf1705043f23a";
     src = fetchgit {
       url = "https://github.com/p3psi-boo/sing-box-tui.git";
-      rev = "9ec6fc2d9ccb38acbfbc2a5eef34bfbca234df91";
+      rev = "174949240004c45b4cefe8bc8fdaf1705043f23a";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-AkpMqcHXSSrm4qXdGrSMqSpbXRdZU24hpzlnTIYnC6Y=";
+      sha256 = "sha256-tnagGSs6ouBzOX2YpfNrYyxT/XQT12246Lz9vJoCqR8=";
     };
-    date = "2026-09-03";
+    date = "2026-09-12";
   };
   sofixer = {
     pname = "sofixer";
@@ -536,20 +503,6 @@
       fetchSubmodules = false;
       sha256 = "sha256-1XSUkqcCpXtCIeCgmvFLc3YXXfpvMCCY9DD3Ct0aYng=";
     };
-  };
-  wikiteam3 = {
-    pname = "wikiteam3";
-    version = "66b0df8031d96e363e7ebff9b060c832d9c57c48";
-    src = fetchgit {
-      url = "https://github.com/saveweb/wikiteam3.git";
-      rev = "66b0df8031d96e363e7ebff9b060c832d9c57c48";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-sBacccf5xWl1CO8ymcS6Dy84pO1ELENqXl/fWV5PORk=";
-    };
-    date = "2026-08-21";
   };
   wxmp_searxng = {
     pname = "wxmp_searxng";

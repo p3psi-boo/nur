@@ -21,7 +21,7 @@ let
     inherit (sourceInfo) src;
     sourceRoot = "${sourceInfo.src.name}/web";
 
-    npmDepsHash = "sha256-lMRgsiG+i0qXF7uZ+3qV2N7Sg9bHpGLW7gUtchBnzwg=";
+    npmDepsHash = "sha256-5pfajjjr9/sq0MoVCNxQmB8DYLbxyFUOFqQb6M8KTdU=";
 
     env.CI = "true";
 
@@ -45,7 +45,7 @@ in
   inherit version;
   inherit (sourceInfo) src;
 
-  vendorHash = "sha256-9K2B3MX0PlBQZbCRxaElCqxFTGSSwuZK3GGY2hvM8tg=";
+  vendorHash = "sha256-OaALK2dpiiN3ZKTy+seJ3btiPymccU9LZ+sby5F0Lq8=";
 
   subPackages = [ "cmd/server" ];
 

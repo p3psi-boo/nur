@@ -55,12 +55,12 @@
             "name": null,
             "owner": "router-for-me",
             "repo": "CLIProxyAPI",
-            "rev": "v7.2.152",
-            "sha256": "sha256-vw90wcPsmU7sbp4k1XJ4mqdoQD1dWY58PYq163ZqmeQ=",
+            "rev": "v7.2.158",
+            "sha256": "sha256-Zb7rA/DUOwC0cvEGRjZruzik58cTRtcblVc/92VaaHg=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v7.2.152"
+        "version": "v7.2.158"
     },
     "cloakbrowser": {
         "cargoLock": null,
@@ -239,29 +239,9 @@
         },
         "version": "ecc44eeff94dd4836eed6490a497989194effa2b"
     },
-    "grok2api": {
-        "cargoLock": null,
-        "date": "2026-07-09",
-        "extract": null,
-        "name": "grok2api",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "ef7fb4f224062be15ab8745389a5c13ab4dc846b",
-            "sha256": "sha256-FLYqGRSY47IGrA0j08U5PCfyWMEe8clFlGM5TBP4Ulw=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/jiujiu532/grok2api.git"
-        },
-        "version": "ef7fb4f224062be15ab8745389a5c13ab4dc846b"
-    },
     "herdr-git": {
         "cargoLock": null,
-        "date": "2026-09-08",
+        "date": "2026-09-12",
         "extract": null,
         "name": "herdr-git",
         "passthru": null,
@@ -273,12 +253,12 @@
             "name": null,
             "owner": "herdrdev",
             "repo": "herdr",
-            "rev": "9e01168b140ce8e3821131345dc82bc2bf9994eb",
-            "sha256": "sha256-yTmO5EfIS//FPR60oWt0W0lN8rMYSbLTN7jLSLXSJ7o=",
+            "rev": "9ad65d9031e8cb16a7b553c0e6f74809e9811e92",
+            "sha256": "sha256-ACzb5WjoD3eiHQ/xjyTcHXOG60vNEXPcmHZgloi14Vs=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "9e01168b140ce8e3821131345dc82bc2bf9994eb"
+        "version": "9ad65d9031e8cb16a7b553c0e6f74809e9811e92"
     },
     "ironet": {
         "cargoLock": null,
@@ -342,7 +322,7 @@
     },
     "komari-web": {
         "cargoLock": null,
-        "date": "2026-09-04",
+        "date": "2026-09-09",
         "extract": null,
         "name": "komari-web",
         "passthru": null,
@@ -352,13 +332,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "abaaa4ec8fffaa67c8dbafcbdaa654f47794f8b3",
-            "sha256": "sha256-gujPuJNJZXEWe56yPPDDvswFbM8pvcawMg/CHlT9o9Y=",
+            "rev": "83b42c3c4b2a52b546005ecf4cd534a3bd9d4c5b",
+            "sha256": "sha256-Jar8tcnmsmqcfltGVKtlD++sT+vZzi1hcxBd8FaBNgw=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/komari-monitor/komari-web.git"
         },
-        "version": "abaaa4ec8fffaa67c8dbafcbdaa654f47794f8b3"
+        "version": "83b42c3c4b2a52b546005ecf4cd534a3bd9d4c5b"
     },
     "lazyssh": {
         "cargoLock": null,
@@ -394,12 +374,12 @@
             "name": null,
             "owner": "truewhile",
             "repo": "MeBox",
-            "rev": "mebox-v0.1.32",
-            "sha256": "sha256-J+lkz/NGj+xgFJs6Yc/o2qGuo2S0J9ZMARhaf45ujhw=",
+            "rev": "mebox-v0.1.76",
+            "sha256": "sha256-s961UHlS7a73nNLLgbtaN1kcV7ILpy568EboAKgKqYs=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "mebox-v0.1.32"
+        "version": "mebox-v0.1.76"
     },
     "micyou": {
         "cargoLock": null,
@@ -424,7 +404,7 @@
     },
     "n9router": {
         "cargoLock": null,
-        "date": "2026-09-05",
+        "date": "2026-09-11",
         "extract": null,
         "name": "n9router",
         "passthru": null,
@@ -434,13 +414,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "41ae4655a6d5e8c3bc5b67d4684ae45cf2a6b3a6",
-            "sha256": "sha256-xlXPihxJZ0EYxlErfGj+v0c53N1R3uD8MutpuLskJng=",
+            "rev": "9d2e4a2093c8fdc9fbd8a90b44d69c98ee0f40d3",
+            "sha256": "sha256-Q/Z2SPODwrANyGjjZIMgh81XMmprF4B/7xRDVh8sV3k=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/nightwalker89/n9router.git"
         },
-        "version": "41ae4655a6d5e8c3bc5b67d4684ae45cf2a6b3a6"
+        "version": "9d2e4a2093c8fdc9fbd8a90b44d69c98ee0f40d3"
     },
     "octopus-api": {
         "cargoLock": null,
@@ -504,21 +484,6 @@
         },
         "version": "v0.1.5"
     },
-    "powermem": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "powermem",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-CmicB7f9t4RJ7QCQVWduaFn6TqcE4CalI3SDOvnl6/g=",
-            "type": "url",
-            "url": "https://github.com/oceanbase/powermem/releases/download/v1.1.7/powermem-1.1.7-linux-amd64-binaries.tar.gz"
-        },
-        "version": "1.1.7"
-    },
     "proxy-ns": {
         "cargoLock": null,
         "date": "2026-04-09",
@@ -538,27 +503,6 @@
             "url": "https://github.com/OkamiW/proxy-ns.git"
         },
         "version": "5d08d18f9171d7e65fabad06ee81021d9bca0a21"
-    },
-    "ripwire": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "ripwire",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "redhat-et",
-            "repo": "ripwire",
-            "rev": "v0.4.0",
-            "sha256": "sha256-CShX6EcrkzJZ7KBI6YFIvC4dHANQDHy3fqkP4yNCjrY=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "v0.4.0"
     },
     "sdbd": {
         "cargoLock": null,
@@ -643,7 +587,7 @@
     },
     "sing-box-tui": {
         "cargoLock": null,
-        "date": "2026-09-03",
+        "date": "2026-09-12",
         "extract": null,
         "name": "sing-box-tui",
         "passthru": null,
@@ -653,13 +597,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "9ec6fc2d9ccb38acbfbc2a5eef34bfbca234df91",
-            "sha256": "sha256-AkpMqcHXSSrm4qXdGrSMqSpbXRdZU24hpzlnTIYnC6Y=",
+            "rev": "174949240004c45b4cefe8bc8fdaf1705043f23a",
+            "sha256": "sha256-tnagGSs6ouBzOX2YpfNrYyxT/XQT12246Lz9vJoCqR8=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/p3psi-boo/sing-box-tui.git"
         },
-        "version": "9ec6fc2d9ccb38acbfbc2a5eef34bfbca234df91"
+        "version": "174949240004c45b4cefe8bc8fdaf1705043f23a"
     },
     "sofixer": {
         "cargoLock": null,
@@ -844,26 +788,6 @@
             "type": "github"
         },
         "version": "v5.7.1"
-    },
-    "wikiteam3": {
-        "cargoLock": null,
-        "date": "2026-08-21",
-        "extract": null,
-        "name": "wikiteam3",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "66b0df8031d96e363e7ebff9b060c832d9c57c48",
-            "sha256": "sha256-sBacccf5xWl1CO8ymcS6Dy84pO1ELENqXl/fWV5PORk=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/saveweb/wikiteam3.git"
-        },
-        "version": "66b0df8031d96e363e7ebff9b060c832d9c57c48"
     },
     "wxmp_searxng": {
         "cargoLock": null,

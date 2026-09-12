@@ -21,7 +21,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   src = sourceInfo.src;
 
-  cargoHash = "sha256-IX95AnLYMtVrkQY/nLEgTq44m6I1z/HiT7MXVGv2epM=";
+  cargoHash = "sha256-PiSLjNPnIPxxlqNh0PSwBKLVcfJBrEh6urHpqNoSNco=";
 
   nativeBuildInputs = [
     pkg-config
@@ -45,9 +45,9 @@ rustPlatform.buildRustPackage (finalAttrs: {
   # Optimize for runtime performance (not binary size)
   CARGO_BUILD_INCREMENTAL = "false";
   CARGO_PROFILE_RELEASE_STRIP = "symbols";
-  CARGO_PROFILE_RELEASE_OPT_LEVEL = "3";  # 最高运行时性能
-  CARGO_PROFILE_RELEASE_LTO = "thin";     # thin LTO 平衡编译和运行时
-  CARGO_PROFILE_RELEASE_CODEGEN_UNITS = "1";  # 单 codegen unit 优化
+  CARGO_PROFILE_RELEASE_OPT_LEVEL = "3"; # 最高运行时性能
+  CARGO_PROFILE_RELEASE_LTO = "thin"; # thin LTO 平衡编译和运行时
+  CARGO_PROFILE_RELEASE_CODEGEN_UNITS = "1"; # 单 codegen unit 优化
   CARGO_PROFILE_RELEASE_PANIC = "abort";
 
   # The eBPF programs need special permissions to load
@@ -58,7 +58,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     platforms = platforms.linux;
     maintainers = with maintainers; [ ];
     # Requires kernel >= 5.15 and eBPF support
-    broken = stdenv.isAarch64; # May have issues on ARM64
+    broken = stdenv.hostPlatform.isAarch64; # May have issues on ARM64
     mainProgram = "einat";
   };
 })

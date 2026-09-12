@@ -1,16 +1,16 @@
 # fusion - A lightweight, self-hosted friendly RSS reader
 # https://github.com/p3psi-boo/fusion
 {
-  lib
-, stdenv
-, buildGoModule
-, generated
-, nodejs_22
-, pnpm_10
-, fetchPnpmDeps
-, pnpmConfigHook
-, go_1_26
-, runCommandLocal
+  lib,
+  stdenv,
+  buildGoModule,
+  generated,
+  nodejs_22,
+  pnpm_10,
+  fetchPnpmDeps,
+  pnpmConfigHook,
+  go_1_26,
+  runCommandLocal,
 }:
 
 let
@@ -31,8 +31,8 @@ let
     inherit version;
     src = frontendSrc;
     pnpm = pnpm_10;
-    fetcherVersion = 1;
-    hash = "sha256-CcJ6NNZfKAj6V9nfI9RK9xQKrjI7O4oeQ/t3do07ovA=";
+    fetcherVersion = 3;
+    hash = "sha256-HQ2oml3rpeEbIC6zNKsUCY6/Bku4TqsUTdwaO395lAI=";
     NODE_ENV = "production";
   };
 

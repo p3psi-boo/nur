@@ -6,28 +6,30 @@
 }:
 
 let
-  version = "1.15.16";
+  version = "1.15.20";
 
   platforms = {
     x86_64-linux = {
       file = "cnb-linux-x64";
-      hash = "sha256-FcocMuHQxUdelJUXGyN9xL36icfJ5vQsTzEGKz9TvQA=";
+      hash = "sha256-O9YCut1A86M8v25cjU1oBqaq9kMMTA3+LJ/1ZsPrlag=";
     };
     aarch64-linux = {
       file = "cnb-linux-arm64";
-      hash = "sha256-ckNeWCOnxd9V7gsdgArpJt/kx9MPe/QrAskHSX53Lig=";
+      hash = "sha256-eISEKipZhXdGBQGlLhmzwJwWkikijrc1EL5/0RpgNZ4=";
     };
     x86_64-darwin = {
       file = "cnb-darwin-x64";
-      hash = "sha256-04iEnqPf1CDsE+o+RHbAjdF1tGpUrRdejeP1IL2czxo=";
+      hash = "sha256-VRFuSsQlQRRMyx7kZA6gsB7yyMH1PiSkyKtslzk+5iU=";
     };
     aarch64-darwin = {
       file = "cnb-darwin-arm64";
-      hash = "sha256-/qCPLPmr1qR9INhNhLqSwXyRuEP2qHfmqmBPWowYMXo=";
+      hash = "sha256-X6xsMyai+8xDaRqTjQ+Cshxe3DxineA+UXwlWajStKA=";
     };
   };
 
-  platform = platforms.${stdenv.hostPlatform.system} or (throw "Unsupported platform for cnb-cli: ${stdenv.hostPlatform.system}");
+  platform =
+    platforms.${stdenv.hostPlatform.system}
+      or (throw "Unsupported platform for cnb-cli: ${stdenv.hostPlatform.system}");
 in
 stdenv.mkDerivation {
   pname = "cnb-cli";

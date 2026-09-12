@@ -2,7 +2,7 @@
   lib,
   stdenv,
   rustPlatform,
-  zig_0_15,
+  zig_0_16,
   installShellFiles,
   cctools,
   xcbuild,
@@ -22,15 +22,15 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   cargoLock.lockFile = sourceInfo.src + "/Cargo.lock";
 
-  zigDeps = zig_0_15.fetchDeps {
+  zigDeps = zig_0_16.fetchDeps {
     inherit (finalAttrs) pname version;
     src = "${finalAttrs.src}/vendor/libghostty-vt";
     fetchAll = true;
-    hash = "sha256-PnM+hZIlLyQwK8vJgd/Bhjt1lNIz06T8FahwliRmMrY=";
+    hash = "sha256-Cy0DdSvce+fhOFIfxHMQGF2b2j16UkS27UpGbfC42XI=";
   };
 
   nativeBuildInputs = [
-    zig_0_15.hook
+    zig_0_16.hook
     installShellFiles
   ]
   ++ lib.optionals stdenv.hostPlatform.isDarwin [
