@@ -364,29 +364,29 @@
   };
   selector4nix = {
     pname = "selector4nix";
-    version = "17e2420165159941b90ccc54f1dd49b2513c1a21";
+    version = "ab23c21f3f13539741e1ed8e445485118a29ab84";
     src = fetchgit {
       url = "https://github.com/p3psi-boo/selector4nix.git";
-      rev = "17e2420165159941b90ccc54f1dd49b2513c1a21";
+      rev = "ab23c21f3f13539741e1ed8e445485118a29ab84";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-IlzpqNQCx1zhZvMf9ZtXaJ0T5hL8IjctpHQzOjB9ZNw=";
+      sha256 = "sha256-l7WUpiZpvjEcY8huajbSjBYEN9gMPl6D8UhXCjPVfIw=";
     };
-    date = "2026-09-05";
+    date = "2026-09-12";
   };
   sing-box-tui = {
     pname = "sing-box-tui";
-    version = "174949240004c45b4cefe8bc8fdaf1705043f23a";
+    version = "c053129f4b847e2a2f8b5a9734c2ba533d923ecd";
     src = fetchgit {
       url = "https://github.com/p3psi-boo/sing-box-tui.git";
-      rev = "174949240004c45b4cefe8bc8fdaf1705043f23a";
+      rev = "c053129f4b847e2a2f8b5a9734c2ba533d923ecd";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-tnagGSs6ouBzOX2YpfNrYyxT/XQT12246Lz9vJoCqR8=";
+      sha256 = "sha256-ScIqxKGfBOHLOh3Kp1Bztumz3SLu5nn+zHEo5tSqhvQ=";
     };
     date = "2026-09-12";
   };

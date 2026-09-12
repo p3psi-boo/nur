@@ -567,7 +567,7 @@
     },
     "selector4nix": {
         "cargoLock": null,
-        "date": "2026-09-05",
+        "date": "2026-09-12",
         "extract": null,
         "name": "selector4nix",
         "passthru": null,
@@ -577,13 +577,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "17e2420165159941b90ccc54f1dd49b2513c1a21",
-            "sha256": "sha256-IlzpqNQCx1zhZvMf9ZtXaJ0T5hL8IjctpHQzOjB9ZNw=",
+            "rev": "ab23c21f3f13539741e1ed8e445485118a29ab84",
+            "sha256": "sha256-l7WUpiZpvjEcY8huajbSjBYEN9gMPl6D8UhXCjPVfIw=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/p3psi-boo/selector4nix.git"
         },
-        "version": "17e2420165159941b90ccc54f1dd49b2513c1a21"
+        "version": "ab23c21f3f13539741e1ed8e445485118a29ab84"
     },
     "sing-box-tui": {
         "cargoLock": null,
@@ -597,13 +597,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "174949240004c45b4cefe8bc8fdaf1705043f23a",
-            "sha256": "sha256-tnagGSs6ouBzOX2YpfNrYyxT/XQT12246Lz9vJoCqR8=",
+            "rev": "c053129f4b847e2a2f8b5a9734c2ba533d923ecd",
+            "sha256": "sha256-ScIqxKGfBOHLOh3Kp1Bztumz3SLu5nn+zHEo5tSqhvQ=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/p3psi-boo/sing-box-tui.git"
         },
-        "version": "174949240004c45b4cefe8bc8fdaf1705043f23a"
+        "version": "c053129f4b847e2a2f8b5a9734c2ba533d923ecd"
     },
     "sofixer": {
         "cargoLock": null,
