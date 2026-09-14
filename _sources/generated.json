@@ -55,12 +55,12 @@
             "name": null,
             "owner": "router-for-me",
             "repo": "CLIProxyAPI",
-            "rev": "v7.2.158",
-            "sha256": "sha256-Zb7rA/DUOwC0cvEGRjZruzik58cTRtcblVc/92VaaHg=",
+            "rev": "v7.3.1",
+            "sha256": "sha256-ELyKLvuB+ADjJKLT8yWGlPDEDV4gqIsgP73ZP2AetVM=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v7.2.158"
+        "version": "v7.3.1"
     },
     "cloakbrowser": {
         "cargoLock": null,
@@ -241,7 +241,7 @@
     },
     "herdr-git": {
         "cargoLock": null,
-        "date": "2026-09-12",
+        "date": "2026-09-14",
         "extract": null,
         "name": "herdr-git",
         "passthru": null,
@@ -253,12 +253,12 @@
             "name": null,
             "owner": "herdrdev",
             "repo": "herdr",
-            "rev": "9ad65d9031e8cb16a7b553c0e6f74809e9811e92",
-            "sha256": "sha256-ACzb5WjoD3eiHQ/xjyTcHXOG60vNEXPcmHZgloi14Vs=",
+            "rev": "c77af1892ff121736ecb103b32d504d6f1b31805",
+            "sha256": "sha256-jQOc9DXCtJPefRvzHw7yGVk2upx7rfpA4aiFiYvdeO0=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "9ad65d9031e8cb16a7b553c0e6f74809e9811e92"
+        "version": "c77af1892ff121736ecb103b32d504d6f1b31805"
     },
     "ironet": {
         "cargoLock": null,
@@ -374,12 +374,12 @@
             "name": null,
             "owner": "truewhile",
             "repo": "MeBox",
-            "rev": "mebox-v0.1.76",
-            "sha256": "sha256-s961UHlS7a73nNLLgbtaN1kcV7ILpy568EboAKgKqYs=",
+            "rev": "mebox-v0.1.91",
+            "sha256": "sha256-OvCVvTJLMJBux+d4rKOTMkHC7lvfkzBTIvQU5+0hzLo=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "mebox-v0.1.76"
+        "version": "mebox-v0.1.91"
     },
     "micyou": {
         "cargoLock": null,
@@ -577,13 +577,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "ab23c21f3f13539741e1ed8e445485118a29ab84",
-            "sha256": "sha256-l7WUpiZpvjEcY8huajbSjBYEN9gMPl6D8UhXCjPVfIw=",
+            "rev": "95367eb7a98ae6ba52573e1ae3e299429f1a5a8b",
+            "sha256": "sha256-X1ua1JFrA74Y3VW62sDx1B51uwCO1/ANjiNLywrNDFc=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/p3psi-boo/selector4nix.git"
         },
-        "version": "ab23c21f3f13539741e1ed8e445485118a29ab84"
+        "version": "95367eb7a98ae6ba52573e1ae3e299429f1a5a8b"
     },
     "sing-box-tui": {
         "cargoLock": null,

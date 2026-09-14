@@ -30,13 +30,13 @@
   };
   cliproxyapi = {
     pname = "cliproxyapi";
-    version = "v7.2.158";
+    version = "v7.3.1";
     src = fetchFromGitHub {
       owner = "router-for-me";
       repo = "CLIProxyAPI";
-      rev = "v7.2.158";
+      rev = "v7.3.1";
       fetchSubmodules = false;
-      sha256 = "sha256-Zb7rA/DUOwC0cvEGRjZruzik58cTRtcblVc/92VaaHg=";
+      sha256 = "sha256-ELyKLvuB+ADjJKLT8yWGlPDEDV4gqIsgP73ZP2AetVM=";
     };
   };
   cloakbrowser = {
@@ -156,15 +156,15 @@
   };
   herdr-git = {
     pname = "herdr-git";
-    version = "9ad65d9031e8cb16a7b553c0e6f74809e9811e92";
+    version = "c77af1892ff121736ecb103b32d504d6f1b31805";
     src = fetchFromGitHub {
       owner = "herdrdev";
       repo = "herdr";
-      rev = "9ad65d9031e8cb16a7b553c0e6f74809e9811e92";
+      rev = "c77af1892ff121736ecb103b32d504d6f1b31805";
       fetchSubmodules = false;
-      sha256 = "sha256-ACzb5WjoD3eiHQ/xjyTcHXOG60vNEXPcmHZgloi14Vs=";
+      sha256 = "sha256-jQOc9DXCtJPefRvzHw7yGVk2upx7rfpA4aiFiYvdeO0=";
     };
-    date = "2026-09-12";
+    date = "2026-09-14";
   };
   ironet = {
     pname = "ironet";
@@ -238,13 +238,13 @@
   };
   mebox = {
     pname = "mebox";
-    version = "mebox-v0.1.76";
+    version = "mebox-v0.1.91";
     src = fetchFromGitHub {
       owner = "truewhile";
       repo = "MeBox";
-      rev = "mebox-v0.1.76";
+      rev = "mebox-v0.1.91";
       fetchSubmodules = false;
-      sha256 = "sha256-s961UHlS7a73nNLLgbtaN1kcV7ILpy568EboAKgKqYs=";
+      sha256 = "sha256-OvCVvTJLMJBux+d4rKOTMkHC7lvfkzBTIvQU5+0hzLo=";
     };
   };
   micyou = {
@@ -364,15 +364,15 @@
   };
   selector4nix = {
     pname = "selector4nix";
-    version = "ab23c21f3f13539741e1ed8e445485118a29ab84";
+    version = "95367eb7a98ae6ba52573e1ae3e299429f1a5a8b";
     src = fetchgit {
       url = "https://github.com/p3psi-boo/selector4nix.git";
-      rev = "ab23c21f3f13539741e1ed8e445485118a29ab84";
+      rev = "95367eb7a98ae6ba52573e1ae3e299429f1a5a8b";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-l7WUpiZpvjEcY8huajbSjBYEN9gMPl6D8UhXCjPVfIw=";
+      sha256 = "sha256-X1ua1JFrA74Y3VW62sDx1B51uwCO1/ANjiNLywrNDFc=";
     };
     date = "2026-09-12";
   };
