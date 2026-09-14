@@ -422,6 +422,66 @@
         },
         "version": "9d2e4a2093c8fdc9fbd8a90b44d69c98ee0f40d3"
     },
+    "nmem-cli": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "nmem-cli",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-0mV+C9KccBLDuw5jVXN9vsZbpzIy9QE4HUIo8pFt8BA=",
+            "type": "url",
+            "url": "https://files.pythonhosted.org/packages/py3/n/nmem-cli/nmem_cli-0.10.81-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+        },
+        "version": "0.10.81"
+    },
+    "nmem-cli-aarch64-darwin": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "nmem-cli-aarch64-darwin",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-VoxWPEIHhzAq+lDPa9c+IUqyBVGpnxuQDOCYa78GKPY=",
+            "type": "url",
+            "url": "https://files.pythonhosted.org/packages/py3/n/nmem-cli/nmem_cli-0.10.81-py3-none-macosx_11_0_arm64.whl"
+        },
+        "version": "0.10.81"
+    },
+    "nmem-cli-aarch64-linux": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "nmem-cli-aarch64-linux",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-KrlklDSLZMmoVOb83/oKxbyurKOsZjuOaBqcmVnZs6Y=",
+            "type": "url",
+            "url": "https://files.pythonhosted.org/packages/py3/n/nmem-cli/nmem_cli-0.10.81-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl"
+        },
+        "version": "0.10.81"
+    },
+    "nmem-cli-x86_64-darwin": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "nmem-cli-x86_64-darwin",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-B0zw8THLwMXLfl9AXbQD5G664rxsdrfxA0m9qULrDjA=",
+            "type": "url",
+            "url": "https://files.pythonhosted.org/packages/py3/n/nmem-cli/nmem_cli-0.10.81-py3-none-macosx_10_12_x86_64.whl"
+        },
+        "version": "0.10.81"
+    },
     "octopus-api": {
         "cargoLock": null,
         "date": "2026-08-06",

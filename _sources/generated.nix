@@ -272,6 +272,38 @@
     };
     date = "2026-09-11";
   };
+  nmem-cli = {
+    pname = "nmem-cli";
+    version = "0.10.81";
+    src = fetchurl {
+      url = "https://files.pythonhosted.org/packages/py3/n/nmem-cli/nmem_cli-0.10.81-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl";
+      sha256 = "sha256-0mV+C9KccBLDuw5jVXN9vsZbpzIy9QE4HUIo8pFt8BA=";
+    };
+  };
+  nmem-cli-aarch64-darwin = {
+    pname = "nmem-cli-aarch64-darwin";
+    version = "0.10.81";
+    src = fetchurl {
+      url = "https://files.pythonhosted.org/packages/py3/n/nmem-cli/nmem_cli-0.10.81-py3-none-macosx_11_0_arm64.whl";
+      sha256 = "sha256-VoxWPEIHhzAq+lDPa9c+IUqyBVGpnxuQDOCYa78GKPY=";
+    };
+  };
+  nmem-cli-aarch64-linux = {
+    pname = "nmem-cli-aarch64-linux";
+    version = "0.10.81";
+    src = fetchurl {
+      url = "https://files.pythonhosted.org/packages/py3/n/nmem-cli/nmem_cli-0.10.81-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl";
+      sha256 = "sha256-KrlklDSLZMmoVOb83/oKxbyurKOsZjuOaBqcmVnZs6Y=";
+    };
+  };
+  nmem-cli-x86_64-darwin = {
+    pname = "nmem-cli-x86_64-darwin";
+    version = "0.10.81";
+    src = fetchurl {
+      url = "https://files.pythonhosted.org/packages/py3/n/nmem-cli/nmem_cli-0.10.81-py3-none-macosx_10_12_x86_64.whl";
+      sha256 = "sha256-B0zw8THLwMXLfl9AXbQD5G664rxsdrfxA0m9qULrDjA=";
+    };
+  };
   octopus-api = {
     pname = "octopus-api";
     version = "7b7a4801fa501f9244a1d9dfb47da56d1600b970";

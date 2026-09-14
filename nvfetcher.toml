@@ -222,6 +222,24 @@ fetch.github = "herdrdev/herdr"
 git.fetch_submodules = false
 git.get_commit_date = true
 
+# nmem-cli - prebuilt Rust CLI distributed as platform wheels on PyPI.
+# Keep all four entries together so nvfetcher owns every platform hash.
+[nmem-cli]
+src.pypi = "nmem-cli"
+fetch.url = "https://files.pythonhosted.org/packages/py3/n/nmem-cli/nmem_cli-$ver-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+
+[nmem-cli-aarch64-linux]
+src.pypi = "nmem-cli"
+fetch.url = "https://files.pythonhosted.org/packages/py3/n/nmem-cli/nmem_cli-$ver-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl"
+
+[nmem-cli-x86_64-darwin]
+src.pypi = "nmem-cli"
+fetch.url = "https://files.pythonhosted.org/packages/py3/n/nmem-cli/nmem_cli-$ver-py3-none-macosx_10_12_x86_64.whl"
+
+[nmem-cli-aarch64-darwin]
+src.pypi = "nmem-cli"
+fetch.url = "https://files.pythonhosted.org/packages/py3/n/nmem-cli/nmem_cli-$ver-py3-none-macosx_11_0_arm64.whl"
+
 # sdbd - lightweight Android Debug Bridge daemon (track master directly)
 [sdbd]
 src.git = "https://github.com/openbfdev/sdbd.git"
