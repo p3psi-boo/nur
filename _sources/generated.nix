@@ -59,6 +59,17 @@
     };
     date = "2026-08-20";
   };
+  codex-auth = {
+    pname = "codex-auth";
+    version = "v0.3.0";
+    src = fetchFromGitHub {
+      owner = "loongphy";
+      repo = "codex-auth";
+      rev = "v0.3.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-TrJtVP4gRdupx6StKWc2PIXoVnnlFMUqFw6JtEmWqZ4=";
+    };
+  };
   coe = {
     pname = "coe";
     version = "c326261675a2455e6dd8c22576681e91644600ef";

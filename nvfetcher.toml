@@ -252,3 +252,9 @@ git.get_commit_date = true
 src.github_tag = "ellite/Wallos"
 src.include_regex = '^v[0-9]+\.[0-9]+\.[0-9]+$'
 fetch.github = "ellite/Wallos"
+
+# codex-auth - CLI for switching Codex accounts
+[codex-auth]
+src.github_tag = "loongphy/codex-auth"
+src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
+fetch.github = "loongphy/codex-auth"
