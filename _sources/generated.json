@@ -381,6 +381,27 @@
         },
         "version": "48995806bf1aa1c9c41bb8dff6b5ddd698539311"
     },
+    "linear-cli": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "linear-cli",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "schpet",
+            "repo": "linear-cli",
+            "rev": "v2.6.0",
+            "sha256": "sha256-wInqzwamLoWgIU6qDaOjgblBuqUJRQmhs5xg4+Npabo=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v2.6.0"
+    },
     "mebox": {
         "cargoLock": null,
         "date": null,

@@ -247,6 +247,17 @@
     };
     date = "2025-11-28";
   };
+  linear-cli = {
+    pname = "linear-cli";
+    version = "v2.6.0";
+    src = fetchFromGitHub {
+      owner = "schpet";
+      repo = "linear-cli";
+      rev = "v2.6.0";
+      fetchSubmodules = false;
+      sha256 = "sha256-wInqzwamLoWgIU6qDaOjgblBuqUJRQmhs5xg4+Npabo=";
+    };
+  };
   mebox = {
     pname = "mebox";
     version = "mebox-v0.1.91";
