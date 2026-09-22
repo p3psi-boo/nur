@@ -177,6 +177,18 @@
     };
     date = "2026-09-14";
   };
+  icloud-privacy-mail-v2 = {
+    pname = "icloud-privacy-mail-v2";
+    version = "4ec96e0ea1e026b81c7efa03db19332790f02e64";
+    src = fetchFromGitHub {
+      owner = "xiuxiu56";
+      repo = "iCloud-Privacy-Mail-v2";
+      rev = "4ec96e0ea1e026b81c7efa03db19332790f02e64";
+      fetchSubmodules = false;
+      sha256 = "sha256-LcTnIcv5il3Go9nFUhFJbp5euGtMmqZ8smso7ALFNRY=";
+    };
+    date = "2026-08-29";
+  };
   ironet = {
     pname = "ironet";
     version = "f9d656b86d31bd56ffc347e58341fffc5490eab5";

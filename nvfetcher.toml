@@ -1,4 +1,10 @@
 
+[icloud-privacy-mail-v2]
+src.git = "https://github.com/xiuxiu56/iCloud-Privacy-Mail-v2.git"
+src.branch = "main"
+fetch.github = "xiuxiu56/iCloud-Privacy-Mail-v2"
+git.get_commit_date = true
+
 [einat]
 src.git = "https://github.com/EHfive/einat-ebpf.git"
 fetch.git = "https://github.com/EHfive/einat-ebpf.git"

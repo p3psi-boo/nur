@@ -281,6 +281,27 @@
         },
         "version": "c77af1892ff121736ecb103b32d504d6f1b31805"
     },
+    "icloud-privacy-mail-v2": {
+        "cargoLock": null,
+        "date": "2026-08-29",
+        "extract": null,
+        "name": "icloud-privacy-mail-v2",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "xiuxiu56",
+            "repo": "iCloud-Privacy-Mail-v2",
+            "rev": "4ec96e0ea1e026b81c7efa03db19332790f02e64",
+            "sha256": "sha256-LcTnIcv5il3Go9nFUhFJbp5euGtMmqZ8smso7ALFNRY=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "4ec96e0ea1e026b81c7efa03db19332790f02e64"
+    },
     "ironet": {
         "cargoLock": null,
         "date": "2026-09-02",
