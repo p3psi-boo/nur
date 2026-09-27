@@ -6,6 +6,14 @@
   dockerTools,
 }:
 {
+  activitywatch-bin = {
+    pname = "activitywatch-bin";
+    version = "v0.14.0b8";
+    src = fetchurl {
+      url = "https://github.com/ActivityWatch/activitywatch/releases/download/v0.14.0b8/activitywatch-v0.14.0b8-macos-arm64.dmg";
+      sha256 = "sha256-BrT1I++dfGPb5UwYNuKKGa7GjjUOrShVpYEMM/Sk8CY=";
+    };
+  };
   agentreach = {
     pname = "agentreach";
     version = "v0.6.0";

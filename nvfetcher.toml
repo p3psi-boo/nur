@@ -5,6 +5,11 @@ src.branch = "main"
 fetch.github = "xiuxiu56/iCloud-Privacy-Mail-v2"
 git.get_commit_date = true
 
+[activitywatch-bin]
+# Pin the Apple Silicon prerelease until a newer macOS build is verified.
+src.manual = "v0.14.0b8"
+fetch.url = "https://github.com/ActivityWatch/activitywatch/releases/download/$ver/activitywatch-$ver-macos-arm64.dmg"
+
 [einat]
 src.git = "https://github.com/EHfive/einat-ebpf.git"
 fetch.git = "https://github.com/EHfive/einat-ebpf.git"

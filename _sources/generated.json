@@ -1,4 +1,19 @@
 {
+    "activitywatch-bin": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "activitywatch-bin",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-BrT1I++dfGPb5UwYNuKKGa7GjjUOrShVpYEMM/Sk8CY=",
+            "type": "url",
+            "url": "https://github.com/ActivityWatch/activitywatch/releases/download/v0.14.0b8/activitywatch-v0.14.0b8-macos-arm64.dmg"
+        },
+        "version": "v0.14.0b8"
+    },
     "agentreach": {
         "cargoLock": null,
         "date": null,
