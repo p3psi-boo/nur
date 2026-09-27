@@ -35,6 +35,27 @@
         },
         "version": "v0.6.0"
     },
+    "aw-watcher-herdr": {
+        "cargoLock": null,
+        "date": "2026-09-27",
+        "extract": null,
+        "name": "aw-watcher-herdr",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "p3psi-boo",
+            "repo": "aw-watcher-herdr",
+            "rev": "590f5599b91d2868f66d640d4a2c1820c7e97e39",
+            "sha256": "sha256-JTq6SgD4eHojPpCVXEzIizHKVkcRQhGBH3NGswJGi2o=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "590f5599b91d2868f66d640d4a2c1820c7e97e39"
+    },
     "celld": {
         "cargoLock": null,
         "date": null,

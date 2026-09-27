@@ -5,6 +5,12 @@ src.branch = "main"
 fetch.github = "xiuxiu56/iCloud-Privacy-Mail-v2"
 git.get_commit_date = true
 
+[aw-watcher-herdr]
+src.git = "https://github.com/p3psi-boo/aw-watcher-herdr.git"
+src.branch = "master"
+fetch.github = "p3psi-boo/aw-watcher-herdr"
+git.get_commit_date = true
+
 [activitywatch-bin]
 # Pin the Apple Silicon prerelease until a newer macOS build is verified.
 src.manual = "v0.14.0b8"
