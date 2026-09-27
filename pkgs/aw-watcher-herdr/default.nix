@@ -25,8 +25,6 @@ buildGoModule {
 
   postInstall = ''
     install -Dm644 README.md "$out/share/doc/aw-watcher-herdr/README.md"
-    install -Dm644 examples/org.activitywatch.herdr.plist \
-      "$out/share/doc/aw-watcher-herdr/org.activitywatch.herdr.plist"
   '';
 
   meta = {

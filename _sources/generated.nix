@@ -27,15 +27,15 @@
   };
   aw-watcher-herdr = {
     pname = "aw-watcher-herdr";
-    version = "590f5599b91d2868f66d640d4a2c1820c7e97e39";
+    version = "71767b53b1b3c74d9f31b3879b39026198ed4665";
     src = fetchFromGitHub {
       owner = "p3psi-boo";
       repo = "aw-watcher-herdr";
-      rev = "590f5599b91d2868f66d640d4a2c1820c7e97e39";
+      rev = "71767b53b1b3c74d9f31b3879b39026198ed4665";
       fetchSubmodules = false;
-      sha256 = "sha256-JTq6SgD4eHojPpCVXEzIizHKVkcRQhGBH3NGswJGi2o=";
+      sha256 = "sha256-/FDKCFZv1ag+xdHiNK3WwUYywjTFOgkRtDa7yBs9Tt4=";
     };
-    date = "2026-09-27";
+    date = "2026-09-28";
   };
   celld = {
     pname = "celld";

@@ -37,7 +37,7 @@
     },
     "aw-watcher-herdr": {
         "cargoLock": null,
-        "date": "2026-09-27",
+        "date": "2026-09-28",
         "extract": null,
         "name": "aw-watcher-herdr",
         "passthru": null,
@@ -49,12 +49,12 @@
             "name": null,
             "owner": "p3psi-boo",
             "repo": "aw-watcher-herdr",
-            "rev": "590f5599b91d2868f66d640d4a2c1820c7e97e39",
-            "sha256": "sha256-JTq6SgD4eHojPpCVXEzIizHKVkcRQhGBH3NGswJGi2o=",
+            "rev": "71767b53b1b3c74d9f31b3879b39026198ed4665",
+            "sha256": "sha256-/FDKCFZv1ag+xdHiNK3WwUYywjTFOgkRtDa7yBs9Tt4=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "590f5599b91d2868f66d640d4a2c1820c7e97e39"
+        "version": "71767b53b1b3c74d9f31b3879b39026198ed4665"
     },
     "celld": {
         "cargoLock": null,
