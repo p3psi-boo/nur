@@ -1,14 +1,13 @@
 {
   buildGoModule,
   generated,
-  go_1_25,
   lib,
 }:
 
 let
   sourceInfo = generated.subs-check;
 in
-(buildGoModule.override { go = go_1_25; }) (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "subs-check";
   version = "0-unstable-${sourceInfo.date}";
 

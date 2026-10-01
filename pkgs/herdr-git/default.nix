@@ -4,6 +4,7 @@
   rustPlatform,
   zig_0_16,
   installShellFiles,
+  lld,
   cctools,
   xcbuild,
   generated,
@@ -33,12 +34,16 @@ rustPlatform.buildRustPackage (finalAttrs: {
     zig_0_16.hook
     installShellFiles
   ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [ lld ]
   ++ lib.optionals stdenv.hostPlatform.isDarwin [
     cctools
     xcbuild
   ];
 
   doCheck = false;
+
+  # GNU ld rejects overlapping FDEs in the bundled Zig-built libghostty-vt.
+  env.NIX_CFLAGS_LINK = lib.optionalString stdenv.hostPlatform.isLinux "-fuse-ld=lld";
 
   dontUseZigBuild = true;
   dontUseZigCheck = true;

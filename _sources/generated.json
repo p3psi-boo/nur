@@ -28,12 +28,12 @@
             "name": null,
             "owner": "bojieli",
             "repo": "agentreach",
-            "rev": "v0.6.0",
-            "sha256": "sha256-SgR7gXaD/lxaUCXVvozPckrZImpbdAigcSxDgEn+zSc=",
+            "rev": "v0.8.0",
+            "sha256": "sha256-PL+YtRf+5L2j7WgpDNQn4DssPwGbA95iWKqNJ+U3FME=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.6.0"
+        "version": "v0.8.0"
     },
     "aw-watcher-herdr": {
         "cargoLock": null,
@@ -70,12 +70,12 @@
             "name": null,
             "owner": "denoland",
             "repo": "celld",
-            "rev": "v0.4.1",
-            "sha256": "sha256-7/f6ZNaz/8IUqCwl0qD4kuOpmBnibKr4LzCkE6it3ZM=",
+            "rev": "v0.6.0",
+            "sha256": "sha256-xMiycSvRuhY4v4pqvf+ASHtXoOH0qRgwsvXPadOLRnM=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v0.4.1"
+        "version": "v0.6.0"
     },
     "cliproxyapi": {
         "cargoLock": null,
@@ -91,12 +91,12 @@
             "name": null,
             "owner": "router-for-me",
             "repo": "CLIProxyAPI",
-            "rev": "v7.3.1",
-            "sha256": "sha256-ELyKLvuB+ADjJKLT8yWGlPDEDV4gqIsgP73ZP2AetVM=",
+            "rev": "v8.0.8",
+            "sha256": "sha256-FfkxVBzw3BCVUku4+U6ICC9fgmTOV7DAKUr54Ln90HM=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v7.3.1"
+        "version": "v8.0.8"
     },
     "cloakbrowser": {
         "cargoLock": null,
@@ -238,7 +238,7 @@
     },
     "einat": {
         "cargoLock": null,
-        "date": "2026-06-27",
+        "date": "2026-09-20",
         "extract": null,
         "name": "einat",
         "passthru": null,
@@ -248,17 +248,17 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "30e6af3740e279efb254568c0ec1ad54c0cccd35",
-            "sha256": "sha256-QPvyJGd35V5D8Q9mZUPNt8kfpG75qNHxr30oQkfDcV0=",
+            "rev": "ba647ce61bd6bdf2cb693961a82b88c442ef049a",
+            "sha256": "sha256-/Q95r3z67tcuChrYv3uBXzbablopLZNfzZHhsl1y2eQ=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/EHfive/einat-ebpf.git"
         },
-        "version": "30e6af3740e279efb254568c0ec1ad54c0cccd35"
+        "version": "ba647ce61bd6bdf2cb693961a82b88c442ef049a"
     },
     "focaltech-fingerprint": {
         "cargoLock": null,
-        "date": "2025-10-21",
+        "date": "2026-09-17",
         "extract": null,
         "name": "focaltech-fingerprint",
         "passthru": null,
@@ -268,13 +268,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "d4fbbf901aff44b92d4fa212d9b99e43cda00563",
-            "sha256": "sha256-0mnXEQjSWUrz8uSwaeWH6uLLZtGnSUx5OPBxjPNxFTs=",
+            "rev": "510473c10a16ff37820b2db1d8ef2d2b08ad005d",
+            "sha256": "sha256-v1CzRLZ4u+zdQXezt9rVy63RMp1gM/id1S7bRwcBDEA=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/vobademi/FTEXX00-Ubuntu.git"
         },
-        "version": "d4fbbf901aff44b92d4fa212d9b99e43cda00563"
+        "version": "510473c10a16ff37820b2db1d8ef2d2b08ad005d"
     },
     "fusion": {
         "cargoLock": null,
@@ -298,7 +298,7 @@
     },
     "herdr-git": {
         "cargoLock": null,
-        "date": "2026-09-14",
+        "date": "2026-10-01",
         "extract": null,
         "name": "herdr-git",
         "passthru": null,
@@ -310,12 +310,12 @@
             "name": null,
             "owner": "herdrdev",
             "repo": "herdr",
-            "rev": "c77af1892ff121736ecb103b32d504d6f1b31805",
-            "sha256": "sha256-jQOc9DXCtJPefRvzHw7yGVk2upx7rfpA4aiFiYvdeO0=",
+            "rev": "d6b40d4edd550ccea081f089605a64314f8c8b27",
+            "sha256": "sha256-AiruvCcV2wdbAU06TldsWj3i7LmKvH9NuTnlCY90ik0=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "c77af1892ff121736ecb103b32d504d6f1b31805"
+        "version": "d6b40d4edd550ccea081f089605a64314f8c8b27"
     },
     "icloud-privacy-mail-v2": {
         "cargoLock": null,
@@ -360,7 +360,7 @@
     },
     "komari": {
         "cargoLock": null,
-        "date": "2026-09-04",
+        "date": "2026-09-28",
         "extract": null,
         "name": "komari",
         "passthru": null,
@@ -370,17 +370,17 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "b11ffd3aa7cca03502a75eb64ecbe827d6831d3a",
-            "sha256": "sha256-JZ8dCts/cKBE4AZ1Kd+7VavOZ0PmuzvLWWT/XZ/7Sbk=",
+            "rev": "39cb3f59b2837e8d052203bfbbf3187888e5fa4c",
+            "sha256": "sha256-Wlrfp0MyI9cut2lsoMtzfARRUsm3TDQCUxWbnNahkPk=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/komari-monitor/komari.git"
         },
-        "version": "b11ffd3aa7cca03502a75eb64ecbe827d6831d3a"
+        "version": "39cb3f59b2837e8d052203bfbbf3187888e5fa4c"
     },
     "komari-agent-zig": {
         "cargoLock": null,
-        "date": "2026-09-06",
+        "date": "2026-09-30",
         "extract": null,
         "name": "komari-agent-zig",
         "passthru": null,
@@ -390,17 +390,17 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "6fc0051a8dbde46a614ba929e19af86ae31d9021",
-            "sha256": "sha256-8D5Lpt9hqVJUfhCjmgZcfom1PCm7ycb47WuSGxB5UuY=",
+            "rev": "28a96ce98ce81d6c2aa4e1a33d74bfcf7dbc4fd1",
+            "sha256": "sha256-RX8XfZaYlGGzo3TZQV/2HPlPkhDTk4Rg/TWgrIPZHoA=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/luodaoyi/komari-zig-agent.git"
         },
-        "version": "6fc0051a8dbde46a614ba929e19af86ae31d9021"
+        "version": "28a96ce98ce81d6c2aa4e1a33d74bfcf7dbc4fd1"
     },
     "komari-web": {
         "cargoLock": null,
-        "date": "2026-09-09",
+        "date": "2026-09-24",
         "extract": null,
         "name": "komari-web",
         "passthru": null,
@@ -410,13 +410,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "83b42c3c4b2a52b546005ecf4cd534a3bd9d4c5b",
-            "sha256": "sha256-Jar8tcnmsmqcfltGVKtlD++sT+vZzi1hcxBd8FaBNgw=",
+            "rev": "0321789bc1989e53df729dfc98bed2a2800c39c6",
+            "sha256": "sha256-ZJn+Grwfg2p813QQ87w39xk4lEbQsT/SbCal8lIcd3o=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/komari-monitor/komari-web.git"
         },
-        "version": "83b42c3c4b2a52b546005ecf4cd534a3bd9d4c5b"
+        "version": "0321789bc1989e53df729dfc98bed2a2800c39c6"
     },
     "lazyssh": {
         "cargoLock": null,
@@ -473,12 +473,12 @@
             "name": null,
             "owner": "truewhile",
             "repo": "MeBox",
-            "rev": "mebox-v0.1.91",
-            "sha256": "sha256-OvCVvTJLMJBux+d4rKOTMkHC7lvfkzBTIvQU5+0hzLo=",
+            "rev": "mebox-v0.1.157",
+            "sha256": "sha256-QfeKkUlrjjt62cwJxV8+70mGafZnJHAfhF18L+RGayU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "mebox-v0.1.91"
+        "version": "mebox-v0.1.157"
     },
     "micyou": {
         "cargoLock": null,
@@ -503,7 +503,7 @@
     },
     "n9router": {
         "cargoLock": null,
-        "date": "2026-09-11",
+        "date": "2026-09-22",
         "extract": null,
         "name": "n9router",
         "passthru": null,
@@ -513,13 +513,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "9d2e4a2093c8fdc9fbd8a90b44d69c98ee0f40d3",
-            "sha256": "sha256-Q/Z2SPODwrANyGjjZIMgh81XMmprF4B/7xRDVh8sV3k=",
+            "rev": "647ddecea0eb7abf67ae70284e762f9593c67da8",
+            "sha256": "sha256-dERlmXHbHatS+8CS13MdLnYuk1WPqglxfnTOq6kbU/A=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/nightwalker89/n9router.git"
         },
-        "version": "9d2e4a2093c8fdc9fbd8a90b44d69c98ee0f40d3"
+        "version": "647ddecea0eb7abf67ae70284e762f9593c67da8"
     },
     "nmem-cli": {
         "cargoLock": null,
@@ -530,11 +530,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-0mV+C9KccBLDuw5jVXN9vsZbpzIy9QE4HUIo8pFt8BA=",
+            "sha256": "sha256-TkWc37D+NMn5uO+c3nVk9KfmCMP4At65/MQkSwNc+n8=",
             "type": "url",
-            "url": "https://files.pythonhosted.org/packages/py3/n/nmem-cli/nmem_cli-0.10.81-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+            "url": "https://files.pythonhosted.org/packages/py3/n/nmem-cli/nmem_cli-0.10.88-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
         },
-        "version": "0.10.81"
+        "version": "0.10.88"
     },
     "nmem-cli-aarch64-darwin": {
         "cargoLock": null,
@@ -545,11 +545,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-VoxWPEIHhzAq+lDPa9c+IUqyBVGpnxuQDOCYa78GKPY=",
+            "sha256": "sha256-juFZ/sp/5PmEa4pwGgLXZashI6eAUmTqlrxBzFgYtNo=",
             "type": "url",
-            "url": "https://files.pythonhosted.org/packages/py3/n/nmem-cli/nmem_cli-0.10.81-py3-none-macosx_11_0_arm64.whl"
+            "url": "https://files.pythonhosted.org/packages/py3/n/nmem-cli/nmem_cli-0.10.88-py3-none-macosx_11_0_arm64.whl"
         },
-        "version": "0.10.81"
+        "version": "0.10.88"
     },
     "nmem-cli-aarch64-linux": {
         "cargoLock": null,
@@ -560,11 +560,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-KrlklDSLZMmoVOb83/oKxbyurKOsZjuOaBqcmVnZs6Y=",
+            "sha256": "sha256-pDrr1HN3j9/9Y6jyM7Pm72FkRJfTOnSgPmwTouTvIXc=",
             "type": "url",
-            "url": "https://files.pythonhosted.org/packages/py3/n/nmem-cli/nmem_cli-0.10.81-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl"
+            "url": "https://files.pythonhosted.org/packages/py3/n/nmem-cli/nmem_cli-0.10.88-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl"
         },
-        "version": "0.10.81"
+        "version": "0.10.88"
     },
     "nmem-cli-x86_64-darwin": {
         "cargoLock": null,
@@ -575,11 +575,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-B0zw8THLwMXLfl9AXbQD5G664rxsdrfxA0m9qULrDjA=",
+            "sha256": "sha256-lRr9sBu04g+EoQ4Z699aNR7YpeHLgcPdDAuV8gMlky0=",
             "type": "url",
-            "url": "https://files.pythonhosted.org/packages/py3/n/nmem-cli/nmem_cli-0.10.81-py3-none-macosx_10_12_x86_64.whl"
+            "url": "https://files.pythonhosted.org/packages/py3/n/nmem-cli/nmem_cli-0.10.88-py3-none-macosx_10_12_x86_64.whl"
         },
-        "version": "0.10.81"
+        "version": "0.10.88"
     },
     "octopus-api": {
         "cargoLock": null,
@@ -941,12 +941,12 @@
             "name": null,
             "owner": "ellite",
             "repo": "Wallos",
-            "rev": "v5.7.1",
-            "sha256": "sha256-1XSUkqcCpXtCIeCgmvFLc3YXXfpvMCCY9DD3Ct0aYng=",
+            "rev": "v5.8.2",
+            "sha256": "sha256-tUQgaicZ1d3vMRhvIzKQ68HKs/dqWzbBwGoudVo3FSc=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "v5.7.1"
+        "version": "v5.8.2"
     },
     "wxmp_searxng": {
         "cargoLock": null,

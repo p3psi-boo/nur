@@ -48,7 +48,7 @@ let
     pname = "komari";
     version = backendVersion;
     inherit (generated.komari) src;
-    vendorHash = "sha256-tnB4wcWZK7WmLG80CkHpJq9SqksOofgjxUL5qa8DtoE=";
+    vendorHash = "sha256-k7rJk1oxhU2CQigiJrPSn2YJYvNIFxJd1k9lm4hdyCA=";
 
     env = {
       CGO_ENABLED = "1";

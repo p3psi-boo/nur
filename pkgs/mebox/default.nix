@@ -5,7 +5,6 @@
   buildGoModule,
   buildNpmPackage,
   generated,
-  go_1_25,
   nodejs_22,
   makeBinaryWrapper,
   ffmpeg-headless,
@@ -21,7 +20,7 @@ let
     inherit (sourceInfo) src;
     sourceRoot = "${sourceInfo.src.name}/web";
 
-    npmDepsHash = "sha256-5pfajjjr9/sq0MoVCNxQmB8DYLbxyFUOFqQb6M8KTdU=";
+    npmDepsHash = "sha256-4WXlMtpKBBcBmw9c3I4l/N1zEe+GvR7W1b8SPHyGodA=";
 
     env.CI = "true";
 
@@ -40,12 +39,12 @@ let
     };
   };
 in
-(buildGoModule.override { go = go_1_25; }) {
+buildGoModule {
   pname = "mebox";
   inherit version;
   inherit (sourceInfo) src;
 
-  vendorHash = "sha256-OaALK2dpiiN3ZKTy+seJ3btiPymccU9LZ+sby5F0Lq8=";
+  vendorHash = "sha256-eYFx90HO/pgPzmxQwzScycgUtkBdlS8tpz16OOVHKH0=";
 
   subPackages = [ "cmd/server" ];
 
