@@ -64,7 +64,9 @@
         system:
         let
           pkgs = pkgsFor system;
-          repo = import ./repo.nix { inherit pkgs; };
+          repo = lib.filterAttrs (_: package: lib.meta.availableOn pkgs.stdenv.hostPlatform package) (
+            import ./repo.nix { inherit pkgs; }
+          );
         in
         repo // {
           default = pkgs.lazyssh;

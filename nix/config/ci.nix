@@ -8,4 +8,4 @@
 let
   repo = import ../../repo.nix { inherit pkgs lib; };
 in
-lib.filterAttrs (_: v: lib.isDerivation v) repo
+lib.filterAttrs (_: v: lib.isDerivation v && lib.meta.availableOn pkgs.stdenv.hostPlatform v) repo
