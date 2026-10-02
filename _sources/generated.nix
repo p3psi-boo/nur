@@ -209,20 +209,6 @@
     };
     date = "2026-08-29";
   };
-  ironet = {
-    pname = "ironet";
-    version = "f9d656b86d31bd56ffc347e58341fffc5490eab5";
-    src = fetchgit {
-      url = "https://github.com/p3psi-boo/ironet.git";
-      rev = "f9d656b86d31bd56ffc347e58341fffc5490eab5";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-XYl+7nJJ73Svcgq65COxfgIdk9nIDjF2Zz+fjrs5jeQ=";
-    };
-    date = "2026-09-02";
-  };
   komari = {
     pname = "komari";
     version = "39cb3f59b2837e8d052203bfbbf3187888e5fa4c";
