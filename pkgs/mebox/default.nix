@@ -44,7 +44,7 @@ buildGoModule {
   inherit version;
   inherit (sourceInfo) src;
 
-  vendorHash = "sha256-eYFx90HO/pgPzmxQwzScycgUtkBdlS8tpz16OOVHKH0=";
+  vendorHash = "sha256-5/2TmyTYmn5OAgjKF/AMOkr91Xsjcn+HzWT0gkHTziY=";
 
   subPackages = [ "cmd/server" ];
 
