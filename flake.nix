@@ -27,7 +27,8 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, ... }:
+  outputs =
+    inputs@{ self, nixpkgs, ... }:
     let
       lib = nixpkgs.lib;
       packageSystems = [
@@ -44,7 +45,8 @@
       forAllCheckSystems = lib.genAttrs checkSystems;
       nixpkgsConfig = import ./nix/config/nixpkgs.nix;
 
-      pkgsFor = system:
+      pkgsFor =
+        system:
         import nixpkgs {
           inherit system;
           config = nixpkgsConfig;
@@ -58,8 +60,6 @@
       overlays.default = import ./overlay.nix { inherit inputs; };
       overlay = self.overlays.default;
 
-      nixosModules.wallos = import ./modules/wallos.nix;
-
       packages = forAllPackageSystems (
         system:
         let
@@ -68,7 +68,8 @@
             import ./repo.nix { inherit pkgs; }
           );
         in
-        repo // {
+        repo
+        // {
           default = pkgs.lazyssh;
         }
       );
@@ -77,9 +78,6 @@
         system:
         import ./nix/config/ci.nix {
           pkgs = pkgsFor system;
-        }
-        // lib.optionalAttrs (pkgsFor system).stdenv.hostPlatform.isLinux {
-          wallos-module = import ./nix/tests/wallos.nix { pkgs = pkgsFor system; };
         }
       );
 

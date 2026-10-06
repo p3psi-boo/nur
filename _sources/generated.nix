@@ -39,24 +39,24 @@
   };
   celld = {
     pname = "celld";
-    version = "v0.6.0";
+    version = "v0.6.1";
     src = fetchFromGitHub {
       owner = "denoland";
       repo = "celld";
-      rev = "v0.6.0";
+      rev = "v0.6.1";
       fetchSubmodules = false;
-      sha256 = "sha256-xMiycSvRuhY4v4pqvf+ASHtXoOH0qRgwsvXPadOLRnM=";
+      sha256 = "sha256-/bGMzxYiIh82AeTKhbtIeWF1UlIknIxH0YpI4H18Wws=";
     };
   };
   cliproxyapi = {
     pname = "cliproxyapi";
-    version = "v8.0.8";
+    version = "v8.0.16";
     src = fetchFromGitHub {
       owner = "router-for-me";
       repo = "CLIProxyAPI";
-      rev = "v8.0.8";
+      rev = "v8.0.16";
       fetchSubmodules = false;
-      sha256 = "sha256-FfkxVBzw3BCVUku4+U6ICC9fgmTOV7DAKUr54Ln90HM=";
+      sha256 = "sha256-eBWqOqWkvaONEut28hUHOmuc4JcZBp2SCEnXT2CAxS4=";
     };
   };
   cloakbrowser = {
@@ -187,15 +187,15 @@
   };
   herdr-git = {
     pname = "herdr-git";
-    version = "d6b40d4edd550ccea081f089605a64314f8c8b27";
+    version = "3d9d2b18dab139ba226ebc5a1c9a9f2c9c3ee4df";
     src = fetchFromGitHub {
       owner = "herdrdev";
       repo = "herdr";
-      rev = "d6b40d4edd550ccea081f089605a64314f8c8b27";
+      rev = "3d9d2b18dab139ba226ebc5a1c9a9f2c9c3ee4df";
       fetchSubmodules = false;
-      sha256 = "sha256-AiruvCcV2wdbAU06TldsWj3i7LmKvH9NuTnlCY90ik0=";
+      sha256 = "sha256-z1i72jg4QeR8+tQGaOalCT/jHxgbg3fTO9Y0EjWKWTQ=";
     };
-    date = "2026-10-01";
+    date = "2026-10-06";
   };
   icloud-privacy-mail-v2 = {
     pname = "icloud-privacy-mail-v2";
@@ -278,24 +278,24 @@
   };
   mebox = {
     pname = "mebox";
-    version = "mebox-v0.1.157";
+    version = "mebox-v0.1.182";
     src = fetchFromGitHub {
       owner = "truewhile";
       repo = "MeBox";
-      rev = "mebox-v0.1.157";
+      rev = "mebox-v0.1.182";
       fetchSubmodules = false;
-      sha256 = "sha256-QfeKkUlrjjt62cwJxV8+70mGafZnJHAfhF18L+RGayU=";
+      sha256 = "sha256-htEh4OUX5J204dViQwHVjzklSN/lVf8wieWbLptants=";
     };
   };
   micyou = {
     pname = "micyou";
-    version = "v2.0.3";
+    version = "v2.1.0";
     src = fetchFromGitHub {
       owner = "LanRhyme";
       repo = "MicYou";
-      rev = "v2.0.3";
+      rev = "v2.1.0";
       fetchSubmodules = false;
-      sha256 = "sha256-3n+FaKV1NyQXqf4MOrzdw98Qa6fGUZt8wu7Q1YfSyVg=";
+      sha256 = "sha256-OoIamslISIxH1VNTOmKqyibJWUQelOL/fcUHxywTEzY=";
     };
   };
   n9router = {
@@ -564,17 +564,6 @@
       sha256 = "sha256-ng8l/4FfuEgW6QIJFlD62XYXG00/mVdnEbTvdDZN7SA=";
     };
     date = "2026-08-06";
-  };
-  wallos = {
-    pname = "wallos";
-    version = "v5.8.2";
-    src = fetchFromGitHub {
-      owner = "ellite";
-      repo = "Wallos";
-      rev = "v5.8.2";
-      fetchSubmodules = false;
-      sha256 = "sha256-tUQgaicZ1d3vMRhvIzKQ68HKs/dqWzbBwGoudVo3FSc=";
-    };
   };
   wxmp_searxng = {
     pname = "wxmp_searxng";
