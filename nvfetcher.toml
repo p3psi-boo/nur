@@ -238,6 +238,14 @@ fetch.github = "herdrdev/herdr"
 git.fetch_submodules = false
 git.get_commit_date = true
 
+# firefox-vpn-client - Firefox VPN SOCKS5 client
+[firefox-vpn-client]
+src.git = "https://github.com/UjuiUjuMandan/firefox-vpn-client.git"
+src.branch = "master"
+fetch.github = "UjuiUjuMandan/firefox-vpn-client"
+git.fetch_submodules = false
+git.get_commit_date = true
+
 # nmem-cli - prebuilt Rust CLI distributed as platform wheels on PyPI.
 # Keep all four entries together so nvfetcher owns every platform hash.
 [nmem-cli]

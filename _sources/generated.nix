@@ -157,6 +157,18 @@
     };
     date = "2026-09-20";
   };
+  firefox-vpn-client = {
+    pname = "firefox-vpn-client";
+    version = "5b29eebc2766ac1cac2979693c56a8dfbad32430";
+    src = fetchFromGitHub {
+      owner = "UjuiUjuMandan";
+      repo = "firefox-vpn-client";
+      rev = "5b29eebc2766ac1cac2979693c56a8dfbad32430";
+      fetchSubmodules = false;
+      sha256 = "sha256-0TNJLbyQDipIb89anIhPHFmZrD1XXZl643JkgbzWVx4=";
+    };
+    date = "2026-08-22";
+  };
   focaltech-fingerprint = {
     pname = "focaltech-fingerprint";
     version = "510473c10a16ff37820b2db1d8ef2d2b08ad005d";

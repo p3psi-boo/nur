@@ -256,6 +256,27 @@
         },
         "version": "ba647ce61bd6bdf2cb693961a82b88c442ef049a"
     },
+    "firefox-vpn-client": {
+        "cargoLock": null,
+        "date": "2026-08-22",
+        "extract": null,
+        "name": "firefox-vpn-client",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "UjuiUjuMandan",
+            "repo": "firefox-vpn-client",
+            "rev": "5b29eebc2766ac1cac2979693c56a8dfbad32430",
+            "sha256": "sha256-0TNJLbyQDipIb89anIhPHFmZrD1XXZl643JkgbzWVx4=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "5b29eebc2766ac1cac2979693c56a8dfbad32430"
+    },
     "focaltech-fingerprint": {
         "cargoLock": null,
         "date": "2026-09-17",
