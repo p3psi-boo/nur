@@ -474,17 +474,17 @@
   };
   sing-box-tui = {
     pname = "sing-box-tui";
-    version = "c08ad7b3c3e139237cafcb3b6a00fa764e480a7a";
+    version = "c16c51e4e22861935f6cd57e6dc59a434cd8b384";
     src = fetchgit {
       url = "https://github.com/p3psi-boo/sing-box-tui.git";
-      rev = "c08ad7b3c3e139237cafcb3b6a00fa764e480a7a";
+      rev = "c16c51e4e22861935f6cd57e6dc59a434cd8b384";
       fetchSubmodules = false;
       deepClone = false;
       leaveDotGit = false;
       sparseCheckout = [ ];
-      sha256 = "sha256-PR1dm1FI9XxEWAbY/e7ZD3rQhkDVqJcul/dQ8sLBlQ8=";
+      sha256 = "sha256-eY0kTvvtuc/OGZ870m/odu4m1GyWuV7dC2tGDNzrhII=";
     };
-    date = "2026-09-26";
+    date = "2026-10-08";
   };
   sofixer = {
     pname = "sofixer";
