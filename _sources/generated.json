@@ -460,6 +460,27 @@
         },
         "version": "v2.6.0"
     },
+    "mcpjungle": {
+        "cargoLock": null,
+        "date": "2026-10-08",
+        "extract": null,
+        "name": "mcpjungle",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "p3psi-boo",
+            "repo": "MCPJungle",
+            "rev": "9512d31382b6b14edc6f98931537de5c137bc6b8",
+            "sha256": "sha256-m/ChdIBiteyYTvfu4pGZpS+ABhvoYyqHMDQbNhhgUzQ=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "9512d31382b6b14edc6f98931537de5c137bc6b8"
+    },
     "mebox": {
         "cargoLock": null,
         "date": null,

@@ -238,6 +238,14 @@ fetch.github = "herdrdev/herdr"
 git.fetch_submodules = false
 git.get_commit_date = true
 
+# MCPJungle - self-hosted gateway for managing MCP servers
+[mcpjungle]
+src.git = "https://github.com/p3psi-boo/MCPJungle.git"
+src.branch = "main"
+fetch.github = "p3psi-boo/MCPJungle"
+git.fetch_submodules = false
+git.get_commit_date = true
+
 # firefox-vpn-client - Firefox VPN SOCKS5 client
 [firefox-vpn-client]
 src.git = "https://github.com/UjuiUjuMandan/firefox-vpn-client.git"

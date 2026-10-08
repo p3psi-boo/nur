@@ -288,6 +288,18 @@
       sha256 = "sha256-wInqzwamLoWgIU6qDaOjgblBuqUJRQmhs5xg4+Npabo=";
     };
   };
+  mcpjungle = {
+    pname = "mcpjungle";
+    version = "9512d31382b6b14edc6f98931537de5c137bc6b8";
+    src = fetchFromGitHub {
+      owner = "p3psi-boo";
+      repo = "MCPJungle";
+      rev = "9512d31382b6b14edc6f98931537de5c137bc6b8";
+      fetchSubmodules = false;
+      sha256 = "sha256-m/ChdIBiteyYTvfu4pGZpS+ABhvoYyqHMDQbNhhgUzQ=";
+    };
+    date = "2026-10-08";
+  };
   mebox = {
     pname = "mebox";
     version = "mebox-v0.1.182";
