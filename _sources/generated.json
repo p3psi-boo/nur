@@ -768,7 +768,7 @@
     },
     "sing-box-tui": {
         "cargoLock": null,
-        "date": "2026-10-08",
+        "date": "2026-10-09",
         "extract": null,
         "name": "sing-box-tui",
         "passthru": null,
@@ -778,13 +778,13 @@
             "fetchSubmodules": false,
             "leaveDotGit": false,
             "name": null,
-            "rev": "c16c51e4e22861935f6cd57e6dc59a434cd8b384",
-            "sha256": "sha256-eY0kTvvtuc/OGZ870m/odu4m1GyWuV7dC2tGDNzrhII=",
+            "rev": "7e8af45bd52d371332524a110518cf04edbd2bdf",
+            "sha256": "sha256-hOiqv+mwrtKzI5JjXwbKQ95uw5IGGc20pKiz2Vls/jA=",
             "sparseCheckout": [],
             "type": "git",
             "url": "https://github.com/p3psi-boo/sing-box-tui.git"
         },
-        "version": "c16c51e4e22861935f6cd57e6dc59a434cd8b384"
+        "version": "7e8af45bd52d371332524a110518cf04edbd2bdf"
     },
     "sofixer": {
         "cargoLock": null,
