@@ -421,7 +421,7 @@
     },
     "latch": {
         "cargoLock": null,
-        "date": "2026-10-08",
+        "date": "2026-10-09",
         "extract": null,
         "name": "latch",
         "passthru": null,
@@ -433,12 +433,12 @@
             "name": null,
             "owner": "p3psi-boo",
             "repo": "latch",
-            "rev": "5dd117b7a03cad57ae0c5166fe436d179badde2e",
-            "sha256": "sha256-ticzmNbnSrf2m5wNaR4uEhsM5x1w7PbijDlpjnouu1U=",
+            "rev": "a980512b8f1a56d2f462b81b17a8fcae2c46ccf9",
+            "sha256": "sha256-/QaHe8HSlv7TQgsp1V/brnx9ntPNJG2HpB6le8zWq18=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "5dd117b7a03cad57ae0c5166fe436d179badde2e"
+        "version": "a980512b8f1a56d2f462b81b17a8fcae2c46ccf9"
     },
     "lazyssh": {
         "cargoLock": null,

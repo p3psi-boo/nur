@@ -30,15 +30,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     makeWrapper
   ];
 
-  postPatch = ''
-    # An unbracketed IPv6 bind address is not a valid URL authority.
-    substituteInPlace packages/daemon/src/http.ts \
-      --replace-fail 'new URL(req.url ?? "/", `http://''${host}`)' \
-        'new URL(req.url ?? "/", "http://127.0.0.1")' \
-      --replace-fail 'listening http://''${host}:''${boundPort}' \
-        'listening http://''${host.includes(":") ? "[" + host + "]" : host}:''${boundPort}'
-  '';
-
   buildPhase = ''
     runHook preBuild
     pnpm build:daemon
