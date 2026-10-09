@@ -601,6 +601,18 @@
     };
     date = "2026-08-06";
   };
+  wallos-mcp = {
+    pname = "wallos-mcp";
+    version = "179f02d7c39c2d73ad00d6ace080c993290ea94f";
+    src = fetchFromGitHub {
+      owner = "p3psi-boo";
+      repo = "wallos-mcp";
+      rev = "179f02d7c39c2d73ad00d6ace080c993290ea94f";
+      fetchSubmodules = false;
+      sha256 = "sha256-k20pim5Cs50gicrh18REDj738tfq5Nh+0ZAgcvWx9MQ=";
+    };
+    date = "2026-10-07";
+  };
   wxmp_searxng = {
     pname = "wxmp_searxng";
     version = "edb809f0c67238e26caae840fd3ef7ff653792b3";

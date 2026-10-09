@@ -970,6 +970,27 @@
         },
         "version": "6f8bc6ff7b0f644f939a4a2f1d8a748b74174473"
     },
+    "wallos-mcp": {
+        "cargoLock": null,
+        "date": "2026-10-07",
+        "extract": null,
+        "name": "wallos-mcp",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "p3psi-boo",
+            "repo": "wallos-mcp",
+            "rev": "179f02d7c39c2d73ad00d6ace080c993290ea94f",
+            "sha256": "sha256-k20pim5Cs50gicrh18REDj738tfq5Nh+0ZAgcvWx9MQ=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "179f02d7c39c2d73ad00d6ace080c993290ea94f"
+    },
     "wxmp_searxng": {
         "cargoLock": null,
         "date": "2026-07-12",
