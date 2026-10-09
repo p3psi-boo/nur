@@ -263,6 +263,18 @@
     };
     date = "2026-09-24";
   };
+  latch = {
+    pname = "latch";
+    version = "5dd117b7a03cad57ae0c5166fe436d179badde2e";
+    src = fetchFromGitHub {
+      owner = "p3psi-boo";
+      repo = "latch";
+      rev = "5dd117b7a03cad57ae0c5166fe436d179badde2e";
+      fetchSubmodules = false;
+      sha256 = "sha256-ticzmNbnSrf2m5wNaR4uEhsM5x1w7PbijDlpjnouu1U=";
+    };
+    date = "2026-10-08";
+  };
   lazyssh = {
     pname = "lazyssh";
     version = "48995806bf1aa1c9c41bb8dff6b5ddd698539311";

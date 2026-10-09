@@ -66,6 +66,12 @@ src.git = "https://github.com/p3psi-boo/lazyssh.git"
 fetch.git = "https://github.com/p3psi-boo/lazyssh.git"
 git.fetch_submodules = false
 
+[latch]
+src.git = "https://github.com/p3psi-boo/latch.git"
+src.branch = "main"
+fetch.github = "p3psi-boo/latch"
+git.get_commit_date = true
+
 # sing-box-tui - Terminal UI for sing-box management APIs
 [sing-box-tui]
 src.git = "https://github.com/p3psi-boo/sing-box-tui.git"

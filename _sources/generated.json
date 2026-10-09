@@ -419,6 +419,27 @@
         },
         "version": "0321789bc1989e53df729dfc98bed2a2800c39c6"
     },
+    "latch": {
+        "cargoLock": null,
+        "date": "2026-10-08",
+        "extract": null,
+        "name": "latch",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "p3psi-boo",
+            "repo": "latch",
+            "rev": "5dd117b7a03cad57ae0c5166fe436d179badde2e",
+            "sha256": "sha256-ticzmNbnSrf2m5wNaR4uEhsM5x1w7PbijDlpjnouu1U=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "5dd117b7a03cad57ae0c5166fe436d179badde2e"
+    },
     "lazyssh": {
         "cargoLock": null,
         "date": "2025-11-28",
