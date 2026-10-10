@@ -236,6 +236,66 @@
         },
         "version": "v1.0.2"
     },
+    "dagu-aarch64-darwin": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "dagu-aarch64-darwin",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-9piH01x2XYBRTHZEGZpWPVtq9xmLuXeY6MiiWFgJG+w=",
+            "type": "url",
+            "url": "https://github.com/dagucloud/dagu/releases/download/v2.18.2/dagu_2.18.2_darwin_arm64.tar.gz"
+        },
+        "version": "2.18.2"
+    },
+    "dagu-aarch64-linux": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "dagu-aarch64-linux",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-9nxj7zQ7EaaCL4gTSM8f8nooyX6i7iZ/IahzZKkKHcU=",
+            "type": "url",
+            "url": "https://github.com/dagucloud/dagu/releases/download/v2.18.2/dagu_2.18.2_linux_arm64.tar.gz"
+        },
+        "version": "2.18.2"
+    },
+    "dagu-x86_64-darwin": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "dagu-x86_64-darwin",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-n6UOIbOp/6y+RPH+JoHUyE6TAf9FA2UlEDZ2F2nPCcY=",
+            "type": "url",
+            "url": "https://github.com/dagucloud/dagu/releases/download/v2.18.2/dagu_2.18.2_darwin_amd64.tar.gz"
+        },
+        "version": "2.18.2"
+    },
+    "dagu-x86_64-linux": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "dagu-x86_64-linux",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-WoTAk7m6nQK3pg4Qa7kdRvk4P9AcYr1RVg5BGT8FeSs=",
+            "type": "url",
+            "url": "https://github.com/dagucloud/dagu/releases/download/v2.18.2/dagu_2.18.2_linux_amd64.tar.gz"
+        },
+        "version": "2.18.2"
+    },
     "einat": {
         "cargoLock": null,
         "date": "2026-09-20",

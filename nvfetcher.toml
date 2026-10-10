@@ -296,3 +296,23 @@ fetch.github = "loongphy/codex-auth"
 src.git = "https://github.com/p3psi-boo/wallos-mcp.git"
 fetch.github = "p3psi-boo/wallos-mcp"
 git.get_commit_date = true
+
+[dagu-x86_64-linux]
+src.github = "dagucloud/dagu"
+src.prefix = "v"
+fetch.url = "https://github.com/dagucloud/dagu/releases/download/v$ver/dagu_$ver_linux_amd64.tar.gz"
+
+[dagu-aarch64-linux]
+src.github = "dagucloud/dagu"
+src.prefix = "v"
+fetch.url = "https://github.com/dagucloud/dagu/releases/download/v$ver/dagu_$ver_linux_arm64.tar.gz"
+
+[dagu-x86_64-darwin]
+src.github = "dagucloud/dagu"
+src.prefix = "v"
+fetch.url = "https://github.com/dagucloud/dagu/releases/download/v$ver/dagu_$ver_darwin_amd64.tar.gz"
+
+[dagu-aarch64-darwin]
+src.github = "dagucloud/dagu"
+src.prefix = "v"
+fetch.url = "https://github.com/dagucloud/dagu/releases/download/v$ver/dagu_$ver_darwin_arm64.tar.gz"

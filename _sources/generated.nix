@@ -143,6 +143,38 @@
       sha256 = "sha256-84mMlLC/zEg4rYJ1Ag3PHmj4LZ0CNI5QCq4Uc9A1IMk=";
     };
   };
+  dagu-aarch64-darwin = {
+    pname = "dagu-aarch64-darwin";
+    version = "2.18.2";
+    src = fetchurl {
+      url = "https://github.com/dagucloud/dagu/releases/download/v2.18.2/dagu_2.18.2_darwin_arm64.tar.gz";
+      sha256 = "sha256-9piH01x2XYBRTHZEGZpWPVtq9xmLuXeY6MiiWFgJG+w=";
+    };
+  };
+  dagu-aarch64-linux = {
+    pname = "dagu-aarch64-linux";
+    version = "2.18.2";
+    src = fetchurl {
+      url = "https://github.com/dagucloud/dagu/releases/download/v2.18.2/dagu_2.18.2_linux_arm64.tar.gz";
+      sha256 = "sha256-9nxj7zQ7EaaCL4gTSM8f8nooyX6i7iZ/IahzZKkKHcU=";
+    };
+  };
+  dagu-x86_64-darwin = {
+    pname = "dagu-x86_64-darwin";
+    version = "2.18.2";
+    src = fetchurl {
+      url = "https://github.com/dagucloud/dagu/releases/download/v2.18.2/dagu_2.18.2_darwin_amd64.tar.gz";
+      sha256 = "sha256-n6UOIbOp/6y+RPH+JoHUyE6TAf9FA2UlEDZ2F2nPCcY=";
+    };
+  };
+  dagu-x86_64-linux = {
+    pname = "dagu-x86_64-linux";
+    version = "2.18.2";
+    src = fetchurl {
+      url = "https://github.com/dagucloud/dagu/releases/download/v2.18.2/dagu_2.18.2_linux_amd64.tar.gz";
+      sha256 = "sha256-WoTAk7m6nQK3pg4Qa7kdRvk4P9AcYr1RVg5BGT8FeSs=";
+    };
+  };
   einat = {
     pname = "einat";
     version = "ba647ce61bd6bdf2cb693961a82b88c442ef049a";
