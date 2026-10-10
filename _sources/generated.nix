@@ -297,15 +297,15 @@
   };
   latch = {
     pname = "latch";
-    version = "a980512b8f1a56d2f462b81b17a8fcae2c46ccf9";
+    version = "2b88775d09befe6a67ac520ee1bbadb2fa08424b";
     src = fetchFromGitHub {
       owner = "p3psi-boo";
       repo = "latch";
-      rev = "a980512b8f1a56d2f462b81b17a8fcae2c46ccf9";
+      rev = "2b88775d09befe6a67ac520ee1bbadb2fa08424b";
       fetchSubmodules = false;
-      sha256 = "sha256-/QaHe8HSlv7TQgsp1V/brnx9ntPNJG2HpB6le8zWq18=";
+      sha256 = "sha256-j1l4H5ZT3ILr3wYY69rLA2VKvsgKfNe71h9DLsPfRiQ=";
     };
-    date = "2026-10-09";
+    date = "2026-10-10";
   };
   lazyssh = {
     pname = "lazyssh";
