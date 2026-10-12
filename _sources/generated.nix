@@ -334,15 +334,15 @@
   };
   mcpjungle = {
     pname = "mcpjungle";
-    version = "9512d31382b6b14edc6f98931537de5c137bc6b8";
+    version = "f070fe55f90238ece7b69ade83e06f319dec113f";
     src = fetchFromGitHub {
       owner = "p3psi-boo";
       repo = "MCPJungle";
-      rev = "9512d31382b6b14edc6f98931537de5c137bc6b8";
+      rev = "f070fe55f90238ece7b69ade83e06f319dec113f";
       fetchSubmodules = false;
-      sha256 = "sha256-m/ChdIBiteyYTvfu4pGZpS+ABhvoYyqHMDQbNhhgUzQ=";
+      sha256 = "sha256-hnJc7hxY9rfX8ZYCBX+ys+4YE+n8OJbFA1Ftp9ZegQc=";
     };
-    date = "2026-10-08";
+    date = "2026-10-12";
   };
   mebox = {
     pname = "mebox";
