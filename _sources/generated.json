@@ -543,7 +543,7 @@
     },
     "mcpjungle": {
         "cargoLock": null,
-        "date": "2026-10-12",
+        "date": "2026-10-13",
         "extract": null,
         "name": "mcpjungle",
         "passthru": null,
@@ -555,12 +555,12 @@
             "name": null,
             "owner": "p3psi-boo",
             "repo": "MCPJungle",
-            "rev": "f070fe55f90238ece7b69ade83e06f319dec113f",
-            "sha256": "sha256-hnJc7hxY9rfX8ZYCBX+ys+4YE+n8OJbFA1Ftp9ZegQc=",
+            "rev": "313aa3204c346f2198db4865dbcc2555d64ecaf9",
+            "sha256": "sha256-fDPPwI9d2uXVzIRlS+jSmdzITotLSYnl8k5VwuWpMq0=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "f070fe55f90238ece7b69ade83e06f319dec113f"
+        "version": "313aa3204c346f2198db4865dbcc2555d64ecaf9"
     },
     "mebox": {
         "cargoLock": null,
