@@ -316,3 +316,9 @@ fetch.url = "https://github.com/dagucloud/dagu/releases/download/v$ver/dagu_$ver
 src.github = "dagucloud/dagu"
 src.prefix = "v"
 fetch.url = "https://github.com/dagucloud/dagu/releases/download/v$ver/dagu_$ver_darwin_arm64.tar.gz"
+
+[itdog-api-go]
+src.git = "https://github.com/p3psi-boo/itdog-api-go.git"
+src.branch = "main"
+fetch.github = "p3psi-boo/itdog-api-go"
+git.get_commit_date = true

@@ -253,6 +253,18 @@
     };
     date = "2026-08-29";
   };
+  itdog-api-go = {
+    pname = "itdog-api-go";
+    version = "ab6a1986a844294caca674a856ce651088986b84";
+    src = fetchFromGitHub {
+      owner = "p3psi-boo";
+      repo = "itdog-api-go";
+      rev = "ab6a1986a844294caca674a856ce651088986b84";
+      fetchSubmodules = false;
+      sha256 = "sha256-oSq7KuWiwGxuyVJX++BY9NKs85aMA8FeAXL/o1wlHa0=";
+    };
+    date = "2026-10-14";
+  };
   komari = {
     pname = "komari";
     version = "39cb3f59b2837e8d052203bfbbf3187888e5fa4c";

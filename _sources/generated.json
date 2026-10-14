@@ -419,6 +419,27 @@
         },
         "version": "4ec96e0ea1e026b81c7efa03db19332790f02e64"
     },
+    "itdog-api-go": {
+        "cargoLock": null,
+        "date": "2026-10-14",
+        "extract": null,
+        "name": "itdog-api-go",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "p3psi-boo",
+            "repo": "itdog-api-go",
+            "rev": "ab6a1986a844294caca674a856ce651088986b84",
+            "sha256": "sha256-oSq7KuWiwGxuyVJX++BY9NKs85aMA8FeAXL/o1wlHa0=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "ab6a1986a844294caca674a856ce651088986b84"
+    },
     "komari": {
         "cargoLock": null,
         "date": "2026-09-28",
