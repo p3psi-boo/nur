@@ -2,7 +2,10 @@
   lib,
   stdenv,
   generated,
-  autoPatchelfHook,
+  cmake,
+  ninja,
+  perl,
+  pkg-config,
   makeWrapper,
   cacert,
   testers,
@@ -11,37 +14,70 @@
 }:
 
 let
-  sourceInfo = generated."aria2-next-${stdenv.hostPlatform.system}";
+  sourceInfo = generated.aria2-next;
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "aria2-next";
-  inherit (sourceInfo) version src;
+  inherit (sourceInfo) src;
+  version = lib.removePrefix "v" sourceInfo.version;
 
-  dontUnpack = true;
-  dontBuild = true;
-  dontStrip = true;
-
-  nativeBuildInputs = lib.optionals stdenv.hostPlatform.isLinux [
-    autoPatchelfHook
+  nativeBuildInputs = [
+    cmake
+    ninja
+    perl
+    pkg-config
     makeWrapper
   ];
 
-  buildInputs = lib.optionals stdenv.hostPlatform.isLinux [ stdenv.cc.cc.lib ];
+  # The supported upstream superbuild compiles the engine and its pinned
+  # third_party sources offline; no release executables are downloaded.
+  postPatch = ''
+    patchShebangs third_party
+    substituteInPlace cmake/superbuild/Dependencies.cmake \
+      --replace-fail 'ProcessorCount(ARIA2_BUILD_JOBS)' \
+        'set(ARIA2_BUILD_JOBS "$ENV{NIX_BUILD_CORES}")' \
+      --replace-fail '-DCMAKE_POSITION_INDEPENDENT_CODE=ON)' \
+        '-DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_INSTALL_LIBDIR=lib)'
+  '';
+
+  cmakeFlags = [
+    "-GNinja"
+    (lib.cmakeBool "ARIA2_SUPERBUILD" true)
+    (lib.cmakeBool "BUILD_TESTING" true)
+    (lib.cmakeBool "ARIA2_RELEASE_SIZE_OPTIMIZED" true)
+  ];
+
+  # Avoid multiplying outer and inner parallelism. Build dependencies one at
+  # a time, giving each nested CMake/Make build the Nix core budget.
+  buildPhase = ''
+    runHook preBuild
+    export CMAKE_BUILD_PARALLEL_LEVEL="$NIX_BUILD_CORES"
+    cmake --build . --parallel 1
+    runHook postBuild
+  '';
+
+  doCheck = true;
+  checkPhase = ''
+    runHook preCheck
+    ctest --output-on-failure --parallel "$NIX_BUILD_CORES"
+    runHook postCheck
+  '';
 
   installPhase = ''
     runHook preInstall
-    install -Dm755 "$src" "$out/bin/aria2-next"
+    cmake --install source --prefix "$out"
+    install -Dm644 ../COPYING "$out/share/licenses/aria2-next/COPYING"
     runHook postInstall
   '';
 
-  # Upstream statically links OpenSSL, whose default CA path is not a Nix path.
+  # The superbuild links vendored OpenSSL, whose default CA path is not a Nix path.
   # Keep explicit SSL_CERT_FILE overrides and --ca-certificate working.
   postFixup = lib.optionalString stdenv.hostPlatform.isLinux ''
     wrapProgram "$out/bin/aria2-next" \
       --set-default SSL_CERT_FILE "${cacert}/etc/ssl/certs/ca-bundle.crt"
   '';
 
-  doInstallCheck = true;
+  doInstallCheck = stdenv.buildPlatform.canExecute stdenv.hostPlatform;
   installCheckPhase = ''
     runHook preInstallCheck
     "$out/bin/aria2-next" --version | grep -F "${finalAttrs.version}"
@@ -77,6 +113,5 @@ stdenv.mkDerivation (finalAttrs: {
       "x86_64-darwin"
       "aarch64-darwin"
     ];
-    sourceProvenance = [ lib.sourceTypes.binaryNativeCode ];
   };
 })

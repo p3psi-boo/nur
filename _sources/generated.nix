@@ -25,36 +25,15 @@
       sha256 = "sha256-PL+YtRf+5L2j7WgpDNQn4DssPwGbA95iWKqNJ+U3FME=";
     };
   };
-  aria2-next-aarch64-darwin = {
-    pname = "aria2-next-aarch64-darwin";
-    version = "3.0.4";
-    src = fetchurl {
-      url = "https://github.com/AnInsomniacy/aria2-next/releases/download/v3.0.4/aria2-next-3.0.4-macos-arm64";
-      sha256 = "sha256-s0IcR0vP/XnOTWw8INB3nHS2VeaZvLIAZjdm7/oBWkY=";
-    };
-  };
-  aria2-next-aarch64-linux = {
-    pname = "aria2-next-aarch64-linux";
-    version = "3.0.4";
-    src = fetchurl {
-      url = "https://github.com/AnInsomniacy/aria2-next/releases/download/v3.0.4/aria2-next-3.0.4-linux-aarch64";
-      sha256 = "sha256-iTP3VoqZCjDsPj3FK3WDh81AmR8tOWiQ42VW0MJb6Eo=";
-    };
-  };
-  aria2-next-x86_64-darwin = {
-    pname = "aria2-next-x86_64-darwin";
-    version = "3.0.4";
-    src = fetchurl {
-      url = "https://github.com/AnInsomniacy/aria2-next/releases/download/v3.0.4/aria2-next-3.0.4-macos-x86_64";
-      sha256 = "sha256-8ce55FJ4hMlkDyuPr+BmX8KarZQKFLigT7L/AXSq2Jc=";
-    };
-  };
-  aria2-next-x86_64-linux = {
-    pname = "aria2-next-x86_64-linux";
-    version = "3.0.4";
-    src = fetchurl {
-      url = "https://github.com/AnInsomniacy/aria2-next/releases/download/v3.0.4/aria2-next-3.0.4-linux-x86_64";
-      sha256 = "sha256-NwMwEUWfA/a30AUzPo7+D21FOUQSDIIezOy546yXB74=";
+  aria2-next = {
+    pname = "aria2-next";
+    version = "v3.0.4";
+    src = fetchFromGitHub {
+      owner = "AnInsomniacy";
+      repo = "aria2-next";
+      rev = "v3.0.4";
+      fetchSubmodules = false;
+      sha256 = "sha256-TbBwBPc1mYzREXg53ETUTxwNncj9CEJZqUlkisaw0Jo=";
     };
   };
   aw-watcher-herdr = {

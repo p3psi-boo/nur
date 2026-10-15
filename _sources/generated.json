@@ -35,65 +35,26 @@
         },
         "version": "v0.8.0"
     },
-    "aria2-next-aarch64-darwin": {
+    "aria2-next": {
         "cargoLock": null,
         "date": null,
         "extract": null,
-        "name": "aria2-next-aarch64-darwin",
+        "name": "aria2-next",
         "passthru": null,
         "pinned": false,
         "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
             "name": null,
-            "sha256": "sha256-s0IcR0vP/XnOTWw8INB3nHS2VeaZvLIAZjdm7/oBWkY=",
-            "type": "url",
-            "url": "https://github.com/AnInsomniacy/aria2-next/releases/download/v3.0.4/aria2-next-3.0.4-macos-arm64"
+            "owner": "AnInsomniacy",
+            "repo": "aria2-next",
+            "rev": "v3.0.4",
+            "sha256": "sha256-TbBwBPc1mYzREXg53ETUTxwNncj9CEJZqUlkisaw0Jo=",
+            "sparseCheckout": [],
+            "type": "github"
         },
-        "version": "3.0.4"
-    },
-    "aria2-next-aarch64-linux": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "aria2-next-aarch64-linux",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-iTP3VoqZCjDsPj3FK3WDh81AmR8tOWiQ42VW0MJb6Eo=",
-            "type": "url",
-            "url": "https://github.com/AnInsomniacy/aria2-next/releases/download/v3.0.4/aria2-next-3.0.4-linux-aarch64"
-        },
-        "version": "3.0.4"
-    },
-    "aria2-next-x86_64-darwin": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "aria2-next-x86_64-darwin",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-8ce55FJ4hMlkDyuPr+BmX8KarZQKFLigT7L/AXSq2Jc=",
-            "type": "url",
-            "url": "https://github.com/AnInsomniacy/aria2-next/releases/download/v3.0.4/aria2-next-3.0.4-macos-x86_64"
-        },
-        "version": "3.0.4"
-    },
-    "aria2-next-x86_64-linux": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "aria2-next-x86_64-linux",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "name": null,
-            "sha256": "sha256-NwMwEUWfA/a30AUzPo7+D21FOUQSDIIezOy546yXB74=",
-            "type": "url",
-            "url": "https://github.com/AnInsomniacy/aria2-next/releases/download/v3.0.4/aria2-next-3.0.4-linux-x86_64"
-        },
-        "version": "3.0.4"
+        "version": "v3.0.4"
     },
     "aw-watcher-herdr": {
         "cargoLock": null,

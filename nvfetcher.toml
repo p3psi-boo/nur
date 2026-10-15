@@ -323,23 +323,7 @@ src.branch = "main"
 fetch.github = "p3psi-boo/itdog-api-go"
 git.get_commit_date = true
 
-# aria2-next - upstream release binaries with the vendored protocol stack
-[aria2-next-x86_64-linux]
+# aria2-next - source release including the pinned third_party source tree
+[aria2-next]
 src.github = "AnInsomniacy/aria2-next"
-src.prefix = "v"
-fetch.url = "https://github.com/AnInsomniacy/aria2-next/releases/download/v$ver/aria2-next-$ver-linux-x86_64"
-
-[aria2-next-aarch64-linux]
-src.github = "AnInsomniacy/aria2-next"
-src.prefix = "v"
-fetch.url = "https://github.com/AnInsomniacy/aria2-next/releases/download/v$ver/aria2-next-$ver-linux-aarch64"
-
-[aria2-next-x86_64-darwin]
-src.github = "AnInsomniacy/aria2-next"
-src.prefix = "v"
-fetch.url = "https://github.com/AnInsomniacy/aria2-next/releases/download/v$ver/aria2-next-$ver-macos-x86_64"
-
-[aria2-next-aarch64-darwin]
-src.github = "AnInsomniacy/aria2-next"
-src.prefix = "v"
-fetch.url = "https://github.com/AnInsomniacy/aria2-next/releases/download/v$ver/aria2-next-$ver-macos-arm64"
+fetch.github = "AnInsomniacy/aria2-next"
