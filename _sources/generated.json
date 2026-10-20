@@ -440,6 +440,21 @@
         },
         "version": "4ec96e0ea1e026b81c7efa03db19332790f02e64"
     },
+    "infisical-server": {
+        "cargoLock": null,
+        "date": null,
+        "extract": null,
+        "name": "infisical-server",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-k/cmreQJqCvQJaAvYknAxQtNVLkA4kBGfFOnGT2DO/A=",
+            "type": "url",
+            "url": "https://artifacts-infisical-core.infisical.com/deb/pool/stable/i/in/infisical-core_0.166.8-1_amd64.deb"
+        },
+        "version": "0.166.8"
+    },
     "itdog-api-go": {
         "cargoLock": null,
         "date": "2026-10-14",

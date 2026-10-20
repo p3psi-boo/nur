@@ -1,4 +1,11 @@
 
+[infisical-server]
+# Official native server distribution, not the infisical CLI.
+src.github_tag = "Infisical/infisical"
+src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
+src.prefix = "v"
+fetch.url = "https://artifacts-infisical-core.infisical.com/deb/pool/stable/i/in/infisical-core_$ver-1_amd64.deb"
+
 [icloud-privacy-mail-v2]
 src.git = "https://github.com/xiuxiu56/iCloud-Privacy-Mail-v2.git"
 src.branch = "main"

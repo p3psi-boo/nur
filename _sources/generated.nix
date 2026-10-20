@@ -264,6 +264,14 @@
     };
     date = "2026-08-29";
   };
+  infisical-server = {
+    pname = "infisical-server";
+    version = "0.166.8";
+    src = fetchurl {
+      url = "https://artifacts-infisical-core.infisical.com/deb/pool/stable/i/in/infisical-core_0.166.8-1_amd64.deb";
+      sha256 = "sha256-k/cmreQJqCvQJaAvYknAxQtNVLkA4kBGfFOnGT2DO/A=";
+    };
+  };
   itdog-api-go = {
     pname = "itdog-api-go";
     version = "ab6a1986a844294caca674a856ce651088986b84";
