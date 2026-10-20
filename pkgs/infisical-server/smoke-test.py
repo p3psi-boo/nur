@@ -61,11 +61,13 @@ with tempfile.TemporaryDirectory(prefix="infisical-smoke-") as directory:
             time.sleep(0.5)
         raise TimeoutError("Service did not become ready")
 
-    def tcp_ready(port):
+    def command_ready(*args):
         try:
-            with socket.create_connection(("127.0.0.1", port), timeout=1):
-                return True
-        except OSError:
+            return subprocess.run(
+                args, env=env, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                timeout=5,
+            ).returncode == 0
+        except subprocess.TimeoutExpired:
             return False
 
     def get(path):
@@ -87,11 +89,17 @@ with tempfile.TemporaryDirectory(prefix="infisical-smoke-") as directory:
         start("postgres", "postgres", "-D", str(root / "pg"), "-h", "127.0.0.1",
               "-p", str(pg_port), "-k", str(root), "-c", "fsync=off",
               "-c", "synchronous_commit=off", "-c", "full_page_writes=off")
-        wait_until(lambda: tcp_ready(pg_port))
+        # A listening TCP port does not mean PostgreSQL has finished startup.
+        wait_until(lambda: command_ready(
+            "pg_isready", "-q", "-h", "127.0.0.1", "-p", str(pg_port),
+            "-U", "infisical", "-d", "postgres",
+        ))
         run("createdb", "-h", "127.0.0.1", "-p", str(pg_port), "-U", "infisical", "infisical", env=env)
         start("redis", "redis-server", "--bind", "127.0.0.1", "--port", str(redis_port),
               "--save", "", "--appendonly", "no", "--dir", str(root))
-        wait_until(lambda: tcp_ready(redis_port))
+        wait_until(lambda: command_ready(
+            "redis-cli", "-h", "127.0.0.1", "-p", str(redis_port), "ping",
+        ))
         print("PostgreSQL and Redis ready; starting Infisical and migrations", flush=True)
         server = start("infisical", "infisical-server")
         wait_until(http_ready, timeout=240)
