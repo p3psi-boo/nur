@@ -42,6 +42,8 @@ stdenv.mkDerivation (finalAttrs: {
   dontConfigure = true;
   dontBuild = true;
   dontUpdateAutotoolsGnuConfigScripts = true;
+  # Sorting this Node binary's program headers makes the ELF loader crash.
+  patchelfFlags = [ "--no-sort" ];
 
   postPatch = ''
     python ${./prune.py} server
