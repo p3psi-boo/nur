@@ -14,6 +14,8 @@ buildGoModule rec {
   version = "0-unstable-${sourceInfo.date}";
   inherit (sourceInfo) src;
   vendorHash = "sha256-mN8BQighSikAq5x8zNxgIU4V3E3JzKWJgzrlI4aX180=";
+  # Fiber defaults to tcp4; support explicitly configured IPv6/Yggdrasil listeners.
+  patches = [ ./ipv6-listener.patch ];
   subPackages = [ "cmd/wgrest-server" ];
   nativeBuildInputs = [ makeWrapper ];
   env.CGO_ENABLED = "0";

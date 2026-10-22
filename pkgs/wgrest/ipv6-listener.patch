@@ -1,0 +1,11 @@
+diff --git a/cmd/wgrest-server/main.go b/cmd/wgrest-server/main.go
+--- a/cmd/wgrest-server/main.go
++++ b/cmd/wgrest-server/main.go
+@@ -153,6 +153,7 @@ func main() {
+ 			fiberApp := fiber.New(fiber.Config{
+ 				DisableStartupMessage: false,
+ 				AppName:               "wgrest",
++				Network:               fiber.NetworkTCP,
+ 			})
+ 
+ 			// Initialize WireGuard client
