@@ -334,3 +334,9 @@ git.get_commit_date = true
 [aria2-next]
 src.github = "AnInsomniacy/aria2-next"
 fetch.github = "AnInsomniacy/aria2-next"
+
+[wgrest]
+src.git = "https://github.com/suquant/wgrest.git"
+src.branch = "master"
+fetch.github = "suquant/wgrest"
+git.get_commit_date = true

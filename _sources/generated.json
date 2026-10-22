@@ -1108,6 +1108,27 @@
         },
         "version": "179f02d7c39c2d73ad00d6ace080c993290ea94f"
     },
+    "wgrest": {
+        "cargoLock": null,
+        "date": "2026-02-06",
+        "extract": null,
+        "name": "wgrest",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "suquant",
+            "repo": "wgrest",
+            "rev": "79d07f72b271a51b5f6cb2153354ec1695fe06ab",
+            "sha256": "sha256-D7FnQzdaStTBuO+sXQ0dVN3P6weCvIIOiUTT1s1FSpI=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "79d07f72b271a51b5f6cb2153354ec1695fe06ab"
+    },
     "wxmp_searxng": {
         "cargoLock": null,
         "date": "2026-07-12",

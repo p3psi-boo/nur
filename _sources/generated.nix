@@ -676,6 +676,18 @@
     };
     date = "2026-10-07";
   };
+  wgrest = {
+    pname = "wgrest";
+    version = "79d07f72b271a51b5f6cb2153354ec1695fe06ab";
+    src = fetchFromGitHub {
+      owner = "suquant";
+      repo = "wgrest";
+      rev = "79d07f72b271a51b5f6cb2153354ec1695fe06ab";
+      fetchSubmodules = false;
+      sha256 = "sha256-D7FnQzdaStTBuO+sXQ0dVN3P6weCvIIOiUTT1s1FSpI=";
+    };
+    date = "2026-02-06";
+  };
   wxmp_searxng = {
     pname = "wxmp_searxng";
     version = "edb809f0c67238e26caae840fd3ef7ff653792b3";
