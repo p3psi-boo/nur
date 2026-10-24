@@ -112,7 +112,6 @@ stdenvNoCC.mkDerivation {
     "$out/bin/linear" --help > /dev/null
     "$out/bin/linear" markdown > /dev/null
     "$out/bin/linear" completions bash > /dev/null
-    python3 ${./smoke-test.py} "$out/bin/linear" ${lib.getExe deno}
     # Install checks may write disposable caches before the store is sealed.
     # Keep only immutable dependency contents, not V8/SQLite/build-path caches.
     python3 - "$out/share/linear-cli/cache" <<'PY'

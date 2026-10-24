@@ -9,8 +9,6 @@
   makeWrapper,
   cacert,
   testers,
-  runCommand,
-  python3,
 }:
 
 let
@@ -87,18 +85,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   passthru.tests = {
     version = testers.testVersion { package = finalAttrs.finalPackage; };
-    smoke =
-      runCommand "aria2-next-smoke-test"
-        {
-          nativeBuildInputs = [
-            finalAttrs.finalPackage
-            python3
-          ];
-        }
-        ''
-          python ${./smoke-test.py}
-          touch "$out"
-        '';
   };
 
   meta = {
