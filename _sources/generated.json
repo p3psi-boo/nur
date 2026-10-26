@@ -1047,6 +1047,27 @@
         },
         "version": "v1.4.1"
     },
+    "unfairplay": {
+        "cargoLock": null,
+        "date": "2026-10-26",
+        "extract": null,
+        "name": "unfairplay",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "DrWhax",
+            "repo": "unfairplay",
+            "rev": "6ecb0f0c7540913c86b4d6c691494d56719c2e55",
+            "sha256": "sha256-NxiZuE+GoPKlhaFzs36QgtesMJONoFAXavA+6ymO/m0=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "6ecb0f0c7540913c86b4d6c691494d56719c2e55"
+    },
     "vja": {
         "cargoLock": null,
         "date": "2026-06-28",

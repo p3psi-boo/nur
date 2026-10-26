@@ -340,3 +340,11 @@ src.git = "https://github.com/suquant/wgrest.git"
 src.branch = "master"
 fetch.github = "suquant/wgrest"
 git.get_commit_date = true
+
+# unfairplay: v0.1.0 is 28 commits behind main (portable evaluator rewrite).
+# Latest tag v0.2.0-rc.1 is still behind the migrated-account recovery path.
+[unfairplay]
+src.git = "https://github.com/DrWhax/unfairplay.git"
+src.branch = "main"
+fetch.github = "DrWhax/unfairplay"
+git.get_commit_date = true

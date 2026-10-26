@@ -636,6 +636,18 @@
       sha256 = "sha256-x4wK6Vw7qMkRYRRqgaNvUh8lSngodw4nX/BUzmqOtmU=";
     };
   };
+  unfairplay = {
+    pname = "unfairplay";
+    version = "6ecb0f0c7540913c86b4d6c691494d56719c2e55";
+    src = fetchFromGitHub {
+      owner = "DrWhax";
+      repo = "unfairplay";
+      rev = "6ecb0f0c7540913c86b4d6c691494d56719c2e55";
+      fetchSubmodules = false;
+      sha256 = "sha256-NxiZuE+GoPKlhaFzs36QgtesMJONoFAXavA+6ymO/m0=";
+    };
+    date = "2026-10-26";
+  };
   vja = {
     pname = "vja";
     version = "1bbea5452dae7a7ee97c2b9b3317fc989a4cf3ea";
