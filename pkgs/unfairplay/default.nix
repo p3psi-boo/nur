@@ -9,7 +9,7 @@ let
 in
 buildGoModule (finalAttrs: {
   pname = "unfairplay";
-  version = "0-unstable";
+  version = "0-unstable-${sourceInfo.date}";
 
   src = sourceInfo.src;
 
