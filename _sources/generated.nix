@@ -397,6 +397,17 @@
       sha256 = "sha256-OoIamslISIxH1VNTOmKqyibJWUQelOL/fcUHxywTEzY=";
     };
   };
+  multica-cli = {
+    pname = "multica-cli";
+    version = "v0.7.1";
+    src = fetchFromGitHub {
+      owner = "multica-ai";
+      repo = "multica";
+      rev = "v0.7.1";
+      fetchSubmodules = false;
+      sha256 = "sha256-Bu4duMk61EUrsHNQDO0mfN6BRGsAIIpTlhRvIIs9z2I=";
+    };
+  };
   n9router = {
     pname = "n9router";
     version = "647ddecea0eb7abf67ae70284e762f9593c67da8";

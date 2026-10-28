@@ -1,4 +1,8 @@
 
+[multica-cli]
+src.github = "multica-ai/multica"
+fetch.github = "multica-ai/multica"
+
 [infisical-server]
 # Official native server distribution, not the infisical CLI.
 src.github_tag = "Infisical/infisical"
