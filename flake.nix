@@ -33,14 +33,9 @@
       lib = nixpkgs.lib;
       packageSystems = [
         "x86_64-linux"
-        "aarch64-linux"
-        "x86_64-darwin"
         "aarch64-darwin"
       ];
-      checkSystems = [
-        "x86_64-linux"
-        "aarch64-darwin"
-      ];
+      checkSystems = packageSystems;
       forAllPackageSystems = lib.genAttrs packageSystems;
       forAllCheckSystems = lib.genAttrs checkSystems;
       nixpkgsConfig = import ./nix/config/nixpkgs.nix;
