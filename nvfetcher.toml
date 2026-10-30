@@ -1,4 +1,14 @@
 
+[bun-bin-x86_64-linux]
+src.github = "oven-sh/bun"
+src.prefix = "bun-v"
+fetch.url = "https://github.com/oven-sh/bun/releases/download/bun-v$ver/bun-linux-x64.zip"
+
+[bun-bin-aarch64-darwin]
+src.github = "oven-sh/bun"
+src.prefix = "bun-v"
+fetch.url = "https://github.com/oven-sh/bun/releases/download/bun-v$ver/bun-darwin-aarch64.zip"
+
 [multica-cli]
 src.github = "multica-ai/multica"
 fetch.github = "multica-ai/multica"

@@ -48,6 +48,22 @@
     };
     date = "2026-10-01";
   };
+  bun-bin-aarch64-darwin = {
+    pname = "bun-bin-aarch64-darwin";
+    version = "1.4.4";
+    src = fetchurl {
+      url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-darwin-aarch64.zip";
+      sha256 = "sha256-wkDX8My5DCY6hJ/NsJt+5iYw2SE0jtaq/ahrnVd7xRA=";
+    };
+  };
+  bun-bin-x86_64-linux = {
+    pname = "bun-bin-x86_64-linux";
+    version = "1.4.4";
+    src = fetchurl {
+      url = "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-linux-x64.zip";
+      sha256 = "sha256-v4zL+ysLgBWeD5ptFcVTF63YB3U028YTCj7bUvzLOVw=";
+    };
+  };
   celld = {
     pname = "celld";
     version = "v0.6.1";
