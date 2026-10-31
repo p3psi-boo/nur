@@ -164,27 +164,6 @@
         },
         "version": "146.0.7680.177.5"
     },
-    "cmcc-ec-keepalive": {
-        "cargoLock": null,
-        "date": "2026-08-20",
-        "extract": null,
-        "name": "cmcc-ec-keepalive",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "p3psi-boo",
-            "repo": "cmcc-ec-keepalive",
-            "rev": "dae23c54a6eb1057c4a016914347f0abdd6fd163",
-            "sha256": "sha256-9L9c68TkiUHgnPJyFQiXVfLSsSEiEXDPpg7zyV0EVxQ=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "dae23c54a6eb1057c4a016914347f0abdd6fd163"
-    },
     "codex-auth": {
         "cargoLock": null,
         "date": null,
@@ -205,46 +184,6 @@
             "type": "github"
         },
         "version": "v0.3.0"
-    },
-    "coe": {
-        "cargoLock": null,
-        "date": "2026-04-23",
-        "extract": null,
-        "name": "coe",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "c326261675a2455e6dd8c22576681e91644600ef",
-            "sha256": "sha256-0VL8NsKi1zl8fWJHn9khUwb0Jx0NIEvAdqe7slSfPyw=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/p3psi-boo/coe.git"
-        },
-        "version": "c326261675a2455e6dd8c22576681e91644600ef"
-    },
-    "commandcode2api": {
-        "cargoLock": null,
-        "date": "2026-08-15",
-        "extract": null,
-        "name": "commandcode2api",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "1010b2292ebd626d16662f878350e173286110c2",
-            "sha256": "sha256-rMry5ozjcwK044CivmqEwTUajKId2PYIs3NOGjh0gjk=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/p3psi-boo/commandcode2api.git"
-        },
-        "version": "1010b2292ebd626d16662f878350e173286110c2"
     },
     "cookiecloud-rs": {
         "cargoLock": null,
@@ -387,46 +326,6 @@
             "type": "github"
         },
         "version": "5b29eebc2766ac1cac2979693c56a8dfbad32430"
-    },
-    "focaltech-fingerprint": {
-        "cargoLock": null,
-        "date": "2026-09-17",
-        "extract": null,
-        "name": "focaltech-fingerprint",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "510473c10a16ff37820b2db1d8ef2d2b08ad005d",
-            "sha256": "sha256-v1CzRLZ4u+zdQXezt9rVy63RMp1gM/id1S7bRwcBDEA=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/vobademi/FTEXX00-Ubuntu.git"
-        },
-        "version": "510473c10a16ff37820b2db1d8ef2d2b08ad005d"
-    },
-    "fusion": {
-        "cargoLock": null,
-        "date": "2026-04-12",
-        "extract": null,
-        "name": "fusion",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "ecc44eeff94dd4836eed6490a497989194effa2b",
-            "sha256": "sha256-O9NMromcyvcF97Kb084vrHPjqRgyRqq14Ay8pdsj9rQ=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/p3psi-boo/fusion.git"
-        },
-        "version": "ecc44eeff94dd4836eed6490a497989194effa2b"
     },
     "herdr-git": {
         "cargoLock": null,
@@ -628,27 +527,6 @@
         },
         "version": "v2.6.0"
     },
-    "mcpjungle": {
-        "cargoLock": null,
-        "date": "2026-10-13",
-        "extract": null,
-        "name": "mcpjungle",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "p3psi-boo",
-            "repo": "MCPJungle",
-            "rev": "313aa3204c346f2198db4865dbcc2555d64ecaf9",
-            "sha256": "sha256-fDPPwI9d2uXVzIRlS+jSmdzITotLSYnl8k5VwuWpMq0=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "313aa3204c346f2198db4865dbcc2555d64ecaf9"
-    },
     "mebox": {
         "cargoLock": null,
         "date": null,
@@ -670,27 +548,6 @@
         },
         "version": "mebox-v0.1.182"
     },
-    "micyou": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "micyou",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "LanRhyme",
-            "repo": "MicYou",
-            "rev": "v2.1.0",
-            "sha256": "sha256-OoIamslISIxH1VNTOmKqyibJWUQelOL/fcUHxywTEzY=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "v2.1.0"
-    },
     "multica-cli": {
         "cargoLock": null,
         "date": null,
@@ -711,26 +568,6 @@
             "type": "github"
         },
         "version": "v0.7.1"
-    },
-    "n9router": {
-        "cargoLock": null,
-        "date": "2026-09-22",
-        "extract": null,
-        "name": "n9router",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "647ddecea0eb7abf67ae70284e762f9593c67da8",
-            "sha256": "sha256-dERlmXHbHatS+8CS13MdLnYuk1WPqglxfnTOq6kbU/A=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/nightwalker89/n9router.git"
-        },
-        "version": "647ddecea0eb7abf67ae70284e762f9593c67da8"
     },
     "nmem-cli": {
         "cargoLock": null,
@@ -895,46 +732,6 @@
         },
         "version": "0a0a15b694108328be1ede66ee32f6acbd95d3d7"
     },
-    "searxng-baidu-qianfan-bridge": {
-        "cargoLock": null,
-        "date": "2026-07-19",
-        "extract": null,
-        "name": "searxng-baidu-qianfan-bridge",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "a9826ab251fa3d52a59a3900f702ab53cd602793",
-            "sha256": "sha256-oaPrdnj4OBjTyxeMKDVBpxzbGMoSQjLc1lvbRdLCeCs=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/p3psi-boo/searxng-baidu-qianfan-bridge.git"
-        },
-        "version": "a9826ab251fa3d52a59a3900f702ab53cd602793"
-    },
-    "searxng-doubao-bridge": {
-        "cargoLock": null,
-        "date": "2026-07-19",
-        "extract": null,
-        "name": "searxng-doubao-bridge",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "72e59326cd34d94f47a632c3a4e692aea7d84ffc",
-            "sha256": "sha256-CfBX/IonAHjO+IEZs3/NSkG72t4vfjFCh2CMfuQVxhk=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/p3psi-boo/searxng-doubao-bridge.git"
-        },
-        "version": "72e59326cd34d94f47a632c3a4e692aea7d84ffc"
-    },
     "selector4nix": {
         "cargoLock": null,
         "date": "2026-09-12",
@@ -996,26 +793,6 @@
         },
         "version": "v2.1.7"
     },
-    "srv-us": {
-        "cargoLock": null,
-        "date": "2026-02-08",
-        "extract": null,
-        "name": "srv-us",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "664ef6a4fab24c5f3f1fc2fa07cc3e0c43d90cf9",
-            "sha256": "sha256-CEaSHwR8munYwKkLkCAGGbnRsel+by72QBY28lIRQO4=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/p3psi-boo/srv.us.git"
-        },
-        "version": "664ef6a4fab24c5f3f1fc2fa07cc3e0c43d90cf9"
-    },
     "subs-check": {
         "cargoLock": null,
         "date": "2026-07-05",
@@ -1055,48 +832,6 @@
             "url": "https://github.com/PiSugar/sugar-wifi-conf.git"
         },
         "version": "956d493be87b928688bd08a87f5851fb8ef0fcba"
-    },
-    "taierspeedtest": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "taierspeedtest",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "MiaM1ku",
-            "repo": "taierspeedtest",
-            "rev": "v1.0.3",
-            "sha256": "sha256-jITzS2zDqadmt8XRWVio2u/T9vDrb/AAhNJHTnFVEHw=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "v1.0.3"
-    },
-    "terminal-use": {
-        "cargoLock": null,
-        "date": null,
-        "extract": null,
-        "name": "terminal-use",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "flipbit03",
-            "repo": "terminal-use",
-            "rev": "v1.4.1",
-            "sha256": "sha256-x4wK6Vw7qMkRYRRqgaNvUh8lSngodw4nX/BUzmqOtmU=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "v1.4.1"
     },
     "unfairplay": {
         "cargoLock": null,
@@ -1159,27 +894,6 @@
         },
         "version": "6f8bc6ff7b0f644f939a4a2f1d8a748b74174473"
     },
-    "wallos-mcp": {
-        "cargoLock": null,
-        "date": "2026-10-07",
-        "extract": null,
-        "name": "wallos-mcp",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "p3psi-boo",
-            "repo": "wallos-mcp",
-            "rev": "179f02d7c39c2d73ad00d6ace080c993290ea94f",
-            "sha256": "sha256-k20pim5Cs50gicrh18REDj738tfq5Nh+0ZAgcvWx9MQ=",
-            "sparseCheckout": [],
-            "type": "github"
-        },
-        "version": "179f02d7c39c2d73ad00d6ace080c993290ea94f"
-    },
     "wgrest": {
         "cargoLock": null,
         "date": "2026-02-06",
@@ -1200,25 +914,5 @@
             "type": "github"
         },
         "version": "79d07f72b271a51b5f6cb2153354ec1695fe06ab"
-    },
-    "wxmp_searxng": {
-        "cargoLock": null,
-        "date": "2026-07-12",
-        "extract": null,
-        "name": "wxmp_searxng",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "rev": "edb809f0c67238e26caae840fd3ef7ff653792b3",
-            "sha256": "sha256-Y9QqZZVZ+LaWA5I9it5VxgW8fIt3c2EP2KaNob49uIU=",
-            "sparseCheckout": [],
-            "type": "git",
-            "url": "https://github.com/p3psi-boo/wxmp_searxng.git"
-        },
-        "version": "edb809f0c67238e26caae840fd3ef7ff653792b3"
     }
 }

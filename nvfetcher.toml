@@ -51,31 +51,10 @@ src.git = "https://github.com/OkamiW/proxy-ns.git"
 fetch.git = "https://github.com/OkamiW/proxy-ns.git"
 src.branch = "master"
 
-# China Mobile Cloud PC keepalive daemon and CLI control tool
-[cmcc-ec-keepalive]
-src.git = "https://github.com/p3psi-boo/cmcc-ec-keepalive.git"
-src.branch = "main"
-fetch.github = "p3psi-boo/cmcc-ec-keepalive"
-git.get_commit_date = true
-
-[searxng-baidu-qianfan-bridge]
-src.git = "https://github.com/p3psi-boo/searxng-baidu-qianfan-bridge.git"
-fetch.git = "https://github.com/p3psi-boo/searxng-baidu-qianfan-bridge.git"
-git.fetch_submodules = false
-
-[searxng-doubao-bridge]
-src.git = "https://github.com/p3psi-boo/searxng-doubao-bridge.git"
-fetch.git = "https://github.com/p3psi-boo/searxng-doubao-bridge.git"
-git.fetch_submodules = false
-
 [vohive]
 src.git = "https://github.com/p3psi-boo/vohive.git"
 fetch.git = "https://github.com/p3psi-boo/vohive.git"
 git.fetch_submodules = false
-
-[srv-us]
-src.git = "https://github.com/p3psi-boo/srv.us.git"
-fetch.git = "https://github.com/p3psi-boo/srv.us.git"
 
 [vja]
 src.git = "https://github.com/p3psi-boo/vikunja-cli.git"
@@ -129,33 +108,10 @@ src.github_tag = "F8LEFT/SoFixer"
 src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
 fetch.github = "F8LEFT/SoFixer"
 
-[coe]
-src.git = "https://github.com/p3psi-boo/coe.git"
-fetch.git = "https://github.com/p3psi-boo/coe.git"
-git.fetch_submodules = false
-git.get_commit_date = true
-
 [agentreach]
 src.github_tag = "bojieli/agentreach"
 src.include_regex = "^v[0-9].*"
 fetch.github = "bojieli/agentreach"
-
-# Focaltech fingerprint reader driver bundle
-[focaltech-fingerprint]
-src.git = "https://github.com/vobademi/FTEXX00-Ubuntu.git"
-fetch.git = "https://github.com/vobademi/FTEXX00-Ubuntu.git"
-git.fetch_submodules = false
-
-# fusion - A lightweight, self-hosted friendly RSS reader
-[fusion]
-src.git = "https://github.com/p3psi-boo/fusion.git"
-fetch.git = "https://github.com/p3psi-boo/fusion.git"
-git.fetch_submodules = false
-
-# micyou
-[micyou]
-src.github = "LanRhyme/MicYou"
-fetch.github = "LanRhyme/MicYou"
 
 # cookiecloud-rs - Rust rewrite of CookieCloud API
 [cookiecloud-rs]
@@ -187,39 +143,11 @@ src.github_tag = "UruhaLushia/piko"
 src.include_regex = "^v[0-9].*"
 fetch.github = "UruhaLushia/piko"
 
-# wxmp_searxng - Sogou Weixin JSON engine for SearXNG
-[wxmp_searxng]
-src.git = "https://github.com/p3psi-boo/wxmp_searxng.git"
-fetch.git = "https://github.com/p3psi-boo/wxmp_searxng.git"
-git.fetch_submodules = false
-git.get_commit_date = true
-
-# commandcode2api - OpenAI-compatible API proxy for Command Code
-[commandcode2api]
-src.git = "https://github.com/p3psi-boo/commandcode2api.git"
-fetch.git = "https://github.com/p3psi-boo/commandcode2api.git"
-git.fetch_submodules = false
-git.get_commit_date = true
-
-# n9router - Self-hosted AI routing gateway for 40+ AI providers
-[n9router]
-src.git = "https://github.com/nightwalker89/n9router.git"
-fetch.git = "https://github.com/nightwalker89/n9router.git"
-git.fetch_submodules = false
-git.get_commit_date = true
-
 # sugar-wifi-conf - BLE service to configure WiFi + SSH-over-BLE tunnel (PiSugar)
 [sugar-wifi-conf]
 src.git = "https://github.com/PiSugar/sugar-wifi-conf.git"
 fetch.git = "https://github.com/PiSugar/sugar-wifi-conf.git"
 git.fetch_submodules = false
-git.get_commit_date = true
-
-# terminal-use - Headless virtual terminal for AI agents (tu)
-[terminal-use]
-src.github_tag = "flipbit03/terminal-use"
-src.include_regex = "^v[0-9].*"
-fetch.github = "flipbit03/terminal-use"
 git.get_commit_date = true
 
 # linear-cli - build from one source archive on all supported platforms.
@@ -251,25 +179,11 @@ src.github_tag = "truewhile/MeBox"
 src.include_regex = "^mebox-v[0-9].*"
 fetch.github = "truewhile/MeBox"
 
-# taierspeedtest - 全球网测 / 泰尔测速 Linux 客户端
-[taierspeedtest]
-src.github_tag = "MiaM1ku/taierspeedtest"
-src.include_regex = "^v[0-9].*"
-fetch.github = "MiaM1ku/taierspeedtest"
-
 # herdr-git - agent multiplexer from master (binary remains herdr)
 [herdr-git]
 src.git = "https://github.com/herdrdev/herdr.git"
 src.branch = "master"
 fetch.github = "herdrdev/herdr"
-git.fetch_submodules = false
-git.get_commit_date = true
-
-# MCPJungle - self-hosted gateway for managing MCP servers
-[mcpjungle]
-src.git = "https://github.com/p3psi-boo/MCPJungle.git"
-src.branch = "main"
-fetch.github = "p3psi-boo/MCPJungle"
 git.fetch_submodules = false
 git.get_commit_date = true
 
@@ -312,11 +226,6 @@ git.get_commit_date = true
 src.github_tag = "loongphy/codex-auth"
 src.include_regex = "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
 fetch.github = "loongphy/codex-auth"
-
-[wallos-mcp]
-src.git = "https://github.com/p3psi-boo/wallos-mcp.git"
-fetch.github = "p3psi-boo/wallos-mcp"
-git.get_commit_date = true
 
 [dagu-x86_64-linux]
 src.github = "dagucloud/dagu"

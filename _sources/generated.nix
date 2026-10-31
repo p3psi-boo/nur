@@ -94,18 +94,6 @@
       sha256 = "sha256-ShK83pX6G7G+7ytBq15cJ8Nr544749DayMZNcFIWZw4=";
     };
   };
-  cmcc-ec-keepalive = {
-    pname = "cmcc-ec-keepalive";
-    version = "dae23c54a6eb1057c4a016914347f0abdd6fd163";
-    src = fetchFromGitHub {
-      owner = "p3psi-boo";
-      repo = "cmcc-ec-keepalive";
-      rev = "dae23c54a6eb1057c4a016914347f0abdd6fd163";
-      fetchSubmodules = false;
-      sha256 = "sha256-9L9c68TkiUHgnPJyFQiXVfLSsSEiEXDPpg7zyV0EVxQ=";
-    };
-    date = "2026-08-20";
-  };
   codex-auth = {
     pname = "codex-auth";
     version = "v0.3.0";
@@ -116,34 +104,6 @@
       fetchSubmodules = false;
       sha256 = "sha256-TrJtVP4gRdupx6StKWc2PIXoVnnlFMUqFw6JtEmWqZ4=";
     };
-  };
-  coe = {
-    pname = "coe";
-    version = "c326261675a2455e6dd8c22576681e91644600ef";
-    src = fetchgit {
-      url = "https://github.com/p3psi-boo/coe.git";
-      rev = "c326261675a2455e6dd8c22576681e91644600ef";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-0VL8NsKi1zl8fWJHn9khUwb0Jx0NIEvAdqe7slSfPyw=";
-    };
-    date = "2026-04-23";
-  };
-  commandcode2api = {
-    pname = "commandcode2api";
-    version = "1010b2292ebd626d16662f878350e173286110c2";
-    src = fetchgit {
-      url = "https://github.com/p3psi-boo/commandcode2api.git";
-      rev = "1010b2292ebd626d16662f878350e173286110c2";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-rMry5ozjcwK044CivmqEwTUajKId2PYIs3NOGjh0gjk=";
-    };
-    date = "2026-08-15";
   };
   cookiecloud-rs = {
     pname = "cookiecloud-rs";
@@ -227,34 +187,6 @@
       sha256 = "sha256-0TNJLbyQDipIb89anIhPHFmZrD1XXZl643JkgbzWVx4=";
     };
     date = "2026-08-22";
-  };
-  focaltech-fingerprint = {
-    pname = "focaltech-fingerprint";
-    version = "510473c10a16ff37820b2db1d8ef2d2b08ad005d";
-    src = fetchgit {
-      url = "https://github.com/vobademi/FTEXX00-Ubuntu.git";
-      rev = "510473c10a16ff37820b2db1d8ef2d2b08ad005d";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-v1CzRLZ4u+zdQXezt9rVy63RMp1gM/id1S7bRwcBDEA=";
-    };
-    date = "2026-09-17";
-  };
-  fusion = {
-    pname = "fusion";
-    version = "ecc44eeff94dd4836eed6490a497989194effa2b";
-    src = fetchgit {
-      url = "https://github.com/p3psi-boo/fusion.git";
-      rev = "ecc44eeff94dd4836eed6490a497989194effa2b";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-O9NMromcyvcF97Kb084vrHPjqRgyRqq14Ay8pdsj9rQ=";
-    };
-    date = "2026-04-12";
   };
   herdr-git = {
     pname = "herdr-git";
@@ -379,18 +311,6 @@
       sha256 = "sha256-wInqzwamLoWgIU6qDaOjgblBuqUJRQmhs5xg4+Npabo=";
     };
   };
-  mcpjungle = {
-    pname = "mcpjungle";
-    version = "313aa3204c346f2198db4865dbcc2555d64ecaf9";
-    src = fetchFromGitHub {
-      owner = "p3psi-boo";
-      repo = "MCPJungle";
-      rev = "313aa3204c346f2198db4865dbcc2555d64ecaf9";
-      fetchSubmodules = false;
-      sha256 = "sha256-fDPPwI9d2uXVzIRlS+jSmdzITotLSYnl8k5VwuWpMq0=";
-    };
-    date = "2026-10-13";
-  };
   mebox = {
     pname = "mebox";
     version = "mebox-v0.1.182";
@@ -400,17 +320,6 @@
       rev = "mebox-v0.1.182";
       fetchSubmodules = false;
       sha256 = "sha256-htEh4OUX5J204dViQwHVjzklSN/lVf8wieWbLptants=";
-    };
-  };
-  micyou = {
-    pname = "micyou";
-    version = "v2.1.0";
-    src = fetchFromGitHub {
-      owner = "LanRhyme";
-      repo = "MicYou";
-      rev = "v2.1.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-OoIamslISIxH1VNTOmKqyibJWUQelOL/fcUHxywTEzY=";
     };
   };
   multica-cli = {
@@ -423,20 +332,6 @@
       fetchSubmodules = false;
       sha256 = "sha256-Bu4duMk61EUrsHNQDO0mfN6BRGsAIIpTlhRvIIs9z2I=";
     };
-  };
-  n9router = {
-    pname = "n9router";
-    version = "647ddecea0eb7abf67ae70284e762f9593c67da8";
-    src = fetchgit {
-      url = "https://github.com/nightwalker89/n9router.git";
-      rev = "647ddecea0eb7abf67ae70284e762f9593c67da8";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-dERlmXHbHatS+8CS13MdLnYuk1WPqglxfnTOq6kbU/A=";
-    };
-    date = "2026-09-22";
   };
   nmem-cli = {
     pname = "nmem-cli";
@@ -532,34 +427,6 @@
     };
     date = "2025-04-03";
   };
-  searxng-baidu-qianfan-bridge = {
-    pname = "searxng-baidu-qianfan-bridge";
-    version = "a9826ab251fa3d52a59a3900f702ab53cd602793";
-    src = fetchgit {
-      url = "https://github.com/p3psi-boo/searxng-baidu-qianfan-bridge.git";
-      rev = "a9826ab251fa3d52a59a3900f702ab53cd602793";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-oaPrdnj4OBjTyxeMKDVBpxzbGMoSQjLc1lvbRdLCeCs=";
-    };
-    date = "2026-07-19";
-  };
-  searxng-doubao-bridge = {
-    pname = "searxng-doubao-bridge";
-    version = "72e59326cd34d94f47a632c3a4e692aea7d84ffc";
-    src = fetchgit {
-      url = "https://github.com/p3psi-boo/searxng-doubao-bridge.git";
-      rev = "72e59326cd34d94f47a632c3a4e692aea7d84ffc";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-CfBX/IonAHjO+IEZs3/NSkG72t4vfjFCh2CMfuQVxhk=";
-    };
-    date = "2026-07-19";
-  };
   selector4nix = {
     pname = "selector4nix";
     version = "95367eb7a98ae6ba52573e1ae3e299429f1a5a8b";
@@ -599,20 +466,6 @@
       sha256 = "sha256-emvN0iNPoADAiH4eOPCIViNHpItKyacySu/9EK2BaeQ=";
     };
   };
-  srv-us = {
-    pname = "srv-us";
-    version = "664ef6a4fab24c5f3f1fc2fa07cc3e0c43d90cf9";
-    src = fetchgit {
-      url = "https://github.com/p3psi-boo/srv.us.git";
-      rev = "664ef6a4fab24c5f3f1fc2fa07cc3e0c43d90cf9";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-CEaSHwR8munYwKkLkCAGGbnRsel+by72QBY28lIRQO4=";
-    };
-    date = "2026-02-08";
-  };
   subs-check = {
     pname = "subs-check";
     version = "753fe79b88d07eea1affb141174344113d5825d6";
@@ -640,28 +493,6 @@
       sha256 = "sha256-tHVVCq+qSeLFwpH8sGsAi92pr2HU60o6Hdm+PNokfbk=";
     };
     date = "2026-08-03";
-  };
-  taierspeedtest = {
-    pname = "taierspeedtest";
-    version = "v1.0.3";
-    src = fetchFromGitHub {
-      owner = "MiaM1ku";
-      repo = "taierspeedtest";
-      rev = "v1.0.3";
-      fetchSubmodules = false;
-      sha256 = "sha256-jITzS2zDqadmt8XRWVio2u/T9vDrb/AAhNJHTnFVEHw=";
-    };
-  };
-  terminal-use = {
-    pname = "terminal-use";
-    version = "v1.4.1";
-    src = fetchFromGitHub {
-      owner = "flipbit03";
-      repo = "terminal-use";
-      rev = "v1.4.1";
-      fetchSubmodules = false;
-      sha256 = "sha256-x4wK6Vw7qMkRYRRqgaNvUh8lSngodw4nX/BUzmqOtmU=";
-    };
   };
   unfairplay = {
     pname = "unfairplay";
@@ -703,18 +534,6 @@
     };
     date = "2026-08-06";
   };
-  wallos-mcp = {
-    pname = "wallos-mcp";
-    version = "179f02d7c39c2d73ad00d6ace080c993290ea94f";
-    src = fetchFromGitHub {
-      owner = "p3psi-boo";
-      repo = "wallos-mcp";
-      rev = "179f02d7c39c2d73ad00d6ace080c993290ea94f";
-      fetchSubmodules = false;
-      sha256 = "sha256-k20pim5Cs50gicrh18REDj738tfq5Nh+0ZAgcvWx9MQ=";
-    };
-    date = "2026-10-07";
-  };
   wgrest = {
     pname = "wgrest";
     version = "79d07f72b271a51b5f6cb2153354ec1695fe06ab";
@@ -726,19 +545,5 @@
       sha256 = "sha256-D7FnQzdaStTBuO+sXQ0dVN3P6weCvIIOiUTT1s1FSpI=";
     };
     date = "2026-02-06";
-  };
-  wxmp_searxng = {
-    pname = "wxmp_searxng";
-    version = "edb809f0c67238e26caae840fd3ef7ff653792b3";
-    src = fetchgit {
-      url = "https://github.com/p3psi-boo/wxmp_searxng.git";
-      rev = "edb809f0c67238e26caae840fd3ef7ff653792b3";
-      fetchSubmodules = false;
-      deepClone = false;
-      leaveDotGit = false;
-      sparseCheckout = [ ];
-      sha256 = "sha256-Y9QqZZVZ+LaWA5I9it5VxgW8fIt3c2EP2KaNob49uIU=";
-    };
-    date = "2026-07-12";
   };
 }
