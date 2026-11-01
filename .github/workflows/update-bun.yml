@@ -1,0 +1,109 @@
+name: Update Bun
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: update-bun
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  update:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      changed: ${{ steps.update.outputs.changed }}
+      revision: ${{ steps.update.outputs.revision }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - uses: nixbuild/nix-quick-install-action@9f63be77f412a248c9d9a65a4c82cf066cdf8f0c # v35
+      - name: Update official release sources
+        id: update
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          printf '[keys]\ngithub = "%s"\n' "$GITHUB_TOKEN" > "$RUNNER_TEMP/keyfile.toml"
+          nix develop --no-update-lock-file -c nvfetcher \
+            -o _sources -c nvfetcher.toml --filter '^bun-bin-' \
+            --keyfile "$RUNNER_TEMP/keyfile.toml"
+          jq --exit-status '
+            .["bun-bin-x86_64-linux"].version == .["bun-bin-aarch64-darwin"].version
+          ' _sources/generated.json
+          echo "revision=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          if git diff --quiet -- _sources; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        if: steps.update.outputs.changed == 'true'
+        with:
+          name: bun-sources
+          path: |
+            _sources/generated.nix
+            _sources/generated.json
+          if-no-files-found: error
+
+  build:
+    needs: update
+    if: needs.update.outputs.changed == 'true'
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-24.04
+            system: x86_64-linux
+          - os: macos-15
+            system: aarch64-darwin
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ needs.update.outputs.revision }}
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: bun-sources
+          path: _sources
+      - uses: nixbuild/nix-quick-install-action@9f63be77f412a248c9d9a65a4c82cf066cdf8f0c # v35
+      - name: Build and verify the release version
+        run: |
+          nix build --no-update-lock-file .#packages.${{ matrix.system }}.bun-bin
+          expected=$(nix eval --no-update-lock-file --raw .#packages.${{ matrix.system }}.bun-bin.version)
+          test "$(./result/bin/bun --version)" = "$expected"
+          test "$(./result/bin/bunx --version)" = "$expected"
+
+  publish:
+    needs: [update, build]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: ${{ needs.update.outputs.revision }}
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: bun-sources
+          path: _sources
+      - name: Commit verified sources
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add _sources/generated.nix _sources/generated.json
+          git commit -m "bun-bin: update official release"
+          git push origin HEAD:main
