@@ -164,6 +164,27 @@
         },
         "version": "146.0.7680.177.5"
     },
+    "cmcc-ec-keepalive": {
+        "cargoLock": null,
+        "date": "2026-08-20",
+        "extract": null,
+        "name": "cmcc-ec-keepalive",
+        "passthru": null,
+        "pinned": true,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "p3psi-boo",
+            "repo": "cmcc-ec-keepalive",
+            "rev": "dae23c54a6eb1057c4a016914347f0abdd6fd163",
+            "sha256": "sha256-9L9c68TkiUHgnPJyFQiXVfLSsSEiEXDPpg7zyV0EVxQ=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "dae23c54a6eb1057c4a016914347f0abdd6fd163"
+    },
     "codex-auth": {
         "cargoLock": null,
         "date": null,
@@ -527,6 +548,27 @@
         },
         "version": "v2.6.0"
     },
+    "mcpjungle": {
+        "cargoLock": null,
+        "date": "2026-10-13",
+        "extract": null,
+        "name": "mcpjungle",
+        "passthru": null,
+        "pinned": true,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "p3psi-boo",
+            "repo": "MCPJungle",
+            "rev": "313aa3204c346f2198db4865dbcc2555d64ecaf9",
+            "sha256": "sha256-fDPPwI9d2uXVzIRlS+jSmdzITotLSYnl8k5VwuWpMq0=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "313aa3204c346f2198db4865dbcc2555d64ecaf9"
+    },
     "mebox": {
         "cargoLock": null,
         "date": null,
@@ -732,6 +774,46 @@
         },
         "version": "0a0a15b694108328be1ede66ee32f6acbd95d3d7"
     },
+    "searxng-baidu-qianfan-bridge": {
+        "cargoLock": null,
+        "date": "2026-07-19",
+        "extract": null,
+        "name": "searxng-baidu-qianfan-bridge",
+        "passthru": null,
+        "pinned": true,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "a9826ab251fa3d52a59a3900f702ab53cd602793",
+            "sha256": "sha256-oaPrdnj4OBjTyxeMKDVBpxzbGMoSQjLc1lvbRdLCeCs=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/p3psi-boo/searxng-baidu-qianfan-bridge.git"
+        },
+        "version": "a9826ab251fa3d52a59a3900f702ab53cd602793"
+    },
+    "searxng-doubao-bridge": {
+        "cargoLock": null,
+        "date": "2026-07-19",
+        "extract": null,
+        "name": "searxng-doubao-bridge",
+        "passthru": null,
+        "pinned": true,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "72e59326cd34d94f47a632c3a4e692aea7d84ffc",
+            "sha256": "sha256-CfBX/IonAHjO+IEZs3/NSkG72t4vfjFCh2CMfuQVxhk=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/p3psi-boo/searxng-doubao-bridge.git"
+        },
+        "version": "72e59326cd34d94f47a632c3a4e692aea7d84ffc"
+    },
     "selector4nix": {
         "cargoLock": null,
         "date": "2026-09-12",
@@ -894,6 +976,27 @@
         },
         "version": "6f8bc6ff7b0f644f939a4a2f1d8a748b74174473"
     },
+    "wallos-mcp": {
+        "cargoLock": null,
+        "date": "2026-10-07",
+        "extract": null,
+        "name": "wallos-mcp",
+        "passthru": null,
+        "pinned": true,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "p3psi-boo",
+            "repo": "wallos-mcp",
+            "rev": "179f02d7c39c2d73ad00d6ace080c993290ea94f",
+            "sha256": "sha256-k20pim5Cs50gicrh18REDj738tfq5Nh+0ZAgcvWx9MQ=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "179f02d7c39c2d73ad00d6ace080c993290ea94f"
+    },
     "wgrest": {
         "cargoLock": null,
         "date": "2026-02-06",
@@ -914,5 +1017,25 @@
             "type": "github"
         },
         "version": "79d07f72b271a51b5f6cb2153354ec1695fe06ab"
+    },
+    "wxmp_searxng": {
+        "cargoLock": null,
+        "date": "2026-07-12",
+        "extract": null,
+        "name": "wxmp_searxng",
+        "passthru": null,
+        "pinned": true,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "edb809f0c67238e26caae840fd3ef7ff653792b3",
+            "sha256": "sha256-Y9QqZZVZ+LaWA5I9it5VxgW8fIt3c2EP2KaNob49uIU=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://github.com/p3psi-boo/wxmp_searxng.git"
+        },
+        "version": "edb809f0c67238e26caae840fd3ef7ff653792b3"
     }
 }

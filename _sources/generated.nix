@@ -94,6 +94,18 @@
       sha256 = "sha256-ShK83pX6G7G+7ytBq15cJ8Nr544749DayMZNcFIWZw4=";
     };
   };
+  cmcc-ec-keepalive = {
+    pname = "cmcc-ec-keepalive";
+    version = "dae23c54a6eb1057c4a016914347f0abdd6fd163";
+    src = fetchFromGitHub {
+      owner = "p3psi-boo";
+      repo = "cmcc-ec-keepalive";
+      rev = "dae23c54a6eb1057c4a016914347f0abdd6fd163";
+      fetchSubmodules = false;
+      sha256 = "sha256-9L9c68TkiUHgnPJyFQiXVfLSsSEiEXDPpg7zyV0EVxQ=";
+    };
+    date = "2026-08-20";
+  };
   codex-auth = {
     pname = "codex-auth";
     version = "v0.3.0";
@@ -311,6 +323,18 @@
       sha256 = "sha256-wInqzwamLoWgIU6qDaOjgblBuqUJRQmhs5xg4+Npabo=";
     };
   };
+  mcpjungle = {
+    pname = "mcpjungle";
+    version = "313aa3204c346f2198db4865dbcc2555d64ecaf9";
+    src = fetchFromGitHub {
+      owner = "p3psi-boo";
+      repo = "MCPJungle";
+      rev = "313aa3204c346f2198db4865dbcc2555d64ecaf9";
+      fetchSubmodules = false;
+      sha256 = "sha256-fDPPwI9d2uXVzIRlS+jSmdzITotLSYnl8k5VwuWpMq0=";
+    };
+    date = "2026-10-13";
+  };
   mebox = {
     pname = "mebox";
     version = "mebox-v0.1.182";
@@ -427,6 +451,34 @@
     };
     date = "2025-04-03";
   };
+  searxng-baidu-qianfan-bridge = {
+    pname = "searxng-baidu-qianfan-bridge";
+    version = "a9826ab251fa3d52a59a3900f702ab53cd602793";
+    src = fetchgit {
+      url = "https://github.com/p3psi-boo/searxng-baidu-qianfan-bridge.git";
+      rev = "a9826ab251fa3d52a59a3900f702ab53cd602793";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-oaPrdnj4OBjTyxeMKDVBpxzbGMoSQjLc1lvbRdLCeCs=";
+    };
+    date = "2026-07-19";
+  };
+  searxng-doubao-bridge = {
+    pname = "searxng-doubao-bridge";
+    version = "72e59326cd34d94f47a632c3a4e692aea7d84ffc";
+    src = fetchgit {
+      url = "https://github.com/p3psi-boo/searxng-doubao-bridge.git";
+      rev = "72e59326cd34d94f47a632c3a4e692aea7d84ffc";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-CfBX/IonAHjO+IEZs3/NSkG72t4vfjFCh2CMfuQVxhk=";
+    };
+    date = "2026-07-19";
+  };
   selector4nix = {
     pname = "selector4nix";
     version = "95367eb7a98ae6ba52573e1ae3e299429f1a5a8b";
@@ -534,6 +586,18 @@
     };
     date = "2026-08-06";
   };
+  wallos-mcp = {
+    pname = "wallos-mcp";
+    version = "179f02d7c39c2d73ad00d6ace080c993290ea94f";
+    src = fetchFromGitHub {
+      owner = "p3psi-boo";
+      repo = "wallos-mcp";
+      rev = "179f02d7c39c2d73ad00d6ace080c993290ea94f";
+      fetchSubmodules = false;
+      sha256 = "sha256-k20pim5Cs50gicrh18REDj738tfq5Nh+0ZAgcvWx9MQ=";
+    };
+    date = "2026-10-07";
+  };
   wgrest = {
     pname = "wgrest";
     version = "79d07f72b271a51b5f6cb2153354ec1695fe06ab";
@@ -545,5 +609,19 @@
       sha256 = "sha256-D7FnQzdaStTBuO+sXQ0dVN3P6weCvIIOiUTT1s1FSpI=";
     };
     date = "2026-02-06";
+  };
+  wxmp_searxng = {
+    pname = "wxmp_searxng";
+    version = "edb809f0c67238e26caae840fd3ef7ff653792b3";
+    src = fetchgit {
+      url = "https://github.com/p3psi-boo/wxmp_searxng.git";
+      rev = "edb809f0c67238e26caae840fd3ef7ff653792b3";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-Y9QqZZVZ+LaWA5I9it5VxgW8fIt3c2EP2KaNob49uIU=";
+    };
+    date = "2026-07-12";
   };
 }

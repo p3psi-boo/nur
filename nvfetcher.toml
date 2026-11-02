@@ -51,6 +51,32 @@ src.git = "https://github.com/OkamiW/proxy-ns.git"
 fetch.git = "https://github.com/OkamiW/proxy-ns.git"
 src.branch = "master"
 
+[cmcc-ec-keepalive]
+src.git = "https://github.com/p3psi-boo/cmcc-ec-keepalive.git"
+src.branch = "main"
+fetch.github = "p3psi-boo/cmcc-ec-keepalive"
+git.get_commit_date = true
+pinned = true
+
+[searxng-baidu-qianfan-bridge]
+src.git = "https://github.com/p3psi-boo/searxng-baidu-qianfan-bridge.git"
+fetch.git = "https://github.com/p3psi-boo/searxng-baidu-qianfan-bridge.git"
+git.fetch_submodules = false
+pinned = true
+
+[searxng-doubao-bridge]
+src.git = "https://github.com/p3psi-boo/searxng-doubao-bridge.git"
+fetch.git = "https://github.com/p3psi-boo/searxng-doubao-bridge.git"
+git.fetch_submodules = false
+pinned = true
+
+[wxmp_searxng]
+src.git = "https://github.com/p3psi-boo/wxmp_searxng.git"
+fetch.git = "https://github.com/p3psi-boo/wxmp_searxng.git"
+git.fetch_submodules = false
+git.get_commit_date = true
+pinned = true
+
 [vohive]
 src.git = "https://github.com/p3psi-boo/vohive.git"
 fetch.git = "https://github.com/p3psi-boo/vohive.git"
@@ -186,6 +212,20 @@ src.branch = "master"
 fetch.github = "herdrdev/herdr"
 git.fetch_submodules = false
 git.get_commit_date = true
+
+[mcpjungle]
+src.git = "https://github.com/p3psi-boo/MCPJungle.git"
+src.branch = "main"
+fetch.github = "p3psi-boo/MCPJungle"
+git.fetch_submodules = false
+git.get_commit_date = true
+pinned = true
+
+[wallos-mcp]
+src.git = "https://github.com/p3psi-boo/wallos-mcp.git"
+fetch.github = "p3psi-boo/wallos-mcp"
+git.get_commit_date = true
+pinned = true
 
 # firefox-vpn-client - Firefox VPN SOCKS5 client
 [firefox-vpn-client]
