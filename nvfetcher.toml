@@ -311,3 +311,11 @@ src.git = "https://github.com/DrWhax/unfairplay.git"
 src.branch = "main"
 fetch.github = "DrWhax/unfairplay"
 git.get_commit_date = true
+
+# Zig fork of forgejo-cli. The package name overrides nixpkgs' Rust build.
+[forgejo-cli]
+src.git = "https://github.com/p3psi-boo/forgejo-cli.git"
+src.branch = "main"
+fetch.github = "p3psi-boo/forgejo-cli"
+git.fetch_submodules = false
+git.get_commit_date = true

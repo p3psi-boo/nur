@@ -200,6 +200,18 @@
     };
     date = "2026-08-22";
   };
+  forgejo-cli = {
+    pname = "forgejo-cli";
+    version = "edc873d5f9c6431fd00b5ae1be1717f343fd37c8";
+    src = fetchFromGitHub {
+      owner = "p3psi-boo";
+      repo = "forgejo-cli";
+      rev = "edc873d5f9c6431fd00b5ae1be1717f343fd37c8";
+      fetchSubmodules = false;
+      sha256 = "sha256-GkjbFI4FtcfHExpn4b1DZx9VbPuOPuySU/WilH+duQM=";
+    };
+    date = "2026-11-02";
+  };
   herdr-git = {
     pname = "herdr-git";
     version = "3d9d2b18dab139ba226ebc5a1c9a9f2c9c3ee4df";

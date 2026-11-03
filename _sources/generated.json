@@ -348,6 +348,27 @@
         },
         "version": "5b29eebc2766ac1cac2979693c56a8dfbad32430"
     },
+    "forgejo-cli": {
+        "cargoLock": null,
+        "date": "2026-11-02",
+        "extract": null,
+        "name": "forgejo-cli",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "p3psi-boo",
+            "repo": "forgejo-cli",
+            "rev": "edc873d5f9c6431fd00b5ae1be1717f343fd37c8",
+            "sha256": "sha256-GkjbFI4FtcfHExpn4b1DZx9VbPuOPuySU/WilH+duQM=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "edc873d5f9c6431fd00b5ae1be1717f343fd37c8"
+    },
     "herdr-git": {
         "cargoLock": null,
         "date": "2026-10-06",
