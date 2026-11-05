@@ -1,6 +1,7 @@
 {
   lib,
   stdenv,
+  apple-sdk,
   zig_0_17,
   git,
   makeWrapper,
@@ -31,6 +32,15 @@ stdenv.mkDerivation (finalAttrs: {
     makeWrapper
     installShellFiles
   ];
+
+  postPatch = lib.optionalString stdenv.hostPlatform.isDarwin ''
+    substituteInPlace build.zig \
+      --replace-fail 'b.installArtifact(exe);' '
+        exe.root_module.addSystemFrameworkPath(.{ .cwd_relative = "${apple-sdk.sdkroot}/System/Library/Frameworks" });
+        exe.root_module.addLibraryPath(.{ .cwd_relative = "${apple-sdk.sdkroot}/usr/lib" });
+        b.installArtifact(exe);
+      '
+  '';
 
   # pkgs/forgejo-cli is the NUR overlay attribute, so this replaces nixpkgs' forgejo-cli.
   postConfigure = ''
