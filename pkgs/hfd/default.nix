@@ -19,7 +19,7 @@ stdenvNoCC.mkDerivation {
 
   src = fetchurl {
     url = "https://hf-mirror.com/hfd/hfd.sh";
-    hash = "sha256-UkiU70+OgtphgBVqlr2WeNVtd+h3t/aanSU9qX0ohm8=";
+    hash = "sha256-sQxijgnqlnGG85BPgXJhgQeTIsqboBgGsPN0pttSbbc=";
   };
 
   dontUnpack = true;
