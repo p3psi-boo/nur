@@ -1,7 +1,7 @@
 {
   lib,
   stdenvNoCC,
-  fetchurl,
+  generated,
   makeWrapper,
   curl,
   aria2,
@@ -15,12 +15,9 @@
 
 stdenvNoCC.mkDerivation {
   pname = "hfd";
-  version = "0-unstable-2025-09-28";
+  version = "0-unstable-${generated.hfd.date}";
 
-  src = fetchurl {
-    url = "https://hf-mirror.com/hfd/hfd.sh";
-    hash = "sha256-sQxijgnqlnGG85BPgXJhgQeTIsqboBgGsPN0pttSbbc=";
-  };
+  src = generated.hfd.src;
 
   dontUnpack = true;
 
@@ -29,7 +26,7 @@ stdenvNoCC.mkDerivation {
   installPhase = ''
     runHook preInstall
 
-    install -Dm755 $src $out/bin/hfd
+    install -Dm755 $src/hfd.sh $out/bin/hfd
 
     wrapProgram $out/bin/hfd \
       --prefix PATH : ${lib.makeBinPath [

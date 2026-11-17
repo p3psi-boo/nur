@@ -390,6 +390,26 @@
         },
         "version": "3d9d2b18dab139ba226ebc5a1c9a9f2c9c3ee4df"
     },
+    "hfd": {
+        "cargoLock": null,
+        "date": "2026-11-12",
+        "extract": null,
+        "name": "hfd",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "1e24d5312a93a5b9faff00b77bb199030169414d",
+            "sha256": "sha256-apDLZk6DKV/E5L69fF9uBhg9xtPyLmUYhbs+P6K0RWc=",
+            "sparseCheckout": [],
+            "type": "git",
+            "url": "https://gist.github.com/697678ab8e528b85a2a7bddafea1fa4f.git"
+        },
+        "version": "1e24d5312a93a5b9faff00b77bb199030169414d"
+    },
     "icloud-privacy-mail-v2": {
         "cargoLock": null,
         "date": "2026-08-29",

@@ -224,6 +224,20 @@
     };
     date = "2026-10-06";
   };
+  hfd = {
+    pname = "hfd";
+    version = "1e24d5312a93a5b9faff00b77bb199030169414d";
+    src = fetchgit {
+      url = "https://gist.github.com/697678ab8e528b85a2a7bddafea1fa4f.git";
+      rev = "1e24d5312a93a5b9faff00b77bb199030169414d";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = false;
+      sparseCheckout = [ ];
+      sha256 = "sha256-apDLZk6DKV/E5L69fF9uBhg9xtPyLmUYhbs+P6K0RWc=";
+    };
+    date = "2026-11-12";
+  };
   icloud-privacy-mail-v2 = {
     pname = "icloud-privacy-mail-v2";
     version = "4ec96e0ea1e026b81c7efa03db19332790f02e64";

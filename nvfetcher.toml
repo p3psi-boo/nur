@@ -1,4 +1,10 @@
 
+[hfd]
+src.git = "https://gist.github.com/697678ab8e528b85a2a7bddafea1fa4f.git"
+src.branch = "main"
+fetch.git = "https://gist.github.com/697678ab8e528b85a2a7bddafea1fa4f.git"
+git.get_commit_date = true
+
 [bun-bin-x86_64-linux]
 src.github = "oven-sh/bun"
 src.prefix = "bun-v"
