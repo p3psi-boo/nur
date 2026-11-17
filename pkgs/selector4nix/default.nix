@@ -4,6 +4,8 @@
   buildNpmPackage,
   importNpmLock,
   generated,
+  pkg-config,
+  aws-lc,
 }:
 
 let
@@ -34,6 +36,9 @@ rustPlatform.buildRustPackage {
   version = sourceInfo.version;
 
   src = sourceInfo.src;
+
+  nativeBuildInputs = [ pkg-config ];
+  buildInputs = [ aws-lc ];
 
   cargoLock.lockFile = sourceInfo.src + "/Cargo.lock";
 
