@@ -86,11 +86,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-wkDX8My5DCY6hJ/NsJt+5iYw2SE0jtaq/ahrnVd7xRA=",
+            "sha256": "sha256-tda8LhPK8U5XyJZh6J79Bz/xYWW0G/5DiCYWQQYJzRA=",
             "type": "url",
-            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-darwin-aarch64.zip"
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.5/bun-darwin-aarch64.zip"
         },
-        "version": "1.4.4"
+        "version": "1.4.5"
     },
     "bun-bin-x86_64-linux": {
         "cargoLock": null,
@@ -101,11 +101,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-v4zL+ysLgBWeD5ptFcVTF63YB3U028YTCj7bUvzLOVw=",
+            "sha256": "sha256-lFWbO1KJlaSUUvnyQEzsdPLv19BuCgAKjNIUsCw2Zus=",
             "type": "url",
-            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.4/bun-linux-x64.zip"
+            "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.4.5/bun-linux-x64.zip"
         },
-        "version": "1.4.4"
+        "version": "1.4.5"
     },
     "celld": {
         "cargoLock": null,
